@@ -28,7 +28,7 @@ function splitSentence(originalString) {
 
 // Desafio 4
 function concatName(stringArray) {
-  return (stringArray[stringArray.length - 1] + ', ' + stringArray[0]);
+  return stringArray[stringArray.length - 1] + ', ' + stringArray[0];
 }
 
 // Desafio 5
@@ -40,15 +40,15 @@ function footballPoints(wins, ties) {
 function highestCount(numberArray) {
   // Encontrar o maior numero e guardar na variavel largestNumber
   let largestNumber = 0;
-  for (let index = 0; index < numberArray.length; index += 1) {
-    if (numberArray[index] > largestNumber) {
-      largestNumber = numberArray[index];
+  for (let i = 0; i < numberArray.length; i += 1) {
+    if (numberArray[i] > largestNumber) {
+      largestNumber = numberArray[i];
     }
   }
   // Contar quantas vezes o largestNumber aparece
   let count = 0;
-  for (let index = 0; index < numberArray.length; index += 1) {
-    if (numberArray[index] === largestNumber) {
+  for (let j = 0; j < numberArray.length; j += 1) {
+    if (numberArray[j] === largestNumber) {
       count += 1;
     }
   }
