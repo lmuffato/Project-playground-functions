@@ -38,7 +38,6 @@ function footballPoints(wins, ties) {
   // seu código aqui
 }
 
-//Função calcular desafio 6
 function calcCount(number, arrayCalc) {
   let counter = 0;
   for (let index = 0; index < arrayCalc.length; index += 1) {
@@ -57,7 +56,7 @@ function highestCount(array) {
       high = array[key];
     }
   }
-  return calcCount(high, array);  
+  return calcCount(high, array);
   // seu código aqui
 }
 
