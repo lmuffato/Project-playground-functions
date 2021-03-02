@@ -31,10 +31,18 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  const distanceCat1 = cat1 - mouse;
+  const distanceCat2 = cat2 - mouse;
+  let result = '';
+  if (distanceCat1 === distanceCat2) {
+    result = 'os gatos trombam e o rato foge';
+  } else if (distanceCat1 > distanceCat2) {
+    result = 'cat1';
+  } else result = 'cat2';
+  return result;
 }
-
+console.log(catAndMouse(10, 6, 6));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
