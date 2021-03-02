@@ -3,7 +3,7 @@ function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
   }
-    return false;
+  return false;
 }
 
 // Desafio 2
@@ -13,9 +13,13 @@ function calcArea(base, height) {
 }
 
 // Desafio 3 /
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let result = string.split(' ');
+  return result;
 }
+
+string = 'Go Trybe'
+console.log(splitSentence(string))
 
 // Desafio 4
 function concatName(items) {
@@ -44,6 +48,8 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return 'os gatos trombam e o rato foge';
 }
+
+console.log(catAndMouse(10, 10, 10))
 
 // Desafio 8
 function fizzBuzz() {
