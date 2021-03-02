@@ -1,6 +1,11 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techArray, name) {
+  techArray.sort()
+  let arrayOfObjects = []
+  for (let index = 0; index < techArray.length; index += 1) {
+    arrayOfObjects.push({tech: techArray[index], name: name})
+  }
+  return arrayOfObjects
 }
 
 // Desafio 11
@@ -24,3 +29,5 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
+
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"))
