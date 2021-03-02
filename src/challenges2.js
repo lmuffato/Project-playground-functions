@@ -7,9 +7,20 @@ function techList(techNames, name) {
   array = [];
 
   for (let index = 0; index < techNames.length; index += 1) {
-    object.tech = techNames[index];
-    array.push(object);
+    array.push((object = { tech: techNames[index], name: name }));
   }
+
+  for (let i = 1; i < array.length; i++) {
+    for (let j = 0; j < i; j++) {
+      if (object.tech[i] < object.tech[j]) {
+        let position = object.tech[i];
+
+        object.tech[i] = object[j];
+        object.tech[j] = position;
+      }
+    }
+  }
+
   return array;
 }
 
@@ -18,10 +29,6 @@ function generatePhoneNumber(phone) {
   let numberOfTimes = 0;
   let trueOrFalse = false;
   let repeticoes = [];
-
-  if (phone.length !== 11) {
-    return 'Array com tamanho incorreto.';
-  }
 
   for (let j = 0; j < phone.length; j += 1) {
     numberOfTimes = 0;
@@ -49,10 +56,11 @@ function generatePhoneNumber(phone) {
   for (let i = 0; i < phone.length; i += 1) {
     if (phone[i] < 0 || phone[i] > 9 || trueOrFalse === true) {
       return 'não é possível gerar um número de telefone com esses valores';
-    } else {
-      return `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}${phone[5]}${phone[6]}-${phone[7]}${phone[8]}${phone[9]}${phone[10]}`;
+    } else if (phone.length !== 12) {
+      return 'Array com tamanho incorreto.';
     }
   }
+  return `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}${phone[5]}${phone[6]}-${phone[7]}${phone[8]}${phone[9]}${phone[10]}`;
 }
 
 console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
