@@ -1,8 +1,11 @@
 // Desafio 1
+let teamFlamengoChampion = true;
+let teamInterNoChampion = true;
+
 function compareTrue(teamFlamengoChampion, teamInterNoChampion) {
-  if (teamFlamengoChampion === true && teamInterNoChampion === true) {
+  if (teamFlamengoChampion && teamInterNoChampion === true) {
     return true;
-  }
+    }
 }
 
 // Desafio 2
