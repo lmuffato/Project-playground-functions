@@ -3,7 +3,7 @@ function compareTrue(parameter1, parameter2) {
   if (parameter1 === true && parameter2 === true) {
     return true;
   }
-    return false;
+  return false;
 }
 
 // Desafio 2
@@ -19,7 +19,7 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(fullname) {
-  let firstAndLast = fullname[0] + ',' + ' ' + fullname[fullname.length-1];
+  let firstAndLast = fullname[fullname.length-1] + ',' + ' ' + fullname[0];
   return firstAndLast;
 }
 
