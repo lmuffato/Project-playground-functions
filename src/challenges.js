@@ -98,41 +98,58 @@ function encode(string) {
   let encodedMessage = [];
 
   for (let letterIndex in message) {
-    if (message[letterIndex] === 'a') {
+    switch (message[letterIndex]) {
+    case 'a':
       encodedMessage.push('1');
-    } else if (message[letterIndex] === 'e') {
+      break;
+    case 'e':
       encodedMessage.push('2');
-    } else if (message[letterIndex] === 'i') {
+      break;
+    case 'i':
       encodedMessage.push('3');
-    } else if (message[letterIndex] === 'o') {
+      break;
+    case 'o':
       encodedMessage.push('4');
-    } else if (message[letterIndex] === 'u') {
+      break;
+    case 'u':
       encodedMessage.push('5');
-    } else {
+      break;
+
+    default:
       encodedMessage.push(message[letterIndex]);
     }
   }
+
   return encodedMessage.join('');
 }
+
 function decode(string) {
   const encodedMessage = splitString(string);
   let message = [];
 
   for (let letterIndex in encodedMessage) {
-    if (encodedMessage[letterIndex] === '1') {
+    switch (encodedMessage[letterIndex]) {
+    case '1':
       message.push('a');
-    } else if (encodedMessage[letterIndex] === '2') {
+      break;
+    case '2':
       message.push('e');
-    } else if (encodedMessage[letterIndex] === '3') {
+      break;
+    case '3':
       message.push('i');
-    } else if (encodedMessage[letterIndex] === '4') {
+      break;
+    case '4':
       message.push('o');
-    } else if (encodedMessage[letterIndex] === '5') {
-      message.push('');
-    } else {
+      break;
+    case '5':
+      message.push('u');
+      break;
+
+    default:
       message.push(encodedMessage[letterIndex]);
     }
   }
+
   return message.join('');
 }
 
