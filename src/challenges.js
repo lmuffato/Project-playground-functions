@@ -2,7 +2,7 @@
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
-  } 
+  }
   return false;
 }
 console.log(compareTrue(true, false));
@@ -22,7 +22,7 @@ console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName(stringArrays) {
-  let Array = stringArrays[stringArrays.length - 1] + ', ' + stringArrays[0];
+  let Array = `${stringArrays[stringArrays.length - 1]}, ${stringArrays[0]}`;
   return Array;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
