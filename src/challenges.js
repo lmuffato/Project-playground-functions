@@ -29,18 +29,36 @@ function concatName(string) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let totalPoints = (wins * 3) + (ties *1);
+  let totalPoints = (wins * 3) + (ties * 1);
   return totalPoints;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let numbersCount = 0;
+  for (let index = 0; index < numbers.length; index += 1) {
+    for (let indexCount = 0; indexCount < numbers.length; indexCount += 1){
+      if (numbers[indexCount] === numbers[index]){
+        numbersCount += 1;
+      }
+    }
+  }
+  return numbersCount;
 }
+//console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let mouseToCat1 = cat1 - mouse;
+  let mouseToCat2 = cat2 - mouse;
+
+  if (mouseToCat1 < mouseToCat2) {
+    return 'cat1';
+  } else if (mouseToCat1 === mouseToCat2) {
+    return 'os gatos trombam e o rato foge';
+  } else {
+    return 'cat2';
+  }
 }
 
 // Desafio 8
