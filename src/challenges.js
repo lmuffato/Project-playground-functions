@@ -14,22 +14,25 @@ console.log(compareTrue(true, true));
 // Desafio 2
 function calcArea(base, heigth) {
   // seu código aqui
-  res = (base * heigth) / 2;
-  return res;
+  return  (base * heigth) / 2; 
 }
+
 console.log(calcArea(10, 50));
 console.log(calcArea(5, 2));
 console.log(calcArea(51, 1));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(shareString) {
+  return shareString.split('');
 }
+console.log(splitSentence('vamo time'))
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayString) {
+  return `${arrayString[arrayString.length-1]} , ${arrayString[0]}` ;
 }
+arrayString = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+console.log(concatName(arrayString));
 
 // Desafio 5
 function footballPoints() {
