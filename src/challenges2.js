@@ -1,5 +1,8 @@
 // Desafio 10
 function techList(arrayTechs, name) {
+  if(arrayTechs.length === 0){
+    return 'Vazio!';
+  }
   let arrayNamesSort = arrayTechs.sort(); //ordenando arrayTechs.
   let arrayObjectInsert = []; //criando array vazio que será lotado de objetos e retornado.
   for(let i = 0; i < arrayNamesSort.length; i += 1){
