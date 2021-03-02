@@ -8,9 +8,10 @@ function compareTrue(valueBooleanOne, valueBooleanTwo) {
 // Desafio 2
 let areaDoTriangulo = 0;
 function calcArea(base, height) {
-  return areaDoTriangulo = base*height /2;
+  areaDoTriangulo = (base * height) / 2;
+  return areaDoTriangulo;
 }
- console.log(areaDoTriangulo);
+console.log(areaDoTriangulo);
 
 // Desafio 3
 function splitSentence() {
