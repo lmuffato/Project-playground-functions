@@ -44,16 +44,14 @@ function highestCount(array) {
 }
 
 function highestNumber(array) {
-  let highestNumber = array[0];
+  let higherNumber = array[0];
   for (let verifyHighest in array) {
-    if (array[verifyHighest] > highestNumber) {
-      highestNumber = array[verifyHighest];
+    if (array[verifyHighest] > higherNumber) {
+      higherNumber = array[verifyHighest];
     }
   }
-  return highestNumber;
+  return higherNumber;
 }
-
-console.log(highestCount([0, 0, 0]))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
