@@ -14,14 +14,23 @@ function calcArea(base, height) {
   return (base * height)/2;
 }
 
-// Desafio 3
-function splitSentence() {
-  // seu código aqui
+// // Desafio 3
+function splitSentence(phrase ) {
+  let wordReciver = "";
+  let arrayReciver = [];
+  for (let index = 0; index < phrase.length; index += 1) {
+    if(phrase[index] != " " ) {
+      wordReciver += phrase[index]
+    } else {
+      arrayReciver =arrayReciver.push(wordReciver);
+    };
+  };
+  return arrayReciver;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(phraseList) {
+  return console.log (phraseList[phraseList.length -1] + phraseList[0]);
 }
 
 // Desafio 5
