@@ -3,7 +3,7 @@ function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
   } else {
-    return false; 
+    return false;
   }
 }
 
@@ -74,27 +74,74 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let resultArray = [];
 
-  for (let index = 0; index < array.length; index += 1){
+  for (let index = 0; index < array.length; index += 1) {
     if (array[index] / 3 && array[index] / 5) {
-    resultArray.push('fizzBuzz')
-  } else if (array[index] / 3) {
-    resultArray.push('fizz')
-  } else if (array[index] / 5){
-    resultArray.push('buzz')
-  } else {
-    resultArray.push('bug!')
-  }
+      resultArray.push('fizzBuzz');
+    } else if (array[index] / 3) {
+      resultArray.push('fizz');
+    } else if (array[index] / 5){
+      resultArray.push('buzz');
+    } else {
+      resultArray.push('bug!');
+    }
   return resultArray;
-}
+  }
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let newString
+  for (let index = 0; index < string.length; index += 1) {
+    switch (string[index]){
+      case 'A':
+          newstring += 1;
+          break;
+      case 'E':
+        newstring += 2;
+        break;
+      case 'I':
+        newstring += 3;
+        break;
+      case 'O':
+          newstring += 4;
+        break;
+      case 'U':
+        newstring += 5;
+      break;
+      default:
+        newstring += string[index];
+        break;
+    }
+  }
+  return newstring;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let newString
+  for (let index = 0; index < string.length; index += 1) {
+    switch (string.length){
+      case 1:
+          newstring += 'A';
+          break;
+      case 2:
+        newstring += 'E';
+        break;
+      case 3:
+        newstring += 'I';
+        break;
+      case 4:
+          newstring += 'O';
+        break;
+      case 5:
+        newstring += 'U';
+      break;
+      default:
+        newstring += string[index];
+        break;
+    }
+  }
+  return newString;
 }
+
 
 module.exports = {
   calcArea,
