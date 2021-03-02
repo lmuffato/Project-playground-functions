@@ -86,8 +86,28 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+
+function checkDivisions(numberOfArrayFizzBuzz) {
+  let resultOfCheckDivisions = '';
+  if (numberOfArrayFizzBuzz % 3 === 0 && numberOfArrayFizzBuzz % 5 === 0) {
+    resultOfCheckDivisions = 'fizzBuzz';
+  } else if (numberOfArrayFizzBuzz % 5 === 0) {
+    resultOfCheckDivisions = 'buzz';
+  } else if (numberOfArrayFizzBuzz % 3 === 0) {
+    resultOfCheckDivisions = 'fizz';
+  } else {
+    resultOfCheckDivisions = 'bug!';
+  }
+  return resultOfCheckDivisions;
+}
+
+function fizzBuzz(arrayFizzBuzzNumbers) {
+  let array = [];
+
+  for (let index = 0; index < arrayFizzBuzzNumbers.length; index += 1) {
+    array.push(checkDivisions(arrayFizzBuzzNumbers[index]));
+  }
+  return array;
 }
 
 // Desafio 9
