@@ -41,8 +41,21 @@ return teamPoints
 
 
 // Desafio 6
-function highestCount() {
+function highestCount(arrayNumbers) {
   // seu código aqui
+let higher = 0;
+let contador = 0;  
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] > higher) {
+      higher = arrayNumbers[index];
+    }
+  }  
+  for (index = 0; index < arrayNumbers.length; index += 1){
+  if (arrayNumbers[index] == higher){
+  contador += 1;
+  }
+  }   
+  return contador;
 }
 
 // Desafio 7
