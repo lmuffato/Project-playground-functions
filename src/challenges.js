@@ -28,16 +28,16 @@ function footballPoints(wins,ties) {
 
 // Desafio 6
 function highestCount(array) {
-  for (let index = 0; index < array.length; index += 1){
-    let newArray = array[index];
+  // for (let index = 0; index < array.length; index += 1){
+  //   let newArray = array[index];
 
-      if (newArray[index] === array[index]) {
-        let sumHighestCount += 1;
-      }
+  //     if (newArray[index] === array[index]) {
+  //       let sumHighestCount += 1;
+  //     }
 // usar 2 fors, um para ver qual q é o maior, outro para contar cada ida
-  }
+  // }
 
-  return sumHighestCount;
+  // return sumHighestCount;
 }
 
 // Desafio 7
