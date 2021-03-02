@@ -63,10 +63,10 @@ function generatePhoneNumber(phone) {
     trueOrFalse = false;
   }
   for (let i = 0; i < phone.length; i += 1) {
-    if (phone[i] < 0 || phone[i] > 9 || trueOrFalse === true) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    } else if (phone.length !== 12) {
+    if (phone.length !== 12) {
       return 'Array com tamanho incorreto.';
+    } else if (phone[i] < 0 || phone[i] > 9 || trueOrFalse === true) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
   return `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}${phone[5]}${phone[6]}-${phone[7]}${phone[8]}${phone[9]}${phone[10]}`;
