@@ -38,7 +38,6 @@ function generatePhoneNumber(tel) {
     + '-' + tel[7] + tel[8] + tel[9] + tel[10];
   }
 }
-console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,1,2]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
