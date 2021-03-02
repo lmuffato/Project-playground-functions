@@ -42,8 +42,19 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let counter = 1;
+  let langer = numbers[0];
+  for (let index = 1; index < numbers.length; index += 1) {
+    if (numbers[index] > numbers[(index - 1)]) {
+      counter = 1;
+      langer = numbers[index];
+    }
+    if (langer === numbers[index]) {
+      counter += 1;
+    }
+  }
+  return counter;
 }
 
 // Desafio 7
@@ -64,7 +75,7 @@ function decode() {
   // seu código aqui
 }
 
-console.log(concatName(['Guilherme', 'Sucupira', 'OLiveira']));
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 module.exports = {
   calcArea,
