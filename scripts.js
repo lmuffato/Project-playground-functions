@@ -13,3 +13,9 @@ function calcArea(base, height) {
     return area
 }
 console.log(calcArea(10, 50));
+
+function splitSentence(text){
+    let array = text.split(' ');
+    return array;
+}
+console.log(splitSentence('Esse texto é um teste'))
