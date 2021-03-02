@@ -18,6 +18,7 @@ function calcArea(base,height) {
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
+  // vi isso em : https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
   return string.split(" ");
 
 }
@@ -54,7 +55,7 @@ function encode() {
 function decode() {
   // seu código aqui
 }
-console.log(splitSentence("vamo que vamo"))
+//console.log(splitSentence("vamo que vamo"))
 
 module.exports = {
   calcArea,
