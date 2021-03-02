@@ -67,9 +67,9 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 
   if(mouse >= cat2Distance){
-    cat2Distance = mouse - cat1;
+    cat2Distance = mouse - cat2;
   } else{
-    cat2Distance = cat1 - mouse;
+    cat2Distance = cat2 - mouse;
   }
 
 
