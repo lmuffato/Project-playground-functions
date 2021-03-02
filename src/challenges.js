@@ -71,8 +71,6 @@ function highestCount(listNumbers) {
   return numberRepete;
 }
 
-console.log()
-
 // Desafio 7
 function catAndMouse(cat1, cat2) {
   if (cat1 > cat2) {
@@ -86,8 +84,23 @@ function catAndMouse(cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(listNumbers) {
+  let listArrayString = [];
+
+  for (let index in listNumbers) {
+    
+    if (listNumbers[index] % 3 == 0 && listNumbers[index] % 5 == 0) {
+      listArrayString.push('fizzBuzz');
+    } else if (listNumbers[index] % 3 == 0) {
+      listArrayString.push('fizz');
+    } else if (listNumbers[index] % 5 == 0) {
+      listArrayString.push('buzz');
+    } else {
+      listArrayString.push('bug');
+    }
+  }
+
+  return listArrayString;
 }
 
 // Desafio 9
