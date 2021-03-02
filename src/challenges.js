@@ -2,15 +2,18 @@
 // Desafio 1
 function compareTrue(value1,value2) {
   if((value1 == true) && (value2 == true)) {
-    return true
+    return true;
   } else {
-    return false
+    return false;
   }
+  // ty jackson
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base,height) {
   // seu código aqui
+  let area = (base*height)/2;
+  return 'a área do triangulo é ' + area;
 }
 
 // Desafio 3
