@@ -26,7 +26,7 @@ function splitSentence(phrase) {
 function concatName(names) {
   // seu código aqui
   let first = names[0];
-  let last = names[names.length-1];
+  let last = names[names.length -1];
   return first + ', ' + last;
 }
 
