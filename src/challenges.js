@@ -1,15 +1,14 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if(value1 === true && value2 === true) {
-    return true ;
+  if (value1 === true && value2 === true) {
+    return true;
   } else {
-    return false ;
+    return false;
   }
 }
 console.log(compareTrue(true, false));
 console.log(compareTrue(false, false));
 console.log(compareTrue(true, true));
-
 
 // Desafio 2
 function calcArea(base, heigth) {
@@ -23,7 +22,7 @@ console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence(shareString) {
-  return shareString.split('');
+  return shareString.split(' ');
 }
 console.log(splitSentence('go, Trybe'))
 console.log(splitSentence('vamo que vamo'))
@@ -31,7 +30,7 @@ console.log(splitSentence('foguete'))
 
 // Desafio 4
 function concatName(arrayString) {
-  return `${arrayString[arrayString.length-1]} , ${arrayString[0]}` ;
+  return `${arrayString[arrayString.length-1]}, ${arrayString[0]}` ;
 }
 arrayString = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
 console.log(concatName(arrayString));
@@ -51,9 +50,30 @@ console.log(footballPoints(0, 0));
 
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let maior = 0;
+  let count = 0;
+
+ for (let index = 0; index < numbers.length; index +=1) {
+    if(numbers[index] > maior) {
+    maior = numbers[index];
+    }
+ }
+
+ for (let index = 0; index < numbers.length; index +=1){
+    if (numbers[index] == maior) {
+      count = count + 1;
+    }
+  }
+  return count;
 }
+
+let meuArray = [9, 1, 2, 3, 9, 5, 7];
+console.log(highestCount(meuArray));
+meuArray = [0, 4, 4, 4, 9, 2, 1];
+console.log(highestCount(meuArray));
+meuArray = [0, 0, 0];
+console.log(highestCount(meuArray));
 
 // Desafio 7
 function catAndMouse() {
