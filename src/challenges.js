@@ -44,16 +44,22 @@ function concatName(name_array) {
 } 
 
 
-let name = ["pedro","carla","joão","josé","marcos"];
-console.log(concatName(name)); 
+ 
 
 
 
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let valueWins = 3 ;
+  let valueTies = 1 ;
+  return (wins*valueWins)+(ties * valueTies);
+
 }
+
+
+console.log(footballPoints(0,0));
 
 // Desafio 6
 function highestCount() {
