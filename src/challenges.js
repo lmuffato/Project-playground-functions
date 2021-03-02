@@ -79,7 +79,7 @@ function catAndMouse(mouse, cat1, cat2) {
     inputCat = 'cat2';
   } else if (distCat2 > distCat1) {
     inputCat = 'cat1';
-  } else if (cat1 === cat2) {
+  } else if (distCat2 === distCat1) {
     inputCat = 'os gatos trombam e o rato foge';
   }
 
