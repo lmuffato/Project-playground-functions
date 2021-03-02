@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(valueBoolean1, valueBoolean2) {
-  if (valueBoolean1 === true && valueBoolean2 === true){
+  if (valueBoolean1 === true && valueBoolean2 === true) {
     return true;
   } else {
     return false;
@@ -14,8 +14,9 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let splitedString = string.split(' '); // Fui estudar sobre métodos e achei no MDN sobre a split, onde ela divide o parâmetro recebido de acordo com seu valor em ().
+  return splitedString;
 }
 
 // Desafio 4
