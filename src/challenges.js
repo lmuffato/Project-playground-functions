@@ -27,12 +27,15 @@ function concatName(array) {
   let firstElement = array[0];
   let lastElement = array[array.length - 1];
 
-  return lastElement + ' ' + firstElement;
+  return [lastElement + ', ' + firstElement];
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  
+  let teamPoints = (wins * 3) + (ties * 1);
+
+  return teamPoints
 }
 
 // Desafio 6
