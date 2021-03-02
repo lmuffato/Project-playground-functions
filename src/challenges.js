@@ -67,26 +67,43 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function isDivisibleBy3Or5(number) {
+  if (number % 3 === 0 && number % 5 !== 0) {
+    return 'divisible by 3';
+  }
+  if (number % 3 !== 0 && number % 5 === 0) {
+    return 'divisible by 5';
+  }
+  if (number % 3 === 0 && number % 5 === 0) {
+    return 'divisible by 3 and 5';
+  }
+  if (number % 3 !== 0 && number % 5 !== 0) {
+    return 'NOT divisible by 3 or 5';
+  }
+}
+
 function fizzBuzz(numbersArr) {
   const resultsArr = [];
 
   for (let index = 0; index < numbersArr.length; index += 1) {
-    if (numbersArr[index] % 3 === 0 && numbersArr[index] % 5 !== 0) {
+    if (isDivisibleBy3Or5(numbersArr[index]) === 'divisible by 3') {
       resultsArr.push('fizz');
     }
-    if (numbersArr[index] % 3 !== 0 && numbersArr[index] % 5 === 0) {
+    if (isDivisibleBy3Or5(numbersArr[index]) === 'divisible by 5') {
       resultsArr.push('buzz');
     }
-    if (numbersArr[index] % 3 === 0 && numbersArr[index] % 5 === 0) {
+    if (isDivisibleBy3Or5(numbersArr[index]) === 'divisible by 3 and 5') {
       resultsArr.push('fizzBuzz');
     }
-    if (numbersArr[index] % 3 !== 0 && numbersArr[index] % 5 !== 0) {
+    if (isDivisibleBy3Or5(numbersArr[index]) === 'NOT divisible by 3 or 5') {
       resultsArr.push('bug!');
     }
   }
 
   return resultsArr;
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
