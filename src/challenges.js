@@ -59,7 +59,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let dist2 = cat2 - mouse;
   let result;
   if (dist1 > dist2) {
-    result = 'cat 2';
+    result = 'cat2';
   } else if (dist2 > dist1) {
     result = 'cat1';
   } else {
