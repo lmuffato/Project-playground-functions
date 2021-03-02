@@ -91,12 +91,48 @@ function fizzBuzz(arrayNumbers) {
 //console.log(fizzBuzz(array));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let spacedPhrase = ''; 
+  spacedPhrase = phrase.split(""); //aqui transformo a string em um array de caracteres, onde cada letra é um indice.
+  //percorrendo o array e alterando os valores
+  for(let i = 0; i < spacedPhrase.length; i += 1){
+    if(spacedPhrase[i] == 'a'){
+      spacedPhrase[i] = '1';
+    }else if(spacedPhrase[i] == 'e'){
+      spacedPhrase[i] = '2';
+    }else if(spacedPhrase[i] == 'i'){
+      spacedPhrase[i] = '3';
+    }else if(spacedPhrase[i] == 'o'){
+      spacedPhrase[i] = '4';
+    }else if(spacedPhrase[i] == 'u'){
+      spacedPhrase[i] = '5';
+    }
+  }
+  return spacedPhrase.join(""); //retornando array contatenado em string.
+  //console.log(spacedPhrase.join("")); //concatenando array de string em um unico array
 }
-function decode() {
-  // seu código aqui
+//encode('hi there!');
+
+function decode(array) {
+  let spacedArray = '';
+  spacedArray = array.split("");
+  for(let i = 0; i < spacedArray.length; i += 1){
+    if(spacedArray[i] == '1'){
+      spacedArray[i] = 'a';
+    }else if(spacedArray[i] == '2'){
+      spacedArray[i] = 'e';
+    }else if(spacedArray[i] == '3'){
+      spacedArray[i] = 'i';
+    }else if(spacedArray[i] == '4'){
+      spacedArray[i] = 'o';
+    }else if(spacedArray[i] == '5'){
+      spacedArray[i] = 'u';
+    }
+  }
+  return spacedArray.join("");
 }
+//let array = 'h3 th2r2!';
+//console.log(decode(array));
 
 module.exports = {
   calcArea,
