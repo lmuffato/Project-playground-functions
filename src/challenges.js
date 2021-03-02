@@ -20,9 +20,10 @@ function splitSentence(string01) {
 
 // Desafio 4
 function concatName(arrayString) {
-  let arrayResult = arrayString[arrayString.length - 1] + ' , ' + arrayString[0];
+  let arrayResult = `${arrayString[arrayString.length - 1]}, ${arrayString[0]}`;
   return arrayResult.toString();
 }
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints() {
