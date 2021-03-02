@@ -88,6 +88,7 @@ module.exports = {
 };
 
 console.log(splitSentence('foguete'));
+console.log(concatName(['captain', 'my', 'captain']));
 
 
 
