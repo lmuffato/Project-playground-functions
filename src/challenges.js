@@ -41,7 +41,7 @@ function highestCount(array) {
     }
     return count;
   }
-
+}
 
 
 // Desafio 7
@@ -85,4 +85,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
