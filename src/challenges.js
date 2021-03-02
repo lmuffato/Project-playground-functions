@@ -19,14 +19,16 @@ function splitSentence() {
 }
 
 // Desafio 4
-function concatName(string2) {
-  let concat = []
-  for (let index = 0; index < string2.length; index += 1) {
-    concat.push(string2[string2.length - 1]);
-    concat.push(string2[0]);
-    return concat
-  }
+function concatName(items) {
+  let firstItem = items[items.length -1];
+  let secondItem = items[0];
+  let concat = [firstItem, secondItem];
+  return concat;
 }
+
+items = ['Mariana', 'Silvinha', 'Luiza']
+
+console.log(concatName(items))
 
 // Desafio 5
 function footballPoints() {
