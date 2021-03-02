@@ -26,7 +26,8 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  return `${array[0]}, ${array[array.length - 1]}`;
+  let result = `${array[0]}, ${array[array.length - 1]}`;
+  return result;
 }
 
 // Desafio 5
@@ -70,4 +71,4 @@ module.exports = {
   splitSentence,
 };
 
-console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+console.log(concatName(['captain', 'my', 'captain']));
