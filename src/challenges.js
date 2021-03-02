@@ -29,7 +29,6 @@ function footballPoints(wins, ties) {
   wins = wins * 3;
   ties = ties * 1;
   return wins + ties;
-  // seu código aqui
 }
 console.log(footballPoints(0, 0));
 
@@ -39,9 +38,18 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  distanceCat1 = cat1 - mouse;
+  distanceCat2 = cat2 - mouse;
+  if (distanceCat2 > distanceCat1) {
+    return "cat1";
+  } else if (distanceCat1 > distanceCat2) {
+    return "cat2";
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
+console.log(catAndMouse(0, 8, 8))
 
 // Desafio 8
 function fizzBuzz() {
