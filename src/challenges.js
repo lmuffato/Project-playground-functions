@@ -13,7 +13,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(phrase) {
-  return phrase.split(" ");
+  return phrase.split(' ');
 }
 console.log(splitSentence('go trybe'));
 
