@@ -29,8 +29,11 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(string) {
+  let phrase = string[(string.length - 1)];
+  phrase += ', ';
+  phrase += string[0];
+  return phrase;
 }
 
 // Desafio 5
@@ -61,11 +64,7 @@ function decode() {
   // seu código aqui
 }
 
-let string = 'Eu aprendendo';
-console.log(string);
-let str = ['Eu', 'aprendendo'];
-console.log(str[0]);
-console.log(splitSentence('Eu guilherme'));
+console.log(concatName(['Guilherme', 'Sucupira', 'OLiveira']));
 
 module.exports = {
   calcArea,
