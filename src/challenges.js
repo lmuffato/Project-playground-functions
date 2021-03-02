@@ -8,7 +8,7 @@ function compareTrue(value1, value2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let calc = base * height / 2;
+  let calc = (base * height) / 2;
   return calc;
 }
 
@@ -22,8 +22,7 @@ function splitSentence(string) {
 function concatName(items) {
   let firstItem = items[items.length - 1];
   let lastItem = items[0];
-  let ponctuation = ', ';
-  return lastItem + ponctuation + firstItem;
+  return '${lastItem}, ${firstItem}';
 }
 
 // Desafio 5
@@ -52,7 +51,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numbers) {
   let fizzOrBuzz = [];
-  for (let index = 0; index < numbers.length; index+= 1) {
+  for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
       fizzOrBuzz.push('fizzBuzz');
     } else if (numbers[index] % 3 === 0) {
@@ -63,7 +62,7 @@ function fizzBuzz(numbers) {
       fizzOrBuzz.push('bug!');
     }  
   }
-  return fizzOrBuzz
+  return fizzOrBuzz;
 }
 
 // Desafio 9
