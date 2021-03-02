@@ -4,7 +4,8 @@ function compareTrue(param1, param2) {
     return true;
   }
   return false;
-//console.log(compareTrue(true, true)); 
+} 
+console.log(compareTrue(false, false)); 
 
 // Desafio 2
 function calcArea(base, height) {
@@ -37,9 +38,8 @@ function footballPoints(wins, ties) {
 //console.log(footballPoints(14, 8));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(numbers) {
+ 
 
 // Desafio 7
 function catAndMouse() {
