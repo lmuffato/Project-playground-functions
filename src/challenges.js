@@ -1,6 +1,8 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(firstValue, secondValue) {
+  let compareValues = firstValue && secondValue === true;
+
+  return compareValues;
 }
 
 // Desafio 2
