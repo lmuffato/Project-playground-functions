@@ -18,12 +18,12 @@ function calcArea(base, height) {
 function splitSentence(phrase) {
     return phrase.split(' ');
 }
-console.log(splitSentence('go trybe'));
+
 // Desafio 4
 function concatName(phraseList) {
-  return console.log (phraseList[phraseList.length -1] + ',' + phraseList[0]);
+  return phraseList[phraseList.length -1] + ',' + phraseList[0]
 }
-
+console.log(concatName(['lucas', 'henrique', 'da', 'paz']));
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = ((wins * 3) + ( ties * 1));
