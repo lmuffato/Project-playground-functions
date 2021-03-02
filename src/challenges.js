@@ -30,10 +30,10 @@ function splitSentence(originalString) {
 function concatName(stringArray) {
   return (stringArray[stringArray.length - 1] + ', ' + stringArray[0]);
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
+
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3 + ties)
 }
 
 // Desafio 6
