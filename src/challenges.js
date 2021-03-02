@@ -1,7 +1,11 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aquix
+function compareTrue(value1,value2) {
+  if (value1 === true && value2 === true) {
+    return(true);
+  }
+  return(false);
 }
+console.log(compareTrue([valie1,value2]))
 
 // Desafio 2
 function calcArea() {
