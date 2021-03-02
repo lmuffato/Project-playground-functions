@@ -9,8 +9,8 @@ console.log(compareTrue(true, false));
 
 // Desafio 2
 function calcArea(base, height) {
-  res = (base * height) / 2;
-  return res;
+  let result = (base * height) / 2;
+  return result;
 }
 console.log(calcArea(10, 50));
 
@@ -28,9 +28,13 @@ function concatName(stringArrays) {
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints() {
-
+function footballPoints(wins, ties) {
+  let winsPoints = wins * 3;
+  let tiesPoints = ties * 1;
+  return winsPoints + tiesPoints;
 }
+console.log(footballPoints(14, 8));
+
 // Desafio 6
 function highestCount() {
   // seu código aqui
