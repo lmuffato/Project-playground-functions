@@ -9,10 +9,23 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(originalString) {
+  let wordsArray = [];
+  let singleWord = '';
+  for (let char = 0; char <= originalString.length; char += 1) {
+    if (char == (originalString.length - 1)) {
+      singleWord += originalString[char];
+      wordsArray.push(singleWord);
+    } else if (originalString[char] != ' ') {
+      singleWord += originalString[char];
+    } else {
+      wordsArray.push(singleWord);
+      singleWord = '';
+    }
+  }
+  return wordsArray;
 }
-
+console.log(splitSentence('Be Trybe'));
 // Desafio 4
 function concatName() {
   // seu código aqui
