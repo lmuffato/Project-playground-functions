@@ -62,25 +62,75 @@ function fizzBuzz(arrayN8) {
   let arrayResultN8 = arrayN8;
   for (let index in arrayN8) {
     if ((arrayN8[index] % 3) === 0 && (arrayN8[index] % 5) === 0) {
-      arrayResultN8[index] = "fizzBuzz";
+      arrayResultN8[index] = 'fizzBuzz';
     } else if ((arrayN8[index] % 3) === 0 && (arrayN8[index] % 5) !== 0) {
-      arrayResultN8[index] = "fizz";
+      arrayResultN8[index] = 'fizz';
     } else if ((arrayN8[index] % 3) !== 0 && (arrayN8[index] % 5) === 0) {
-      arrayResultN8[index] = "Buzz";
+      arrayResultN8[index] = 'buzz';
     } else {
-      arrayResultN8[index] = "bug!"
+      arrayResultN8[index] = 'bug!';
     }
   }
   return arrayResultN8;
 }
+console.log(fizzBuzz([9, 25]))
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringIn) {
+  let encodedString = stringIn;
+  for (let indexEnc in encodedString) {
+    switch (encodedString[indexEnc]) {
+      case 'a': 
+        encodedString[indexEnc] = '1';
+        break;
+      case 'e':
+        encodedString[indexEnc] = '2';
+        break;
+      case 'i':
+        encodedString[indexEnc] = '3';
+        break;
+      case 'o':
+        encodedString[indexEnc] = '4';
+        break
+      case 'u':
+        encodedString[indexEnc] = '5';
+        break;
+      default:
+        encodedString[indexEnc] = encodedString[indexEnc];
+    }
+  }
+  return encodedString;
 }
-function decode() {
-  // seu código aqui
+
+function decode(stringOut) {
+  let decodedString = stringOut;
+
+  for (let indexDec in decodedString) {
+    switch (decodedString[indexDec]) {
+      case '1': 
+        decodedString[indexDec] = 'a';
+        break;
+      case '2':
+        decodedString[indexDec] = 'e';
+        break;
+      case '3':
+        decodedString[indexDec] = 'i';
+        break;
+      case '4':
+        decodedString[indexDec] = 'o';
+        break;
+      case '5':
+        decodedString[indexDec] = 'u';
+        break;
+      default:
+        decodedString[indexDec] = decodedString[indexDec];
+    }
+  }
+  return decodedString;
 }
+
+
+
 
 module.exports = {
   calcArea,
