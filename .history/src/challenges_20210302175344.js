@@ -15,8 +15,8 @@ function calcArea(base,height) {
   let resultArea
   resultArea = (base * height) /2
   return resultArea
+
 }
-console.log(calcArea(20,20))
 
 // Desafio 3
 function splitSentence() {

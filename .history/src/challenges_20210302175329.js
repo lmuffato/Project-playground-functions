@@ -13,10 +13,9 @@ console.log(compareTrue(true,false))
 // Desafio 2
 function calcArea(base,height) {
   let resultArea
-  resultArea = (base * height) /2
-  return resultArea
+  resultArea = (base * height) / 
+
 }
-console.log(calcArea(20,20))
 
 // Desafio 3
 function splitSentence() {
