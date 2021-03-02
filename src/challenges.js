@@ -23,31 +23,77 @@ function splitSentence(word) {
 
 // Desafio 4
 function concatName(names) {
-  let firstName = names [0];
-  let lastName = names[names.length-1];
+  let divide = {
+    firstName: names [0],
+    lastName: names[names.length-1]
+  }
 
-  let conquer = lastName + ', ' + firstName;
+  let conquer = divide.lastName + ', ' + divide.firstName;
 
   return conquer;
 }
 console.log(concatName (['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
+
 // Desafio 5
 function footballPoints(wins, ties) {
-  let winspoint = 3;
-  let tiespoint = 1;
-  let winsplus = wins * winspoint;
-  let tiesplus = ties * tiespoint;
-  let total = winsplus + tiesplus;
-
+  let game = {
+    winspoints: 3,
+    tiespoints: 1
+  }
+  let pointsSum = {
+    winsplus: wins * game.winspoints,
+    tiesplus: ties * game.tiespoints
+  }
+  let total = pointsSum.winsplus + pointsSum.tiesplus;
   return total;
 }
 
-
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(num) {
+  let objectNumber = {
+    highestNum: num[0],
+    Count: 0
+  }
+  for (let highestnumbers in num) {
+    if (num[highestnumbers] > objectNumber.highestNum) {
+      objectNumber.highestNum = num[highestnumbers];
+    }
+  }
+  for (let verifyCount in num) {
+    if (num[verifyCount] === objectNumber.highestNum) {
+      objectNumber.Count += 1;
+    }
+  }
+    return objectNumber.Count;
 }
+ console.log (highestCount([9, 1, 2, 3, 9, 5, 7]))
+
+
+function highestCount(array) {
+  let highestNumber = array[0];
+  let counter = 0;
+  for (let verifyHighest in array) {
+    if (array[verifyHighest] > highestNumber) {
+      highestNumber = array[verifyHighest];
+    }
+  }
+
+  for (let verifyCount in array) {
+    if (array[verifyCount] === highestNumber) {
+      counter += 1;
+    }
+  }
+  return counter;
+}
+console.log (highestCount([9, 1, 2, 3, 9, 5, 7]))
+
+
+
+
+
+
+
 
 // Desafio 7
 function catAndMouse() {
