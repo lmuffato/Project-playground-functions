@@ -1,16 +1,15 @@
 // Desafio 10
-function techList(technology, name) {
-  for (let index = 0; index < technology.length; index += 1) {
-    technology[index] = {
-      tech: technology[index],
-      name
+function techList(tech, name) {
+  for (let index = 0; index < tech.length; index += 1) {
+    tech[index] = {
+      tech: tech[index],
+      name,
     };
   }
-  if (technology.length === 0) {
+  if (tech.length === 0) {
     return 'Vazio!';
-  } else {
-  return technology;
   }
+  return tech;
 }
 
 // Desafio 11
