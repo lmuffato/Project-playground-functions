@@ -1,25 +1,20 @@
 // Desafio 1
 function compareTrue(gradeProject, goingToLectures) {
   // seu código aqui
-  let result;
+    if (gradeProject === true && goingToLectures === true) {
+    return true;
+    } else {
+      return false;
+    }
+ }
 
-  if (gradeProject >= 80 && goingToLectures >= 95) {
-    result === true;
-    console.log('Aprovado');
-  } else {
-    result === false;
-    console.log('Reprovado')
-  }
-  return result;
-}
-let grade = 78;
-let lectures = 90;
-console.log(compareTrue(grade, lectures));
 
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  let areaTriangle;
+  return areaTriangle = (base*height)/2;
 }
 
 // Desafio 3
