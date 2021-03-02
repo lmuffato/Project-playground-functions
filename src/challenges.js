@@ -47,18 +47,42 @@ function concatName(names) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return wins*3 + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let conta=0;
+  let maior =0;
+  for (index=0; index<array.length; index+=1){
+    if(array[index]===maior){
+      conta+=1;
+    }
+    else if(array[index]>maior){
+      maior=array[index];
+      conta=1;
+    }
+
+  }
+  return conta;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaCat1 = mouse - cat1;
+  let distanciaCat2 = mouse - cat2;
+
+  if(Math.abs(distanciaCat1)<Math.abs(distanciaCat2)){
+    return 'cat1';
+  }
+  else if(Math.abs(distanciaCat2)<Math.abs(distanciaCat1)){
+    return 'cat2';
+  }
+  else{
+    return 'os gatos trombam e o rato foge';
+  }
+
 }
 
 // Desafio 8
@@ -87,8 +111,11 @@ module.exports = {
   splitSentence,
 };
 
-console.log(splitSentence('foguete'));
-console.log(concatName(['captain', 'my', 'captain']));
+//console.log(splitSentence('foguete'));
+//console.log(concatName(['captain', 'my', 'captain']));
+//console.log(footballPoints(0,0));
+//console.log(highestCount([0,0,0]));
+console.log(catAndMouse(1,3,2));
 
 
 
