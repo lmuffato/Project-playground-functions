@@ -51,25 +51,24 @@ function footballPoints(wins, ties) {
 function highestCount(listNumbers) {
   let indexHighestValue = 0;
   let contRepete = 0;
-  let numberRepete = 0;
+  let valueHighest = listNumbers[0];
 
   for (let indexOne = 0; indexOne < listNumbers.length; indexOne +=1) {
-    for (let indexTwo = 0; indexTwo < listNumbers.length; indexTwo += 1) {
-      if (listNumbers[indexOne] === listNumbers[indexTwo]) {
-        contRepete += 1;
-      }
+    if (listNumbers[indexOne] > valueHighest) {
+      valueHighest = listNumbers[indexOne];
     }
-
-    if (contRepete > numberRepete) {
-      numberRepete = contRepete;
-      indexHighestValue = indexOne;
-    }
-
-    contRepete = '';
   }
-  
-  return numberRepete;
+
+  for (let indexTwo = 0; indexTwo < listNumbers.length; indexTwo += 1) {
+    if (listNumbers[indexTwo] === valueHighest) {
+      contRepete += 1;
+    }
+  }
+
+  return contRepete;
 }
+
+console.log(highestCount([0, 0, 0]))
 
 // Desafio 7
 function catAndMouse(cat1, cat2) {
@@ -89,11 +88,11 @@ function fizzBuzz(listNumbers) {
 
   for (let index in listNumbers) {
     
-    if (listNumbers[index] % 3 == 0 && listNumbers[index] % 5 == 0) {
+    if (listNumbers[index] % 3 === 0 && listNumbers[index] % 5 === 0) {
       listArrayString.push('fizzBuzz');
-    } else if (listNumbers[index] % 3 == 0) {
+    } else if (listNumbers[index] % 3 === 0) {
       listArrayString.push('fizz');
-    } else if (listNumbers[index] % 5 == 0) {
+    } else if (listNumbers[index] % 5 === 0) {
       listArrayString.push('buzz');
     } else {
       listArrayString.push('bug');
@@ -104,9 +103,28 @@ function fizzBuzz(listNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(codString) {
+  let arrayCodif = codString.split("")
+
+  for (let index in arrayCodif) {
+    if (arrayCodif[index] === 'a') {
+      arrayCodif[index] = 1;
+    } else if (arrayCodif[index] === 'e') {
+      arrayCodif[index] = 2;
+    } else if (arrayCodif[index] === 'i') {
+      arrayCodif[index] = 3;
+    } else if (arrayCodif[index] === 'o') {
+      arrayCodif[index] = 4;
+    } else if (arrayCodif[index] === 'u') {
+      arrayCodif[index] = 5;
+    }
+  }
+
+  arrayCodif = arrayCodif.split();
+  return arrayCodif;
 }
+
+console.log(encode('hi there!'))
 function decode() {
   // seu código aqui
 }
