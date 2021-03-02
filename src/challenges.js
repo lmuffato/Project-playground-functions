@@ -30,7 +30,7 @@ function concatName(arrayDeNomes) {
   stringDeNomes.push(arrayDeNomes[0]);
   return stringDeNomes;
 }
-// console.log(concatName(['Eric', 'de', 'Souza', 'Santos']));
+ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -55,7 +55,7 @@ function highestCount(arrayDeNumeros) {
   }
 return countBigger
 }
-console.log(highestCount([9, 1, 2, 9, 9, 5, 7]));
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
