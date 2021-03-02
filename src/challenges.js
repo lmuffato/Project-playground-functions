@@ -30,13 +30,11 @@ function concatName(string) {
 function footballPoints(wins, ties) {
   let winsPoints = 3;
   let tiesPoints = 1;
-
-  return `${winsPoints * wins + tiesPoints * ties}`;
+  return (winsPoints * wins) + (tiesPoints * ties);
 }
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
 }
 
 // Desafio 7
