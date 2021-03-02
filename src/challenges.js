@@ -26,18 +26,24 @@ function splitSentence(string) {
       }
 
       if(arr[i]===undefined){
-        arr[i]=string[index];
+        if(string[index]!==' '){
+          arr[i]=string[index];
+        }
       }
       else{
+
         arr[i]+=string[index];
+
       }
   }
   return arr;
+
 }
+
 
 // Desafio 4
 function concatName(names) {
-  return names[names.length-1] + ' '+ names[0];
+  return names[names.length-1] + ' ' + names[0];
 }
 
 // Desafio 5
@@ -81,7 +87,7 @@ module.exports = {
   splitSentence,
 };
 
-
+console.log(splitSentence('foguete'));
 
 
 
