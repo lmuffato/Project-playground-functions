@@ -5,6 +5,7 @@ function compareTrue(valueBooleanOne, valueBooleanTwo) {
   }
   return false;
 }
+
 // Desafio 2
 let areaDoTriangulo = 0;
 function calcArea(base, height) {
@@ -14,12 +15,15 @@ function calcArea(base, height) {
 console.log(areaDoTriangulo);
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+
+function splitSentence(string) {
+  stringDividida = string.split(" ,");
+  return stringDividida ; 
 }
+console.log(stringDividida);
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
 }
 
