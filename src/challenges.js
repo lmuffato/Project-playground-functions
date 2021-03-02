@@ -14,7 +14,7 @@ function compareTrue(gradeProject, goingToLectures) {
 function calcArea(base, height) {
   // seu código aqui
   let areaTriangle;
-  return areaTriangle = (base*height)/2;
+  return areaTriangle = (base * height)/2;
 }
 
 // Desafio 3
@@ -38,8 +38,10 @@ function concatName(nameList) {
 //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let tablePoints;
+  return tablePoints = (3 * wins) + ties;
 }
 
 // Desafio 6
