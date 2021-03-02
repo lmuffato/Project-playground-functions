@@ -2,9 +2,8 @@
 function compareTrue(bool01, bool02) {
   if (bool01 === true && bool02 === true) {
     return true;
-  } else {
+  } 
     return false;
-  }
 }
 
 // Desafio 2
