@@ -96,8 +96,8 @@ function encodeReplace(letter) {
     e: 2,
     i: 3,
     o: 4,
-    u: 5
-  }
+    u: 5,
+  };
 
   for (let index in letters) {
     if (letter === index) {
@@ -109,7 +109,7 @@ function encodeReplace(letter) {
 
 function encode(string) {
   let encodedString = '';
-  for (let index in string) {
+  for (let index = 0; index < string.length; index += 1) {
     encodedString += encodeReplace((string[index]));
   }
   return encodedString;
@@ -121,8 +121,8 @@ function decodeReplace(letter) {
     e: 2,
     i: 3,
     o: 4,
-    u: 5
-  }
+    u: 5,
+  };
 
   for (let index in letters) {
     if (letter == letters[index]) {
@@ -134,7 +134,7 @@ function decodeReplace(letter) {
 
 function decode(string) {
   let decodedString = '';
-  for (let index in string) {
+  for (let index = 0; index < string.length; index += 1) {
     decodedString += decodeReplace((string[index]));
   }
   return decodedString;
