@@ -11,20 +11,14 @@ function compareTrue(a, b) {
 console.log(compareTrue(false, false));
 
 // Desafio 2
-let area = 0;
 function calcArea(base, height) {
-  if (base > 0 && height >0) {
-    return (base * height) / 2
-  }
-  // area = (base * altura) /2
+if (base > 0 && height >0) {
+return (base * height) / 2
+}
 }
 console.log(calcArea(51, 1));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
-
 // Desafio 4
 function concatName() {
   // seu código aqui
