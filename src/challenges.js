@@ -22,7 +22,8 @@ function splitSentence(string) {
 function concatName(items) {
   let firstItem = items[items.length - 1];
   let lastItem = items[0];
-  return lastItem + ', ' + firstItem;
+  let ponctuation = ', '
+  return lastItem + ponctuation + firstItem;
 }
 
 // Desafio 5
@@ -51,8 +52,8 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(10, 10, 10))
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+
 }
 
 // Desafio 9
