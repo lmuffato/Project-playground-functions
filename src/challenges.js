@@ -7,11 +7,8 @@ function compareTrue(boolOne, boolTwo) {
 }
 // Desafio 2
 function calcArea(base, height) {
-  // seu código aqui
-  let result = 0;
-  result = (base * height) / 2;
-  return console.log(result);
-}
+  return (base * height) / 2;;
+} calcArea(51, 1);
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
@@ -50,7 +47,7 @@ function decode() {
   // seu código aqui
 }
 console.log(compareTrue(true, true));
-calcArea(51, 1);
+
 splitSentence('foguete');
 concatName(['captain', 'my', 'captain']);
 footballPoints(5, 5);
