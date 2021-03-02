@@ -1,19 +1,20 @@
 // Desafio 1
 function compareTrue(param1, param2) {
   if (param1 === 'true' && param2 === 'true')
-    return = 'true'
+    return true;
 } else {
-    return = 'false'
+    return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return = (base * height) / 2
+  return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(string) {
-  // seu código aqui
+  return string.split(' ');
+  // Não entendi o porque!! Nem no Overflow tava tão "fácil" assim
 }
 
 // Desafio 4
