@@ -27,7 +27,7 @@ function concatName(array) {
   let firstElement = array[0];
   let lastElement = array[array.length - 1];
 
-  return [lastElement + ', ' + firstElement];
+  return lastElement + ', ' + firstElement;
 }
 
 // Desafio 5
@@ -39,8 +39,13 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numberArray) {
+
+  for (let i = 0; i < numberArray; i =+ 1){
+
+  }
+  
+  return numberTimesRepetition
 }
 
 // Desafio 7
