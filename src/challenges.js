@@ -69,16 +69,45 @@ function fizzBuzz(arrayOfNumbers) {
   }
   return answer;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-console.log(fizzBuzz([7, 9]));
-console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+let dictEncode = {
+  a: 1,
+  e: 2,
+  i: 3,
+  o: 4,
+  u: 5,
+};
+function encode(string) {
+  let output = '';
+  for (let charIndex in string) {
+    if (typeof dictEncode[string[charIndex]] !== 'undefined') {
+      output += dictEncode[string[charIndex]];
+    } else {
+      output += string[charIndex];
+    }
+  }
+  return output;
 }
-function decode() {
-  // seu código aqui
+
+let dictDecode = {
+  1: 'a',
+  2: 'e',
+  3: 'i',
+  4: 'o',
+  5: 'u',
+};
+
+function decode(string) {
+  let output = '';
+  for (let charIndex in string) {
+    if (typeof dictDecode[string[charIndex]] !== 'undefined') {
+      output += dictDecode[string[charIndex]];
+    } else {
+      output += string[charIndex];
+    }
+  }
+  return output;
 }
 
 module.exports = {
