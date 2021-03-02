@@ -38,21 +38,26 @@ function footballPoints(wins, ties) {
   // seu código aqui
 }
 
+//Função calcular desafio 6
+function calcCount(number, arrayCalc) {
+  let counter = 0;
+  for (let index = 0; index < arrayCalc.length; index += 1) {
+    if (arrayCalc[index] === number) {
+      counter += 1;
+    }
+  }
+  return counter;
+}
+
 // Desafio 6
 function highestCount(array) {
   let high = array[0];
-  let counter = 0;
   for (let key in array) {
     if (array[key] > high) {
       high = array[key];
     }
   }
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] === high) {
-      counter += 1;
-    }
-  }
-  return counter;
+  return calcCount(high, array);  
   // seu código aqui
 }
 
