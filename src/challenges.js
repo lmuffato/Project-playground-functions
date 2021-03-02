@@ -49,13 +49,12 @@ function highestCount(listOfNumbers) {
   let count = 0;
 
   for (index in listOfNumbers, index += 1) {
-    if (listOfNumbers[index] === listOfNumbers[index+1]) {
+    if (listOfNumbers[index] === listOfNumbers[index + 1]) {
       count += 1;
     }
   }
   return count;
-
-}
+}  
 
 // Desafio 7
 function catAndMouse() {
