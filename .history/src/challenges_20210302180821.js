@@ -23,7 +23,7 @@ function splitSentence() {
   stringResult = "Go Trybe";
   return stringResult.split(" ");
 }
-console.log(splitSentence())
+console.log(spli)
 
 // Desafio 4
 function concatName() {

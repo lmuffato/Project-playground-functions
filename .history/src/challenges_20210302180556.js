@@ -20,10 +20,9 @@ console.log(calcArea(20,20))
 
 // Desafio 3
 function splitSentence() {
-  stringResult = "Go Trybe";
-  return stringResult.split(" ");
+  stringResult = "João da Silva Oliveira";
+  resultado = stringExemplo.split(" ");
 }
-console.log(splitSentence())
 
 // Desafio 4
 function concatName() {

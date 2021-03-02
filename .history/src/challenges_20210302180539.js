@@ -20,10 +20,8 @@ console.log(calcArea(20,20))
 
 // Desafio 3
 function splitSentence() {
-  stringResult = "Go Trybe";
-  return stringResult.split(" ");
+  
 }
-console.log(splitSentence())
 
 // Desafio 4
 function concatName() {
