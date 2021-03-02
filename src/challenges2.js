@@ -20,8 +20,24 @@ function techList(arrayOfStrings) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(arrayOfNumbers) {
+  if (arrayOfNumbers.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  let countNumberRepetition = {};
+  for (let index in arrayOfNumbers) {
+    if (typeof countNumberRepetition[arrayOfNumbers[index]] === 'undefined') {
+      countNumberRepetition[arrayOfNumbers[index]] = 1;
+    } else {
+      countNumberRepetition[arrayOfNumbers[index]] += 1;
+    }
+  }
+  for (let key in countNumberRepetition) {
+    if (key < 0 || key > 9 || countNumberRepetition[key] >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  return `(${arrayOfNumbers[0]}${arrayOfNumbers[1]}) ${arrayOfNumbers[2]}${arrayOfNumbers[3]}${arrayOfNumbers[4]}${arrayOfNumbers[5]}${arrayOfNumbers[6]}-${arrayOfNumbers[7]}${arrayOfNumbers[8]}${arrayOfNumbers[9]}${arrayOfNumbers[10]}`;
 }
 
 // Desafio 12
