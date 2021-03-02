@@ -74,22 +74,21 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  // seu código aqui
-  let fizzBuzz = [];
-  for(let i in array) {
-    let diviFor3 = array[i]%3 == 0;
-    let diviFor5 = array[i]%5 == 0;
-    if(diviFor3 && diviFor5) {
-      fizzBuzz.push('fizzBuzz');
+  let stock = [];
+  for (let i = 0; i < array.length; i += 1) {
+    let diviFor3 = array[i] % 3 === 0;
+    let diviFor5 = array[i] % 5 === 0;
+    if (diviFor3 && diviFor5) {
+      stock.push('fizzBuzz');
     } else if (diviFor3 && !diviFor5) {
-      fizzBuzz.push('fizz');
+      stock.push('fizz');
     } else if (diviFor5 && !diviFor3) {
-      fizzBuzz.push('buzz')
+      stock.push('buzz');
     } else {
-      fizzBuzz.push('bug!');
+      stock.push('bug!');
     }
   }
-  return fizzBuzz;
+  return stock;
 }
 
 // Desafio 9
