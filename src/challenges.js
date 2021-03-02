@@ -18,10 +18,19 @@ function splitSentence(phrase) {
 }
 
 
-// Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayPhrase) {
+
+let phraseDisposition =  arrayPhrase[arrayPhrase.length - 1] + ", " + arrayPhrase[0];
+
+return phraseDisposition
+
 }
+
+ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
+
+
+
+
 
 // Desafio 5
 function footballPoints() {
