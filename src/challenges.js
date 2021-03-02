@@ -1,14 +1,15 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if (param1 === 'true' && param2 === 'true')
+  if (param1 === 'true' && param2 === 'true'){
     return true;
 } else {
     return false;
 }
+}
 
 // Desafio 2
 function calcArea(base, height) {
-  return base * height) / 2;
+  return base * height / 2;
 }
 
 // Desafio 3
@@ -66,11 +67,11 @@ function fizzBuzz(array) {
   let arrayFizzBuzz = []
   for (let index = 0; index < array.length; index += 1){
     let testFizzBuzz = array[index]
-      if (testFizzBuzz / 3 && testFizzBuzz / 5) {
+      if (testFizzBuzz % 3 === 0 && testFizzBuzz % 5 === 0) {
         arrayFizzBuzz.push("fizzBuzz")
-      } else if (testFizzBuzz / 5) {
+      } else if (testFizzBuzz % 5 === 0) {
         arrayFizzBuzz.push("buzz")
-      } else if (testFizzBuzz / 3) {
+      } else if (testFizzBuzz % 3 === 0) {
         arrayFizzBuzz.push("fizz")
       } else {
         arrayFizzBuzz.push("bug!")
