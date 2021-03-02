@@ -49,10 +49,27 @@ return resultado
 }
 
 
-// Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1Distance = cat1 - mouse;
+  let cat2Distance = cat2 - mouse;
+
+  if (cat1Distance < 0){
+   cat1Distance = cat1Distance *-1
+  } else if (cat2Distance < 0) {
+    cat2Distance = cat2Distance*-1
+  }
+
+  if (cat1Distance > cat2Distance){
+    return 'cat2'
+  } else if (cat1Distance < cat2Distance){
+    return 'cat1'
+  } else {
+    return 'os gatos trombam e o rato foge'
+  }
 }
+
+
+
 
 // Desafio 8
 function fizzBuzz() {
