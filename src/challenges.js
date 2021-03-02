@@ -2,9 +2,8 @@
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -14,14 +13,15 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentence) {
-  return sentence.split(' ')
+  return sentence.split(' ');
 }
 
-console.log(splitSentence("foguete"));
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(strings) {
+  let firstItem = strings[0];
+  let lastItem = strings[strings.length - 1];
+  let concatString = `${lastItem}, ${firstItem}`;
+  return concatString;
 }
 
 // Desafio 5
