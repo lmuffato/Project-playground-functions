@@ -13,8 +13,9 @@ return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string_1) {
+  let stringArray = [];
+  return stringArray = string_1.split(" ", 3);
 }
 
 // Desafio 4
@@ -50,8 +51,6 @@ function decode() {
   // seu código aqui
 }
 
-
- 
 module.exports = {
   calcArea,
   catAndMouse,
