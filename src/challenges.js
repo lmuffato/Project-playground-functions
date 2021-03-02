@@ -20,7 +20,7 @@ function splitSentence(sentenceToSplit) {
 
 // Desafio 4
 function concatName(stringsArray) {
-  return stringsArray.concat(stringsArray[0] + ', ' + stringsArray[-1])
+  return stringsArray.concat([0] + ', ' + [-1])
 }
 // referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/concat //
 
