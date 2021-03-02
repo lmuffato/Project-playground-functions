@@ -35,13 +35,27 @@ return palavra;
 
 }
 
-console.log(splitSentence('foguete'));
-
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(paramNomes) {
+  
+  let nomes = [];
+  let primeiroNome = '';
+  let segundoNome = '';
+
+  for (let index in paramNomes){
+    nomes.push (paramNomes[index]);
+  }
+
+  primeiroNome = nomes[nomes.length-1];
+  segundoNome = nomes[0];
+  
+  let fullName = primeiroNome + ', ' + segundoNome;
+  
+  return console.log(fullName);
 }
+
+concatName(['captain', 'my', 'captain']);
 
 // Desafio 5
 function footballPoints() {
