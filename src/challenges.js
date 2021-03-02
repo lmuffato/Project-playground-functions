@@ -19,8 +19,10 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let firstName = array[0]
+  let lastName = array[array.length-1]
+  return lastName + ", " + firstName
 }
 
 // Desafio 5
@@ -64,6 +66,6 @@ module.exports = {
   splitSentence,
 };
 
-console.log(compareTrue(true, false))
-console.log(calcArea(51, 1))
-console.log(splitSentence('go trybe'))
+
+
+
