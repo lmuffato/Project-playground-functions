@@ -52,12 +52,13 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let whoCatch = ''
-  if (cat1 == cat2) {
-    whoCatch = 'os gatos trombam e o rato foge'
-  } else if ((Math.abs(mouse - cat1) > Math.abs(mouse - cat2))) {
+  if ((Math.abs(mouse - cat1) > Math.abs(mouse - cat2))) {
     whoCatch = 'cat2'
-  } else {
+  } else if ((Math.abs(mouse - cat2) > Math.abs(mouse - cat1))) {
     whoCatch = 'cat1'
+  } else {
+    whoCatch = 'os gatos trombam e o rato foge'
+
   }
   return whoCatch
 }
@@ -87,6 +88,12 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+console.log(catAndMouse(4,1,2))
+console.log(catAndMouse(4,10,16))
+console.log(catAndMouse(4,-2, -8))
+console.log(catAndMouse(10, -2, -2))
+
 
 
 
