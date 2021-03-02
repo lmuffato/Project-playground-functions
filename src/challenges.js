@@ -23,30 +23,47 @@ function concatName(array) {
   return (array[array.length - 1] + ', ' + array[0]);
 }
 
+//Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
 
 // Desafio 6
-function highestCount(array) {
-  let indexValueMaior = 0;
-  let count = 0;
-  for (let index in array) {
-    if(array[indexValueMaior] < array[index]) {
-      indexValueMaior = index;
-      for (let index in array) {
-        if (array[indexValueMaior] === array[index]) {
-          count += 1
-        }
-      }
+function indexMaxNumber(array) {
+  let numberMax = 0;
+  for (let indexMaxNumber in array) {
+    if (array[indexMaxNumber] > numberMax) {
+      numberMax = array[indexMaxNumber];
     }
   }
-  return count
+  return numberMax;
 }
 
+function highestCount(array) {
+  let maxNumber = indexMaxNumber(array);
+  let repeat = 0;
+  for (let indexCheckRepeat in array) {
+    if (array[indexCheckRepeat] === maxNumber) {
+      repeat += 1;
+    }
+  }
+  return repeat;
+}
+console.log(highestCount([9, 9, 8, 8, 9, 7]));
+
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let dist1 = (mouse - cat1) * -1;
+  let dist2 = (mouse - cat2) * -1;
+  let result;
+    if (dist1 === dist2) {
+      result = "os gatos trombam e o rato";
+    } else if (dist1 > dist2) {
+      result = "cat2";
+    } else {
+      result = "cat1";
+    }
+  return result;
 }
 
 // Desafio 8
