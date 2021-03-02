@@ -12,15 +12,19 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
+// usado material base para entendimento da solução https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
 function splitSentence(phrase) {
   return phrase.split(' ');
 }
 console.log(splitSentence('go trybe'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+let arrayselect = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+function concatName(arrayselect) {
+  let resultarray = arrayselect[arrayselect.length - 1] + ", " + arrayselect[0];
+  return resultarray;
 }
+console.log (resultarray);
 
 // Desafio 5
 function footballPoints() {
