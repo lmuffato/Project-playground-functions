@@ -43,11 +43,19 @@ function highestCount(numbers) {
   }
   return repeats;
 }
-}
+
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let positionCat1 = Math.abs(mouse - cat1);
+  let positionCat2 = Math.abs(mouse - cat2);
+  if (positionCat1 > positionCat2) {
+    return 'cat2';
+  } else if (positionCat1 < positionCat2) {
+    return 'cat1';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
