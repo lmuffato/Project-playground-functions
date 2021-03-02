@@ -19,12 +19,14 @@ function calcArea(base, height) {
   return area;
 }
 
-calcArea(10, 25);
-
 // Desafio 3
-function splitSentence() {
+function splitSentence(sentence) {
   // seu código aqui
+  let split = sentence.split(' ');
+  return split;
 }
+
+splitSentence('Amanhã será um lindo dia!');
 
 // Desafio 4
 function concatName() {
