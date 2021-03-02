@@ -65,24 +65,44 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrayNumbers) {
   let arrayFizzs = [];
   for (let index = 0; index < arrayNumbers.length; index += 1) {
-    if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
-      arrayFizzs.push('fizzBuzz');
-    } if (arrayNumbers[index] % 3 === 0) {
-      arrayFizzs.push('fizz');
-    } if (arrayNumbers[index] % 5 === 0) {
-      arrayFizzs.push('buzz');
+    switch (true) {
+      case ((arrayNumbers[index] % 3 === 0) && (arrayNumbers[index]) % 5 === 0):
+        arrayFizzs.push('fizzBuzz');
+        break;
+      case (arrayNumbers[index] % 3 === 0): 
+        arrayFizzs.push('fizz');
+        break;
+      case (arrayNumbers[index] % 5 === 0): 
+        arrayFizzs.push('buzz');
+        break;
+      default:
+        arrayFizzs.push('bug!');
+
     }
-    arrayFizzs.push('bug!');
-  }
   return arrayFizzs;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(encodeParam) {
+  let encodeRel = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  return encodeParam.replace(/[aeiou]/g, (m) => encodeRel[m]);
 }
-function decode() {
-  // seu código aqui
+
+function decode(decodeParam) {
+  let decodeRel = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  return decodeParam.replace(/[12345]/g, (m) => decodeRel[m]);
 }
 
 module.exports = {
@@ -96,4 +116,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
