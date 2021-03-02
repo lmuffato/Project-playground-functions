@@ -15,13 +15,14 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(nameSplit) {
-  let resultSplit = nameSplit.split(" ");
+  let resultSplit = nameSplit.split(' ');
   return resultSplit;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(name) {
+  let ultimateArray = name.length -1;
+  return name[0] + ' ' + name[ultimateArray];
 }
 
 // Desafio 5
@@ -63,6 +64,10 @@ console.log(calcArea(51, 1));
 console.log(splitSentence('go trybe'));
 console.log(splitSentence('vamo que vamo'));
 console.log(splitSentence('foguete'));
+
+console.log(concatName(name=['Lucas', 'Cassio', 'Ferraz', 'Paolilo']));
+console.log(concatName(name=['foguete', 'não', 'tem', 'ré']));
+console.log(concatName(name=['captain', 'my', 'captain']));
 
 module.exports = {
   calcArea,
