@@ -8,7 +8,7 @@ function compareTrue(value1, value2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height)/2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -17,8 +17,20 @@ function splitSentence(stringValue) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayNames) {
+  let newString = '';
+
+  for (let index = arrayNames.length; index >= 0; index -= 1) {
+    if (index === arrayNames.length - 1) {
+      newString = newString.concat(arrayNames[index], ', ');
+    }
+
+    if (index === 0) {
+      newString = newString.concat(arrayNames[index]);
+    }
+  }
+
+  return newString;
 }
 
 // Desafio 5
@@ -53,7 +65,9 @@ console.log(compareTrue(true, true));
 
 console.log(calcArea(10, 50));
 
-console.log(splitSentence("go Trybe"));
+console.log(splitSentence('go Trybe'));
+
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 module.exports = {
   calcArea,
