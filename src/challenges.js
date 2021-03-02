@@ -17,7 +17,7 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(name) {
   // seu código aqui
-  return `${name[name.length - 1]}','${name[0]}`;
+  return `${name[name.length - 1]}, ${name[0]}`;
 } concatName(['captain', 'my', 'captain']);
 // Desafio 5
 function footballPoints(wins, ties) {
