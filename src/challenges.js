@@ -1,44 +1,44 @@
-// Desafio 1
+// Challenge 1
 function compareTrue(parameter1, parameter2) {
   return parameter1 && parameter2;
 }
 
-// Desafio 2
-function calcArea() {
-  // seu código aqui
+// Challenge 2
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
-// Desafio 3
+// Challenge 3
 function splitSentence() {
   // seu código aqui
 }
 
-// Desafio 4
+// Challenge 4
 function concatName() {
   // seu código aqui
 }
 
-// Desafio 5
+// Challenge 5
 function footballPoints() {
   // seu código aqui
 }
 
-// Desafio 6
+// Challenge 6
 function highestCount() {
   // seu código aqui
 }
 
-// Desafio 7
+// Challenge 7
 function catAndMouse() {
   // seu código aqui
 }
 
-// Desafio 8
+// Challenge 8
 function fizzBuzz() {
   // seu código aqui
 }
 
-// Desafio 9
+// Challenge 9
 function encode() {
   // seu código aqui
 }
