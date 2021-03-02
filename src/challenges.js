@@ -18,11 +18,11 @@ function splitSentence(string) {
   let separatedArray = string.split(' ');
   return separatedArray;
 }
-console.log(splitSentence('go Trybe'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return `${array[array.length - 1]}, ${array[0]}`;
+// Precisei consultar a respeito de Template Literals para conseguir desenvolver essa parte do código e ser aprovado no lint: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Template_literals
 }
 
 // Desafio 5
