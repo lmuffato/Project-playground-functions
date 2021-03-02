@@ -57,13 +57,15 @@ function highestCount(numberArray) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let result;
   if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
-    return 'cat1'
+    result = 'cat1';
   } else if (Math.abs(cat2 - mouse) > Math.abs(cat1 - mouse)) {
-    return 'cat2'
+    result = 'cat2';
   } else {
-    return 'os gatos trombam e o rato foge'
+    result = 'os gatos trombam e o rato foge';
   }
+  return result;
 }
 
 // Desafio 8
@@ -84,11 +86,29 @@ function fizzBuzz(numberArray) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let encoderObject = {'a':1, 'e':2, 'i':3, 'o':4, 'u':5};
+  let encodedString = '';
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] in encoderObject) {
+      encodedString += encoderObject[string[index]];
+    } else {
+      encodedString += string[index];
+    }
+  }
+  return encodedString;
 }
-function decode() {
-  // seu código aqui
+function decode(encodedString) {
+  let decoderObject = {1:'a', 2:'e', 3:'i', 4:'o', 5:'u'};
+  let decodedString = '';
+  for (let index = 0; index < encodedString.length; index += 1) {
+    if (encodedString[index] in decoderObject) {
+      decodedString += decoderObject[encodedString[index]];
+    } else {
+      decodedString += encodedString[index];
+    }
+  }
+  return decodedString;
 }
 
 module.exports = {
