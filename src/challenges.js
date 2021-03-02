@@ -22,7 +22,7 @@ function splitSentence(string) {
 function concatName(items) {
   let firstItem = items[items.length - 1];
   let lastItem = items[0];
-  return '${lastItem}, ${firstItem}';
+  return `${lastItem}, ${firstItem}`;
 }
 
 // Desafio 5
