@@ -1,33 +1,25 @@
 // Desafio 1:
 function compareTrue(a, b) {
   if (a && b === true) {
-  return true;
-  } 
-return false;
+    return true; } 
+  return false;
 }
 console.log(compareTrue(true, true));
 
-
-
 // Desafio 2
 function calcArea(base, height) {
-if (base > 0 && height >0) {
-return (base * height) / 2
-} else {
-  return "não é um triângulo."
-}
+  if (base > 0 && height >0) {
+  return (base * height) / 2;
+  } else 
+  { return 'não é um triângulo.'; }
 }
 console.log(calcArea(51, 1));
-
-
 
 // Desafio 3
 function splitSentence(frase) {
   return frase.split(' ');
 }
 console.log(splitSentence("foguete"))
-
-
 
 // Desafio 4
 function concatName(content) {
@@ -37,8 +29,6 @@ function concatName(content) {
 }
 console.log(concatName(['captain', 'my', 'captain']));
 
-
-
 // Desafio 5
 function footballPoints(wins, ties) {
   wins = wins * 3;
@@ -46,8 +36,6 @@ function footballPoints(wins, ties) {
   return wins + ties;
 }
 console.log(footballPoints(0, 0));
-
-
 
 // Desafio 6
 
@@ -69,8 +57,6 @@ function highestCount(myArrey) {
 }
 console.log(highestCount([0, 0, 0]));
 
-
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   distanceCat1 = cat1 - mouse;
@@ -85,12 +71,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 console.log(catAndMouse(0, 8, 10))
 
-
-
 // Desafio 8
 function fizzBuzz(array) {
-  for (let index = 0; index < .length; index +=1) }
-
+  for (let index = 0; index < array.length; index + = 1); {
+    if (array[index] % 3 === 0) {
+      return 'fizz'; 
+    } else if (array[index] % 5 === 0) {
+      return 'buzz';
+    } else if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      return 'fizzbuzz';
+    } else {
+      return 'bug!' }
+  }
+}
+console.log([2, 15, 7, 9, 45]);
 
 // Desafio 9
 function encode() {
