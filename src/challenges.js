@@ -17,7 +17,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(strArray) {
-  return strArray[0], strArray[strArray.lenght - 1]
+  return strArray[0], strArray[(strArray.lenght) - 1]
 }
 
 // Desafio 5
@@ -28,35 +28,48 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(array1) {
-  
-  for(let i = 0; i < array1.lenght; i += 1) {
-    if(array1[i] > highestNumber) {
-      let highestNumber = array1[i]
-      return highestNumber
+function highestCount(numbers) {
+  let highestNumber = [0]
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (highestNumber < numbers[i]) {
+      highestNumber = numbers[i];
     }
   }
+  return highestNumber;
 }
 
 // Desafio 7
-function catAndMouse(cat1, cat2) {
-  if(cat1 < cat2) {
+function catAndMouse(mouse, cat1, cat2) {
+  let distMouseCat1 = mouse - cat1
+  let distMouseCat2 = mouse - cat2
+  if(distMouseCat1 < distMouseCat2) {
     return 'cat1'
-  } else if(cat1 > cat2) {
+  } else if(distMouseCat1 > distMouseCat2) {
     return'cat2'
-} else 
+} else { return 'os gatos trombam e o rato foge' }
+}
     
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numberArray) {
+  let arrayFizzBuzz = []
+  for(let i = 0; i < numberArray.length; i += 1) {
+    if (numberArray[i] % 3 === 0 && numberArray[i] % 5 === 0) {
+      arrayFizzBuzz.push('fizzbuzz')
+    } else if (numberArray[i] % 5 === 0) {
+      arrayFizzBuzz.push('buzz')
+    } else if (numberArray[i] % 3 === 0) {
+      arrayFizzBuzz.push('fizz')
+    } else { arrayFizzBuzz.push('bug!') }
+  }
+  return arrayFizzBuzz
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(encodeString) {
+  
 }
-function decode() {
+function decode(decodeString) {
   // seu código aqui
 }
 
@@ -70,9 +83,11 @@ console.log(concatName('Lucas', 'Cassiano', 'Ferraz', 'Paolillo'))
 
 console.log(footballPoints(14, 8))
 
-console.log(highestCount(1, 2, 3, 4))
+console.log(highestCount([1, 2, 3, 4]))
 
-console.log(catAndMouse(6, 2))
+console.log(catAndMouse(9, 1, 10))
+
+console.log(fizzBuzz([1, 6, 9]))
 
 
 module.exports = {
