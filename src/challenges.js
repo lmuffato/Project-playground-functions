@@ -20,9 +20,9 @@ console.log(calcArea(5, 2));
 console.log(calcArea(51, 1));
 
 // Desafio 3
-function splitSentence(sentence){
-  let newArray = []
-  newArray.push = sentence.split(" ")
+function splitSentence(sentence) {
+  let newArray = [];
+  newArray.push = sentence.split(' ');
   return newArray;
 }
 
