@@ -14,8 +14,10 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(words) {
+  let lastWord = words.pop();
+  let firstWord = words.shift();
+  return lastWord && firstWord;
 }
 
 // Desafio 5
