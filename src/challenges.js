@@ -13,7 +13,7 @@ function compareTrue(value1,value2) {
 function calcArea(base,height) {
   // seu código aqui
   let area = (base*height)/2;
-  return 'a área do triangulo é ' + area;
+  return area;
 }
 
 // Desafio 3
