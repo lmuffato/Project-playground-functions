@@ -33,12 +33,26 @@ function concatName(stringArray) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3 + ties)
+  return (wins * 3 + ties);
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numberArray) {
+  // Encontrar o maior numero e guardar na variavel largestNumber
+  let largestNumber = 0;
+  for (let index = 0; index < numberArray.length; index += 1) {
+    if (numberArray[index] > largestNumber) {
+      largestNumber = numberArray[index];
+    }
+  }
+  // Contar quantas vezes o largestNumber aparece
+  let count = 0;
+  for (let index = 0; index < numberArray.length; index += 1) {
+    if (numberArray[index] === largestNumber) {
+      count += 1;
+    }
+  }
+  return count;
 }
 
 // Desafio 7
