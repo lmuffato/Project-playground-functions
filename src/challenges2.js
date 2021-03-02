@@ -4,8 +4,13 @@ function techList() {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(myArray) {
+
+  if (myArray.length !== 11) {
+    return 'Array com tamanho incorreto.'
+  }
+
+  
 }
 
 // Desafio 12
