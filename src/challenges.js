@@ -25,7 +25,7 @@ function splitSentence(stringValue) {
 
 // Desafio 4
 function concatName(arrayOfStrings) {
-  let resultConcat = arrayOfStrings[arrayOfStrings.length - 1] + ', ' + arrayOfStrings[0];
+  let resultConcat = `${arrayOfStrings[arrayOfStrings.length - 1]}, ${arrayOfStrings[0]}`;
   return resultConcat;
 }
 
