@@ -1,21 +1,11 @@
-// Desafio 1
+// Desafio 1:
 function compareTrue(a, b) {
   if (a && b === true) {
-    return true;
-  }
-  else {
-    return false;
-  }
-} 
-function compareTrue(a, b) {
-  if (a && b === true) {
-    return true;
-  }
-  else {
-    return false;
-  }
+  return true;
+  } 
+return false;
 }
-console.log(compareTrue(false, false));
+console.log(compareTrue(true, true));
 
 
 
@@ -93,10 +83,13 @@ function catAndMouse(mouse, cat1, cat2) {
     return "os gatos trombam e o rato foge";
   }
 }
-console.log(catAndMouse(0, 8, 8))
+console.log(catAndMouse(0, 8, 10))
+
+
 
 // Desafio 8
 function fizzBuzz(array) {
+  for (let index = 0; index < .length; index +=1) }
 
 
 // Desafio 9
@@ -118,4 +111,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-}}
+}
