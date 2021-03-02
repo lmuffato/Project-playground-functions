@@ -1,9 +1,7 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 && value2) {
-    return true;
-  }
-  return false;
+  let result = (value1 && value2);
+  return result;
 }
 
 // Desafio 2
