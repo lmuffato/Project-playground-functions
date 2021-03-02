@@ -28,7 +28,7 @@ function concatName(arrayString) {
   let string;
   let lastIndex;
   lastIndex = arrayString.length - 1;
-  string = `${arrayString[lastIndex]},${arrayString[0]}`;
+  string = `${arrayString[lastIndex]}, ${arrayString[0]}`;
   return string;
 }
 
@@ -59,16 +59,19 @@ function highestCount(arrayNunbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  mouse = 0;
-  let distance;
-  if (cat1 > cat2) {
-    distance = 'cat2';
-  } else if (cat2 > cat1) {
-    distance = 'cat1';
+  let distanceCat1;
+  let distanceCat2;
+  let nearCatch;
+  distanceCat1 = cat1 - mouse;
+  distanceCat2 = cat2 - mouse;
+  if (distanceCat2 > distanceCat1) {
+    nearCatch = 'cat1';
+  } else if (distanceCat1 > distanceCat2) {
+    nearCatch = 'cat2';
   } else {
-    distance = 'os gatos trombam e o rato foge';
+    nearCatch = 'os gatos trombam e o rato foge';
   }
-  return distance;
+  return nearCatch;
 }
 
 // Desafio 8
@@ -83,7 +86,6 @@ function encode() {
 function decode() {
   // seu código aqui
 }
-console.log(catAndMouse(0,12,12));
 module.exports = {
   calcArea,
   catAndMouse,
