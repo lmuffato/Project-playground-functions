@@ -119,29 +119,71 @@ function fizzBuzz(arrayNumbers) {
   return newArray;
 }
 
+let cifer = {
+  'a' : 1,
+  'e' : 2,
+  'i' : 3,
+  'o' : 4,
+  'u' : 5
+};
+
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringKey) {
+  let newString = '';
+
+  for (let key in stringKey) {
+    if (cifer[stringKey[key]]) {
+      newString = newString.concat(cifer[stringKey[key]]);
+    } else {
+      newString = newString.concat(stringKey[key]);
+    }
+  }
+
+  return newString;
 }
-function decode() {
-  // seu código aqui
+
+function decode(stringKey) {
+  let newString = '';
+  let inserted = false;
+
+  for (let index = 0; index < stringKey.length; index += 1) {
+    for (let key in cifer) {
+      if (stringKey[index] == cifer[key]) {
+        newString = newString.concat(key);
+        inserted = true;
+        break;
+      }
+    }
+
+    if(inserted === false){
+      newString = newString.concat(stringKey[index]);
+    }
+
+    inserted = false;
+  }
+
+  return newString;
 }
 
-console.log(compareTrue(true, true));
+// console.log(compareTrue(true, true));
 
-console.log(calcArea(10, 50));
+// console.log(calcArea(10, 50));
 
-console.log(splitSentence('go Trybe'));
+// console.log(splitSentence('go Trybe'));
 
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
-console.log(footballPoints(1, 2));
+// console.log(footballPoints(1, 2));
 
-console.log(highestCount([0, 0, 0]));
+// console.log(highestCount([0, 0, 0]));
 
-console.log(catAndMouse(7, 9, 5));
+// console.log(catAndMouse(7, 9, 5));
 
-console.log(fizzBuzz([7, 9]));
+// console.log(fizzBuzz([7, 9]));
+
+console.log(encode('hi there!'));
+
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
