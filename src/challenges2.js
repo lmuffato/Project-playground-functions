@@ -7,13 +7,14 @@ function createObj(string) {
   return obj;
 }
 
-function techList(arrayTechNames) {
-  if (arrayTechNames.length === 0) {
+function techList(arrayOfStrings) {
+  arrayOfStrings.sort();
+  if (arrayOfStrings.length === 0) {
     return 'Vazio!';
   }
   let objects = [];
-  for (let index = 0; index < arrayTechNames.length; index += 1) {
-    objects.push(createObj(arrayTechNames[index]));
+  for (let index = 0; index < arrayOfStrings.length; index += 1) {
+    objects.push(createObj(arrayOfStrings[index]));
   }
   return objects;
 }
