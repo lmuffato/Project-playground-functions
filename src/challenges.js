@@ -20,7 +20,7 @@ console.log(calcArea(51,1));
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split('');
+  return string.split(' ');
 }
 
 let teste = "go Trybe"
@@ -37,9 +37,13 @@ console.log(concatName(arrayTeste));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontos = 0;
-  
+  let pontos = (wins * 3) + (ties * 1);
+  return pontos;
 }
+
+console.log(footballPoints(14,8));
+console.log(footballPoints(1,2));
+console.log(footballPoints(0,0));
 
 // Desafio 6
 function highestCount() {
