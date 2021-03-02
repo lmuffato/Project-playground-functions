@@ -2,21 +2,26 @@
 function techList(techArray, name) {
   // seu código aqui
   let listOfTechs = [];
-  for (let index in techArray) {
-    let techItem = {
-      tech: '',
-      name: '',
+  if (techArray.length > 0) {
+    for (let index in techArray) {
+      let techItem = {
+      tech:'',
+      name:'',
     }
-    techItem['name'] = name;
-    techItem['tech'] = techArray[index];
-    listOfTechs.push(techItem);
+      techItem['name'] = name;
+      techItem['tech'] = techArray[index];
+      listOfTechs.push(techItem);
+    }
+  } else {
+    listOfTechs = 'Vazio!';
   }
+ 
   return listOfTechs;
 }
 
-// let  technologies = ['java', 'piriri', 'pororo', 'pururu'];
-// let myName = 'Rogerio';
-// console.log(techList(technologies, myName));
+let  technologies = [];
+let myName = 'Rogerio';
+console.log(techList(technologies, myName));
 
 function testValid(phoneNumberArray) {
   let count = 0;
@@ -80,40 +85,22 @@ function hydrate(drinks) {
   // seu código aqui
   let count = 0;
   for (let index in drinks) {
-    switch(drinks[index]){
-      case '1': 
-        count += 1; 
-        break;
-      case '2': 
-        count += 2; 
-        break;
-      case '3': 
-        count += 3; 
-        break;
-      case '4': 
-        count += 4; 
-        break;
-      case '5': 
-        count += 5; 
-        break;
-      case '6': 
-        count += 6; 
-        break;
-        case '7': 
-        count += 7; 
-        break;
-      case '8': 
-        count += 8; 
-        break;
-      case '9': 
-        count += 9; 
-        break;      
+    switch(drinks[index]) {
+      case '1': count += 1; break;
+      case '2': count += 2; break;
+      case '3': count += 3; break;
+      case '4': count += 4; break;
+      case '5': count += 5; break;
+      case '6': count += 6; break;
+      case '7': count += 7; break;
+      case '8': count += 8; break;
+      case '9': count += 9; break;
     }
   }
   return count.toString() + ' copos de água';
 }
 
-// console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
