@@ -34,7 +34,7 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(numbers) {
   // seu código aqui
   let maiorNumber = numbers[0]
   for(let i in numbers) {
@@ -52,7 +52,7 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse,cat1,cat2) {
   // seu código aqui
   let dCat1NMouse = mouse - cat1;
 	let dCat2NMouse = mouse - cat2;
