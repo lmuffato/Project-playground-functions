@@ -1,24 +1,17 @@
 // Desafio 1
-function compareTrue(operationOne, operationTwo) {
-  operationOne = 5 > 10;
-  operationTwo = 15 > 10;
 
-  if (operationOne == true && operationTwo == true) {
-    console.log(true);
-  } else if (operationOne == true && operationTwo == false) {
-    console.log(false)
-  } else if (operationOne == false && operationTwo == false) {
-    console.log(false)
+function compareTrue(a, b) {
+  if (a === true && b === true) {
+    return true
   } else {
-    console.log(false)
+    return false
   }
-
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
-}
+function calcArea(base, height) {
+  return (base * height) / 2
+};
 
 // Desafio 3
 function splitSentence() {
