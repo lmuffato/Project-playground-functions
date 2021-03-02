@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(teamFlamengoChampion, teamInterNoChampion) {
   if (teamFlamengoChampion === true && teamInterNoChampion === true) {
-    return;
+    return true;
 }
 
 // Desafio 2
@@ -58,4 +58,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
