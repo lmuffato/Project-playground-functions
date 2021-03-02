@@ -29,7 +29,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-//Este código criei baseado na minha amiga de Tribo Cla Oliveira que me ajudou demais nesse projeto <3
+//Este código criei baseado na minha amiga de Tribo Cla Oliveira que me ajudou demais nesse projeto.
 //Recriou a função comigo pausadamente me explicando cada detalhe e me fazendo entender o por quê de cada coisa.
 //Obrigado Cla Oliveira!!!
 function higherNumber(arrayOfNumber) {
@@ -53,13 +53,32 @@ function highestCount(arrayOfNumber) {
  
 return higherRepeated;
 }
-let arrayOfNumber = [1, 3 ,6 ,7 ,7 ,5 ,2]
-console.log(highestCount(arrayOfNumber))
-// Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
 
+// Desafio 7
+function catAndMouse(mouse, cat1, cat2) {
+  let catchMouse = 0
+  let distanceCat1 = 0
+  let distanceCat2 = 0
+  if (mouse > cat1) {
+    distanceCat1 = mouse - cat1;
+  }else{
+    distanteCat1 = cat1 - mouse
+  }
+  if (mouse > cat1) {
+    distanceCat2 = mouse - cat2;
+  } else{
+    distanceCat2 = cat2 - mouse
+  }
+  if (distanceCat1 > distanceCat2) {
+    catchMouse = 'cat1';
+  }else if (distanceCat2 > distanceCat1){
+    catchMouse = 'cat2';
+  }else{
+    catchMouse = 'os gatos trombam e o rato foge!'
+  }
+  return catchMouse;
+}
+console.log(catAndMouse(1, 2, 2))
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
@@ -69,6 +88,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
