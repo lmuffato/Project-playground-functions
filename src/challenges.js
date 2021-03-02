@@ -58,8 +58,17 @@ function highestCount(arrayNunbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  mouse = 0;
+  let distance;
+  if (cat1 > cat2) {
+    distance = 'cat2';
+  } else if (cat2 > cat1) {
+    distance = 'cat1';
+  } else {
+    distance = 'os gatos trombam e o rato foge';
+  }
+  return distance;
 }
 
 // Desafio 8
@@ -74,7 +83,7 @@ function encode() {
 function decode() {
   // seu código aqui
 }
-
+console.log(catAndMouse(0,12,12));
 module.exports = {
   calcArea,
   catAndMouse,
