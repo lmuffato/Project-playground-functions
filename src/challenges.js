@@ -22,14 +22,14 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(arraytoconcat) {
-  // seu código aqui
   let concatened = (arraytoconcat[arraytoconcat.length - 1].toString() + ", " + arraytoconcat[0].toString());
   return concatened;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let points = (wins * 3) + (ties * 1);
+  return points;
 }
 
 // Desafio 6
