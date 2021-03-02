@@ -6,4 +6,8 @@ let code = {
     u: 5
   };
 
-console.log(code['b'])
+
+code.b = 6;
+
+code.cons.c = 7;
+console.log(code)

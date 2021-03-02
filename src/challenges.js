@@ -9,24 +9,24 @@ function compareTrue(bool1, bool2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height)/2
+  return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(frase) {
-  return frase.split(' ')
+  return frase.split(' ');
 }
 
 // Desafio 4
 function concatName(arr) {
   let str = ''
   str = str + (arr[arr.length - 1]) + ', ' + (arr[0])
-  return str
+  return str;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3 + ties * 1)
+  return (wins * 3 + ties * 1);
 }
 
 // Desafio 6
@@ -43,7 +43,7 @@ function highestCount(arr) {
       count = count + 1
     }
   }
-  return count
+  return count;
 }
 
 // Desafio 7
@@ -76,7 +76,7 @@ function fizzBuzz(str) {
 
 // Desafio 9
 function encode(encodestr) {
-  let codestr = ''
+  let codestr = '';
   let code = {
     a: 1,
     e: 2,
@@ -85,24 +85,24 @@ function encode(encodestr) {
     u: 5,
   };
 for (index = 0; index < encodestr.length; index++) {
-  if (code[encodestr[index]] === undefined) {
-    codestr = codestr + encodestr[index]
-  } else {
-    codestr = codestr + code[encodestr[index]]
+    if (code[encodestr[index]] === undefined) {
+      codestr = codestr + encodestr[index]
+    } else {
+      codestr = codestr + code[encodestr[index]]
+    }
   }
-}
-return codestr
+return codestr;
 }
 
 function decode(decodestr) {
-  let decodedstr = ''
+  let decodedstr = '';
   let code1 = {
     1: 'a',
     2: 'e',
     3: 'i',
     4: 'o',
     5: 'u',
-  }
+  };
   for (let index = 0; index < decodestr.length; index++) {
     if (code1[decodestr[index]] === undefined) {
       decodedstr = decodedstr + decodestr[index]
@@ -110,7 +110,7 @@ function decode(decodestr) {
       decodedstr = decodedstr + code1[decodestr[index]]
     }
   }
-  return decodedstr
+  return decodedstr;
 }
 
 module.exports = {
