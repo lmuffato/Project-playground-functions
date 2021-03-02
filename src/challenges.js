@@ -12,7 +12,7 @@ function compareTrue(gradeProject, goingToLectures) {
 function calcArea(base, height) {
   // seu código aqui
   let areaTriangle;
-  areaTriangle = (base * height)/2;
+  areaTriangle = (base * height) / 2;
   return areaTriangle;
 }
 
@@ -44,9 +44,16 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(listOfNumbers) {
   // seu código aqui
+  let count = 0;
 
+  for (index in listOfNumbers, index += 1) {
+    if (listOfNumbers[index] === listOfNumbers[index+1]) {
+      count += 1;
+    }
+  }
+  return count;
 
 }
 
