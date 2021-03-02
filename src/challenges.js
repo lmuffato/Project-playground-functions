@@ -21,15 +21,16 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(string) {
-  firstIndex = string[0];
-  lastIndex = string[string.length - 1];
+  let firstIndex = string[0];
+  let lastIndex = string[string.length - 1];
   let nameConcatened = lastIndex + ', ' + firstIndex;
   return nameConcatened; 
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let totalPoints = (wins * 3) + (ties *1);
+  return totalPoints;
 }
 
 // Desafio 6
