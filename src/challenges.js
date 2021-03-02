@@ -1,6 +1,9 @@
 // Desafio 1
-function compareTrue() {
-  // HABEMUS
+function compareTrue(value1, value2) {
+  if (value1 === true && value2 === true) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 2
@@ -45,6 +48,8 @@ function encode() {
 function decode() {
   // seu código aqui
 }
+
+console.log(compareTrue(true, true));
 
 module.exports = {
   calcArea,
