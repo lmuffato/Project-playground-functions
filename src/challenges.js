@@ -1,25 +1,21 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  const result = (value1 && value2);
-  return result;
+  return (value1 && value2);
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  const triangleArea = (base * height) / 2;
-  return triangleArea;
+  return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(setence) {
-  const setenceList = setence.match(/\w+/g);
-  return setenceList;
+  return setence.match(/\w+/g);
 }
 
 // Desafio 4
 function concatName(array) {
-  const lastFirstName = `${array[array.length - 1]}, ${array[0]}`;
-  return lastFirstName;
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
