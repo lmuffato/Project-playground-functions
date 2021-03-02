@@ -18,14 +18,14 @@ function splitSentence() {
 }
 
 // Desafio 4
-function concatName(){
-  //seu código aqui
+function concatName() {
+  // seu código aqui
 }
 
 // Desafio 5
-function footballPoints(wins,ties) {
+function footballPoints(wins, ties) {
   let points = (wins * 3) + ties;
-  return points
+  return points;
 }
 
 // Desafio 6
