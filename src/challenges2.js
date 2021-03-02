@@ -1,20 +1,20 @@
 // Desafio 10
-function createObj(string) {
+function createObj(string1, string2) {
   let obj = {
-    tech: string,
-    name: 'Rafael',
+    tech: string1,
+    name: string2,
   };
   return obj;
 }
 
-function techList(arrayOfStrings) {
+function techList(arrayOfStrings, string) {
   arrayOfStrings.sort();
   if (arrayOfStrings.length === 0) {
     return 'Vazio!';
   }
   let objects = [];
   for (let index = 0; index < arrayOfStrings.length; index += 1) {
-    objects.push(createObj(arrayOfStrings[index]));
+    objects.push(createObj(arrayOfStrings[index], string));
   }
   return objects;
 }
