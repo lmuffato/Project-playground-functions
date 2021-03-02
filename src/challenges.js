@@ -35,7 +35,7 @@ function highestCount(array) {
     if (array[index] > highest) {
       highest = array[index]
     }
-  }for (indexcount = 0; )indexcount < array;length; indexcount += 1) {
+  }for (indexcount = 0; indexcount < array.length; indexcount += 1) {
     if (highest === array[indexcount]){
       count +=1;
     }
