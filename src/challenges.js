@@ -78,17 +78,49 @@ function fizzBuzz(numbersArray) {
   return stringsArray;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let splitStringArray = string.split('');
+
+  for (let index in splitStringArray) {
+    if (splitStringArray[index] === 'a') {
+      splitStringArray[index] = 1;
+    } else if (splitStringArray[index] === 'e') {
+      splitStringArray[index] = 2;
+    } else if (splitStringArray[index] === 'i') {
+      splitStringArray[index] = 3;
+    } else if (splitStringArray[index] === 'o') {
+      splitStringArray[index] = 4;
+    } else if (splitStringArray[index] === 'u') {
+      splitStringArray[index] = 5;
+    }
+  }
+
+  return splitStringArray.join('');
 }
 
 // Desafio 10
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let splitStringArray = string.split('');
+
+  for (let index in splitStringArray) {
+    if (splitStringArray[index] === '1') {
+      splitStringArray[index] = 'a';
+    } else if (splitStringArray[index] === '2') {
+      splitStringArray[index] = 'e';
+    } else if (splitStringArray[index] === '3') {
+      splitStringArray[index] = 'i';
+    } else if (splitStringArray[index] === '4') {
+      splitStringArray[index] = 'o';
+    } else if (splitStringArray[index] === '5') {
+      splitStringArray[index] = 'u';
+    }
+  }
+
+  return splitStringArray.join('');
 }
+
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
