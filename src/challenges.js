@@ -17,8 +17,18 @@ function compareTrue(value1, value2) {
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  let area = 0;
+
+  if (base = 0 || height = 0) {
+    return console.log('O valor da base ou da altura é igual a zero. Por favor, insira um valor válido.');
+  } else {
+    area = base * height;
+  }
+
+  return area;
+
 }
 
 // Desafio 3
