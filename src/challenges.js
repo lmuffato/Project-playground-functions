@@ -32,8 +32,6 @@ function concatName(names) {
   return namesConcatenated;
 }
 
-console.log(concatName(['foguete', 'não', 'tem', 'ré']));
-
 // Desafio 5
 function footballPoints() {
   // seu código aqui
