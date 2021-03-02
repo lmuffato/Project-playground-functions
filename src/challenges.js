@@ -16,15 +16,12 @@ function calcArea(base, height) {
 function splitSentence(phrase) {
   return phrase.split(' ');
 }
-console.log(splitSentence('go trybe'));
 
 // Desafio 4
-let arrayselect = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 function concatName(arrayselect) {
   let resultarray = arrayselect[arrayselect.length - 1] + ", " + arrayselect[0];
   return resultarray;
 }
-console.log (resultarray);
 
 // Desafio 5
 function footballPoints() {
