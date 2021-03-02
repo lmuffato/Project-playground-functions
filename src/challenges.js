@@ -2,20 +2,22 @@
 function compareTrue(value1, value2) {
   if (value1 === value2 && value1 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
 function calcArea(value1, value2) {
-  return ((value1 * value2) / 2);
+  return (value1 * value2) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  let word = sentence.split(" ");
+  return word;
 }
+
+console.log(splitSentence("be trybe"))
 
 // Desafio 4
 function concatName() {
