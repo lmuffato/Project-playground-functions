@@ -1,10 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if(value1 && value2) {
-    return true;
-  } else {
-    return false;
-  }
+  return value1 && value2;
 }
 
 // Desafio 2
@@ -12,12 +8,26 @@ function calcArea(base, height) {
   return (base * height) / 2;
 }
 
-console.log(calcArea(51, 1));
-
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(phrase) {
+  let word = '';
+  let words = [];
+  for (let index = 0; index < phrase.length; index += 1) {
+    if (phrase[index] !== ' ') {
+      word += phrase[index];
+    }
+
+    if (index === (phrase.length - 1) || phrase[index] === ' ') {
+      words.push(word);
+      word = '';
+    }
+  }
+  return words;
 }
+
+console.log(splitSentence('go Trybe'));
+console.log(splitSentence('vamo que vamo'));
+console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName() {
