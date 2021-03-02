@@ -49,8 +49,6 @@ function decode() {
   // seu código aqui
 }
 
-console.log(compareTrue('a','a'));
-
 module.exports = {
   calcArea,
   catAndMouse,
