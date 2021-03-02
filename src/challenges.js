@@ -18,11 +18,10 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(string) {
-  return string[length-1],string[0];
+function concatName(array) {
+  return array[array.lenght-1] + array[0]
 }
 
-console.log (concatName(['teste','de','nomes']))
 // Desafio 5
 function footballPoints(wins,ties) {
   return (wins *3) + ties;
