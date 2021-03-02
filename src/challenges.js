@@ -48,10 +48,10 @@ function catAndMouse(mouse, cat1, cat2) {
   positionCat1 = cat1 - mouse;
   positionCat2 = cat2 - mouse;
   if (positionCat1 < positionCat2) {
-    return console.log('cat1');
+    return 'cat1';
   } if (positionCat1 > positionCat2) {
-    return console.log('cat2');
-  } return console.log('os gatos trombam e o rato foge');
+    return 'cat2';
+  } return 'os gatos trombam e o rato foge';
 } catAndMouse(1, 6, 6);
 // Desafio 8
 function fizzBuzz() {
