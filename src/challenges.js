@@ -16,8 +16,8 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(array) {
-  
+function concatName(strArray) {
+  return strArray[0], strArray[strArray.lenght - 1]
 }
 
 // Desafio 5
@@ -28,14 +28,24 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array1) {
+  
+  for(let i = 0; i < array1.lenght; i += 1) {
+    if(array1[i] > highestNumber) {
+      let highestNumber = array1[i]
+      return highestNumber
+    }
+  }
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(cat1, cat2) {
+  if(cat1 < cat2) {
+    return 'cat1'
+  } else if(cat1 > cat2) {
+    return'cat2'
+} else 
+    
 
 // Desafio 8
 function fizzBuzz() {
@@ -56,11 +66,13 @@ console.log(calcArea(51, 1))
 
 console.log(splitSentence('vamo que vamo'))
 
-console.log()
+console.log(concatName('Lucas', 'Cassiano', 'Ferraz', 'Paolillo'))
 
 console.log(footballPoints(14, 8))
 
+console.log(highestCount(1, 2, 3, 4))
 
+console.log(catAndMouse(6, 2))
 
 
 module.exports = {
