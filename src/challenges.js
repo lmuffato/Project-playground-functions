@@ -17,8 +17,9 @@ function splitSentence(setence) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  const lastFirstName = `${array[array.length - 1]}, ${array[0]}`;
+  return lastFirstName;
 }
 
 // Desafio 5
