@@ -75,8 +75,27 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
 }
 
+function arrayFizzBuzz(array) {
+  if (array % 3 === 0 && array % 5 === 0) {
+    return 'fizzBuzz';
+  } else if (array % 3 === 0 && array % 5 != 0) {
+    return 'fizz';
+  } else if (array % 3 != 0 && array % 5 === 0) {
+    return 'buzz';
+  } else {
+    return 'bug';
+  }
+}
+
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
+  let arrayfb = [];
+  let array1;
+  for (let key in array) {
+    array1 = arrayFizzBuzz(array[key]);
+    arrayfb.push(array1);
+  }
+  return arrayfb;
   // seu código aqui
 }
 
@@ -89,6 +108,9 @@ function decode() {
 }
 
 let names = ['foguete', 'não', 'tem', 'ré'];
+for (let ke in names) {
+  console.log(names[ke]);
+}
 
 console.log(compareTrue(true, false));
 console.log(calcArea(51, 1));
@@ -97,6 +119,7 @@ console.log(concatName(names));
 console.log(footballPoints(14, 8));
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 console.log(catAndMouse(3, 9, 9));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 module.exports = {
   calcArea,
