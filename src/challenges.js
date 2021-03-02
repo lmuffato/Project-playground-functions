@@ -44,12 +44,13 @@ function highest(array) {
 // Desafio 6
 function highestCount(array) {
   let highestNumber = highest(array);
-  let count;
+  let count = 0;
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] === highestNumber) {
       count += 1;
     }
   }
+  return count;
 }
 
 // Desafio 7
