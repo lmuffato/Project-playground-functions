@@ -29,22 +29,26 @@ function footballPoints(wins, ties) {
   return winsPoints + tiesPoints;
 }
 
-// Desafio 6 REFERÊNCIA PARA O ARRAY SORT = https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+// Desafio 6 
 function highestCount(arrayNumbers) {
-  let sortedArray = arrayNumbers.sort(function(a, b) {
-    return a - b;
-  });
-  let numbers = 0;
-  for (let index = sortedArray.length - 1; index >= 0; index -= 1) {
-    if (sortedArray[index] >= sortedArray[index-1]) {
-      numbers += 1;
-    }
+  let count = 0;
+  let higherNumber = 0;
+
+  for (index = 0; index <= arrayNumbers.length - 1; index += 1) {
+      if (arrayNumbers[index] > higherNumber) {
+          higherNumber = arrayNumbers[index];
+      }
   }
-  return numbers;
+  for (index2 = 0; index2 <= arrayNumbers.length - 1; index += 1) {
+      if (arrayNumbers === higherNumber) {
+          count += 1;
+      }
+  }
+  return count
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(cat1, cat2) {
   // seu código aqui
 }
 
