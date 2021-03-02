@@ -4,6 +4,7 @@ function compareTrue(firstValue, secondValue) {
     return true;
   }
   return false;
+// Nesse exercício contei com a colaboração do Luan da turma 10A, meu cógdigo não estava passando no Evaluator por um simples erro e ele me ajudou a descobrir.
 }
 
 // Desafio 2
@@ -26,8 +27,16 @@ function concatName(array) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winpoint = 3;
+  let tiepoint = 1;
+  let result;
+
+  wins *= winpoint;
+  ties *= tiepoint;
+  result = wins + ties;
+
+  return result;
 }
 
 // Desafio 6
