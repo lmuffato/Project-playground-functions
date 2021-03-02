@@ -89,22 +89,26 @@ function divisibleBy3and5(number) {
 }
 
 // Disposição dos if/else inspirada pelo Bernardo no plantão
-function fizzBuzz(numbersArr) {
-  return numbersArr.map((number) => {
-    if (divisibleBy3and5(number)) {
-      return 'fizzBuzz';
-    }
-    if (divisibleBy3(number)) {
-      return 'fizz';
-    }
-    if (divisibleBy5(number)) {
-      return 'buzz';
-    }
-    return 'bug!';
-  });
+function fizzBuzzIfElse(number) {
+  if (divisibleBy3and5(number)) {
+    return 'fizzBuzz';
+  }
+  if (divisibleBy3(number)) {
+    return 'fizz';
+  }
+  if (divisibleBy5(number)) {
+    return 'buzz';
+  }
+  return 'bug!';
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+function fizzBuzz(numbersArr) {
+  let resultsArr = [];
+  for (let index = 0; index < numbersArr.length; index += 1) {
+    resultsArr.push(fizzBuzzIfElse(numbersArr[index]));
+  }
+  return resultsArr;
+}
 
 // Desafio 9
 function encode() {
