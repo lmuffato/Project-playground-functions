@@ -22,8 +22,12 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  
+  let firstElement = array[0];
+  let lastElement = array[array.length - 1];
+
+  return lastElement + ' ' + firstElement;
 }
 
 // Desafio 5
@@ -54,7 +58,7 @@ function decode() {
   // seu código aqui
 }
 
-console.log(splitSentence('Vamo que vamo'));
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 module.exports = {
   calcArea,
