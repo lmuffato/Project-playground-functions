@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(value1, value2) {
   // seu código aqui
-  if(value1 && value2){
+  if (value1 && value2) {
     return true;
   }
   return false;
@@ -10,16 +10,18 @@ function compareTrue(value1, value2) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-let area = base * height;
-   let result = area / 2;
-   return result
+  let area = base * height;
+  let result = area / 2;
+  return result
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(phrase) {
   // seu código aqui
+  let fraseDividida = phrase.split(' ');
+  return fraseDividida
 }
-
+console.log(splitSentence('go Trybe'));
 // Desafio 4
 function concatName() {
   // seu código aqui
