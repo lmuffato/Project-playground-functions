@@ -6,7 +6,7 @@ function compareTrue(gradeProject, goingToLectures) {
   } else {
     return false;
   }
- }
+}
 
 // Desafio 2
 function calcArea(base, height) {
@@ -28,7 +28,7 @@ function splitSentence(sentence) {
 function concatName(nameList) {
   // seu código aqui
   let newString = (' ');
-  newString = newString.concat(nameList[nameList.length - 1], ', ', nameList[0]);
+  newString = newString.concat(nameList[nameList.length - 1] + ', ' + nameList[0]);
   return newString;
 }
 
@@ -46,6 +46,8 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount() {
   // seu código aqui
+
+  highestCount([0, 0, 0])).toBe(3)
 }
 
 // Desafio 7
