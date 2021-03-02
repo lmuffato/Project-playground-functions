@@ -25,12 +25,12 @@ function splitSentence(stringValue) {
 
 // Desafio 4
 function concatName(arrayOfStrings) {
-  resultConcat = arrayOfStrings[arrayOfStrings.length -1] + ', ' + arrayOfStrings[0];
+  let resultConcat = arrayOfStrings[arrayOfStrings.length - 1] + ', ' + arrayOfStrings[0];
   return resultConcat;
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
 }
 
