@@ -43,18 +43,33 @@ function concatName(words) {
   const concat=lastConcat+", "+firstConcat;
   return concat;
 }
-console.log(concatName(words));
-
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties){
+ let winsPoints=wins*3
+ let tiesPoints=ties*1
+ let points=winsPoints+tiesPoints; 
+ return points
 }
-
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function getBiggest(array){
+  let biggestOne=0;
+  for (let index = 1; index < array.length; index++) {
+        if(array[index]>biggestOne){
+        biggestOne=array[index];
+    }  
+  }
+  return biggestOne;
 }
-
+function highestCount(array){
+  let biggestOne=getBiggest(array)
+  let repeaterchecker=0;
+    for (let index = 0; index < array.length; index++) {
+      if(biggestOne==array[index]){
+        repeaterchecker++;
+      }
+  }
+  return repeaterchecker
+}
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
