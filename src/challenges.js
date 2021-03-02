@@ -1,7 +1,6 @@
-// Iniciando o projeto 
-//Desafio 1
-function compareTrue() {
-  // seu código aqui
+// Desafio 1
+function compareTrue(value1, value2) {
+  return value1 === true && value2 === true;
 }
 
 // Desafio 2
@@ -59,3 +58,8 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+// Testando a função compareTrue
+console.log(compareTrue(false, true));
+console.log(compareTrue(false, false));
+console.log(compareTrue(true, true));
