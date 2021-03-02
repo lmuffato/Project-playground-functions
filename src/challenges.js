@@ -65,8 +65,26 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let dictionary = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  let phraseEncode = '';
+  for (let index = 0; index < phrase.length; index += 1) {
+    for (let dictionaryKey in dictionary) {
+      if (phrase[index] === dictionaryKey) {
+        phraseEncode += dictionary[dictionaryKey];
+      }
+    }
+    if (phraseEncode[index] === undefined) {
+      phraseEncode += phrase[index];
+    }
+  }
+  return phraseEncode;
 }
 function decode() {
   // seu código aqui
@@ -85,4 +103,4 @@ module.exports = {
   splitSentence,
 };
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(encode('hi there!'));
