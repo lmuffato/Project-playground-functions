@@ -48,21 +48,65 @@ function highestCount() {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  if (cat1 - mouse === cat2 - mouse) {
+  if (mouse - cat1 === mouse - cat2) {
     return 'os gatos trombam e o rato foge';
   }
-  if (cat1 - mouse < cat2 - mouse) {
+  if (mouse - cat1 < mouse - cat2) {
     return 'cat1';
   }
-  if (cat2 - mouse < cat1 - mouse) {
+  if (mouse - cat2 < mouse - cat1) {
     return 'cat2';
   }
 }
 
 // Desafio 8
-function fizzBuzz(integersArray) {
-  // seu código aqui
+function checkDivideThree(listOfIntegers) {
+  let fizzBuzzArray = new Array(listOfIntegers.length);
+  for (let index = 0; index < listOfIntegers.length; index += 1) {
+    if (listOfIntegers[index] % 3 === 0) {
+      fizzBuzzArray[index] = 'fizz!';
+    }
+  }
+  return (fizzBuzzArray, listOfIntegers);
 }
+
+// function checkDivideFizzBuzz(integersArray) {
+//   let fizzBuzzArray = integersArray;
+//   for (let index = 0; index < integersArray.length; index += 1) {
+//     if (integersArray[index] % 5 === 0 && integersArray[index] % 3 === 0) {
+//       fizzBuzzArray[index] = 'fizzBuzz';
+//     }
+//   }
+//   return fizzBuzzArray;
+// }
+
+// function checkDivideBug(integersArray) {
+//   for (let index = 0; index < integersArray.length; index += 1) {
+//     if (integersArray[index] % 5 !== 0 && integersArray[index] % 3 !== 0) {
+//       integersArray[index] = 'bug!';
+//     }
+//   }
+//   return integersArray;
+// }
+
+// function checkDivideBuzz(integersArray) {
+//   for (let index = 0; index < integersArray.length; index += 1) {
+//     if (integersArray[index] % 5 === 0) {
+//       integersArray[index] = 'Buzz!';
+//     }
+//   }
+//   return integersArray;
+// }
+
+function fizzBuzz(integersArray) {
+//   // seu código aqui
+//   for (let index = 0; index < integersArray.length; index += 1) {
+  return checkDivideThree(integersArray);
+}
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+// console.log(fizzBuzz([7, 9]));
+// console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode() {
