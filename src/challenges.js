@@ -42,7 +42,7 @@ function highestCount(array) {
       if (newArray[index] === array[index]) {
         let sumHighestCount += 1;
       }
-
+// usar 2 fors, um para ver qual q é o maior, outro para contar cada ida
   }
 
   return sumHighestCount;
@@ -51,9 +51,13 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  if (cat1 > cat2) {
+  let distanceCat1 = math.abs(cat1 - mouse)
+  let discanceCat2 = math.abs(cat2 - mouse)
+
+
+  if (distanceCat1 > distanceCat2) {
     return 'cat2'
-  } else if (cat1 < cat2) {
+  } else if (distanceCat1 < distanceCat2) {
     return 'cat1'
   } else {
     return "os gatos trombam e o rato foge"
@@ -111,6 +115,7 @@ function encode(string) {
           codingString.push(string[index])
       }
       return codingString
+      console.log(codingString)
     }
 
 
