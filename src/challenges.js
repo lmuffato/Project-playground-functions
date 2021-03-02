@@ -45,8 +45,9 @@ function concatName(name_array) {
 
 
 /* let name = ["pedro","carla","joão","josé","marcos"];
-console.log(concatName(name));
- */
+console.log(concatName(name)); 
+*/
+
 
 
 
@@ -77,7 +78,7 @@ function encode() {
 function decode() {
   // seu código aqui
 }
-//console.log(splitSentence("vamo que vamo"))
+
 
 module.exports = {
   calcArea,
