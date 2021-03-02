@@ -64,7 +64,7 @@ function checkSub(lineA, lineB, lineC) {
     subBC: Math.abs(lineB - lineC),
     subAC: Math.abs(lineA - lineC),
   };
-  if (lineC > operations.subAB || lineB > operations.subAC || lineA > operations.subBC) {
+  if (lineC > operations.subAB && lineB > operations.subAC && lineA > operations.subBC) {
     result = true;
   }
   return result;
@@ -77,7 +77,7 @@ function checkSum(lineA, lineB, lineC) {
     sumAC: lineA + lineC,
     sumBC: lineB + lineC,
   };
-  if (lineC < operations.sumAB || lineB < operations.sumAC || lineA < operations.sumBC) {
+  if (lineC < operations.sumAB && lineB < operations.sumAC && lineA < operations.sumBC) {
     result = true;
   }
   return result;
