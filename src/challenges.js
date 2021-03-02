@@ -28,8 +28,19 @@ function splitSentence(setence) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(namesArray) {
+  let firstItem;
+  let secondItem;
+
+  for (let index = 0; index < namesArray.length; index += 1) {
+    if (index === 0) {
+      secondItem = namesArray[index];
+    } else if (index === namesArray.length - 1) {
+      firstItem = namesArray[index];
+    }
+  }
+
+  return `${firstItem}, ${secondItem}`;
 }
 
 // Desafio 5
