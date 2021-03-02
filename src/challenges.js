@@ -23,7 +23,9 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(arrayToConcat) {
-  let concatened = (`${arrayToConcat[arrayToConcat.length - 1].toString()}, ${arrayToConcat[0].toString()}`);
+  let concatened = (
+    `${arrayToConcat[arrayToConcat.length - 1].toString()}, ${arrayToConcat[0].toString()}`
+  );
   return concatened;
 }
 
@@ -52,14 +54,30 @@ function catAndMouse(mouse, cat1, cat2) {
   if (cat1Dist < cat2Dist) {
     return 'cat1';
   } if (cat1Dist > cat2Dist) {
-      return 'cat2';
+    return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(fizzBuzzArray) {
+  let fizzBuzzDone = [];
+  for (let index = 0; index < fizzBuzzArray.length; index += 1) {
+    switch (true) {
+      case (fizzBuzzArray[index] % 3 === 0 && fizzBuzzArray[index] % 5 === 0):
+        fizzBuzzDone.push('fizzBuzz');
+        break;
+      case ((fizzBuzzArray[index] % 3 === 0)):
+        fizzBuzzDone.push('fizz');
+        break;
+      case ((fizzBuzzArray[index] % 5 === 0)):
+        fizzBuzzDone.push('buzz');
+        break;
+      default:
+        fizzBuzzDone.push('bug!');
+    }
+  }
+  return fizzBuzzDone;
 }
 
 // Desafio 9
