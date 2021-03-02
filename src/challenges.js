@@ -48,12 +48,24 @@ function highestCount(array) {
     }
   }
   return sum;
-
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 > mouse) {
+    let distanceCat1 = cat1 - mouse;
+  }else {
+    let distanceCat1 = mouse - cat1;
+  }
+
+  if (cat2 > mouse) {
+    let distanceCat2 = cat2 - mouse;
+  } else { let distanceCat2 = mouse - cat2; }
+  if (distanceCat1 > distanceCat2) {
+    return 'cat1';
+  } else if (distanceCat1 < distanceCat2) {
+    return 'cat2';
+  } else { return 'os gatos trombam e o rato foge';}
 }
 
 // Desafio 8
