@@ -23,12 +23,31 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return `${(wins * 3) + ties}`;
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+//Desafio feito com sucesso graças ao tryber Luan Ramalho
+//Foi ele quem me deu a brilahnte dica de fazer uma nova function
+function highestNumber(arrayNumbers) {
+  let highestNumberOfArray = arrayNumbers[0];
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] > highestNumberOfArray) {
+      highestNumberOfArray = arrayNumbers[index];
+    }
+  }
+  return highestNumberOfArray;
+}
+
+function highestCount(arrayNumbers) {
+  let highNumber = highestNumber(arrayNumbers);
+  let counterOfHighestNumber = 0;
+   for (let counter = 0; counter < arrayNumbers.length; counter += 1) {
+    if (highNumber === arrayNumbers[counter]) {
+      counterOfHighestNumber += 1;
+    }
+  }
+  return counterOfHighestNumber;
 }
 
 // Desafio 7
