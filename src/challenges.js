@@ -36,20 +36,10 @@ function concatName(name_array) {
             resultado.push(name_array[0]);
         }
    }
-
+   name_array = resultado;
   return resultado;
-  /* //bloco abaixo aprendi no plantão
-  return `${name_array[name_array.length -1]}, ${name_array[0]}`;
-  */
+ 
 } 
-
-
-/* let name = ["pedro","carla","joão","josé","marcos"];
-console.log(concatName(name)); 
-*/
-
-
-
 
 // Desafio 5
 function footballPoints() {
