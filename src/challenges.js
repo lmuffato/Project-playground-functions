@@ -1,18 +1,27 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(bool1, bool2) {
+  if (bool1 === true && bool2 === true) {
+      return true
+  }
+  else {
+      return false
+  }
 }
+console.log(compareTrue(true, true));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let area = (base * height) / 2;
+  return area
 }
+console.log(calcArea(10, 50));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(text){
+  let array = text.split(' ');
+  return array;
 }
-
+console.log(splitSentence('Esse texto é um teste'))
 // Desafio 4
 function concatName() {
   // seu código aqui
