@@ -58,9 +58,19 @@ function highestCount(numbers) {
   return numberOfTime;
 }
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 === cat2) {
+    return 'os gatos trombam e o rato foge';
+  }
+
+  if (cat2 - mouse > cat1 - mouse) {
+    return 'cat1';
+  }
+
+  return 'cat2';
 }
+
+console.log(catAndMouse(1, 10, 11));
 
 // Desafio 8
 function fizzBuzz() {
