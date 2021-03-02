@@ -22,9 +22,14 @@ function splitSentence(stringsToSplit) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayOfStrings) {
+  let firstValue = arrayOfStrings.slice(0, 1);
+  let lastValue = arrayOfStrings.slice(arrayOfStrings.length - 1);
+  let concatedValues = '';
+  return concatedValues.concat(lastValue, ', ', firstValue).toString();
 }
+
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
 function footballPoints() {
