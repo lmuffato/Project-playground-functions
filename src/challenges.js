@@ -55,12 +55,21 @@ function concatName(paramNomes) {
   return console.log(fullName);
 }
 
-concatName(['captain', 'my', 'captain']);
+
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+
+    let vit = wins*3;
+    let emp = ties*1;
+    let sum = vit+emp;
+
+    return (console.log(sum));
+  
 }
+
+footballPoints(0,0);
+
 
 // Desafio 6
 function highestCount() {
