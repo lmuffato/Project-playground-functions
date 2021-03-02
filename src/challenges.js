@@ -67,12 +67,21 @@ function highestCount(arr) {
 function calcDistance(position1, position2) {
   let distance;
 /** Source: https://www.tutorialspoint.com/How-to-convert-a-negative-number-to-a-positive-one-in-JavaScript#:~:text=Front%20End%20Technology-,To%20convert%20a%20negative%20number%20to%20a%20positive%20one%20in,absolute%20value%20of%20a%20number. */
-  if (Math.abs(position1) > Math.abs(position2)) {
-    distance = Math.abs(position1) - Math.abs(position2);
-  } else {
-    distance = Math.abs(position2) - Math.abs(position1);
+  switch (true) {
+    case position1 < 0 && position2 > 0:
+      distance = position2 - position1;
+      break;
+    case position1 > 0 && position2 < 0:
+      distance = position1 - position2;
+      break;
+    default:
+      if (Math.abs(position1) > Math.abs(position2)) {
+        distance = Math.abs(position1) - Math.abs(position2);
+      } else {
+        distance = Math.abs(position2) - Math.abs(position1);
+      }
   }
-
+  
   return distance;
 }
 
@@ -91,6 +100,11 @@ function catAndMouse(mouse, cat1, cat2) {
 
   return message;
 }
+
+console.log(catAndMouse(-10, -7, -8));
+console.log(catAndMouse(-4, 2, -16));
+console.log(catAndMouse(0, -6, -6));
+console.log(catAndMouse(-4, 2, -2));
 
 // Desafio 8
 function fizzBuzz() {
