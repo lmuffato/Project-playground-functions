@@ -3,9 +3,7 @@ function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
   } else {
-    return false;
-  }
-
+    return false;}
 }
 
 // Desafio 2
@@ -15,8 +13,11 @@ function calcArea(base, heigh) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+/* https://www.w3schools.com/jsref/jsref_split.asp#:~:text=The%20split()%20method%20is,not%20change%20the%20original%20string.
+Site onde aprendi sobre o metodo .split() */
+function splitSentence(sentence) {
+  let sentenceArray = sentence.split(' ');
+  return sentenceArray;
 }
 
 // Desafio 4
