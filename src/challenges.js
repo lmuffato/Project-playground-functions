@@ -27,7 +27,7 @@ function splitSentence(string) {
 function concatName(name_array) {
   // seu código aqui
   //bloco abaixo eu fiz
-    var resultado = [];
+/*     var resultado = [];
    for (let index = 0; index < name_array.length; index++) {
          if (index === 0){
               resultado[index]= name_array[name_array.length -1];
@@ -36,16 +36,13 @@ function concatName(name_array) {
             resultado.push(name_array[0]);
         }
    }
-   name_array = resultado;
-  return name_array;
-  /* //bloco abaixo aprendi no plantão
+   
+  return '${resultado[0]}, ${resultado[1]}'; */
+
+   //bloco abaixo aprendi no plantão
   return `${name_array[name_array.length -1]}, ${name_array[0]}`;
-  */
+  
 } 
-
-
- 
-
 
 
 
@@ -59,12 +56,31 @@ function footballPoints(wins, ties) {
 }
 
 
-console.log(footballPoints(0,0));
 
 // Desafio 6
-function highestCount() {
+function highestCount(number) {
   // seu código aqui
-}
+   let max = 0;
+   let total = 0;
+  for (let index = 0; index < number.length; index++) {
+        
+        if (number[index] >= max) {
+           max = number[index];
+        
+        }
+    }
+    for (let i = 0; i < number.length; i ++) {
+      if ( max === number[i]) {
+          total += 1;
+      };
+    
+    }
+  return ` ${total}`;
+} 
+
+
+
+
 
 // Desafio 7
 function catAndMouse() {
