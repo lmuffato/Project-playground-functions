@@ -59,8 +59,9 @@ let maxCount = 0;
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let mouseCat1Distancy = mouse - cat1;
-  let mouseCat2Distancy = mouse - cat2;
+  let array = [mouse, cat1, cat2];
+  let mouseCat1Distancy = array[0] - array[1];
+  let mouseCat2Distancy = array[0] - array[2];
 
   if (mouseCat1Distancy > mouseCat2Distancy){
     return 'cat2';
@@ -89,7 +90,7 @@ function decode() {
   // seu código aqui
 }
 
-console.log(catAndMouse(10, 8, 8));
+console.log(catAndMouse(20, 16, 8));
 
 module.exports = {
   calcArea,
