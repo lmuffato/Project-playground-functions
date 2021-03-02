@@ -1,15 +1,15 @@
+/* eslint-disable max-len */
 // Desafio 1
 function compareTrue(bool1, bool2) {
-
   let comparison = false;
   if (bool1 === true && bool2 === true) {
     comparison = true;
-    } else {
-      comparison = false;
-    }
-  return console.log(comparison);
+  } else {
+    comparison = false;
   }
-  
+  return console.log(comparison);
+}
+
 // Desafio 2
 function calcArea(base, height) {
   return ((base * height) / 2);
@@ -17,12 +17,12 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentence) {
-  return sentence.split(" ");
+  return sentence.split(' ');
 }
 
 // Desafio 4
 function concatName(arrayToConcat) {
-  let concatened = (arrayToConcat[arrayToConcat.length - 1].toString() + ", " + arrayToConcat[0].toString());
+  let concatened = (`${arrayToConcat[arrayToConcat.length - 1].toString()}, ${arrayToConcat[0].toString()}`);
   return concatened;
 }
 
@@ -37,13 +37,13 @@ function highestCount(numbersArray) {
   // seu código aqui
   let repeatMax = 0;
   let highestNumber = Math.max(...numbersArray);
-  console.log(highestNumber)
-/*for (let index = 0; index < megaSenaNumbers.length; index += 1) {
-  for (let gameIndex = 0; gameIndex < firstPlay.length; gameIndex += 1) {
-    if (megaSenaNumbes[index] === firstPlay[gameIndex]) {
-      numberOfHits += 1;*/
-let aaa = [9, 1, 2, 3, 9, 5, 7];
-highestCount(aaa)
+  for (let index = 0; index < numbersArray.length; index += 1) {
+    if (highestNumber === numbersArray[index]) {
+      repeatMax += 1;
+    }
+  }
+  return repeatMax;
+}
 
 // Desafio 7
 function catAndMouse() {
