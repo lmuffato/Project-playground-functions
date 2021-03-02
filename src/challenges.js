@@ -1,11 +1,10 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if(value1 === true && value2 ==== true) {
+  if(value1 === true && value2 === true) {
     return true
   } else {
     return false
   }
-}
 
 // Desafio 2
 function calcArea(base, height) {
@@ -14,12 +13,8 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-let phrase = []
-function splitSentence('go Trybe') {
-  for(let index = 0; index < splitSentence.length; index+=)
-  phrase.push(splitSentence[i])
-  return phrase
-}
+function splitSentence(string) {
+  return string.split('')
 
 // Desafio 4
 function concatName() {
