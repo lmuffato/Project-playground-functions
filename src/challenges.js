@@ -16,8 +16,12 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+// pesquisei sobre o método no site https://www.w3schools.com/jsref/jsref_split.asp
+function splitSentence(phrase) {
   // seu código aqui
+  let phraseArray = [];
+  phraseArray = phrase.split(' ');
+  return phraseArray;
 }
 
 // Desafio 4
