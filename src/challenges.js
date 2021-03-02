@@ -36,8 +36,8 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(names) {
+  return names[names.length-1] + ' '+ names[0];
 }
 
 // Desafio 5
@@ -82,7 +82,7 @@ module.exports = {
 };
 
 
-
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 
 
