@@ -61,8 +61,8 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanceCat1 = mouse - cat1;
-  let distanceCat2 = mouse - cat2;
+  let distanceCat1 = (mouse - cat1) ** 2;
+  let distanceCat2 = (mouse - cat2) ** 2;
   let result;
   if (distanceCat1 < distanceCat2) {
     result = 'cat1';
@@ -73,6 +73,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return result;
 }
+console.log(catAndMouse(1,0,2))
 
 function dividedBy3(number) {
   if (number % 3 === 0) {
