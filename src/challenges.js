@@ -70,22 +70,54 @@ function fizzBuzz(array) {
     if (array[index] % 3 == 0 && array[index] % 5 == 0) {
       fizzOrBuzzOrBug.push('fizzBuzz')
     } else if (array[index] % 3 == 0 && array[index] % 5 != 0){
-      fizzOrBuzzOrBug.push('fizz')
+        fizzOrBuzzOrBug.push('fizz')
     } else if (array[index] % 5 == 0 && array[index] % 3 != 0) {
-      fizzOrBuzzOrBug.push('buzz')
+       fizzOrBuzzOrBug.push('buzz')
     } else {
-      fizzOrBuzzOrBug.push('bug!')
+       fizzOrBuzzOrBug.push('bug!')
     }
   }
   return fizzOrBuzzOrBug
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let encoded = ''
+  for (index = 0; index < string.length; index +=1) {
+    if (string[index] == 'a') {
+      encoded += '1'
+    } else if (string[index] == 'e') {
+        encoded += '2'
+    } else if (string[index] == 'i') {
+        encoded += '3'
+    } else if (string[index] == 'o') {
+        encoded += '4'
+    } else if (string[index] == 'u') {
+        encoded += '5'
+    } else {
+        encoded += string[index]
+    }
+  }
+  return encoded
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let decoded = ''
+  for (index = 0; index < string.length; index +=1) {
+    if (string[index] == '1') {
+      decoded += 'a'
+    } else if (string[index] == '2') {
+        decoded += 'e'
+    } else if (string[index] == '3') {
+        decoded += 'i'
+    } else if (string[index] == '4') {
+        decoded += 'o'
+    } else if (string[index] == '5') {
+        decoded += 'u'
+    } else {
+        decoded += string[index]
+    }
+  }
+  return decoded
 }
 
 module.exports = {
@@ -102,6 +134,8 @@ module.exports = {
 };
 
 
+console.log(encode('hi there!'))
+console.log(decode('h3 th2r2!'))
 
 
 
