@@ -2,13 +2,13 @@
 function compareTrue(bool01, bool02) {
   if (bool01 === true && bool02 === true) {
     return true;
-  } 
-    return false;
+  }
+  return false;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
