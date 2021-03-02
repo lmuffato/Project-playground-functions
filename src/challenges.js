@@ -58,9 +58,9 @@ function highestCount(numberArray) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let result;
-  if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     result = 'cat1';
-  } else if (Math.abs(cat2 - mouse) > Math.abs(cat1 - mouse)) {
+  } else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
     result = 'cat2';
   } else {
     result = 'os gatos trombam e o rato foge';
@@ -87,7 +87,7 @@ function fizzBuzz(numberArray) {
 
 // Desafio 9
 function encode(string) {
-  let encoderObject = {'a':1, 'e':2, 'i':3, 'o':4, 'u':5};
+  let encoderObject = { a: 1, e: 2, i: 3, o: 4, u: 5 };
   let encodedString = '';
   for (let index = 0; index < string.length; index += 1) {
     if (string[index] in encoderObject) {
@@ -99,7 +99,7 @@ function encode(string) {
   return encodedString;
 }
 function decode(encodedString) {
-  let decoderObject = {1:'a', 2:'e', 3:'i', 4:'o', 5:'u'};
+  let decoderObject = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
   let decodedString = '';
   for (let index = 0; index < encodedString.length; index += 1) {
     if (encodedString[index] in decoderObject) {
