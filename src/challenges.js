@@ -64,20 +64,20 @@ function catAndMouse() {
 
 // Desafio 8
 function fizzBuzz(array) {
-  // let fizzBuzzArray = [];
+  let fizzBuzzArray = [];
 
-  // for (let index = 0; index < array.length; index += 1) {
-  //   if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-  //     fizzBuzzArray.push('fizzBuzz');
-  //     continue;
-  //   } else if (array[index] % 3 === 0) {
-  //     fizzBuzzArray.push('fizz');
-  //   } else if (array[index] % 5 === 0) {
-  //     fizzBuzzArray.push('buzz');
-  //   }
-  //   return 'bug!';
-  // }
-  // return fizzBuzzArray;
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      fizzBuzzArray.push('fizzBuzz');
+      continue;
+    } else if (array[index] % 3 === 0) {
+      fizzBuzzArray.push('fizz');
+    } else if (array[index] % 5 === 0) {
+      fizzBuzzArray.push('buzz');
+    }
+    return 'bug!';
+  }
+  return fizzBuzzArray;
 }
 
 // Desafio 9
