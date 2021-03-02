@@ -23,10 +23,13 @@ function splitSentence(text){
 }
 console.log(splitSentence('Esse texto é um teste'))
 // Desafio 4
-function concatName() {
-  // seu código aqui
+let stringDeNomes = []
+function concatName(arrayDeNomes) {
+  stringDeNomes.push(arrayDeNomes[arrayDeNomes.length - 1]);
+  stringDeNomes.push(arrayDeNomes[0]);
+  return stringDeNomes;
 }
-
+console.log(concatName(['Eric', 'de', 'Souza', 'Santos']));
 // Desafio 5
 function footballPoints() {
   // seu código aqui
