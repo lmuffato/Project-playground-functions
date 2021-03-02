@@ -1,7 +1,7 @@
 // vamos começar
 // Desafio 1
 function compareTrue(value1, value2) {
-  let returnValue ;
+  let returnValue;
   if (value1 && value2) {
     returnValue = true;
   } else {
@@ -12,9 +12,9 @@ function compareTrue(value1, value2) {
 }
 
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   // seu código aqui
-  let area = (base*height)/2;
+  let area = (base * height) / 2;
   return area;
 }
 
@@ -29,21 +29,24 @@ function concatName() {
 }
 
 // Desafio 5
-function footballPoints(wins,ties) {
+function footballPoints(wins, ties) {
   // seu código aqui
-  let totalPoints = 3*wins + ties;
+  let totalPoints = 3 * wins + ties;
   return totalPoints;
 }
 
 // Desafio 6
-function highestCount(numbers) {
-  // seu código aqui
+function highestNumber(numbers) {
   let maiorNumber = numbers[0]
   for(let i in numbers) {
   if(numbers[i] > maiorNumber) {
     maiorNumber = numbers[i];
   }
   }
+  return maiorNumber;
+}
+function highestCount(numbers) {
+	let maiorNumber = highestNumber(numbers);
   let repeatTimes = 0;
   for(let i in numbers) {
   if(maiorNumber === numbers[i]) {
