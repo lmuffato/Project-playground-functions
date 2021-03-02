@@ -22,6 +22,7 @@ function splitSentence(text){
   return array;
 }
 console.log(splitSentence('Esse texto é um teste'))
+
 // Desafio 4
 let stringDeNomes = []
 function concatName(arrayDeNomes) {
@@ -29,7 +30,8 @@ function concatName(arrayDeNomes) {
   stringDeNomes.push(arrayDeNomes[0]);
   return stringDeNomes;
 }
-console.log(concatName(['Eric', 'de', 'Souza', 'Santos']));
+// console.log(concatName(['Eric', 'de', 'Souza', 'Santos']));
+
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = (wins * 3) + ties;
@@ -56,9 +58,26 @@ return countBigger
 console.log(highestCount([9, 1, 2, 9, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let dist1 = cat1 - mouse;
+  let dist2 = cat2 - mouse;
+  if (dist1 < 0) {
+    dist1 = dist1 * (-1)
+  }
+  if (dist2 < 0) {
+    dist2 = dist2 * (-1)
+  }
+  if (dist1 > dist2) {
+    return 'cat2'
+  }
+  if (dist1 < dist2) {
+    return 'cat1'
+  }
+  if (dist1 === dist2) {
+    return "os gatos trombam e o rato foge"
+  }
 }
+console.log(catAndMouse(8, 19, 4));
 
 // Desafio 8
 function fizzBuzz() {
