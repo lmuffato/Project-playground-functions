@@ -21,7 +21,7 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(phraseList) {
-  return phraseList[phraseList.length -1] + ',' + phraseList[0]
+  return phraseList[phraseList.length -1] + ', ' + phraseList[0]
 }
 console.log(concatName(['lucas', 'henrique', 'da', 'paz']));
 // Desafio 5
@@ -32,7 +32,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numberList) {
-  let numberOfReplays;
+  let numberOfReplays = Number;
   let numberMemory = numberList[0];
   for (let index = 1; index < numberList.length; index += 1) {    
     if ( numberList[index] > numberList[index -1]) {
