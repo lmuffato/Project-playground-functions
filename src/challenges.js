@@ -64,6 +64,8 @@ function catAndMouse(mouse, cat1, cat2) {
   let nearCatch;
   distanceCat1 = cat1 - mouse;
   distanceCat2 = cat2 - mouse;
+  distanceCat1 *= -1;
+  distanceCat2 *= -1;
   if (distanceCat2 > distanceCat1) {
     nearCatch = 'cat1';
   } else if (distanceCat1 > distanceCat2) {
