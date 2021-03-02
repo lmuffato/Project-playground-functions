@@ -74,9 +74,41 @@ function catAndMouse(mouse, cat1, cat2) {
   return result;
 }
 
+function dividedBy3(number) {
+  if (number % 3 === 0) {
+    return true;
+  }
+  return false;
+}
+
+function dividedBy5(number) {
+  if (number % 5 === 0) {
+    return true;
+  }
+  return false;
+}
+
+function dividedBy3And5(number) {
+  let msg;
+  if (dividedBy3(number) && dividedBy5(number)) {
+    msg = 'fizzBuzz';
+  } else if (dividedBy3(number)) {
+    msg = 'fizz';
+  } else if (dividedBy5(number)) {
+    msg = 'buzz';
+  } else {
+    msg = 'bug!';
+  }
+  return msg;
+}
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let result = [];
+  for (let index = 0; index < numbers.length; index += 1) {
+    result[index] = dividedBy3And5(numbers[index]);
+  }
+  return result;
 }
 
 // Desafio 9
