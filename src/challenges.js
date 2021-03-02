@@ -2,9 +2,8 @@ function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
   }
-  else {
-    return false;
-  }
+
+  return false;
 }
 console.log(compareTrue(true, false));
 
@@ -24,15 +23,18 @@ console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName(names) {
-  let first = names[0] + ', ' + names[names.length - 1]
-  return first
+  let first = `${names[0]}, ${names[names.length - 1]}`;
+  return first;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+ let pontosWins = wins * 3;
+ let pontosTies = ties * 1;
+  return pontosWins + pontosTies;
 }
+console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount() {
