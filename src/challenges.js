@@ -12,7 +12,8 @@ function compareTrue(gradeProject, goingToLectures) {
 function calcArea(base, height) {
   // seu código aqui
   let areaTriangle;
-  return areaTriangle = (base * height)/2;
+  areaTriangle = (base * height)/2;
+  return areaTriangle;
 }
 
 // Desafio 3
@@ -27,8 +28,7 @@ function splitSentence(sentence) {
 // Desafio 4
 function concatName(nameList) {
   // seu código aqui
-  let newString;
-  newString = `${nameList[nameList.length - 1]} ${','} ${nameList[0]}`;
+  let newString = `${nameList[nameList.length - 1]}, ${nameList[0]}`;
   return newString;
 }
 
