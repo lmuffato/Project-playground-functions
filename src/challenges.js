@@ -1,6 +1,8 @@
 // Desafio 1
 function compareTrue() {
-  // seu código aqui
+  if (2 > 1 && 4 > 2) {
+    return compareTrue;
+  }
 }
 
 // Desafio 2
