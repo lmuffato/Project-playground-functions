@@ -133,7 +133,7 @@ function decode(array) {
 }
 //let array = 'h3 th2r2!';
 //console.log(decode(array));
- 
+
 module.exports = {
   calcArea,
   catAndMouse,
