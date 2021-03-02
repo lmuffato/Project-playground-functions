@@ -34,21 +34,21 @@ function highestCount(arrayNumbers) {
   let count = 0;
   let higherNumber = 0;
 
-  for (index = 0; index <= arrayNumbers.length - 1; index += 1) {
-      if (arrayNumbers[index] > higherNumber) {
-          higherNumber = arrayNumbers[index];
+  for (let index = 0; index <= arrayNumbers.length - 1; index += 1) {
+    if (arrayNumbers[index] > higherNumber) {
+      higherNumber = arrayNumbers[index];
       }
   }
-  for (index2 = 0; index2 <= arrayNumbers.length - 1; index += 1) {
-      if (arrayNumbers === higherNumber) {
-          count += 1;
+  for (let index2 = 0; index2 <= arrayNumbers.length - 1; index += 1) {
+    if (arrayNumbers === higherNumber) {
+      count += 1;
       }
   }
   return count
 }
 
 // Desafio 7
-function catAndMouse(cat1, cat2) {
+function catAndMouse() {
   // seu código aqui
 }
 
