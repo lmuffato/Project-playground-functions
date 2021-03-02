@@ -3,12 +3,8 @@ function compareTrue(gradeProject, goingToLectures) {
   // seu código aqui
   if (gradeProject === true && goingToLectures === true) {
     return true;
-    } else {
-    return false;
   }
  }
-
-
 
 // Desafio 2
 function calcArea(base, height) {
@@ -22,20 +18,21 @@ function splitSentence(sentence) {
   // seu código aqui 
   return sentence.split(' ');
 }
-//Para resolução do Desafio 3, consultei os seguintes artigos: 
-//https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split 
-//https://www.codegrepper.com/code-examples/javascript/javascript+split+by+space
+// Para resolução do Desafio 3, consultei os seguintes artigos: 
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split 
+// https://www.codegrepper.com/code-examples/javascript/javascript+split+by+space
 
 // Desafio 4
 function concatName(nameList) {
   // seu código aqui
   let newString = (' ');
-  return newString = newString.concat(nameList[nameList.length -1], ', ', nameList[0]);
- 
+  newString = newString.concat(nameList[nameList.length - 1], ', ', nameList[0]);
+  return newString;
 }
-//Para a resolução do Desafio 4, consultei a seguinte documentação:
-//https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
-//https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
+
+// Para a resolução do Desafio 4, consultei a seguinte documentação:
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
 
 // Desafio 5
 function footballPoints(wins, ties) {
