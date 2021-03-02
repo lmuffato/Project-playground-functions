@@ -72,9 +72,23 @@ function catAndMouse(mouse, cat1, cat2) {
 //console.log(catAndMouse(10, 5, 5)); //cat1 e 2 tem a mesma distancia do rato.
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumbers) {
+  let arrayReturn = [];
+  for(let i = 0; i < arrayNumbers.length; i += 1){
+    if(arrayNumbers[i] % 3 == 0 && arrayNumbers[i] % 5 == 0){
+      arrayReturn.push('fizzBuzz');
+    }else if(arrayNumbers[i] % 3 == 0){
+      arrayReturn.push('fizz');
+    }else if(arrayNumbers[i] % 5 == 0){
+      arrayReturn.push('buzz');
+    }else{
+      arrayReturn.push('bug!');
+    }
+  }
+  return arrayReturn;
 }
+//let array = [2, 15, 7, 9, 45];
+//console.log(fizzBuzz(array));
 
 // Desafio 9
 function encode() {
