@@ -59,7 +59,6 @@ function highestCount(numberArray) {
   return countRepeat;
 }
 
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let winner;
@@ -74,9 +73,7 @@ function catAndMouse(mouse, cat1, cat2) {
     winner = 'os gatos trombam e o rato foge';
   }
   return winner;
-} 
-
-console.log(catAndMouse(12, 6, 8));
+}
 
 // Desafio 8
 function fizzBuzz() {
