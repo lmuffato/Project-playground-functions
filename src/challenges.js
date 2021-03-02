@@ -2,7 +2,7 @@
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
-} 
+  } 
   return false;
 }
 
@@ -19,7 +19,11 @@ function splitSentence() {
 // Desafio 4
 function concatName(names) {
   let firstAndLast = [];
-  firstAndLast = names[0] + names[names.lenght - 1];
+  let name = '';
+  name = names[0];
+  firstAndLast.push (name);
+  name = names[names.length-1];
+  firstAndLast.push (name);
   return firstAndLast;
 }
 
@@ -52,7 +56,7 @@ function catAndMouse(cat1, cat2, mouse) {
   let same = 'os gatos trombam e o rato foge';
   if ((cat1 - mouse) < (cat2 - mouse)) {
     return cat1;
-  } else if ((cat1 - mouse) > (cat2 - mouse)) {
+  } if ((cat1 - mouse) > (cat2 - mouse)) {
   return cat2;
 } 
   return same;
@@ -62,12 +66,12 @@ function catAndMouse(cat1, cat2, mouse) {
 function fizzBuzz(array) {
   let codified = [];
   let index = 0;
-  for (index = 0; index < array.lenght; index += 1){
-    if ((array[index] % 3 && array[index] % 5) === 0){
+  for (index = 0; index < array.lenght; index += 1) {
+    if ((array[index] % 3 && array[index] % 5) === 0) {
       codified += 'fizzBuzz';
-    } else if (array[index] % 3 === 0){
+    } else if (array[index] % 3 === 0) {
       codified += 'fizz';
-    } else if (array[index] % 5 === 0){
+    } else if (array[index] % 5 === 0) {
     codified += 'buzz';
     } else {
     codified += 'bug!';
