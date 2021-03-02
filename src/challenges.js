@@ -73,7 +73,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return result;
 }
-console.log(catAndMouse(1,0,2))
 
 function dividedBy3(number) {
   if (number % 3 === 0) {
@@ -112,14 +111,53 @@ function fizzBuzz(numbers) {
   return result;
 }
 
-// Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+let vogals = {
+  a: 1,
+  e: 2,
+  i: 3,
+  o: 4,
+  u: 5,
+};
+
+function transformVogalsIntoNumber(word) {
+  let codedWord = [];
+  for (let index = 0; index < word.length; index += 1) {
+    for (let key in vogals) {
+      if (word[index] === key) {
+        codedWord.push(vogals[key]);
+      }
+    } if (codedWord[index] === undefined) {
+      codedWord.push(word[index]);
+    }
+  }
+  return codedWord.join('');
 }
 
+// Desafio 9
+function encode(word) {
+  let code = transformVogalsIntoNumber(word);
+  return code;
+}
+
+function transformNumbersIntoVogals(word) {
+  let decodedWord = [];
+  for (let index = 0; index < word.length; index += 1) {
+    for (let key in vogals) {
+      if (parseInt(word[index], 0) === vogals[key]) {
+        decodedWord.push(key);
+      }
+    } if (decodedWord[index] === undefined) {
+      decodedWord.push(word[index]);
+    }
+  }
+  return decodedWord.join('');
+}
+
+function decode(word) {
+  let decoding = transformNumbersIntoVogals(word);
+  return decoding;
+}
+console.log(decode('h3 th2r2!'));
 module.exports = {
   calcArea,
   catAndMouse,
