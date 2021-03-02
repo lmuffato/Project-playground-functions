@@ -2,9 +2,6 @@
 function compareTrue(val1, val2) {
   if ((val1 === true) && (val2 === true)){
     return true; 
-  } else {
-    return false;
-  }
 }
 
 // Desafio 2
@@ -100,32 +97,30 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(fizzBuzzParam) {
   
-let status = fizzBuzzParam;
+  let status = fizzBuzzParam;
 
-for (let index in fizzBuzzParam - 1){
-  status.push = fizzBuzzParam[index];
-}
-
-let symbols = [];
-
-for (let index in status){
-  if ((status[index] % 3 === 0) && (status[index] % 5 === 0)){
-    symbols.push('fizzBuzz');
-
-  } else if (status[index] % 3 === 0){
-    symbols.push('fizz');
-  } 
-  else if (status[index] % 5 === 0){
-    symbols.push('buzz');
+  for (let index in fizzBuzzParam - 1){
+    status.push = fizzBuzzParam[index];
   }
-  else {
-    symbols.push('bug');
-  }
-}
-return console.log(symbols);
-}
 
-fizzBuzz([9,25]);
+  let symbols = [];
+
+  for (let index in status){
+    if ((status[index] % 3 === 0) && (status[index] % 5 === 0)){
+      symbols.push('fizzBuzz');
+
+    } else if (status[index] % 3 === 0){
+      symbols.push('fizz');
+    } 
+    else if (status[index] % 5 === 0){
+      symbols.push('buzz');
+    }
+    else {
+      symbols.push('bug');
+    }
+  }
+  return console.log(symbols);
+}
 
 // Desafio 9
 function encode() {
@@ -147,3 +142,4 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
