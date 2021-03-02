@@ -59,19 +59,24 @@ function highestCount(numberArray) {
   return countRepeat;
 }
 
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // seu código aqui
-  let runner;
-  if (cat1 > cat2) {
-    runner = 'cat2';
-  } else if (cat2 > cat1) {
-    runner = 'cat1';
+  let winner;
+  let cat1Distance = mouse - cat1;
+  let cat2Distance = mouse - cat2;
+
+  if (cat1Distance < cat2Distance) {
+    winner = 'cat1';
+  } else if (cat2Distance < cat1Distance) {
+    winner = 'cat2';
   } else {
-    runner = 'os gatos trombam e o rato foge'
+    winner = 'os gatos trombam e o rato foge';
   }
-  return runner;
-}
+  return winner;
+} 
+
+console.log(catAndMouse(12, 6, 8));
 
 // Desafio 8
 function fizzBuzz() {
