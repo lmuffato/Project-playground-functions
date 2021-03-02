@@ -2,13 +2,14 @@
 function compareTrue(value1, value2) {
   if (value1 === value2 && value1 === true) {
     return true;
+  } else {
+    return false;
   }
-  return false;
 }
 
 // Desafio 2
 function calcArea(value1, value2) {
-  return (value1 * value2) / 2;
+  return ((value1 * value2) / 2);
 }
 
 // Desafio 3
