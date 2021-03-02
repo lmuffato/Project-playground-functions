@@ -1,16 +1,35 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(test1, test2) {
+  if (test1 && test2){
+    return true
+  } else {
+    return false;
+  }
   // seu código aqui
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, heigt) {
   // seu código aqui
+  return (base*heigt)/2
+
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(sentence) {
   // seu código aqui
+  let word = '';
+  let sentenceSplited = [];
+  for (let index in sentence){ 
+    if(sentence[index] !== ' ' ) {
+      word += sentence[index];
+      index += 1;
+    } else if (word !== ''){
+      sentenceSplited.push(word);
+      word = '';
+    }
+  }
+  return sentenceSplited;
 }
 
 // Desafio 4
