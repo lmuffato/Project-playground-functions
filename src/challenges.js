@@ -63,13 +63,14 @@ function highestCount(arr) {
 }
 
 // Desafio 7
+
 function calcDistance(position1, position2) {
   let distance;
-
-  if (position1 > position2) {
-    distance = position1 - position2;
+/** Source: https://www.tutorialspoint.com/How-to-convert-a-negative-number-to-a-positive-one-in-JavaScript#:~:text=Front%20End%20Technology-,To%20convert%20a%20negative%20number%20to%20a%20positive%20one%20in,absolute%20value%20of%20a%20number. */
+  if (Math.abs(position1) > Math.abs(position2)) {
+    distance = Math.abs(position1) - Math.abs(position2);
   } else {
-    distance = position2 - position1;
+    distance = Math.abs(position2) - Math.abs(position1);
   }
 
   return distance;
