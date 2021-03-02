@@ -1,17 +1,13 @@
 // Desafio 1
 function compareTrue(test1, test2) {
-  if (test1 && test2){
-    return true
-  } else {
-    return false;
-  }
+  return test1 && test2;
   // seu código aqui
 }
 
 // Desafio 2
 function calcArea(base, heigt) {
   // seu código aqui
-  return (base*heigt)/2
+  return (base * heigt) / 2;
 
 }
 
@@ -20,17 +16,20 @@ function splitSentence(sentence) {
   // seu código aqui
   let word = '';
   let sentenceSplited = [];
-  for (let index in sentence){ 
-    if(sentence[index] !== ' ' ) {
+  for (let index in sentence) {
+    if (sentence[index] !== ' ') {
       word += sentence[index];
       index += 1;
-    } else if (word !== ''){
+    } else if (word !== '' || index === sentence.length - 1) {
       sentenceSplited.push(word);
       word = '';
     }
   }
+  sentenceSplited.push(word);
   return sentenceSplited;
 }
+
+console.log(splitSentence('o que ta dando errando nesta merda!!!   cachorro'));
 
 // Desafio 4
 function concatName(originArray) {
@@ -38,24 +37,23 @@ function concatName(originArray) {
   return originArray[originArray.length -1] + ', ' + originArray[0];
 }
 
-
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  return wins*3 + ties;
+  return wins * 3 + ties;
 }
 
 // Desafio 6
 function highestCount(numbersArray) {
   // seu código aqui
-  let count = 0
+  let count = 0;
   let testNumber = numbersArray[0];
-  for (let index in numbersArray){
-    if (testNumber < numbersArray[index]){
+  for (let index in numbersArray) {
+    if (testNumber < numbersArray[index]) {
       testNumber = numbersArray[index];
       count = 1;
-    } else if (testNumber === numbersArray[index]){
-      count += 1
+    } else if (testNumber === numbersArray[index]) {
+      count += 1;
     }
   }
   return count;
@@ -66,9 +64,9 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let cat1Distance = Math.abs(mouse - cat1);
   let cat2Distance = Math.abs(mouse - cat2);
-  if (cat1Distance < cat2Distance){
+  if (cat1Distance < cat2Distance) {
     return 'cat1';
-  } else if (cat1Distance > cat2Distance){
+  } else if (cat1Distance > cat2Distance) {
     return 'cat2';
   } else {
     return 'os gatos trombam e o rato foge';
@@ -80,13 +78,13 @@ function fizzBuzz(numbersArray) {
   // seu código aqui
   let word = '';
   let mensage = [];
-  for (let index in numbersArray){
-    if (numbersArray[index]%3 === 0){
+  for (let index in numbersArray) {
+    if (numbersArray[index]%3 === 0) {
       word = 'fizz';
-      if (numbersArray[index]%5 === 0){
+      if (numbersArray[index]%5 === 0) {
         word = 'fizzBuzz';
       }
-    } else if (numbersArray[index]%5 === 0){
+    } else if (numbersArray[index]%5 === 0) {
       word = 'buzz';
     } else {
       word = 'bug!';
@@ -107,8 +105,8 @@ function encode(decriptMensage) {
     o : '4',
     u : '5'
   }
-  for (let index in decriptMensage){
-    if (decriptMensage[index] === 'a' || decriptMensage[index] === 'e' || decriptMensage[index] === 'i'|| decriptMensage[index] === 'o'|| decriptMensage[index] === 'u' ){
+  for (let index in decriptMensage) {
+    if (decriptMensage[index] === 'a' || decriptMensage[index] === 'e' || decriptMensage[index] === 'i'|| decriptMensage[index] === 'o'|| decriptMensage[index] === 'u' ) {
       mensageEncripted += codeDic[decriptMensage[index]];
     } else {
       mensageEncripted += decriptMensage[index];
@@ -128,8 +126,8 @@ function decode(encriptMensage) {
     4 : 'o',
     5 : 'u'
   }
-  for (let index in encriptMensage){
-    if (encriptMensage[index] === '1' || encriptMensage[index] === '2' || encriptMensage[index] === '3'|| encriptMensage[index] === '4'|| encriptMensage[index] === '5' ){
+  for (let index in encriptMensage) {
+    if (encriptMensage[index] === '1' || encriptMensage[index] === '2' || encriptMensage[index] === '3'|| encriptMensage[index] === '4'|| encriptMensage[index] === '5' ) {
       mensageDecripted += decodeDic[encriptMensage[index]];
     } else {
       mensageDecripted += encriptMensage[index];
@@ -137,9 +135,6 @@ function decode(encriptMensage) {
   }
   return mensageDecripted;
 }
-
-
-
 
 module.exports = {
   calcArea,
