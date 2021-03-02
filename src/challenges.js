@@ -39,8 +39,22 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let highestValue = 0;
+  let highestValueCount = 0;
+
+  for (let index = 0; index < array.length; index += 1) {
+    if (highestValue < array[index]) {
+      highestValue = array[index];
+    }
+  }
+
+  for (let index = 0; index < array.length; index += 1) {
+    if (highestValue === array[index]) {
+      highestValueCount += 1;
+    }
+  }
+  return highestValueCount;
 }
 
 // Desafio 7
@@ -50,24 +64,20 @@ function catAndMouse() {
 
 // Desafio 8
 function fizzBuzz(array) {
-  let fizzBuzzArray = [];
+  // let fizzBuzzArray = [];
 
-  for (let index = 0; index < array.length; index++) {
-    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      fizzBuzzArray.push('fizzBuzz');
-      continue;
-    }
-    if (array[index] % 3 === 0) {
-      fizzBuzzArray.push('fizz');
-    }
-    if (array[index] % 5 === 0) {
-      fizzBuzzArray.push('buzz');
-    }
-    if (array[index] % 3 !== 0 && array[index] % 5 !== 0) {
-      fizzBuzzArray.push('bug!');
-    }
-  }
-  return fizzBuzzArray;
+  // for (let index = 0; index < array.length; index += 1) {
+  //   if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+  //     fizzBuzzArray.push('fizzBuzz');
+  //     continue;
+  //   } else if (array[index] % 3 === 0) {
+  //     fizzBuzzArray.push('fizz');
+  //   } else if (array[index] % 5 === 0) {
+  //     fizzBuzzArray.push('buzz');
+  //   }
+  //   return 'bug!';
+  // }
+  // return fizzBuzzArray;
 }
 
 // Desafio 9
