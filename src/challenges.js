@@ -2,11 +2,10 @@
 function compareTrue(valueA, valueB) {
   // seu código aqui
   if (valueA === true && valueB === true) {
-    return 'True';
-  } else {
-    return 'False';
- }
-}  
+    return True;
+       } 
+       return false;
+ }  
 
 // Desafio 2
 function calcArea(base, height) {
