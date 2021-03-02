@@ -74,9 +74,31 @@ function highestCount(arrayNumbers) {
   return count;
 }
 
+// Função auxiliar
+function getDistance(point1, point2) {
+  let distancepoint = 0;
+  if (point1 > point2) {
+    distancepoint = point1 - point2;
+  } else if (point1 < point2) {
+    distancepoint = point2 - point1;
+  }
+  return distancepoint;
+}
+
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceCat1 = getDistance(mouse, cat1);
+  let distanceCat2 = getDistance(mouse, cat2);
+
+  if (distanceCat1 > distanceCat2) {
+    return 'cat2';
+  }
+
+  if (distanceCat1 < distanceCat2) {
+    return 'cat1';
+  }
+
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -103,6 +125,8 @@ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 console.log(footballPoints(1, 2));
 
 console.log(highestCount([0, 0, 0]));
+
+console.log(catAndMouse(7, 9, 5));
 
 module.exports = {
   calcArea,
