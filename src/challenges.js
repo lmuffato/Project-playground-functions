@@ -76,7 +76,7 @@ function fizzBuzz(array) {
       arrayResult.push('buzz');
     }
       else {
-      arrayResult.push('bug');
+      arrayResult.push('bug!');
     }
   }
   return arrayResult;
