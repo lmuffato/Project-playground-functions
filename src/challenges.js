@@ -111,12 +111,55 @@ function fizzBuzz(arrayFizzBuzzNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+
+// Code
+
+function checkLetterToEncode(letterToCode) {
+  let vowelCoded = letterToCode;
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  let numbers = ['1', '2', '3', '4', '5'];
+
+  for (let index = 0; index < vowels.length; index += 1) {
+    if (letterToCode === vowels[index]) {
+      vowelCoded = numbers[index];
+    }
+  }
+  return vowelCoded;
 }
 
-function decode() {
-  // seu código aqui
+function encode(stringToEncode) {
+  let splitedStringToEncode = stringToEncode.split('');
+  let codedString = '';
+
+  for (let index = 0; index < splitedStringToEncode.length; index += 1) {
+    codedString += checkLetterToEncode(splitedStringToEncode[index]);
+  }
+  return codedString;
+}
+
+// Decode
+
+function checkNumberToDecode(numberToDecode) {
+  let numberDecoded = numberToDecode;
+  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  let numbers = ['1', '2', '3', '4', '5'];
+
+  for (let index = 0; index < vowels.length; index += 1) {
+    if (numberToDecode === numbers[index]) {
+      numberDecoded = vowels[index];
+    }
+  }
+  return numberDecoded;
+}
+
+function decode(stringToDecode) {
+  let splitedStringToDecode = stringToDecode.split('');
+  let decodedString = '';
+
+  for (let index = 0; index < splitedStringToDecode.length; index += 1) {
+    decodedString += checkNumberToDecode(splitedStringToDecode[index]);
+  }
+  return decodedString;
 }
 
 module.exports = {
