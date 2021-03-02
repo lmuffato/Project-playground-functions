@@ -21,8 +21,8 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName(arraytoconcat) {
-  let concatened = (arraytoconcat[arraytoconcat.length - 1].toString() + ", " + arraytoconcat[0].toString());
+function concatName(arrayToConcat) {
+  let concatened = (arrayToConcat[arrayToConcat.length - 1].toString() + ", " + arrayToConcat[0].toString());
   return concatened;
 }
 
@@ -33,9 +33,17 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(numbersArray) {
   // seu código aqui
-}
+  let repeatMax = 0;
+  let highestNumber = Math.max(...numbersArray);
+  console.log(highestNumber)
+/*for (let index = 0; index < megaSenaNumbers.length; index += 1) {
+  for (let gameIndex = 0; gameIndex < firstPlay.length; gameIndex += 1) {
+    if (megaSenaNumbes[index] === firstPlay[gameIndex]) {
+      numberOfHits += 1;*/
+let aaa = [9, 1, 2, 3, 9, 5, 7];
+highestCount(aaa)
 
 // Desafio 7
 function catAndMouse() {
