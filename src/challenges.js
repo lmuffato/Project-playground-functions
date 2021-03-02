@@ -24,9 +24,29 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(name_array) {
   // seu código aqui
-}
+  //bloco abaixo eu fiz
+    var resultado = [];
+   for (let index = 0; index < name_array.length; index++) {
+         if (index === 0){
+              resultado[index]= name_array[name_array.length -1];
+         } 
+        if (index === name_array.length-1){
+            resultado.push(name_array[0]);
+        }
+   }
+  return resultado;
+  //bloco abaixo aprendi no plantão
+ /*  return `${name_array[name_array.length -1]}, ${name_array[0]}`;
+} */
+
+
+let name = ["pedro","carla","joão","josé","marcos"];
+console.log(concatName(name));
+
+
+
 
 // Desafio 5
 function footballPoints() {
