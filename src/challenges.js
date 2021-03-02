@@ -1,12 +1,14 @@
 // Desafio 1
-function compareTrue(boolean1, boolean2) {
-  if(boolean1 == true && boolean2 == true){
+function compareTrue(bool1, bool2) {
+  if(bool1 == true && bool2 == true) {
     return true
-  }else if(boolean1 == true && boolean2 == false){
+  } else if (bool1 === true && bool2 === false) {
     return false
-  }else if(boolean1 == false && boolean2 == true){
+
+  } else if (bool1 === false && bool2 === true) {
     return false
-  }else{
+
+  } else {
     return false
   }
 }
