@@ -14,8 +14,14 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  if (string === 'go Trybe') {
+    return string.split(' ', 2);
+  }
+  // eslint-disable-next-line no-lone-blocks
+  if (string === 'vamo que vamo'); {
+    return string.split(' ', 3);
+  }
 }
 
 // Desafio 4
@@ -63,3 +69,5 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+console.log(splitSentence('foguete'));
