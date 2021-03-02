@@ -58,14 +58,21 @@ function highestCount(arrayNunbers) {
 }
 
 // Desafio 7
+function negativeNumber(number1,number2){
+  if (number1 < 0) {
+    number1 *= -1;
+  }
+  if (number2 < 0) {
+    number2 *= -1;
+  }
+
 function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1;
   let distanceCat2;
   let nearCatch;
   distanceCat1 = cat1 - mouse;
   distanceCat2 = cat2 - mouse;
-  distanceCat1 *= -1;
-  distanceCat2 *= -1;
+  negativeNumber(distanceCat1,distanceCat2);
   if (distanceCat2 > distanceCat1) {
     nearCatch = 'cat1';
   } else if (distanceCat1 > distanceCat2) {
