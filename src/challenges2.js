@@ -3,10 +3,12 @@ function techList(array, name) {
   // esse codigo foi baseado por essa discussão no stack overflow https://stackoverflow.com/questions/5868850/creating-list-of-objects-in-javascript
   let list = [];
   if (array.length === 0)
-  {return 'Vazio!'}
-  for (let index in array)
-  {
-    list.push({ tech: array[index], name: name })
+  { 
+    return 'Vazio!';
+  }
+else {for (let index = 0;index < array.length;index += 1)
+     {list.push({tech: array[index], name: name})
+    }
   }
   return list
 }
