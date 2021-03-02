@@ -99,11 +99,11 @@ function encode(decriptMensage) {
   // seu código aqui
   let mensageEncripted = '';
   let codeDic = {
-    a : '1',
-    e : '2',
-    i : '3',
-    o : '4',
-    u : '5'
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
   }
   for (let index in decriptMensage) {
     if (decriptMensage[index] === 'a' || decriptMensage[index] === 'e' || decriptMensage[index] === 'i'|| decriptMensage[index] === 'o'|| decriptMensage[index] === 'u' ) {
@@ -120,14 +120,14 @@ function decode(encriptMensage) {
   // seu código aqui
   let mensageDecripted = '';
   let decodeDic = {
-    1 : 'a',
-    2 : 'e',
-    3 : 'i',
-    4 : 'o',
-    5 : 'u'
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
   }
   for (let index in encriptMensage) {
-    if (encriptMensage[index] === '1' || encriptMensage[index] === '2' || encriptMensage[index] === '3'|| encriptMensage[index] === '4'|| encriptMensage[index] === '5' ) {
+    if(encriptMensage[index] === '1' || encriptMensage[index] === '2' || encriptMensage[index] === '3'|| encriptMensage[index] === '4'|| encriptMensage[index] === '5' ) {
       mensageDecripted += decodeDic[encriptMensage[index]];
     } else {
       mensageDecripted += encriptMensage[index];
@@ -135,6 +135,8 @@ function decode(encriptMensage) {
   }
   return mensageDecripted;
 }
+
+
 
 module.exports = {
   calcArea,
