@@ -30,9 +30,9 @@ function footballPoints(wins, ties) {
   return ((3 * wins) + (1 * ties));
 }
 
-//Função hiest para exercico 6
+// Função hiest para exercico 6
 function highest(array) {
-  let  higherNumber = 0;
+  let higherNumber = 0;
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] > higherNumber) {
       higherNumber = array[index];
@@ -45,8 +45,8 @@ function highest(array) {
 function highestCount(array) {
   let highestNumber = highest(array);
   let count = 0;
-  for (let index in array) {
-    if (array[index] === highestNumber){
+  for (let index =0; index < array.length; index +=1) {
+    if (array[index] === highestNumber) {
       count += 1;
     }
   }
