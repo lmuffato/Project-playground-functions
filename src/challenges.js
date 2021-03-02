@@ -12,19 +12,22 @@ function calcArea(base, height) {
   // seu código aqui
   let area = base * height;
   let result = area / 2;
-  return result
+  return result;
 }
 
 // Desafio 3
 function splitSentence(phrase) {
   // seu código aqui
   let fraseDividida = phrase.split(' ');
-  return fraseDividida
+  return fraseDividida;
 }
-console.log(splitSentence('go Trybe'));
+
 // Desafio 4
-function concatName() {
+function concatName(names) {
   // seu código aqui
+  let first = names[0];
+  let last = names[names.length-1];
+  return first + ', ' + last;
 }
 
 // Desafio 5
