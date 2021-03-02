@@ -21,9 +21,12 @@ function splitSentence(phrase) {
 //console.log(splitSentence('go trybe'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayNames) {
+  let lastPosition = arrayNames.length - 1;
+  let arrayReturn = [arrayNames[lastPosition], arrayNames[0]];
+  return arrayReturn;
 }
+
 
 // Desafio 5
 function footballPoints() {
