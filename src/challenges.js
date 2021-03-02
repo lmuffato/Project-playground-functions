@@ -28,14 +28,16 @@ function highestCount(array) {
   let greatest = array[0];
   let times = 0;
   for (let index in array)
-  { if (array[index] > greatest)
   { 
-    greatest = array[index] 
-  }; 
+    if (array[index] > greatest)
+  { 
+    greatest = array[index]; 
+  }
 }
   for (let index in array)
-  { if (array[index] === greatest)
-{ times += 1 };
+  { 
+    if (array[index] === greatest)
+{ times += 1; }
 }
   return times;
 }
@@ -49,23 +51,44 @@ function catAndMouse(mouse, cat1, cat2) {
     distance1 = distance1 * -1 
   }
   if (distance2 < 0)
-  { distance2 = distance2 * -1 };
+  { 
+    distance2 = distance2 * -1 };
   if ( distance2 === distance1)
   {
     return 'os gatos trombam e o rato foge'
   }
   else if (distance1 < distance2)
   {
-    return 'cat1'
+    return 'cat1';
   }
   else {
-    return 'cat2'
+    return 'cat2';
   }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let codfied = [];
+  for (let index in array)
+  {
+    if (array[index] % 5 === 0 && array % 3 === 0)
+    {
+      codfied.push('fizzBuzz')
+    }
+    else if (array[index] % 3 === 0)
+    {
+      codfied.push('fizz')
+    }
+    else if (array[index] % 5 === 0)
+    {
+      codfied.push('buzz')
+    }
+    else 
+    {
+      codfied.push('bug!')
+    }
+  };
+  return codfied;
 }
 
 // Desafio 9
