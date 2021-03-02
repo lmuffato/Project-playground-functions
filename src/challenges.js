@@ -40,7 +40,7 @@ function fizzBuzz() {
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+  // seu código aquio
 }
 function decode() {
   // seu código aqui
