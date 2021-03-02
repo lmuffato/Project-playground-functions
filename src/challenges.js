@@ -62,13 +62,30 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let changeArray = numbers;
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+      changeArray[index].push("fizzBuzz");
+    } else if (numbers[index] % 3 === 0) {
+      changeArray[index].push("fizz");
+    } else if (numbers[index] % 5 === 0) {
+      changeArray[index].push("buzz");
+    } else {
+      changeArray[index].push("bug!");
+    }
+    return changeArray;
+  }
 }
+
+console.log(fizzBuzz(2, 15, 7, 9, 45));
 
 // Desafio 9
 function encode(string){
-  
+  let changeString = string.replace(/[a]/g, '1'); //o metodo replace foi estudado no MDN onde ele seleciona o caracter e troca pelo ''
+  //for (let index = 0; index < arrayString.length; index += 1){
+
+  //}
 }
 function decode() {
   // seu código aqui
