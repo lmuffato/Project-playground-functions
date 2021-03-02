@@ -34,9 +34,16 @@ function footballPoints(wins, ties) {
   return totalPoints;
 }
 
-// Desafio 6
-function highestCount() {
-  // seu código aqui
+// Desafio 6 //found about the method on https://stackoverflow.com/questions/46640420/how-to-find-number-of-occurrence-of-highest-element-in-an-javascript-array/46640571
+function highestCount(numbers) {
+  numbers.sort().reverse();
+  let count = 0;
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] == numbers[0]) {
+      count += 1;
+    }
+  }
+  return count;
 }
 
 // Desafio 7
