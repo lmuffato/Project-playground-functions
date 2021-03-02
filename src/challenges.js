@@ -12,11 +12,10 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(string) {
-  let espace = " ";
-  let splitString = string.split(espace);
-  return splitShare;
+function splitSentence(phrase) {
+  return phrase.split(" ");
 }
+console.log(splitSentence('go trybe'));
 
 // Desafio 4
 function concatName() {
