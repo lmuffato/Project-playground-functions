@@ -37,37 +37,39 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestNumber(numbers) {
-  let maiorNumber = numbers[0]
-  for(let i in numbers) {
-  if(numbers[i] > maiorNumber) {
-    maiorNumber = numbers[i];
-  }
+  let maiorNumber = numbers[0];
+  for (let i in numbers) {
+    if (numbers[i] > maiorNumber) {
+      maiorNumber = numbers[i];
+    }
   }
   return maiorNumber;
 }
 function highestCount(numbers) {
-	let maiorNumber = highestNumber(numbers);
+  let maiorNumber = highestNumber(numbers);
   let repeatTimes = 0;
-  for(let i in numbers) {
-  if(maiorNumber === numbers[i]) {
-  repeatTimes += 1
+  for (let i in numbers) {
+    if (maiorNumber === numbers[i]) {
+      repeatTimes += 1;
+    }
   }
-  }
-  return repeatTimes
+  return repeatTimes;
 }
 
 // Desafio 7
-function catAndMouse(mouse,cat1,cat2) {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let dCat1NMouse = Math.abs(mouse - cat1);
-	let dCat2NMouse = Math.abs(mouse - cat2);
-	if(dCat1NMouse == dCat2NMouse) {
-		return 'os gatos trombam e o rato foge';
-	} else if (dCat1NMouse > dCat2NMouse) {
-		return 'cat2';
-	} else {
-		return 'cat1';
-	}
+  let dCat2NMouse = Math.abs(mouse - cat2);
+  let phrase = '';
+  if (dCat1NMouse === dCat2NMouse) {
+    phrase = 'os gatos trombam e o rato foge';
+  } else if (dCat1NMouse > dCat2NMouse) {
+    phrase = 'cat2';
+  } else {
+    phrase = 'cat 1';
+  }
+  return phrase;
 }
 
 // Desafio 8
