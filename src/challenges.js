@@ -18,7 +18,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let newArray = array[array.length - 1] + ', ' + array[0];
+  let newArray = array[array.length - 1] + ',' + array[0];
   return newArray;
 }
 
@@ -29,9 +29,18 @@ function footballPoints(wins, ties) {
   return winsPoints + tiesPoints;
 }
 
-// Desafio 6
-function highestCount() {
-  // seu código aqui
+// Desafio 6 REFERÊNCIA PARA O ARRAY SORT = https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+function highestCount(arrayNumbers) {
+  let sortedArray = arrayNumbers.sort(function(a, b) {
+    return a - b;
+  });
+  let numbers = 0;
+  for (let index = sortedArray.length - 1; index >= 0; index -= 1) {
+    if (sortedArray[index] >= sortedArray[index-1]) {
+      numbers += 1;
+    }
+  }
+  return numbers;
 }
 
 // Desafio 7
@@ -51,6 +60,7 @@ function encode() {
 function decode() {
   // seu código aqui
 }
+
 module.exports = {
   calcArea,
   catAndMouse,
