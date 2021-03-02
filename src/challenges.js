@@ -27,7 +27,7 @@ function splitSentence(sentence) {
 // Desafio 4
 function concatName(nameList) {
   // seu código aqui
-  let newString = ' ';
+  let newString;
   newString = `${nameList[nameList.length - 1]} ${','} ${nameList[0]}`;
   return newString;
 }
