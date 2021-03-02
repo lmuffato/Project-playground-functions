@@ -2,9 +2,8 @@
 function compareTrue(valueBooleanOne,valueBooleanTwo) {
   if (valueBooleanOne === true && valueBooleanTwo === true) {
     return true;
-  }else {
-    return false;
   }
+  return false;
 }
 // Desafio 2
 function calcArea() {
