@@ -24,9 +24,12 @@ function splitSentence(frase) {
 console.log(splitSentence('vamo que vamo'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(trocaPalavra) {
+  let auxiliar = `${trocaPalavra[trocaPalavra.length - 1]}, ${trocaPalavra[0]}`;
+  return auxiliar;
 }
+
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
 function footballPoints() {
