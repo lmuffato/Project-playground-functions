@@ -27,9 +27,12 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(names) {
+  let namesConcatenated = `${names[names.length - 1]}, ${names[0]}`;
+  return namesConcatenated;
 }
+
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
 function footballPoints() {
