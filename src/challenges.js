@@ -5,7 +5,7 @@ function compareTrue(param1, param2) {
 
 // Desafio 2
 function calcArea(base, altura) {
-  return (base * altura)/2;
+  return (base * altura) / 2;
 }
 
 // Desafio 3
@@ -14,8 +14,10 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nomes) {
+  let ultimoNome = nomes[nomes.length - 1];
+  let primeiroNome = nomes[0];
+  return ultimoNome + ',' + ' ' + primeiroNome;
 }
 
 // Desafio 5
