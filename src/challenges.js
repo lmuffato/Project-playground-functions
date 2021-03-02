@@ -67,43 +67,55 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function isDivisibleBy3Or5(number) {
+function divisibleBy3(number) {
   if (number % 3 === 0 && number % 5 !== 0) {
+    return true;
+  }
+}
+
+function divisibleBy5(number) {
+  if (number % 3 !== 0 && number % 5 === 0) {
+    return true;
+  }
+}
+
+function divisibleBy3and5(number) {
+  if (number % 3 === 0 && number % 5 === 0) {
+    return true;
+  }
+}
+
+function notDivisibleBy3or5(number) {
+  if (number % 3 !== 0 && number % 5 !== 0) {
+    return true;
+  }
+}
+function isDivisibleBy3Or5(number) {
+  if (divisibleBy3(number)) {
     return 'divisible by 3';
   }
-  if (number % 3 !== 0 && number % 5 === 0) {
+  if (divisibleBy5(number)) {
     return 'divisible by 5';
   }
-  if (number % 3 === 0 && number % 5 === 0) {
+  if (divisibleBy3and5(number)) {
     return 'divisible by 3 and 5';
   }
-  if (number % 3 !== 0 && number % 5 !== 0) {
+  if (notDivisibleBy3or5(number)) {
     return 'NOT divisible by 3 or 5';
   }
 }
 
 function fizzBuzz(numbersArr) {
-  const resultsArr = [];
+  const numbersMapped = numbersArr.map((number) => {
+    if (isDivisibleBy3Or5(number) === 'divisible by 3') return 'fizz';
+    if (isDivisibleBy3Or5(number) === 'divisible by 5') return 'buzz';
+    if (isDivisibleBy3Or5(number) === 'divisible by 3 and 5') return 'fizzBuzz';
+    if (isDivisibleBy3Or5(number) === 'NOT divisible by 3 or 5') return 'bug!';
+    return 'Not an valid number.';
+  });
 
-  for (let index = 0; index < numbersArr.length; index += 1) {
-    if (isDivisibleBy3Or5(numbersArr[index]) === 'divisible by 3') {
-      resultsArr.push('fizz');
-    }
-    if (isDivisibleBy3Or5(numbersArr[index]) === 'divisible by 5') {
-      resultsArr.push('buzz');
-    }
-    if (isDivisibleBy3Or5(numbersArr[index]) === 'divisible by 3 and 5') {
-      resultsArr.push('fizzBuzz');
-    }
-    if (isDivisibleBy3Or5(numbersArr[index]) === 'NOT divisible by 3 or 5') {
-      resultsArr.push('bug!');
-    }
-  }
-
-  return resultsArr;
+  return numbersMapped;
 }
-
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
