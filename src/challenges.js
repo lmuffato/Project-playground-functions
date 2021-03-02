@@ -4,7 +4,7 @@ function compareTrue(valueA, valueB) {
   if (valueA === true && valueB === true) {
     return True;
        } 
-       return false;
+       return False;
  }  
 
 // Desafio 2
