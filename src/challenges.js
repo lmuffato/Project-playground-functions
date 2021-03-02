@@ -2,6 +2,7 @@
 function compareTrue(val1, val2) {
   if ((val1 === true) && (val2 === true)){
     return true; 
+} 
 }
 
 // Desafio 2
@@ -123,9 +124,16 @@ function fizzBuzz(fizzBuzzParam) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+
+  let encodingPhrase = frase;
+
+  return (console.log(encodingPhrase));
+
 }
+
+encode('Hi there');
+
 function decode() {
   // seu código aqui
 }
@@ -142,4 +150,5 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
 
