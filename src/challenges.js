@@ -64,22 +64,21 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function wordsFizzBuss(number) {
+  if ((number % 3 === 0) && (number) % 5 === 0) {
+    return 'fizzBuzz';
+  } if (number % 3 === 0) {
+    return 'fizz';
+  } if (number % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
+
 function fizzBuzz(arrayNum) {
   let arrayFizzs = [];
   for (let index = 0; index < arrayNum.length; index += 1) {
-    switch (true) {
-    case (arrayNum[index] % 3 === 0 && arrayNum[index] % 5 === 0):
-      arrayFizzs.push('fizzBuzz');
-      break;
-    case (arrayNum[index] % 3 === 0):
-      arrayFizzs.push('fizz');
-      break;
-    case (arrayNum[index] % 5 === 0):
-      arrayFizzs.push('buzz');
-      break;
-    default:
-      arrayFizzs.push('bug!');
-    }
+    arrayFizzs.push(wordsFizzBuss(arrayNum[index]));
   }
   return arrayFizzs;
 }
