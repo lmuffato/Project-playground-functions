@@ -6,6 +6,7 @@ function compareTrue(value1,value2) {
     return false;
   }
 }
+console.log(compareTrue);
 
 // Desafio 2
 function calcArea(base,height) {
@@ -14,7 +15,7 @@ function calcArea(base,height) {
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(string);
+  return string.split(' ');
 }
 
 // Desafio 4
@@ -49,7 +50,6 @@ function encode() {
 function decode() {
   // seu código aqui
 }
-
 
 module.exports = {
   calcArea,
