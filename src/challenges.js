@@ -30,7 +30,8 @@ function splitSentence(sentence) {
 function concatName(stringss) {
   // seu código aqui
   let primeiro = stringss[0];
-  let ultimo = stringss[stringss.lenght];
+  let tamanho = stringss.lenght;
+  let ultimo = stringss[tamanho - 1];
   let concat = `${ultimo} ${primeiro}`;
   return concat;
 }
@@ -46,18 +47,18 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(arrayNumeros) {
+function highestCount(arrayNums) {
   // seu código aqui
   let maior = 0;
   let qtdMaior = 0;
-  for (let i = 0; i < arrayNumeros.lenght; i++) {
-    if (arrayNumeros[i] > maior) {
-      maior = arrayNumeros[i];
+  for (let i = 0; i < arrayNums.lenght; i += 1) {
+    if (arrayNums[i] > maior) {
+      maior = arrayNums[i];
     }
   }
-  for (let j = 0; j < arrayNumeros.lenght; j++) {
-    if (arrayNumeros[j] === maior) {
-      qtdMaior = qtdMaior + 1;
+  for (let j = 0; j < arrayNums.lenght; j += 1) {
+    if (arrayNums[j] === maior) {
+      qtdMaior += 1;
     }
   }
   return qtdMaior;
