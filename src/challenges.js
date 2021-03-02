@@ -17,12 +17,8 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(sentence) {
   let array = [];
-  for (let key in sentence) {
-    if (sentence[key] === ' ') {
-      array.push(sentence[key-1]);
-    }
-  }
-  return sentence;
+  array = sentence.split(' ');
+  return array;
 }
 
 // Desafio 4
@@ -60,7 +56,7 @@ function decode() {
 
 console.log(compareTrue(true, false));
 console.log(calcArea(51, 1));
-console.log(splitSentence('foguete'));
+console.log(splitSentence('go Trybe'));
 
 module.exports = {
   calcArea,
