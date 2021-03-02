@@ -1,15 +1,16 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
-  // seu código aqui
-  //Retorne true se ambos os valores são verdadeiros;
-  //Retorne false se um ou ambos os parâmetros forem falsos.
+
+  let comparison = false;
   if (bool1 === true && bool2 === true) {
-    return true;
+    comparison = true;
     } else {
-      return false;
+      comparison = false;
     }
+  return console.log(comparison);
   }
 
+  
 // Desafio 2
 function calcArea() {
   // seu código aqui 
