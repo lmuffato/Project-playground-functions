@@ -71,7 +71,7 @@ function fizzBuzz(array) {
   let codfied = [];
   for (let index in array)
   {
-    if (array[index] % 5 === 0 && array % 3 === 0)
+    if (array[index] % 5 === 0 && array[index] % 3 === 0)
     {
       codfied.push('fizzBuzz')
     }
@@ -83,14 +83,13 @@ function fizzBuzz(array) {
     {
       codfied.push('buzz')
     }
-    else 
-    {
+    else {
       codfied.push('bug!')
-    }
+    };
   };
-  return codfied;
+  return codfied
 }
-
+console.log(fizzBuzz([4,5,6,9,10,12,13,2,15]))
 // Desafio 9
 function encode() {
   // seu código aqui
