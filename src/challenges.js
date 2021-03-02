@@ -25,7 +25,7 @@ console.log(calcArea(51, 1));
 // Desafio 3
 function splitSentence(separatee, limiter) {
   // seu código aqui
-  var result = separatee.split(limiter);
+  let result = separatee.split(limiter);
   return result;
 }
 
@@ -34,10 +34,13 @@ console.log(splitSentence('vamo que vamo', ' '));
 console.log(splitSentence('foguete', ' '));
 
 // Desafio 4
-function concatName() {
+function concatName(names) {
   // seu código aqui
-
+  return names[names.length - 1] + " " + names[0];
 }
+console.log(concatName(["Lucas", "Cassiano", "Ferraz", "Paolilo"]));
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints() {
