@@ -30,9 +30,17 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let timesAppear = 0;
+    let maxNumber = Math.max.apply (null, numbers)
+    for (let index = 0; index < numbers.length; index += 1) {
+        if (numbers[index] === maxNumber){
+            timesAppear += 1;
+        }
+    }
+  return timesAppear;
 }
+// Como encontra o número maior pesquisei no stackoverflow
 
 // Desafio 7
 function catAndMouse() {
