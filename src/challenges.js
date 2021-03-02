@@ -59,11 +59,19 @@ function highestCount(numbers) {
   return result;
 }
 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceCat1 = mouse - cat1;
+  let distanceCat2 = mouse - cat2;
+  let result;
+  if (distanceCat1 < distanceCat2) {
+    result = 'cat1';
+  } else if (distanceCat2 < distanceCat1) {
+    result = 'cat2';
+  } else {
+    result = 'os gatos trombam e o rato foge';
+  }
+  return result;
 }
 
 // Desafio 8
