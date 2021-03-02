@@ -1,3 +1,5 @@
+/* eslint-disable sonarjs/no-one-iteration-loop */
+/* eslint-disable complexity */
 // Desafio 1
 function compareTrue(param1, param2) {
   return param1 === true && param2 === true;
@@ -62,24 +64,24 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(arrayNumbers) {
+function fizzBuzz(arrayNum) {
   let arrayFizzs = [];
-  for (let index = 0; index < arrayNumbers.length; index += 1) {
+  for (let index = 0; index < arrayNum.length; index += 1) {
     switch (true) {
-      case ((arrayNumbers[index] % 3 === 0) && (arrayNumbers[index]) % 5 === 0):
-        arrayFizzs.push('fizzBuzz');
-        break;
-      case (arrayNumbers[index] % 3 === 0):
-        arrayFizzs.push('fizz');
-        break;
-      case (arrayNumbers[index] % 5 === 0):
-        arrayFizzs.push('buzz');
-        break;
-      default:
-        arrayFizzs.push('bug!');
+    case (arrayNum[index] % 3 === 0 && arrayNum[index] % 5 === 0):
+      arrayFizzs.push('fizzBuzz');
+      break;
+    case ((arrayNum[index] % 3 === 0)):
+      arrayFizzs.push('fizz');
+      break;
+    case ((arrayNum[index] % 5 === 0)):
+      arrayFizzs.push('buzz');
+      break;
+    default:
+      arrayFizzs.push('bug!');
     }
-    return arrayFizzs;
   }
+  return arrayFizzs;
 }
 
 // Desafio 9
@@ -116,4 +118,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-}
+};
