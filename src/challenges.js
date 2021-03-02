@@ -26,16 +26,23 @@ function concatName(names) {
   let firstName = names [0];
   let lastName = names[names.length-1];
 
-  let conquer = lastName + ', ' + firstName
+  let conquer = lastName + ', ' + firstName;
 
   return conquer;
 }
 console.log(concatName (['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winspoint = 3;
+  let tiespoint = 1;
+  let winsplus = wins * winspoint;
+  let tiesplus = ties * tiespoint;
+  let total = winsplus + tiesplus;
+
+  return total;
 }
+
 
 // Desafio 6
 function highestCount() {
