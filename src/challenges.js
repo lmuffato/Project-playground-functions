@@ -19,13 +19,17 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(nomes) {
-  return nomes.lenght-1 +','+ nomes[0];
+  return 
 }
+console.log(concatName());
 
 // Desafio 5
 function footballPoints(wins,ties) {
-  return wins + ties;
+  let result = wins + ties;
+  return result; 
 }
+
+console.log(result(23+1));
 
 // Desafio 6
 function highestCount() {
