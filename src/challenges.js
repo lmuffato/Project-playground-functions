@@ -58,8 +58,31 @@ function highestCount(arrayHighestCount) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+
+function checkDistance(mouse, cat) {
+  // Poderia utilizar Math.abs(), mas quis priorizar o que viemos aprendendo até agora.
+  let catDistance = mouse - cat;
+
+  if (catDistance < 0) {
+    catDistance *= -1;
+  }
+  return catDistance;
+}
+
+function catAndMouse(mouse, cat1, cat2) {
+  let firstCat = checkDistance(mouse, cat1);
+  let secondCat = checkDistance(mouse, cat2);
+  let chaseResult = '';
+
+  if (firstCat === secondCat) {
+    chaseResult = 'os gatos trombam e o rato foge';
+  } else if (firstCat < secondCat) {
+    chaseResult = 'cat1';
+  } else {
+    chaseResult = 'cat2';
+  }
+
+  return chaseResult;
 }
 
 // Desafio 8
