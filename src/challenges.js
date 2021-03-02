@@ -87,13 +87,13 @@ function fizzBuzz(listNumbers) {
   for (let index in listNumbers) {
     
     if (listNumbers[index] % 3 === 0 && listNumbers[index] % 5 === 0) {
-      listArrayString.push('fizzBuzz');
+      listArrayString.push("fizzBuzz");
     } else if (listNumbers[index] % 3 === 0) {
-      listArrayString.push('fizz');
+      listArrayString.push("fizz");
     } else if (listNumbers[index] % 5 === 0) {
-      listArrayString.push('buzz');
+      listArrayString.push("buzz");
     } else {
-      listArrayString.push('bug');
+      listArrayString.push("bug!");
     }
   }
 
