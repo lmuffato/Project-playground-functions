@@ -17,9 +17,9 @@ function splitSentence(string) {
   return string.split(' ');
 }
 
-// Desafio 4
+// Desafio 4, tive ajuda dos colegas na breakroom do fechamento dia 2/03
 function concatName(array) {
-  return array[array.lenght-1] + array[0]
+  return `${array[array.length - 1]}, ${array[0]}`; 
 }
 
 // Desafio 5
