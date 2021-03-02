@@ -21,7 +21,8 @@ function splitSentence(sentence) {
 function concatName(name) {
   let lastItem = name[name.length - 1];
   let firstItem = name[0];
-  return lastItem + ' ,' + firstItem;
+  let ponctuation = ', ';
+  return lastItem + ponctuation + firstItem;
 }
 
 // Desafio 5
