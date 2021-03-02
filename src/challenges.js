@@ -30,14 +30,15 @@ function splitSentence(phrase ) {
 
 // Desafio 4
 function concatName(phraseList) {
-  return console.log (phraseList[phraseList.length -1] + phraseList[0]);
+  return console.log (phraseList[phraseList.length -1] + ',' + phraseList[0]);
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let points = ((wins * 3) + ( ties * 1));
+  return points;
 }
-
+console.log(footballPoints(10,1));
 // Desafio 6
 function highestCount() {
   // seu código aqui
