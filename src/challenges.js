@@ -67,8 +67,8 @@ function highestCount(arrayNumbers) {
 
 // Desafio 7          1       10    5
 function catAndMouse(mouse, cat1, cat2) {
-  let posição1 = cat1 - mouse;
-  let posição2 = cat2 - mouse;
+  let posição1 = Math.abs(cat1 - mouse);
+  let posição2 = Math.abs(cat2 - mouse);
   if (posição1 > posição2) {
     return 'cat2';
   } else if (posição2 > posição1){
@@ -78,7 +78,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-//console.log(catAndMouse(1,8,5));
+console.log(catAndMouse(1,8,5));
 
 
 // Desafio 8
@@ -92,10 +92,10 @@ function fizzBuzz(arrayNumbers) {
     } else if (arrayNumbers[index] % 3 === 0) {
     resultadosFizzBuzz.push('fizz');   
     } else {
-    resultadosFizzBuzz.push('bug');
+    resultadosFizzBuzz.push('bug!');
     }
   }
-  return resultadosFizzBuzz
+  return resultadosFizzBuzz;
 }
 
 //let testeArray = [2, 15, 7, 9, 45];
