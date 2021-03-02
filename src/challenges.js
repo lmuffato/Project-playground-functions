@@ -23,18 +23,22 @@ function splitSentence(string) {
   return string.split('');
 }
 
+let teste = "go Trybe"
+console.log(splitSentence(teste));
+
 
 // Desafio 4
 function concatName(stringArray) {
-  return stringArray[0] && stringArray.length;
+  return `${ stringArray[stringArray.length -1] }, ${ stringArray[0] }`;
 }
 
 let arrayTeste = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 console.log(concatName(arrayTeste));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontos = 0;
+  
 }
 
 // Desafio 6
