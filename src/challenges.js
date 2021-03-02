@@ -50,11 +50,6 @@ function decode() {
   // seu código aqui
 }
 
-// Testando os códigos
-
-// Requisito 1
-compareTrue(true, true);
-
 module.exports = {
   calcArea,
   catAndMouse,
