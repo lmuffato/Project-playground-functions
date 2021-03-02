@@ -34,13 +34,13 @@ function highestCount(arrayNumbers) {
   let count = 0;
   let higherNumber = 0;
 
-  for (let index = 0; index <= arrayNumbers.length - 1; index += 1) {
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
     if (arrayNumbers[index] > higherNumber) {
       higherNumber = arrayNumbers[index];
     }
   }
-  for (let index2 = 0; index2 <= arrayNumbers.length - 1; index2 += 1) {
-    if (arrayNumbers === higherNumber) {
+  for (let index2 = 0; index2 < arrayNumbers.length; index2 += 1) {
+    if (arrayNumbers[index2] === higherNumber) {
       count += 1;
     }
   }
