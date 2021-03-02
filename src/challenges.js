@@ -54,19 +54,19 @@ function catAndMouse() {
 function fizzBuzz(arrayNumberList) {
   let fizzCode = [];
   for (let indice = 0; indice < arrayNumberList.length; indice += 1){
-    if (arrayNumberList[indice]%3 === 0) {
+    if ( (arrayNumberList[indice]%3 === 0) && (arrayNumberList[indice]%5 === 0)){
+      fizzCode.push("fizzbuzz");
+    } else if (arrayNumberList[indice]%3 === 0) {
       fizzCode.push("fizz");
     } else if (arrayNumberList[indice]%5 === 0) {
       fizzCode.push("buzz");
-      } else if ( arrayNumberList[indice]%3 === 0 && arrayNumberList[indice]%5 === 0){
-        fizzCode.push("fizzbuzz");
-      } else {
+    } else {
         fizzCode.push("bug!");
       };
     };
     return fizzCode;
   }
-
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
 function encode() {
   // seu código aqui
