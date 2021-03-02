@@ -7,9 +7,12 @@ function compareTrue(boolOne, boolTwo) {
 } console.log(compareTrue(true, true));
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
-}
+  let result = 0;
+  result = (base * height) / 2;
+  return console.log(result);
+} calcArea(51, 1);
 
 // Desafio 3
 function splitSentence() {
