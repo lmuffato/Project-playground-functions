@@ -3,12 +3,12 @@ function compareTrue(var1, var2) {
   let end = false;
   if (var1 === true && var2 === true) {
     end = true;
-  }return end;
+  } return end;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return ((base*height)/2);
 }
 
 // Desafio 3
