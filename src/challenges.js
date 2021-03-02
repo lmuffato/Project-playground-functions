@@ -61,9 +61,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+let fizzOrBuzz = []
+function fizzBuzz(divisibleNumbers) {
+  for(let currentDivisible in divisibleNumbers) {
+    if (divisibleNumbers[currentDivisible] % 3 && divisibleNumbers[currentDivisible] % 5 === 0) {
+      fizzOrBuzz.push("fizzbuzz")
+    } else if (divisibleNumbers[currentDivisible] % 3 === 0) {
+      fizzOrBuzz.push("fizz")
+    } else if (divisibleNumbers[currentDivisible] % 5 === 0) {
+      fizzOrBuzz.push("buzz")
+    } else {
+      fizzOrBuzz.push("bug")
+    }
+  } return fizzOrBuzz
+} console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode() {
