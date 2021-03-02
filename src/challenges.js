@@ -1,5 +1,12 @@
 // Desafio 1
-function compareTrue(a, b) 
+function compareTrue(a, b) {
+  if (a && b === true) {
+    return true;
+  }
+  else {
+    return false;
+  }
+} 
 function compareTrue(a, b) {
   if (a && b === true) {
     return true;
@@ -10,6 +17,8 @@ function compareTrue(a, b) {
 }
 console.log(compareTrue(false, false));
 
+
+
 // Desafio 2
 function calcArea(base, height) {
 if (base > 0 && height >0) {
@@ -18,7 +27,16 @@ return (base * height) / 2
 }
 console.log(calcArea(51, 1));
 
+
+
 // Desafio 3
+function splitSentence(frase) {
+  return frase.split(' ');
+}
+console.log(splitSentence("foguete"))
+
+
+
 // Desafio 4
 function concatName() {
   // seu código aqui
@@ -52,9 +70,8 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(0, 8, 8))
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+function fizzBuzz(array) {
+
 
 // Desafio 9
 function encode() {
@@ -75,4 +92,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}}
