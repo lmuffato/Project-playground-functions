@@ -23,9 +23,10 @@ function splitSentence(string) {
 } splitSentence('foguete');
 
 // Desafio 4
-function concatName() {
+function concatName(name) {
   // seu código aqui
-}
+  return console.log(name[name.length - 1], name[0]);
+} concatName(['captain', 'my', 'captain']);
 
 // Desafio 5
 function footballPoints() {
