@@ -80,6 +80,7 @@ function fizzBuzz(arrayNumbers) {
     }
     return arrayFizzs;
   }
+}
 
 // Desafio 9
 function encode(encodeParam) {
@@ -115,4 +116,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
