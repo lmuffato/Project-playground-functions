@@ -37,10 +37,10 @@ function checkNumber(num) {
 }
 
 function checkTel(array) {
-  let result = false;
+  let result = 0;
   for (let index = 0; index < array.length; index += 1) {
     if (array.length !== 11) {
-      result = true;
+      result = 1;
     }
   }
   return result;
@@ -57,7 +57,7 @@ function countRepeat(array, number) {
 }
 
 function generatePhoneNumber(tel) {
-  if (checkTel(tel) === true) {
+  if (tel.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
   for (let index = 0; index < tel.length; index += 1) {
