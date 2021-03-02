@@ -26,7 +26,7 @@ console.log(splitSentence('foguete'));
 function concatName(names) {
   let first = names[0];
   let last = names[names.length - 1];
-  return `${last} , ${first}`;
+  return last + first;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
