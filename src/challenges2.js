@@ -14,9 +14,9 @@ function techList(techArray, name) {
   return listOfTechs;
 }
 
-let  technologies = ['java', 'piriri', 'pororo', 'pururu'];
-let myName = 'Rogerio';
-console.log(techList(technologies, myName));
+// let  technologies = ['java', 'piriri', 'pororo', 'pururu'];
+// let myName = 'Rogerio';
+// console.log(techList(technologies, myName));
 
 function testValid(phoneNumberArray) {
   let count = 0;
@@ -67,7 +67,7 @@ function generatePhoneNumber(phoneNumberArray) {
   return mensage;
 }
 
-console.log(generatePhoneNumber([3 , 0 , 4 , 8 , 9 , 4 , 7 , 2 , 1 , 2 , 0 ]));
+// console.log(generatePhoneNumber([3 , 0 , 4 , 8 , 9 , 4 , 7 , 2 , 1 , 2 , 0 ]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -113,7 +113,7 @@ function hydrate(drinks) {
   return count.toString() + ' copos de água';
 }
 
-console.log(hydrate(' 2 cervejas 9 pingas e 3 caipirinhas'));
+// console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
