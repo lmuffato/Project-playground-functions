@@ -82,7 +82,7 @@ module.exports = {
 };
 
 
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+
 
 
 
