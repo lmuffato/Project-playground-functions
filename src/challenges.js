@@ -31,8 +31,12 @@ function highestCount(array) {
 }
 
 // Desafio 7
-// Adicionar Math.abs dica do @Bernardo Salgueiro, fornecendo a dica
-// que havia uma função do Math que retornaria o valor absoluto.
+// Math.abs adicionado por dica do @Bernardo Salgueiro. Bernardo
+// disse que havia uma função do Math que retornaria o valor absoluto.
+// Outra dica fornecida por ele, é que "havia um detalhe no código para
+// prestar atenção",que me fez notar que o gato de menor distância é o que
+// captura o rato, antes estava focado no maior valor.
+
 function catAndMouse(mouse, cat1, cat2) {
   const distanceCat1 = Math.abs(cat1 - mouse);
   const distanceCat2 = Math.abs(cat2 - mouse);
@@ -44,10 +48,23 @@ function catAndMouse(mouse, cat1, cat2) {
   } else result = 'cat2';
   return result;
 }
-console.log(catAndMouse(1, 0, 2));
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  const result = array.map((number) => {
+    let message = '';
+    if (number % 3 === 0 && number % 5 === 0) {
+      message = 'fizzBuzz';
+    } else if (number % 3 === 0) {
+      message = 'fizz';
+    } else if (number % 5 === 0) {
+      message = 'buzz';
+    } else {
+      message = 'bug!';
+    }
+    return message;
+  });
+  return result;
 }
 
 // Desafio 9
