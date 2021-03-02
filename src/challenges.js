@@ -6,7 +6,7 @@ function compareTrue(value1, value2) {
     return false
   }
 }
-console.log(compareTrue(true, true))
+
 // Desafio 2
 function calcArea(base, height) {
   let result = (base * height) / 2
@@ -20,13 +20,17 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(list) {
+  let firstName = list[0]
+  let lastName = list[list.length - 1]
+  let newlist = lastName + ', ' + firstName
+  return newlist
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pointsChampionship = (wins * 3) + ties
+  return pointsChampionship
 }
 
 // Desafio 6
