@@ -75,11 +75,11 @@ function fizzBuzz(array) {
   let resultArray = [];
 
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] / 3 && array[index] / 5) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       resultArray.push('fizzBuzz');
-    } else if (array[index] / 3) {
+    } else if (array[index] % 3 === 0) {
       resultArray.push('fizz');
-    } else if (array[index] / 5){
+    } else if (array[index] % 5 === 0){
       resultArray.push('buzz');
     } else {
       resultArray.push('bug!');
@@ -115,6 +115,7 @@ function encode(string) {
   }
   return newstring;
 }
+
 function decode(string) {
   let newString
   for (let index = 0; index < string.length; index += 1) {
@@ -141,7 +142,6 @@ function decode(string) {
   }
   return newString;
 }
-
 
 module.exports = {
   calcArea,
