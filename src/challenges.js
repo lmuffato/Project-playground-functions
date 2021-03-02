@@ -11,18 +11,20 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  return string.split(' ')
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  wins = wins * 3
+  points = wins + ties
+  return points
 }
 
 // Desafio 6
@@ -51,6 +53,15 @@ function decode() {
 console.log(compareTrue(true, false))
 
 console.log(calcArea(51, 1))
+
+console.log(splitSentence('vamo que vamo'))
+
+console.log()
+
+console.log(footballPoints(14, 8))
+
+
+
 
 module.exports = {
   calcArea,
