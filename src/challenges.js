@@ -26,8 +26,11 @@ function concatName(stringArray) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  const winsPoints = 3;
+  const totalPoints = (winsPoints * wins) + ties;
+
+  return totalPoints;
 }
 
 // Desafio 6
