@@ -20,7 +20,7 @@ function generatePhoneNumber(phone) {
   let repeticoes = [];
 
   if (phone.length !== 11) {
-    return 'Array com tamanho incorreto';
+    return 'Array com tamanho incorreto.';
   }
 
   for (let j = 0; j < phone.length; j += 1) {
@@ -54,6 +54,8 @@ function generatePhoneNumber(phone) {
     }
   }
 }
+
+console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
 
 // Desafio 12
 function triangleCheck() {
