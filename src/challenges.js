@@ -90,14 +90,56 @@ let resultado = [];
 }
 
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+
+function encode(text) {
+let arrayPhrase = [];
+
+for (let index = 0; index < text.length; index += 1){
+
+  if (text[index] === "a"){
+    arrayPhrase.push(1);
+  } else if (text[index] === "e") {
+    arrayPhrase.push(2);
+  } else if (text[index] === "i") {
+    arrayPhrase.push(3);
+  } else if (text[index] === "o") {
+    arrayPhrase.push(4);
+  } else if (text[index] === "u") {
+    arrayPhrase.push(5);
+  } else  {
+    arrayPhrase.push(text[index])
+  }
 }
 
-function decode() {
-  // seu código aqui
+return arrayPhrase.join("")
 }
+
+
+
+
+function decode(text) {
+  let arrayPhrase = [];
+
+for (let index = 0; index < text.length; index += 1){
+  if (text[index] == "1"){
+    arrayPhrase.push("a");
+  } else if (text[index] == "2") {
+    arrayPhrase.push("e");
+  } else if (text[index] == "3") {
+    arrayPhrase.push("i");
+  } else if (text[index] == "4") {
+    arrayPhrase.push("o");
+  } else if (text[index] == "5") {
+    arrayPhrase.push("u");
+  } else  {
+    arrayPhrase.push(text[index])
+  }
+}
+
+return arrayPhrase.join("")
+}
+
+
 
 module.exports = {
   calcArea,
