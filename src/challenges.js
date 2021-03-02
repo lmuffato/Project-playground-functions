@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 == value2 && value2 == value1) {  
+  if (value1 === value2 && value2 === value1) {  
     return true;
   } else {
     return false;
@@ -49,9 +49,7 @@ function encode() {
 function decode() {
   // seu código aqui
 }
-
-console.log(calcArea(10, 50));
-
+ 
 module.exports = {
   calcArea,
   catAndMouse,
