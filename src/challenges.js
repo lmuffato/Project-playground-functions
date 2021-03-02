@@ -11,11 +11,10 @@ function compareTrue(valueOne, valueTwo) {
   return comparedValue;
 }
 
-console.log(compareTrue(true, true));
-
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let result = (base * height) / 2;
+  return result;
 }
 
 // Desafio 3
