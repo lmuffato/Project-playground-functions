@@ -21,13 +21,13 @@ function splitSentence(word) {
 function concatName(word) {
   let lastNum = word.length - 1;
   let concatInt = [word[lastNum], word[0]];
-  let concat = concatInt.join(', ')
+  let concat = concatInt.join(', ');
   return (concat);
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return ((3 * wins) + (1 * ties));
 }
 
 // Desafio 6
