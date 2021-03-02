@@ -3,14 +3,19 @@ function compareTrue(gradeProject, goingToLectures) {
   // seu código aqui
   let result;
 
-  if (gradeProject === true && goingToLectures === true) {
-    result == true;
-
+  if (gradeProject >= 80 && goingToLectures >= 95) {
+    result === true;
+    console.log('Aprovado');
   } else {
-    result == false;
+    result === false;
+    console.log('Reprovado')
   }
   return result;
 }
+let grade = 78;
+let lectures = 90;
+console.log(compareTrue(grade, lectures));
+
 
 // Desafio 2
 function calcArea() {
