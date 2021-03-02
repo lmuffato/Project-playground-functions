@@ -27,8 +27,15 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(str) {
+  let sum = 0;
+  let macth = '123456789';
+  for (let index in str)
+  {
+    if (macth.includes(str[index]))
+    {sum += Number(str[index])}
+  }
+  return (sum+'') + ' copos de água'
 }
 
 module.exports = {
