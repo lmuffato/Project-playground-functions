@@ -16,7 +16,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  let stringTranformed = string.split(" ");
+  let stringTranformed = string.split(' ');
 
   return stringTranformed;
 }
@@ -26,8 +26,9 @@ function concatName(listName) {
   let indexLastName = listName.length;
   let lastName = listName[indexLastName - 1];
   let firstName = listName[0];
+  let concatNames = lastName + ', ' + firstName;
 
-  return lastName + ', ' + firstName;
+  return concatNames;
 }
 
 // Desafio 5
@@ -77,7 +78,6 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (cat1 === cat2) {
     return 'Os gatos trombam e o rato foge'
   }
-
 }
 
 // Desafio 8
