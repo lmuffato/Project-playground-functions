@@ -7,12 +7,13 @@ function compareTrue(bool1, bool2) {
   } else {
     comparison = false;
   }
-  return console.log(comparison);
+  return comparison;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return ((base * height) / 2);
+  let result = ((base * height) / 2);
+  return result;
 }
 
 // Desafio 3
@@ -34,7 +35,6 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbersArray) {
-  // seu código aqui
   let repeatMax = 0;
   let highestNumber = Math.max(...numbersArray);
   for (let index = 0; index < numbersArray.length; index += 1) {
@@ -46,8 +46,14 @@ function highestCount(numbersArray) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 < cat2) {
+    console.log('cat1');
+  } else if (cat1 > cat2) {
+    console.log('cat2');
+  } else {
+    console.log('os gatos trombam e o rato foge');
+  }
 }
 
 // Desafio 8
