@@ -5,7 +5,7 @@ function compareTrue(bool1, bool2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base*height)/2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -13,10 +13,10 @@ function splitSentence(originalString) {
   let wordsArray = [];
   let singleWord = '';
   for (let char = 0; char <= originalString.length; char += 1) {
-    if (char == (originalString.length - 1)) {
+    if (char === (originalString.length - 1)) {
       singleWord += originalString[char];
       wordsArray.push(singleWord);
-    } else if (originalString[char] != ' ') {
+    } else if (originalString[char] !== ' ') {
       singleWord += originalString[char];
     } else {
       wordsArray.push(singleWord);
@@ -25,12 +25,12 @@ function splitSentence(originalString) {
   }
   return wordsArray;
 }
-console.log(splitSentence('Be Trybe'));
-// Desafio 4
-function concatName() {
-  // seu código aqui
-}
 
+// Desafio 4
+function concatName(stringArray) {
+  return (stringArray[stringArray.length - 1] + ', ' + stringArray[0]);
+}
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 // Desafio 5
 function footballPoints() {
   // seu código aqui
