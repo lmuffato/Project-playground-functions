@@ -30,9 +30,15 @@ return firstString;
 
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+let winPoints = wins * 3;
+let tiesPoints = ties * 1;  
+let teamPoints = 0 + tiesPoints + winPoints;
+
+return teamPoints
 }
+
 
 // Desafio 6
 function highestCount() {
