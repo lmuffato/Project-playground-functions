@@ -44,13 +44,22 @@ function highestCount(array) {
       repeatedNumb += 1;
     }
   }
-  return repeatedNumb
+  return repeatedNumb;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 > cat2) {
+    return 'cat2'
+  }
+  else if (cat1 < cat2) {
+    return 'cat1'
+  }
+  else {
+    return 'os gatos trombam e o rato foge'
+  }
 }
+
 
 // Desafio 8
 function fizzBuzz() {
@@ -61,6 +70,8 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
+// Desafio 10
 function decode() {
   // seu código aqui
 }
