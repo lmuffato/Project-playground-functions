@@ -23,11 +23,10 @@ function concatName(arrayString) {
   let arrayResult = `${arrayString[arrayString.length - 1]}, ${arrayString[0]}`;
   return arrayResult.toString();
 }
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + (ties * 1);
 }
 
 // Desafio 6
