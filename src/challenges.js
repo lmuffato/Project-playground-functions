@@ -17,10 +17,12 @@ function splitSentence(stringToArray) {
 }
 
 // Desafio 4
-function concatName() {
-  
+function concatName(arrayOfStrings) {
+  let firstString = arrayOfStrings[0];
+  let lastString = arrayOfStrings[arrayOfStrings.length - 1];
+  return firstString + ', '+ lastString
 }
-
+console.log(concatName(['luan', 'luiz', 'ana']))
 // Desafio 5
 function footballPoints() {
   // seu código aqui
