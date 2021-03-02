@@ -1,14 +1,16 @@
 // Desafio 1
-function compareTrue(valueBooleanOne,valueBooleanTwo) {
+function compareTrue(valueBooleanOne, valueBooleanTwo) {
   if (valueBooleanOne === true && valueBooleanTwo === true) {
     return true;
   }
   return false;
 }
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+let areaDoTriangulo = 0;
+function calcArea(base, height) {
+  return areaDoTriangulo = base*height /2;
 }
+ console.log(areaDoTriangulo);
 
 // Desafio 3
 function splitSentence() {
