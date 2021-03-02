@@ -19,7 +19,7 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(fullname) {
-  let firstAndLast = [fullname[0] + ',' + fullname[fullname.length-1]];
+  let firstAndLast = [fullname[0] + ',' + ' ' + fullname[fullname.length-1]];
   return firstAndLast;
 }
 
