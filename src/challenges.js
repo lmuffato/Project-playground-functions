@@ -1,11 +1,13 @@
-// vamos começar 
+// vamos começar
 // Desafio 1
-function compareTrue(value1,value2) {
-  if((value1 == true) && (value2 == true)) {
-    return true;
+function compareTrue(value1, value2) {
+  let returnValue ;
+  if (value1 && value2) {
+    returnValue = true;
   } else {
-    return false;
+    returnValue = false;
   }
+  return returnValue;
   // ty jackson
 }
 
