@@ -48,7 +48,7 @@ function highestCount() {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  if (mouse - cat1 === mouse - cat2) {
+  if (cat1 - mouse === cat2 - mouse) {
     return 'os gatos trombam e o rato foge';
   }
   if (cat1 - mouse < cat2 - mouse) {
@@ -62,12 +62,6 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(integersArray) {
   // seu código aqui
-  let fizzBuzzArray = new Array();
-  for (let index = 0; index < integersArray; index += 1) {
-    if (integersArray[index] % 3 === 0 && integersArray[index] % 5 === 0) {
-      fizzBuzzArray.push('fizzBuzz');
-    }
-  }
 }
 
 // Desafio 9
