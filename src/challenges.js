@@ -89,7 +89,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-console.log(catAndMouse(0, 6, 6));
+console.log(catAndMouse(1, 1, 1));
 
 // Desafio 8
 function fizzBuzz(myArray) {
@@ -111,9 +111,36 @@ function fizzBuzz(myArray) {
 console.log(fizzBuzz([7, 9]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+
+ let code = '';
+
+ for (let index = 0; index < str.length; index += 1){
+   switch(str[index]) {
+     case 'a':
+       code += '1';
+       break;
+      case 'e':
+        code += '2';
+        break;
+      case 'i':
+        code += '3';
+        break;
+      case 'o':
+        code += '4';
+        break;
+      case 'u':
+        code += '5';
+        break;
+      default:
+        code += str[index];
+   }
+ }
+ return code; 
 }
+
+console.log(encode('hi there!'));
+
 function decode() {
   // seu código aqui
 }
