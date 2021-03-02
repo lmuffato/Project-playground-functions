@@ -56,16 +56,8 @@ function highestCount(arrayNumbers) {
 //console.log(highestCount(arrayNumeros));
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  let distCatOne = mouse - cat1;
-  let distCatTwo = mouse - cat2;
-  if(distCatOne === distCatTwo){
-    return 'os gatos trombam e o rato foge';
-  }else if(distCatOne < distCatTwo){
-    return 'cat1';
-  }else if(distCatTwo < distCatOne){
-    return 'cat2';
-  }
+function catAndMouse() {
+ //
 }
 
 // Desafio 8
