@@ -31,13 +31,18 @@ function concatName(stringss) {
   // seu código aqui
   let primeiro = stringss[0];
   let ultimo = stringss[stringss.lenght];
-  let concat = `${ultimo}, ${primeiro}`;
+  let concat = `O resultado da concatenação é ${ultimo} ${primeiro}`;
   return concat;
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let totalVitorias = wins * 3;
+  let totalEmpates = ties * 1;
+  let totalPontos = totalVitorias + totalEmpates;
+
+  return totalPontos;
 }
 
 // Desafio 6
