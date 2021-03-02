@@ -32,8 +32,6 @@ function concatName(names) {
 
   return conquer;
 }
-console.log(concatName (['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
-
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -67,37 +65,23 @@ function highestCount(num) {
   }
     return objectNumber.Count;
 }
- console.log (highestCount([9, 1, 2, 3, 9, 5, 7]))
-
-
-function highestCount(array) {
-  let highestNumber = array[0];
-  let counter = 0;
-  for (let verifyHighest in array) {
-    if (array[verifyHighest] > highestNumber) {
-      highestNumber = array[verifyHighest];
-    }
-  }
-
-  for (let verifyCount in array) {
-    if (array[verifyCount] === highestNumber) {
-      counter += 1;
-    }
-  }
-  return counter;
-}
-console.log (highestCount([9, 1, 2, 3, 9, 5, 7]))
-
-
-
-
-
-
-
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let positions = {
+    distanceCat1: Math.abs (cat1 - mouse),
+    distanceCat2: Math.abs (cat2 - mouse)
+  }
+  if (positions.distanceCat2 > positions.distanceCat1) {
+    distanceCat1 = cat1 - mouse
+    return 'cat1'
+  }
+  else if (positions.distanceCat1 > positions.distanceCat2) {
+    return 'cat2'
+  }
+  else {
+    return 'os gatos se trombam e o rato foge.'
+  }
 }
 
 // Desafio 8
