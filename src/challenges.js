@@ -1,6 +1,12 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(bool1, bool2) {
+  let resultBoll;
+  if (bool1 === true && bool2 === true) {
+    resultBoll = true;
+  } else {
+    resultBoll = false;
+  }
+  return resultBoll;
 }
 
 // Desafio 2
@@ -45,7 +51,7 @@ function encode() {
 function decode() {
   // seu código aqui
 }
-
+console.log(compareTrue(true, false));
 module.exports = {
   calcArea,
   catAndMouse,
