@@ -1,6 +1,10 @@
-// desafio 1
-function compareTrue() {
-  // seu código aqui
+// Desafio 1
+function compareTrue(value1, value2) {
+  let checker = false;
+  if (value1 === true && value2 === true) {
+    checker = true;
+  }
+  return checker;
 }
 
 // Desafio 2
@@ -42,6 +46,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
