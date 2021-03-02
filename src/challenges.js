@@ -17,7 +17,7 @@ function splitSentence(frase) {
 function concatName(nomes) {
   let ultimoNome = nomes[nomes.length - 1];
   let primeiroNome = nomes[0];
-  return ultimoNome + ',' + ' ' + primeiroNome;
+  return `${ultimoNome}, ${primeiroNome}`;
 }
 
 // Desafio 5
