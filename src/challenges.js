@@ -31,8 +31,10 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(string) {
+  let first = string[string.length - 1];
+  let last = string[0];
+  return `${first}, ${last}`;
 }
 
 // Desafio 5
