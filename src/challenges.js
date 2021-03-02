@@ -81,12 +81,14 @@ function fizzBuzz(array) {
     } else if (array[numberIndex] % 5 === 0) {
       fizzBuzzArray.push('buzz');
     } else {
-      fizzBuzzArray.push('bug');
+      fizzBuzzArray.push('bug!');
     }
   }
 
   return fizzBuzzArray;
 }
+
+console.log(fizzBuzz([9,25]))
 
 // Desafio 9
 function splitString(string) {
