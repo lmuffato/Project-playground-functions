@@ -37,8 +37,9 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   let numbersCount = 0;
   for (let index = 0; index < numbers.length; index += 1) {
+    let numberCheck = numbers[index];
     for (let indexCount = 0; indexCount < numbers.length; indexCount += 1){
-      if (numbers[indexCount] === numbers[index]){
+      if (numberCheck[index] === numbers[indexCount]){
         numbersCount += 1;
       }
     }
@@ -81,15 +82,22 @@ function fizzBuzz(numbers) {
 //console.log(fizzBuzz(2, 15, 7, 9, 45));
 
 // Desafio 9
-function encode(string){
-  let changeString = string.replace(/[a]/g, '1'); //o metodo replace foi estudado no MDN onde ele seleciona o caracter e troca pelo ''
-  //for (let index = 0; index < arrayString.length; index += 1){
-
-  //}
+function encode(string) {
+  let changeString = string.split('');
+  for (let index = 0; index < changeString.length; index +=1) {
+    if (changeString[index] === 'a') {
+      changeString[index].replace(/a/g, '1');
+    } else {
+      changeString[index].replace(/e/g, '2');
+    }
+  }
+  return changeString;
 }
 function decode() {
   // seu código aqui
 }
+
+console.log(encode('ala'));
 
 module.exports = {
   calcArea,
