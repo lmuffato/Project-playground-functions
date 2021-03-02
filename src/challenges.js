@@ -60,10 +60,10 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   cat1 = (mouse - cat1);
   cat2 = (mouse - cat2);
-  if (cat1 > cat2) {
+  if (cat1 < cat2) {
     return 'cat2';
   }
-  if (cat1 < cat2) {
+  if (cat1 > cat2) {
     return 'cat1';
   }
   if (cat1 === cat2) {
@@ -84,7 +84,7 @@ function decode() {
   // seu código aqui
 }
 
-console.log(highestCount([0, 0, 0]));
+console.log(catAndMouse(0, 6, 12));
 
 module.exports = {
   calcArea,
