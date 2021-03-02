@@ -34,13 +34,26 @@ function generatePhoneNumber(tel) {
         return 'não é possível gerar um número de telefone com esses valores';
       }
     }
-    return '(' + tel[0] + tel[1] + ')' + ' ' + tel[2] + tel[3] + tel[4] + tel[5] + tel[6] + '-' + tel[7] + tel[8] + tel[9] + tel[10];
+    let partOne = tel[0] + tel[1];
+    let partTwo = tel[2] + tel[3] + tel[4] + tel[5] + tel[6];
+    let partThree = tel[7] + tel[8] + tel[9] + tel[10];
+    return `(${partOne}) ${partTwo}-${partThree}`;
   }
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let operations = {
+    sumAB: lineA + lineB,
+    sumAC: lineA + lineC,
+    sumBC: lineB + lineC,
+    subAB: Math.abs(lineA - lineB),
+    subBC: Math.abs(lineB - lineC),
+    subAC: Math.abs(lineA - lineC),
+  };
+  return lineA < operations.sumBC && lineA > operations.subBC
+    && lineB < operations.sumAB && lineB > operations.subAB
+    && lineC < operations.sumAB && lineC > operations.subAB;
 }
 
 // Desafio 13
