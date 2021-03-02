@@ -23,7 +23,7 @@ function concatName(array) {
   return (array[array.length - 1] + ', ' + array[0]);
 }
 
-//Desafio 5
+// Desafio 5
 function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
@@ -31,9 +31,9 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function indexMaxNumber(array) {
   let numberMax = 0;
-  for (let indexMaxNumber in array) {
-    if (array[indexMaxNumber] > numberMax) {
-      numberMax = array[indexMaxNumber];
+  for (let indexMaxValue in array) {
+    if (array[indexMaxValue] > numberMax) {
+      numberMax = array[indexMaxValue];
     }
   }
   return numberMax;
@@ -56,13 +56,13 @@ function catAndMouse(mouse, cat1, cat2) {
   let dist1 = (mouse - cat1) * -1;
   let dist2 = (mouse - cat2) * -1;
   let result;
-    if (dist1 === dist2) {
-      result = "os gatos trombam e o rato";
-    } else if (dist1 > dist2) {
-      result = "cat2";
-    } else {
-      result = "cat1";
-    }
+  if (dist1 === dist2) {
+    result = 'os gatos trombam e o rato';
+  } else if (dist1 > dist2) {
+    result = 'cat2';
+  } else {
+    result = 'cat1';
+  }
   return result;
 }
 
