@@ -1,6 +1,9 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(argBool1, argBool2) {
+  if (argBool1 && argBool2) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 2
@@ -58,3 +61,5 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+console.log(compareTrue(true, false));
