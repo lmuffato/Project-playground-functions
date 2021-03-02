@@ -40,17 +40,40 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numberArray) {
+let numberCount = 0;
+let maxCount = 0;
 
-  for (let i = 0; i < numberArray; i =+ 1){
-
+  for (let i = 0; i < numberArray.length; i += 1){  
+      let num = numberArray[i];
+      if (num === maxCount){
+        numberCount += i + 1;
+      }
+      if (num > maxCount) { 
+        maxCount = num;
+        numberCount = 1;
+      }
   }
   
-  return numberTimesRepetition
+  return maxCount;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let mouseCat1Distancy = mouse - cat1;
+  let mouseCat2Distancy = mouse - cat2;
+
+  if (mouseCat1Distancy > mouseCat2Distancy){
+    return 'cat2';
+  }
+
+  else if (mouseCat1Distancy < mouseCat2Distancy){
+    return 'cat1';
+  }
+
+  else {
+    return "os gatos trombam e o rato foge";
+  }
+
 }
 
 // Desafio 8
@@ -66,7 +89,7 @@ function decode() {
   // seu código aqui
 }
 
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(catAndMouse(10, 8, 8));
 
 module.exports = {
   calcArea,
