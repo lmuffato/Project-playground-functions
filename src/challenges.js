@@ -9,8 +9,9 @@ function compareTrue(number1 , number2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let result = (base * height) / 2 
+  return result; 
 }
 
 // Desafio 3
@@ -52,6 +53,13 @@ function decode() {
 }
 
 console.log(compareTrue(true, true));
+console.log(compareTrue(false, true));
+console.log(compareTrue(true, true));
+
+console.log(calcArea(10, 50));
+console.log(calcArea(5, 2));
+console.log(calcArea(51, 1));
+
 
 
 module.exports = {
