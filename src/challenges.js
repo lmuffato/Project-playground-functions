@@ -8,8 +8,10 @@ function compareTrue(value1, value2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let triangleArea = (base * height) / 2;
+
+  return triangleArea;
 }
 
 // Desafio 3
@@ -49,6 +51,8 @@ function encode() {
 function decode() {
   // seu código aqui
 }
+
+console.log(calcArea(51, 1));
 
 module.exports = {
   calcArea,
