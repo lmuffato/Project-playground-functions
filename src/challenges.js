@@ -4,7 +4,6 @@ function compareTrue(parameter1, parameter2) {
     return true;
   }
     return false;
-  }
 }
 
 // Desafio 2
@@ -13,8 +12,9 @@ function calcArea(base, area) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  let newArray = sentence.split (' ');
+  return newArray;
 }
 
 // Desafio 4
