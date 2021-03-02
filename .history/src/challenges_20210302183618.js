@@ -38,7 +38,6 @@ function concatName() {
   }
    return concatResult
 }
-console.log(concatName(['Juan', 'espaço', 'ronaldo', 'é o zica']))
 
 // Desafio 5
 function footballPoints() {

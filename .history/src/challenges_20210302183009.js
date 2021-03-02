@@ -29,16 +29,8 @@ console.log(splitSentence())
 function concatName() {
   let concatResult = '';
   let ultimo = array[array.lenght-1] + ', ' + array[0]
-  for (let i = (array.lenght - 1); i >= 0; index -= 1)
-  if (i === array.lenght - 1) {
-    concatResult = concatResult + array[i] + ', ';
-  }
-  if (i === 0) {
-    concatResult = concatResult + array[i];
-  }
-   return concatResult
+  for (let i = (array.lenght - 1); i >= 0; index -=)
 }
-console.log(concatName(['Juan', 'espaço', 'ronaldo', 'é o zica']))
 
 // Desafio 5
 function footballPoints() {
