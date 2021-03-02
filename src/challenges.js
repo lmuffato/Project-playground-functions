@@ -12,18 +12,15 @@ function calcArea(base, height) {
   areaDoTriangulo = (base * height) / 2;
   return areaDoTriangulo;
 }
-console.log(areaDoTriangulo);
 
 // Desafio 3
-
 function splitSentence(string) {
-  stringDividida = string.split(" ,");
-  return stringDividida ; 
+  let stringDividida = string.split(' ');
+  return stringDividida;
 }
-console.log(stringDividida);
 
 // Desafio 4
-function concatName(array) {
+function concatName() {
   // seu código aqui
 }
 
