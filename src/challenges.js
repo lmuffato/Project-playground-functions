@@ -21,7 +21,7 @@ function splitSentence(nameSplit) {
 
 // Desafio 4
 function concatName(name) {
-  let ultimateArray = name.length -1;
+  let ultimateArray = name.length - 1;
   return name[0] + ' ' + name[ultimateArray];
 }
 
@@ -65,7 +65,7 @@ console.log(splitSentence('go trybe'));
 console.log(splitSentence('vamo que vamo'));
 console.log(splitSentence('foguete'));
 
-console.log(concatName(name=['Lucas', 'Cassio', 'Ferraz', 'Paolilo']));
+console.log(concatName(name=['Lucas', 'Cassio', 'Ferraz', 'Paolillo']));
 console.log(concatName(name=['foguete', 'não', 'tem', 'ré']));
 console.log(concatName(name=['captain', 'my', 'captain']));
 
