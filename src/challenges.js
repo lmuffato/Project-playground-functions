@@ -3,12 +3,7 @@ function compareTrue(valueOne, ValueTwo) {
   if (valueOne === true && ValueTwo === true) {
     return true;
   }
-  if ((valueOne === true && ValueTwo === false) || (valueOne === false && ValueTwo === true)) {
-    return false;
-  }
-  if (valueOne === false && ValueTwo === false) {
-    return false
-  }
+  return false;
 }
 
 // Desafio 2
