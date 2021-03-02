@@ -1,11 +1,58 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techNames, name) {
+  let object = {
+    tech: '',
+    name: name,
+  };
+  array = [];
+
+  for (let index = 0; index < techNames.length; index += 1) {
+    object.tech = techNames[index];
+    array.push(object);
+  }
+  return array;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(phone) {
+  let numberOfTimes = 0;
+  let trueOrFalse = false;
+  let repeticoes = [];
+
+  if (phone.length !== 11) {
+    return 'Array com tamanho incorreto';
+  }
+
+  for (let j = 0; j < phone.length; j += 1) {
+    numberOfTimes = 0;
+    for (let k = 0; k < phone.length; k += 1) {
+      if (phone[k] === phone[j]) {
+        numberOfTimes += 1;
+      }
+    }
+    repeticoes.push(numberOfTimes);
+  }
+
+  for (let l = 0; l < repeticoes.length; l += 1) {
+    if (repeticoes[l] >= 3) {
+      trueOrFalse = true;
+    } else {
+      trueOrFalse = false;
+    }
+  }
+
+  if (numberOfTimes >= 3) {
+    trueOrFalse = true;
+  } else {
+    trueOrFalse = false;
+  }
+  for (let i = 0; i < phone.length; i += 1) {
+    if (phone[i] < 0 || phone[i] > 9 || trueOrFalse === true) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    } else {
+      return `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}${phone[5]}${phone[6]}-${phone[7]}${phone[8]}${phone[9]}${phone[10]}`;
+    }
+  }
 }
 
 // Desafio 12
