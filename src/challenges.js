@@ -46,10 +46,9 @@ console.log(footballPoints(1,2));
 console.log(footballPoints(0,0));
 
 // Desafio 6
+// usei esse link para me ajudar a decobrir qual o maior valor de um array https://pt.stackoverflow.com/questions/35202/como-saber-o-maior-valor-de-um-array
 function highestCount(arrayNumbers) {
-  for (){
-    
-  }
+  
 }
 
 // Desafio 7          1       10    5
@@ -94,7 +93,7 @@ function encode(string) {
   let substituirVogais =  string.replace('a', '1');
   console.log(substituirVogais);
   for ( let index = 0; index < string.length; index += 1){
-    if
+    
   }
 }
 function decode() {
