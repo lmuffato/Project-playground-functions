@@ -19,15 +19,18 @@ console.log(calcArea(51, 1));
 // Desafio 3
 function splitSentence(string) {
   let wordsArray = string.split(' ');
-  return  wordsArray;
+  return wordsArray;
 }
 
 console.log(splitSentence('go Trybe'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(strArray) {
+  let concatArray = strArray[strArray.length - 1] + ', ' + strArray[0];
+  return concatArray;
 }
+
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
