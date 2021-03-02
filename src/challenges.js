@@ -1,10 +1,15 @@
 // Desafio 1
-function compareTrue(notaProjeto, frequenciaAula) {
-  if (notaProjeto === true && frequenciaAula === true) {
-    return true;
+function compareTrue(gradeProject, goingToLectures) {
+  // seu código aqui
+  let result;
+
+  if (gradeProject === true && goingToLectures === true) {
+    result == true;
+
   } else {
-    return false;
+    result == false;
   }
+  return result;
 }
 
 // Desafio 2
