@@ -26,16 +26,13 @@ return phraseDisposition
 
 }
 
- console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
+function footballPoints(wins, ties) {
+  wins = wins * 3;
+  ties = ties * 1;
 
-
-
-
-
-// Desafio 5
-function footballPoints() {
-  // seu código aqui
+  return wins + ties
 }
+
 
 // Desafio 6
 function highestCount() {
