@@ -31,9 +31,11 @@ function highestCount(array) {
 }
 
 // Desafio 7
+// Adicionar Math.abs dica do @Bernardo Salgueiro, fornecendo a dica
+// que havia uma função do Math que retornaria o valor absoluto.
 function catAndMouse(mouse, cat1, cat2) {
-  const distanceCat1 = cat1 - mouse;
-  const distanceCat2 = cat2 - mouse;
+  const distanceCat1 = Math.abs(cat1 - mouse);
+  const distanceCat2 = Math.abs(cat2 - mouse);
   let result = '';
   if (distanceCat1 === distanceCat2) {
     result = 'os gatos trombam e o rato foge';
@@ -42,7 +44,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else result = 'cat2';
   return result;
 }
-console.log(catAndMouse(0, 3, 2));
+console.log(catAndMouse(1, 0, 2));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
