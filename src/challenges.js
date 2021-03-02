@@ -29,9 +29,9 @@ function splitSentence(separatee, limiter) {
   return result;
 }
 
-console.log(splitSentence("go Trybe", " "));
-console.log(splitSentence("vamo que vamo", " "));
-console.log(splitSentence("foguete", " "));
+console.log(splitSentence('go Trybe', ' '));
+console.log(splitSentence('vamo que vamo', ' '));
+console.log(splitSentence('foguete', ' '));
 
 // Desafio 4
 function concatName() {
