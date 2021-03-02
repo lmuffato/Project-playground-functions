@@ -70,8 +70,14 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanceCat1 = mouse - cat1;
-  let distanceCat2 = mouse - cat2;
+  /**
+   * Com base no código de outros colegas vi que o Patrick Moroes usou função modular
+   * para se ter o valor absoluto de um numero, resolvi implentar essa função do js,
+   * devido a alguns testes que falharam retornando um numero negativo
+   * link do github dele: https://github.com/tryber/sd-010-a-project-playground-functions/blob/patrickmoraisn-project-playground-functions/src/challenges.js
+   */
+  let distanceCat1 = Math.abs(mouse - cat1);
+  let distanceCat2 = Math.abs(mouse - cat2);
 
   if (distanceCat1 > distanceCat2) {
     return 'cat2';
