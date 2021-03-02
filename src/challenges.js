@@ -92,12 +92,30 @@ function highestCount(numeros) {
   return console.log(cont);
 }
 
-highestCount([0,0,0]);
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+
+  let distCat1 = Number;
+  let distCat2 = Number;
+
+  distCat1 = cat1-mouse;
+  distCat2 = cat2-mouse;
+
+  if (cat1<cat2) 
+  {
+    return console.log('cat1');
+  } 
+  else if (cat2<cat1) 
+  {
+    return console.log('cat2');
+  } else {
+    return (console.log('os gatos trombam e o rato foge'));
+  }
 }
+
+catAndMouse(1,6,6);
+
+
 
 // Desafio 8
 function fizzBuzz() {
