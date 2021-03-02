@@ -21,9 +21,8 @@ function techList(tech, name) {
 
 // Desafio 11
 function numFormat(num) {
-  for (let index = 0; index < num.length; index += 1) {
-    return `(${num[0]}${num[1]}) ${num[2]}${num[3]}${num[4]}${num[5]}${num[6]}-${num[7]}${num[8]}${num[9]}${num[10]}`;
-  }
+  return `(${num[0]}${num[1]}) ${num[2]}${num[3]}${num[4]}
+    ${num[5]}${num[6]}-${num[7]}${num[8]}${num[9]}${num[10]}`;
 }
 
 function checkNumber(num) {
@@ -31,16 +30,6 @@ function checkNumber(num) {
   for (let index = 0; index < num.length; index += 1) {
     if (num[index] > 9 || num[index] < 0) {
       result = true;
-    }
-  }
-  return result;
-}
-
-function checkTel(array) {
-  let result = 0;
-  for (let index = 0; index < array.length; index += 1) {
-    if (array.length !== 11) {
-      result = 1;
     }
   }
   return result;
@@ -69,18 +58,34 @@ function generatePhoneNumber(tel) {
 }
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
+function checkSub(lineA, lineB, lineC) {
+  let result = false;
   let operations = {
-    sumAB: lineA + lineB,
-    sumAC: lineA + lineC,
-    sumBC: lineB + lineC,
     subAB: Math.abs(lineA - lineB),
     subBC: Math.abs(lineB - lineC),
     subAC: Math.abs(lineA - lineC),
   };
-  return lineA < operations.sumBC && lineA > operations.subBC
-    && lineB < operations.sumAB && lineB > operations.subAB
-    && lineC < operations.sumAB && lineC > operations.subAB;
+  if (lineC > operations.subAB || lineB > operations.subAC || lineA > operations.subBC) {
+    result = true;
+  }
+  return result;
+}
+
+function checkSum(lineA, lineB, lineC) {
+  let result = false;
+  let operations = {
+    sumAB: lineA + lineB,
+    sumAC: lineA + lineC,
+    sumBC: lineB + lineC,
+  };
+  if (lineC < operations.sumAB || lineB < operations.sumAC || lineA < operations.sumBC) {
+    result = true;
+  }
+  return result;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  return checkSum(lineA, lineB, lineC) && checkSub(lineA, lineB, lineC);
 }
 
 // Desafio 13

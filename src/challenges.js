@@ -71,10 +71,10 @@ function fizzBuzz(arrayNum) {
     case (arrayNum[index] % 3 === 0 && arrayNum[index] % 5 === 0):
       arrayFizzs.push('fizzBuzz');
       break;
-    case ((arrayNum[index] % 3 === 0)):
+    case (arrayNum[index] % 3 === 0):
       arrayFizzs.push('fizz');
       break;
-    case ((arrayNum[index] % 5 === 0)):
+    case (arrayNum[index] % 5 === 0):
       arrayFizzs.push('buzz');
       break;
     default:
