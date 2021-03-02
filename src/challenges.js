@@ -3,16 +3,18 @@ function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
     return true;
   } else {
-    return false
+    return false;
   }
 }
 
-console.log(compareTrue(true,false));
+console.log(compareTrue(true, false));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
+
+console.log(calcArea(20,10));
 
 // Desafio 3
 function splitSentence() {
