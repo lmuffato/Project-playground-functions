@@ -63,11 +63,13 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat2 = Math.abs(mouse - cat2);
 
   if (distanceCat1 > distanceCat2) {
-    return 'cat1';
-  }
-  if (distanceCat1 < distanceCat2) {
     return 'cat2';
   }
+
+  if (distanceCat1 < distanceCat2) {
+    return 'cat1';
+  }
+
   return 'os gatos trombam e o rato foge';
 }
 
@@ -95,8 +97,10 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+
 }
+
+console.log(encode('Hi there'))
 function decode() {
   // seu código aqui
 }
