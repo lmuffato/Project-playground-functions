@@ -1,6 +1,8 @@
 // Desafio 1
 function compareTrue() {
   // seu código aqui
+
+  // alterando arquivo para conseguir fazer pull request
 }
 
 // Desafio 2
