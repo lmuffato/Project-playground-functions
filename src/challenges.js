@@ -12,8 +12,8 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(stringValue) {
+  return stringValue.split(' ');
 }
 
 // Desafio 4
@@ -52,6 +52,8 @@ function decode() {
 console.log(compareTrue(true, true));
 
 console.log(calcArea(10, 50));
+
+console.log(splitSentence("go Trybe"));
 
 module.exports = {
   calcArea,
