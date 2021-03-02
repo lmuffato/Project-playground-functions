@@ -18,12 +18,11 @@ function splitSentence(string) {
   return result;
 }
 
-string = 'Go Trybe'
-console.log(splitSentence(string))
-
 // Desafio 4
 function concatName(items) {
-  // seu código aqui
+  let firstItem = items[items.length - 1];
+  let lastItem = items[0];
+  return lastItem + ', ' + firstItem;
 }
 
 // Desafio 5
