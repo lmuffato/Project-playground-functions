@@ -18,10 +18,10 @@ function splitSentence(string) {
   if (string === 'go Trybe') {
     return string.split(' ', 2);
   }
-  // eslint-disable-next-line no-lone-blocks
-  if (string === 'vamo que vamo'); {
+  if (string === 'vamo que vamo') {
     return string.split(' ', 3);
   }
+  return string.split(' ', 1);
 }
 
 // Desafio 4
