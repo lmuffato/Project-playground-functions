@@ -34,8 +34,14 @@ function hydrate(str) {
   {
     if (macth.includes(str[index]))
     {sum += Number(str[index])}
+  };
+  if (sum === 1)
+  {
+    return (sum+'') + ' copo de água'
   }
-  return (sum+'') + ' copos de água'
+  else {
+      return (sum+'') + ' copos de água'
+  } 
 }
 
 module.exports = {
