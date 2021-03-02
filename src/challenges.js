@@ -50,8 +50,16 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let whoCatch = ''
+  if (cat1 == cat2) {
+    whoCatch = 'os gatos trombam e o rato foge'
+  } else if ((Math.abs(mouse - cat1) > Math.abs(mouse - cat2))) {
+    whoCatch = 'cat2'
+  } else {
+    whoCatch = 'cat1'
+  }
+  return whoCatch
 }
 
 // Desafio 8
@@ -80,9 +88,7 @@ module.exports = {
   splitSentence,
 };
 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]))
-console.log(highestCount([0, 0, 0]))
+
 
 
 
