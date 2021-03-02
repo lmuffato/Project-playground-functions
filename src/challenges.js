@@ -15,19 +15,10 @@ function calcArea(base, height) {
 }
 
 // // Desafio 3
-function splitSentence(phrase ) {
-  let wordReciver = "";
-  let arrayReciver = [];
-  for (let index = 0; index < phrase.length; index += 1) {
-    if(phrase[index] != " " ) {
-      wordReciver += phrase[index]
-    } else {
-      arrayReciver =arrayReciver.push(wordReciver);
-    };
-  };
-  return arrayReciver;
+function splitSentence(phrase) {
+    return phrase.split(' ');
 }
-
+console.log(splitSentence('go trybe'));
 // Desafio 4
 function concatName(phraseList) {
   return console.log (phraseList[phraseList.length -1] + ',' + phraseList[0]);
@@ -53,7 +44,7 @@ function highestCount(numberList) {
   }
   return numberOfReplays;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
