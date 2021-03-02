@@ -12,6 +12,7 @@ function calcArea(base, height) {
   return ((base * height) / 2);
 }
 
+
 // Desafio 3
 // Para o exercicio foi utilizada a documentação da função SPLIT disponível em: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
 
@@ -22,9 +23,15 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+
+function concatName(phraseArray) {
+  let firstItem = phraseArray[0];
+  let lastItem = phraseArray[phraseArray.length - 1];
+  let phraseString = lastItem + ', ' + firstItem;
+  return phraseString;
 }
+
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
 function footballPoints() {
