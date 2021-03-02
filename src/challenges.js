@@ -5,7 +5,8 @@ function compareTrue(value1, value2) {
   } else {
     return false
   }
-
+}
+console.log(compareTrue(true, true))
 // Desafio 2
 function calcArea(base, height) {
   let result = (base * height) / 2
@@ -14,7 +15,9 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split('')
+  let phase = string.split(' ')
+  return phase
+}
 
 // Desafio 4
 function concatName() {
