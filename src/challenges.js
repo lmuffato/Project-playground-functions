@@ -26,11 +26,13 @@ function splitSentence(sentence) {
   return split;
 }
 
-splitSentence('Amanhã será um lindo dia!');
-
 // Desafio 4
-function concatName() {
+function concatName(stringss) {
   // seu código aqui
+  let primeiro = stringss[0];
+  let ultimo = stringss[stringss.lenght];
+  let concat = `${ultimo}, ${primeiro}`;
+  return concat;
 }
 
 // Desafio 5
