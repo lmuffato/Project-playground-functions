@@ -7,12 +7,14 @@ function compareTrue(value1,value2) {
   }
 
 }
-
 // Desafio 2
-function calcArea() {
-  // seu código aqui
-}
-
+//let base = 51;
+//let height = 1;
+function calcArea(base,height) {
+  let triangleArea = (base * height)/2;
+  return triangleArea;
+} 
+//console.log(calcArea(base,height));
 // Desafio 3
 function splitSentence() {
   // seu código aqui
