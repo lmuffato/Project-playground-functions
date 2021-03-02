@@ -3,6 +3,7 @@ function compareTrue(param1, param2) {
   if (param1 && param2 === true) {
     return true;
   } return false;
+  // código do inicio do esclarecimento técnico
 }
 
 // Desafio 2
@@ -17,8 +18,9 @@ function splitSentence(str) {
 }
 
 // Desafio 4
-function concatName() {
-  // asfsdafasdf
+function concatName(arr) {
+  // sites usados como referência https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Template_literals, https://www.devmedia.com.br/javascript-concat-concatenando-arrays-e-strings/37964, https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254, https://pt.stackoverflow.com/questions/87416/como-retornar-o-%C3%BAltimo-registro-de-um-array-com-javascript-ou-jquery
+  return `${arr[arr.length - 1]}, ${arr[0]}`;
 }
 
 // Desafio 5
