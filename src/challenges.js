@@ -60,14 +60,12 @@ function catAndMouse(mouse, cat1, cat2) {
   let result;
   if (dist1 > dist2) {
     result = 'cat 2';
-  }
-  else if (dist2 > dist1) {
+  } else if (dist2 > dist1) {
     result = 'cat1';
-  }
-  else{
+  } else {
     result = 'os gatos trombam e o rato foge';
   }
-  return resut
+  return result;
 }
 
 // Desafio 8
