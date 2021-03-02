@@ -72,14 +72,33 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 
   else {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   }
 
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numberArray2) {
+  for (let i = 0; i < numberArray2.length; i += 1){
+
+    if ((numberArray2[i] % 3) === 0){
+       return numberArray2[i] = 'fizz';
+    }
+    
+    else if ((numberArray2[i] % 5) === 0){
+      return numberArray2[i] = 'buzz';
+    }
+
+    else if (((numberArray2[i] % 3) === 0) && ((numberArray2[i] % 5) === 0)){
+      return numberArray2[i] = 'fizzBuzz';
+    }
+
+    else if (((numberArray2[i] % 3) !== 0) && ((numberArray2[i] % 5) !== 0)) {
+      return numberArray2[i] = 'bug!'
+    }
+  }
+
+
 }
 
 // Desafio 9
@@ -90,7 +109,7 @@ function decode() {
   // seu código aqui
 }
 
-console.log(catAndMouse(20, 16, 8));
+console.log(fizzBuzz([[2, 15, 7, 9, 45] ]));
 
 module.exports = {
   calcArea,
