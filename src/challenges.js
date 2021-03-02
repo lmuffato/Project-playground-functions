@@ -1,3 +1,4 @@
+// Done with the help of the amazing https://developer.mozilla.org/ documentation
 // Desafio 1
 function compareTrue(bool1, bool2) {
   return bool1 && bool2;

@@ -1,3 +1,4 @@
+// Done with the help of the amazing https://developer.mozilla.org/ documentation
 // Desafio 10
 function createObj(string1, string2) {
   let obj = {
@@ -63,11 +64,26 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return true;
 }
-console.log(triangleCheck(6,9,2));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function checkIfCharIsNumber(char) {
+  if (char - '0' >= 0 && '9' - char >= 0) {
+    return true;
+  }
+  return false;
+}
+function parseCharToNumber(char) {
+  return char - '0';
+}
+function hydrate(string) {
+  let splitedString = string.split(' ');
+  let count = 0;
+  for (let index in splitedString) {
+    if (checkIfCharIsNumber(splitedString[index])) {
+      count += parseCharToNumber(splitedString[index]);
+    }
+  }
+  return `${count} copos de água`;
 }
 
 module.exports = {
