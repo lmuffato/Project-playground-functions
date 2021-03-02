@@ -62,6 +62,7 @@ function highestCount(arrayNumbers) {
       repeticao += 1
     }
    }
+   return repeticao;
 }
 
 // Desafio 7          1       10    5
@@ -97,12 +98,11 @@ function fizzBuzz(arrayNumbers) {
   return resultadosFizzBuzz
 }
 
-let testeArray = [2, 15, 7, 9, 45];
+//let testeArray = [2, 15, 7, 9, 45];
 //console.log(fizzBuzz(testeArray));
 
 // Desafio 9
 function encode(string) {
-  let string = 'baba';
   let substituirVogais =  string.replace('a', '1');
   console.log(substituirVogais);
   for ( let index = 0; index < string.length; index += 1){
