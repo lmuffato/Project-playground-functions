@@ -2,12 +2,12 @@
 function techList(techArray, name) {
   // seu código aqui
   let listOfTechs = [];
-  let techItem = {
-    tech: '',
-    name: '',
-  }
-  techItem['name'] = name;
   for (let index in techArray) {
+    let techItem = {
+      tech: '',
+      name: '',
+    }
+    techItem['name'] = name;
     techItem['tech'] = techArray[index];
     listOfTechs.push(techItem);
   }
@@ -76,9 +76,44 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(drinks) {
   // seu código aqui
+  let count = 0;
+  for (let index in drinks) {
+    switch(drinks[index]){
+      case '1': 
+        count += 1; 
+        break;
+      case '2': 
+        count += 2; 
+        break;
+      case '3': 
+        count += 3; 
+        break;
+      case '4': 
+        count += 4; 
+        break;
+      case '5': 
+        count += 5; 
+        break;
+      case '6': 
+        count += 6; 
+        break;
+        case '7': 
+        count += 7; 
+        break;
+      case '8': 
+        count += 8; 
+        break;
+      case '9': 
+        count += 9; 
+        break;      
+    }
+  }
+  return count.toString() + ' copos de água';
 }
+
+console.log(hydrate(' 2 cervejas 9 pingas e 3 caipirinhas'));
 
 module.exports = {
   generatePhoneNumber,
