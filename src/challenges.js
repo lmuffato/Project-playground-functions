@@ -52,15 +52,17 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let distanceCat1 = 0;
+  let distanceCat2 = 0;
   if (cat1 > mouse) {
-    let distanceCat1 = cat1 - mouse;
-  }else {
-    let distanceCat1 = mouse - cat1;
+    distanceCat1 = cat1 - mouse;
+  } else {
+    distanceCat1 = mouse - cat1;
   }
 
   if (cat2 > mouse) {
-    let distanceCat2 = cat2 - mouse;
-  } else { let distanceCat2 = mouse - cat2; }
+    distanceCat2 = cat2 - mouse;
+  } else { distanceCat2 = mouse - cat2; }
   if (distanceCat1 > distanceCat2) {
     return 'cat1';
   } else if (distanceCat1 < distanceCat2) {
@@ -69,8 +71,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let resultArray = [];
+
+  for (let index = 0; index < array.length; index += 1){
+    if (array[index] / 3 && array[index] / 5) {
+    resultArray.push('fizzBuzz')
+  } else if (array[index] / 3) {
+    resultArray.push('fizz')
+  } else if (array[index] / 5){
+    resultArray.push('buzz')
+  } else {
+    resultArray.push('bug!')
+  }
+  return resultArray;
 }
 
 // Desafio 9
