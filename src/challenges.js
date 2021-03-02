@@ -1,3 +1,4 @@
+//Comentário aleatório a fim de realizar o Pull Request
 // Desafio 1
 function compareTrue() {
   // seu código aqui
