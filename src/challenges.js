@@ -33,16 +33,31 @@ function footballPoints(wins, ties) {
   let empates = 1
   return(vitorias * wins + empates * ties)
 }
-console.log(footballPoints(0, 0))
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+let repeticoes = 0
+let maiorItem = 0;
+function highestCount(values) {
+  for (let index in values) {
+    if (values[index] > maiorItem) {
+      maiorItem = values[index]
+    } 
+  } for (let currentNumber in values) {
+    if (values[currentNumber] === maiorItem) {
+      repeticoes += 1
+      } 
+  } return(repeticoes)
+} 
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (cat1 - mouse < cat2 - mouse) {
+    return("cat1")
+  } else if (cat2 - mouse < cat1 - mouse) {
+    return("cat2")
+  } else {
+    return("os gatos trombam e o rato foge")
+  }
 }
 
 // Desafio 8
