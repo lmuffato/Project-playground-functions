@@ -1,10 +1,9 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 === true && value2 === true){
-   return true;
-  } else {
-    return false;
-  }
+  if (value1 === true && value2 === true) {
+    return true;
+  } 
+  return false;
 }
 console.log(compareTrue(true, false));
 
@@ -22,15 +21,17 @@ function splitSentence(string) {
 console.log(splitSentence('foguete'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(stringArrays) {
+  let firstItem = stringArrays[0];
+  let lastItem = stringArrays[stringArrays.length - 1];
+  return `${lastItem} , ${firstItem}`;
 }
+console.log(concatName(['Giovanni', 'Julia', 'Maldonado']));
 
 // Desafio 5
 function footballPoints() {
   // seu código aqui
 }
-
 // Desafio 6
 function highestCount() {
   // seu código aqui
