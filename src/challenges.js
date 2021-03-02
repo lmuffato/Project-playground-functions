@@ -3,6 +3,8 @@ function compareTrue(gradeProject, goingToLectures) {
   // seu código aqui
   if (gradeProject === true && goingToLectures === true) {
     return true;
+  } else {
+    return false;
   }
  }
 
