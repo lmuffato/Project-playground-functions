@@ -8,13 +8,14 @@ function compareTrue(value1, value2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  area = (base*height)/2
+  return area
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  return string.split(" ")
 }
 
 // Desafio 4
@@ -62,3 +63,7 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+console.log(compareTrue(true, false))
+console.log(calcArea(51, 1))
+console.log(splitSentence('go trybe'))
