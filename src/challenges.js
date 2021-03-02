@@ -36,16 +36,25 @@ console.log(splitSentence('foguete', ' '));
 // Desafio 4
 function concatName(names) {
   // seu código aqui
-  return names[names.length - 1] + ' ' + names[0];
+  return names[names.length - 1] + ', ' + names[0];
 }
+
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolilo']));
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let total = ((wins * 3) + ties );
+  return total;
 }
+
+console.log(footballPoints(14, 8));
+console.log(footballPoints(1, 2));
+console.log(footballPoints(0, 0));
+
+
 
 // Desafio 6
 function highestCount() {
