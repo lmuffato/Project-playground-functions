@@ -64,8 +64,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let fizzOrBuzzOrBug = []
+  for (let index = 0; index < array.length; index +=1 ) {
+    if (array[index] % 3 == 0 && array[index] % 5 == 0) {
+      fizzOrBuzzOrBug.push('fizzBuzz')
+    } else if (array[index] % 3 == 0 && array[index] % 5 != 0){
+      fizzOrBuzzOrBug.push('fizz')
+    } else if (array[index] % 5 == 0 && array[index] % 3 != 0) {
+      fizzOrBuzzOrBug.push('buzz')
+    } else {
+      fizzOrBuzzOrBug.push('bug!')
+    }
+  }
+  return fizzOrBuzzOrBug
 }
 
 // Desafio 9
@@ -88,11 +100,6 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-
-console.log(catAndMouse(4,1,2))
-console.log(catAndMouse(4,10,16))
-console.log(catAndMouse(4,-2, -8))
-console.log(catAndMouse(10, -2, -2))
 
 
 
