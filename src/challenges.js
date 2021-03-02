@@ -23,7 +23,7 @@ function splitSentence(phrase) {
 function concatName(phraseList) {
   return phraseList[phraseList.length -1] + ', ' + phraseList[0]
 }
-console.log(concatName(['lucas', 'henrique', 'da', 'paz']));
+
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = ((wins * 3) + ( ties * 1));
@@ -51,9 +51,21 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+function fizzBuzz(arrayNumberList) {
+  let fizzCode = [];
+  for (let indice = 0; indice < arrayNumberList.length; indice += 1){
+    if (arrayNumberList[indice]%3 === 0) {
+      fizzCode.push("fizz");
+    } else if (arrayNumberList[indice]%5 === 0) {
+      fizzCode.push("buzz");
+      } else if ( arrayNumberList[indice]%3 === 0 && arrayNumberList[indice]%5 === 0){
+        fizzCode.push("fizzbuzz");
+      } else {
+        fizzCode.push("bug!");
+      };
+    };
+    return fizzCode;
+  }
 
 // Desafio 9
 function encode() {
