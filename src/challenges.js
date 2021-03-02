@@ -20,20 +20,33 @@ function splitSentence(frase) {
 
 
 // Desafio 4
-function concatName(array) {
-  return (array[array.length-1]+ ', ' + array[0]);
+function concatName(arrayName) {
+  return (arrayName[arrayName.length-1]+ ', ' + arrayName[0]);
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   return (wins*3)+(ties);
 }
-console.log(footballPoints(0,0));
+
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNumbers) {
+  let count = 0;
+  let highestNumber = 0;
+  for (let index in arrayNumbers) {
+    if (arrayNumbers[index]>highestNumber){
+      highestNumber = arrayNumbers[index];
+    }
+  }
+  for (let index in arrayNumbers) {
+    if (arrayNumbers[index]===highestNumber){
+      count += 1;
+    }
+  }
+  return count;
 }
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse() {
