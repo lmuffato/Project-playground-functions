@@ -33,8 +33,10 @@ function concatName(arrayString) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let points;
+  points = wins * 3 + ties;
+  return points;
 }
 
 // Desafio 6
@@ -59,8 +61,7 @@ function encode() {
 function decode() {
   // seu código aqui
 }
-let a = ['captain', 'my', 'captain'];
-console.log(concatName(a));
+
 module.exports = {
   calcArea,
   catAndMouse,
