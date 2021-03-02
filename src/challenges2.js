@@ -21,8 +21,19 @@ function techList(techNames, name) {
     }
   }
 
+  array.sort(function (x, y) {
+    let a = x.tech.toUpperCase();
+    let b = y.tech.toUpperCase();
+
+    return a == b ? 0 : a > b ? 1 : -1;
+  });
+
+  // Referência das linhas 24 a 29 (Ordenando objetos por uma propriedade string): https://ricardo-reis.medium.com/o-m%C3%A9todo-sort-do-array-javascript-482576734e0a
+
   return array;
 }
+
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 // Desafio 11
 function generatePhoneNumber(phone) {
