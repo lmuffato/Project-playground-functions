@@ -13,15 +13,16 @@ function calcArea(value1, value2) {
 
 // Desafio 3
 function splitSentence(sentence) {
-  let word = sentence.split(" ");
+  let word = sentence.split(' ');
   return word;
 }
 
-console.log(splitSentence("be trybe"))
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let sentence = '';
+  sentence += array[array.length - 1]
+  sentence += ', ' + array[0];
+  return sentence;
 }
 
 // Desafio 5
