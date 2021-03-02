@@ -43,12 +43,18 @@ function highestCount(arrayOfNumbers) {
   }
   return highest;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
-console.log(highestCount([0, 0, 0]));
+
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distCat1ToMouse = Math.abs(cat1 - mouse);
+  let distCat2ToMouse = Math.abs(cat2 - mouse);
+  if (distCat1ToMouse < distCat2ToMouse) {
+    return 'cat1';
+  }
+  if (distCat2ToMouse < distCat1ToMouse) {
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
