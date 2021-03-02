@@ -1,7 +1,13 @@
 // Desafio 1
 function compareTrue() {
-  // seu código aqui
-  //Marilia
+  let valueA = true;
+  let valueB = true;
+
+  if (valueA = true && valueB = true) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
