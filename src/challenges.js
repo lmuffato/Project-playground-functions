@@ -76,13 +76,11 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 function arrayFizzBuzz(array) {
-  if (array % 3 === 0 && array % 5 !== 0){
-  return 'fizz';
-  } else {
-    return 'buzz';
-  }
+  if (array % 3 === 0 && array % 5 !== 0) {
+    return 'fizz';
+} 
+  return 'buzz';
 }
- 
 
 // Desafio 8
 function fizzBuzz(array) {
