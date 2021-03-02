@@ -1,8 +1,6 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  // seu código aqui
-function compareTrue(param1, param2) {
-  if(param1 === true && param2 === true) {
+  if (param1 === true && param2 === true) {
     return true;
   }
   return false;
@@ -11,16 +9,12 @@ function compareTrue(param1, param2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  // seu código aqui
-function calcArea(base, height) {
   let area = (base * height) / 2;     //objeto
   return area;
 }
 //console.log(calcArea(51, 1));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
 function splitSentence(string) {
   let phraseArray = string.split (' ');
   return phraseArray;
@@ -31,7 +25,7 @@ function splitSentence(string) {
 // Desafio 4
 function concatName() {
   // seu código aqui
-}
+  function concatName() {
 
 // Desafio 5
 function footballPoints() {
@@ -73,4 +67,3 @@ module.exports = {
   highestCount,
   splitSentence,
 }
-
