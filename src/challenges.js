@@ -79,37 +79,39 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numberArray2) {
-  for (let i = 0; i < numberArray2.length; i += 1){
+  let numbers = [];
 
-    if ((numberArray2[i] % 3) === 0){
-       return numberArray2[i] = 'fizz';
+  for (let i = 0; i < numberArray2.length; i += 1){
+        
+    if (numberArray2[i] % 3 === 0){
+      numbers.push('fizz');
     }
     
-    else if ((numberArray2[i] % 5) === 0){
-      return numberArray2[i] = 'buzz';
+    else if (numberArray2[i] % 5 === 0){
+      numbers.push('buzz');
     }
 
-    else if (((numberArray2[i] % 3) === 0) && ((numberArray2[i] % 5) === 0)){
-      return numberArray2[i] = 'fizzBuzz';
+    else if ((numberArray2[i] % 3 === 0) && (numberArray2[i] % 5 === 0)){
+      numbers.push('fizzBuzz');
     }
 
-    else if (((numberArray2[i] % 3) !== 0) && ((numberArray2[i] % 5) !== 0)) {
-      return numberArray2[i] = 'bug!'
+    else if ((numberArray2[i] % 3 !== 0) && (numberArray2[i] % 5 !== 0)){ 
+      numbers.push('bug!');
     }
   }
-
-
+return numbers;
 }
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+  let encodeString = [];
+  
 }
 function decode() {
   // seu código aqui
 }
 
-console.log(fizzBuzz([[2, 15, 7, 9, 45] ]));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 module.exports = {
   calcArea,
