@@ -2,8 +2,6 @@
 function compareTrue(param1, param2) {
   if (param1 && param2 === true) {
     return true;
-  } else {
-    return false;
   }
 }
 
@@ -13,8 +11,9 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) {
+  return str.split(' ');
+// Pesquisei nos sites seguintes: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254 ,  https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
 }
 
 // Desafio 4
