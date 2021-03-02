@@ -1,10 +1,9 @@
 // Desafio 1
 function compareTrue(conditionOne, conditionTwo) {
-  if ((conditionOne === true) && (conditionTwo === true)){
+  if ((conditionOne === true) && (conditionTwo === true)) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -13,8 +12,20 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(phrase) {
+  let string = [''];
+  let counter = 0;
+  for (let index = 0; index < phrase.length; index += 1) {
+    if (phrase[index] === ' ') {
+      counter += 1;
+      string[counter] = [''];
+    } else {
+      string[counter] += phrase[index];
+    }
+    console.log(phrase[index]);
+  }
+  console.log(string);
+  return string;
 }
 
 // Desafio 4
@@ -49,6 +60,12 @@ function encode() {
 function decode() {
   // seu código aqui
 }
+
+let string = 'Eu aprendendo';
+console.log(string);
+let str = ['Eu', 'aprendendo'];
+console.log(str[0]);
+console.log(splitSentence('Eu guilherme'));
 
 module.exports = {
   calcArea,
