@@ -38,12 +38,22 @@ function footballPoints(wins, ties) {
   let points = ((wins * 3) + ( ties * 1));
   return points;
 }
-console.log(footballPoints(10,1));
-// Desafio 6
-function highestCount() {
-  // seu código aqui
-}
 
+// Desafio 6
+function highestCount(numberList) {
+  let numberOfReplays;
+  let numberMemory = numberList[0];
+  for (let index = 1; index < numberList.length; index += 1) {    
+    if ( numberList[index] > numberList[index -1]) {
+      numberMemory = numberList[index];
+    };
+    if (numberMemory === numberList[index]) {
+      numberOfReplays += 1;
+    };
+  }
+  return numberOfReplays;
+}
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
