@@ -48,7 +48,20 @@ console.log(footballPoints(0,0));
 // Desafio 6
 // usei esse link para me ajudar a decobrir qual o maior valor de um array https://pt.stackoverflow.com/questions/35202/como-saber-o-maior-valor-de-um-array
 function highestCount(arrayNumbers) {
+  let maiorNumero = 0;
+  let repeticao = 0;
+
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] > maiorNumero) {
+       maiorNumero = arrayNumbers[index];
+    }
+  }
   
+   for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if ( arrayNumbers[index] === maiorNumero){
+      repeticao += 1
+    }
+   }
 }
 
 // Desafio 7          1       10    5
