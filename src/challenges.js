@@ -125,7 +125,7 @@ function decodeReplace(letter) {
   };
 
   for (let index in letters) {
-    if (letter == letters[index]) {
+    if (letter === letters[index].toString()) {
       return index;
     }
   }
