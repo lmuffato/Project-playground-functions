@@ -20,7 +20,9 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let concat = `${array[0]}, ${array[array.length - 1]}`;
+  let lastName = array[array.length - 1];
+  let firstName = array[0];
+  let concat = `${lastName}, ${firstName}`;
   return concat;
 }
 
