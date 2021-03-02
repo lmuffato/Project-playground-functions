@@ -18,12 +18,12 @@ function splitSentence() {
 
 // Desafio 4
 function concatName(names) {
-  let firstAndLast = [];
+  let firstAndLast = ();
   let name = '';
   name = names[names.length-1];
-  firstAndLast.push (name);
+  firstAndLast = name;
   name = names[0];
-  firstAndLast.push (name);
+  firstAndLast = firstAndLast + ' ' + name;
   return firstAndLast;
 }
 
@@ -55,9 +55,9 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   let same = 'os gatos trombam e o rato foge';
   if ((cat1 - mouse) < (cat2 - mouse)) {
-    return cat1;
+    return 'cat1';
   } if ((cat1 - mouse) > (cat2 - mouse)) {
-  return cat2;
+  return 'cat2';
 } 
   return same;
 }
