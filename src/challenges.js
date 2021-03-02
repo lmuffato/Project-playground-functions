@@ -33,37 +33,113 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(originArray) {
   // seu código aqui
+  return originArray[originArray.length -1] + ', ' + originArray[0];
 }
 
+
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  return wins*3 + ties;
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(numbersArray) {
   // seu código aqui
+  let count = 0
+  let testNumber = numbersArray[0];
+  for (let index in numbersArray){
+    if (testNumber < numbersArray[index]){
+      testNumber = numbersArray[index];
+      count = 1;
+    } else if (testNumber === numbersArray[index]){
+      count += 1
+    }
+  }
+  return count;
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let cat1Distance = Math.abs(mouse - cat1);
+  let cat2Distance = Math.abs(mouse - cat2);
+  if (cat1Distance < cat2Distance){
+    return 'cat1';
+  } else if (cat1Distance > cat2Distance){
+    return 'cat2';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbersArray) {
   // seu código aqui
+  let word = '';
+  let mensage = [];
+  for (let index in numbersArray){
+    if (numbersArray[index]%3 === 0){
+      word = 'fizz';
+      if (numbersArray[index]%5 === 0){
+        word = 'fizzBuzz';
+      }
+    } else if (numbersArray[index]%5 === 0){
+      word = 'buzz';
+    } else {
+      word = 'bug!';
+    }
+    mensage.push(word);
+  }
+  return mensage;
 }
 
 // Desafio 9
-function encode() {
+function encode(decriptMensage) {
   // seu código aqui
+  let mensageEncripted = '';
+  let codeDic = {
+    a : '1',
+    e : '2',
+    i : '3',
+    o : '4',
+    u : '5'
+  }
+  for (let index in decriptMensage){
+    if (decriptMensage[index] === 'a' || decriptMensage[index] === 'e' || decriptMensage[index] === 'i'|| decriptMensage[index] === 'o'|| decriptMensage[index] === 'u' ){
+      mensageEncripted += codeDic[decriptMensage[index]];
+    } else {
+      mensageEncripted += decriptMensage[index];
+    }
+  }
+  return mensageEncripted;
 }
-function decode() {
+
+
+function decode(encriptMensage) {
   // seu código aqui
+  let mensageDecripted = '';
+  let decodeDic = {
+    1 : 'a',
+    2 : 'e',
+    3 : 'i',
+    4 : 'o',
+    5 : 'u'
+  }
+  for (let index in encriptMensage){
+    if (encriptMensage[index] === '1' || encriptMensage[index] === '2' || encriptMensage[index] === '3'|| encriptMensage[index] === '4'|| encriptMensage[index] === '5' ){
+      mensageDecripted += decodeDic[encriptMensage[index]];
+    } else {
+      mensageDecripted += encriptMensage[index];
+    }
+  }
+  return mensageDecripted;
 }
+
+
+
 
 module.exports = {
   calcArea,
