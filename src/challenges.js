@@ -38,7 +38,7 @@ function highestCount(arrayNumbers) {
     if (biggestNumber === arrayNumbers[index]) {
       hit += 1;
     }
-  } return console.log(hit);
+  } return hit;
 } highestCount([9, 1, 2, 3, 9, 5, 7]);
 // Desafio 7
 function catAndMouse() {
