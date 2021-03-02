@@ -76,27 +76,27 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 function arrayFizzBuzz(array) {
-  if (array % 3 === 0 && array % 5 === 0) {
-    return 'fizzBuzz';
-  } else if (array % 3 === 0 && array % 5 != 0) {
-    return 'fizz';
-  } else if (array % 3 != 0 && array % 5 === 0) {
-    return 'buzz';
+  if (array % 3 === 0 && array % 5 !== 0){
+  return 'fizz';
   } else {
-    return 'bug';
+    return 'buzz';
   }
 }
+ 
 
 // Desafio 8
 function fizzBuzz(array) {
   let arrayfb = [];
-  let array1;
   for (let key in array) {
-    array1 = arrayFizzBuzz(array[key]);
-    arrayfb.push(array1);
+    if (array[key] % 3 === 0 && array[key] % 5 === 0) {
+      arrayfb.push('fizzBuzz');
+    } else if (array[key] % 3 !== 0 && array[key] % 5 !== 0){
+      arrayfb.push('bug');
+    } else {
+      arrayfb.push(arrayFizzBuzz(array[key]));
+    }
   }
   return arrayfb;
-  // seu código aqui
 }
 
 // Desafio 9
@@ -108,9 +108,6 @@ function decode() {
 }
 
 let names = ['foguete', 'não', 'tem', 'ré'];
-for (let ke in names) {
-  console.log(names[ke]);
-}
 
 console.log(compareTrue(true, false));
 console.log(calcArea(51, 1));
