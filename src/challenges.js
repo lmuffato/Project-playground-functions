@@ -5,7 +5,6 @@ function compareTrue(values1, values2) {
     return console.log(true);
   }
     return console.log(false);
-    
 }
 
 // Desafio 2
