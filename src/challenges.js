@@ -1,9 +1,6 @@
 // Desafio 1
 function compareTrue(argBool1, argBool2) {
-  if (argBool1 && argBool2) {
-    return true;
-  }
-  return false;
+  return !!(argBool1 && argBool2);
 }
 
 // Desafio 2
