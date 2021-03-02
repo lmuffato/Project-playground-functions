@@ -69,18 +69,17 @@ function fizzBuzz(arrayNumbers) {
       case ((arrayNumbers[index] % 3 === 0) && (arrayNumbers[index]) % 5 === 0):
         arrayFizzs.push('fizzBuzz');
         break;
-      case (arrayNumbers[index] % 3 === 0): 
+      case (arrayNumbers[index] % 3 === 0):
         arrayFizzs.push('fizz');
         break;
-      case (arrayNumbers[index] % 5 === 0): 
+      case (arrayNumbers[index] % 5 === 0):
         arrayFizzs.push('buzz');
         break;
       default:
         arrayFizzs.push('bug!');
-
     }
-  return arrayFizzs;
-}
+    return arrayFizzs;
+  }
 
 // Desafio 9
 function encode(encodeParam) {
