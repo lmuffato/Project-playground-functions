@@ -16,8 +16,9 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(names) {
-  let firstLastNames = names[0] + names[names.length - 1];
-  return firstLastNames;
+  let firstName = names[0];  
+  let lastName = names[names.length - 1];
+  return (firstName) + (lastName);
 }
 
 // Desafio 5
