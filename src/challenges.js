@@ -2,9 +2,8 @@
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
-  } else {
-    return false;
   }
+    return false;
 }
 
 // Desafio 2
@@ -19,7 +18,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  return array = [array[array.lenght-1], array[0]];
+  return array = array[length - 1]+','+ array[0];
 }
 
 // Desafio 5
@@ -49,7 +48,6 @@ function encode() {
 function decode() {
   // seu código aqui
 }
-
 module.exports = {
   calcArea,
   catAndMouse,
