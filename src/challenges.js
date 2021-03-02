@@ -1,6 +1,6 @@
 // Desafio 1
-function compareTrue(param1, param2){
-  return ((param1 == true) && (param2 == true))
+function compareTrue(param1, param2) {
+  return (param1 && param2)
 }
 
 // Desafio 2
@@ -10,7 +10,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence() {
-  // seu código aqui
+  
 }
 
 // Desafio 4
