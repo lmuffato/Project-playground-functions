@@ -1,19 +1,24 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  // eslint-disable-next-line sonarjs/no-redundant-boolean
-  // eslint-disable-next-line eqeqeq
-  if (value1 == true && value2 == true){
+  if (value1 === true && value2 === true){
   return true
   }  
   return false;
 } 
 
-console.log(compareTrue(true, false))
+console.log(compareTrue(false, true));
+console.log(compareTrue(false, false));
+console.log(compareTrue(true, true));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base * height / 2)
 }
+
+console.log(calcArea(10,50));
+console.log(calcArea(5, 2));
+console.log(calcArea(51, 1));
+
 
 // Desafio 3
 function splitSentence() {
