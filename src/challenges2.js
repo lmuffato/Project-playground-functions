@@ -1,6 +1,23 @@
 // Desafio 10
 function techList(stringArray, name) {
-  for
+  let arrayObjects = [0];
+  for (let index = 0; index < stringArray.length; index += 1) {
+    let objects = {
+      tech: stringArray[index],
+      name: name
+    }
+    arrayObjects[index] = objects
+  }
+  arrayObjects.sort(function (a, b) {  //Entrei no MDN para entender sobre o comando sort de array, e lá tem essa explicação de como ordenar objetos.
+    if (a.tech > b.tech) {
+      return 1;
+    }
+    if (a.tech < b.tech) {
+      return -1;
+    } 
+    return 0;
+  });
+  return arrayObjects;
 }
 
 // Desafio 11
