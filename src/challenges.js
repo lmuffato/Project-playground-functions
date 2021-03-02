@@ -24,13 +24,20 @@ function splitSentence(expression) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(nameArray) {
   // seu código aqui
+  let lastAndFirst;
+  lastAndFirst = nameArray[nameArray.length - 1];
+  lastAndFirst += ', ';
+  lastAndFirst += nameArray[0];
+  return lastAndFirst;
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let total = 3 * wins + ties;
+  return total;
 }
 
 // Desafio 6
