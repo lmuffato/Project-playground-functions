@@ -33,7 +33,10 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+  // select max number
+  // compare this number to each array element
+  // add to a variable each time 'match'
+  // return the variable with number of matches 
 }
 
 // Desafio 7
