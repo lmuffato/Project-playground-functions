@@ -47,12 +47,14 @@ function catAndMouse(mouse, cat1, cat2) {
   let positionCat2 = 0;
   positionCat1 = cat1 - mouse;
   positionCat2 = cat2 - mouse;
-  if (positionCat1 < positionCat2) {
+  if (positionCat1 < positionCat2 && positionCat1 > 0) {
     return 'cat1';
   } if (positionCat1 > positionCat2) {
     return 'cat2';
-  } return 'os gatos trombam e o rato foge';
-} catAndMouse(1, 6, 6);
+  } if (positionCat1 === positionCat2 || positionCat1 + positionCat2 === 0) {
+    return 'os gatos trombam e o rato foge';
+  }
+} catAndMouse(1, 0, 2);
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
