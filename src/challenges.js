@@ -15,7 +15,6 @@ function calcArea(base, height) {
 function splitSentence(setence) {
   let setenceList = [];
   let split = '';
-
   for (let index = 0; index < setence.length + 1; index += 1) {
     if ((setence[index] === ' ') || (index + 1 === setence.length + 1)) {
       setenceList.push(split);
@@ -31,7 +30,6 @@ function splitSentence(setence) {
 function concatName(namesArray) {
   let firstItem;
   let secondItem;
-
   for (let index = 0; index < namesArray.length; index += 1) {
     if (index === 0) {
       secondItem = namesArray[index];
@@ -39,7 +37,6 @@ function concatName(namesArray) {
       firstItem = namesArray[index];
     }
   }
-
   return `${firstItem}, ${secondItem}`;
 }
 
