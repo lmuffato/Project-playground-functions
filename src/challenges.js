@@ -22,11 +22,10 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(arrayNames) {
-  let lastPosition = arrayNames.length - 1;
-  let arrayReturn = [arrayNames[lastPosition], arrayNames[0]];
-  return arrayReturn;
+  //let lastPosition = arrayNames.length - 1;
+  //let arrayReturn = [arrayNames[lastPosition], arrayNames[0]];
+  return `${arrayNames[arrayNames.length - 1]}, ${arrayNames[0]}`;
 }
-
 
 // Desafio 5
 function footballPoints() {
