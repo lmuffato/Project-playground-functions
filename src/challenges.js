@@ -104,7 +104,7 @@ function encode(word) {
 			changeWord[i] = 3;
 		} else if (changeWord[i] == 'o') {
 			changeWord[i] = 4;
-		} else if (changeWord[i] == 'e') {
+		} else if (changeWord[i] == 'u') {
 			changeWord[i] = 5;
 		}
 	}
