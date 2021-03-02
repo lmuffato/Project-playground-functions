@@ -31,7 +31,7 @@ function concatName(stringss) {
   // seu código aqui
   let primeiro = stringss[0];
   let ultimo = stringss[stringss.lenght];
-  let concat = `O resultado da concatenação é ${ultimo} ${primeiro}`;
+  let concat = ultimo + ' ' + primeiro;
   return concat;
 }
 
