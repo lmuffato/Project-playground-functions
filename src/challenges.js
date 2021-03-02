@@ -2,12 +2,14 @@
 function compareTrue() {
   let valueA = true;
   let valueB = true;
+  let result;
 
-  if (valueA = true && valueB = true) {
-    return true;
+  if ((valueA = true) && (valueB = true)) {
+    result = true;
   } else {
-    return false;
+    result = false;
   }
+  return result
 }
 
 // Desafio 2

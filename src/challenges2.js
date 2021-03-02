@@ -1,7 +1,7 @@
 // Desafio 10
 function techList() {
   // seu código aqui
-  //Marilia
+  // Marilia
 }
 
 // Desafio 11
