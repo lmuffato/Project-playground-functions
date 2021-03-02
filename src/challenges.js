@@ -29,6 +29,9 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+//Este código criei baseado na minha amiga de Tribo Cla Oliveira que me ajudou demais nesse projeto <3
+//Recriou a função comigo pausadamente me explicando cada detalhe e me fazendo entender o por quê de cada coisa.
+//Obrigado Cla Oliveira!!!
 function higherNumber(arrayOfNumber) {
   let highest = arrayOfNumber[0];
   for (let index = 0; index < arrayOfNumber.length; index += 1) {
@@ -40,11 +43,11 @@ function higherNumber(arrayOfNumber) {
 }
 
 function highestCount(arrayOfNumber) {
-  let highest = higherNumber(arrayOfNumber);
+  let highNumber = higherNumber(arrayOfNumber);
   let higherRepeated = 0;
   for (let indexRepeated = 0; indexRepeated < arrayOfNumber.length; indexRepeated += 1) {
-    if (arrayOfNumber[indexRepeated] === highest) {
-      higherRepeated =+ 1
+    if (arrayOfNumber[indexRepeated] === highNumber) {
+      higherRepeated += 1;
     }
   }
  
