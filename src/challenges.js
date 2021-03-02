@@ -54,7 +54,7 @@ function highestCount(listNumbers) {
   let contRepete = 0;
   let valueHighest = listNumbers[0];
 
-  for (let indexOne = 0; indexOne < listNumbers.length; indexOne +=1) {
+  for (let indexOne = 0; indexOne < listNumbers.length; indexOne += 1) {
     if (listNumbers[indexOne] > valueHighest) {
       valueHighest = listNumbers[indexOne];
     }
@@ -121,8 +121,6 @@ function encode(codString) {
   arrayCodif = arrayCodif.split();
   return arrayCodif;
 }
-
-console.log(encode('hi there!'))
 function decode() {
   // seu código aqui
 }
