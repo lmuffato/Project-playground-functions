@@ -5,25 +5,24 @@ function compareTrue(value1,value2) {
   } else {
     return false;
   }
-
 }
 // Desafio 2
-//let base = 51;
-//let height = 1;
 function calcArea(base,height) {
   let triangleArea = (base * height)/2;
   return triangleArea;
 } 
-//console.log(calcArea(base,height));
+
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence(string) {
+  let sentenceSplit = string.split(" ");
+  return sentenceSplit;
+} 
 
 // Desafio 4
 function concatName() {
   // seu código aqui
-}
+
+  
 
 // Desafio 5
 function footballPoints() {
