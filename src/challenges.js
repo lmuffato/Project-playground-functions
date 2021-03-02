@@ -24,13 +24,13 @@ console.log(splitSentence('foguete'));
 function concatName(stringArrays) {
   let firstItem = stringArrays[0];
   let lastItem = stringArrays[stringArrays.length - 1];
-  return `${lastItem} , ${firstItem}`;
+  return [lastItem, firstItem];
 }
-console.log(concatName(['Giovanni', 'Julia', 'Maldonado']));
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
-  // seu código aqui
+
 }
 // Desafio 6
 function highestCount() {
