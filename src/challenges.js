@@ -39,7 +39,20 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(array) {
+  let high = array[0];
+  let counter = 0;
+  for(let key in array) {
+    if (array[key] > high) {
+      high = array[key];
+    }
+  }
+  for(let key in array) {
+    if (array[key] === high) {
+      counter+=1;
+    }
+  }
+  return counter;
   // seu código aqui
 }
 
@@ -68,6 +81,7 @@ console.log(calcArea(51, 1));
 console.log(splitSentence('go Trybe'));
 console.log(concatName(names));
 console.log(footballPoints(14, 8));
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 module.exports = {
   calcArea,
