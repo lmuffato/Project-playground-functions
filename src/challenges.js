@@ -30,7 +30,7 @@ function concatName() {
 function footballPoints(wins,ties) {
   // seu código aqui
   let totalPoints = 3*wins + ties;
-  return 'a quantidade total de pontos é ' + totalPoints;
+  return totalPoints + ' pontos';
 }
 
 // Desafio 6
