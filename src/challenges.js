@@ -19,7 +19,7 @@ function calcArea(base, height) {
 function splitSentence(expression) {
   // seu código aqui
   let splitExpression = new Array(0);
-  splitExpression += expression.split(' ');
+  splitExpression = (expression.split(' '));
   return splitExpression;
 }
 
