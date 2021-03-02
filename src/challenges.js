@@ -3,7 +3,7 @@ let teamFlamengoChampion = true;
 let teamInterNoChampion = true;
 
 function compareTrue(teamFlamengoChampion, teamInterNoChampion) {
-  if (teamFlamengoChampion && teamInterNoChampion === true) {
+  if (teamFlamengoChampion === true && teamInterNoChampion === true) {
     return true;
     }
 }
