@@ -18,8 +18,8 @@ function splitSentence(blackHole) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(info) {
+  return `${info[info.length - 1]}, ${info[0]}`;
 }
 
 // Desafio 5
