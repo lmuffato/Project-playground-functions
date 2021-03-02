@@ -4,6 +4,7 @@ function compareTrue(value1, value2) {
     return true;
   } else {
     return false;
+  }
 }
 
 // Desafio 2
