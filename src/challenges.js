@@ -11,7 +11,7 @@ function compareTrue(values1, values2) {
 function calcArea(base, height) {
   // seu código aqui
   let result;
-  result = ( base * height ) / 2;
+  result = (base * height) / 2;
   return result;
 }
 
