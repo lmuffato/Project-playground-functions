@@ -19,10 +19,13 @@ function splitSentence(word) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let lastWord = array[(array.length - 1)];
+  let firstWord = array[0];
+  let result = `${lastWord}, ${firstWord}`;
+  return result;
 }
-
+// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 // Desafio 5
 function footballPoints() {
   // seu código aqui
