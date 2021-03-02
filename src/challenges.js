@@ -89,13 +89,61 @@ function fizzBuzz(array) {
   };
   return codfied
 }
-console.log(fizzBuzz([4,5,6,9,10,12,13,2,15]))
+
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let code = str.split('');
+  for (let index in code)
+  { 
+    if (code[index] === 'a')
+    {
+      code[index] = 1 + ''
+    }
+    else if (code[index] === 'e')
+    {
+      code[index] = 2 + ''
+    }
+    else if (code[index] === 'i')
+    {
+      code[index] = 3 + ''
+    }
+    else if (code[index] === 'o')
+    {
+      code[index] = 4 + ''
+    }
+    else if (code[index] === 'u')
+    {
+      code[index] = 5 + ''
+    }
+  }
+  return code.join('')
 }
-function decode() {
-  // seu código aqui
+function decode(str) {
+  let code = str.split('');
+  for (let index in code)
+  { 
+    if (code[index] === '1')
+    {
+      code[index] = 'a'
+    }
+    else if (code[index] === '2')
+    {
+      code[index] = 'e'
+    }
+    else if (code[index] === '3')
+    {
+      code[index] = 'i'
+    }
+    else if (code[index] === '4')
+    {
+      code[index] = 'o'
+    }
+    else if (code[index] === '5')
+    {
+      code[index] = 'u'
+    }
+  }
+  return code.join('')
 }
 
 module.exports = {
