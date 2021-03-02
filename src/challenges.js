@@ -58,6 +58,8 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  cat1 = (mouse - cat1);
+  cat2 = (mouse - cat2);
   if (cat1 > cat2) {
     return 'cat2';
   }
