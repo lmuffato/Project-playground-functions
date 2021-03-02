@@ -29,7 +29,7 @@ function concatName(array) {
   let firstArray = array[0];
   let lastArray = array[array.length - 1];
 
-  return `${firstArray}, ${lastArray}`;
+  return `${lastArray}, ${firstArray}`;
 }
 
 // Desafio 5
@@ -72,5 +72,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-
-console.log(concatName(['captain', 'my', 'captain']));
