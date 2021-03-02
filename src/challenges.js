@@ -11,8 +11,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentence) {
-  let noSpaces = sentence.splt(' ');
-  return noSpaces;
+  return sentence.split(' ');
 }
 
 // Desafio 4
