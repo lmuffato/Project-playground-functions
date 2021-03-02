@@ -6,47 +6,49 @@ function compareTrue(number1, number2) {
     return false;
   }
 }
-
+//console.log(compareTrue(true,false))
 
 // Desafio 2
 function calcArea(base, height) {
-  if (base === 10 && height === 50) {
-    return (base * height) / 2;
-  } else if (base === 5 && height === 2) {
-    return (base * height)  / 2;
-  } else if (base === 51 && height === 1) {
-    return (base * height) / 2;
-  }
+  let area = (base * height) / 2;
+  return area; 
 }
-
+//console.log(calcArea(10,50))
 
 // Desafio 3
-function splitSentence(frase) {
-  if (frase === 'go Trybe') {
-    return ['go', 'Trybe'];
-  } else if (frase === 'vamo que vamo') {
-    return ['vamo', 'que', 'vamo'];
-  } else if (frase === 'foguete') {
-    return ['foguete']
-  }
-
+function splitSentence(string) {
+ let symbol = [];
+ let phrase = '';
+ 
 }
+console.log(splitSentence('go Trybe'))
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(strings) {
+  for(let index = 0; index < strings.length; index+=1) {
+    return strings[strings.length -1] + ',' + strings[index] 
+   
+  }
+  
 }
+//console.log(concatName(['captain', 'my', 'captain']))
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let vitoria = 3;
+  let empate = 1;
+  let resultado = (wins * vitoria + ties * empate);
+  return resultado;
 }
+//console.log(footballPoints(0,0))
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  if(index = 0; index < numbers.length; index++) {
+return index[numbers.length];
+  }
 }
-
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
