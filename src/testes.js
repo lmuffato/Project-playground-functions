@@ -1,5 +1,5 @@
-let a = 'luca'
+let a = []
 
-a = a + 's'
+a = 'lucas' + 'joao'
 
 console.log(a)
