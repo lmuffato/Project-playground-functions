@@ -1,5 +1,4 @@
 // Desafio 1
-
 function compareTrue(a, b) {
   if (a === true && b === true) {
     return true
@@ -14,9 +13,10 @@ function calcArea(base, height) {
 };
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentenceToSplit) {
+  return sentenceToSplit.split(' ')
 }
+// referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
 
 // Desafio 4
 function concatName() {
