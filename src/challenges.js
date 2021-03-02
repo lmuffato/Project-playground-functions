@@ -1,16 +1,38 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(value1, value2) {
+  if(value1===true && value2===true){
+    return true;
+  }
+  else{
+    return false;
+  }
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base*height)/2;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  var arr=[];
+  var i=0;
+  var a;
+  var b;
+  for(let index=0; index<string.length; index+=1){
+      a=string[index];
+     if(string[index]===' '){
+        i+=1;
+      }
+
+      if(arr[i]===undefined){
+        arr[i]=string[index];
+      }
+      else{
+        arr[i]+=string[index];
+      }
+  }
+  return arr;
 }
 
 // Desafio 4
@@ -58,5 +80,9 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+
+
+
 
 
