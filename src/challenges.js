@@ -16,8 +16,10 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  
+
+  return string.split('').join('');
 }
 
 // Desafio 4
@@ -53,7 +55,7 @@ function decode() {
   // seu código aqui
 }
 
-console.log(calcArea(10, 50));
+console.log(splitSentence('Vamo que vamo'));
 
 module.exports = {
   calcArea,
