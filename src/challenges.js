@@ -79,7 +79,7 @@ function fizzBuzz(array) {
     } else if (diviFor5 && !diviFor3) {
       fizzBuzz.push('buzz')
     } else {
-      fizzBuzz.push('bug');
+      fizzBuzz.push('bug!');
     }
   }
   return fizzBuzz;
