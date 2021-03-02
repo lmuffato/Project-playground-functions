@@ -4,15 +4,10 @@ function compareTrue(value1, value2) {
   let retorno = null;
 
   if (value1 === true && value2 === true) {
-
     retorno = true;
-
   } else {
-
     retorno = false;
-
   }
-
   return retorno;
 }
 
@@ -20,16 +15,11 @@ function compareTrue(value1, value2) {
 function calcArea(base, height) {
   // seu código aqui
   let area = 0;
-
-  if (base = 0 || height = 0) {
-    return console.log('O valor da base ou da altura é igual a zero. Por favor, insira um valor válido.');
-  } else {
-    area = base * height;
-  }
-
+  area = base * height;
   return area;
-
 }
+
+calcArea(10, 25);
 
 // Desafio 3
 function splitSentence() {
