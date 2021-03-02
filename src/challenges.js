@@ -1,9 +1,16 @@
-// Desafio 1
-function compareTrue() {
-  if (2 > 1 && 4 > 2) {
-    return compareTrue;
+// Desafio 1 (Confirmar se o resto das divisões são respectivamente "0" e "1")
+let number1 = 10;
+let number2 = 5;
+
+function compareTrue(number1, number2) {
+  if (number1 % 2 == 0 && number2 % 2 == 1) {
+    return true;
+  } else {
+    return false;
   }
 }
+
+console.log(compareTrue(number1, number2));
 
 // Desafio 2
 function calcArea() {
