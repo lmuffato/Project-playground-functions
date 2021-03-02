@@ -23,16 +23,35 @@ function concatName(arrayOfStrings) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  wins = wins * 3;
+  wins *= 3;
   let points = wins + ties;
   return points;
 }
-console.log(10, 4)
+
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function higherNumber(arrayOfNumber) {
+  let highest = arrayOfNumber[0];
+  for (let index = 0; index < arrayOfNumber.length; index += 1) {
+    if (arrayOfNumber[index] > highest) {
+      highest = arrayOfNumber[index];
+    }
+  }
+  return highest;
 }
 
+function highestCount(arrayOfNumber) {
+  let highest = higherNumber(arrayOfNumber);
+  let higherRepeated = 0;
+  for (let indexRepeated = 0; indexRepeated < arrayOfNumber.length; indexRepeated += 1) {
+    if (arrayOfNumber[indexRepeated] === highest) {
+      higherRepeated =+ 1
+    }
+  }
+ 
+return higherRepeated;
+}
+let arrayOfNumber = [1, 3 ,6 ,7 ,7 ,5 ,2]
+console.log(highestCount(arrayOfNumber))
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
