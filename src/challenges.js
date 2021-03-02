@@ -39,7 +39,7 @@ function maiorNum(arrayNumbers) {
 
 function highestCount(numbers) {
   let repeats = 0;
-  var highestNum = maiorNum(numbers)
+  const highestNum = maiorNum(numbers);
 
   for (let index2 = 0; index2 <= numbers.length; index2 += 1) {
     if (highestNum === numbers[index2]) {
@@ -55,7 +55,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let positionCat2 = Math.abs(mouse - cat2);
   if (positionCat1 > positionCat2) {
     return 'cat2';
-  } else if (positionCat1 < positionCat2) {
+  } if (positionCat1 < positionCat2) {
     return 'cat1';
   }
   return 'os gatos trombam e o rato foge';
