@@ -27,22 +27,21 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arrayOfNumbers) {
-  let dict = {};
-  for (let number in arrayOfNumbers) {
-    if (typeof dict[arrayOfNumbers[number]] === 'undefined') {
-      dict[arrayOfNumbers[number]] = 1;
-    } else {
-      dict[arrayOfNumbers[number]] += 1;
-    }
-  }
   let highest = -1 * Number.MAX_VALUE;
-  for (let key in dict) {
-    if (dict[key] > highest) {
-      highest = dict[key];
+  let count = 0;
+  for (let number in arrayOfNumbers) {
+    if (arrayOfNumbers[number] > highest) {
+      highest = arrayOfNumbers[number];
+      count = 1;
+    } else if (arrayOfNumbers[number] === highest) {
+      count += 1;
     }
   }
-  return highest;
+  return count;
 }
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
