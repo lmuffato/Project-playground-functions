@@ -8,7 +8,7 @@ function compareTrue(value1, value2) {
 console.log(compareTrue(true, true));
 
 // Desafio 2
-function calcArea(base, height) {
+function calcArea() {
   // seu código aqui
 }
 
@@ -62,4 +62,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-
