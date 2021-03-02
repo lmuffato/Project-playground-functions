@@ -6,11 +6,16 @@ function compareTrue(param1, param2) {
   }
   return false;
 }
-console.log(compareTrue(false, false));
+//console.log(compareTrue(true, true));
+
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
-}
+  function calcArea(base, height) {
+    let area = (base * height) / 2;     //objeto
+    return area;
+  }
+//console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence() {
