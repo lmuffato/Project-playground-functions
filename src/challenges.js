@@ -24,8 +24,12 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayString) {
+  let string;
+  let lastIndex;
+  lastIndex = arrayString.length - 1;
+  string = `${arrayString[lastIndex]},${arrayString[0]}`;
+  return string;
 }
 
 // Desafio 5
@@ -55,6 +59,8 @@ function encode() {
 function decode() {
   // seu código aqui
 }
+let a = ['captain', 'my', 'captain'];
+console.log(concatName(a));
 module.exports = {
   calcArea,
   catAndMouse,
