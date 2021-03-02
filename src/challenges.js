@@ -54,7 +54,7 @@ function decode() {
 // Testando os códigos
 
 // Requisito 1
-compareTrue(true, true);
+compareTrue(true, true)
 
 module.exports = {
   calcArea,
