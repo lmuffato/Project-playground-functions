@@ -68,10 +68,8 @@ function highestCount(listNumbers) {
   return contRepete;
 }
 
-console.log(highestCount([0, 0, 0]))
-
 // Desafio 7
-function catAndMouse(cat1, cat2) {
+function catAndMouse(mouse, cat1, cat2) {
   if (cat1 > cat2) {
     return 'cat2'
   } else if (cat2 > cat1) {
