@@ -5,18 +5,18 @@ function compareTrue(value1, value2) {
   } else {
     return false;
   } 
-} 
-console.log(compareTrue(false, false));
+}
 
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
 }
-console.log (calcArea(5, 2));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(phrase) {
+  let result = phrase.split(" ");
+
+  return result;
 }
 
 // Desafio 4
