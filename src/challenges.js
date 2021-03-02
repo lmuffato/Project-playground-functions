@@ -16,12 +16,13 @@ function calcArea(base, height) {
 function splitSentence(sentenceToSplit) {
   return sentenceToSplit.split(' ')
 }
-// referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
+// referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split //
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(stringsArray) {
+  return stringsArray.concat(stringsArray[0] + ', ' + stringsArray[-1])
 }
+// referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/concat //
 
 // Desafio 5
 function footballPoints() {
