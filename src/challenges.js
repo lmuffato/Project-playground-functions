@@ -25,13 +25,12 @@ function splitSentence(phrase) {
   return words;
 }
 
-console.log(splitSentence('go Trybe'));
-console.log(splitSentence('vamo que vamo'));
-console.log(splitSentence('foguete'));
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arr) {
+  let firstName = arr[0];
+  let lastName = arr[arr.length - 1];
+  let names = lastName + ', ' + firstName;
+  return names;
 }
 
 // Desafio 5
