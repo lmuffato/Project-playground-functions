@@ -24,3 +24,5 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
+
+//Fim do Projeto

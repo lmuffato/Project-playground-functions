@@ -58,3 +58,5 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+//Fim do Projeto
