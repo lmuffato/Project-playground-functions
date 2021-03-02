@@ -1,11 +1,11 @@
 // Desafio 1
 function compareTrue(gradeProject, goingToLectures) {
   // seu código aqui
-    if (gradeProject === true && goingToLectures === true) {
+  if (gradeProject === true && goingToLectures === true) {
     return true;
     } else {
-      return false;
-    }
+    return false;
+  }
  }
 
 
@@ -18,9 +18,13 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  // seu código aqui 
+  return sentence.split(' ');
 }
+//Para resolução do Desafio 3 - Consultei os seguintes artigos: 
+//https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split 
+//https://www.codegrepper.com/code-examples/javascript/javascript+split+by+space
 
 // Desafio 4
 function concatName() {
