@@ -20,19 +20,13 @@ function splitSentence() {
 
 // Desafio 4
 function concatName(items) {
-  let firstItem = items[items.length -1];
-  let secondItem = items[0];
-  let concat = [firstItem, secondItem];
-  return concat;
+  // seu código aqui
 }
 
-items = ['Mariana', 'Silvinha', 'Luiza']
-
-console.log(concatName(items))
-
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let points = wins * 3 + ties * 1;
+  return points;
 }
 
 // Desafio 6
