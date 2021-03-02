@@ -11,8 +11,9 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(setence) {
+  const setenceList = setence.match(/\w+/g);
+  return setenceList;
 }
 
 // Desafio 4
