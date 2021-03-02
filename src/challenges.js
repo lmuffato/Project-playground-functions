@@ -58,14 +58,6 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(arrayN8) {
-  let arrayResultN8 = arrayN8;
-  for (let index in arrayN8) {
-    arrayResultN8[index] = phrase(arrayN8[index]);
-  }
-  return arrayResultN8;
-}
-
 function phrase(number) {
   if ((number % 3) === 0 && (number % 5) === 0) {
     return 'fizzBuzz';
@@ -78,42 +70,23 @@ function phrase(number) {
   }
 }
 
+function fizzBuzz(arrayN8) {
+  for (let index in arrayN8) {
+    arrayN8[index] = phrase(arrayN8[index]);
+  }
+  return arrayN8;
+}
+
 // Desafio 9
+function convert(stringX) {
+}
+
 function encode(stringIn) {
   let encodedString = stringIn;
   for (let indexIn in stringIn) {
     encodedString[indexIn] = convert(stringIn[indexIn]);
   }
   return encodedString;
-}
-
-console.log(encodedString[indexIn]);
-
-function convert(stringX) {
-  switch (stringX) {
-    case 'a': 
-      return '1';
-    case 'e':
-      return '2';
-    case 'i':
-      return '3';
-    case 'o':
-      return '4';
-    case 'u':
-      return '5';
-    case '1': 
-      return 'a';
-    case '2':
-      return 'e';
-    case '3':
-      return 'i';
-    case '4':
-      return 'o';
-    case '5':
-      return 'u';
-    default:
-      return stringX;
-  }
 }
 
 function decode(stringOut) {
@@ -124,8 +97,6 @@ function decode(stringOut) {
   }
   return decodedString;
 }
-
-
 
 module.exports = {
   calcArea,
