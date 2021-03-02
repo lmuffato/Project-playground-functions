@@ -46,11 +46,10 @@ function highestCount(numbers) {
   let counter = 1;
   let langer = numbers[0];
   for (let index = 1; index < numbers.length; index += 1) {
-    if (numbers[index] > numbers[(index - 1)]) {
+    if (numbers[index] > langer) {
       counter = 1;
       langer = numbers[index];
-    }
-    if (langer === numbers[index]) {
+    } else if (langer === numbers[index]) {
       counter += 1;
     }
   }
@@ -75,7 +74,7 @@ function decode() {
   // seu código aqui
 }
 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([0, 0, 0]));
 
 module.exports = {
   calcArea,
