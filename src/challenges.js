@@ -15,12 +15,10 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   return string.split(' ');
-  // Não entendi o porque!! Nem no Overflow tava tão "fácil" assim
 }
 
 // Desafio 4
 function concatName(array) {
-  // seu código aqui
   let lastName = array.length-1;
   let newArray = array[lastName], array[0];
   return newArray;
@@ -28,14 +26,12 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins,ties) {
-  // seu código aqui
   let resultWins = (wins * 3);
   return(resultWins + ties);
 }
 
 // Desafio 6
 function highestCount(array) {
-  // seu código aqui
   for (let index = 0; index < array.length; index += 1){
     let newArray = array[index];
 
@@ -50,11 +46,8 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // seu código aqui
   let distanceCat1 = math.abs(cat1 - mouse)
   let discanceCat2 = math.abs(cat2 - mouse)
-
-
   if (distanceCat1 > distanceCat2) {
     return 'cat2'
   } else if (distanceCat1 < distanceCat2) {
@@ -67,7 +60,6 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  // seu código aqui
   let arrayFizzBuzz = []
   for (let index = 0; index < array.length; index += 1){
     let testFizzBuzz = array[index]
@@ -87,7 +79,6 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  // seu código aqui
   for (index = 0; index < string.length; index += 1){
     let codingString = string[index]
       switch (string[index]) {
@@ -117,11 +108,9 @@ function encode(string) {
       return codingString
       console.log(codingString)
     }
-
-
 }
+
 function decode(array) {
-  // seu código aqui
   for (index = 0; index < string.length; index += 1){
     let decodingString = string[index]
       switch (string[index]) {
@@ -151,9 +140,6 @@ function decode(array) {
       }
       return codingString
     }
-
-
-
 
 }
 
