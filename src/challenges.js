@@ -102,8 +102,21 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumbers) {
+  let newArray = [];
+
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if ((arrayNumbers[index] % 3 === 0) && (arrayNumbers[index] % 5 === 0)) {
+      newArray.push('fizzBuzz');
+    } else if (arrayNumbers[index] % 3 === 0) {
+      newArray.push('fizz');
+    } else if (arrayNumbers[index] % 5 === 0) {
+      newArray.push('buzz');
+    } else {
+      newArray.push('bug!');
+    }
+  }
+  return newArray;
 }
 
 // Desafio 9
@@ -127,6 +140,8 @@ console.log(footballPoints(1, 2));
 console.log(highestCount([0, 0, 0]));
 
 console.log(catAndMouse(7, 9, 5));
+
+console.log(fizzBuzz([7, 9]));
 
 module.exports = {
   calcArea,
