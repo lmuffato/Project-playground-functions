@@ -4,12 +4,11 @@ function compareTrue(param1, param2) {
     return true;
   }
   return false;
-}
-//console.log(compareTrue(true, true));
+//console.log(compareTrue(true, true)); 
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height) / 2;     //objeto
+  let area = (base * height) / 2;//objeto
   return area;
 }
 //console.log(calcArea(51, 1));
@@ -23,9 +22,12 @@ function splitSentence(string) {
 //***Como usar o split: https://www.guj.com.br/t/o-metodo-split/100456
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-  function concatName() {
+function concatName(string) {
+  let name = string;
+  name = string[(string.length - 1)] + ", " + string[0];
+    return name;
+}
+  //console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
 function footballPoints() {
