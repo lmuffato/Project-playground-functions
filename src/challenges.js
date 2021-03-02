@@ -59,9 +59,21 @@ let contador = 0;
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2,) {
   // seu código aqui
+let resultado = 0;
+  if ((cat1 - mouse) < (cat2 - mouse)){
+  resultado = 'cat1';
+  }
+  else if ((cat1 - mouse) > (cat2 - mouse)){
+  resultado = 'cat2';
+  }
+  else {
+  resultado = 'Os gatos trombaram e o rato foge';  
+  }
+return resultado;
 }
+
 
 // Desafio 8
 function fizzBuzz() {
