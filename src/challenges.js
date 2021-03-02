@@ -27,8 +27,8 @@ function splitSentence(sentence) {
 // Desafio 4
 function concatName(nameList) {
   // seu código aqui
-  let newString;
-  newString = (nameList[nameList.length - 1],', ',nameList[0]).join('');
+  let newString = ' ';
+  newString = `${nameList[nameList.length - 1]} ${','} ${nameList[0]}`;
   return newString;
 }
 
@@ -46,6 +46,8 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount() {
   // seu código aqui
+
+
 }
 
 // Desafio 7
