@@ -33,11 +33,22 @@ function footballPoints(wins, ties) {
   return wins + ties
 }
 
+let resultado = 0;
+function highestCount(numbers) {
 
-// Desafio 6
-function highestCount() {
-  // seu código aqui
+  maxNumber = Math.max.apply(Math,numbers)
+  // Math.max.apply(Math,Array) found in https://stackoverflow.com/questions/1669190/find-the-min-max-element-of-an-array-in-javascript, Author GSerg
+ 
+  for (index = 0; index < numbers.length; index += 1){
+  if (maxNumber === numbers[index]){
+  resultado += 1;  
+  } 
 }
+return resultado
+}
+
+//Retorne 2 quando o parâmetro passado na funcão highestCount seja 
+
 
 // Desafio 7
 function catAndMouse() {
