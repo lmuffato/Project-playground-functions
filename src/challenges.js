@@ -19,13 +19,18 @@ function concatName() {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  pointWins = wins * 3;
+  return (pointWins + ties)
 }
 
+
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let highest;
+  for (index = 0; index < array.lenght; index += 1 ){
+  
+  }
 }
 
 // Desafio 7
@@ -46,7 +51,7 @@ function decode() {
   // seu código aqui
 }
 
-calcArea(10,12)
+
 
 module.exports = {
   calcArea,
