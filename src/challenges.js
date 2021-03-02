@@ -11,16 +11,32 @@ function compareTrue(val1, val2) {
 
 // Desafio 2
 function calcArea(base, height) {
-
   return ((base*height/2));
 }
 
 
-
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(strings) {
+
+  let armazenaPalavras = [];
+  let palavra = [];
+  strings+=' ';
+
+  for (let index in strings){
+    
+    if (strings[index]!=' ') {
+      armazenaPalavras += strings[index];
+    } else {
+      palavra.push(armazenaPalavras);
+      armazenaPalavras = [];
+    }
 }
+return palavra;
+
+}
+
+console.log(splitSentence('foguete'));
+
 
 // Desafio 4
 function concatName() {
