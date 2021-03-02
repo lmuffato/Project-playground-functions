@@ -48,8 +48,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumbers) {
+  let result = [];
+  for (let number of arrayNumbers) {
+    if (number % 3 === 0 && number % 5 === 0) {
+      result.push('fizzBuzz');
+    } else if (number % 3 === 0) {
+      result.push('fizz');
+    } else if (number % 5 === 0) {
+      result.push('buzz');
+    } else {
+      result.push('bug!');
+    }
+  }
+  return result;
 }
 
 // Desafio 9
@@ -72,3 +84,5 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
