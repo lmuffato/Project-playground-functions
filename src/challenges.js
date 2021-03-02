@@ -5,8 +5,11 @@ let teamInterNoChampion = true;
 function compareTrue(teamFlamengoChampion, teamInterNoChampion) {
   if (teamFlamengoChampion === true && teamInterNoChampion === true) {
     return true;
-    }
+  }
 }
+
+console.log(compareTrue(teamFlamengoChampion, teamInterNoChampion));
+
 
 // Desafio 2
 function calcArea() {
