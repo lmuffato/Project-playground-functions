@@ -34,9 +34,18 @@ function splitSentence(str) {
 console.log(splitSentence('vamo que vamo'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(str) {
+  let myArray = [];
+  let myString = '';
+
+  myArray.push(str[str.length - 1]);
+  myArray.push(str[0]);
+
+  myString = myArray[0] + ', ' + myArray[1];
+  return myString;
 }
+
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
 function footballPoints() {
