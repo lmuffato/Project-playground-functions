@@ -68,8 +68,10 @@ function highestCount(listNumbers) {
     contRepete = '';
   }
   
-  return listNumbers[indexHighestValue];
+  return numberRepete;
 }
+
+console.log()
 
 // Desafio 7
 function catAndMouse(cat1, cat2) {
