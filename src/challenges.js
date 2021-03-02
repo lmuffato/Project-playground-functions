@@ -86,11 +86,63 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
+function encode(word) {
   // seu código aqui
+	// criando maneira de manipular o string
+	let changeWord = [];
+	let encondeWord = '';
+	for(let i = 0;i < word.length ; i += 1) {
+		changeWord.push(word[i]);
+	}
+	// modificando string
+	for(let i in changeWord) {
+		if(changeWord[i] == 'a') {
+			changeWord[i] = 1;
+		} else if (changeWord[i] == 'e') {
+			changeWord[i] = 2;
+		} else if (changeWord[i] == 'i') {
+			changeWord[i] = 3;
+		} else if (changeWord[i] == 'o') {
+			changeWord[i] = 4;
+		} else if (changeWord[i] == 'e') {
+			changeWord[i] = 5;
+		}
+	}
+	// construindo o output do string modificado
+	for(let i in changeWord) {
+		encondeWord += changeWord[i]
+	}
+	// retornando o string modificado
+	return encondeWord
 }
-function decode() {
+function decode(word) {
   // seu código aqui
+    // criando maneira de manipular o string
+    let changeWord = [];
+    let encondeWord = '';
+    for(let i = 0;i < word.length ; i += 1) {
+        changeWord.push(word[i]);
+    }
+    // modificando string
+    for(let i in changeWord) {
+        if(changeWord[i] == 1) {
+            changeWord[i] = 'a';
+        } else if (changeWord[i] == 2) {
+            changeWord[i] = 'e';
+        } else if (changeWord[i] == 3) {
+            changeWord[i] = 'i';
+        } else if (changeWord[i] == 4) {
+            changeWord[i] = 'o';
+        } else if (changeWord[i] == 5) {
+            changeWord[i] = 'u';
+        }
+    }
+    // construindo o output do string modificado
+    for(let i in changeWord) {
+        encondeWord += changeWord[i]
+    }
+    // retornando o string modificado
+    return encondeWord
 }
 
 module.exports = {
