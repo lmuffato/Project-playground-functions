@@ -16,12 +16,14 @@ function calcArea(base, height) {
 //console.log(calcArea(10,50))
 
 // Desafio 3
-function splitSentence(string) {
- let symbol = [];
- let phrase = '';
+function splitSentence(phrase) {
+  let result = phrase.split(" ");
+ 
+ return result;
  
 }
-console.log(splitSentence('go Trybe'))
+//console.log(splitSentence("go Trybe"))
+//pesquisei o método no site "https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254"
 
 // Desafio 4
 function concatName(strings) {
@@ -45,14 +47,22 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numbers) {
   if(index = 0; index < numbers.length; index++) {
-return index[numbers.length];
+
   }
 }
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2) {
+ if (mouse === cat1 && mouse === cat2) {
+   return "os gatos trombam e o rato foge"
+ } else if (cat2 > mouse && cat2 < cat1|| cat1 > mouse && cat1 > cat2) {
+ return "cat2"
+ } else if (cat2 > mouse && cat2 > cat1|| cat1 > mouse && cat1 < cat2 ) {
+   return "cat1"
+ }
 }
+console.log(catAndMouse(0,3,2))
 
 // Desafio 8
 function fizzBuzz() {
