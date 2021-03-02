@@ -88,6 +88,7 @@ function divisibleBy3and5(number) {
   return false;
 }
 
+// Disposição dos if/else inspirada pelo Bernardo no plantão
 function fizzBuzz(numbersArr) {
   return numbersArr.map((number) => {
     if (divisibleBy3and5(number)) {
