@@ -1,15 +1,11 @@
 // Desafio 1
-function compareTrue() {
-  let valueA = true;
-  let valueB = true;
-  let result;
-
-  if ((valueA = true) && (valueB = true)) {
-    result = true;
+function compareTrue(valueA, valueB) {
+  
+  if ((valueA === true) && (valueB === true)) {
+    return true;
   } else {
-    result = false;
+    return false;
   }
-  return result
 }
 
 // Desafio 2
