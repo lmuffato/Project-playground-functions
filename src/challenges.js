@@ -19,12 +19,12 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(nomes) {
-  return nomes.lenght-1 && nomes[0];
+  return nomes.lenght-1+ ' ' + nomes[0];
 }
 
 // Desafio 5
 function footballPoints(wins,ties) {
-
+  return wins + ties;
 }
 
 // Desafio 6
