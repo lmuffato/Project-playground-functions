@@ -108,7 +108,7 @@ function encode(string) {
     o: 4,
     u: 5
   };
-
+  string.toLowerCase();
   string = string.replace(/[aeiou]/g, m => encode[m]);
 
   return string;
