@@ -56,24 +56,13 @@ function highestCount(arrayNunbers) {
 
   return count;
 }
-
 // Desafio 7
-function negativeNumber(number1,number2) {
-  if (number1 < 0) {
-    number1 *= -1;
-  }
-  if (number2 < 0) {
-    number2 *= -1;
-  }
-}
-
 function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1;
   let distanceCat2;
   let nearCatch;
-  distanceCat1 = cat1 - mouse;
-  distanceCat2 = cat2 - mouse;
-  negativeNumber(distanceCat1,distanceCat2);
+  distanceCat1 = Math.abs(cat1 - mouse);
+  distanceCat2 = Math.abs(cat2 - mouse);
   if (distanceCat2 > distanceCat1) {
     nearCatch = 'cat1';
   } else if (distanceCat1 > distanceCat2) {
