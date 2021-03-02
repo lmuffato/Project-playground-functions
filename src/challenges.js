@@ -120,11 +120,11 @@ function fizzBuzz(arrayNumbers) {
 }
 
 let cifer = {
-  'a' : 1,
-  'e' : 2,
-  'i' : 3,
-  'o' : 4,
-  'u' : 5
+  a: 1,
+  e: 2,
+  i: 3,
+  o: 4,
+  u: 5,
 };
 
 // Desafio 9
@@ -148,14 +148,14 @@ function decode(stringKey) {
 
   for (let index = 0; index < stringKey.length; index += 1) {
     for (let key in cifer) {
-      if (stringKey[index] == cifer[key]) {
+      if ((parseInt(stringKey[index], 10)) === cifer[key]) {
         newString = newString.concat(key);
         inserted = true;
         break;
       }
     }
 
-    if(inserted === false){
+    if (inserted === false) {
       newString = newString.concat(stringKey[index]);
     }
 
@@ -165,21 +165,21 @@ function decode(stringKey) {
   return newString;
 }
 
-// console.log(compareTrue(true, true));
+console.log(compareTrue(true, true));
 
-// console.log(calcArea(10, 50));
+console.log(calcArea(10, 50));
 
-// console.log(splitSentence('go Trybe'));
+console.log(splitSentence('go Trybe'));
 
-// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
-// console.log(footballPoints(1, 2));
+console.log(footballPoints(1, 2));
 
-// console.log(highestCount([0, 0, 0]));
+console.log(highestCount([0, 0, 0]));
 
-// console.log(catAndMouse(7, 9, 5));
+console.log(catAndMouse(7, 9, 5));
 
-// console.log(fizzBuzz([7, 9]));
+console.log(fizzBuzz([7, 9]));
 
 console.log(encode('hi there!'));
 
