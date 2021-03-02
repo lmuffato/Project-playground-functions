@@ -1,21 +1,22 @@
 // Desafio 1
 function compareTrue(number1, number2) {
   if (number1 === true && number2 === true) {
-    return true
-  } else{
+    return true;
+  } else {
     return false;
   }
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  let result = (base * height) / 2 
-  return result; 
+  let result = (base * height) / 2;
+  return result;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(nameSplit) {
+  let resultSplit = nameSplit.split(" ");
+  return resultSplit;
 }
 
 // Desafio 4
@@ -59,7 +60,9 @@ console.log(calcArea(10, 50));
 console.log(calcArea(5, 2));
 console.log(calcArea(51, 1));
 
-
+console.log(splitSentence('go trybe'));
+console.log(splitSentence('vamo que vamo'));
+console.log(splitSentence('foguete'));
 
 module.exports = {
   calcArea,
