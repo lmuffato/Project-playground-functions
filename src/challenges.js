@@ -55,8 +55,8 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let dist1 = cat1 - mouse;
-  let dist2 = cat2 - mouse;
+  let dist1 = Math.abs(cat1 - mouse); 
+  let dist2 = Math.abs(cat2 - mouse);
   let result;
   if (dist1 > dist2) {
     result = 'cat2';
@@ -67,6 +67,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return result;
 }
+// decoberto a fuunção .abs que retorna o módulo no site: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 
 // Desafio 8
 function fizzBuzz() {
