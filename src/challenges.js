@@ -2,7 +2,7 @@
 function compareTrue(param1, param2) {
   if (param1 && param2 === true) {
     return true;
-  }
+  } return false;
 }
 
 // Desafio 2
@@ -18,7 +18,7 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName() {
-  // seu código aqui
+  // asfsdafasdf
 }
 
 // Desafio 5
