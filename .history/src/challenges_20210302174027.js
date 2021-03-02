@@ -8,7 +8,7 @@ function compareTrue(valor1,valor2) {
  }
  return resultado
 }
-console.log(compareTrue(true,false))
+console.log
 
 // Desafio 2
 function calcArea() {

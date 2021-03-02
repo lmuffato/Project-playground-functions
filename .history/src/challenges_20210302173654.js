@@ -6,9 +6,7 @@ function compareTrue(valor1,valor2) {
  } else {
    resultado = false
  }
- return resultado
 }
-console.log(compareTrue(true,false))
 
 // Desafio 2
 function calcArea() {
@@ -65,5 +63,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-
-

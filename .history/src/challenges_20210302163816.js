@@ -1,14 +1,12 @@
 // Desafio 1
 function compareTrue(valor1,valor2) {
-  let resultado;
   if (valor1 == true && valor2 == true) {
-    resultado = true
- } else {
-   resultado = false
- }
- return resultado
+    return  compareTrue = true 
+  } else {
+    return compareTrue = false
+  }
 }
-console.log(compareTrue(true,false))
+console.log(compareTrue)
 
 // Desafio 2
 function calcArea() {
@@ -65,5 +63,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-
-
