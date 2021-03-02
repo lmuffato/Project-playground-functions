@@ -1,8 +1,14 @@
-//Comentário aleatório a fim de realizar o Pull Request
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(firstBoolean, secondBoolean) {
+  if (firstBoolean && secondBoolean){
+    return true;
+  } else {
+    return false;
+  }
 }
+console.log(compareTrue(true, true));
+console.log(compareTrue(true, false));
+console.log(compareTrue(false, false));
 
 // Desafio 2
 function calcArea() {
