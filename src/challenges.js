@@ -14,17 +14,23 @@ function calcArea(base, height) {
   return (base * height) / 2;
 }
 
-console.log(calcArea(20,10));
+console.log(calcArea(10,50));
+console.log(calcArea(5,2));
+console.log(calcArea(51,1));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  return string.split('');
 }
 
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(stringArray) {
+  return stringArray[0] && stringArray.length;
 }
+
+let arrayTeste = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+console.log(concatName(arrayTeste));
 
 // Desafio 5
 function footballPoints() {
