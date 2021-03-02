@@ -2,9 +2,9 @@
 function compareTrue(values1, values2) {
   // seu código aqui
   if (values1 === true && values2 === true) {
-    return console.log(true);
+    return true;
   }
-    return console.log(false);
+  return false;
 }
 
 // Desafio 2
