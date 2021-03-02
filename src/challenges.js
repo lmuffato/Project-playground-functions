@@ -1,19 +1,16 @@
 // Desafio 1
 function compareTrue(val1, val2) {
-  if ((val1===true) && (val2===true)){
+  if ((val1 === true) && (val2 === true)){
     return true; 
   } else {
     return false;
   }
-
 }
-
 
 // Desafio 2
 function calcArea(base, height) {
-  return ((base*height/2));
+  return (((base * height) / 2));
 }
-
 
 // Desafio 3
 function splitSentence(strings) {
@@ -22,9 +19,8 @@ function splitSentence(strings) {
   let palavra = [];
   strings+=' ';
 
-  for (let index in strings){
-    
-    if (strings[index]!=' ') {
+  for (let index in strings){    
+    if (strings[index] != ' ') {
       armazenaPalavras += strings[index];
     } else {
       palavra.push(armazenaPalavras);
@@ -32,9 +28,7 @@ function splitSentence(strings) {
     }
 }
 return palavra;
-
 }
-
 
 // Desafio 4
 function concatName(paramNomes) {
@@ -55,19 +49,13 @@ function concatName(paramNomes) {
   return console.log(fullName);
 }
 
-
-
 // Desafio 5
 function footballPoints(wins, ties) {
-
-    let vit = wins*3;
-    let emp = ties*1;
-    let sum = vit+emp;
-
+    let vit = wins * 3;
+    let emp = ties * 1;
+    let sum = vit + emp;
     return (console.log(sum));
-  
 }
-
 
 // Desafio 6
 function highestCount(numeros) {
@@ -78,17 +66,15 @@ function highestCount(numeros) {
   let cont = 0;
 
   for (let index in arrayDeNum){
-    if (arrayDeNum[index]>maiorNum){
+    if (arrayDeNum[index] > maiorNum){
       maiorNum = arrayDeNum[index];
     }
   }
-
   for (let index in arrayDeNum){
       if (arrayDeNum[index] === maiorNum){
         cont++;
       }
   }
-
   return console.log(cont);
 }
 
@@ -101,47 +87,42 @@ function catAndMouse(mouse, cat1, cat2) {
   distCat1 = cat1-mouse;
   distCat2 = cat2-mouse;
 
-  if (cat1<cat2) 
-  {
+  if (cat1 < cat2) {
     return console.log('cat1');
-  } 
-  else if (cat2<cat1) 
-  {
+  } else if (cat2 < cat1){
     return console.log('cat2');
   } else {
     return (console.log('os gatos trombam e o rato foge'));
   }
-}
 
+}
 
 // Desafio 8
 function fizzBuzz(fizzBuzzParam) {
   
 let status = fizzBuzzParam;
 
-for (let index in fizzBuzzParam-1){
+for (let index in fizzBuzzParam - 1){
   status.push = fizzBuzzParam[index];
 }
 
 let symbols = [];
 
 for (let index in status){
-  if ((status[index]%3===0) && (status[index]%5===0)){
+  if ((status[index] % 3 === 0) && (status[index] % 5 === 0)){
     symbols.push('fizzBuzz');
 
-  } else if (status[index]%3===0){
+  } else if (status[index] % 3 === 0){
     symbols.push('fizz');
   } 
-  else if (status[index]%5===0){
+  else if (status[index] % 5 === 0){
     symbols.push('buzz');
   }
   else {
     symbols.push('bug');
   }
 }
-
 return console.log(symbols);
-
 }
 
 fizzBuzz([9,25]);
