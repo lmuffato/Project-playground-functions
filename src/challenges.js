@@ -82,6 +82,7 @@ function fizzBuzz(array) {
       fizzBuzz.push('bug');
     }
   }
+  return fizzBuzz;
 }
 
 // Desafio 9
