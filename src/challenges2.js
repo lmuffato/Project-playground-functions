@@ -47,7 +47,7 @@ function generatePhoneNumber(array) {
     }
   }
   
-  phoneNumber = '(' + firstPart + ')' + secondPart + '-' + thirdPart
+  phoneNumber = '(' + firstPart + ') ' + secondPart + '-' + thirdPart
 
   return phoneNumber
   
@@ -70,13 +70,13 @@ module.exports = {
   triangleCheck,
 };
 
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])) // normal
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, -8, 9, 0, 1])) // valor negativo
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 13, 0, 1])) // valor acima de 9
-// console.log(generatePhoneNumber([1, 2, 3, 3, 3, 7, 5, 6, 0, 1, 3])) // valor repetido 4x
-// console.log(generatePhoneNumber([1, 0, 1, 5, 9,8,9,9,6,2,0,2,3,7,6,7,6])) // mais numeros que o esperado
-// console.log(generatePhoneNumber([1, 0, 1, 5, 6])) // menos numeros que o esperado
-// console.log(generatePhoneNumber([8, 3, 3, 3, 9, 4, 7, 8, 5, 0, 1])) // valor repetido 3x
-// console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4])) // teste do git - número repetido 3x
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])) // normal
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, -8, 9, 0, 1])) // valor negativo
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 13, 0, 1])) // valor acima de 9
+console.log(generatePhoneNumber([1, 2, 3, 3, 3, 7, 5, 6, 0, 1, 3])) // valor repetido 4x
+console.log(generatePhoneNumber([1, 0, 1, 5, 9,8,9,9,6,2,0,2,3,7,6,7,6])) // mais numeros que o esperado
+console.log(generatePhoneNumber([1, 0, 1, 5, 6])) // menos numeros que o esperado
+console.log(generatePhoneNumber([8, 3, 3, 3, 9, 4, 7, 8, 5, 0, 1])) // valor repetido 3x
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4])) // teste do git - número repetido 3x
 
 
