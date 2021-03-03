@@ -58,8 +58,8 @@ let max = 0;
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let array = [mouse, cat1, cat2];
-  let mouseCat1Distancy = array[0] - array[1];
-  let mouseCat2Distancy = array[0] - array[2];
+  let mouseCat1Distancy = mouse - cat1;
+  let mouseCat2Distancy = mouse - cat2;
 
   if (mouseCat1Distancy > mouseCat2Distancy){
     return 'cat2';
@@ -131,7 +131,7 @@ function decode(numberToChar) {
 }
 
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(catAndMouse(20, 18, 10));
 
 module.exports = {
   calcArea,
