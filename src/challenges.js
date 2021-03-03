@@ -76,10 +76,7 @@ meuArray = [0, 0, 0];
 console.log(highestCount(meuArray));
 
 // Desafio 7
-function catAndMouse(animals) {
-  let mouse = animals[0];
-  let cat1 = animals[1];
-  let cat2 = animals[2];
+function catAndMouse(mouse, cat1, cat2) {
   let res;
 
   if((cat1 - mouse) < (cat2 - mouse)){
@@ -91,13 +88,13 @@ function catAndMouse(animals) {
   }
   return res;
 }
-  console.log(catAndMouse([0, 3, 2]));
-  console.log(catAndMouse([0, 6, 12]));
-  console.log(catAndMouse([0, 3, 3]));
+  console.log(catAndMouse(1, 4, 3));
+  console.log(catAndMouse(0, 6, 12));
+  console.log(catAndMouse(2, 3, 3));
 
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayNumber) {
   // seu código aqui
 }
 
