@@ -104,7 +104,11 @@ function hydrate(string) {
       break;
     }
   }
-  result += ' copos de água';
+  if (result == 1) {
+    result += ' copo de água';
+  } else {
+    result += ' copos de água';
+  }
   return result;
 }
 
