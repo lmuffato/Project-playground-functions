@@ -72,10 +72,51 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return nearCatch;
 }
+function divisibleBy3Function(number) {
+  let div3;
+ 
+  if (number % 3 === 0) {
+    div3 = true;
+  } else {
+    div3 = false;
+  }
+  return div3;
+}
+function divisibleBy5Function(number) {
+  let div5;
+  if (number % 5 === 0 ) {
+    div5 = true;
+  } else {
+    div5 = false;
+  }
+  return div5;
+}
+
+function arrayBug(divisibleBy3, divisibleBy5) {
+  let string;
+  if (divisibleBy3 === true && divisibleBy5 === true) {
+    string = 'fizzBuzz';
+  } else if (divisibleBy3 === true) {
+    string = 'fizz';
+  } else if (divisibleBy5 === true) {
+    string = 'buzz';
+  } else {
+    string = 'bug!';
+  }
+  return string;
+}
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNunbers) {
+  let divisibleBy3;
+  let divisibleBy5;
+  let arrayFizzBuzz = [];
+  for (let index = 0; index < arrayNunbers.length; index += 1) {
+    divisibleBy3 = divisibleBy3Function(arrayNunbers[index]);
+    divisibleBy5 = divisibleBy5Function(arrayNunbers[index]);
+    arrayFizzBuzz.push(arrayBug(divisibleBy3, divisibleBy5));
+  }
+  return arrayFizzBuzz;
 }
 
 // Desafio 9
@@ -85,6 +126,8 @@ function encode() {
 function decode() {
   // seu código aqui
 }
+let a = [2, 15, 7, 9, 45];
+console.log(fizzBuzz(a));
 module.exports = {
   calcArea,
   catAndMouse,
