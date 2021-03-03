@@ -32,7 +32,7 @@ function concatName(stringArray) {
   return `${ stringArray[stringArray.length -1] }, ${ stringArray[0] }`;
 }
 
-let arrayTeste = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+//let arrayTeste = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 //console.log(concatName(arrayTeste));
 
 // Desafio 5
@@ -74,7 +74,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (posição2 > posição1){
     return 'cat1';
   } else {
-    return 'os gatos trombam e o rato foge';$
+    return 'os gatos trombam e o rato foge';
   }
 }
 
@@ -118,11 +118,11 @@ function encode(string) {
       newString[index] = string[index];
     }
   }
-  return newString.join('');  //transforma em array de palavras
+  return newString.join('');  //junta os elementos de um array em strings
 }
 
 //let stringTeste = 'hi there!';
-//console.log(encode(stringTeste)); 
+//lconsole.log(encode(stringTeste)); 
 
 function decode(string) {
   let newString = string.split(''); //transforma string em array de caracteres
@@ -141,7 +141,7 @@ function decode(string) {
       newString[index] = string[index];
     }
   }
-  return newString.join('');  //transforma em array de palavras
+  return newString.join('');  //junta os elementos de um array em strings
 }
 
 module.exports = {

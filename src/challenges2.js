@@ -3,13 +3,19 @@ function techList(arrayNames, name) {
   if ( arrayNames.length === 0){
     return 'Vazio!'
   } 
+  
+  let arrayTech = [];
 
-  let objeto = {
-    tech: 'css',
-    name: 'Lucas'
-  };
-
+  for (let index = 0; index < arrayNames.length; index += 1){
+      arrayTech.push({
+      tech: arrayNames[index],
+      name: name
+    })
+  } 
+  return arrayTech;
 }
+
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'lucas'));
 
 // Desafio 11
 function generatePhoneNumber(arrayNumbers) {
@@ -38,25 +44,27 @@ function triangleCheck(lineA, lineB, lineC) {
   } 
 }
 // Desafio 13 
-// pesuisei o metodo .substring no site https://www.devmedia.com.br/javascript-substring-selecionando-parte-de-uma-string/39232
- // string.substring(0, string.length); // para extrair uma sequência de caracteres de uma string
+
 function hydrate(string) {
-  let stringCaracteres = string.split(' ');        
+  let stringCaracteres = string.split(' ');  //transformando a string em array       
   let agua = 0;
 
   for (let index = 0; index < stringCaracteres.length; index += 1){
-    if (stringCaracteres[index] == Number){
-      agua += 1;
+    let  converterCaracter = parseInt (stringCaracteres[index]) // A função parseInt() analisa um argumento string e retorna um inteiro
+    if (typeof(converterCaracter) === 'number'){ // O operador typeof retorna uma string indicando o tipo de um operando.
+      agua += agua;
     }
   }
 
-  if (agua = 1){
+  if (agua === 1){
     return agua + ' copo de água';
   } else if ( agua > 1){
-    return agua + ' copos de água'
+    return agua + ' copos de água';
   }
 }
 
+
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
   
 
 module.exports = {
