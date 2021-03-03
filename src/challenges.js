@@ -92,21 +92,24 @@ function divisibleBy5(num) {
 }
 
 function fizzBuzz(array) {
-  let resultArray;
+  let resultArray = [];
 
   for (let index = 0; index < array.length; index += 1) {
     if (divisibleBy3(array[index]) && divisibleBy5(array[index])) {
       resultArray.push('fizzBuzz');
-    } else if (divisibleBy3(array.length)) {
+    } else if (divisibleBy3(array[index])) {
       resultArray.push('fizz');
-    } else if (dibisibleBy5(array.length)) {
+    } else if (divisibleBy5(array[index])) {
       resultArray.push('buzz');
     } else {
       resultArray.push('bug!');
     }
-  return resultArray;
+  
   }
+  return resultArray.toString();
 }
+
+console.log(fizzBuzz([3,5,15,4]));
 
 // Desafio 9
 function encode(string) {

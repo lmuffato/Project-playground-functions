@@ -3,7 +3,7 @@ function techList(array, studentName) {
   for (let index = 0; index < array.length; index += 1) {
     return {
       tech: array[index],
-      name: studentName
+      name: studentName,
     }
   }
 }
