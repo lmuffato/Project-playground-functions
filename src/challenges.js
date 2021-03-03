@@ -118,7 +118,7 @@ function encode(string) {
       newString[index] = string[index];
     }
   }
-  return newString.split(' ');  //transforma em array de palavras
+  return newString.join('');  //transforma em array de palavras
 }
 
 //let stringTeste = 'hi there!';
@@ -141,7 +141,7 @@ function decode(string) {
       newString[index] = string[index];
     }
   }
-  return newString.split(' ');  //transforma em array de palavras
+  return newString.join('');  //transforma em array de palavras
 }
 
 module.exports = {
