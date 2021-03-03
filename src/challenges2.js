@@ -2,7 +2,7 @@
 
 function techList(technologies, profile) {
   if (technologies.length === 0) {
-    return console.log('Vazio!');
+    return 'Vazio!';
   }
 
   let arraySort = technologies.sort();
