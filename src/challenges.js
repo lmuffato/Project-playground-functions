@@ -39,13 +39,15 @@ function highestNumber(numbers) {
 function highestCount(numbers) {
   let higherNumber = highestNumber(numbers);
   let count = 0;
-  for (let index = 0; index < numbers.lenght; index += 1) {
-    if (numbers[index] === higherNumber) {
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] == higherNumber) {
       count += 1;
     }
     return count;
   }  
 }
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+
 
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
