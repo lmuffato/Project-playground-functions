@@ -113,36 +113,34 @@ function fizzBuzz(array) {
 
 // auxiliar desafio 9 encode
 function replace(char) {
-  let result = char;
   if (char === 'a') {
-    result = '1';
+    char = '1';
   } else if (char === 'e') {
-    result = '2';
+    char = '2';
   } else if (char === 'i') {
-    result = '3';
+    char = '3';
   } else if (char === 'o') {
-    result = '4';
+    char = '4';
   } else if (char === 'u') {
-    result = '5';
+    char = '5';
   }
-  return result;
+  return char;
 }
 
 // auxiliar desafio 9 decode
 function replaceDec(char) {
-  let result = char;
   if (char === '1') {
-    result = 'a';
+    char = 'a';
   } else if (char === '2') {
-    result = 'e';
+    char = 'e';
   } else if (char === '3') {
-    result = 'i';
+    char = 'i';
   } else if (char === '4') {
-    result = 'o';
+    char = 'o';
   } else if (char === '5') {
-    result = 'u';
+    char = 'u';
   }
-  return result;
+  return char;
 }
 
 // Desafio 9
