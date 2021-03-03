@@ -32,6 +32,7 @@ function footballPoints(wins, ties) {
   let tiesPoints = 1;
   return (winsPoints * wins) + (tiesPoints * ties);
 }
+
 let array = [0, 0, 0];
 function runArray(list) {
   list = [];
