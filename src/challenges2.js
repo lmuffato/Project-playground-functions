@@ -19,8 +19,6 @@ function techList(array, string) {
   return tecnologies;
 }
 
-console.log(techList(['JavaScript', 'CSS', 'Lint'], 'Mauricio'))
-
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
