@@ -1,19 +1,20 @@
 // Desafio 10
-function techList(techs, name) {
-  let devTechnology = { tech: techs, name };
+function techList(technology, name) {
+  if (technology.length === 0) {
+    return 'Vazio!';
+  }
+  // let devTechnology = { tech: techs, name };
+  let test = technology.sort();
   let devTechs = [];
-  for (let index = 0; index <= techs.length; index += 1) {
-    if (devTechnology.tech.length === 0) {
-      devTechs.push('Vazio!');
-    } else {
-      devTechnology.tech = techs[index];
-      devTechnology.name = name;
-      let devTechnologyCopy = Object.assign({}, devTechnology);
-      devTechs.push(devTechnologyCopy);
-    }
+  for (let index = 0; index < technology.length; index += 1) {
+    let devTechnology = { tech: test[index], name };
+    devTechs.push(devTechnology);
   }
   return devTechs;
 }
+
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
+
 // Desafio 11
 // Organiza os números do telefone
 function cellPhoneOrganizer(phoneNumberArrenge) {
@@ -63,7 +64,6 @@ function numbersCheck(numbers) {
 function generatePhoneNumber(phoneNumber) {
   return numbersCheck(phoneNumber);
 }
-console.log(generatePhoneNumber([0, 2, 3]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -87,8 +87,6 @@ function hydrate(string) {
   }
   return `${sumNumber} copos de água`;
 }
-
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
