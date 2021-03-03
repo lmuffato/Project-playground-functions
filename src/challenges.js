@@ -111,7 +111,7 @@ function fizzBuzz(array) {
   return result;
 }
 
-// auxiliar desafio 9 encode 
+// auxiliar desafio 9 encode
 function replace(char) {
   if (char === 'a') {
     char = '1';
