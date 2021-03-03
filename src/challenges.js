@@ -33,7 +33,7 @@ function concatName(names) {
   arrayNames = names;
   let lastName = arrayNames[arrayNames.length - 1];
   let firstName = arrayNames[0];
-  return lastName.concat(`, ${ firstName }`);
+  return lastName.concat(`, ${ { firstName } }`);
 }
 
 // Desafio 5
@@ -46,32 +46,24 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-// Pesquisei como a função retornaria a quantidade de vezes que o número aparece no canal Algoritmos
-// Link do vídeo: https://youtu.be/pkJXwPvselI
-
-highestCount([0,4,4,4,10,10]);
-
+// Pesquisei como função retornaria a quantidade de vezes que o
 function highestCount(numbers) {
   // seu código aqui
+  let maior = 0;
   let cont = 0;
-  let maior = highestCountLarger(numbers, 0);
 
-  for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] === maior) {
-      cont += 1;
+  for (let index = 0; index < numbers.length; index+=1) {
+    if(numbers[index] > maior) {
+      maior = numbers[index]
     }
   }
-  return console.log(cont);
-}
-
-function highestCountLarger(numbers, maior) {
   
-  for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] > maior) {
-      maior = numbers[index];
-    }
+  for (let index = 0; index < numbers.length; index+=1) {
+    if (numbers[index] === maior) {
+      cont+=1;
+    }    
   }
-  return maior;
+  return cont;
 }
 
 // Desafio 7
