@@ -48,15 +48,15 @@ function convertArrayToString(arrayOfNumbers, firstIndex, secondIndex) {
 function generatePhoneNumber(phoneNumber) {
   let message = ' ';
   if (phoneNumber.length !== 11) {
-    return message = 'Array com tamanho incorreto.';
+    message = 'Array com tamanho incorreto.';
   }
-    else if (theExcludentConditions(phoneNumber) === true || findDuplicates(phoneNumber) === true) {
-      return message = 'não é possível gerar um número de telefone com esses valores'; 
-    } else {
-      message += `(${convertArrayToString(phoneNumber, 0, 1)}) `;
-      message += `${convertArrayToString(phoneNumber, 2, 6)}-`;
-      message += `${convertArrayToString(phoneNumber, 7,10)}`;
-    }
+  if (theExcludentConditions(phoneNumber) === true || findDuplicates(phoneNumber) === true) {
+    message = 'não é possível gerar um número de telefone com esses valores';
+  } else {
+    message += `(${convertArrayToString(phoneNumber, 0, 1)}) `;
+    message += `${convertArrayToString(phoneNumber, 2, 6)}-`;
+    message += `${convertArrayToString(phoneNumber, 7, 10)}`;
+  }
   return message;
 }
 
