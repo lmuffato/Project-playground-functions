@@ -4,14 +4,24 @@ function compareTrue() {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let count = base * height/2;   
+  return count
 }
+  console.log(calcArea (10, 50));
+  console.log(calcArea (5, 2)); 
+  console.log(calcArea (51, 1));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  let splitted = sentence.split(' ')
+   
+  console.log(splitted)
 }
+   splitSentence('go Trybe');
+   splitSentence('vamo que vamo');
+   splitSentence('foguete');
+
 
 // Desafio 4
 function concatName() {
