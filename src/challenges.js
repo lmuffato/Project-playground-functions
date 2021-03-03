@@ -4,6 +4,8 @@ function compareTrue(gradeProject, goingToLectures) {
 
   if (gradeProject === true && goingToLectures === true) {
     return result === true;
+  } if (gradeProject === false || goingToLectures === false) {
+    return result === false;
   }
 }
 
