@@ -19,10 +19,10 @@ function techList(arrayTechNames, name) {
 function repeatNumbers(array) {
   for (let index = 0; index < array.length; index += 1) {
     let count = 0;
-    for (let index2 = 0; index2 < array.length; index2 +=1) {
+    for (let index2 = 0; index2 < array.length; index2 += 1) {
       if (array[index] === array[index2]) {
-        count+=1;
-        if (count >= 3){
+        count += 1;
+        if (count >= 3) {
           return true;
         }
       }
@@ -32,17 +32,17 @@ function repeatNumbers(array) {
 }
 
 function formatPhoneNumber(phoneNumberString) { // Função copiada de https://stackoverflow.com/questions/8358084/regular-expression-to-reformat-a-us-phone-number-in-javascript, às 19:03, do dia 03/03/2021.
-  var cleaned = ('' + phoneNumberString).replace(/\D/g, '')
-  var match = cleaned.match(/^(\d{2})(\d{5})(\d{4})$/)
+  let cleaned = ('' + phoneNumberString).replace(/\D/g, '');
+  let match = cleaned.match(/^(\d{2})(\d{5})(\d{4})$/);
   if (match) {
-    return '(' + match[1] + ') ' + match[2] + '-' + match[3]
+    return '(' + match[1] + ') ' + match[2] + '-' + match[3];
   }
-  return null
+  return null;
 }
 
 function generatePhoneNumber(arrayPhoneNumbers) {
-  if (arrayPhoneNumbers.length != 11){
-    return 'Array com tamanho incorreto.'
+  if (arrayPhoneNumbers.length !== 11) {
+    return 'Array com tamanho incorreto.';
   }
   for (let index = 0; index < arrayPhoneNumbers.length; index += 1) {
     if (arrayPhoneNumbers[index] < 0 || arrayPhoneNumbers[index] > 9 || repeatNumbers(arrayPhoneNumbers)) {
@@ -52,12 +52,17 @@ function generatePhoneNumber(arrayPhoneNumbers) {
   let phone = arrayPhoneNumbers.join('');
   return formatPhoneNumber(phone);
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (Math.abs(lineB - lineC) < lineA < lineB + lineC || 
+  Math.abs(lineA - lineC) < lineB < lineA + lineC || 
+  Math.abs(lineA - lineB) < lineC < lineA + lineB) {
+    return true;
+  }
+  return false;
 }
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
