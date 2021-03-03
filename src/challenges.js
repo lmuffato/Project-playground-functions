@@ -53,7 +53,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let positionCat2 = cat2 - mouse;
   if (positionCat1 < positionCat2) {
     return 'cat1';
-  } else if (positionCat2 < positionCat1) {
+  } else if (positionCat1 > positionCat2) {
     return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
@@ -78,14 +78,7 @@ function fizzBuzz(numbersArray) {
 
 // Desafio 9 - raciocinando neste. Verificar se o 7 consertou - ainda nao dei push.
 function encode(string) {
-  for (let index = 0; index <= string.length; index += 1) {
-    let aChange = string.replace(/a/, '1');
-    let eChange = string.replace(/e/, '2');
-    let iChange = string.replace(/i/, '3');
-    let oChange = string.replace(/o/, '4');
-    let uChange = string.replace(/u/, '5');
-  }
-  return string
+ 
 }
 function decode(string) {
   // seu código aqui
