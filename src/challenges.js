@@ -39,11 +39,11 @@ function highestCount(arrayNumbers) {
   let numberOfTimesItAppears = 0
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     if (arrayNumbers[index] > higherNumber) {
-      higherNumber = arrayNumbers [index]
+      higherNumber = arrayNumbers[index]
     }
   }
   for (let indexNumber  = 0; indexNumber < arrayNumbers.length; indexNumber += 1) {
-    if (arrayNumbers[indexNumber] === higherNumber) {
+    if (arrayNumbers[indexNumber] >= higherNumber) {
       numberOfTimesItAppears += 1
     }
   }
