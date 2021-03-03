@@ -80,7 +80,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  let resultArray = [];
+  let resultArray;
 
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
@@ -95,10 +95,6 @@ function fizzBuzz(array) {
   return resultArray;
   }
 }
-
-console.log(fizzBuzz)
-
-
 
 // Desafio 9
 function encode(string) {
