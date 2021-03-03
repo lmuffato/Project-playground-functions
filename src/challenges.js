@@ -22,9 +22,7 @@ function splitSentence(phrase) {
     } else {
       string[counter] += phrase[index];
     }
-    console.log(phrase[index]);
   }
-  console.log(string);
   return string;
 }
 
@@ -66,14 +64,24 @@ function catAndMouse(mouse, cat1, cat2) {
   if (cat1 > cat2) {
     return 'cat1';
   }
-  if (cat1 === cat2) {
-    return 'os gatos trombam e o rato foge';
-  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let string = [''];
+  for (let index = 0; index < numbers.length; index += 1) {
+    if ((numbers[index] % 3 === 0) && (numbers[index] % 5 === 0)) {
+      string[index] = 'fizzbuzz';
+    } else if (numbers[index] % 3 === 0) {
+      string[index] = 'fizz';
+    } else if (numbers[index] % 5 === 0) {
+      string[index] = 'buzz';
+    } else {
+      string[index] = 'bug!';
+    }
+  }
+  return string;
 }
 
 // Desafio 9
@@ -84,7 +92,8 @@ function decode() {
   // seu código aqui
 }
 
-console.log(catAndMouse(0, 6, 12));
+console.log(catAndMouse(0, 3, 3));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 module.exports = {
   calcArea,
