@@ -6,19 +6,12 @@ function techList(techNames, name) {
   };
   array = [];
 
-  for (let index = 0; index < techNames.length; index += 1) {
-    array.push((object = { tech: techNames[index], name: name }));
+  if (techNames.length == 0) {
+    return 'Vazio!';
   }
 
-  for (let i = 1; i < array.length; i++) {
-    for (let j = 0; j < i; j++) {
-      if (object.tech[i] < object.tech[j]) {
-        let position = object.tech[i];
-
-        object.tech[i] = object[j];
-        object.tech[j] = position;
-      }
-    }
+  for (let index = 0; index < techNames.length; index += 1) {
+    array.push((object = { tech: techNames[index], name: name }));
   }
 
   array.sort(function (x, y) {
