@@ -96,24 +96,25 @@ function fizzBuzz(arrayDivs) {
 // Desafio 9
 function encode(frase) {
   // seu código aqui
-  let vogal =['a', 'e', 'i', 'o', 'u'];
-  for (let i = 0; i < vogal.length; i += 1) {
-    if (vogal[i].toLowercase() = 'a') {
-      frase.replace(/a/gi,'1');
-    } else if (vogal[i].toLowercase() = 'e') {
-      frase.replace(/e/gi,'2');
-    } else if (vogal[i].toLowercase() = 'i') {
-      frase.replace(/i/gi,'3');
-    } else if (vogal[i].toLowercase() = 'o') {
-      frase.replace(/o/gi,'4');
-    } else if (vogal[i].toLowercase() = 'u') {
-      frase.replace(/u/gi,'5');
-    } 
-  }
-  return frase;
+  let Frase = frase.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  let frase1 = Frase.replace('a', '1');
+  let frase2 = frase1.replace('e', '2');
+  let frase3 = frase2.replace('i', '3');
+  let frase4 = frase3.replace('o', '4');
+  let frase5 = frase4.replace('u', '5');
+  let novaFrase = frase5;
+  return novaFrase;
 }
-function decode() {
+function decode(frase) {
   // seu código aqui
+  let Frase = frase;
+  let frase1 = Frase.replace('1', 'a');
+  let frase2 = frase1.replace('2', 'e');
+  let frase3 = frase2.replace('3', 'i');
+  let frase4 = frase3.replace('4', 'o');
+  let frase5 = frase4.replace('5', 'u');
+  let novaFrase = frase5;
+  return novaFrase;
 }
 
 module.exports = {
