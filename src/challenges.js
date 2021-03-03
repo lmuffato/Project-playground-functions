@@ -26,9 +26,7 @@ function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
 
-// Desafio 6
-//Desafio feito com sucesso graças ao tryber Luan Ramalho
-//Foi ele quem me deu a brilahnte dica de fazer uma nova function
+// Desafio 6 - Agradecimento especial ao tryber Luan Ramalho que fez toda a diferensa nesse desafio
 function highestNumber(arrayNumbers) {
   let highestNumberOfArray = arrayNumbers[0];
   for (let index = 0; index < arrayNumbers.length; index += 1) {
@@ -42,7 +40,7 @@ function highestNumber(arrayNumbers) {
 function highestCount(arrayNumbers) {
   let highNumber = highestNumber(arrayNumbers);
   let counterOfHighestNumber = 0;
-   for (let counter = 0; counter < arrayNumbers.length; counter += 1) {
+  for (let counter = 0; counter < arrayNumbers.length; counter += 1) {
     if (highNumber === arrayNumbers[counter]) {
       counterOfHighestNumber += 1;
     }
@@ -51,9 +49,19 @@ function highestCount(arrayNumbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceCat1 = Math.abs(mouse - cat1);
+  let distanceCat2 = Math.abs(mouse - cat2);
+  if (distanceCat1 > distanceCat2) {
+    return "cat2";
+  } else if (distanceCat1 < distanceCat2) {
+    return "cat1";
+  } else if (distanceCat1 === distanceCat2) {
+    return "os gatos trombam e o rato foge"
+  }
 }
+
+console.log(catAndMouse(10, 22, 22));
 
 // Desafio 8
 function fizzBuzz() {
