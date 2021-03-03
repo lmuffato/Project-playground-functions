@@ -102,7 +102,7 @@ function fizzBuzz(arrayNumbers) {
 
 // Desafio 9
 function encode(string) {
-  let newString =  [string.split('')]; //transforma string em array
+  let newString = string.split(' '); //transforma string em array
   for ( let index = 0; index < string.length; index += 1){
     if ( string[index] === 'a'){
       newString[index] = '1';
@@ -116,14 +116,14 @@ function encode(string) {
       newString[index] = '5';
     } 
   }
-  return newString; //transforma array em string
+  return newString.toString(); //transforma array em string
 }
 
 let stringTeste = 'hi there!';
 console.log(encode(stringTeste)); 
 
 function decode() {
-  let newString =  [string.split('')]; //transforma string em array
+  let newString = string.split(''); //transforma string em array
   for ( let index = 0; index < string.length; index += 1){
     if ( string[index] === '1'){
       newString[index] = 'a';
@@ -137,7 +137,7 @@ function decode() {
       newString[index] = 'u';
     } 
   }
-  return newString.toString(); //transforma array em string
+  return newString.toString();  //transforma array em string
 }
 
 module.exports = {
