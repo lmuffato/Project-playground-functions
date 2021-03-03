@@ -59,18 +59,19 @@ function highestCount(list) {
   return timesRepeat;
 }
 
+let arraylister = [0, 4, 4, 4, 9, 2, 1];
+console.log(highestCount(arraylister));
+
 function closesToEmentA(a, b, c) {
   let elementB = b - a;
   let elementC = c - a;
-
-  if(elementB === elementC) {
+  if (elementB === elementC) {
     return b && c;
-  } else if(elementB < elementC) {
+  } else if (elementB < elementC) {
     return b;
   } else {
     return c;
   }
-
 }
 
 // Desafio 7
