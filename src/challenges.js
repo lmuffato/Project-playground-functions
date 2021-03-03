@@ -43,9 +43,15 @@ function highestCount(numbers) {
 // Como encontra o número maior pesquisei no stackoverflow
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if ((cat1 - mouse) < (cat2 - mouse)) {
+    return 'cat1';
+  }else if ((cat2 - mouse) < (cat1 - mouse)){
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge'
 }
+// Fiquei na dúvida se a posição seria um número ou um par ordenado. Posição pode ser as duas coisas.
 
 // Desafio 8
 function fizzBuzz() {
