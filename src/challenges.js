@@ -19,13 +19,13 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayStrings) {
-  return arrayStrings[arrayStrings.length -1] + ', ' + arrayStrings[0]
+  return arrayStrings[arrayStrings.length - 1] + ', ' + arrayStrings[0];
 }
 
 // Desafio 5
 function footballPoints() {
-  // seu código aqui 
-} 
+  // seu código aqui
+}
 
 // Desafio 6
 function highestCount() {
