@@ -85,12 +85,12 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (distanciaCat1 > distanciaCat2) {
     win = 'cat2';
-    return console.log(win);
+    return win;
   } else if (distanciaCat2 > distanciaCat1) {
     win = 'cat1';
-    return console.log(win);
-  } 
-  return console.log("os gatos trombam e o rato foge");
+    return win;
+  }
+  return "os gatos trombam e o rato foge";
 }
 
 // Desafio 8
