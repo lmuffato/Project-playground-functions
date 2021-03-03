@@ -1,34 +1,32 @@
 // Desafio 1
-function compareTrue() {
-    //seu código aqui
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
     return true;
   }
   return false;
-} 
-console.log(compareTrue(false, false)); 
+}
+console.log(compareTrue(false, true));
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height) / 2;//objeto
+  let area = (base * height) / 2;
   return area;
 }
 console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence(string) {
-  let phraseArray = string.split (' ');
+  let phraseArray = string.split(' ');
   return phraseArray;
 }
 console.log(splitSentence('Go Trybe'));
-//***Como usar o split: https://www.guj.com.br/t/o-metodo-split/100456
+// *Como usar o split: https://www.guj.com.br/t/o-metodo-split/100456
 
 // Desafio 4
 function concatName(string) {
   let name = string;
   name = string[(string.length - 1)] + ", " + string[0];
-    return name;
+  return name;
 }
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
@@ -41,9 +39,9 @@ console.log(footballPoints(14, 8));
 
 // Desafio 6
 function highestCount(numbers) {
-  let higherNumber = 10000000;
+  let higherNumber = 0;
   for (let index in numbers) {
-      if (numbers[index] > higherNumber){
+  if (numbers[index] > higherNumber) {
       higherNumber = numbers[index];
       }
     }
@@ -55,8 +53,8 @@ function highestCount(numbers) {
     } 
     return numMax;
 }
-console.log(highestCount[0, 4, 4, 4, 9, 2, 1]);         
-//*Função para obter o maior valor https://www.youtube.com/watch?v=pkJXwPvselI
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));         
+// *Função para obter o maior valor https://www.youtube.com/watch?v=pkJXwPvselI
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -65,8 +63,29 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numbers) {
   let result = [];
-  
+  for (let index in numbers){
+      if (numbers[index] % 3 === 0){
+          numbers[index] = "fizz"
+      }
+  }
+  for (let index in numbers){
+    if (numbers[index] % 5 === 0){
+        numbers[index] = "buzz"
+    }
+  }
+  for (let index in numbers){
+    if (numbers[index] % 3 != 0 && numbers[index] % 5 != 0){
+        numbers[index] = "fizzBuzz"
+    }
+  }
+  for (let index in numbers){
+    if (numbers[index] % 3 != 0 && numbers[index] % 5 != 0){
+        numbers[index] = "fizzBuzz"
+    }
+  }
+  return result   
 }
+console.log(fizzBuzz[2, 15, 7, 9, 45]);
 
 // Desafio 9
 function encode() {
