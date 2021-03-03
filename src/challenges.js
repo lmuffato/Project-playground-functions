@@ -24,8 +24,8 @@ function concatName(name) {
   let firtArray = name[0];
   let ultimateArrayNumber = name.length - 1;
   let ultimateArray = name[ultimateArrayNumber]
-  let resultArray = firtArray + ' ' + ultimateArray;
-  return resultArray;
+  let resultArray = ultimateArray + ' ' + firtArray;
+  return resultArray; 
 }
 
 // Desafio 5
