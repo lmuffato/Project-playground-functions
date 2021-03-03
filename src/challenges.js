@@ -1,10 +1,12 @@
 // Desafio 1
 function compareTrue(value1, value2) {
+  let result; 
   if (value1 === true && value2 === true) {
-    return true;
+    result = true;
   } else {
-    return false;
+    result = false;
   }
+  return result;
 }
 
 console.log(compareTrue(true, false));
@@ -44,7 +46,6 @@ console.log(footballPoints(14, 8));
 
 // Desafio 6
 function highestCount(numbersArray) {
-
   let higherNum = numbersArray[0];
   let higherCount = 0;
   for (let index = 0; index < numbersArray.length; index += 1) {
