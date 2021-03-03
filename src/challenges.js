@@ -56,11 +56,10 @@ function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
 
-// Escreva uma função chamada `highestCount` que, ao receber uma array de números, retorne  a quantidade de vezes que o maior deles se repete.
-
-// Exemplo: caso o parâmetro de `highestCount` seja uma array com valores `[9, 1, 2, 3, 9, 5, 7]`, a função deverá retornar `2`, que é a quantidade de vezes que o número `9` (maior número do array) se repete.
-
 // Challenge 6
+// NEGATIVE_INFINITY reference below::
+// https://stackoverflow.com/questions/26614728/why-is-0-less-than-number-min-value-in-javascript
+
 function highestCount(arrayOfNumbers) {
   let highestNumber = Number.NEGATIVE_INFINITY;
   let repeatCounter = 0;
@@ -76,8 +75,19 @@ function highestCount(arrayOfNumbers) {
 }
 
 // Challenge 7
-function catAndMouse() {
-  // seu código aqui
+// Math.abs reference below:
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+
+function catAndMouse(mouse, cat1, cat2) {
+  cat1Proximity = Math.abs(mouse-cat1);
+  cat2Proximity = Math.abs(mouse-cat2);
+  if(cat1Proximity < cat2Proximity){
+    return 'cat1';
+  }else if (cat1Proximity > cat2Proximity) {
+    return 'cat2';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Challenge 8
