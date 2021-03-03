@@ -16,9 +16,11 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(names) {
+  let fullName = [];
   let firstName = names[0];
   let lastName = names[names.length - 1];
-  return (firstName) + (lastName);
+  fullName.push(lastName, firstName);
+  return fullName;
 }
 
 // Desafio 5
@@ -28,49 +30,24 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(numbers) {
-  let hightNumer = -1000000;
-  let countHighNumber = 0;
-  for (let key in numbers) {
-    if (numbers[key] > hightNumer) {
-      hightNumer = numbers[key];
-    }
-  }
-  for (let index in numbers) {
-    if (hightNumer === numbers[index]) {
-      countHighNumber += 1;
-    }
-  }
-  return countHighNumber;
+function highestCount() {
+
 }
 
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
-  if (math.abs(cat2 - mouse) > math.abs(cat1 - mouse)) {
-    return 'cait2'
+  let positionCat1 = Math.abs(mouse - cat1);
+  let positionCat2 = Math.abs(mouse - cat2);
+  if (positionCat1 > positionCat2) {
+    return 'cat2';
+  } if (positionCat1 < positionCat2) {
+    return 'cat1';
   }
-  if (math.abs(cat2 - mouse) < math.abs(cat1 - mouse)) {
-    return 'cait1'
-  }
-  if (math.abs(cat2 - mouse) === math.abs(cat1 - mouse)) {
-    return 'os gatos trombam e o rato foge';
-  }
+  return 'os gatos trombam e o rato foge';
+}
+
 // Desafio 8
-function fizzBuzz(numbers) {
-  let getFizzBuzz = [];
-  for (let index in numbers) {
-    if (numbers[index] % 3 === 0){
-      getFizzBuzz.push('fizz');
-    } 
-    else if (numbers[index] % 5 === 0) {
-      getFizzBuzz.push('buzz');
-    } else if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
-      getFizzBuzz.push('fizzBuzz');
-    } else {
-      getFizzBuzz.push('bug!');
-    }
-  }
-  return getFizzBuzz;
+function fizzBuzz() {
 }
 
 // Desafio 9 credits: https://www.youtube.com/watch?v=7a-a6lKoyIQ - https://www.youtube.com/watch?v=ZYPqPoijCAQ
