@@ -2,9 +2,7 @@
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return(true)
-  } else {
-    return(false)
-  }
+  } return(false)
 }
 
 // Desafio 2
@@ -77,12 +75,42 @@ function fizzBuzz(divisibleNumbers) {
 } console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(encript) {
+  let fraseEncode = '';
+  let alt = {
+      a: 1,
+      e: 2,
+      i: 3,
+      o: 4,
+      u: 5,
+    } 
+      for (let cript of encript) {
+      if (alt[cript]) {
+      fraseEncode += alt[cript]
+    } else {
+      fraseEncode += cript
+    }
+  } return fraseEncode;
 }
-function decode() {
-  // seu código aqui
-}
+console.log(encode("hi, there"))
+
+function decode(decript) {
+    let fraseDecode = '';
+    let alt = {
+        1: 'a',
+        2: 'e',
+        3: 'i',
+        4: 'o',
+        5: 'u',
+      } 
+        for (let uncript of decript) {
+        if (alt[uncript]) {
+        fraseDecode += alt[uncript]
+      } else {
+        fraseDecode += uncript
+      }
+    } return fraseDecode;
+  } console.log(decode("h3, th2r2"))
 
 module.exports = {
   calcArea,
