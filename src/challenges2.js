@@ -3,7 +3,6 @@ function techList(tech, name) {
   // seu código aqui
   let techListObject = {};
   let retornoObject = [];
-
   if (tech.length === 0) {
     return 'Vazio!';
   }
@@ -12,7 +11,7 @@ function techList(tech, name) {
     techListObject.name = name;
     retornoObject.push({ tech: [tech[i]], name });
   }
-  return retornoObject;
+  return retornoObject.sort();
 }
 
 // Desafio 11
