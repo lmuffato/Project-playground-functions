@@ -46,7 +46,7 @@ function footballPoints(wins, ties) {
 //console.log(footballPoints(0,0));
 
 // Desafio 6
-// usei esse link para me ajudar a decobrir qual o maior valor de um array https://pt.stackoverflow.com/questions/35202/como-saber-o-maior-valor-de-um-array
+// pesquisei o método para descobrir qual o maior numero de um array nesse link https://pt.stackoverflow.com/questions/35202/como-saber-o-maior-valor-de-um-array
 function highestCount(arrayNumbers) {
   let maiorNumero = 0;
   let repeticao = 0;
@@ -78,8 +78,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-console.log(catAndMouse(1,8,5));
-
+//console.log(catAndMouse(1,8,5));
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
@@ -103,14 +102,42 @@ function fizzBuzz(arrayNumbers) {
 
 // Desafio 9
 function encode(string) {
-  let substituirVogais =  string.replace('a', '1');
-  console.log(substituirVogais);
+  let newString =  [string.split('')]; //transforma string em array
   for ( let index = 0; index < string.length; index += 1){
-    
+    if ( string[index] === 'a'){
+      newString[index] = '1';
+    } else if ( string[index] === 'e'){
+      newString[index] = '2';
+    } else if ( string[index] === 'i'){
+      newString[index] = '3';
+    } else if ( string[index] === 'o'){
+      newString[index] = '4';
+    } else if ( string[index] === 'u'){
+      newString[index] = '5';
+    } 
   }
+  return newString; //transforma array em string
 }
+
+let stringTeste = 'hi there!';
+console.log(encode(stringTeste)); 
+
 function decode() {
-  // seu código aqui
+  let newString =  [string.split('')]; //transforma string em array
+  for ( let index = 0; index < string.length; index += 1){
+    if ( string[index] === '1'){
+      newString[index] = 'a';
+    } else if ( string[index] === '2'){
+      newString[index] = 'e';
+    } else if ( string[index] === '3'){
+      newString[index] = 'i';
+    } else if ( string[index] === '4'){
+      newString[index] = 'o';
+    } else if ( string[index] === '5'){
+      newString[index] = 'u';
+    } 
+  }
+  return newString.toString(); //transforma array em string
 }
 
 module.exports = {

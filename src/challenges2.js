@@ -1,5 +1,5 @@
 // Desafio 10
-function techList() {
+function techList(arrayNames, name) {
   // seu código aqui
 }
 
@@ -9,10 +9,14 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < lineB + lineC  && lineA > Math.abs(lineB - lineC) ) {
+    return true;
+  } else if (lineA > lineB + lineC) {
+    return false; 
+  } else if (lineA < Math.abs(lineB - lineC)) {
+  } return false;
 }
-
 // Desafio 13
 function hydrate() {
   // seu código aqui
