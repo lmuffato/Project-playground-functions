@@ -35,8 +35,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let cups = 0;
+  let drinks = string.split(' ');
+  for (let index = 0; index < drinks.length; index += 1) {
+    // eslint-disable-next-line radix
+    if (parseInt(drinks[index])) {
+      // eslint-disable-next-line radix
+      cups += parseInt(drinks[index]);
+    }
+  }
+  if (cups > 1) {
+    return `${cups} copos de água`;
+  }
+  return `${cups} copo de água`;
 }
 
 module.exports = {
