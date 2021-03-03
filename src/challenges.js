@@ -1,3 +1,4 @@
+/* eslint-disable complexity */
 // Desafio 1
 function compareTrue(value1, value2) {
   if (value1 && value2 === true) {
@@ -87,11 +88,58 @@ function fizzBuzz(array) {
 }
 // Requisito resolvido com ajuda de Jodiel Briesemeister no Slack
 // Desafio 9
-function encode() {
-  // seu código aqui
+// eslint-disable-next-line max-lines-per-function
+function encode(phrase) {
+  let result = '';
+  for (let index = 0; index < phrase.length; index += 1) {
+    switch (true) {
+    case phrase[index] === 'a':
+      result += 1;
+      break;
+    case phrase[index] === 'e':
+      result += 2;
+      break;
+    case phrase[index] === 'i':
+      result += 3;
+      break;
+    case phrase[index] === 'o':
+      result += 4;
+      break;
+    case phrase[index] === 'u':
+      result += 5;
+      break;
+    default:
+      result += phrase[index];
+    }
+  }
+  return result;
 }
-function decode() {
-  // seu código aqui
+
+// eslint-disable-next-line max-lines-per-function
+function decode(phrase) {
+  let result = '';
+  for (let index = 0; index < phrase.length; index += 1) {
+    switch (true) {
+    case phrase[index] === '1':
+      result += 'a';
+      break;
+    case phrase[index] === '2':
+      result += 'e';
+      break;
+    case phrase[index] === '3':
+      result += 'i';
+      break;
+    case phrase[index] === '4':
+      result += 'o';
+      break;
+    case phrase[index] === '5':
+      result += 'u';
+      break;
+    default:
+      result += phrase[index];
+    }
+  }
+  return result;
 }
 
 module.exports = {
