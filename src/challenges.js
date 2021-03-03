@@ -32,7 +32,7 @@ function concatName(stringss) {
   let primeiro = stringss[0];
   let tamanho = (stringss.length - 1);
   let ultimo = stringss[tamanho];
-  let concat = `${ultimo} ${primeiro}`;
+  let concat = `${ultimo}, ${primeiro}`;
   return concat;
 }
 
@@ -54,7 +54,7 @@ function highestCount(arrayNums) {
   if (arrayNums[1] !== 0 && arrayNums[0] === 0) {
     return 1;
   }
-  for (let i = 0; i < arrayNums.lenght; i += 1) {
+  for (let i = 0; i < arrayNums.length; i += 1) {
     if (arrayNums[i] === maior) {
       qtdMaior += 1;
     }
@@ -65,6 +65,9 @@ function highestCount(arrayNums) {
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
   // seu código aqui
+  let distCat1 = mouse - cat1;
+  let distCat2 = mouse - cat2;
+
 }
 
 // Desafio 8
