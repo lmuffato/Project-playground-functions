@@ -1,5 +1,8 @@
 // Desafio 10
 function techList(techsArray, username) {
+  if (techsArray === undefined) {
+    return 'Vazio!'
+  }
   let techsArraySorted = techsArray.sort();
   let arrayObjectTechs = [];
   for (let index = 0; index < techsArraySorted.length; index += 1) {
@@ -11,6 +14,7 @@ function techList(techsArray, username) {
   }
   return arrayObjectTechs;
 }
+console.log(techList());
 
 function countNumber(array, number) {
   let count = 0;
