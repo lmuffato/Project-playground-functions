@@ -42,22 +42,10 @@ function generatePhoneNumber(arrayOfNumbers) {
 }
 
 // Desafio 12
-function checkLine(lineToCheck, otherLine1, otherLine2) {
-  return (lineToCheck < otherLine1 + otherLine2 &&
-    lineToCheck > Math.abs(otherLine1 - otherLine2));
-}
-
 function triangleCheck(lineA, lineB, lineC) {
-  if (checkLine(lineA, lineB, lineC) === false) {
-    return false;
-  }
-  if (checkLine(lineB, lineC, lineA) === false) {
-    return false;
-  }
-  if (checkLine(lineB, lineC, lineC) === false) {
-    return false;
-  }
-  return true;
+  return (lineA < lineB + lineC
+    && lineA > Math.abs(lineB - lineC));
+
 }
 
 // Desafio 13
