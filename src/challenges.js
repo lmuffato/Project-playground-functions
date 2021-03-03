@@ -62,10 +62,33 @@ function catAndMouse(mousePosition, cat1Position, cat2Position) {
   return returnString;
 }
 
-// Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+/* Desafio 8
+Ideias e informações de como formular as funções retiradas do repositorio:
+https://github.com/tryber/sd-06-project-playground-functions/pull/101/files
+Obrigado Vinicius Buzato */
+function checkFizzAndBuzz(number) {
+  let fizz = (number % 3) === 0;
+  let buzz = (number % 5) === 0;
+  if (fizz && buzz) {
+    return 'fizzBuzz';
+  } if (fizz) {
+    return 'fizz';
+  } if (buzz) {
+    return 'buzz';
+  }
+  return 'bug!';
 }
+
+function fizzBuzz(arrayOfNumbers) {
+  let result = [];
+  for (let index = 0; index < arrayOfNumbers.length; index += 1) {
+    let number = arrayOfNumbers[index];
+    result[index] = checkFizzAndBuzz(number);
+  }
+  return result;
+}
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
