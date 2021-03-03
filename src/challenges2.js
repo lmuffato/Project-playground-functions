@@ -1,6 +1,32 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+/**
+ * Para esse desafio usei a implementação do João Pimentel para ordenar um array de objetos,
+ * link do StackOverFlow: https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value
+ */
+function compare(a, b) {
+  if (a.tech < b.tech) {
+    return -1;
+  }
+  if (a.tech > b.tech) {
+    return 1;
+  }
+  return 0;
+}
+
+function techList(array, name) {
+  let techListObjects = [];
+
+  for (let index = 0; index < array.length; index += 1) {
+    if (array.length == null) {
+      return 'Vazio!';
+    }
+
+    techListObjects.push({
+      tech: array[index],
+      name,
+    });
+  }
+  return techListObjects.sort(compare);
 }
 
 // Desafio 11
