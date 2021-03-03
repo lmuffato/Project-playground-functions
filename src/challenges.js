@@ -102,7 +102,7 @@ function fizzBuzz(arrayNumbers) {
 
 // Desafio 9
 function encode(string) {
-  let newString = string.split(''); //transforma string em array
+  let newString = string.split(''); //transforma string em array de caracteres
   for ( let index = 0; index < string.length; index += 1){
     if ( string[index] === 'a'){
       newString[index] = '1';
@@ -118,14 +118,14 @@ function encode(string) {
       newString[index] = string[index]
     }
   }
-  return newString.split(' ');  //transforma array em string
+  return newString.split(' ');  //transforma em array de palavras
 }
 
 //let stringTeste = 'hi there!';
 //console.log(encode(stringTeste)); 
 
 function decode() {
-  let newString = string.split(''); //transforma string em array
+  let newString = string.split(''); //transforma string em array de caracteres
   for ( let index = 0; index < string.length; index += 1){
     if ( string[index] === '1'){
       newString[index] = 'a';
@@ -137,9 +137,11 @@ function decode() {
       newString[index] = 'o';
     } else if ( string[index] === '5'){
       newString[index] = 'u';
-    } 
+    } else {
+      newString[index] = string[index]
+    }
   }
-  return newString.toString();  //transforma array em string
+  return newString.split(' ');  //transforma em array de palavras
 }
 
 module.exports = {
