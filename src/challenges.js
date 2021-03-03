@@ -27,23 +27,24 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(numbers) {
-  function highestNumber() {
-    let higherNumber = 0;
-    for (let index = 0; index < numbers.lenght; index += 1) {
-      if (numbers[index] > higherNumber) {
-        higherNumber = numbers[index];
-      }
+function highestNumber(numbers) {
+  let higherNumber = 0;
+  for (let index = 0; index < numbers.lenght; index += 1) {
+    if (numbers[index] > higherNumber) {
+      higherNumber = numbers[index];
     }
     return higherNumber;
-  }
+  } 
+}
+function highestCount(numbers) {
+  let higherNumber = highestNumber(numbers);
   let count = 0;
   for (let index = 0; index < numbers.lenght; index += 1) {
-    if (numbers[index] === highestNumber) {
+    if (numbers[index] === higherNumber) {
       count += 1;
     }
-  }
-  return count;
+    return count;
+  }  
 }
 
 // Desafio 7
@@ -52,7 +53,7 @@ function catAndMouse(cat1, cat2, mouse) {
     return cat1;
   } else if ((cat2 - mouse) < (cat1 - mouse)) {
     return cat2;
-  } else ((cat2 - mouse) === (cat1 - mouse)) {
+  } else {
     return 'Os gatos trombam e o rato foge';
   }
 }
