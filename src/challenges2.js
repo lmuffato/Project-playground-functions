@@ -16,14 +16,15 @@ function triangleCheck(lineA, lineB, lineC) {
     return false; 
   } 
 }
-// Desafio 13
+// Desafio 13 
+// pesuisei o metodo .substring no site https://www.devmedia.com.br/javascript-substring-selecionando-parte-de-uma-string/39232
 function hydrate(string) {
-  let string = string.split('');
+  let stringCaracteres = string.substring(0, string.length); // para extrair uma sequência de caracteres de uma string
   let alcool = 0;
   let agua = 0;
 
-  for (let index = 0; index < string.length; index += 1){
-    if ( string[index] === Number){
+  for (let index = 0; index < stringCaracteres.length; index += 1){
+    if (stringCaracteres[index] == Number){
       alcool += 1;
     }
   }
