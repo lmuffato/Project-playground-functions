@@ -69,27 +69,19 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 // decoberto a função Math.abs que retorna o módulo, no site: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 
-// função complementar exercicio 8 para ver se numero é somente divisivel por 3
+// função complementar exercicio 8 para ver se numero é divisivel por 3
 function numbDiv3(num) {
   let result = false;
-  if (num % 3 === 0 && num % 5 !== 0) {
+  if (num % 3 === 0) {
     result = true;
   }
   return result;
 }
 
-// função complementar exercicio 8 para ver se numero é somente divisivel por 5
+// função complementar exercicio 8 para ver se numero é divisivel por 5
 function numbDiv5(num) {
   let result = false;
-  if (num % 5 === 0 && num % 3 !== 0) {
-    result = true;
-  }
-  return result;
-}
-// função complementar exercicio 8 para ver se numero é divisivel por 3 e 5
-function numbDiv3E5(num) {
-  let result = false;
-  if (num % 5 === 0 && num % 3 === 0) {
+  if (num % 5 === 0) {
     result = true;
   }
   return result;
@@ -99,18 +91,19 @@ function numbDiv3E5(num) {
 function fizzBuzz(array) {
   let result = [];
   for (let index in array) {
-    if (numbDiv3(array[index]) === true) {
-      result.push('fizz');
-    } else if (numbDiv3E5(array[index]) === true) {
+    if (numbDiv3(array[index]) === true && numbDiv5(array[index]) === true) {
       result.push('fizzBuzz');
+    } else if (numbDiv3(array[index]) === true) {
+      result.push('fizz');
     } else if (numbDiv5(array[index]) === true) {
       result.push('buzz');
     } else {
-      result.push('bug');
+      result.push('bug!');
     }
   }
   return result;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
