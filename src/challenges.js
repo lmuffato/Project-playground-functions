@@ -71,16 +71,17 @@ function highestCount(array){
   return repeaterchecker
 }
 // Desafio 7
-function catAndMouse(mouse,cat1,cat2) {
-  if(cat1<cat2){
+function catAndMouse(mouse,cat1,cat2){
+  if((mouse-cat1)>(mouse-cat2)){
     return 'cat1';
-  }else if(cat1>cat2){
+  }else if((mouse-cat2)>(mouse-cat1)){
     return 'cat2';
-  }else if(cat1==cat2){
+  }else if((mouse-cat1)==(mouse-cat2)){
     return 'os gatos trombam e o rato foge';
   }
 
 }
+console.log(catAndMouse(5,3,3))
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
