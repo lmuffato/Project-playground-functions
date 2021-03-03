@@ -11,7 +11,7 @@ function techList(tech, name) {
     techListObject.name = name;
     retornoObject.push({ tech: [tech[i]], name });
   }
-  return retornoObject.sort();
+  return retornoObject;
 }
 
 // Desafio 11
