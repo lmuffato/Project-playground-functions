@@ -50,9 +50,9 @@ function highestCount(numbers) {
 function catAndMouse(cat1, cat2, mouse) {
   if ((cat1 - mouse) < (cat2 - mouse)) {
     return cat1;
-  } if ((cat2 - mouse) < (cat1 - mouse)) {
+  } else if ((cat2 - mouse) < (cat1 - mouse)) {
     return cat2;
-  } if ((cat2 - mouse) === (cat1 - mouse)) {
+  } else ((cat2 - mouse) === (cat1 - mouse)) {
     return 'Os gatos trombam e o rato foge';
   }
 }
