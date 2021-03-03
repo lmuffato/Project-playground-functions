@@ -49,16 +49,17 @@ function generatePhoneNumber(telNumber) {
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   let cont = 0;
-  for (let i = 0; i < 3; i += 1) {
-    if (lineA < Math.sum(lineB, lineC) && lineA > Math.abs(Math.substract(lineB, lineC))) {
-      cont += 1;
-    }
-    if (lineB < Math.sum(lineA, lineC) && lineB > Math.abs(Math.substract(lineA, lineC))) {
-      cont += 1;
-    }
-    if (lineC < Math.sum(lineB, lineA) && lineC > Math.abs(Math.substract(lineB, lineA))) {
-      cont += 1;
-    }
+  let a = parseInt(lineA, 10);
+  let b = parseInt(lineB, 10);
+  let c = parseInt(lineC, 10);
+  if (a < (b + c) && a > Math.abs(b - c)) {
+    cont += 1;
+  }
+  if (b < a + c && b > Math.abs(a - c)) {
+    cont += 1;
+  }
+  if (c < b - a && c > Math.abs(b - a)) {
+    cont += 1;
   }
   if (cont === 3) {
     return true;
