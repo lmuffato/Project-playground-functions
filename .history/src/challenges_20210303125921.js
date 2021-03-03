@@ -32,7 +32,7 @@ function concatName(array) {
   concatResult = array[ultimo] + ', ' + array[0]
   return concatResult
 }
-  console.log(concatName(['é o zica', 'espaço', 'ronaldo', 'Juan']))
+  console.log(concatName(['É o zica', 'espaço', 'ronaldo', 'Juan']))
 
 // Desafio 5
 function footballPoints(wins, ties) {

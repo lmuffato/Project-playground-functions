@@ -26,13 +26,19 @@ function splitSentence() {
 console.log(splitSentence())
 
 // Desafio 4
-function concatName(array) {
+function concatName(arr) {
   let concatResult = '';
-  let ultimo = array.length - 1
-  concatResult = array[ultimo] + ', ' + array[0]
-  return concatResult
+  let ultimo = array[array.lenght-1] + ', ' + array[0]
+  for (let i = (array.lenght - 1); i >= 0; index -= 1)
+  if (i === array.lenght - 1) {
+    concatResult = concatResult + array[i] + ', ';
+  }
+  if (i === 0) {
+    concatResult = concatResult + array[i];
+  }
+   return concatResult
 }
-  console.log(concatName(['é o zica', 'espaço', 'ronaldo', 'Juan']))
+console.log(concatName(['Juan', 'espaço', 'ronaldo', 'é o zica']))
 
 // Desafio 5
 function footballPoints(wins, ties) {

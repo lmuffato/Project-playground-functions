@@ -29,10 +29,10 @@ console.log(splitSentence())
 function concatName(array) {
   let concatResult = '';
   let ultimo = array.length - 1
-  concatResult = array[ultimo] + ', ' + array[0]
+  concatResult = array[ultimo} + ', ' + array[0]
   return concatResult
 }
-  console.log(concatName(['é o zica', 'espaço', 'ronaldo', 'Juan']))
+  console.log(concatName(['Juan', 'espaço', 'ronaldo', 'zica']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
