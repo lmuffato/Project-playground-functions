@@ -23,8 +23,15 @@ function concatName(lastFirst) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let total = 0;
+
+  if (wins > 0 && ties > 0) {
+    total = (wins * 3) + (ties * 1);
+  } else {
+    total = 0;
+  }
+  return total;
 }
 
 // Desafio 6
