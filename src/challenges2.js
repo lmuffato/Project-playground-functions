@@ -3,13 +3,14 @@ function techList(tech, name) {
   // seu código aqui
   let techListObject = {};
   let retornoObject = [];
+  tech = tech.sort();
   if (tech.length === 0) {
     return 'Vazio!';
   }
   for (let i = 0; i < tech.length; i += 1) {
     techListObject.tech = tech[i];
     techListObject.name = name;
-    retornoObject.push({ tech: [tech[i]], name });
+    retornoObject.push({ tech: tech[i], name });
   }
   return retornoObject;
 }
