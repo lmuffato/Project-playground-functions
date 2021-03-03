@@ -85,11 +85,7 @@ function subtractionCheck(a, b, c) {
   }
 }
 
-function triangleCheck(array) {
-  let sideA = array[0];
-  let sideB = array[1];
-  let sideC = array[2];
-
+function triangleCheck(sideA, sideB, sideC) {
   if (sumCheck(sideA, sideB, sideC) === false) {
     return false;
   }
@@ -100,7 +96,6 @@ function triangleCheck(array) {
   return true;
 }
 
-console.log(triangleCheck([10, 14, 8]));
 // Desafio 13
 function hydrate() {
   // seu código aqui
