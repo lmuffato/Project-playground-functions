@@ -134,9 +134,21 @@ function replaceAllVowels(string, vowel, number){
   return string.replaceAll(vowel, number);
 }
 
-function decode() {
-  // seu código aqui
+function decode(string) {
+  for(let index = 0; index < string.length; index += 1 ){
+    switch(string[index]){
+      case '1': string = replaceAllVowels(string, '1', 'a'); break;
+      case '2': string = replaceAllVowels(string, '2', 'e'); break;
+      case '3': string = replaceAllVowels(string, '3', 'i'); break;
+      case '4': string = replaceAllVowels(string, '4', 'o'); break;
+      case '5': string = replaceAllVowels(string, '5', 'u'); break;
+      default: break;
+    }
+  }
+  return string;
 }
+
+console.log(decode("12345"));
 
 module.exports = {
   calcArea,
