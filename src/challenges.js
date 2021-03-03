@@ -79,15 +79,27 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function divisibleBy3(num) {
+  if (num % 3 === 0) {
+    return true;
+  } return false;
+}
+
+function divisibleBy5(num) {
+  if (num % 5 === 0) {
+    return true;
+  } return false;
+}
+
 function fizzBuzz(array) {
   let resultArray;
 
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+    if (divisibleBy3(array[index] && divisibleBy5(array[index]))) {
       resultArray.push('fizzBuzz');
-    } else if (array[index] % 3 === 0) {
+    } else if (divisibleBy3(array.length)) {
       resultArray.push('fizz');
-    } else if (array[index] % 5 === 0){
+    } else if (dibisibleBy5(array.length)) {
       resultArray.push('buzz');
     } else {
       resultArray.push('bug!');
