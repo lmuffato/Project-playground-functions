@@ -95,7 +95,7 @@ function fizzBuzz(array) {
   let resultArray;
 
   for (let index = 0; index < array.length; index += 1) {
-    if (divisibleBy3(array[index] && divisibleBy5(array[index]))) {
+    if (divisibleBy3(array[index]) && divisibleBy5(array[index])) {
       resultArray.push('fizzBuzz');
     } else if (divisibleBy3(array.length)) {
       resultArray.push('fizz');
