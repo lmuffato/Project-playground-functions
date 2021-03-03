@@ -27,8 +27,6 @@ function splitSentence(phrase) {
 // Desafio 4
 // Pesquisei sobre como pegar o último valor de um vetor aqui: https://pt.stackoverflow.com/questions/87416/como-retornar-o-%C3%BAltimo-registro-de-um-array-com-javascript-ou-jquery
 // E sobre o método que concatena strings, pesquisei aqui: https://www.w3schools.com/jsref/jsref_concat_string.asp
-concatName(['captain','Cassiano','america']);
-
 function concatName(names) {
   // seu código aqui
   let arrayNames = [];
@@ -36,8 +34,7 @@ function concatName(names) {
   let lastName = arrayNames[arrayNames.length - 1];
   let firstName = arrayNames[0];
   let concat = lastName.concat(', ' + firstName);
-  
-  return console.log(concat);
+  return concat;
 }
 
 // Desafio 5
