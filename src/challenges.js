@@ -14,12 +14,11 @@ function splitSentence(sentence) {
   return sentence.split(' ');
 }
 
-// Desafio 4
+// Desafio 4 Credits: https://pt.stackoverflow.com/questions/231359/qual-a-forma-correta-de-concatenar-strings-em-javascript
 function concatName(names) {
-  let fullName = [];
   let firstName = names[0];
   let lastName = names[names.length - 1];
-  fullName.push(lastName, firstName);
+  let fullName = firstName.concat(lastName);
   return fullName;
 }
 
