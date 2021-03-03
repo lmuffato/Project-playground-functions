@@ -64,32 +64,38 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  let changeArray = numbers;
+  let changeArray = [];
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
-      changeArray[index].push("fizzBuzz");
+      changeArray.push('fizzBuzz');
     } else if (numbers[index] % 3 === 0) {
-      changeArray[index].push("fizz");
+      changeArray.push('fizz');
     } else if (numbers[index] % 5 === 0) {
-      changeArray[index].push("buzz");
+      changeArray.push('buzz');
     } else {
-      changeArray[index].push("bug!");
+      changeArray.push('bug!');
     }
-    return changeArray;
   }
+  return changeArray;
 }
 
-//console.log(fizzBuzz(2, 15, 7, 9, 45));
-
 // Desafio 9
+
+function changeLettersA(value) {
+  return value.replace(/a/g, '1');
+}
+
+function changeLettersE(value) {
+  return value.replace(/e/g, '2');
+}
+
 function encode(string) {
-  let changeString = string.split('');
-  for (let index = 0; index < changeString.length; index +=1) {
-    if (changeString[index] === 'a') {
-      changeString[index].replace(/a/g, '1');
-    } else {
-      changeString[index].replace(/e/g, '2');
-    }
+  //let changeString = string.split('');
+  let changeString = string;
+  //changeString = changeString.replace(/a/g, '1');
+  for (let index = 0; index < changeString.length; index += 1) {
+    changeLettersA(changeString);
+    changeLettersE(changeString);
   }
   return changeString;
 }
@@ -97,7 +103,7 @@ function decode() {
   // seu código aqui
 }
 
-console.log(encode('ala'));
+console.log(encode('ala ele'));
 
 module.exports = {
   calcArea,
