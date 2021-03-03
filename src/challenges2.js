@@ -39,7 +39,9 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 // Referência https://stackoverflow.com/questions/30607419/return-only-numbers-from-string
 function hydrate(string) {
-  return string.match(/\d+/g).map(Number).reduce((a, b) => a + b);
+  let sum = string.match(/\d+/g).map(Number).reduce((a, b) => a + b);
+  if (sum > 1) return `${sum} copos de água`;
+  return `${sum} copo de água`;
 }
 
 module.exports = {
