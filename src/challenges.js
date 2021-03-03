@@ -20,9 +20,10 @@ function splitSentence(sentenceToSplit) {
 
 // Desafio 4
 function concatName(stringsArray) {
-  return stringsArray.concat(stringsArray.length[-1] + ', ' + stringsArray.length[0]);
+  return stringsArray.length[-1] + ', ' + stringsArray.length[0];
 }
 // Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/concat //
+// Source: https://masteringjs.io/tutorials/fundamentals/string-concat //
 
 // Desafio 5
 function footballPoints() {
