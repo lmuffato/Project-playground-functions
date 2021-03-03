@@ -70,15 +70,27 @@ function catAndMouse(cat1, cat2, mouse) {
   if (distCat1 === distCat2) {
     return console.log('os gatos trombam e o rato foge.');
   } if (distCat1 < distCat2) {
-    return distCat1;
+    return 'Cat1';
   } if (distCat2 < distCat1) {
-    return distCat2;
+    return 'Cat2';
   }
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrayDivs) {
   // seu código aqui
+  for (let i = 0; i < arrayDivs.length; i += 1) {
+    if (arrayDivs[i] % 3 === 0) {
+      arrayDivs[i] = 'fizz';
+    } else if (arrayDivs[i] % 5 === 0) {
+      arrayDivs[i] = 'buzz';
+    } else if (arrayDivs[i] % 3 === 0 && arrayDivs[i] % 5 === 0) {
+      arrayDivs[i] = 'fizzbuzz';
+    } else {
+      arrayDivs[i] = 'bug';
+    }
+  }
+  return arrayDivs;
 }
 
 // Desafio 9
