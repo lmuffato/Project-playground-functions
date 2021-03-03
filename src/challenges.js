@@ -83,7 +83,7 @@ function fizzBuzz(arrayNumbers) {
   let arrayFizzBuzz = [];
   for (let index = 0; index < arrayNumbers.length; index += 1){
     if (arrayNumbers[index] % 3 == 0 && arrayNumbers[index] % 5 == 0) {
-    arrayFizzBuzz[index] = "fizzBuzz";
+    arrayFizzBuzz[index] = 'fizzBuzz';
     }
     else if (arrayNumbers[index] % 3 == 0 && arrayNumbers[index] % 5 != 0){
     arrayFizzBuzz[index] = 'fizz';
@@ -101,10 +101,53 @@ function fizzBuzz(arrayNumbers) {
 // Desafio 9
 function encode(codify) {
   // seu código aqui
+let array = codify.split('');
+  
+  for (let index = 1; index < codify.length; index += 1){
+    if (codify[index] === 'a'){
+    array[index] = '1';
+    }
+    else if (codify[index] === 'e'){
+    array[index] = '2';  
+    }
+    else if (codify[index] === 'i'){
+    array[index] = '3';  
+    }
+    else if (codify[index] === 'o'){
+    array[index] = '4';  
+    }
+    else if (codify[index] === 'u'){
+    array[index] = '5';  
+    }
+    }
+return array.join("");
 }
-function decode() {
+
+function decode(decodefy) {
   // seu código aqui
+let arrayN = decodefy.split('');  
+  
+  for (let index = 1; index < decodefy.length; index += 1){
+    if (decodefy[index] === '1'){
+    arrayN[index] = 'a';
+    }
+    else if (decodefy[index] === '2'){
+    arrayN[index] = 'e';  
+    }
+    else if (decodefy[index] === '3'){
+    arrayN[index] = 'i';  
+    }
+    else if (decodefy[index] === '4'){
+    arrayN[index] = 'o';  
+    }
+    else if (decodefy[index] === '5'){
+    arrayN[index] = 'u';  
+    }
+    }
+
+return arrayN.join("");
 }
+
 
 module.exports = {
   calcArea,
