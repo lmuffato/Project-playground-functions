@@ -42,13 +42,29 @@ function generatePhoneNumber(phone) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let verifyLineA = lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC);
+  let verifyLineB = lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC);
+  let verifyLineC = lineC < (lineB + lineA) && lineC > Math.abs(lineB - lineA);
+
+  if (verifyLineA && verifyLineB && verifyLineC) {
+    return true;
+  }else {
+    return false;
+  }
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let r = /\d+/g; // Este trrecho código foi retirado de https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
+
+  let numberInTheString = string.match(r);
+
+  let sum = 0;
+  
+  numberInTheString.map((n) => sum += Number(n));
+  
+  return `${sum} copos da água`;
 }
 
 module.exports = {
