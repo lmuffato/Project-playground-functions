@@ -24,14 +24,14 @@ function techList(techArray, name) {
 
 // esta função retorna o número vezes aparece o número que mais se repete no arrayNumber
 
-function howManyRepete (arrayNumbers) {
+function howManyRepete(arrayNumbers) {
   let count = 0;
   let maxRepetions = 0;
-  for (let index1 = 0; index1 < arrayNumbers.length; index1 += 1) {    
+  for (let index1 = 0; index1 < arrayNumbers.length; index1 += 1) {
     for (let index2 = 0; index2 < arrayNumbers.length; index2 += 1) {
       if (arrayNumbers[index1] === arrayNumbers[index2]) {
         count += 1;
-      } 
+      }
     }
     if (count > maxRepetions) {
       maxRepetions = count;
@@ -48,7 +48,7 @@ function testValid(phoneNumberArray) {
       isValid = false;
       index = phoneNumberArray.length;
     }
-  }  
+  }
   if (howManyRepete(phoneNumberArray) >= 3) {
     isValid = false;
   }
@@ -78,7 +78,7 @@ function generatePhoneNumber(phoneNumberArray) {
   } else if (testValid(phoneNumberArray)) {
     mensage = mountPhoneNumber(phoneNumberArray);
   } else {
-    mensage = 'não é possível gerar um número de telefone com esses valores'
+    mensage = 'não é possível gerar um número de telefone com esses valores';
   }
   return mensage;
 }
@@ -98,7 +98,7 @@ function hydrate(drinks) {
   let mensage = '';
   for (let index = 0; index < drinks.length; index += 1) {
     let test = parseInt(drinks[index], 10);
-    if (!(isNaN(test))) {
+    if (!(Number.isNaN(test))) {
       count += test;
     }
   }
