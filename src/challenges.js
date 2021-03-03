@@ -16,10 +16,9 @@ function splitSentence(sentence) {
 
 // Desafio 4 Credits: https://pt.stackoverflow.com/questions/231359/qual-a-forma-correta-de-concatenar-strings-em-javascript
 function concatName(names) {
-  let firstName = names[0];
   let lastName = names[names.length - 1];
-  let fullName = lastName.concat(firstName);
-  return fullName;
+  let firstName = names[0];
+  return `${lastName}, ${firstName}`;
 }
 
 // Desafio 5
