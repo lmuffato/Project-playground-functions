@@ -59,18 +59,26 @@ function triangleCheck(lineA, lineB, lineC) {
   && lineA < (lineB + lineC)
   && (Math.abs(lineA - lineC)) < lineB
   && lineB < (lineA + lineC)
-  && (Math.abs(lineA - lineB)) < lineC 
+  && (Math.abs(lineA - lineB)) < lineC
   && lineC < (lineA + lineB)) {
     return true;
   }
   return false;
 }
-console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinking) {
+  let numbersInString = drinking.replace(/\D/g, ''); // retirado de https://stackoverflow.com/questions/30607419/return-only-numbers-from-string - às 20:30, do dia 03/03/2021
+  let sumDrinks = 0;
+  for (let index = 0; index < numbersInString.length; index += 1) {
+    sumDrinks += parseInt(numbersInString[index]);
+  }
+  if (sumDrinks>1){
+    return sumDrinks + ' copos de água';
+  }
+  return sumDrinks + ' copo de água';
 }
+console.log(hydrate("1 copo de vinho"));
 
 module.exports = {
   generatePhoneNumber,
