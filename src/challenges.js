@@ -24,7 +24,7 @@ function concatName(name) {
   let firtArray = name[0];
   let ultimateArrayNumber = name.length - 1;
   let ultimateArray = name[ultimateArrayNumber]
-  let resultArray = ultimateArray + ' ' + firtArray;
+  let resultArray = ultimateArray + ', ' + firtArray;
   return resultArray; 
 }
 
@@ -68,9 +68,9 @@ console.log(splitSentence('go trybe'));
 console.log(splitSentence('vamo que vamo'));
 console.log(splitSentence('foguete'));
 
-console.log(concatName(name=['Lucas', 'Cassio', 'Ferraz', 'Paolillo']));
-console.log(concatName(name=['foguete', 'não', 'tem', 'ré']));
-console.log(concatName(name=['captain', 'my', 'captain']));
+console.log(concatName(['Lucas', 'Cassio', 'Ferraz', 'Paolillo']));
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+console.log(concatName(['captain', 'my', 'captain']));
 
 module.exports = {
   calcArea,
