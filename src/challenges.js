@@ -15,10 +15,11 @@ function splitSentence(string) {
 
 // Desafio 4 WHY?
 function concatName(array) {
-  let lastName = array.length-1;
-  let newArray = [lastName]
-  newArray.concat(array[0]);
-  return newArray;
+  let lastName = array[array.length-1];
+  let newArray = [lastName];
+  let firstName = [array[0]];
+  let res = newArray.concat(firstName);
+  return res
 }
 
 // Desafio 5 OK
@@ -41,7 +42,7 @@ function highestCount(array) {
   // return sumHighestCount;
 }
 
-// Desafio 7
+// Desafio 7 OK
 function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = Math.abs(cat1 - mouse)
   let distanceCat2 = Math.abs(cat2 - mouse)
