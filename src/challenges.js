@@ -90,7 +90,7 @@ function catAndMouse(mouse, cat1, cat2) {
     win = 'cat1';
     return win;
   }
-  win = "os gatos trombam e o rato foge"
+  win = "os gatos trombam e o rato foge";
   return win;
 }
 
