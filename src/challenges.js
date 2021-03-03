@@ -74,7 +74,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (posição2 > posição1){
     return 'cat1';
   } else {
-    return 'os gatos trombam e o rato foge'
+    return 'os gatos trombam e o rato foge';$
   }
 }
 
@@ -102,7 +102,7 @@ function fizzBuzz(arrayNumbers) {
 
 // Desafio 9
 function encode(string) {
-  let newString = string.split(' '); //transforma string em array
+  let newString = string.split(''); //transforma string em array
   for ( let index = 0; index < string.length; index += 1){
     if ( string[index] === 'a'){
       newString[index] = '1';
@@ -114,9 +114,11 @@ function encode(string) {
       newString[index] = '4';
     } else if ( string[index] === 'u'){
       newString[index] = '5';
-    } 
+    } else {
+      newString[index] = string[index]
+    }
   }
-  return newString.toString(); //transforma array em string
+  return newString.split(' ');   //transforma array em string
 }
 
 let stringTeste = 'hi there!';
