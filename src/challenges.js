@@ -25,9 +25,7 @@ function splitSentence(phrase) {
 // Desafio 4
 function concatName(names) {
   // seu código aqui
-  let first = names[0];
-  let last = names[names.length -1];
-  return first + ', ' + last;
+  return `${names[names.length - 1]}, ${names[0]}`;
 }
 
 // Desafio 5
