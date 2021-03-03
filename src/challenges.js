@@ -62,8 +62,28 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayOfNumbers) {
+  let finalResult = [];
+
+  function verifyDiv(number) {
+    let result;
+
+    if (number % 3 === 0 && number % 5 === 0) {
+      result = 'fizzBuzz';
+    } else if (number % 3 === 0) {
+      result = 'fizz';
+    } else if (number % 5 === 0) {
+      result = 'buzz';
+    } else {
+      result = 'bug!';
+    }
+    return result;
+  }
+
+  for (let i = 0; i < arrayOfNumbers.length; i += 1) {
+    finalResult.push(verifyDiv(arrayOfNumbers[i]));
+  }
+  return finalResult;
 }
 
 // Desafio 9
