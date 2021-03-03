@@ -22,7 +22,7 @@ function splitSentence(string) {
 function concatName(string) {
   let firstIndex = string[0];
   let lastIndex = string[string.length - 1];
-  let nameConcatened = lastIndex + ', ' + firstIndex;
+  let nameConcatened = `${lastIndex}, ${firstIndex}`;
   return nameConcatened;
 }
 
@@ -38,8 +38,6 @@ function highestNumber(value) {
   for (let index = 0; index < value.length; index += 1) {
     if (number < value[index]) {
       number = value[index];
-    } else {
-      number = number;
     }
   }
   return number;

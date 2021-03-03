@@ -1,10 +1,10 @@
 // Desafio 10
-function techList(stringArray, name) {
+function techList(stringArray, nameObject) {
   let arrayObjects = [0];
   for (let index = 0; index < stringArray.length; index += 1) {
     let objects = {
       tech: stringArray[index],
-      name: name
+      name: nameObject,
     };
     arrayObjects[index] = objects;
   }
@@ -17,7 +17,7 @@ function techList(stringArray, name) {
         return -1;
       }
       return 0;
-      });
+    });
     return arrayObjects;
   } else if (arrayObjects.tech === undefined) {
     return 'Vazio!';
