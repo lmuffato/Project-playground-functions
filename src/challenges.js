@@ -1,13 +1,12 @@
 // Desafio 1
 function compareTrue(value1, value2) {
+
   if (value1 == true && value2 == true) {
     return true
   } else{
     return false
   }
  }
-compareTrue(true, true)
-console.log (return)
 
 // Desafio 2
 function calcArea() {
