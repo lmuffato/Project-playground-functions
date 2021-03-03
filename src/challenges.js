@@ -40,21 +40,19 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numberArray) {
-let numberCount = 0;
-let maxCount = 0;
 
-  for (let i = 0; i < numberArray.length; i += 1){  
-      let num = numberArray[i];
-      if (num === maxCount){
-        numberCount += i + 1;
-      }
-      if (num > maxCount) { 
-        maxCount = num;
-        numberCount = 1;
-      }
-  }
+let max = 0;
+
+
+  for (let i = 0; i < numberArray.length; i += 1){
+    if (numberArray[0] < numberArray[i])
+        numberArray[0] = numberArray[i]
   
-  return maxCount;
+    else if (numberArray[0] === numberArray[i]){
+      max += 1;
+    }
+  }  
+  return max;
 }
 
 // Desafio 7
@@ -133,7 +131,7 @@ function decode(numberToChar) {
 }
 
 
-console.log(decode('h3 th2r2!'));
+console.log(highestCount([0, 0, 0]));
 
 module.exports = {
   calcArea,
