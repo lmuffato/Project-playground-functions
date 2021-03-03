@@ -8,7 +8,7 @@ function compareTrue(teamFlamengoChampion, teamInterNoChampion) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height) /2;
+  let area = (base * height) / 2;
   return area;
 }
 
