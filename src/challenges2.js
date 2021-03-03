@@ -52,16 +52,16 @@ function triangleCheck(lineA, lineB, lineC) {
   let a = parseInt(lineA, 10);
   let b = parseInt(lineB, 10);
   let c = parseInt(lineC, 10);
-  if (a < (b + c) && a > Math.abs(b - c)) {
+  if (a <= b + c && a >= Math.abs(b - c)) {
     cont += 1;
   }
-  if (b < a + c && b > Math.abs(a - c)) {
+  if (b <= a + c && b >= Math.abs(a - c)) {
     cont += 1;
   }
-  if (c < b - a && c > Math.abs(b - a)) {
+  if (c <= b - a && c >= Math.abs(b - a)) {
     cont += 1;
   }
-  if (cont = 3) {
+  if (cont === 3) {
     return true;
   }
   return false;
