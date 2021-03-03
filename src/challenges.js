@@ -96,7 +96,7 @@ function ifIsFizzBuzz(currentNumber, fizzBuzzArray) {
   const divisibleBy3 = checkIfIsDivisible(currentNumber, 3);
   const divisibleBy5 = checkIfIsDivisible(currentNumber, 5);
   if (divisibleBy3 && divisibleBy5) {
-    fizzBuzzArray.push('fizzBuzz!');
+    fizzBuzzArray.push('fizzBuzz');
   }
 }
 
