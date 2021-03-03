@@ -14,7 +14,7 @@ if (tech.length === 5){
 } 
 
 for (let indexTech = 0; indexTech < tech.length; indexTech += 1){
-    result.push("tech: " + tech[indexTech] + " name: " + name)
+    result.push("tech: " + tech[indexTech]) + result.push (" name: " + name)
   }
   return result
 }
