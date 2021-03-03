@@ -29,13 +29,16 @@ function concatName(arrayString) {
   let array = lastItem + ', ' + firstItem;
   return array;
 }
-console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winsScore = wins * 3;
+  let tiesScore = ties * 1;
+  let score = winsScore + tiesScore
+return score
 }
-
+console.log(footballPoints(14,8))
 // Desafio 6
 function highestCount() {
   // seu código aqui
