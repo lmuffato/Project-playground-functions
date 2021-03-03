@@ -18,53 +18,65 @@ function techList(techArray, name) {
   return listOfTechs;
 }
 
-let  technologies = ['zezim', 'huguim', 'luizim'];
-let myName = 'Rogerio';
-console.log(techList(technologies, myName));
+// let  technologies = ['zezim', 'huguim', 'luizim'];
+// let myName = 'Rogerio';
+// console.log(techList(technologies, myName));
 
-function testValid(phoneNumberArray) {
+// esta função retorna o número vezes aparece o número que mais se repete no arrayNumber
+
+function howManyRepete (arrayNumbers) {
   let count = 0;
-  let maxRepetions = 0
-  let isValid = true;
-  for (let index1 = 0; index1 < phoneNumberArray.length; index1 += 1) {    
-    for (let index2 in phoneNumberArray) {
-      if (phoneNumberArray[index2] < 0 || phoneNumberArray[index2] > 9) {
-        isValid = false;
-        index1 = phoneNumberArray.length
-        break;
-      }
-      if (phoneNumberArray[index1] === phoneNumberArray[index2]) {
+  let maxRepetions = 0;
+  for (let index1 = 0; index1 < arrayNumbers.length; index1 += 1) {    
+    for (let index2 = 0; index2 < arrayNumbers.length; index2 += 1) {
+      if (arrayNumbers[index1] === arrayNumbers[index2]) {
         count += 1;
-      }
+      } 
     }
     if (count > maxRepetions) {
       maxRepetions = count;
     }
     count = 0;
   }
-  if(maxRepetions >= 3){
-    isValid = false; 
+  return maxRepetions;
+}
+
+function testValid(phoneNumberArray) {
+  let isValid = true;
+  for (let index = 0; index < phoneNumberArray.length; index += 1) {
+    if (phoneNumberArray[index] < 0 || phoneNumberArray[index] > 9) {
+      isValid = false;
+      index = phoneNumberArray.length;
+    }
+  }  
+  if (howManyRepete(phoneNumberArray) >= 3) {
+    isValid = false;
   }
   return isValid;
 }
 
+function mountPhoneNumber(phoneNumberArray) {
+  let mensage = '(';
+  for (let index = 0; index < phoneNumberArray.length; index += 1) {
+    if (index === '2') {
+      mensage += ') ';
+    }
+    if (index === '7') {
+      mensage += '-';
+    }
+    mensage += phoneNumberArray[index];
+  }
+  return mensage;
+}
 
 // Desafio 11
 function generatePhoneNumber(phoneNumberArray) {
   // seu código aqui
-  let mensage = '(';
+  let mensage = '';
   if (phoneNumberArray.length !== 11) {
     mensage = 'Array com tamanho incorreto.';
   } else if (testValid(phoneNumberArray)) {
-    for (let index in phoneNumberArray) {
-      if (index == 2){
-        mensage += ') ';
-      }
-      if (index == 7){ 
-        mensage += '-';
-      }
-      mensage += phoneNumberArray[index];
-    }
+    mensage = mountPhoneNumber(phoneNumberArray);
   } else {
     mensage = 'não é possível gerar um número de telefone com esses valores'
   }
@@ -83,17 +95,19 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(drinks) {
   // seu código aqui
   let count = 0;
-  for (let index in drinks) {
-    let test = parseInt(drinks[index]);
-    if(!(isNaN(test))) {
+  let mensage = '';
+  for (let index = 0; index < drinks.length; index += 1) {
+    let test = parseInt(drinks[index], 10);
+    if (!(isNaN(test))) {
       count += test;
     }
   }
   if (count > 1) {
-    return count.toString() + ' copos de água';
+    mensage = count.toString(10) + ' copos de água';
   } else {
-    return count.toString() + ' copo de água';
-  }  
+    mensage = count.toString(10) + ' copo de água';
+  }
+  return mensage;
 }
 
 console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
