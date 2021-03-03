@@ -52,8 +52,16 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  //medida de uma lado deve ser menor que a soma da medida dos outros 2 e maior que o valor absoluto entre os dois
+  if(lineA < lineB+lineC && lineB < lineA+lineC && lineC < lineA+lineB && lineA > Math.abs(lineB-lineC) &&
+  lineB > Math.abs(lineA-lineC) && lineC > Math.abs(lineA-lineB) ){
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 // Desafio 13
@@ -68,4 +76,5 @@ module.exports = {
   triangleCheck,
 };
 //console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"));
-console.log(generatePhoneNumber([3,1,9,8,5,3,0,1,9,5,8]));
+//console.log(generatePhoneNumber([3,1,9,8,5,3,0,1,9,5,8]));
+console.log(triangleCheck(1,2,3));
