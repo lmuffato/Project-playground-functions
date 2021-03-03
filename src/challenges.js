@@ -32,13 +32,21 @@ function concatName(name) {
 function footballPoints(wins, ties) {
   let winsPoints = wins * 3;
   let tiePoints = ties * 1;
-  totalPoints = winsPoints + tiePoints;
+  let totalPoints = winsPoints + tiePoints;
   return totalPoints;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numberRepeat) {
+  let maxNumber = Math.max(...numberRepeat);
+  let count = 0;
+  for (let index = 0; index < numberRepeat.length; index += 1){
+    let walks = numberRepeat[index];
+    if (walks === maxNumber){
+    count += 1;
+    }
+  }
+  return count;
 }
 
 // Desafio 7
@@ -78,6 +86,10 @@ console.log(concatName(['captain', 'my', 'captain']));
 console.log(footballPoints(14, 8));
 console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0));
+
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
+console.log(highestCount([0, 0, 0]));
 
 module.exports = {
   calcArea,
