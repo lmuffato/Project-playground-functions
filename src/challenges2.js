@@ -22,25 +22,44 @@ function arrayLengthValidation(array) {
 }
 
 function arrayNumericalValidation(array) {
-  for (let index of array) {
-    if (array[index] < 0 || array[index] > 9) {
+  for (let value of array) {
+    if (value < 0 || value > 9) {
       return false;
     }
   }
   return true;
 }
 
-// function arrayRepeatValidation(array) {
-//   // Checa se o array tem numeros se repetindo 3 vezes ou mais
-//   let numberCount = {};
-//   for (let index of array) {
-//     if ()
-//   }
-// }
+function arrayRepeatValidation(array, maxRepetitions) {
+  // Checa se o array tem numeros se repetindo x vezes ou mais
+  let result = true;
+  let numberCount = {};
+  for (let index of array) {
+    if (index in numberCount) {
+      numberCount[index] += 1;
+      if (numberCount[index] === maxRepetitions) {
+        result = false;
+        break;
+      }
+    } else {
+      numberCount[index] = 1;
+    }
+  }
+  return result;
+}
 
 function generatePhoneNumber(numberArray) {
- 
+// Perform validations
+  let result;
 
+  if (!arrayLengthValidation(numberArray)) {
+    result = 'Array com tamanho incorreto.';
+  } else if (!arrayNumericalValidation(numberArray) || !arrayRepeatValidation(numberArray, 3)) {
+    result = 'não é possível gerar um número de telefone com esses valores';
+  } else {
+    result = '(' + numberArray.slice(0, 2).join('') + ') ' + numberArray.slice(2, 7).join('') + '-' + numberArray.slice(7, 11).join('');
+  }
+  return result;
 }
 
 // Desafio 12
