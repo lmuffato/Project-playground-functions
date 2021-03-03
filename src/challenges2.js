@@ -65,8 +65,19 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  var values= string.match(/\d+/gm);
+  var arrarNumbers=[];
+  var sum = 0;
+  for(let i=0; i<values.length; i+=1){
+    arrarNumbers[i] = +values[i];
+  }
+
+  for(i=0; i<values.length; i+=1){
+    sum += arrarNumbers[i];
+  }
+
+  return sum + ' copos de água';
 }
 
 module.exports = {
@@ -77,4 +88,5 @@ module.exports = {
 };
 //console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"));
 //console.log(generatePhoneNumber([3,1,9,8,5,3,0,1,9,5,8]));
-console.log(triangleCheck(1,2,3));
+//console.log(triangleCheck(1,2,3));
+console.log(hydrate('1 cerveja'));
