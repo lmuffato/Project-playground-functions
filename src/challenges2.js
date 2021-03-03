@@ -1,18 +1,18 @@
 // Desafio 10
 function techList(arr, name) {
-  orgarr = arr.sort();
+  let orgarr = arr.sort();
   let techsNames = [];
-  for (let index = 0; index < orgarr.length; index++) {
+  for (let index = 0; index < orgarr.length; index += 1) {
     techsNames.push(
       {
         tech: orgarr[index],
         name: name,
-      }
+      },
     );
   }
 
-  if (arr.length === 0){
-    return 'Vazio!'
+  if (arr.length === 0) {
+    return 'Vazio!';
   }
   return techsNames;
 }
@@ -24,7 +24,7 @@ function generatePhoneNumber(arr) {
   } 
   for (let index = 0; index < arr.length; index++) {
     if (arr[index] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores'
+      return 'não é possível gerar um número de telefone com esses valores';
     }
     let repeat = 0
     for (let i = 0; i < arr.length; i++) {
@@ -37,34 +37,34 @@ function generatePhoneNumber(arr) {
     }
   }
   let phoneNum = '('
-  for (index2 = 0; index2 <= 13; index2++) {
+  for (let index2 = 0; index2 <= 13; index2 += 1) {
     if (index2 < 2) {
-      phoneNum = phoneNum + arr[index2]
+      phoneNum += arr[index2];
     } else if (index2 === 2) {
-      phoneNum = phoneNum + ')'
+      phoneNum += ')';
     } else if (index2 === 3) {
-      phoneNum = phoneNum + ' '
+      phoneNum += ' ';
     } else if (index2 > 3 && index2 <= 8) {
-      phoneNum = phoneNum + arr[index2 - 2]
+      phoneNum += arr[index2 - 2];
     } else if (index2 === 9) {
-      phoneNum = phoneNum + '-'
+      phoneNum += '-';
     } else {
-      phoneNum = phoneNum + arr[index2 - 3]
+      phoneNum += arr[index2 - 3]
     }
   }
-  return phoneNum
+  return phoneNum;
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA >= lineB + lineC) {
-  return false 
+    return false;
   } else if (lineB >= lineA + lineC) {
-    return false
+    return false;
   } else if (lineC >= lineA + lineB) {
-    return false
+    return false;
   } else {
-    return true
+    return true;
   }
 }
 
@@ -80,7 +80,7 @@ function hydrate(str) {
   if (waterCups > 1) {
     return waterCups + ' copos de água';
   } else {
-    return waterCups + ' copo de água'
+    return waterCups + ' copo de água';
   }
 }
 
