@@ -23,7 +23,7 @@ function generatePhoneNumber(telNumber) {
   let prim;
   let seg;
   if (telNumber.length !== 11) {
-    console.log('Array com tamanho incorreto.');
+    return 'Array com tamanho incorreto.';
   }
   for (let i = 0; i < telNumber.length; i += 1) {
     if (telNumber[i] > 9 || telNumber[i] < 0) {
@@ -42,7 +42,7 @@ function generatePhoneNumber(telNumber) {
   ddd = `(${telNumber[0]}${telNumber[1]})`;
   prim = `${telNumber[2]}${telNumber[3]}${telNumber[4]}${telNumber[5]}${telNumber[6]}-`;
   seg = `${telNumber[7]}${telNumber[8]}${telNumber[9]}${telNumber[10]}`;
-  return `${ddd}${prim}${seg}`;
+  return `${ddd} ${prim}${seg}`;
 }
 
 // Desafio 12
