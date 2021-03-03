@@ -113,8 +113,34 @@ function generatePhoneNumber(arrayNumbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(ladoA, ladoB, ladoC) {
+  let isTriangle = true;
+
+  if (ladoA > (ladoB + ladoC)) {
+    return false;
+  }
+
+  if (ladoB > (ladoA + ladoC)) {
+    return false;
+  }
+
+  if (ladoC > (ladoA + ladoB)) {
+    return false;
+  }
+
+  if (ladoA < Math.abs(ladoB - ladoC)) {
+    return false;
+  }
+
+  if (ladoB < Math.abs(ladoA - ladoC)) {
+    return false;
+  }
+
+  if (ladoC < Math.abs(ladoA - ladoB)) {
+    return false;
+  }
+
+  return isTriangle;
 }
 
 // Desafio 13
@@ -141,6 +167,8 @@ console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Wanderson'
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+
+console.log(triangleCheck(10, 14, 8));
 
 module.exports = {
   generatePhoneNumber,
