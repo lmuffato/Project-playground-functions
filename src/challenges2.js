@@ -2,11 +2,17 @@
 function techList(tech, name) {
   // seu código aqui
   let techListObject = {};
+  let retornoObject = [];
+
+  if (tech === null) {
+    return 'Vazio!';
+  }
   for (let i = 0; i < tech.length; i += 1) {
     techListObject.tech = tech[i];
     techListObject.name = name;
-    console.log(techListObject);
+    retornoObject[i] = `tech: ${techListObject.tech}, name: ${techListObject.name}`;
   }
+  return retornoObject;
 }
 
 // Desafio 11
