@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-one-iteration-loop */
 // Desafio 1
 function compareTrue(firstValue, secondValue) {
   if (firstValue === true && secondValue === true) {
@@ -40,8 +41,15 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(_array) {
+  let highestNumber = Math.max(..._array);
+  let result = 0;
+  for (let index = 0; index <= _array.length; index += 1) {
+    if (_array[index] === highestNumber) {
+      result += 1;
+    }
+  }
+  return result;
 }
 
 // Desafio 7
