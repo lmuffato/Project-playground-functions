@@ -1,10 +1,17 @@
 // Desafio 10
 // Referência https://www.edsonemiliano.com.br/blog/como-ordenar-uma-array-de-objetos-com-javascript-sort/#:~:text=Caso%20voc%C3%AA%20tenha%20um%20array,usar%20o%20m%C3%A9todo%20sort().&text=return%20(a.,nome%20%3E%20b.
 function techList(techs, name) {
-  if (techs.length == 0) return 'Vazio!';
-  return techs.map(el => { return { tech: el, name }; })
-              .sort((el, el2) => 
-                  el.tech > el2.tech ? 1 : (el2.tech > el.tech ? -1 : 0) );
+  if (techs.length === 0) return 'Vazio!';
+  return techs.map((el) => ({ tech: el, name }))
+    .sort((el, el2) => {
+      let result = 0;
+      if (el.tech > el2.tech) {
+        result = 1;
+      } else if (el2.tech > el.tech) {
+        result = -1;
+      }
+      return result;
+    });
 }
 
 // Desafio 11
@@ -26,13 +33,20 @@ function generatePhoneNumber(number) {
 }
 
 // Desafio 12
+function oneLineGreaterThanOthers(lineA, lineB, lineC) {
+  if (lineA > lineB + lineC
+      || lineB > lineA + lineC
+      || lineC > lineA + lineB) return true;
+}
+function oneLineLessThanOthers(lineA, lineB, lineC) {
+  if (lineA < Math.abs(lineB - lineC)
+  || lineB < Math.abs(lineA - lineC)
+  || lineC < Math.abs(lineA - lineB)) return true;
+}
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA > lineB + lineC || 
-      lineB > lineA + lineC || 
-      lineC > lineA + lineB) return false;
-  if (lineA < Math.abs(lineB - lineC) || 
-      lineB < Math.abs(lineA - lineC) || 
-      lineC < Math.abs(lineA - lineB)) return false;
+  if (oneLineGreaterThanOthers(lineA, lineB, lineC) || oneLineLessThanOthers(lineA, lineB, lineC)) {
+    return false;
+  }
   return true;
 }
 
