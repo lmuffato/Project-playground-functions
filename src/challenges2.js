@@ -10,36 +10,14 @@ function techList(tech, name) {
   for (let i = 0; i < tech.length; i += 1) {
     techListObject.tech = tech[i];
     techListObject.name = name;
-    retornoObject.push({tech: [tech[i]], name});
+    retornoObject.push({ tech: [tech[i]], name });
   }
   return retornoObject;
 }
 
 // Desafio 11
-function generatePhoneNumber(telNumber) {
+function generatePhoneNumber() {
   // seu código aqui
-  let j = 0;
-  let repete = 0;
-  for (let i = 0; i < telNumber.length; i += 1) {
-    if (telNumber.length > 11) {
-    return 'Array com tamanho incorreto.'
-    }
-    for (let k = 0; k < telNumber.length; k += 1) {
-      repete = 0;
-      if (telNumber[i] === telNumber[k]) {
-        repete += 1;
-      }
-      if (repete > 3 || telNumber[i] < 0 || telNumber[i] > 9) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
-      for (let j = 0; j < telNumber.length; j += 1){
-
-        ddd1 = telNumber[0];
-        telNumber[0] = '(';
-        telNumber[]
-      }
-    }
-  }
 }
 
 // Desafio 12
