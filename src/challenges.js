@@ -83,9 +83,27 @@ function highestCount(number) {
 
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+    let clozerCat1= mouse - cat1;
+    let clozerCat2= mouse - cat2;
+    if (Math.sign(clozerCat1)===-1){
+      clozerCat1= clozerCat1 * (-1);
+    }
+    if (Math.sign(clozerCat2)===-1){
+      clozerCat2= clozerCat2 * (-1);
+    }
+    if (clozerCat1 > clozerCat2){
+      return "cat2";
+    }else if (clozerCat2 > clozerCat1){
+      return "cat1";
+    }else{
+      return "os gatos trombam e o rato foge";
+    }
+
 }
+
+
 
 // Desafio 8
 function fizzBuzz() {
