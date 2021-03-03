@@ -55,18 +55,24 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function isDivBy3(Number) {
+  return Number % 3 === 0;
+}
+function isDivBy5(Number) {
+  return Number % 5 === 0;
+}
 function fizzBuzz(arrayOfNumbers) {
+  let dict = {
+    // This dictionary just checks for the flag correct answer
+    0: 'bug!', // not flagA and not flagB
+    1: 'fizz', // flagA and not flagB
+    2: 'buzz', // not flagA and flagB
+    3: 'fizzBuzz', // flagA and flagB
+  };
   let answer = [];
-  for (let number in arrayOfNumbers) {
-    if (arrayOfNumbers[number] % 5 === 0 && arrayOfNumbers[number] % 3 === 0) {
-      answer.push('fizzBuzz');
-    } else if (arrayOfNumbers[number] % 3 === 0) {
-      answer.push('fizz');
-    } else if (arrayOfNumbers[number] % 5 === 0) {
-      answer.push('buzz');
-    } else {
-      answer.push('bug!');
-    }
+  for (let number of arrayOfNumbers) {
+    let flag = (isDivBy3(number) * 1) + (isDivBy5(number) * 2);
+    answer.push(dict[flag]);
   }
   return answer;
 }
