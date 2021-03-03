@@ -56,20 +56,15 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (mouse >= 0) {
-    cat1 = (-mouse + cat1);
-    cat2 = (-mouse + cat2);
-  } else {
-    cat1 = ((-1 * mouse) + cat1);
-    cat2 = ((-1 * mouse) + cat2);
+  cat1 = (-mouse + cat1);
+  cat2 = (-mouse + cat2);
+  if (cat1 === 0 || cat2 === 0 || cat1 === cat2) {
+    return 'os gatos trombam e o rato foge';
   }
   if (cat1 < cat2) {
     return 'cat1';
   }
-  if (cat1 > cat2) {
-    return 'cat2';
-  }
-  return 'os gatos trombam e o rato foge';
+  return 'cat2';
 }
 
 function test(number) {
@@ -102,7 +97,7 @@ function decode() {
   // seu código aqui
 }
 
-console.log(catAndMouse(0, 3, 2));
+console.log(catAndMouse(1, 2, 3));
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 module.exports = {
