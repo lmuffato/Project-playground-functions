@@ -64,10 +64,10 @@ function catAndMouse(mouse, cat1, cat2) {
     cat2 = ((-1 * mouse) + cat2);
   }
   if (cat1 < cat2) {
-    return 'cat2';
+    return 'cat1';
   }
   if (cat1 > cat2) {
-    return 'cat1';
+    return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
 }
@@ -102,7 +102,7 @@ function decode() {
   // seu código aqui
 }
 
-console.log(catAndMouse(0, 6, 12));
+console.log(catAndMouse(0, 3, 2));
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 module.exports = {
