@@ -9,7 +9,7 @@ function techList(technology, name) {
     });
   }
   if (technology.length === 0) {
-    return 'Vazio';
+    return 'Vazio!';
   }
   return techlist;
 }
