@@ -24,21 +24,22 @@ function arrayLengthValidation(array) {
 function arrayNumericalValidation(array) {
   for (let index of array) {
     if (array[index] < 0 || array[index] > 9) {
-      return false
-    } else {
-      return true
+      return false;
     }
   }
+  return true;
 }
+
+// function arrayRepeatValidation(array) {
+//   // Checa se o array tem numeros se repetindo 3 vezes ou mais
+//   let numberCount = {};
+//   for (let index of array) {
+//     if ()
+//   }
+// }
 
 function generatePhoneNumber(numberArray) {
- // Se a função receber um array com tamanho diferente de 11, a mesma deve retornar "Array com tamanho incorreto."
-
- // Caso algum dos números da array seja menor que 0, maior que 9 ou se repita 3 vezes ou mais, generatePhoneNumber deverá retornar a string "não é possível gerar um número de telefone com esses valores".
-
-
-
-}
+ 
 
 }
 
