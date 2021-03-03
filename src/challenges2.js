@@ -9,7 +9,7 @@ function techList(stringArray, name) {
     arrayObjects[index] = objects;
   }
   if (arrayObjects.length >= 5) {
-    arrayObjects.sort(function (a, b) {  //Entrei no MDN para entender sobre o comando sort de array, e lá tem essa explicação de como ordenar objetos.
+    arrayObjects.sort(function (a, b) {  // Entrei no MDN para entender sobre o comando sort de array, e lá tem essa explicação de como ordenar objetos.
       if (a.tech > b.tech) {
         return 1;
       }

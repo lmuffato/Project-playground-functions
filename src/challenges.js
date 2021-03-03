@@ -2,9 +2,8 @@
 function compareTrue(valueBoolean1, valueBoolean2) {
   if (valueBoolean1 === true && valueBoolean2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -24,7 +23,7 @@ function concatName(string) {
   let firstIndex = string[0];
   let lastIndex = string[string.length - 1];
   let nameConcatened = lastIndex + ', ' + firstIndex;
-  return nameConcatened; 
+  return nameConcatened;
 }
 
 // Desafio 5
@@ -34,18 +33,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(numbers) {
-  let numbersCount = 0;
-  let checkNumber = highestNumber(numbers);
-  for (let key in numbers){ //Usei esse formato por ser menor e, acho eu, que computa em menos tempo que um for normal
-    if (checkNumber === numbers[key]){
-      numbersCount += 1;
-    }
-  }
-  return numbersCount;
-}
-
-function highestNumber(value){
+function highestNumber(value) {
   let number = 0;
   for (let index = 0; index < value.length; index += 1) {
     if (number < value[index]) {
@@ -57,6 +45,17 @@ function highestNumber(value){
   return number;
 }
 
+function highestCount(numbers) {
+  let numbersCount = 0;
+  let checkNumber = highestNumber(numbers);
+  for (let key in numbers) { // Usei esse formato por ser menor e, acho eu, que computa em menos tempo que um for normal
+    if (checkNumber === numbers[key]) {
+      numbersCount += 1;
+    }
+  }
+  return numbersCount;
+}
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let mouseToCat1 = Math.abs(cat1 - mouse);
@@ -64,11 +63,10 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (mouseToCat1 < mouseToCat2) {
     return 'cat1';
-  } else if (mouseToCat1 === mouseToCat2) {
+  } if (mouseToCat1 === mouseToCat2) {
     return 'os gatos trombam e o rato foge';
-  } else {
-    return 'cat2';
   }
+  return 'cat2';
 }
 
 // Desafio 8
