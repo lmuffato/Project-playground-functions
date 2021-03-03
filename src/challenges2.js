@@ -58,7 +58,7 @@ function triangleCheck(lineA, lineB, lineC) {
   if (b <= a + c && b >= Math.abs(a - c)) {
     cont += 1;
   }
-  if (c <= b - a && c >= Math.abs(b - a)) {
+  if (c <= b + a && c >= Math.abs(b - a)) {
     cont += 1;
   }
   if (cont === 3) {
