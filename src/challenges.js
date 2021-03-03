@@ -45,7 +45,6 @@ function arrayFirstBigger(list) {
 
 // Desafio 6
 function highestCount(list) {
-  list = [];
   let array = [0, 4, 4, 4, 9, 2, 1];
   let biggestNumber = 0;
   let timesRepeat = 0;
@@ -59,18 +58,15 @@ function highestCount(list) {
   return timesRepeat;
 }
 
-let arraylister = [0, 4, 4, 4, 9, 2, 1];
-console.log(highestCount(arraylister));
-
-function closesToEmentA(a, b, c) {
-  let elementB = b - a;
-  let elementC = c - a;
-  if (elementB === elementC) {
-    return b && c;
-  } else if (elementB < elementC) {
-    return b;
+function closesToEmentA(mouse, cat1, cat2) {
+  let elementCat1 = mouse - cat1;
+  let elementCat2 = mouse - cat2;
+  if (cat1 === cat2) {
+    return cat1 && cat2;
+  } else if (cat2 < cat1 || elementCat2 > elementCat1) {
+    return cat2;
   } else {
-    return c;
+    return cat1;
   }
 }
 
@@ -80,15 +76,15 @@ function catAndMouse(mouse, cat1, cat2) {
   cat1 = 6;
   cat2 = 12;
   let beetwen = closesToEmentA(mouse, cat1, cat2);
-  if (beetwen == b && c) {
+  if (beetwen == cat1 && cat2) {
     return 'os gatos trombam e o rato foge';
-  } else if (beetwen == c) {
+  } else if (beetwen == cat2) {
     return 'cat2';
   } else {
     return 'cat1';
   }
 }
-
+console.log(catAndMouse(0, 6, 12));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
