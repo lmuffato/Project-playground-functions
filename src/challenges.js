@@ -121,11 +121,32 @@ function fizzBuzz(arrayOfNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+// código do Murilo Gonçalves (@MuriloGon) clareou a minha mente para esse desafio:
+// https://github.com/tryber/sd-010-a-project-playground-functions/pull/2/commits/4aaa70672768874ec7760b573c21248c30275591
+
+function encode(string) {
+  const vowels = { a: 1, e: 2, i: 3, o: 4, u: 5 };
+  let encoded = '';
+  for (let letter in string) {
+    if (vowels[string[letter]]) {
+      encoded += vowels[string[letter]];
+    } else {
+      encoded += string[letter];
+    }
+  }
+  return encoded;
 }
-function decode() {
-  // seu código aqui
+function decode(code) {
+  const numbers = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+  let decoded = '';
+  for (let symbol in code) {
+    if (numbers[code[symbol]]) {
+      decoded += numbers[code[symbol]];
+    } else {
+      decoded += code[symbol];
+    }
+  }
+  return decoded;
 }
 
 module.exports = {
