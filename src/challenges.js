@@ -55,7 +55,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-// Desafio 8
+// Desafio 8 OK
 function fizzBuzz(array) {
   let arrayFizzBuzz = []
   for (let index = 0; index < array.length; index += 1){
@@ -77,7 +77,7 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
   let codingString = "";
-  for (index = 0; index < string.length; index += 1){
+  for (let index = 0; index < string.length; index += 1){
      codingString = string[index]
       switch (string[index]) {
         case string[index] === "a":
