@@ -22,7 +22,7 @@ console.log(calcArea(20,20))
 function splitSentence(stringResult) {
   return stringResult.split(" ");
 }
-console.log(splitSentence("Go Trybe"))
+console.log(splitSentence("Go"))
 
 // Desafio 4
 function concatName(array) {
