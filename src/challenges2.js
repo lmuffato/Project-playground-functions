@@ -46,8 +46,24 @@ function generatePhoneNumber(telNumber) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let cont = 0;
+  for (let i = 0; i < 3; i += 1) {
+    if (lineA < Math.sum(lineB, lineC) && lineA > Math.abs(Math.substract(lineB, lineC))) {
+      cont += 1;
+    }
+    if (lineB < Math.sum(lineA, lineC) && lineB > Math.abs(Math.substract(lineA, lineC))) {
+      cont += 1;
+    }
+    if (lineC < Math.sum(lineB, lineA) && lineC > Math.abs(Math.substract(lineB, lineA))) {
+      cont += 1;
+    }
+  }
+  if (cont === 3) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 13
