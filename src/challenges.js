@@ -96,6 +96,7 @@ function fizzBuzz(arrayDivs) {
 // Desafio 9
 function encode(frase) {
   // seu código aqui
+  // https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176
   let Frase = frase.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   let frase1 = Frase.replace(/a/g, '1');
   let frase2 = frase1.replace(/e/g, '2');
