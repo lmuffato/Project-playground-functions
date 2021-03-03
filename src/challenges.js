@@ -48,9 +48,6 @@ function footballPoints(wins, ties) {
 // Desafio 6
 // Pesquisei como função retornaria a quantidade de vezes que ele aparece no vetor no canal AlgoritmosAZ
 // Link: https://youtu.be/pkJXwPvselI
-
-highestCount([1, 2, 3, 2, 6, 10, 10]);
-
 function highestCount(array) {
   // seu código aqui
   let higher = higherNumber(array);
@@ -70,7 +67,6 @@ function higherNumber(array) {
   
 function contNumber(array,higher) {
   let cont = 0;
-
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] === higher) {
       cont+=1;
@@ -78,7 +74,6 @@ function contNumber(array,higher) {
   }
   return cont;
 }
-
 
 // Desafio 7
 function catAndMouse() {
