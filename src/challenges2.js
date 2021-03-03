@@ -33,11 +33,13 @@ function generatePhoneNumber(telNumber) {
         return 'não é possível gerar um número de telefone com esses valores';
       }
       for (let j = 0; j < telNumber.length; j += 1){
+
         ddd1 = telNumber[0];
         telNumber[0] = '(';
         telNumber[]
       }
     }
+  }
 }
 
 // Desafio 12
