@@ -104,7 +104,7 @@ function writeArray(value) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  let result = [];
+  let result = [''];
   for (let index; index < array.length; index += 1) {
     result.push(writeArray(array[index]));
   }
@@ -113,7 +113,7 @@ function fizzBuzz(array) {
 
 // auxiliar desafio 9 encode
 function replace(char) {
-  let result;
+  let result = char;
   if (char === 'a') {
     result = '1';
   } else if (char === 'e') {
@@ -124,15 +124,13 @@ function replace(char) {
     result = '4';
   } else if (char === 'u') {
     result = '5';
-  } else {
-    result = char;
   }
   return result;
 }
 
 // auxiliar desafio 9 decode
-function replaceDec (char) {
-  let result;
+function replaceDec(char) {
+  let result = char;
   if (char === '1') {
     result = 'a';
   } else if (char === '2') {
@@ -143,9 +141,7 @@ function replaceDec (char) {
     result = 'o';
   } else if (char === '5') {
     result = 'u';
-  } else {
-    result = char;
-  }
+  } 
   return result;
 }
 
