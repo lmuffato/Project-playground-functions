@@ -19,10 +19,9 @@ function splitSentence(value) {
 
 // Desafio 4
 function concatName(lastFirst) {
-  let result = " ";
-  result.push(lastFirst[lastFirst.length - 1], lastFirst[0]);
-  return result;
+  return [lastFirst.length - 1] + ', ' + lastFirst[0];
 }
+
 // Desafio 5
 function footballPoints() {
   // seu código aqui
