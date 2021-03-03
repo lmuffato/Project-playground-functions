@@ -32,9 +32,11 @@ function concatName(trocaPalavra) {
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(win, ties) {
+  return (3 * win) + ties;
 }
+
+console.log(footballPoints(1, 2));
 
 // Desafio 6
 function highestCount() {
