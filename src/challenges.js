@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
   if (bool1 === true && bool2 === true) {
-    return true
+    return true;
   } else {
-    return false
+    return false;
   }
 }
 
@@ -19,8 +19,8 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(arr) {
-  let str = ''
-  str = str + (arr[arr.length - 1]) + ', ' + (arr[0])
+  let str = '';
+  str += `${arr[arr.length - 1]}, ${arr[0]}`;
   return str;
 }
 
@@ -31,16 +31,16 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arr) {
-  let count = 0
-  for (index = 0; index < arr.length; index++) {
-    let highernum = 0
-    for (i = 0; i < arr.length; i++) {
+  let count = 0;
+  for (let index = 0; index < arr.length; index += 1) {
+    let highernum = 0;
+    for (let i = 0; i < arr.length; i += 1) {
       if (arr[index] < arr[i]) {
-        highernum = highernum + 1
+        highernum += 1;
       }
     }
     if (highernum === 0) {
-      count = count + 1
+      count += 1;
     }
   }
   return count;
@@ -49,29 +49,29 @@ function highestCount(arr) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
-    return 'cat1'
+    return 'cat1';
   } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
-    return 'cat2'
+    return 'cat2';
   } else {
-    return 'os gatos trombam e o rato foge'
+    return 'os gatos trombam e o rato foge';
   }
 }
 
 // Desafio 8
 function fizzBuzz(str) {
-  let str2 = []
-  for (index = 0; index < str.length; index++) {
+  let str2 = [];
+  for (let index = 0; index < str.length; index += 1) {
     if (str[index] % 3 === 0 && str[index] % 5 === 0) {
-      str2.push('fizzBuzz')
+      str2.push('fizzBuzz');
     } else if (str[index] % 3 === 0) {
-      str2.push('fizz')
+      str2.push('fizz');
     } else if (str[index] % 5 === 0) {
-      str2.push('buzz')
+      str2.push('buzz');
     } else {
-      str2.push('bug!')
+      str2.push('bug!');
     }
   }
-  return str2
+  return str2;
 }
 
 // Desafio 9
@@ -84,14 +84,14 @@ function encode(encodestr) {
     o: 4,
     u: 5,
   };
-for (index = 0; index < encodestr.length; index++) {
+  for (let index = 0; index < encodestr.length; index += 1) {
     if (code[encodestr[index]] === undefined) {
-      codestr = codestr + encodestr[index]
+      codestr += encodestr[index];
     } else {
-      codestr = codestr + code[encodestr[index]]
+      codestr += code[encodestr[index]];
     }
   }
-return codestr;
+  return codestr;
 }
 
 function decode(decodestr) {
@@ -103,11 +103,11 @@ function decode(decodestr) {
     4: 'o',
     5: 'u',
   };
-  for (let index = 0; index < decodestr.length; index++) {
+  for (let index = 0; index < decodestr.length; index += 1) {
     if (code1[decodestr[index]] === undefined) {
-      decodedstr = decodedstr + decodestr[index]
+      decodedstr += decodestr[index];
     } else {
-      decodedstr = decodedstr + code1[decodestr[index]]
+      decodedstr += code1[decodestr[index]];
     }
   }
   return decodedstr;
