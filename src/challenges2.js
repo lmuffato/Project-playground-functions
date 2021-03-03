@@ -110,8 +110,6 @@ function hydrate(string) {
   return `${water} copos de água`;
 }
 
-console.log(hydrate("1 cerveja"))
-
 module.exports = {
   generatePhoneNumber,
   techList,
