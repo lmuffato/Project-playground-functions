@@ -21,7 +21,7 @@ function techList(technologies, profile) {
 // Desafio 11
 
 function verifyRepetition(telephone) {
-  let sorted = telephone.sort();
+  let sorted = [...telephone].sort();
 
   for (let index = 0; index < telephone.length; index += 1) {
     if (sorted[index] === sorted[index + 1] && sorted[index] === sorted[index + 2]) return true;
@@ -37,18 +37,41 @@ function verifyBiggerSmaller(telephone) {
   return false;
 }
 
-function createPhoneNumber(telephone) {
-  
+function createPhoneNumber(number, index) {
+  let stringNumber = number.toString();
+
+  if (index === 0) {
+    return `(${stringNumber}`;
+  }
+
+  if (index === 1) {
+    return `${stringNumber})`;
+  }
+
+  if (index === 7) {
+    return `-${stringNumber}`;
+  }
+
+  return stringNumber;
 }
+
 function generatePhoneNumber(telephone) {
+  let stringPhoneNumber = '';
+
   if (telephone.length !== 11) return 'Array com tamanho incorreto.';
 
   if (verifyBiggerSmaller(telephone) === true || verifyRepetition(telephone) === true) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
 
-  return createPhoneNumber(telephone);
+  for (let index = 0; index < telephone.length; index += 1) {
+    stringPhoneNumber += createPhoneNumber(telephone[index], index);
+  }
+
+  return stringPhoneNumber;
 }
+
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
@@ -73,5 +96,6 @@ REFERÊNCIAS UTILIZADAS :
 https://medium.com/swlh/5-ways-to-replace-if-else-statements-857c0ff19357
 https://flaviocopes.com/how-to-get-index-in-for-of-loop/
 https://flaviocopes.com/how-to-find-duplicates-array-javascript/
-
+https://eslint.org/docs/rules/no-else-return
+https://stackoverflow.com/questions/24074968/does-sort-function-change-original-array
 */
