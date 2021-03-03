@@ -34,10 +34,10 @@ function repeat3Times(array) {
 
 // função auxiliar exercicio 11
 function checkRange(array) {
-  let result = false;
+  let result = true;
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] >= 0 && array[index] <= 9) {
-      result = true;
+    if (array[index] < 0 || array[index] > 9) {
+      result = false;
     }
   }
   return result;
@@ -54,7 +54,7 @@ function generatePhoneNumber(array) {
   if (array.length === 11 && checkRange(array) === true && repeat3Times(array) === false) {
     result = createPhone(array);
   } else if (array.length !== 11) {
-    result = 'Array com tamanho incorreto.'
+    result = 'Array com tamanho incorreto.';
   } else if (checkRange(array) === false || repeat3Times(array) === true) {
     result = 'não é possível gerar um número de telefone com esses valores';
   }
