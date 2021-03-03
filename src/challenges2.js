@@ -8,7 +8,7 @@ function techList(array, name) {
   for (let index = 0; index < array.length; index += 1) {
     let student = {
       tech: array[index],
-      nome: name,
+      name: name,
     };
     aux[index] = student;
   }
