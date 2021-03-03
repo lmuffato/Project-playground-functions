@@ -76,8 +76,9 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
+  let codingString = "";
   for (index = 0; index < string.length; index += 1){
-    let codingString = string[index]
+     codingString = string[index]
       switch (string[index]) {
         case string[index] === "a":
           codingString.push('1');
@@ -103,7 +104,6 @@ function encode(string) {
           codingString.push(string[index])
       }
       return codingString
-      console.log(codingString)
     }
 }
 

@@ -1,11 +1,37 @@
-let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
+let string = "abacate"
 
-    let lastName = array[array.length-1];
-    let newArray = [lastName]
-    let firstName = [array[0]]
-    let res = newArray.concat(firstName);
-//   return newArray;
+  function encode(string) {
+    let codingString = "trem";
+    for (index = 0; index < string.length; index += 1){
+       codingString = string[index]
+        switch (string[index]) {
+          case string[index] === "a":
+            codingString.push('1');
+            break;
+  
+          case string[index] === "e":
+          codingString.push('2');
+          break;
+         
+          case string[index] === "i":
+            codingString.push('3');
+            break;
+  
+          case string[index] === "o":
+          codingString.push('4');
+          break;
+  
+          case string[index] === "u":
+          codingString.push('5');
+          break;
+  
+          default:
+            codingString.push(string[index])
+        }
+        return codingString
+      }
+    console.log(codingString)
+  }
 
 
 
-console.log(res)
