@@ -33,7 +33,7 @@ function concatName(names) {
   arrayNames = names;
   let lastName = arrayNames[arrayNames.length - 1];
   let firstName = arrayNames[0];
-  return lastName.concat(`, ${{ firstName }}`);
+  return lastName.concat(`, ${ firstName }`);
 }
 
 // Desafio 5
@@ -62,7 +62,7 @@ function highestCount(numbers) {
   for (let index = 0; index < numbers.length; index+=1) {
     if (numbers[index] === maior) {
       cont+=1;
-    }    
+    }
   }
   return cont;
 }
