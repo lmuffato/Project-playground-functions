@@ -53,13 +53,16 @@ function highestCount(numberRepeat) {
 function catAndMouse(mouse, cat1, cat2) {
   let situationOne = mouse - cat1;
   let situationTwo = mouse - cat2;
+  cat1Return = 'cat1';
+  cat2Return = 'cat2'
+  mouseReturn = 'os gatos trombam e o rato foge';
   if (situationOne < situationTwo){
-    return 'cat2';
+    return cat2Return;
   }
   else if (situationTwo < situationOne) {
-   return 'cat1';
+   return cat1Return;
   } else {
-    return 'os gatos trombam e o rato foge';
+    return mouseReturn;
   }
 }
 
