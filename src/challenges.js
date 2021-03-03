@@ -70,9 +70,9 @@ function catAndMouse(cat1, cat2, mouse) {
   if (distCat1 === distCat2) {
     return console.log('os gatos trombam e o rato foge.');
   } if (distCat1 < distCat2) {
-    return 'Cat1';
+    return 'cat1';
   } if (distCat2 < distCat1) {
-    return 'Cat2';
+    return 'cat2';
   }
 }
 
@@ -83,11 +83,11 @@ function fizzBuzz(arrayDivs) {
     if (arrayDivs[i] % 3 === 0) {
       arrayDivs[i] = 'fizz';
     } else if (arrayDivs[i] % 5 === 0) {
-      arrayDivs[i] = 'buzz';
+      arrayDivs[i] = 'Buzz';
     } else if (arrayDivs[i] % 3 === 0 && arrayDivs[i] % 5 === 0) {
-      arrayDivs[i] = 'fizzbuzz';
+      arrayDivs[i] = 'fizzBuzz';
     } else {
-      arrayDivs[i] = 'bug';
+      arrayDivs[i] = 'bug!';
     }
   }
   return arrayDivs;
