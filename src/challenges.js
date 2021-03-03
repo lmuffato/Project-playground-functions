@@ -40,18 +40,27 @@ function footballPoints(wins, ties) {
 function highestCount(numberRepeat) {
   let maxNumber = Math.max(...numberRepeat);
   let count = 0;
-  for (let index = 0; index < numberRepeat.length; index += 1){
+  for (let index = 0; index < numberRepeat.length; index += 1) {
     let walks = numberRepeat[index];
-    if (walks === maxNumber){
-    count += 1;
+    if (walks === maxNumber) {
+        count += 1;
     }
   }
   return count;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let situationOne = mouse - cat1;
+  let situationTwo = mouse - cat2;
+  if (situationOne < situationTwo){
+    return 'cat2';
+  }
+  else if (situationTwo < situationOne) {
+   return 'cat1';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
@@ -90,6 +99,10 @@ console.log(footballPoints(0, 0));
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 console.log(highestCount([0, 0, 0]));
+
+console.log(catAndMouse(10, 8, 7));
+console.log(catAndMouse(13, 1, 7));
+console.log(catAndMouse(10, 10, 10));
 
 module.exports = {
   calcArea,
