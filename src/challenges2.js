@@ -9,10 +9,10 @@ function createObj(string1, string2) {
 }
 
 function techList(arrayOfStrings, string) {
-  arrayOfStrings.sort();
   if (arrayOfStrings.length === 0) {
     return 'Vazio!';
   }
+  arrayOfStrings.sort();
   let objects = [];
   for (let index = 0; index < arrayOfStrings.length; index += 1) {
     objects.push(createObj(arrayOfStrings[index], string));
