@@ -19,7 +19,7 @@ function generatePhoneNumber(array) {
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  for (i = 0; i < array.length; i += 1) {
+  for (let i = 0; i < array.length; i += 1) {
     if (array[i] > 9 || array[i] < 0) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
@@ -33,7 +33,7 @@ function generatePhoneNumber(array) {
       }
     }
   }
-  var k;
+  var k; //retiraaaaaaaaa
   for (let k = 0; k < array.length; k += 1) {
     if (k === 2) {
       number += ') ';
@@ -50,21 +50,21 @@ function triangleCheck(lineA, lineB, lineC) {
   if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB && lineA > Math.abs(lineB - lineC) &&
     lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
     return true;
-  } else {
+  } else { // retiraaaaaaaaaaaaaa
     return false;
   }
 }
 
 // Desafio 13
 function hydrate(string) {
-  var values = string.match(/\d+/gm);
-  var arrarNumbers = [];
-  var sum = 0;
+  let values = string.match(/\d+/gm);
+  let arrarNumbers = [];
+  let sum = 0;
   for (let i = 0; i < values.length; i += 1) {
     arrarNumbers[i] = +values[i];
   }
-  for (i = 0; i < values.length; i += 1) {
-    sum += arrarNumbers[i];
+  for (let j = 0; j < values.length; j += 1) {
+    sum += arrarNumbers[j];
   }
   return sum + ' copos de água';
 }

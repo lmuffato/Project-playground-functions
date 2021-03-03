@@ -15,10 +15,7 @@ function calcArea(base, height) {
 function splitSentence(string) {
   let arr = [];
   let i = 0;
-  let a;
-  let b;
   for (let index = 0; index < string.length; index += 1) {
-    a = string[index];
     if (string[index] === ' ') {
       i += 1;
     }
@@ -66,9 +63,8 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat1';
   } else if (Math.abs(distanciaCat2) < Math.abs(distanciaCat1)) {
     return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -183,7 +179,7 @@ function decode(string) {
           codigo += string[index];
       }
     }
-  } 
+  }
   return codigo;
 }
 
@@ -200,11 +196,11 @@ module.exports = {
   splitSentence,
 };
 
-//console.log(splitSentence('foguete'));
-//console.log(concatName(['captain', 'my', 'captain']));
-//console.log(footballPoints(0,0));
-//console.log(highestCount([0,0,0]));
-//console.log(catAndMouse(1,3,2));
-//console.log(fizzBuzz([9, 25]));
+// console.log(splitSentence('foguete'));
+// console.log(concatName(['captain', 'my', 'captain']));
+// console.log(footballPoints(0,0));
+// console.log(highestCount([0,0,0]));
+// console.log(catAndMouse(1,3,2));
+// console.log(fizzBuzz([9, 25]));
 console.log(encode('hi there!'));
 console.log(decode('h3 th2r2!'));
