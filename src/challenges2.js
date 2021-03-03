@@ -15,7 +15,7 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-arrayOfNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+
 function generatePhoneNumber(arrayOfNumbers) {
   if (arrayOfNumbers.length !== 11) {
     return 'Array com tamanho incorreto.';
@@ -35,7 +35,7 @@ function generatePhoneNumber(arrayOfNumbers) {
     }
   }
   let phoneNumber = '';
-  for (let indexOfNumber = 0; indexOfNumber < arrayOfNumbers; indexOfNumber += 1) {
+  for (let indexOfNumber = 0; indexOfNumber < arrayOfNumbers.length; indexOfNumber += 1) {
     switch (true) {
     case indexOfNumber === 0:
       phoneNumber += ('(' + arrayOfNumbers[indexOfNumber]);
@@ -56,7 +56,7 @@ function generatePhoneNumber(arrayOfNumbers) {
   }
   return phoneNumber;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
