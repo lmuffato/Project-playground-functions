@@ -18,7 +18,6 @@ function greaterThanOrEqualThree(number) {
 }
 function generatePhoneNumber(number) {
   let output = String(number.join(''));
-  let count = 0;
   if (number.length !== 11) return 'Array com tamanho incorreto.';
   if ((number.filter((x) => x < 0 || x > 9).length > 0) || greaterThanOrEqualThree(number)) {
     return 'não é possível gerar um número de telefone com esses valores';
