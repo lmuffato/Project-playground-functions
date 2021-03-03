@@ -113,17 +113,16 @@ function fizzBuzz(array) {
 
 // auxiliar desafio 9 encode 
 function replace(char) {
-  switch (char) {
-    case 'a':
-      char ='1';
-    case 'e':
-      char = '2';
-    case 'i':
-      char ='3';
-    case 'o':
-      char = '4';
-    case 'u':
-      char = '5';
+  if (char === 'a') {
+    char = '1';
+  } else if (char === 'e') {
+    char = '2';
+  } else if (char === 'i') {
+    char = '3';
+  } else if (char === 'o') {
+    char = '4';
+  } else if (char === 'u') {
+    char = '5';
   }
   return char;
 }
