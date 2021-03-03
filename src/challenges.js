@@ -90,44 +90,44 @@ function encode(string) {
   for (let index = 0; index < string.length; index += 1) {
     if (codigo === undefined) {
       switch (string[index]) {
-        case 'a':
-          codigo = '1';
-          break;
-        case 'e':
-          codigo = '2';
-          break;
-        case 'i':
-          codigo = '3';
-          break;
-        case 'o':
-          codigo = '4';
-          break;
-        case 'u':
-          codigo = '5';
-          break;
-        default:
-          codigo = string[index];
+          case 'a':
+            codigo = '1';
+            break;
+          case 'e':
+            codigo = '2';
+            break;
+          case 'i':
+            codigo = '3';
+            break;
+          case 'o':
+            codigo = '4';
+            break;
+          case 'u':
+            codigo = '5';
+            break;
+          default:
+            codigo = string[index];
       }
     }
     else {
       switch (string[index]) {
-        case 'a':
-          codigo += '1';
-          break;
-        case 'e':
-          codigo += '2';
-          break;
-        case 'i':
-          codigo += '3';
-          break;
-        case 'o':
-          codigo += '4';
-          break;
-        case 'u':
-          codigo += '5';
-          break;
-        default:
-          codigo += string[index];
+          case 'a':
+            codigo += '1';
+            break;
+          case 'e':
+            codigo += '2';
+            break;
+          case 'i':
+            codigo += '3';
+            break;
+          case 'o':
+            codigo += '4';
+            break;
+          case 'u':
+            codigo += '5';
+            break;
+          default:
+            codigo += string[index];
       }
     }
   }
