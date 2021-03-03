@@ -10,20 +10,20 @@ function calcArea(base, height) {
 
 /* Challenge 3
 
-// In this challenge I did three functions, two using a logic developed by me and the other using functions that I learned to use through the following references:
+  In this challenge I did three functions, two using a logic developed by me and the other using functions that I learned to use through the following references:
 
-// https://www.horadecodar.com.br/2020/10/07/como-eliminar-espacos-duplicados-em-uma-string/
-// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
-// https://futurestud.io/tutorials/remove-extra-spaces-from-a-string-in-javascript-or-node-js#:~:text=Use%20JavaScript's%20string.,multiple%20using%20the%20%5Cs%2B%20RegEx.
- 
-// The first commented function is the one I used reference, the second is one that I developed the whole logic. The two commented are able to fulfill the challenge objective even if they have extra blanks anywhere.
-//The non-commented was the basics that asked for the challenge.
+  https://www.horadecodar.com.br/2020/10/07/como-eliminar-espacos-duplicados-em-uma-string/
+  https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
+  https://futurestud.io/tutorials/remove-extra-spaces-from-a-string-in-javascript-or-node-js#:~:text=Use%20JavaScript's%20string.,multiple%20using%20the%20%5Cs%2B%20RegEx.
 
-// function splitSentence(string) {
-//   string = string.replace(/\s+/g, ' ').trim();
-//   string = string.split(' ');
-//   return string;
-// }
+  The first commented function is the one I used reference, the second is one that I developed the whole logic. The two commented are able to fulfill the challenge objective even if they have extra blanks anywhere.
+  //The non-commented was the basics that asked for the challenge.
+
+  function splitSentence(string) {
+    string = string.replace(/\s+/g, ' ').trim();
+    string = string.split(' ');
+    return string;
+  }
 
 Challenge 3
 function splitSentence(string) {
@@ -42,13 +42,13 @@ function splitSentence(string) {
 }
 */
 
-function splitSentence(string){
+function splitSentence(string) {
   return string.split(' ');
 }
 
 // Challenge 4
 function concatName(arrayDeStrings) {
-  return (arrayDeStrings[arrayDeStrings.length-1] + ' ' + arrayDeStrings[0]);
+  return (`${arrayDeStrings[arrayDeStrings.length - 1]}, ${arrayDeStrings[0]}`);
 }
 
 // Challenge 5
@@ -56,9 +56,23 @@ function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
 
+// Escreva uma função chamada `highestCount` que, ao receber uma array de números, retorne  a quantidade de vezes que o maior deles se repete.
+
+// Exemplo: caso o parâmetro de `highestCount` seja uma array com valores `[9, 1, 2, 3, 9, 5, 7]`, a função deverá retornar `2`, que é a quantidade de vezes que o número `9` (maior número do array) se repete.
+
 // Challenge 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayOfNumbers) {
+  let highestNumber = Number.NEGATIVE_INFINITY;
+  let repeatCounter = 0;
+  for (let index = 0; index < arrayOfNumbers.length; index += 1) {
+    if (arrayOfNumbers[index] > highestNumber) {
+      highestNumber = arrayOfNumbers[index];
+      repeatCounter = 1;
+    } else if (arrayOfNumbers[index] === highestNumber) {
+      repeatCounter += 1;
+    }
+  }
+  return repeatCounter;
 }
 
 // Challenge 7
