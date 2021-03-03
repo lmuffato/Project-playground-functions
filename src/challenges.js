@@ -12,15 +12,18 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
+// fiz com a aujda do plantão
 function splitSentence(value) {
-  return value.split(' ')
+  return value.split(' ');
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(lastFirst) {
+  let result = [];
+  result.push(lastFirst[lastFirst.length - 1], lastFirst[0]);
+  return result;
 }
-
+concatName(['igson', 'fiure', 'felix']);
 // Desafio 5
 function footballPoints() {
   // seu código aqui
