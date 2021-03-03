@@ -57,7 +57,7 @@ let max = 0;
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let array = [mouse, cat1, cat2];
+  
   let mouseCat1Distancy = mouse - cat1;
   let mouseCat2Distancy = mouse - cat2;
 
