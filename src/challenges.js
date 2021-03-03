@@ -76,8 +76,21 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
+// A Função Math.abs pesquisei aqui: https://developer.mozilla.org/en-us/docs/web/javascript/reference/global_objects/math/abs
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let distanciaCat1 = Math.abs(mouse - cat1);
+  let distanciaCat2 = Math.abs(mouse - cat2);
+  let win;
+
+  if (distanciaCat1 > distanciaCat2) {
+    win = 'cat2';
+    return console.log(win);
+  } else if (distanciaCat2 > distanciaCat1) {
+    win = 'cat1';
+    return console.log(win);
+  } 
+  return console.log("os gatos trombam e o rato foge");
 }
 
 // Desafio 8
