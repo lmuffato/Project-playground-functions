@@ -1,11 +1,11 @@
 // Desafio 10
-function techList(array, name) {
+function techList(array, names) {
   if (array.length === 0) {
     return 'Vazio!';
   }
   let order = array.sort();
   let techs = order.map((item) => {
-    let obj = { tech: item, name: name };
+    let obj = { tech: item, name: names };
     return obj;
   }, {});
   return techs;
