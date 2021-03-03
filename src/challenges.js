@@ -32,7 +32,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(names) {
-  return names[names.length - 1] + ' ' + names[0];
+  return `${names[names.length - 1]} ${names[0]}`;
 }
 
 // Desafio 5
@@ -197,10 +197,10 @@ module.exports = {
 };
 
 // console.log(splitSentence('foguete'));
-// console.log(concatName(['captain', 'my', 'captain']));
+console.log(concatName(['captain', 'my', 'captain']));
 // console.log(footballPoints(0,0));
 // console.log(highestCount([0,0,0]));
 // console.log(catAndMouse(1,3,2));
 // console.log(fizzBuzz([9, 25]));
-console.log(encode('hi there!'));
-console.log(decode('h3 th2r2!'));
+// console.log(encode('hi there!'));
+// console.log(decode('h3 th2r2!'));
