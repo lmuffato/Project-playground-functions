@@ -59,19 +59,21 @@ let contador = 0;
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2,) {
+function catAndMouse(mouse,cat1,cat2,) {
   // seu código aqui
-let resultado = 0;
-  if ((cat1 - mouse) < (cat2 - mouse)){
-  resultado = 'cat1';
+ 
+ let cat1move = Math.abs(cat1 - mouse);
+ let cat2move = Math.abs(cat2 - mouse);
+
+  if (cat1move < cat2move) {
+  return 'cat1';
   }
-  else if ((cat1 - mouse) > (cat2 - mouse)){
-  resultado = 'cat2';
+  else if (cat1move > cat2move) {
+  return 'cat2'
   }
   else {
-  resultado = 'Os gatos trombaram e o rato foge';  
+  return 'os gatos trombam e o rato foge';
   }
-return resultado;
 }
 
 
