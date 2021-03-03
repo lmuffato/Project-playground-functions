@@ -30,7 +30,7 @@ function splitSentence(sentence) {
 function concatName(stringss) {
   // seu código aqui
   let primeiro = stringss[0];
-  let tamanho = (stringss.lenght - 1);
+  let tamanho = (stringss.length - 1);
   let ultimo = stringss[tamanho];
   let concat = `${ultimo} ${primeiro}`;
   return concat;
@@ -49,10 +49,10 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(arrayNums) {
   // seu código aqui
-  let maior = Math.max(arrayNums);
+  let maior = Math.max(...arrayNums);
   let qtdMaior = 0;
   if (arrayNums[1] !== 0 && arrayNums[0] === 0) {
-    return '1';
+    return 1;
   }
   for (let i = 0; i < arrayNums.lenght; i += 1) {
     if (arrayNums[i] === maior) {
@@ -63,7 +63,7 @@ function highestCount(arrayNums) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(cat1, cat2, mouse) {
   // seu código aqui
 }
 
