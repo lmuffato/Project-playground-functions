@@ -62,7 +62,7 @@ function toDdd(arrayOfNumbers) {
 }
 function toFirstPart(arrayOfNumbers) {
   let firstPart = ' ';
-  for (let number = 2; number < arrayOfNumbers[6]; number += 1) {
+  for (let number = 2; number < (arrayOfNumbers.length - 4); number += 1) {
     const currentNumber = arrayOfNumbers[number];
     firstPart += currentNumber;
   }
