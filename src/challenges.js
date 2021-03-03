@@ -19,15 +19,18 @@ function splitSentence(sentence) {
      return sentence.split(" ")
 }
 
-console.log(splitSentence("go trybe"))
 // Desafio 4
-function concatName() {
+function concatName (name) {
   // seu código aqui
-}
+    let concat = [name[0], lastIndexOf(name)];
+    return concat
+ }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+     return (wins*3 + ties);
+    
 }
 
 // Desafio 6
