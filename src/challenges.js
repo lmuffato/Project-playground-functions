@@ -21,8 +21,11 @@ function splitSentence(nameSplit) {
 
 // Desafio 4
 function concatName(name) {
-  let ultimateArray = name.length - 1;
-  return name[0] + ' ' + name[ultimateArray];
+  let firtArray = name[0];
+  let ultimateArrayNumber = name.length - 1;
+  let ultimateArray = name[ultimateArrayNumber]
+  let resultArray = firtArray + ' ' + ultimateArray;
+  return resultArray;
 }
 
 // Desafio 5
