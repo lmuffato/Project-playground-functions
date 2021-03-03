@@ -48,7 +48,7 @@ function numbersRepeatCounter(repeatedNumbers) {
 
 // Confere se os números atendem a algumas exigências
 function numbersCheck(numbers) {
-  if (numbers.length != 11) {
+  if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
   for (let index = 0; index < numbers.length; index += 1) {
@@ -67,16 +67,28 @@ console.log(generatePhoneNumber([0, 2, 3]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (Math.abs(lineA < lineB + lineC) && Math.abs(lineB < lineA + lineC) && Math.abs(lineC < lineA + lineB)) {
+  if (Math.abs(lineA < lineB + lineC) && Math.abs(lineB < lineA + lineC)
+  && Math.abs(lineC < lineA + lineB)) {
     return true;
   }
-  return false
+  return false;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  // let number = /\d/g;
+  let number = string.match(/\d/g);
+  let sumNumber = 0;
+  for (let index = 0; index < number.length; index += 1) {
+    sumNumber += Number.parseInt(number[index], 10);
+  }
+  if (sumNumber <= 1) {
+    return `${sumNumber} copo de água`;
+  }
+  return `${sumNumber} copos de água`;
 }
+
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
