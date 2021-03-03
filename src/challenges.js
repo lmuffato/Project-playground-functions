@@ -54,13 +54,36 @@ function highestCount(numbersArray) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceFirstCat = Math.abs(mouse - cat1);
+  let distanceSecondCat = Math.abs(mouse - cat2);
+
+  if (distanceFirstCat > distanceSecondCat) {
+    return 'cat2';
+  } else if (distanceFirstCat < distanceSecondCat) {
+    return 'cat1';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbersArrayFizzBuzz) {
+  let fizzBuzzStringArray = [];
+
+  numbersArrayFizzBuzz.map((num) => {
+    if ( (num % 3) == 0 && (num % 5) == 0 ) {
+      fizzBuzzStringArray.push('fizzBuzz');
+    } else if ( (num % 3) == 0 ) {
+      fizzBuzzStringArray.push('fizz');
+    } else if ( (num % 5) == 0 ) {
+      fizzBuzzStringArray.push('buzz');
+    } else {
+      fizzBuzzStringArray.push('bug!')
+    }
+  })
+
+  return fizzBuzzStringArray;
 }
 
 // Desafio 9
