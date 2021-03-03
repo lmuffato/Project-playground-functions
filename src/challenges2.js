@@ -25,12 +25,78 @@ function techList(arrayList, name) {
   return newArrayList;
 }
 
+// Função auxiliar
+function highestValue(arrayNumbers){
+  let larger;
+  let largerValueIndex;
+
+  for(let index = 0; index < arrayNumbers.length; index += 1){
+    if(index === 0){
+      larger = arrayNumbers[index];
+      largerValueIndex = index;
+    }else{
+      if(arrayNumbers[index] > larger){
+        larger = arrayNumbers[index];
+        largerValueIndex = index;
+      }
+    }
+  }
+
+  return largerValueIndex;
+}
+
+function moreIsRepeated(arrayNumbers){
+  let numbers = [];
+
+  for(let index = 0; index < arrayNumbers.length; index += 1){
+    numbers.push(1);
+  }
+
+  for(let index = 0; index < arrayNumbers.length; index += 1){
+    for(let compareIndex = 0; compareIndex < arrayNumbers.length; compareIndex += 1){
+      if(index !== compareIndex){
+        if(arrayNumbers[index] === arrayNumbers[compareIndex]){
+          numbers[index] += 1;
+        }
+      }
+    }
+  }
+
+  let index = highestValue(numbers);
+
+  return arrayNumbers[index];
+
+}
+
 // Desafio 11
 function generatePhoneNumber(arrayNumbers) {
   let formatedPhoneNumber = '';
+  let countRepeated = 0;
 
   if (arrayNumbers.length !== 11) {
     return 'Array com tamanho incorreto.';
+  }
+
+  for(let index = 0; index < arrayNumbers.length; index += 1){
+    if(arrayNumbers[index] < 0){
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] === moreIsRepeated(arrayNumbers)) {
+      countRepeated += 1;
+    }
+  }
+
+  if (countRepeated >= 3) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+
+  for(let index = 0; index < arrayNumbers.length; index += 1){
+    if(arrayNumbers[index] > 9){
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
   }
 
   formatedPhoneNumber = formatedPhoneNumber.concat('(');
@@ -59,8 +125,9 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(stringPhrase) {
+  // let r = /\d+/;
+  // let newStringPhrase = stringPhrase.split()
 }
 
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Wanderson'));
