@@ -46,9 +46,16 @@ function highestCount(numbers) {
   return count;
 }
 
-// Desafio 7
-function catAndMouse() {
-  // seu código aqui
+// Desafio 7 //found about an approach to the problem on this article https://javascript.plainenglish.io/javascript-algorithm-cats-and-a-mouse-fd60fb1811ba
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceCat1 = Math.abs(mouse - cat1);
+  let distanceCat2 = Math.abs(mouse - cat2);
+  if (distanceCat1 < distanceCat2) {
+    return 'cat1';
+  } if (distanceCat1 > distanceCat2) {
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
