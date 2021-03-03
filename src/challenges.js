@@ -33,24 +33,24 @@ function footballPoints(wins, ties) {
   return (winsPoints * wins) + (tiesPoints * ties);
 }
 
-let array = [0, 0, 0];
-function runArray(list) {
-  list = [];
-  for (let index = 0; index < array.length - 1; index += 1) {
-    if (array[index] > array[index + 1]) {
-      list.push(array[index]);
+function arrayFirstBigger(list) {
+  let arraylist = [];
+  for (let index = 0; index < list.length - 1; index += 1) {
+    if (list[index] > list[index + 1]) {
+      arraylist.push(list[index]);
     }
   }
-  return list;
+  return arraylist;
 }
 
 // Desafio 6
 function highestCount(list) {
+  list = [];
+  let array = [0, 4, 4, 4, 9, 2, 1];
   let biggestNumber = 0;
   let timesRepeat = 0;
-  let arrayCresentOrder = [];
-  arrayCresentOrder = runArray(list);
-  biggestNumber += arrayCresentOrder[0];
+  list = arrayFirstBigger(array);
+  biggestNumber += list[0];
   for (let index = 0; index < array.length; index += 1) {
     if (biggestNumber === array[index]) {
       timesRepeat += 1;
@@ -58,7 +58,7 @@ function highestCount(list) {
   }
   return timesRepeat;
 }
-console.log(highestCount(array));
+
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
