@@ -32,11 +32,32 @@ function footballPoints(wins, ties) {
   let tiesPoints = 1;
   return (winsPoints * wins) + (tiesPoints * ties);
 }
-
-// Desafio 6
-function highestCount() {
+let array = [0, 0, 0];
+function runArray(list) {
+  list = [];
+  for (let index = 0; index < array.length - 1; index += 1) {
+    if (array[index] > array[index + 1]) {
+      list.push(array[index]);
+    }
+  }
+  return list;
 }
 
+// Desafio 6
+function highestCount(list) {
+  let biggestNumber = 0;
+  let timesRepeat = 0;
+  let arrayCresentOrder = [];
+  arrayCresentOrder = runArray(list);
+  biggestNumber += arrayCresentOrder[0];
+  for (let index = 0; index < array.length; index += 1) {
+    if (biggestNumber === array[index]) {
+      timesRepeat += 1;
+    }
+  }
+  return timesRepeat;
+}
+console.log(highestCount(array));
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
