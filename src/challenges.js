@@ -29,9 +29,11 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(words) {
+  return words[words.length-1] + ', ' + words[0];  
 }
+console.log(concatName(['captain', 'my', 'captain']));
+
 
 // Desafio 5
 function footballPoints() {
