@@ -68,8 +68,56 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function checkIfIsDivisible(dividend, divisor) {
+  const remainder = dividend % divisor;
+  if (remainder === 0) {
+    return true;
+  }
+  return false;
+}
+
+function ifIsFizz(currentNumber, fizzBuzzArray) {
+  const divisibleBy3 = checkIfIsDivisible(currentNumber, 3);
+  const divisibleBy5 = checkIfIsDivisible(currentNumber, 5);
+  if (divisibleBy3 && !divisibleBy5) {
+    fizzBuzzArray.push('fizz');
+  }
+}
+
+function ifIsBuzz(currentNumber, fizzBuzzArray) {
+  const divisibleBy3 = checkIfIsDivisible(currentNumber, 3);
+  const divisibleBy5 = checkIfIsDivisible(currentNumber, 5);
+  if (divisibleBy5 && !divisibleBy3) {
+    fizzBuzzArray.push('buzz');
+  }
+}
+
+function ifIsFizzBuzz(currentNumber, fizzBuzzArray) {
+  const divisibleBy3 = checkIfIsDivisible(currentNumber, 3);
+  const divisibleBy5 = checkIfIsDivisible(currentNumber, 5);
+  if (divisibleBy3 && divisibleBy5) {
+    fizzBuzzArray.push('fizzBuzz!');
+  }
+}
+
+function ifIsBug(currentNumber, fizzBuzzArray) {
+  const divisibleBy3 = checkIfIsDivisible(currentNumber, 3);
+  const divisibleBy5 = checkIfIsDivisible(currentNumber, 5);
+  if (!divisibleBy3 && !divisibleBy5) {
+    fizzBuzzArray.push('bug!');
+  }
+}
+
+function fizzBuzz(arrayOfNumbers) {
+  let handleFizzBuzz = [];
+  for (let index = 0; index < arrayOfNumbers.length; index += 1) {
+    let currentNumber = arrayOfNumbers[index];
+    ifIsFizz(currentNumber, handleFizzBuzz);
+    ifIsBuzz(currentNumber, handleFizzBuzz);
+    ifIsFizzBuzz(currentNumber, handleFizzBuzz);
+    ifIsBug(currentNumber, handleFizzBuzz);
+  }
+  return handleFizzBuzz;
 }
 
 // Desafio 9
