@@ -97,8 +97,17 @@ function triangleCheck(sideA, sideB, sideC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let drinks = string.match(/\d/g);
+  let water = 0;
+
+  for (let index = 0; index < drinks.length; index += 1) {
+    water += +drinks[index];
+  }
+  if (water === 1) {
+    return `${water} copo de água.`;
+  }
+  return `${water} copos de água.`;
 }
 
 module.exports = {
