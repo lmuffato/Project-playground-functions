@@ -5,23 +5,23 @@ function compareTrue() {
 
 // Desafio 2
 function calcArea(base, height) {
-  let count = base * height/2;   
-  return count
-}
-  console.log(calcArea (10, 50));
-  console.log(calcArea (5, 2)); 
-  console.log(calcArea (51, 1));
+  let count = base * height;
+  let count2 = count / 2;
+  return count2
+  }
+console.log(calcArea(10, 50));
+console.log(calcArea(5, 2)); 
+console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence(sentence) {
-  let splitted = sentence.split(' ')
-   
-  console.log(splitted)
+let splitted = sentence.split(' ')
+console.log(splitted);
+  
 }
-   splitSentence('go Trybe');
-   splitSentence('vamo que vamo');
-   splitSentence('foguete');
-
+splitSentence('go Trybe');
+splitSentence('vamo que vamo');
+splitSentence('foguete');
 
 // Desafio 4
 function concatName() {
