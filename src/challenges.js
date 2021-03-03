@@ -110,9 +110,8 @@ function fizzBuzz(array) {
   }
   return result;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
-// auxiliar desafio 9 
+// auxiliar desafio 9 encode
 function replace(char) {
   let result;
   if (char === 'a') {
@@ -125,7 +124,16 @@ function replace(char) {
     result = '4';
   } else if (char === 'u') {
     result = '5';
-  } else if (char === '1') {
+  } else {
+    result = char;
+  }
+  return result;
+}
+
+// auxiliar desafio 9 decode
+function replaceDec (char) {
+  let result;
+  if (char === '1') {
     result = 'a';
   } else if (char === '2') {
     result = 'e';
@@ -154,7 +162,7 @@ function decode(string) {
   let array = string.split('');
   let result = '';
   for (let index = 0; index < array.length; index += 1) {
-    result += replace(array[index]);
+    result += replaceDec(array[index]);
   }
   return result;
 }
