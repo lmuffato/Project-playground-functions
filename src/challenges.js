@@ -3,11 +3,10 @@ function compareTrue(gradeProject, goingToLectures) {
   let result = true;
 
   if (gradeProject === true && goingToLectures === true) {
-    result === true;
+    return result === true;
   } else {
-    result === false;
+   return result === false;
   }
-  return result;
 }
 
 // Desafio 2

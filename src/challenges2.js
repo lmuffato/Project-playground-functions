@@ -9,23 +9,22 @@ function techList() {
 
 // 1 - Descobrir se há repetição no array.
 
-function findRepetition (arrayOfNumbers) {  
-  let numbersInRepetition = {};
-  let repeatedNumbers = false;
+function findDuplicates (arrayOfNumbers) {
+  let sorted_arrayOfNumbers = arrayOfNumbers.slice().sort();
+  let results = [];
+  let repetition;
+  
+  for (let index = 0; index < sorted_arrayOfNumbers.length; index += 1) {
+      if (sorted_arrayOfNumbers[index + 1] == sorted_arrayOfNumbers[index]) {
+         return results.push(sorted_arrayOfNumbers[0,10]);
+      }
+      if (results.length >= 3) {
+          return repetition === true;
+      }
+}
+return results && repetition;
+}
 
-  for (let key of arrayOfNumbers) {
-    numbersInRepetition[key] = 0;
-  }
-  for (let key of arrayOfNumbers) {
-    numbersInRepetition += 1;
-  }
-  for (let key in numbersInRepetition) {
-    if (numbersInRepetition[key] >= 3) {
-      repeatedNumbers === true;
-    }
-  }
-  return repeatedNumbers;
- }
 
 
 // 2 - Acessar os valores do array.
@@ -34,10 +33,9 @@ function theExcludentConditions (arrayOfNumbers) {
   let excludentConditions = false;
   for (let key of arrayOfNumbers) {
     if(arrayOfNumbers[key] < 0 || arrayOfNumbers[key] > 9) {
-      excludentConditions === true;
+      return excludentConditions === true;
     }
   }
-  return excludentCondition;
 }
 
 // 3 - Transformar em string.
@@ -56,11 +54,11 @@ function generatePhoneNumber(phoneNumber) {
   let message = ' ';
   phoneNumber.length === 11;
 
-    if (phoneNumber.length != 11) {
-      message = 'Array com tamanho incorreto.';
+    if (phoneNumber.length !== 11) {
+      return message = 'Array com tamanho incorreto.';
     }
     else if (theExcludentConditions(phoneNumber) === true || findRepetition(phoneNumber) === true) {
-      message = 'não é possível gerar um número de telefone com esses valores'; 
+      return message = 'não é possível gerar um número de telefone com esses valores'; 
     } else {
       message += `(${convertArrayToString(phoneNumber, 0, 1)}) `;
       message += `${convertArrayToString(phoneNumber, 2, 6)}-`;
