@@ -30,15 +30,10 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arr) {
+  let higherNum = Math.max(...arr);
   let count = 0;
   for (let index = 0; index < arr.length; index += 1) {
-    let highernum = 0;
-    for (let i = 0; i < arr.length; i += 1) {
-      if (arr[index] < arr[i]) {
-        highernum += 1;
-      }
-    }
-    if (highernum === 0) {
+    if (higherNum === arr[index]) {
       count += 1;
     }
   }
