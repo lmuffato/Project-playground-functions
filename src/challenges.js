@@ -15,6 +15,7 @@ function calcArea(base, height) {
 function splitSentence(string) {
   let result = string.split(' ');
   return result;
+// metodo split pesquisada no site https://www.w3schools.com/jsref/jsref_split.asp.
 }
 
 // Desafio 4
@@ -23,10 +24,13 @@ function concatName(arrayStrings) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  wins = wins * 3;
+  ties = ties * 1;
+  numberOfPoints = wins + ties;
+  return numberOfPoints;
 }
-
+console.log(footballPoints(0, 0))
 // Desafio 6
 function highestCount() {
   // seu código aqui
