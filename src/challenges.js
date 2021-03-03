@@ -64,9 +64,28 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'undefined';
 }
 // Desafio 8
-function fizzBuzz() {
+function divisor(number) {
+  let result;
+  if (number % 3 === 0 && number % 5 === 0) {
+    result = 'fizzBuzz';
+  } else if (number % 3 === 0) {
+    result = 'fizz';
+  } else if (number % 5 === 0) {
+    result = 'buzz';
+  } else {
+    result = 'bug!';
+  }
+  return result;
 }
 
+function fizzBuzz(array) {
+  let result = [];
+  for (let index = 0; index < array.length; index += 1) {
+    result[index] = divisor((array[index]));
+  }
+  return result;
+}
+// Requisito resolvido com ajuda de Jodiel Briesemeister no Slack
 // Desafio 9
 function encode() {
   // seu código aqui
