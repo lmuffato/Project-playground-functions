@@ -1,7 +1,7 @@
 // Desafio 10
 function techList(techsArray, username) {
-  if (techsArray === undefined) {
-    return 'Vazio!'
+  if (techsArray[0] === undefined) {
+    return 'Vazio!';
   }
   let techsArraySorted = techsArray.sort();
   let arrayObjectTechs = [];
@@ -14,7 +14,7 @@ function techList(techsArray, username) {
   }
   return arrayObjectTechs;
 }
-console.log(techList());
+console.log(techList([], 'lucas'));
 
 function countNumber(array, number) {
   let count = 0;
@@ -43,7 +43,7 @@ function phoneGenerator(array) {
     phoneNumber.push(array[index]);
   }
   phoneNumber.push(') ');
-  for (let index = 2; index < 6; index += 1) {
+  for (let index = 2; index < 7; index += 1) {
     phoneNumber.push(array[index]);
   }
   phoneNumber.push('-');
@@ -64,11 +64,13 @@ function generatePhoneNumber(arrayPhoneNumber) {
   }
   return 'não é possível gerar um número de telefone com esses valores';
 }
-console.log(generatePhoneNumber([2, 2, 1, 4, 5, 6, 7, 8, 9, 0, 2]));
+console.log(generatePhoneNumber([2, 5, 1, 4, 5, 6, 7, 8, 9, 0, 2]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  // lineA < lineB + lineC
+  // lineA > |lineB - lineC|
+
 }
 
 // Desafio 13
