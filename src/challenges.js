@@ -71,17 +71,46 @@ function highestCount(array){
   return repeaterchecker
 }
 // Desafio 7
-function catAndMouse(mouse,cat1,cat2){
-  if((mouse-cat1)>(mouse-cat2)){
-    return 'cat1';
-  }else if((mouse-cat2)>(mouse-cat1)){
-    return 'cat2';
-  }else if((mouse-cat1)==(mouse-cat2)){
-    return 'os gatos trombam e o rato foge';
+function checkDistance(mouse,cat1,cat2){
+  let distancebetweenCat1=0;
+  let distancebetweenCat2=0;
+  let distances=[];
+  if(cat1<mouse){
+      for (let index=cat1; index < mouse; index++) {
+                distancebetweenCat1++
+      }
+    }
+    else if(cat2<mouse){
+      for (let index=cat2; index < mouse; index++) {
+        distancebetweenCat2++
+    }
   }
-
+  if(cat1>mouse){
+    for (let index=cat1; index > mouse; index--) {
+              distancebetweenCat1++
+      }
+    }
+    else if(cat2>mouse){
+      for (let index=cat2; index > mouse; index--) {
+        distancebetweenCat2++
+    }
+  }
+  distances.push(distancebetweenCat1);
+  distances.push(distancebetweenCat2);
+  return distances
 }
-console.log(catAndMouse(5,3,3))
+function catAndMouse(mouse,cat1,cat2){
+  let distances=checkDistance(mouse,cat1,cat2);
+  let catcher;
+  if(distances[0]>distances[1]){
+    catcher='cat2'
+  }else if(distances[1]>distances[0]){
+    catcher='cat1'
+  }else(
+    catcher='os gatos trombam e o rato foge'
+  )
+return catcher+'\n'+distances
+}
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
