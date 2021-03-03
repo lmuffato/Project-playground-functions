@@ -16,11 +16,11 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(arrayDeStrings) {
  return `${arrayDeStrings[arrayDeStrings.length - 1]}, ${arrayDeStrings[0]}` 
-}
+} // pesquisado no youtube - https://www.youtube.com/watch?v=ORI_HTXaIw0
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(win, ties) {
+  return (win*3)+ties
 }
 
 // Desafio 6
