@@ -57,13 +57,13 @@ function higherNumber(array) {
   }
   return maior;
 }
-  
-function contNumber(array,higher) {
+
+function contNumber(array, higher) {
   let cont = 0;
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] === higher) {
       cont += 1;
-    }    
+    } 
   }
   return cont;
 }
@@ -71,8 +71,8 @@ function contNumber(array,higher) {
 function highestCount(array) {
   // seu código aqui
   let higher = higherNumber(array);
-  let cont = contNumber(array,higher);
-  return console.log(cont);
+  let cont = contNumber(array, higher);
+  return cont;
 }
 
 // Desafio 7
