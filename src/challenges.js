@@ -1,18 +1,31 @@
 // Desafio 1
-function compareTrue(parameter1, parameter2) {
+function compareTrue(number1, number2) {
   // seu código aqui
-  return parameter1 && parameter2;
+  return number1 && number2;
 }
 
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  return (base * height)/2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   // seu código aqui
+  let i, j = 0, array = [string[0]];
+
+  for (i = 1; i < string.length; i++){
+    if (string[i] != ' '){
+      array[j] = array[j] + string[i];
+    }
+    else {
+      j++;
+      i++;
+      array[j] = string[i];
+    }
+  }
+  return array;
 }
 
 // Desafio 4
