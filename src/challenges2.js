@@ -13,6 +13,7 @@ function techList(techArray, name) {
 
 // Desafio 11
 function generatePhoneNumber(array) {
+
   let countMax = 1;
   let countElement = 0;
   let phoneNumber = '';
@@ -40,8 +41,9 @@ function generatePhoneNumber(array) {
 
     countElement = 0
     phoneNumber += array[index]  
-    
   }
+
+  // pesquisei a ideia do contado no site www.stackoverflow.com, segue o link: https://stackoverflow.com/questions/31227687/find-the-most-frequent-item-of-an-array-not-just-strings/31227768
   
   for (let index = 0; index < phoneNumber.length; index += 1) {
     if (index < 2) {
@@ -60,8 +62,15 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  //Um lado tem que ser menor do que a soma dos outros dois e maior do que o valor absoluto da diferença dos dois (math.abs)
+  //retorno deve ser booleano
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB-lineC) || lineB < lineA + lineC && lineB > Math.abs(lineA - lineC) || lineC < lineA+lineB && lineC > Math.abs(lineA - lineB)) {
+    return true
+  } else {
+    return false
+  }
+
 }
 
 // Desafio 13
@@ -75,5 +84,3 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
-
-
