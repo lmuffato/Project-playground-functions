@@ -1,5 +1,6 @@
 // Desafio 10
 function techList(array, string) {
+  array.sort();
   let tecnologies = [];
 
   if (array.length === 0) {
@@ -17,6 +18,8 @@ function techList(array, string) {
 
   return tecnologies;
 }
+
+console.log(techList(['JavaScript', 'CSS', 'Lint'], 'Mauricio'))
 
 // Desafio 11
 function generatePhoneNumber() {
