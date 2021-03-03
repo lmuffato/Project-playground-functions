@@ -20,7 +20,7 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(names) {
-  let firstLastNames = names[0].concat (' ' + names[names.length - 1]);
+  let firstLastNames = names[0].concat (', ' + names[names.length - 1]);
   return firstLastNames;
 }
 
@@ -52,8 +52,17 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let phrases = ['os gatos trombam e o rato foge', 'cat1', 'cat2'];
+  let firstCat = mouse + cat1;
+  let secondCat = mouse + cat2
+  if (firstCat < secondCat) {
+    return phrases[1];
+  } else if (cat1 === cat2){
+    return phrases[0];
+  } else {
+    return phrases[2];
+  }
 }
 
 // Desafio 8
