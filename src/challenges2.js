@@ -8,14 +8,12 @@ function techList(array, name) {
   for (let index = 0; index < array.length; index += 1) {
     let student = {
       tech: array[index],
-      name: name,
+      nome: name,
     };
     aux[index] = student;
   }
   return aux;
 }
-
-// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'));
 
 // Desafio 11
 function generatePhoneNumber() {
