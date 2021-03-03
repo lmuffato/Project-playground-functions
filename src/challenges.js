@@ -23,14 +23,17 @@ function splitSentence(nameSplit) {
 function concatName(name) {
   let firtArray = name[0];
   let ultimateArrayNumber = name.length - 1;
-  let ultimateArray = name[ultimateArrayNumber]
+  let ultimateArray = name[ultimateArrayNumber];
   let resultArray = ultimateArray + ', ' + firtArray;
-  return resultArray; 
+  return resultArray;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winsPoints = wins * 3;
+  let tiePoints = ties * 1;
+  totalPoints = winsPoints + tiePoints;
+  return totalPoints;
 }
 
 // Desafio 6
@@ -71,6 +74,10 @@ console.log(splitSentence('foguete'));
 console.log(concatName(['Lucas', 'Cassio', 'Ferraz', 'Paolillo']));
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 console.log(concatName(['captain', 'my', 'captain']));
+
+console.log(footballPoints(14, 8));
+console.log(footballPoints(1, 2));
+console.log(footballPoints(0, 0));
 
 module.exports = {
   calcArea,
