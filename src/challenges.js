@@ -2,9 +2,8 @@
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
-  } else {
+  } 
     return false;
-  }
 }
 
 // Desafio 2
@@ -14,8 +13,8 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  let splitArray = [];
-  return splitArray = (string.split(' '));
+  splitArray = (string.split(' '));
+  return splitArray;
 }
 
 // Desafio 4
@@ -83,11 +82,24 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  encodeString = string.split('');
+  return encodeString;
+  for (let index = 0; index <= encodeString.length; index += 1) {
+    if (encodeString[index] === 'a') {
+      encodeString[index] = 1;
+    }
+    if (encodeString[index] === 'e') {
+      encodeString[index] = 2;
+    }  
+
+  }
+  return encodeString;
 }
 
-// Desafio 10
+console.log(encode('eduardo'))
+
+
 function decode() {
   // seu código aqui
 }
