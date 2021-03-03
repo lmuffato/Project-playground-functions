@@ -19,7 +19,7 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(fullname) {
-  let firstAndLast = fullname[fullname.length-1] + ',' + ' ' + fullname[0];
+  let firstAndLast = fullname[fullname.length - 1] + ',' + ' ' + fullname[0];
   return firstAndLast;
 }
 
@@ -32,26 +32,26 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numbers) {
   let timesAppear = 0;
-    let maxNumber = Math.max.apply (null, numbers);
-    for (let index = 0; index < numbers.length; index += 1) {
-        if (numbers[index] === maxNumber){
-            timesAppear += 1;
-        }
+  let maxNumber = Math.max.apply(null, numbers);
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] === maxNumber) {
+      timesAppear += 1;
     }
+  }
   return timesAppear;
 }
 // Como encontra o número maior pesquisei no stackoverflow
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distance1 = Math.abs (cat1 - mouse);
-  let distance2 = Math.abs (cat2 - mouse);
+  let distance1 = Math.abs(cat1 - mouse);
+  let distance2 = Math.abs(cat2 - mouse);
   if ((distance1 - mouse) < (distance2 - mouse)) {
     return 'cat1';
-  }else if ((distance2 - mouse) < (distance1 - mouse)){
+  } else if ((distance2 - mouse) < (distance1 - mouse)) {
     return 'cat2';
   }
-  return 'os gatos trombam e o rato foge'
+  return 'os gatos trombam e o rato foge';
 }
 // Fiquei na dúvida se a posição seria um número ou um par ordenado. Posição pode ser as duas coisas. 
 // fonte do Math.abs foi developer.mozzila.org
@@ -61,13 +61,13 @@ function fizzBuzz(arrayNumbers) {
   let finalArray = []
   for (let index = 0; index < arrayNumbers.length; index += 1){
     if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0){
-      finalArray.push ('fizzBuzz');
-    }else if (arrayNumbers[index] % 3 === 0){
-      finalArray.push ('fizz');
-    }else if (arrayNumbers[index] % 5 === 0){
-      finalArray.push ('buzz');
-    }else {
-      finalArray.push ('bug!');
+      finalArray.push('fizzBuzz');
+    } else if (arrayNumbers[index] % 3 === 0){
+      finalArray.push('fizz');
+    } else if (arrayNumbers[index] % 5 === 0){
+      finalArray.push('buzz');
+    } else {
+      finalArray.push('bug!');
     }
   }
   return finalArray;
