@@ -88,9 +88,16 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringEncode) {
+  stringEncode = stringEncode.replace(/a/g , '1');
+  stringEncode = stringEncode.replace(/e/g , '2');
+  stringEncode = stringEncode.replace(/i/g , '3');
+  stringEncode = stringEncode.replace(/o/g , '4');
+  stringEncode = stringEncode.replace(/u/g , '5');
+
+  return stringEncode;
 }
+
 function decode() {
   // seu código aqui
 }
