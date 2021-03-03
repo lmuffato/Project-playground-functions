@@ -20,13 +20,13 @@ function generatePhoneNumber(array) {
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  for (i=0; i<array.length; i += 1) {
+  for (i = 0; i < array.length; i += 1) {
     if (array[i] > 9 || array[i] < 0) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
     count = 0;
-    for (let j=1; j<array.length; j+=1) {
-      if (array[j] === array[i]){
+    for (let j = 1; j < array.length; j += 1) {
+      if (array[j] === array[i]) {
         count += 1;
         if (count >= 3) {
           return 'não é possível gerar um número de telefone com esses valores';
@@ -35,11 +35,10 @@ function generatePhoneNumber(array) {
     }
   }
   var k;
-  for (let k=0; k < array.length; k += 1) {
+  for (let k = 0; k < array.length; k += 1) {
     if (k === 2) {
       number += ') ';
-    }
-    else if (k=== 7) {
+    } else if (k === 7) {
       number += '-';
     }
     number += array[k];
@@ -51,25 +50,24 @@ function generatePhoneNumber(array) {
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   //medida de uma lado deve ser menor que a soma da medida dos outros 2 e maior que o valor absoluto entre os dois
-  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB && lineA > Math.abs(lineB-lineC) &&
-  lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB) ){
+  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB && lineA > Math.abs(lineB - lineC) &&
+    lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
     return true;
-  }
-  else {
+  } else {
     return false;
   }
 }
 
 // Desafio 13
 function hydrate(string) {
-  var values= string.match(/\d+/gm);
-  var arrarNumbers=[];
+  var values = string.match(/\d+/gm);
+  var arrarNumbers = [];
   var sum = 0;
-  for (let i=0; i < values.length; i += 1){
+  for (let i = 0; i < values.length; i += 1) {
     arrarNumbers[i] = +values[i];
   }
 
-  for (i=0; i<values.length; i += 1){
+  for (i = 0; i < values.length; i += 1) {
     sum += arrarNumbers[i];
   }
 
