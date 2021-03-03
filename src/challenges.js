@@ -33,7 +33,7 @@ function concatName(names) {
   arrayNames = names;
   let lastName = arrayNames[arrayNames.length - 1];
   let firstName = arrayNames[0];
-  return lastName.concat(`, ${ { firstName } }`);
+  return lastName.concat(`, ${ { firstName }}`);
 }
 
 // Desafio 5
@@ -46,7 +46,8 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-// Pesquisei como função retornaria a quantidade de vezes que o
+// Pesquisei como função retornaria a quantidade de vezes que ele aparece no vetor no canal AlgoritmosAZ
+//Link: https://youtu.be/pkJXwPvselI
 function highestCount(numbers) {
   // seu código aqui
   let maior = 0;
