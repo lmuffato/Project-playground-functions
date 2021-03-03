@@ -19,8 +19,35 @@ function techList(technologies, profile) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+
+function verifyRepetition(telephone) {
+  let sorted = telephone.sort();
+
+  for (let index = 0; index < telephone.length; index += 1) {
+    if (sorted[index] === sorted[index + 1] && sorted[index] === sorted[index + 2]) return true;
+  }
+
+  return false;
+}
+
+function verifyBiggerSmaller(telephone) {
+  for (let index in telephone) {
+    if (telephone[index] < 0 || telephone[index] > 9) return true;
+  }
+  return false;
+}
+
+function createPhoneNumber(telephone) {
+  
+}
+function generatePhoneNumber(telephone) {
+  if (telephone.length !== 11) return 'Array com tamanho incorreto.';
+
+  if (verifyBiggerSmaller(telephone) === true || verifyRepetition(telephone) === true) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+
+  return createPhoneNumber(telephone);
 }
 
 // Desafio 12
@@ -39,3 +66,12 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
+
+/*
+
+REFERÊNCIAS UTILIZADAS :
+https://medium.com/swlh/5-ways-to-replace-if-else-statements-857c0ff19357
+https://flaviocopes.com/how-to-get-index-in-for-of-loop/
+https://flaviocopes.com/how-to-find-duplicates-array-javascript/
+
+*/
