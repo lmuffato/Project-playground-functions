@@ -1,19 +1,19 @@
 // Desafio 10
 function techList(techs, name) {
-  let devTechnology = {tech: '', name: ''};
+  let devTechnology = {tech: techs, name: name};
   let devTechs = []
-  let devTechnologyCopy = '';
+  // let devTechnologyCopy = '';
   for (let index = 0; index < techs.length; index += 1) {
     devTechnology.tech = techs[index];
     devTechnology.name = name;
-    devTechnologyCopy = devTechnology.assign({}, de)
-    devTechs.push(devTechnology.slice());
+    let devTechnologyCopy = Object.assign({}, devTechnology);
+    devTechs.push(devTechnologyCopy);
     // console.log(devTechs)
   }
   return devTechs;
 }
 
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Iago'));
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Iago'));
 
 // Desafio 11
 function generatePhoneNumber() {

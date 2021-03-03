@@ -108,7 +108,6 @@ function lettersCheck(letters) {
 
 function encode(string) {
   let code = [];
-  
   for (let letters = 0; letters < string.length; letters += 1) {
     code.push(lettersCheck(string[letters]));
   }
