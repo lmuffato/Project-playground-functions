@@ -55,7 +55,7 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let dist1 = Math.abs(cat1 - mouse); 
+  let dist1 = Math.abs(cat1 - mouse);
   let dist2 = Math.abs(cat2 - mouse);
   let result;
   if (dist1 > dist2) {
@@ -67,11 +67,49 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return result;
 }
-// decoberto a fuunção .abs que retorna o módulo no site: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+// decoberto a função Math.abs que retorna o módulo, no site: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+
+// função complementar exercicio 8 para ver se numero é somente divisivel por 3
+function numbDiv3 (num) {
+  let result = false;
+  if (num % 3 === 0 && num % 5 != 0) {
+    result = true;
+  }
+  return result;
+}
+
+// função complementar exercicio 8 para ver se numero é somente divisivel por 5
+function numbDiv5 (num) {
+  let result = false;
+  if (num % 5 === 0 && num % 3 != 0) {
+    result = true;
+  }
+  return result;
+}
+// função complementar exercicio 8 para ver se numero é divisivel por 3 e 5
+function numbDiv3E5 (num) {
+  let result = false;
+  if (num % 5 === 0 && num % 3 === 0) {
+    result = true;
+  }
+  return result;
+}
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let result = [];
+  for ( let index in array) {
+    if (numbDiv3(array[index]) === true){
+      result.push('fizz');
+    } else if (numbDiv3E5(array[index]) === true) {
+      result.push('fizzBuzz');
+    } else if (numbDiv5(array[index]) === true) {
+      result.push('Buzz');
+    } else {
+      result.push('bug');
+    }
+  }
+  return result;
 }
 
 // Desafio 9
