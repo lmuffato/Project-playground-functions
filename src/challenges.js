@@ -1,34 +1,31 @@
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
-    return true
+    return true;
   }
-  else {
-    return false
-  }
+
+  return false;
 }
 
 // Desafio 2
 function calcArea(height, base) {
-  let area = (base * height / 2);
-  return area
-
+  let area = ((base * height) / 2);
+  return area;
 }
 
 // Desafio 3
 function splitSentence(word) {
-  let split = word.split(' ')
-  return split
-
+  let split = word.split(' ');
+  return split;
 }
 
 // Desafio 4
 function concatName(names) {
   let divide = {
-    firstName: names [0],
-    lastName: names[names.length-1]
-  }
+    firstName: names[0],
+    lastName: names[names.length - 1],
+  };
 
-  let conquer = divide.lastName + ', ' + divide.firstName;
+  let conquer = `${divide.lastName}, ${divide.firstName}`;
 
   return conquer;
 }
@@ -37,12 +34,12 @@ function concatName(names) {
 function footballPoints(wins, ties) {
   let game = {
     winspoints: 3,
-    tiespoints: 1
-  }
+    tiespoints: 1,
+  };
   let pointsSum = {
     winsplus: wins * game.winspoints,
-    tiesplus: ties * game.tiespoints
-  }
+    tiesplus: ties * game.tiespoints,
+  };
   let total = pointsSum.winsplus + pointsSum.tiesplus;
   return total;
 }
@@ -52,7 +49,7 @@ function highestCount(num) {
   let objectNumber = {
     highestNum: num[0],
     Count: 0,
-  }
+  };
   for (let highestnumbers in num) {
     if (num[highestnumbers] > objectNumber.highestNum) {
       objectNumber.highestNum = num[highestnumbers];
@@ -63,48 +60,44 @@ function highestCount(num) {
       objectNumber.Count += 1;
     }
   }
-    return objectNumber.Count;
+  return objectNumber.Count;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let positions = {
-    distanceCat1: Math.abs (cat1 - mouse),
-    distanceCat2: Math.abs (cat2 - mouse),
-  }
+    distanceCat1: Math.abs(cat1 - mouse),
+    distanceCat2: Math.abs(cat2 - mouse),
+  };
   if (positions.distanceCat2 > positions.distanceCat1) {
-    distanceCat1 = cat1 - mouse
-    return 'cat1'
+    positions.distanceCat1 = cat1 - mouse;
+    return 'cat1';
   }
-  else if (positions.distanceCat1 > positions.distanceCat2) {
-    return 'cat2'
+  if (positions.distanceCat1 > positions.distanceCat2) {
+    return 'cat2';
   }
-  else {
-    return 'os gatos trombam e o rato foge.'
-  }
+
+  return 'os gatos trombam e o rato foge.';
 }
-console.log (catAndMouse(0, 0, 0))
+console.log(catAndMouse(0, 6, 12));
 
 // Desafio 8
 function fizzBuzz(fizrray) {
   let fibuzrray = [];
   for (let count in fizrray) {
-    if (fizrray[count] %3 === 0 && fizrray[count] %5 === 0) {
-     fibuzrray.push('fizzBuzz');
+    if (fizrray[count] % 3 === 0 && fizrray[count] % 5 === 0) {
+      fibuzrray.push('fizzBuzz');
+    } else if (fizrray[count] % 3 === 0 && fizrray[count] % 5 !== 0) {
+      fibuzrray.push('fizz');
+    } else if (fizrray[count] % 5 === 0 && fizrray[count] % 3 !== 0) {
+      fibuzrray.push('buzz');
+    } else if (fizrray[count] % 5 !== 0 && fizrray[count] % 3 !== 0) {
+      fibuzrray.push('bug!');
     }
-    else if (fizrray[count] %3 === 0 && fizrray[count] %5 != 0) {
-     fibuzrray.push('fizz');
-    }
-    else if (fizrray[count] %5 === 0 && fizrray[count] %3 != 0) {
-     fibuzrray.push('buzz');
-    }
-    else if (fizrray[count] %5 != 0 && fizrray[count] %3 != 0) {
-     fibuzrray.push('bug!');
-    }
-  } return fibuzrray;
+  }
+  return fibuzrray;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
-
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
