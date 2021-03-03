@@ -63,14 +63,13 @@ function fizzBuzz(numbers) {
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] % 3 === 0) {
       return 'fizz';
-    } else if (numbers[index] % 5 === 0) {
+    } if (numbers[index] % 5 === 0) {
       return 'buzz';
-    } else if (numbers[index] % 3 === 0 && % 5 === 0) {
+    } if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
       return 'fizzBuzz';
-    } else {
-      return 'bug!';
-    }
+    }    
   }
+  return 'bug!';
 }
 
 // Desafio 9
