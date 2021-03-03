@@ -16,15 +16,20 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   let arrayString = [];
-   arrayString = string.split(" ");
+  arrayString = string.split(" ");
   return arrayString;
-  
+
 }
-console.log(splitSentence('go Trybe'));
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+
+function concatName(arrayString) {
+  let lastItem = arrayString[arrayString.length - 1];
+  let firstItem = arrayString[0];
+  let array = lastItem + ', ' + firstItem;
+  return array;
 }
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
 function footballPoints() {
