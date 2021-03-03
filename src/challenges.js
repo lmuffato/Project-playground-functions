@@ -28,21 +28,23 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
-function highestCount(number) {
-}
+function highestCount(arrayNumber) {
 
+}
+console.log(arrayNumber(9, 1, 2, 3, 9, 5, 7))
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
-  let mouseForCat1 = mouse+cat1;
-  let mouseForCat2 = mouse+cat2;
-  if(mouseForCat1 < mouseForCat2){
+
+  if((cat1-mouse) < (cat2-mouse)){
     return "cat1"
-  } else if (mouseForCat2 < mouseForCat1){
+  } else if ((cat1-mouse) > (cat2-mouse)){
     return "cat2"
   } else {
     return "os gatos trombam e o rato foge"
   }
 }
+
+console.log(catAndMouse(1,0,2))
 
 // Desafio 8
 function fizzBuzz() {
