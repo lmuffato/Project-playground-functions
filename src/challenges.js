@@ -16,13 +16,13 @@ function calcArea(base, height) {
 function splitSentence(sentenceToSplit) {
   return sentenceToSplit.split(' ')
 }
-// referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split //
+// Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split //
 
 // Desafio 4
 function concatName(stringsArray) {
-  return stringsArray.concat([0] + ', ' + [-1])
+  return stringsArray.concat(stringsArray.length[-1], ', ', stringsArray.length[0]);
 }
-// referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/concat //
+// Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/concat //
 
 // Desafio 5
 function footballPoints() {
