@@ -2,7 +2,13 @@
 function techList(arrayNames, name) {
   if ( arrayNames.length === 0){
     return 'Vazio!'
-  }
+  } 
+
+  let objeto = {
+    tech: 'css',
+    name: 'Lucas'
+  };
+
 }
 
 // Desafio 11
@@ -11,9 +17,9 @@ function generatePhoneNumber(arrayNumbers) {
  
   if (arrayNumbers.length !== 11){
     return "Array com tamanho incorreto.";
-  } else if (arrayNumbers < 0){
+  } else if (arrayNumbers.length < 0){
     return "não é possível gerar um número de telefone com esses valores";
-  } else if (arrayNumbers > 9){
+  } else if (arrayNumbers.length > 9){
     return "não é possível gerar um número de telefone com esses valores";
   } 
   }
@@ -35,7 +41,7 @@ function triangleCheck(lineA, lineB, lineC) {
 // pesuisei o metodo .substring no site https://www.devmedia.com.br/javascript-substring-selecionando-parte-de-uma-string/39232
  // string.substring(0, string.length); // para extrair uma sequência de caracteres de uma string
 function hydrate(string) {
-  let stringCaracteres = string.split('');        
+  let stringCaracteres = string.split(' ');        
   let agua = 0;
 
   for (let index = 0; index < stringCaracteres.length; index += 1){

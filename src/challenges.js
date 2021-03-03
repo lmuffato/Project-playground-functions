@@ -115,7 +115,7 @@ function encode(string) {
     } else if ( string[index] === 'u'){
       newString[index] = '5';
     } else {
-      newString[index] = string[index]
+      newString[index] = string[index];
     }
   }
   return newString.split(' ');  //transforma em array de palavras
@@ -124,7 +124,7 @@ function encode(string) {
 //let stringTeste = 'hi there!';
 //console.log(encode(stringTeste)); 
 
-function decode() {
+function decode(string) {
   let newString = string.split(''); //transforma string em array de caracteres
   for ( let index = 0; index < string.length; index += 1){
     if ( string[index] === '1'){
@@ -138,7 +138,7 @@ function decode() {
     } else if ( string[index] === '5'){
       newString[index] = 'u';
     } else {
-      newString[index] = string[index]
+      newString[index] = string[index];
     }
   }
   return newString.split(' ');  //transforma em array de palavras
