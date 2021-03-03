@@ -1,10 +1,12 @@
-// Desafio 1
+/* Desafio 1
+Como a funcoes em js so tem um retorno nao eh necessario colocar um else, pois se entrar no if ao chegar no return tera um break na funcao
+pulando assim o resto */
+
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -33,17 +35,23 @@ function footballPoints(wins, ties) {
   return result;
 }
 
-// Desafio 6
-function highestCount(array) {
-  let highestNumber = 0;
+/* Desafio 6
+Para aceitar no lint tive que criar uma funcao para achar o maior numero para depois poder contar as repeticoes desse numero */
+
+function highestNumber(array) {
+  let highNumber = 0;
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] > highestNumber) {
-      highestNumber = array[index];
+    if (array[index] > highNumber) {
+      highNumber = array[index];
     }
   }
+  return highNumber;
+}
+
+function highestCount(array) {
   let sum = 0;
   for (let indexCount = 0; indexCount < array.length; indexCount += 1) {
-    if (highestNumber === array[indexCount]) {
+    if (highestNumber(array) === array[indexCount]) {
       sum += 1;
     }
   }
@@ -51,23 +59,23 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  let distanceCat1 = 0;
-  let distanceCat2 = 0;
-  if (cat1 > mouse) {
-    distanceCat1 = cat1 - mouse;
-  } else {
-    distanceCat1 = mouse - cat1;
-  }
 
-  if (cat2 > mouse) {
-    distanceCat2 = cat2 - mouse;
-  } else { distanceCat2 = mouse - cat2; }
+function highestNumberSubtraction(num1, num2) {
+  if (num1 > num2) {
+    return num1 - num2;
+  } return num2 - num1;
+}
+
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceCat1 = highestNumberSubtraction(cat1, mouse);
+  let distanceCat2 = highestNumberSubtraction(cat2, mouse);
+
   if (distanceCat1 > distanceCat2) {
     return 'cat2';
-  } else if (distanceCat1 < distanceCat2) {
+  } if (distanceCat1 < distanceCat2) {
     return 'cat1';
-  } else { return 'os gatos trombam e o rato foge';}
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -87,6 +95,10 @@ function fizzBuzz(array) {
   return resultArray;
   }
 }
+
+console.log(fizzBuzz)
+
+
 
 // Desafio 9
 function encode(string) {
