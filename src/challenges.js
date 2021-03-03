@@ -90,7 +90,8 @@ function catAndMouse(mouse, cat1, cat2) {
     win = 'cat1';
     return win;
   }
-  return "os gatos trombam e o rato foge";
+  win = "os gatos trombam e o rato foge"
+  return win;
 }
 
 // Desafio 8
