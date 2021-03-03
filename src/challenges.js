@@ -106,6 +106,24 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
+function letterToNumber(letter) {
+  if (letter === 'a') {
+    return 1;
+  }
+  if (letter === 'e') {
+    return 2;
+  }
+  if (letter === 'i') {
+    return 3;
+  }
+  if (letter === 'o') {
+    return 4;
+  }
+  if (letter === 'u') {
+    return 5;
+  }
+  return letter;
+}
 
 function encode(string) {
   let aux = '';
