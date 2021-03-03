@@ -76,10 +76,9 @@ function verifySum(lineA, lineB, lineC) {
   let sumOfAandB = lineA + lineB; // para lado C
   let sumOfAandC = lineA + lineC; // para lado B
   let sumOfCandB = lineB + lineC; // para lado A
-  let condition = false;
 
   if (lineA < sumOfCandB && lineB < sumOfAandC && lineC < sumOfAandB) {
-    return condition === true;
+    return true;
   }
 }
 
@@ -89,11 +88,11 @@ function verifySubtraction(lineA, lineB, lineC) {
   let subtractionOfAandB = Math.abs(lineA - lineB); // para lado C
   let subtractionOfAandC = Math.abs(lineA - lineC); // para lado B
   let subtractionOfBandC = Math.abs(lineB - lineC); // para lado A
-  let condition = false;
   if (lineA > subtractionOfBandC && lineB > subtractionOfAandC && lineC > subtractionOfAandB) {
-    return condition === true;
+    return true;
   }
 }
+
 function triangleCheck(lineA, lineB, lineC) {
   let triangleVerify = false;
   if (verifySum(lineA, lineB, lineC) === true && verifySubtraction(lineA, lineB, lineC) === true) {

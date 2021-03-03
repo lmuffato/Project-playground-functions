@@ -1,10 +1,10 @@
 // Desafio 1
 function compareTrue(gradeProject, goingToLectures) {
-
   if (gradeProject === true && goingToLectures === true) {
     return true;
   } else {
     return false;
+  }
 }
 
 // Desafio 2
