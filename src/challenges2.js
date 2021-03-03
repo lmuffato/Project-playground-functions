@@ -43,17 +43,12 @@ function generatePhoneNumber(arrayOfNumbers) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  return (lineA < lineB + lineC
-    && lineA > Math.abs(lineB - lineC));
-
+  return lineA < lineB + lineC && lineA > Math.abs(lineB - lineC);
 }
 
 // Desafio 13
 function checkIfCharIsNumber(char) {
-  if (char - '0' >= 0 && '9' - char >= 0) {
-    return true;
-  }
-  return false;
+  return char - '0' >= 0 && '9' - char >= 0;
 }
 function parseCharToNumber(char) {
   return char - '0';
