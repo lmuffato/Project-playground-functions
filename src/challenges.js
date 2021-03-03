@@ -26,6 +26,7 @@ function splitSentence(sentence) {
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split 
 // https://www.codegrepper.com/code-examples/javascript/javascript+split+by+space
 
+
 // Desafio 4
 function concatName(nameList) {
   // seu código aqui
@@ -36,6 +37,8 @@ function concatName(nameList) {
 // Para a resolução do Desafio 4, consultei a seguinte documentação:
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
+// E meus agradecimentos ao colega André Jaques pela dica sobre concatenação (link abaixo):
+// https://trybecourse.slack.com/archives/C01L16B9XC7/p1614712885340100
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -62,6 +65,10 @@ function catAndMouse() {
 }
 
 // Desafio 8
+
+// Necessário dividir em problemas menores.
+
+// 1 - Função para criar novo array com as strings, segundo cada condição.
 
 function fizzBuzzConvert (number) {
 
