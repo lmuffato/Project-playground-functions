@@ -1,7 +1,19 @@
+// Função auxiliar
+// Essa função de ordenação eu aprendi e apliquei conforme
+// uma postagem no Stack Overflow: https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value
+function compare(a, b) {
+  if (a.tech < b.tech) {
+    return -1;
+  }
+  if (a.tech > b.tech) {
+    return 1;
+  }
+  return 0;
+}
+
 // Desafio 10
 function techList(arrayList, name) {
   let newArrayList = [];
-
   if (arrayList.length > 0) {
     for (let index = 0; index < arrayList.length; index += 1) {
       newArrayList.push({ tech: arrayList[index], name });
@@ -10,19 +22,7 @@ function techList(arrayList, name) {
     return 'Vazio!';
   }
 
-  newArrayList.sort(function (a, b) {
-    if (a.tech > b.tech) {
-      return 1;
-    }
-
-    if (a.tech < b.tech) {
-      return -1;
-    }
-
-    return 0;
-  });
-
-  return newArrayList;
+  return newArrayList.sort(compare);
 }
 
 // Função auxiliar
@@ -40,18 +40,24 @@ function highestValue(arrayNumbers) {
   return largerValueIndex;
 }
 
-function moreIsRepeated(arrayNumbers) {
-  let numbers = [];
-
-  for (let index = 0; index < arrayNumbers.length; index += 1) {
-    numbers.push(1);
+function compareFull(index, compareIndex, arr, arrCompare) {
+  if ((index !== compareIndex) && (arr === arrCompare)) {
+    return 1;
   }
+  return 0;
+}
+
+function moreIsRepeated(arrayNumbers) {
+  let numbers = [...arrayNumbers];
 
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     for (let compareIndex = 0; compareIndex < arrayNumbers.length; compareIndex += 1) {
-      if ((index !== compareIndex) && (arrayNumbers[index] === arrayNumbers[compareIndex])) {
-        numbers[index] += 1;
-      }
+      numbers[index] += compareFull(
+        index,
+        compareIndex,
+        arrayNumbers[index],
+        arrayNumbers[compareIndex],
+      );
     }
   }
 
@@ -60,37 +66,33 @@ function moreIsRepeated(arrayNumbers) {
   return arrayNumbers[index];
 }
 
-// Desafio 11
-function generatePhoneNumber(arrayNumbers) {
-  let formatedPhoneNumber = '';
+function validation(arr) {
+  let err = 'não é possível gerar um número de telefone com esses valores';
   let countRepeated = 0;
-  const err = 'não é possível gerar um número de telefone com esses valores';
 
-  if (arrayNumbers.length !== 11) {
+  if (arr.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
 
-  for (let index = 0; index < arrayNumbers.length; index += 1) {
-    if (arrayNumbers[index] < 0) {
+  for (let index = 0; index < arr.length; index += 1) {
+    if (arr[index] < 0 || countRepeated >= 3 || arr[index] > 9) {
       return err;
     }
   }
 
-  for (let index = 0; index < arrayNumbers.length; index += 1) {
-    if (arrayNumbers[index] === moreIsRepeated(arrayNumbers)) {
+  for (let index = 0; index < arr.length; index += 1) {
+    if (arr[index] === moreIsRepeated(arr)) {
       countRepeated += 1;
     }
   }
+}
 
-  if (countRepeated >= 3) {
-    return err;
-  }
+// Desafio 11
+function generatePhoneNumber(arrayNumbers) {
+  let formatedPhoneNumber = '';
+  const err = 'não é possível gerar um número de telefone com esses valores';
 
-  for (let index = 0; index < arrayNumbers.length; index += 1) {
-    if (arrayNumbers[index] > 9) {
-      return err;
-    }
-  }
+  validation(arrayNumbers);
 
   formatedPhoneNumber = formatedPhoneNumber.concat('(');
   for (let index = 0; index < 2; index += 1) {
