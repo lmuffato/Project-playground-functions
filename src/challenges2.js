@@ -105,10 +105,12 @@ function hydrate(string) {
     water += +drinks[index];
   }
   if (water === 1) {
-    return `${water} copo de água.`;
+    return `${water} copo de água`;
   }
-  return `${water} copos de água.`;
+  return `${water} copos de água`;
 }
+
+console.log(hydrate("1 cerveja"))
 
 module.exports = {
   generatePhoneNumber,
