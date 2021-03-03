@@ -18,7 +18,7 @@ function splitSentence(sentence) {
 function concatName(names) {
   let firstName = names[0];
   let lastName = names[names.length - 1];
-  let fullName = firstName.concat(lastName);
+  let fullName = lastName.concat(firstName);
   return fullName;
 }
 
