@@ -41,16 +41,31 @@ console.log(footballPoints(14, 8));
 
 // Desafio 6
 function highestCount(numbers) {
- 
+  let higherNumber = 10000000;
+  for (let index in numbers) {
+      if (numbers[index] > higherNumber){
+      higherNumber = numbers[index];
+      }
+    }
+  let numMax = 0;  
+  for (let index2 in numbers) {
+      if (higherNumber == numbers[index2]){
+      numMax = numMax + 1;
+      }
+    } 
+    return numMax;
+}
+console.log(highestCount[0, 4, 4, 4, 9, 2, 1]);         
+//*Função para obter o maior valor https://www.youtube.com/watch?v=pkJXwPvselI
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let result = [];
+  
 }
 
 // Desafio 9
