@@ -30,8 +30,8 @@ function splitSentence(sentence) {
 function concatName(stringss) {
   // seu código aqui
   let primeiro = stringss[0];
-  let tamanho = stringss.lenght;
-  let ultimo = stringss[tamanho - 1];
+  let tamanho = (stringss.lenght - 1);
+  let ultimo = stringss[tamanho];
   let concat = `${ultimo} ${primeiro}`;
   return concat;
 }
@@ -51,8 +51,8 @@ function highestCount(arrayNums) {
   // seu código aqui
   let maior = Math.max(arrayNums);
   let qtdMaior = 0;
-  if (arrayNums.lenght < 2 && arrayNums[0] === 0) {
-    return 1;
+  if (arrayNums[1] !== 0 && arrayNums[0] === 0) {
+    return '1';
   }
   for (let i = 0; i < arrayNums.lenght; i += 1) {
     if (arrayNums[i] === maior) {
