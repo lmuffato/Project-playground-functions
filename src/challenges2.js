@@ -15,11 +15,9 @@ function generatePhoneNumber(arrayNumbers) {
     return "não é possível gerar um número de telefone com esses valores";
   } else if (arrayNumbers > 9){
     return "não é possível gerar um número de telefone com esses valores";
-  } else if (){
-    return
+  } 
   }
 
-}
 
  //for (index = 0; index < 11; index += 1){
   //  telephoneNumber.push(Math.ceil(Math.random() * 9));
