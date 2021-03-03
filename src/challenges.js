@@ -22,7 +22,6 @@ function splitSentence(string) {
     if (string[index] === ' ') {
       i += 1;
     }
-
     if (arr[i] === undefined) {
       if (string[index] !== ' ') {
         arr[i] = string[index];
@@ -63,7 +62,6 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = mouse - cat1;
   let distanciaCat2 = mouse - cat2;
-
   if (Math.abs(distanciaCat1) < Math.abs(distanciaCat2)) {
     return 'cat1';
   } else if (Math.abs(distanciaCat2) < Math.abs(distanciaCat1)) {
@@ -113,9 +111,8 @@ function encode(string) {
       break;
     default:
       codigo = string[index];
-      } //fecha swich if
-
-    } //fecha if
+      }
+    }
     else {
       switch (string[index]) {
         case 'a':
@@ -163,9 +160,8 @@ function decode(string) {
           break;
         default:
           codigo = string[index];
-      } //fecha swich if
-
-    } //fecha if
+      }
+    }
     else {
       switch (string[index]) {
         case '1':
@@ -185,9 +181,9 @@ function decode(string) {
           break;
         default:
           codigo += string[index];
-      } //fecha swich els
-    } //fecha else
-  } //fecha for
+      }
+    }
+  } 
   return codigo;
 }
 

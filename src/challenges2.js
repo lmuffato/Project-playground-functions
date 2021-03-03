@@ -14,7 +14,6 @@ function techList(array, name) {
 
 // Desafio 11
 function generatePhoneNumber(array) {
-
   let count = 0;
   let number = '(';
   if (array.length !== 11) {
@@ -48,8 +47,6 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  // seu código aqui
-  //medida de uma lado deve ser menor que a soma da medida dos outros 2 e maior que o valor absoluto entre os dois
   if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB && lineA > Math.abs(lineB - lineC) &&
     lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
     return true;
@@ -66,11 +63,9 @@ function hydrate(string) {
   for (let i = 0; i < values.length; i += 1) {
     arrarNumbers[i] = +values[i];
   }
-
   for (i = 0; i < values.length; i += 1) {
     sum += arrarNumbers[i];
   }
-
   return sum + ' copos de água';
 }
 
