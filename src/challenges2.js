@@ -1,9 +1,9 @@
 // Desafio 10
-function techList(array, name) {
-  for (let index = 0; index < array.length; index += 1){
+function techList(array, studentName) {
+  for (let index = 0; index < array.length; index += 1) {
     return {
       tech: array[index],
-      name: name
+      name: studentName
     }
   }
 }

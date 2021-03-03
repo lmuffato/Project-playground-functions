@@ -114,19 +114,19 @@ function encode(string) {
   for (let index = 0; index < string.length; index += 1) {
     switch (string[index]){
       case 'A':
-          newstring += 1;
+          newstring += '1';
           break;
       case 'E':
-        newstring += 2;
+        newstring += '2';
         break;
       case 'I':
-        newstring += 3;
+        newstring += '3';
         break;
       case 'O':
-          newstring += 4;
+          newstring += '4';
         break;
       case 'U':
-        newstring += 5;
+        newstring += '5';
       break;
       default:
         newstring += string[index];
@@ -139,7 +139,7 @@ function encode(string) {
 function decode(string) {
   let newString
   for (let index = 0; index < string.length; index += 1) {
-    switch (string.length){
+    switch (string[index]){
       case 1:
           newstring += 'A';
           break;
