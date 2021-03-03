@@ -51,6 +51,9 @@ function highestCount(arrayNums) {
   // seu código aqui
   let maior = Math.max(arrayNums);
   let qtdMaior = 0;
+  if (arrayNums.lenght < 2 && arrayNums[0] === 0) {
+    return 1;
+  }
   for (let i = 0; i < arrayNums.lenght; i += 1) {
     if (arrayNums[i] === maior) {
       qtdMaior += 1;
