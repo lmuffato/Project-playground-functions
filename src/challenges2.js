@@ -61,12 +61,37 @@ if ((lineA < lineB + lineC) && (lineB < lineA + lineC) && (lineC < lineB + lineA
   return false;
 }
 
-console.log(triangleCheck(2, 3, 4));
+console.log(triangleCheck(16, 20, 30));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(myEntry) {
+
+  let num = [];
+  let sum = 0;
+  let aux = [];
+  
+  for (let index = 0; index < myEntry.length; index += 1) {
+    if (myEntry[index] >= 0 && myEntry[index] <= 9 && myEntry[index] != ' ') {
+      num.push(myEntry[index]);
+    }
+  }
+
+  for (index = 0; index < num.length; index += 1){
+    aux.push(parseInt(num[index],10));
+  }
+
+  for (let index = 0; index < aux.length; index += 1) {
+    sum += aux[index];
+  }
+  
+if (sum < 2){
+  return sum + ' copo de água';
+} 
+  return sum + ' copos de água'; 
+
 }
+
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
