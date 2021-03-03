@@ -37,8 +37,9 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+// Referência https://stackoverflow.com/questions/30607419/return-only-numbers-from-string
+function hydrate(string) {
+  return string.match(/\d+/g).map(Number).reduce((a, b) => a + b);
 }
 
 module.exports = {
