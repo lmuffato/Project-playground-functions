@@ -88,7 +88,7 @@ function numbDiv5(num) {
 }
 
 // função complementar ao exercicio 8 para decidir qual palavra guardar no array
-function writeArray (value) {
+function writeArray(value) {
   let result;
   if (numbDiv3(value) === true && numbDiv5(value) === true) {
     result = 'fizzBuzz';
@@ -105,7 +105,7 @@ function writeArray (value) {
 // Desafio 8
 function fizzBuzz(array) {
   let result = [];
-  for (let index in array) {
+  for (let index; index < array.length; index += 1) {
     result.push(writeArray(array[index]));
   }
   return result;
