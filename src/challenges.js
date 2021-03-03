@@ -93,7 +93,7 @@ console.log(highestCount(arrayNumbers));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  //Exercício corrigido com a ajuda do código do Murilo Gonçalves
+  // Exercício corrigido com a ajuda do código do Murilo Gonçalves
   let cat1Distance = Math.abs(mouse - cat1);
   let cat2Distance = Math.abs(mouse - cat2);
   let winner = '';
@@ -116,7 +116,7 @@ console.log(catAndMouse(mouse, cat1, cat2));
 // Desafio 8
 function isDiv(numbers) {
   // seu código aqui
-  //Exercício corrigido com a ajuda do código do Murilo Gonçalves
+  // Exercício corrigido com a ajuda do código do Murilo Gonçalves
   let result;
   if (numbers % 3 === 0 && numbers % 5 === 0) {
     result = 'fizzBuzz';
