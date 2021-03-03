@@ -118,11 +118,11 @@ function encode(string) {
       newString[index] = string[index]
     }
   }
-  return newString.split(' ');   //transforma array em string
+  return newString.split(' ');  //transforma array em string
 }
 
-let stringTeste = 'hi there!';
-console.log(encode(stringTeste)); 
+//let stringTeste = 'hi there!';
+//console.log(encode(stringTeste)); 
 
 function decode() {
   let newString = string.split(''); //transforma string em array
