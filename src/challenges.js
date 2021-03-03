@@ -53,16 +53,13 @@ function highestCount(numberRepeat) {
 function catAndMouse(mouse, cat1, cat2) {
   let situationOne = mouse - cat1;
   let situationTwo = mouse - cat2;
-  cat1Return = 'cat1';
-  cat2Return = 'cat2'
-  mouseReturn = 'os gatos trombam e o rato foge';
   if (situationOne < situationTwo){
-    return cat2Return;
+    return 'cat1';
   }
   else if (situationTwo < situationOne) {
-   return cat1Return;
+   return 'cat2';
   } else {
-    return mouseReturn;
+    return 'os gatos trombam e o rato foge';
   }
 }
 
@@ -103,8 +100,8 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 console.log(highestCount([0, 0, 0]));
 
-console.log(catAndMouse(10, 8, 7));
-console.log(catAndMouse(13, 1, 7));
+console.log(catAndMouse(10, 7, 8));
+console.log(catAndMouse(13, 7, 1));
 console.log(catAndMouse(10, 10, 10));
 
 module.exports = {
