@@ -32,7 +32,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numbers) {
   let timesAppear = 0;
-    let maxNumber = Math.max.apply (null, numbers)
+    let maxNumber = Math.max.apply (null, numbers);
     for (let index = 0; index < numbers.length; index += 1) {
         if (numbers[index] === maxNumber){
             timesAppear += 1;
@@ -44,9 +44,11 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if ((cat1 - mouse) < (cat2 - mouse)) {
+  let distance1 = Math.abs (cat1 - mouse);
+  let distance2 = Math.abs (cat2 - mouse);
+  if ((distance1 - mouse) < (distance2 - mouse)) {
     return 'cat1';
-  }else if ((cat2 - mouse) < (cat1 - mouse)){
+  }else if ((distance2 - mouse) < (distance1 - mouse)){
     return 'cat2';
   }
   return 'os gatos trombam e o rato foge'
