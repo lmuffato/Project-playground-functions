@@ -51,7 +51,6 @@ function retornaNumeroMontado(arraySeparado){//função que retorna o array em f
   }
   return numberReturn;
 }
-
 function generatePhoneNumber(arrayNumber) {
   if(arrayNumber.length != 11){
     return 'Array com tamanho incorreto.';
@@ -65,9 +64,41 @@ function generatePhoneNumber(arrayNumber) {
 // console.log(generatePhoneNumber(array));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function verificaLineA(lineA, lineB, lineC){
+  let absBC = Math.abs(lineB - lineC);
+  if(lineA > absBC && lineA < lineB + lineC){
+    return true;
+  }else{
+    return false;
+  }
 }
+function verificaLineB(lineA, lineB, lineC){
+  let absAC = Math.abs(lineA - lineC);
+  if(lineB > absAC && lineB < lineA + lineC){
+    return true;
+  }else{
+    return false;
+  }
+}
+function verificaLineC(lineA, lineB, lineC){
+  let absAB = Math.abs(lineA - lineB);
+  if(lineC > absAB && lineC < lineA + lineB){
+    return true;
+  }else{
+    return false;
+  }
+}
+function triangleCheck(lineA, lineB, lineC) {
+  let a = lineA;
+  let b = lineB;
+  let c = lineC;
+  if(verificaLineA(a, b, c) && verificaLineB(a, b, c) && verificaLineC(a, b, c)){
+    return true;
+  }else{
+    return false;
+  }
+}
+// console.log(triangleCheck(10,14,8));
 
 // Desafio 13
 function hydrate() {
