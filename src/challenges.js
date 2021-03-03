@@ -73,14 +73,14 @@ function fizzBuzz(numbers) {
   return getFizzBuzz;
 }
 
-// Desafio 9
+// Desafio 9 credits: https://www.youtube.com/watch?v=7a-a6lKoyIQ - https://www.youtube.com/watch?v=ZYPqPoijCAQ
+
 function encode() {
   // seu código aqui
 }
 function decode() {
   // seu código aqui
 }
-
 module.exports = {
   calcArea,
   catAndMouse,
@@ -92,4 +92,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-}
+};
