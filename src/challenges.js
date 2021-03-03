@@ -75,7 +75,7 @@ function highestCount(number) {
       };
     
     }
-  return ` ${total}`;
+  return total;
 } 
 
 
