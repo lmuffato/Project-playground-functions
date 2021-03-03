@@ -79,12 +79,12 @@ function fizzBuzz(numbersArray) {
   let word = '';
   let mensage = [];
   for (let index in numbersArray) {
-    if (numbersArray[index]%3 === 0) {
+    if (numbersArray[index] % 3 === 0) {
       word = 'fizz';
-      if (numbersArray[index]%5 === 0) {
+      if (numbersArray[index] % 5 === 0) {
         word = 'fizzBuzz';
       }
-    } else if (numbersArray[index]%5 === 0) {
+    } else if (numbersArray[index] % 5 === 0) {
       word = 'buzz';
     } else {
       word = 'bug!';

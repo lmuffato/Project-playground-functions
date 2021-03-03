@@ -3,23 +3,22 @@ function techList(techArray, name) {
   // seu código aqui
   let listOfTechs = [];
   if (techArray.length > 0) {
-    for (let index in techArray) {
+    for (let index = 0; index < techArray.length; index += 1) {
       let techItem = {
-      tech:'',
-      name:'',
-    }
-      techItem['name'] = name;
-      techItem['tech'] = techArray[index];
+        tech: '',
+        name: '',
+      };
+      techItem.name = name;
+      techItem.tech = techArray[index];
       listOfTechs.push(techItem);
     }
   } else {
     listOfTechs = 'Vazio!';
   }
- 
   return listOfTechs;
 }
 
-let  technologies = [];
+let  technologies = ['zezim', 'huguim', 'luizim'];
 let myName = 'Rogerio';
 console.log(techList(technologies, myName));
 
