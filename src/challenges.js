@@ -22,8 +22,9 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(listNames) {
+  let aux = `${listNames.pop()}, ${listNames.shift()}`;
+  return aux;
 }
 
 // Desafio 5
