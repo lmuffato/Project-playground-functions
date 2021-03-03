@@ -93,6 +93,11 @@ function fizzBuzz(numbersArray) {
   return mensage;
 }
 
+// Função verifica se caractere é uma vogal e retorna true se for e false se não for.
+function isVogal(char) {
+  return (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u');
+}
+
 // Desafio 9
 function encode(decriptMensage) {
   // seu código aqui
@@ -105,13 +110,18 @@ function encode(decriptMensage) {
     u: '5',
   };
   for (let index in decriptMensage) {
-    if (decriptMensage[index] === 'a' || decriptMensage[index] === 'e' || decriptMensage[index] === 'i' || decriptMensage[index] === 'o'|| decriptMensage[index] === 'u') {
+    if (isVogal(decriptMensage[index])) {
       mensageEncripted += codeDic[decriptMensage[index]];
     } else {
       mensageEncripted += decriptMensage[index];
     }
   }
   return mensageEncripted;
+}
+
+// Função verifica  o caratere correponte a um número de 1 a 5 e retorna true se for e false se não for.
+function isNumber1to5(char) {
+  return (char === '1' || char === '2' || char === '3' || char === '4' || char === '5');
 }
 
 function decode(encriptMensage) {
@@ -123,9 +133,9 @@ function decode(encriptMensage) {
     3: 'i',
     4: 'o',
     5: 'u',
-  }
+  };
   for (let index in encriptMensage) {
-    if (encriptMensage[index] === '1' || encriptMensage[index] === '2' || encriptMensage[index] === '3' || encriptMensage[index] === '4'|| encriptMensage[index] === '5') {
+    if (isNumber1to5(encriptMensage[index])) {
       mensageDecripted += decodeDic[encriptMensage[index]];
     } else {
       mensageDecripted += encriptMensage[index];
