@@ -81,11 +81,11 @@ function triangleCheck(lineA, lineB, lineC) {
     trueFalse = false;
   }
 
-  if (modAB < lineA && lineA < lineB + lineC) {
+  if (modAB < lineC && lineC < lineA + lineB) {
     trueFalse = true;
-  } else if (modAB < lineB && lineB < lineA + lineC) {
+  } else if (modAC < lineB && lineB < lineA + lineC) {
     trueFalse = true;
-  } else if (modAC < lineC && lineC < lineA + lineB) {
+  } else if (modBC < lineA && lineA < lineB + lineC) {
     trueFalse = true;
   } else {
     trueFalse = false;
