@@ -1,17 +1,20 @@
 // Desafio 10
-function techList(technology, name) {
-  let techlist = [];
-  technology = technology.sort();
-  for (let index = 0; index < technology.length; index += 1) {
-    techlist.push({
-      technology: technology[index],
-      name,
-    });
+function techList(arr, name) {
+  let list = arr.sort();
+  let techsNames = [];
+  for (let index = 0; index < list.length; index += 1) {
+    techsNames.push(
+      {
+        tech: list[index],
+        name,
+      },
+    );
   }
-  if (technology.length === 0) {
+
+  if (arr.length === 0) {
     return 'Vazio!';
   }
-  return techlist;
+  return techsNames;
 }
 // Desafio resolvido com ajuda de StackOverFlow
 
