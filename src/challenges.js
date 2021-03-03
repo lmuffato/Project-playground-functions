@@ -23,7 +23,6 @@ function concatName(lastFirst) {
   result.push(lastFirst[lastFirst.length - 1], lastFirst[0]);
   return result;
 }
-concatName(['igson', 'fiure', 'felix']);
 // Desafio 5
 function footballPoints() {
   // seu código aqui
