@@ -17,7 +17,6 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-
 function concatName(array) {
   return `${array[array.length - 1]}, ${array[0]}`;
 }
@@ -84,7 +83,6 @@ function decode(string) {
   }
   return output;
 }
-console.log(decode('h3 th2r2'));
 
 module.exports = {
   calcArea,
