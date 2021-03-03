@@ -60,8 +60,22 @@ function highestCount(listOfNumbers) {
 }  
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function distanceCatAndMouse (mouse, cat) {
+
+  let distanceCat = Math.abs(mouse - cat);
+  return distanceCat;
+}
+
+function catAndMouse(mouse, cat1, cat2) {
+
+  if (distanceCatAndMouse(cat1) < distanceCatAndMouse(cat2)) {
+    return 'cat1';
+  }
+  else if (distanceCatAndMouse(cat2) < distanceCatAndMouse(cat1)) {
+    return 'cat2';
+  } else { 
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
@@ -96,12 +110,51 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let newString;
+  newString.push(string.split(''))
+
+  switch (newArray) {
+    case ('a') : 
+      return  1;
+    case ('e') :
+      return 2;
+    case ('i') :
+      return 3;
+    case ('o') :
+      return 4;
+    case ('u'):
+    return 5;
+    default :
+    break;
+  }
+} 
+let stringDeExemplo = 'hi there!'; 
+console.log(encode(stringDeExemplo));
+
+function decode(array) {
+  
+  let newString = ' ';
+  let newArray = [];
+  
+  newArray.push(encode(array)); 
+
+  switch (newArray) {
+    case (1) : 
+      return 'a';
+    case (2) :
+      return 'e';
+    case (3) :
+      return 'i';
+    case (4) :
+      return 'o';
+    case (5) :
+      return 'u';
+    default :
+    break;
+  }
 }
-function decode() {
-  // seu código aqui
-}
+
 
 module.exports = {
   calcArea,
