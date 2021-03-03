@@ -42,7 +42,7 @@ function retornaNumeroMontado(arraySeparado){//função que retorna o array em f
   let numberReturn = '(';
   for(let i = 0; i < arraySeparado.length; i += 1){
     if(i == 1){
-      numberReturn = numberReturn + arraySeparado[i] + ')';
+      numberReturn = numberReturn + arraySeparado[i] + ') ';
     }else if(i == 6){
       numberReturn = numberReturn + arraySeparado[i] + '-';
     }else{
