@@ -81,6 +81,7 @@ function encode() {
 function decode() {
   // seu código aqui
 }
+
 module.exports = {
   calcArea,
   catAndMouse,
