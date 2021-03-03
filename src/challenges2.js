@@ -126,13 +126,25 @@ function triangleCheck() {
 
 // Desafio 13
 function hydrate(stringPhrase) {
-  // let r = /\d+/;
-  // let newStringPhrase = stringPhrase.split()
+  let newStringPhrase = stringPhrase.replace(/\D/g, "").split('');
+  let sum = 0;
+
+  for(let index = 0; index < newStringPhrase.length; index += 1){
+    sum += parseInt(newStringPhrase[index]);
+  }
+
+  if (sum === 0 || sum === 1) {
+    return sum +  " copo de água";
+  } else {
+    return sum +  " copos de água";
+  }
 }
 
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Wanderson'));
 
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   generatePhoneNumber,
