@@ -60,12 +60,31 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+const aeiou = {
+  'a' : 1,
+  'e' : 2,
+  'i' : 3,
+  'o' : 4,
+  'u' : 5
 }
-function decode() {
-  // seu código aqui
+
+function encode(string) {
+  let output = string;
+  for (const key in aeiou) {
+    const regex = `${key}`;
+    output = output.replace(RegExp(regex, 'gi'), aeiou[key]);
+  }
+  return output;
 }
+function decode(string) {
+  let output = string;
+  for (const key in aeiou) {
+    const regex = `${key}`;
+    output = output.replace(RegExp(aeiou[key], 'gi'), key);
+  }
+  return output;
+}
+console.log(decode('h3 th2r2'));
 
 module.exports = {
   calcArea,
