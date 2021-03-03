@@ -107,8 +107,8 @@ function encode(string) {
     }
 }
 
-function decode(array) {
-  for (index = 0; index < string.length; index += 1){
+function decode(string) {
+  for (let index = 0; index < string.length; index += 1){
     let decodingString = string[index]
       switch (string[index]) {
         
