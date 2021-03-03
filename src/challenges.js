@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if(value1===true && value2===true){
+  if (value1 === true && value2 === true){
     return true;
   }
   else{
@@ -10,7 +10,7 @@ function compareTrue(value1, value2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base*height)/2;
+  return (base * height) /2;
 }
 
 // Desafio 3
@@ -19,20 +19,20 @@ function splitSentence(string) {
   var i=0;
   var a;
   var b;
-  for(let index=0; index<string.length; index+=1){
-      a=string[index];
-     if(string[index]===' '){
+  for (let index = 0; index < string.length; index += 1){
+      a = string[index];
+     if (string[index] === ' '){
         i+=1;
       }
 
-      if(arr[i]===undefined){
-        if(string[index]!==' '){
-          arr[i]=string[index];
+      if (arr[i] === undefined) {
+        if (string[index] !== ' ') {
+          arr[i] = string[index];
         }
       }
       else{
 
-        arr[i]+=string[index];
+        arr[i] += string[index];
 
       }
   }
@@ -43,25 +43,25 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(names) {
-  return names[names.length-1] + ' ' + names[0];
+  return names[names.length - 1] + ' ' + names[0];
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return wins*3 + ties;
+  return wins * 3 + ties;
 }
 
 // Desafio 6
 function highestCount(array) {
   let conta=0;
   let maior =0;
-  for (index=0; index<array.length; index+=1){
-    if(array[index]===maior){
+  for (index = 0; index < array.length; index += 1) {
+    if (array[index] === maior) {
       conta+=1;
     }
-    else if(array[index]>maior){
-      maior=array[index];
-      conta=1;
+    else if (array[index] > maior) {
+      maior = array[index];
+      conta = 1;
     }
 
   }
@@ -73,13 +73,13 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = mouse - cat1;
   let distanciaCat2 = mouse - cat2;
 
-  if(Math.abs(distanciaCat1)<Math.abs(distanciaCat2)){
+  if (Math.abs(distanciaCat1) < Math.abs(distanciaCat2)) {
     return 'cat1';
   }
-  else if(Math.abs(distanciaCat2)<Math.abs(distanciaCat1)){
+  else if (Math.abs(distanciaCat2) < Math.abs(distanciaCat1)) {
     return 'cat2';
   }
-  else{
+  else {
     return 'os gatos trombam e o rato foge';
   }
 
@@ -88,17 +88,17 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let retorno = [];
-  for(let index=0; index<array.length; index+=1){
-    if(array[index]%3===0&&array[index]%5!==0){
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] %3 === 0 && array[index] %5 !== 0) {
       retorno[index] = 'fizz';
     }
-    else if(array[index]%5===0&&array[index]%3!==0){
+    else if (array[index] %5 === 0 && array[index] %3 !==0) {
       retorno[index] = 'buzz';
     }
-    else if(array[index]%5===0&&array[index]%3===0){
+    else if (array[index]%5===0&&array[index]%3===0){
       retorno[index] = 'fizzBuzz';
     }
-    else{
+    else {
       retorno[index]='bug!';
     }
   }
@@ -108,9 +108,9 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
   let codigo;
-  for(let index=0; index<string.length; index+=1){
-    if(codigo===undefined){
-        switch(string[index]){
+  for (let index = 0; index < string.length; index += 1){
+    if (codigo === undefined){
+        switch (string[index]){
           case 'a':
            codigo = '1';
           break;
@@ -132,7 +132,7 @@ function encode(string) {
 
     } //fecha if
     else {
-        switch(string[index]){
+        switch (string[index]){
           case 'a':
            codigo += '1';
           break;
@@ -158,9 +158,9 @@ function encode(string) {
 
 function decode(string) {
   let codigo;
-  for(let index=0; index<string.length; index+=1){
-    if(codigo===undefined){
-        switch(string[index]){
+  for (let index = 0; index < string.length; index += 1) {
+    if (codigo === undefined) {
+        switch (string[index]) {
           case 'a':
            codigo = '1';
           break;
@@ -182,7 +182,7 @@ function decode(string) {
 
     } //fecha if
     else {
-        switch(string[index]){
+        switch (string[index]) {
           case '1':
            codigo += 'a';
           break;
