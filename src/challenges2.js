@@ -33,7 +33,6 @@ function generatePhoneNumber(array) {
       }
     }
   }
-  var k; //retiraaaaaaaaa
   for (let k = 0; k < array.length; k += 1) {
     if (k === 2) {
       number += ') ';
@@ -50,9 +49,8 @@ function triangleCheck(lineA, lineB, lineC) {
   if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB && lineA > Math.abs(lineB - lineC) &&
     lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
     return true;
-  } else { // retiraaaaaaaaaaaaaa
-    return false;
   }
+  return false;
 }
 
 // Desafio 13
