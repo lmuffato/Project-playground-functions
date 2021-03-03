@@ -103,15 +103,37 @@ return numbers;
 }
 
 // Desafio 9
-function encode() {
-  let encodeString = [];
-  
+function encode(charToNumber) {
+  let vowels = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5'
+  }
+   replace = charToNumber.replace(/a|e|i|o|u/g, function(charToNumber) {
+    return vowels[charToNumber];
+  });
+ 
+    return replace;
 }
-function decode() {
-  // seu código aqui
+function decode(numberToChar) {
+  let number = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u'
+  }
+   replace = numberToChar.replace(/1|2|3|4|5/g, function(numberToChar) {
+    return number[numberToChar];
+  });
+ 
+    return replace;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
