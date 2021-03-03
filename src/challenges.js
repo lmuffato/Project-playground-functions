@@ -79,22 +79,20 @@ function checkDistance(mouse,cat1,cat2){
       for (let index=cat1; index < mouse; index++) {
                 distancebetweenCat1++
       }
-    }
-    else if(cat2<mouse){
-      for (let index=cat2; index < mouse; index++) {
-        distancebetweenCat2++
-    }
-  }
-  if(cat1>mouse){
+    }else if(cat1>mouse){
     for (let index=cat1; index > mouse; index--) {
               distancebetweenCat1++
       }
     }
-    else if(cat2>mouse){
+     if(cat2>mouse){
       for (let index=cat2; index > mouse; index--) {
         distancebetweenCat2++
     }
-  }
+  } else if(cat2<mouse){
+    for (let index=cat2; index < mouse; index++) {
+      distancebetweenCat2++
+    }
+  } 
   distances.push(distancebetweenCat1);
   distances.push(distancebetweenCat2);
   return distances
@@ -109,7 +107,7 @@ function catAndMouse(mouse,cat1,cat2){
   }else(
     catcher='os gatos trombam e o rato foge'
   )
-return catcher+'\n'+distances
+return catcher
 }
 // Desafio 8
 function fizzBuzz() {
