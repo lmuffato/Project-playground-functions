@@ -57,22 +57,17 @@ let max = 0;
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  
-  let mouseCat1Distancy = mouse - cat1;
-  let mouseCat2Distancy = mouse - cat2;
-
+  let mouseCat1Distancy = Math.abs(mouse - cat1);
+  let mouseCat2Distancy = Math.abs(mouse - cat2);
   if (mouseCat1Distancy > mouseCat2Distancy){
     return 'cat2';
   }
-
   else if (mouseCat1Distancy < mouseCat2Distancy){
     return 'cat1';
   }
-
   else {
     return 'os gatos trombam e o rato foge';
   }
-
 }
 
 // Desafio 8
