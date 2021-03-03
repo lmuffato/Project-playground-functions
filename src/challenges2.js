@@ -16,7 +16,7 @@ function generatePhoneNumber(myArray) {
    }
     for (let j = 1; j < myArray.length; j += 1) {
       for (let k = 2; k < myArray.length; k += 1) {
-        if (myArray[index] === myArray[j] === myArray[k]) {
+        if ((myArray[index] === myArray[j]) && (myArray[index] === myArray[k])) {
           return 'não é possível gerar um número de telefone com esses valores';
         }
       }
@@ -48,7 +48,7 @@ function generatePhoneNumber(myArray) {
 
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 3, 3, 0, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) { 
