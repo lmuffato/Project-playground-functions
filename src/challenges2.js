@@ -26,38 +26,31 @@ function techList(arrayList, name) {
 }
 
 // Função auxiliar
-function highestValue(arrayNumbers){
+function highestValue(arrayNumbers) {
   let larger;
   let largerValueIndex;
 
-  for(let index = 0; index < arrayNumbers.length; index += 1){
-    if(index === 0){
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (index === 0 || arrayNumbers[index] > larger) {
       larger = arrayNumbers[index];
       largerValueIndex = index;
-    }else{
-      if(arrayNumbers[index] > larger){
-        larger = arrayNumbers[index];
-        largerValueIndex = index;
-      }
     }
   }
 
   return largerValueIndex;
 }
 
-function moreIsRepeated(arrayNumbers){
+function moreIsRepeated(arrayNumbers) {
   let numbers = [];
 
-  for(let index = 0; index < arrayNumbers.length; index += 1){
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
     numbers.push(1);
   }
 
-  for(let index = 0; index < arrayNumbers.length; index += 1){
-    for(let compareIndex = 0; compareIndex < arrayNumbers.length; compareIndex += 1){
-      if(index !== compareIndex){
-        if(arrayNumbers[index] === arrayNumbers[compareIndex]){
-          numbers[index] += 1;
-        }
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    for (let compareIndex = 0; compareIndex < arrayNumbers.length; compareIndex += 1) {
+      if ((index !== compareIndex) && (arrayNumbers[index] === arrayNumbers[compareIndex])) {
+        numbers[index] += 1;
       }
     }
   }
@@ -65,21 +58,21 @@ function moreIsRepeated(arrayNumbers){
   let index = highestValue(numbers);
 
   return arrayNumbers[index];
-
 }
 
 // Desafio 11
 function generatePhoneNumber(arrayNumbers) {
   let formatedPhoneNumber = '';
   let countRepeated = 0;
+  const err = 'não é possível gerar um número de telefone com esses valores';
 
   if (arrayNumbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
 
-  for(let index = 0; index < arrayNumbers.length; index += 1){
-    if(arrayNumbers[index] < 0){
-      return 'não é possível gerar um número de telefone com esses valores';
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] < 0) {
+      return err;
     }
   }
 
@@ -90,12 +83,12 @@ function generatePhoneNumber(arrayNumbers) {
   }
 
   if (countRepeated >= 3) {
-    return 'não é possível gerar um número de telefone com esses valores';
+    return err;
   }
 
-  for(let index = 0; index < arrayNumbers.length; index += 1){
-    if(arrayNumbers[index] > 9){
-      return 'não é possível gerar um número de telefone com esses valores';
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] > 9) {
+      return err;
     }
   }
 
@@ -126,25 +119,28 @@ function triangleCheck() {
 
 // Desafio 13
 function hydrate(stringPhrase) {
-  let newStringPhrase = stringPhrase.replace(/\D/g, "").split('');
+  let newStringPhrase = stringPhrase.replace(/\D/g, '').split('');
   let sum = 0;
+  let result;
 
-  for(let index = 0; index < newStringPhrase.length; index += 1){
-    sum += parseInt(newStringPhrase[index]);
+  for (let index = 0; index < newStringPhrase.length; index += 1) {
+    sum += parseInt(newStringPhrase[index], 10);
   }
 
   if (sum === 0 || sum === 1) {
-    return sum +  " copo de água";
-  } else {
-    return sum +  " copos de água";
+    result = sum.toString().concat(' copo de água');
+    return result;
   }
+
+  result = sum.toString().concat(' copos de água');
+  return result;
 }
 
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Wanderson'));
 
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
-console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
