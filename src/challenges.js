@@ -48,7 +48,7 @@ function highestCount(array) {
   return highNumCount;
 }
 
-let arrayNum = [9, 1, 2, 89, 9, 5, 7];
+let arrayNum = [9, 1, 2, 8, 9, 5, 7];
 console.log(highestCount(arrayNum));
 
 // Desafio 7
