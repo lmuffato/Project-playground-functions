@@ -43,17 +43,9 @@ function generatePhoneNumber(phone) {
   }
 
   for (let l = 0; l < repeticoes.length; l += 1) {
-    if (repeticoes[l] >= 3) {
+    if (repeticoes[l] > 2) {
       trueOrFalse = true;
-    } else {
-      trueOrFalse = false;
     }
-  }
-
-  if (numberOfTimes >= 3) {
-    trueOrFalse = true;
-  } else {
-    trueOrFalse = false;
   }
 
   if (phone.length !== 11 || phone.length === 0) {
@@ -67,6 +59,8 @@ function generatePhoneNumber(phone) {
   }
   return `(${phone[0]}${phone[1]}) ${phone[2]}${phone[3]}${phone[4]}${phone[5]}${phone[6]}-${phone[7]}${phone[8]}${phone[9]}${phone[10]}`;
 }
+
+console.log(generatePhoneNumber([1, 2, 2, 4, 5, 5, 2, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
