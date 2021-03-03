@@ -43,13 +43,8 @@ function generatePhoneNumber(arrayOfNumbers) {
 
 // Desafio 12
 function checkLine(lineToCheck, otherLine1, otherLine2) {
-  if (
-    lineToCheck < otherLine1 + otherLine2 &&
-    lineToCheck > Math.abs(otherLine1 - otherLine2)
-  ) {
-    return true;
-  }
-  return false;
+  return (lineToCheck < otherLine1 + otherLine2 &&
+    lineToCheck > Math.abs(otherLine1 - otherLine2));
 }
 
 function triangleCheck(lineA, lineB, lineC) {
