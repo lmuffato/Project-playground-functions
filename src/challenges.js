@@ -68,11 +68,26 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+// Resolução baseada no artigo disponível no site:
+// https://blog.betrybe.com/javascript/javascript-replace/#:~:text=O%20JavaScript%20replace%20faz%20parte,uma%20string%20por%20outro%20conte%C3%BAdo.
+// Eu peguei apenas o esqueleto do algoritmo e a compreensão da função e adaptei a minha necessidade na questão.
+
+function encode(string) {
+  let vowelNumber = { a: '1', e: '2', i: '3', o: '4', u: '5' };
+  let vowelForNumber = string.replace(/[aeiou]/g, function (key) {
+    let valueVowelNumber = vowelNumber[key];
+    return valueVowelNumber;
+  });
+  return vowelForNumber;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let numberVowel = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+  let numberForVowel = string.replace(/[12345]/g, function (key) {
+    let valueNumberVowel = numberVowel[key];
+    return valueNumberVowel;
+  });
+  return numberForVowel;
 }
 
 module.exports = {
