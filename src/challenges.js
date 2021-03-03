@@ -91,23 +91,24 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function ifFizzBuzz(number) {
+  if (number % 3 === 0 && number % 5 === 0) {
+    return 'fizzBuzz';
+  }
+  if (number % 3 === 0) {
+    return 'fizz';
+  }
+  if (number % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
+
 function fizzBuzz(array) {
   let fizzBuzzArray = [];
 
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      fizzBuzzArray.push('fizzBuzz');
-      continue;
-    }
-    if (array[index] % 3 === 0) {
-      fizzBuzzArray.push('fizz');
-    }
-    if (array[index] % 5 === 0) {
-      fizzBuzzArray.push('buzz');
-    }
-    if (array[index] % 3 !== 0 && array[index] % 5 !== 0) {
-      fizzBuzzArray.push('bug!');
-    }
+    fizzBuzzArray.push(ifFizzBuzz(array[index]));
   }
   return fizzBuzzArray;
 }
