@@ -19,8 +19,8 @@ function splitSentence(sentenceToSplit) {
 // Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split //
 
 // Desafio 4
-function concatName([stringsArray]) {
-  return [stringsArray].length[-1] + ', ' + [stringsArray].length[0];
+function concatName(stringsArray) {
+  return stringsArray[stringsArray.length -1] + ', ' + stringsArray[0];
 }
 // Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/concat //
 // Source: https://masteringjs.io/tutorials/fundamentals/string-concat //
