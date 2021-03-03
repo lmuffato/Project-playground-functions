@@ -85,19 +85,16 @@ function hydrate(drinks) {
   // seu código aqui
   let count = 0;
   for (let index in drinks) {
-    switch(drinks[index]) {
-      case '1': count += 1; break;
-      case '2': count += 2; break;
-      case '3': count += 3; break;
-      case '4': count += 4; break;
-      case '5': count += 5; break;
-      case '6': count += 6; break;
-      case '7': count += 7; break;
-      case '8': count += 8; break;
-      case '9': count += 9; break;
+    let test = parseInt(drinks[index]);
+    if(!(isNaN(test))) {
+      count += test;
     }
   }
-  return count.toString() + ' copos de água';
+  if (count > 1) {
+    return count.toString() + ' copos de água';
+  } else {
+    return count.toString() + ' copo de água';
+  }  
 }
 
 console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));

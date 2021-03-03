@@ -29,8 +29,6 @@ function splitSentence(sentence) {
   return sentenceSplited;
 }
 
-console.log(splitSentence('o que ta dando errando nesta merda!!!   cachorro'));
-
 // Desafio 4
 function concatName(originArray) {
   // seu código aqui
@@ -64,13 +62,15 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let cat1Distance = Math.abs(mouse - cat1);
   let cat2Distance = Math.abs(mouse - cat2);
+  let result;
   if (cat1Distance < cat2Distance) {
-    return 'cat1';
+    result = 'cat1';
   } else if (cat1Distance > cat2Distance) {
-    return 'cat2';
+    result = 'cat2';
   } else {
-    return 'os gatos trombam e o rato foge';
+    result = 'os gatos trombam e o rato foge';
   }
+  return result;
 }
 
 // Desafio 8
@@ -115,7 +115,6 @@ function encode(decriptMensage) {
   return mensageEncripted;
 }
 
-
 function decode(encriptMensage) {
   // seu código aqui
   let mensageDecripted = '';
@@ -135,8 +134,6 @@ function decode(encriptMensage) {
   }
   return mensageDecripted;
 }
-
-
 
 module.exports = {
   calcArea,
