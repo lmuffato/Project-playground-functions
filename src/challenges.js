@@ -23,24 +23,34 @@ console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName(names) {
-  let first = `${names[0]}, ${names[names.length - 1]}`;
+  let first = `${names[0]}. ${names[names.length - 1]}`;
   return first;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
- let pontosWins = wins * 3;
- let pontosTies = ties * 1;
+  let pontosWins = wins * 3;
+  let pontosTies = ties * 1;
   return pontosWins + pontosTies;
 }
-console.log(footballPoints(0, 0));
+console.log(footballPoints(14, 8));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestNumber(arrayNum) {
+  let highest = 0;
+  for (let index of arrayNum) if (index >= highest) highest = index;
+  return highest;
+}
+function highestCount(array) {
+  let highNum = highestNumber(array);
+  let count = 0;
+  for (let index2 of array) if (index2 === highNum) count += 1;
+  return count;
 }
 
+let arrayNum = [9, 1, 2, 8, 9, 5, 7];
+console.log(highestCount(arrayNum));
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
