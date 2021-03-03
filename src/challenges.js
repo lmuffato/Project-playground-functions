@@ -12,7 +12,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  let splitArray =[];
+  let splitArray = [];
   splitArray = (string.split(' '));
   return splitArray;
 }
@@ -48,15 +48,15 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let cat1Dist = cat1 - mouse;
-  let cat2Dist = cat2 - mouse;
+  let cat1Dist = math.abs(cat1 - mouse);
+  let cat2Dist = math.abs(cat2 - mouse);
   if (cat1Dist < cat2Dist) {
     return 'cat1';
   }
-  else if (cat1Dist > cat2Dist) {
+  if (cat1Dist > cat2Dist) {
     return 'cat2';
   }
-      return 'os gatos trombam e o rato foge';
+    return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -96,7 +96,7 @@ function encode(string) {
   return encodeString;
 }
 
-console.log(encode('eduardo'))
+console.log(encode('eduardo'));
 
 function decode() {
   // seu código aqui
