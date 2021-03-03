@@ -25,11 +25,9 @@ function footballPoints(win, ties) {
 
 // Desafio 6
 let repetitionCounter = 0;
-let highestnumber = 0;
 function highestCount(numbers) {
-highestnumber = Math.max(number)
-  for (let index=0; index<numbers.length; index+=1) {
-  if(numbers[index] === highestnumber {
+for (let index=0; index<numbers.length; index+=1) {
+  if(numbers[index] === Math.max(numbers)) {
     repetitionCounter+=1
   }
 }
