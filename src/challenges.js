@@ -63,7 +63,7 @@ function contNumber(array, higher) {
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] === higher) {
       cont += 1;
-    } 
+    }
   }
   return cont;
 }
