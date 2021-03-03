@@ -17,10 +17,48 @@ function techList(list, name) {
   }
   return result;
 }
+// função auxiliar exercico 11
+function repeat3Times(array) {
+  let count = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let result = false;
+  for (let index = 0; index < array.length; index += 1) {
+    count[array[index]] += 1;
+  }
+  for (let index = 0; index < count.length; index += 1) {
+    if (count[index] >= 3) {
+      result = true;
+    }
+  }
+  return result;
+}
+
+//função auxiliar exercicio 11
+function checkRange(array) {
+  let result = false;
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] >=0 && array[index] <= 9) {
+      result = true;
+    }
+  }
+  return result;
+}
+
+// função auxiliar exercicio 11
+function createPhone(array) {
+  return '(' + array[0] + array[1] + ') ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10]
+}
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  let result;
+  if (array.length === 11 && checkRange(array) === true && repeat3Times(array) === false) {
+    result = createPhone(array);
+  } else if (array.length !== 11) {
+    result = 'Array com tamanho incorreto.'
+  } else if (checkRange(array) === false || repeat3Times(array) === true) {
+    result = 'não é possível gerar um número de telefone com esses valores';
+  }
+  return result;
 }
 
 // Desafio 12
