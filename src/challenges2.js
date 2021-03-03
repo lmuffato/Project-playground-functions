@@ -60,13 +60,14 @@ function generatePhoneNumber(arr) {
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA >= lineB + lineC) {
     return false;
-  } else if (lineB >= lineA + lineC) {
-    return false;
-  } else if (lineC >= lineA + lineB) {
-    return false;
-  } else {
-    return true;
   }
+  if (lineB >= lineA + lineC) {
+    return false;
+  }
+  if (lineC >= lineA + lineB) {
+    return false;
+  }
+  return true;
 }
 
 // Desafio 13
@@ -80,9 +81,8 @@ function hydrate(str) {
   }
   if (waterCups > 1) {
     return `${waterCups} copos de água`;
-  } else {
-    return `${waterCups} copo de água`;
   }
+  return `${waterCups} copo de água`;
 }
 
 module.exports = {
