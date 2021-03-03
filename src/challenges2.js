@@ -33,6 +33,9 @@ function generatePhoneNumber(myArray) {
       case 1:
         myString += myArray[index] + ')';
         break;
+      case 2:
+        myString += ' ' + myArray[index];
+        break;
       case 6:
         myString += myArray[index] + '-';
         break;
@@ -51,18 +54,14 @@ console.log(generatePhoneNumber([1, 2, 3, 3, 3, 0, 7, 8, 9, 0, 1]));
 function triangleCheck(lineA, lineB, lineC) { 
 
 if ((lineA < lineB + lineC) && (lineB < lineA + lineC) && (lineC < lineB + lineA)) {
-  if (Math.abs(lineA > lineB - lineA) && Math.abs(lineA > lineC - lineA)) {
-    if (Math.abs(lineB > lineA - lineB) && Math.abs(lineB > lineC - lineB)) {
-      if (Math.abs(lineC > lineA - lineC) && Math.abs(lineC > lineB - lineC)) {
-        return true;
-      }
-    }
+  if (Math.abs(lineA > lineB - lineC) && Math.abs(lineB > lineC - lineA) && Math.abs(lineC > lineB - lineA)) {
+    return true;
   } 
 }
-return false;
+  return false;
 }
 
-console.log(triangleCheck(10, 14, 8));
+console.log(triangleCheck(2, 3, 4));
 
 // Desafio 13
 function hydrate() {
