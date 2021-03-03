@@ -1,11 +1,9 @@
 // Desafio 1
 function compareTrue(gradeProject, goingToLectures) {
-  let result = true;
+  let result = false;
 
   if (gradeProject === true && goingToLectures === true) {
     return result === true;
-  } else {
-   return result === false;
   }
 }
 
@@ -19,13 +17,12 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentence) {
-  // seu código aqui 
   return sentence.split(' ');
 }
-// Para resolução do Desafio 3, consultei os seguintes artigos: 
-// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split 
-// https://www.codegrepper.com/code-examples/javascript/javascript+split+by+space
+// Para resolução do Desafio 3, consultei os seguintes artigos.
 
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
+// https://www.codegrepper.com/code-examples/javascript/javascript+split+by+space
 
 // Desafio 4
 function concatName(nameList) {
@@ -43,25 +40,22 @@ function concatName(nameList) {
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  let tablePoints;
-  return tablePoints = (3 * wins) + ties;
+  let tablePoints = (3 * wins) + ties;
+  return tablePoints;
 }
 
 // Desafio 6
 
 function highestCount(listOfNumbers) {
-  
   let count = 0;
-  let numberMax = Math.max.apply(null, listOfNumbers); 
-
-  for (index = 0; index < listOfNumbers.length; index += 1) {
-      if (listOfNumbers[index] === numberMax) {
-        count += 1;
-      }
+  let numberMax = Math.max.apply(null, listOfNumbers);
+  for (let index = 0; index < listOfNumbers.length; index += 1) {
+    if (listOfNumbers[index] === numberMax) {
+      count += 1;
     }
+  }
   return count;
-} 
-
+}
 // Referência utilizada para resolução do Desafio 6:
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 
@@ -70,70 +64,51 @@ function highestCount(listOfNumbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let distanceFromCat1 = Math.abs(mouse - cat1);
   let distanceFromCat2 = Math.abs(mouse - cat2);
-  let message;
 
-  if (distanceFromCat1 < distanceFromCat2){
-    return message = 'cat1';
-  }
-  else if (distanceFromCat2 < distanceFromCat1) {
-    return message = 'cat2';
-  } else if (distanceFromCat1 === distanceFromCat2) {  
-    return message = 'os gatos trombam e o rato foge';
+  if (distanceFromCat1 < distanceFromCat2) {
+    return 'cat1';
+  } if (distanceFromCat2 < distanceFromCat1) {
+    return 'cat2';
+  } if (distanceFromCat1 === distanceFromCat2) {
+    return 'os gatos trombam e o rato foge';
   }
 }
-
-
 // Desafio 8
 
 // Necessário dividir em problemas menores.
 
 // 1 - Função para criar novo array com as strings, segundo cada condição.
 
-function fizzBuzzConvert (number) {
-
-  if (number % 5 === 0 && number % 3 === 0) {
-      return 'fizzBuzz';
-  }
-  else if (number % 3 === 0) {
-      return 'fizz';
-  }
-  else if (number % 5 === 0) {
-      return 'buzz';
-  } else {
-      return 'bug!';
+function fizzBuzzConvert(number) {
+  switch (true) {
+  case (number % 5 === 0 && number % 3 === 0):
+    return 'fizzBuzz';
+  case (number % 3 === 0):
+    return 'fizz';
+  case (number % 5 === 0):
+    return 'buzz';
+  default:
+    return 'bug!';
   }
 }
 
 function fizzBuzz(arrayNumbers) {
-  
   let newArrayNumbers = [];
-  
-    for(let key = 0; key < arrayNumbers.length; key += 1) {
-       newArrayNumbers.push(fizzBuzzConvert(arrayNumbers[key]));
-    } 
-    return newArrayNumbers;
+  for (let key = 0; key < arrayNumbers.length; key += 1) {
+    newArrayNumbers.push(fizzBuzzConvert(arrayNumbers[key]));
+  }
+  return newArrayNumbers;
 }
 
-// Referências consultadas para resolução do Desafio 8: 
-// https://developer.mozilla.org/pt-BR/docs/conflicting/Web/JavaScript/Reference/Operators 
+// Referências consultadas para resolução do Desafio 8:
+// https://developer.mozilla.org/pt-BR/docs/conflicting/Web/JavaScript/Reference/Operators
 // https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Looping_code
 
-
 // Desafio 9
-function encode(string) {
-  
-} 
+function encode() {
+}
 
-let stringDeExemplo = 'hi there!'; 
-console.log(encode(stringDeExemplo));
-
-function decode(array) {
-  
-  let newString = ' ';
-  let newArray = [];
-  
-  newArray.push(encode(array)); 
-
+function decode() {
 }
 
 module.exports = {

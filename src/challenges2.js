@@ -1,38 +1,34 @@
 // Desafio 10
 function techList() {
-  
 }
 
 // Desafio 11
 
-// Dividir a função em problemas menores. 
+// Dividir a função em problemas menores.
 
 // 1 - Descobrir se há repetição no array.
 
-function findDuplicates (arrayOfNumbers) {
-  let sorted_arrayOfNumbers = arrayOfNumbers.slice().sort();
+function findDuplicates(arrayOfNumbers) {
+  let sortedArrayOfNumbers = arrayOfNumbers.slice().sort();
   let results = [];
   let repetition;
-  
-  for (let index = 0; index < sorted_arrayOfNumbers.length; index += 1) {
-      if (sorted_arrayOfNumbers[index + 1] == sorted_arrayOfNumbers[index]) {
-         return results.push(sorted_arrayOfNumbers[0,10]);
-      }
-      if (results.length >= 3) {
-          return repetition === true;
-      }
+  for (let index = 0; index < sortedArrayOfNumbers.length; index += 1) {
+    if (sortedArrayOfNumbers[index + 1] === sortedArrayOfNumbers[index]) {
+      return results.push(sortedArrayOfNumbers[index]);
+    }
+    if (results.length >= 3) {
+      return repetition === true;
+    }
+  }
+  return results && repetition;
 }
-return results && repetition;
-}
-
-
 
 // 2 - Acessar os valores do array.
 
-function theExcludentConditions (arrayOfNumbers) {
+function theExcludentConditions(arrayOfNumbers) {
   let excludentConditions = false;
   for (let key of arrayOfNumbers) {
-    if(arrayOfNumbers[key] < 0 || arrayOfNumbers[key] > 9) {
+    if (arrayOfNumbers[key] < 0 || arrayOfNumbers[key] > 9) {
       return excludentConditions === true;
     }
   }
@@ -40,7 +36,7 @@ function theExcludentConditions (arrayOfNumbers) {
 
 // 3 - Transformar em string.
 
-function convertArrayToString (arrayOfNumbers, firstIndex, secondIndex) {
+function convertArrayToString(arrayOfNumbers, firstIndex, secondIndex) {
   let result = ' ';
 
   for (let index = firstIndex; index <= secondIndex; index += 1) {
@@ -50,13 +46,10 @@ function convertArrayToString (arrayOfNumbers, firstIndex, secondIndex) {
 }
 
 function generatePhoneNumber(phoneNumber) {
- 
   let message = ' ';
-  phoneNumber.length === 11;
-
-    if (phoneNumber.length !== 11) {
-      return message = 'Array com tamanho incorreto.';
-    }
+  if (phoneNumber.length !== 11) {
+    return message = 'Array com tamanho incorreto.';
+  }
     else if (theExcludentConditions(phoneNumber) === true || findDuplicates(phoneNumber) === true) {
       return message = 'não é possível gerar um número de telefone com esses valores'; 
     } else {
@@ -71,8 +64,7 @@ function generatePhoneNumber(phoneNumber) {
 // https://woliveiras.com.br/posts/laços-de-repetição-for-for-in-for-of/
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
-// https://stackoverflow.com/questions/19395257/how-to-count-duplicate-value-in-an-array-in-javascript/19395302#19395302 
-
+// https://stackoverflow.com/questions/19395257/how-to-count-duplicate-value-in-an-array-in-javascript/19395302#19395302
 
 // Desafio 12
 
@@ -81,46 +73,35 @@ function generatePhoneNumber(phoneNumber) {
 // 1 - Função que verifica a relação entre cada lado e a soma dos outros dois lados do triângulo.
 
 function verifySum(lineA, lineB, lineC) {
-
-  let sumOfAandB = lineA + lineB; // para lado C 
+  let sumOfAandB = lineA + lineB; // para lado C
   let sumOfAandC = lineA + lineC; // para lado B
   let sumOfCandB = lineB + lineC; // para lado A
+  let condition = false;
 
   if (lineA < sumOfCandB && lineB < sumOfAandC && lineC < sumOfAandB) {
-      return true;
-  }
-  else {
-      return false;
+    return condition === true;
   }
 }
 
-// 2 - Função pra verificar a relação entre cada lado e a subtração dos outros dois. 
+// 2 - Função pra verificar a relação entre cada lado e a subtração dos outros dois.
 
 function verifySubtraction(lineA, lineB, lineC) {
-
-  let subtractionOfAandB = Math.abs(lineA - lineB); // para lado C 
+  let subtractionOfAandB = Math.abs(lineA - lineB); // para lado C
   let subtractionOfAandC = Math.abs(lineA - lineC); // para lado B
   let subtractionOfBandC = Math.abs(lineB - lineC); // para lado A
-
+  let condition = false;
   if (lineA > subtractionOfBandC && lineB > subtractionOfAandC && lineC > subtractionOfAandB) {
-    return true;
-  } else {
-    return false;
+    return condition === true;
   }
 }
-
 function triangleCheck(lineA, lineB, lineC) {
-  
-
- if (verifySum(lineA, lineB, lineC) === true && verifySubtraction(lineA, lineB, lineC) === true) {
-    return true;
- } else {
-   return false;
- }
+  let triangleVerify = false;
+  if (verifySum(lineA, lineB, lineC) === true && verifySubtraction(lineA, lineB, lineC) === true) {
+    return triangleVerify === true;
+  }
 }
-// Referência utilizada para resolução de Desafio 12: 
-// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs 
-
+// Referência utilizada para resolução de Desafio 12:
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 
 // Desafio 13
 function hydrate() {
