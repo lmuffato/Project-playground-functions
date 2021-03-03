@@ -50,19 +50,23 @@ function highestCount(values) {
   return countBigger(values, biggest);
 }
 
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let cat1Distance = cat1 - mouse;
-  let cat2Distance = cat2 - mouse;
-  if (cat1Distance < cat2Distance) {
+  let cat1Distance = mouse - cat1;
+  let cat2Distance = mouse - cat2;
+  if (cat1Distance < 0) {
+    cat1Distance *= -1;
+  } if (cat2Distance < 0) {
+    cat2Distance *= -1;
+  } if (cat1Distance < cat2Distance) {
     return 'cat1';
   } if (cat1Distance > cat2Distance) {
     return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
 }
+
+console.log(catAndMouse(1, 3, 5));
 
 // Desafio 8
 function words(number) {
@@ -84,15 +88,59 @@ function fizzBuzz(array) {
   return string;
 }
 
-console.log(fizzBuzz([7, 9]));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function lettersCheck(letters) {
+  if (letters === 'a') {
+    return 1;
+  } if (letters === 'e') {
+    return 2;
+  } if (letters === 'i') {
+    return 3;
+  } if (letters === 'o') {
+    return 4;
+  } if (letters === 'u') {
+    return 5;
+  }
+  return letters;
 }
-function decode() {
-  // seu código aqui
+
+function encode(string) {
+  let code = [];
+  
+  for (let letters = 0; letters < string.length; letters += 1) {
+    code.push(lettersCheck(string[letters]));
+  }
+  return code.join('');
 }
+
+console.log(encode('hi there!'));
+
+function numbersCheck(character) {
+  if (character === '1') {
+    return 'a';
+  } if (character === '2') {
+    return 'e';
+  } if (character === '3') {
+    return 'i';
+  } if (character === '4') {
+    return 'o';
+  } if (character === '5') {
+    return 'u';
+  }
+  return character;
+}
+
+function decode(message) {
+  let uncode = [];
+  for (let chareter = 0; chareter < message.length; chareter += 1) {
+    uncode.push(numbersCheck(message[chareter]));
+  }
+  return uncode.join('');
+}
+
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
