@@ -20,8 +20,10 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+let ultimoMaisPrimeiro = [];
+function concatName(arrayStrings) {
+  ultimoMaisPrimeiro = arrayStrings[arrayStrings.length-1] + " " + arrayStrings[0];
+  return ultimoMaisPrimeiro;
 }
 
 // Desafio 5
