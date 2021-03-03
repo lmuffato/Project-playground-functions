@@ -2,8 +2,7 @@
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
-  } 
-    return false;
+  } return false;
 }
 
 // Desafio 2
@@ -13,6 +12,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
+  let splitArray =[];
   splitArray = (string.split(' '));
   return splitArray;
 }
@@ -56,9 +56,7 @@ function catAndMouse(mouse, cat1, cat2) {
   else if (cat1Dist > cat2Dist) {
     return 'cat2';
   }
-  else {
-    return 'os gatos trombam e o rato foge';
-  }
+      return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -83,6 +81,7 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
+  let encodeString = [];
   encodeString = string.split('');
   return encodeString;
   for (let index = 0; index <= encodeString.length; index += 1) {
@@ -98,7 +97,6 @@ function encode(string) {
 }
 
 console.log(encode('eduardo'))
-
 
 function decode() {
   // seu código aqui
