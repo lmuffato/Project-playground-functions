@@ -5,8 +5,8 @@ function techList(techArray, name) {
   if (techArray.length === 0) {
     arrayOfObjects = 'Vazio!';
   }
-  for (let index = 0; index < techArray.length; index += 1) { 
-    arrayOfObjects.push( {tech: techArray[index], name: name} )
+  for (let index = 0; index < techArray.length; index += 1) {
+    arrayOfObjects.push({ tech: techArray[index], name: name });
   }
   return arrayOfObjects;
 }
@@ -20,19 +20,20 @@ function generatePhoneNumber(array) {
   let secondPart = '';
   let thirdPart = '';
   if (array.length !== 11) {
-    return 'Array com tamanho incorreto.'
+    return 'Array com tamanho incorreto.';
   }
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] < 0 || array[index] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-    for (let indexRepeated = index; indexRepeated < array.length+1; indexRepeated += 1) {
+    for (let indexRepeated = index; indexRepeated < array.length + 1; indexRepeated += 1) {
       if (countElement > 2) {
         return 'não é possível gerar um número de telefone com esses valores';
-    } else if (array[index] === array[indexRepeated]) {
+      }
+      if (array[index] === array[indexRepeated]) {
         countElement += 1;
-    } else if (countElement > countMax) {
-        countMax = countElement;
+      } else if (countElement > countMax) {
+          countMax = countElement;
       } 
     }
     countElement = 0;
@@ -48,38 +49,39 @@ function generatePhoneNumber(array) {
       thirdPart += phoneNumber[index];
     }
   }
-  phoneNumber = '(' + firstPart + ') ' + secondPart + '-' + thirdPart
+  phoneNumber = '(' + firstPart + ') ' + secondPart + '-' + thirdPart;
   return phoneNumber;  
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let triangleChecked;
-  if (lineA < lineB + lineC && lineA > Math.abs(lineB-lineC) || lineB < lineA + lineC && lineB > Math.abs(lineA - lineC) || lineC < lineA+lineB && lineC > Math.abs(lineA - lineB)) {
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB-lineC) || 
+      lineB < lineA + lineC && lineB > Math.abs(lineA - lineC) || 
+      lineC < lineA+lineB && lineC > Math.abs(lineA - lineB)) {
     triangleChecked = true;
   } else {
     triangleChecked = false;
   }
-  return triangleChecked
+  return triangleChecked;
 }
 
 // Desafio 13
 function hydrate(string) {
-
   //pesquisei a ideia de retirar os numbers da string no stackoverflor. Segue o link: https://stackoverflow.com/questions/30607419/return-only-numbers-from-string
   let quantityOfDrinks = string.replace(/\D/g, "")
   let sum = 0;
+  let cupOfWater;
   for (let index = 0; index < quantityOfDrinks.length; index += 1) {
     sum += parseInt(quantityOfDrinks[index]);
   }
 
-  let cupOfWater 
   if (sum < 2) {
     cupOfWater = sum + ' copo de água';
   } else {
     cupOfWater = sum + ' copos de água';
   }
-  return cupOfWater
+  return cupOfWater;
 }
 
 module.exports = {
