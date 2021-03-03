@@ -26,9 +26,10 @@ function concatName(stringsArray) {
 // Source: https://masteringjs.io/tutorials/fundamentals/string-concat //
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let winPoints = wins * 3
 }
+return footballPoints['winPoints'] + footballPoints['ties'];
 
 // Desafio 6
 function highestCount() {
