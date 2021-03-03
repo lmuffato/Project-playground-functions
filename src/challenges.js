@@ -33,8 +33,7 @@ function concatName(names) {
   arrayNames = names;
   let lastName = arrayNames[arrayNames.length - 1];
   let firstName = arrayNames[0];
-  let concat = lastName.concat(', ' + firstName);
-  return concat;
+  return lastName.concat(', ' + firstName);
 }
 
 // Desafio 5
