@@ -51,7 +51,7 @@ function highestCount() {
   // seu código aqui
 }
 
-// Desafio 7
+// Desafio 7 - PENDENTE!
 function catAndMouse(mouse, cat1, cat2) {
   if (cat1 - mouse < cat2 - mouse){
     return 'cat1';
@@ -67,9 +67,25 @@ console.log(catAndMouse(1, 7, 13));
 console.log(catAndMouse(1, 4, 4));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumbers) {
+  let fizzBuzzBug = [];
+  for (index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 != 0) {
+      fizzBuzzBug.push("fizz");
+    } else if (arrayNumbers[index] % 5 === 0 && arrayNumbers[index] % 3 != 0) {
+      fizzBuzzBug.push("buzz");
+    } else if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0){
+      fizzBuzzBug.push("fizzBuzz");
+    } else {
+      fizzBuzzBug.push("bug!");
+    }
+  }
+  return fizzBuzzBug
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([7, 9]));
+console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode() {
