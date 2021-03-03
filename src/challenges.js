@@ -1,27 +1,26 @@
-// Desafio 1
+// Desafio 1 OK
 function compareTrue(param1, param2) {
   return param1 && param2;
 }
 
-// Desafio 2
+// Desafio 2 OK
 function calcArea(base, height) {
   return base * height / 2;
 }
 
-// Desafio 3
+// Desafio 3 OK
 function splitSentence(string) {
   return string.split(' ');
 }
 
-// Desafio 4
+// Desafio 4 WHY?
 function concatName(array) {
   let lastName = array.length-1;
   let newArray = lastName.concat(array[0])
   return newArray;
-
 }
 
-// Desafio 5
+// Desafio 5 OK
 function footballPoints(wins,ties) {
   let resultWins = (wins * 3);
   return(resultWins + ties);
@@ -49,10 +48,9 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2'
   } else if (distanceCat1 < distanceCat2) {
     return 'cat1'
-  }
+  } else {
     return "os gatos trombam e o rato foge"
-  
-
+  }
 }
 
 // Desafio 8
