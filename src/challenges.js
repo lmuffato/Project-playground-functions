@@ -93,9 +93,10 @@ console.log(highestCount(arrayNumbers));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let cat1Distance = mouse - cat1;
-  let cat2Distance = mouse - cat2;
-  let winner;
+  //Exercício corrigido com a ajuda do código do Murilo Gonçalves
+  let cat1Distance = Math.abs(mouse - cat1);
+  let cat2Distance = Math.abs(mouse - cat2);
+  let winner = '';
   if ((cat2Distance) < (cat1Distance)) {
     winner = 'cat2';
   } else if ((cat1Distance) < (cat2Distance)) {
@@ -106,15 +107,16 @@ function catAndMouse(mouse, cat1, cat2) {
   return winner;
 }
 
-let mouse = 3;
-let cat1 = 7;
-let cat2 = 9;
+let mouse = 0;
+let cat1 = 3;
+let cat2 = 2;
 
 console.log(catAndMouse(mouse, cat1, cat2));
 
 // Desafio 8
-function fizzBuzz(numbers) {
+function isDiv(numbers) {
   // seu código aqui
+  //Exercício corrigido com a ajuda do código do Murilo Gonçalves
   let result;
   if (numbers % 3 === 0 && numbers % 5 === 0) {
     result = 'fizzBuzz';
@@ -128,16 +130,16 @@ function fizzBuzz(numbers) {
   return result;
 }
 
-function montar(test) {
+function fizzBuzz(test) {
   let result = [];
   for (let index = 0; index < test.length; index += 1) {
-    result[index] = fizzBuzz((test[index]));
+    result[index] = isDiv((test[index]));
   }
   return result;
 }
 
 let arrayNumbers2 = [7, 9];
-console.log(montar(arrayNumbers2));
+console.log(fizzBuzz(arrayNumbers2));
 
 // Desafio 9
 function encode(param) {
