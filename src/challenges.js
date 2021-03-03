@@ -97,22 +97,22 @@ function fizzBuzz(arrayDivs) {
 function encode(frase) {
   // seu código aqui
   let Frase = frase.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-  let frase1 = Frase.replace('a', '1');
-  let frase2 = frase1.replace('e', '2');
-  let frase3 = frase2.replace('i', '3');
-  let frase4 = frase3.replace('o', '4');
-  let frase5 = frase4.replace('u', '5');
+  let frase1 = Frase.replace(/a/g, '1');
+  let frase2 = frase1.replace(/e/g, '2');
+  let frase3 = frase2.replace(/i/g, '3');
+  let frase4 = frase3.replace(/o/g, '4');
+  let frase5 = frase4.replace(/u/g, '5');
   let novaFrase = frase5;
   return novaFrase;
 }
 function decode(frase) {
   // seu código aqui
   let Frase = frase;
-  let frase1 = Frase.replace('1', 'a');
-  let frase2 = frase1.replace('2', 'e');
-  let frase3 = frase2.replace('3', 'i');
-  let frase4 = frase3.replace('4', 'o');
-  let frase5 = frase4.replace('5', 'u');
+  let frase1 = Frase.replace(/1/g, 'a');
+  let frase2 = frase1.replace(/2/g, 'e');
+  let frase3 = frase2.replace(/3/g, 'i');
+  let frase4 = frase3.replace(/4/g, 'o');
+  let frase5 = frase4.replace(/5/g, 'u');
   let novaFrase = frase5;
   return novaFrase;
 }
