@@ -53,9 +53,9 @@ function catAndMouse(mousePosition, cat1Position, cat2Position) {
   let returnString = '';
   let cat1 = Math.abs(mousePosition - cat1Position);
   let cat2 = Math.abs(mousePosition - cat2Position);
-  if (cat1 > cat2) {
+  if (cat1 < cat2) {
     returnString = 'cat1';
-  } else if (cat1 < cat2) {
+  } else if (cat1 > cat2) {
     returnString = 'cat2';
   } else {
     returnString = 'os gatos trombam e o rato foge';
@@ -63,7 +63,6 @@ function catAndMouse(mousePosition, cat1Position, cat2Position) {
 
   return returnString;
 }
-console.log(catAndMouse(1, 0, 2));
 
 /* Desafio 8
 Ideias e informações de como formular as funções retiradas do repositorio:
