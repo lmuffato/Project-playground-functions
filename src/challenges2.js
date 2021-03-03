@@ -32,11 +32,11 @@ function repeat3Times(array) {
   return result;
 }
 
-//função auxiliar exercicio 11
+// função auxiliar exercicio 11
 function checkRange(array) {
   let result = false;
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] >=0 && array[index] <= 9) {
+    if (array[index] >= 0 && array[index] <= 9) {
       result = true;
     }
   }
@@ -45,7 +45,7 @@ function checkRange(array) {
 
 // função auxiliar exercicio 11
 function createPhone(array) {
-  return '(' + array[0] + array[1] + ') ' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10]
+  return '(' + array[0] + array[1] + ')' + array[2] + array[3] + array[4] + array[5] + array[6] + '-' + array[7] + array[8] + array[9] + array[10];
 }
 
 // Desafio 11
