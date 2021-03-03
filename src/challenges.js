@@ -27,9 +27,8 @@ function concatName(stringsArray) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let winPoints = wins * 3
+  return (wins * 3) + ties;
 }
-return footballPoints['winPoints'] + footballPoints['ties'];
 
 // Desafio 6
 function highestCount() {
