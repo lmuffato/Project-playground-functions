@@ -22,8 +22,10 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName(lastItem, firtItem) {
-  // seu código aqui
+function concatName(entry) {
+  let concatName = entry[0] + (entry.lenght -1);
+        return concatName;
+      
 }
 
 // Desafio 5
