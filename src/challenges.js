@@ -16,8 +16,9 @@ function splitSentence(string) {
 // Desafio 4 WHY?
 function concatName(array) {
   let lastName = array.length-1;
-  lastName.concat(array[0]);
-  return lastName;
+  let newArray = [lastName]
+  newArray.concat(array[0]);
+  return newArray;
 }
 
 // Desafio 5 OK
@@ -43,7 +44,7 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = Math.abs(cat1 - mouse)
-  let discanceCat2 = Math.abs(cat2 - mouse)
+  let distanceCat2 = Math.abs(cat2 - mouse)
   if (distanceCat1 > distanceCat2) {
     return 'cat2'
   } else if (distanceCat1 < distanceCat2) {
