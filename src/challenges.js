@@ -50,8 +50,9 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(listOfNumbers) {
   // seu código aqui
+  Math.max(listOfNumbers);
   let count = 0;
-  for (index in listOfNumbers, index += 1) {
+  for (index = 0; index < listOfNumbers.length; index += 1){
     if (listOfNumbers[index] === listOfNumbers[index + 1]) {
       count += 1;
     }
@@ -60,23 +61,22 @@ function highestCount(listOfNumbers) {
 }  
 
 // Desafio 7
-function distanceCatAndMouse (mouse, cat) {
-
-  let distanceCat = Math.abs(mouse - cat);
-  return distanceCat;
-}
 
 function catAndMouse(mouse, cat1, cat2) {
+  let distanceFromCat1 = Math.abs(mouse - cat1);
+  let distanceFromCat2 = Math.abs(mouse - cat2);
+  let message;
 
-  if (distanceCatAndMouse(cat1) < distanceCatAndMouse(cat2)) {
-    return 'cat1';
+  if (distanceFromCat1 < distanceFromCat2){
+    return message = 'cat1';
   }
-  else if (distanceCatAndMouse(cat2) < distanceCatAndMouse(cat1)) {
-    return 'cat2';
-  } else { 
-    return 'os gatos trombam e o rato foge';
+  else if (distanceFromCat2 < distanceFromCat1) {
+    return message = 'cat2';
+  } else if (distanceFromCat1 === distanceFromCat2) {  
+    return message = 'os gatos trombam e o rato foge';
   }
 }
+
 
 // Desafio 8
 
@@ -109,26 +109,16 @@ function fizzBuzz(arrayNumbers) {
     return newArrayNumbers;
 }
 
+// Referências consultadas para resolução do Desafio 8: 
+// https://developer.mozilla.org/pt-BR/docs/conflicting/Web/JavaScript/Reference/Operators 
+// https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Looping_code
+
+
 // Desafio 9
 function encode(string) {
-  let newString;
-  newString.push(string.split(''))
-
-  switch (newArray) {
-    case ('a') : 
-      return  1;
-    case ('e') :
-      return 2;
-    case ('i') :
-      return 3;
-    case ('o') :
-      return 4;
-    case ('u'):
-    return 5;
-    default :
-    break;
-  }
+  
 } 
+
 let stringDeExemplo = 'hi there!'; 
 console.log(encode(stringDeExemplo));
 
@@ -139,22 +129,7 @@ function decode(array) {
   
   newArray.push(encode(array)); 
 
-  switch (newArray) {
-    case (1) : 
-      return 'a';
-    case (2) :
-      return 'e';
-    case (3) :
-      return 'i';
-    case (4) :
-      return 'o';
-    case (5) :
-      return 'u';
-    default :
-    break;
-  }
 }
-
 
 module.exports = {
   calcArea,
