@@ -87,19 +87,26 @@ function numbDiv5(num) {
   return result;
 }
 
+// função complementar ao exercicio 8 para decidir qual palavra guardar no array
+function writeArray (value) {
+  let result;
+  if (numbDiv3(value) === true && numbDiv5(value) === true) {
+    result = 'fizzBuzz';
+  } else if (numbDiv3(value) === true) {
+    result = 'fizz';
+  } else if (numbDiv5(value) === true) {
+    result = 'buzz';
+  } else {
+    result = 'bug!';
+  }
+  return result;
+}
+
 // Desafio 8
 function fizzBuzz(array) {
   let result = [];
   for (let index in array) {
-    if (numbDiv3(array[index]) === true && numbDiv5(array[index]) === true) {
-      result.push('fizzBuzz');
-    } else if (numbDiv3(array[index]) === true) {
-      result.push('fizz');
-    } else if (numbDiv5(array[index]) === true) {
-      result.push('buzz');
-    } else {
-      result.push('bug!');
-    }
+    result.push(writeArray(array[index]));
   }
   return result;
 }
