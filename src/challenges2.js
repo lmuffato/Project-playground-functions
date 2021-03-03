@@ -22,13 +22,22 @@ function repeatNumbers(array) {
     for (let index2 = 0; index2 < array.length; index2 +=1) {
       if (array[index] === array[index2]) {
         count+=1;
-        if (count > 3){
+        if (count >= 3){
           return true;
         }
       }
     }
   }
   return false;
+}
+
+function formatPhoneNumber(phoneNumberString) { // Função copiada de https://stackoverflow.com/questions/8358084/regular-expression-to-reformat-a-us-phone-number-in-javascript, às 19:03, do dia 03/03/2021.
+  var cleaned = ('' + phoneNumberString).replace(/\D/g, '')
+  var match = cleaned.match(/^(\d{2})(\d{5})(\d{4})$/)
+  if (match) {
+    return '(' + match[1] + ') ' + match[2] + '-' + match[3]
+  }
+  return null
 }
 
 function generatePhoneNumber(arrayPhoneNumbers) {
@@ -40,9 +49,10 @@ function generatePhoneNumber(arrayPhoneNumbers) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  let phone = arrayPhoneNumbers;
-  return ('(' + phone[0] + '' + phone[1] + ') ' + phone[2] + '' + phone[3] + '' + phone[4] + '' + phone[5] + '' + phone[6] + '-' + phone[7] + '' + phone[8] + '' + phone[9] + '' + phone[10]);
+  let phone = arrayPhoneNumbers.join('');
+  return formatPhoneNumber(phone);
 }
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck() {
