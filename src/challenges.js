@@ -45,7 +45,7 @@ function highestCount(arrayNumbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanceOfCat1 = Math.abs(cat1 - mouse);
+  let distanceOfCat1 = Math.abs(cat1 - mouse); // Pesquisado "always positive number javascript", resolução retirada de: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
   let distanceOfCat2 = Math.abs(cat2 - mouse);
   let str = '';
   if (distanceOfCat1 === distanceOfCat2) {

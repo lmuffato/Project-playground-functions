@@ -1,12 +1,16 @@
 // Desafio 10
 function techList(arrayTechNames, name) {
-  let arraySorted = arrayTechNames.sort();
-  let exitArray = [];
-  for (let index in arraySorted) {
-    let insertObj = {};
-    insertObj.tech = arraySorted[index];
-    insertObj.name = name;
-    exitArray.push(insertObj);
+  if (arrayTechNames.length > 0) {
+    let arraySorted = arrayTechNames.sort();
+    let exitArray = [];
+    for (let index in arraySorted) {
+      let insertObj = {};
+      insertObj.tech = arraySorted[index];
+      insertObj.name = name;
+      exitArray.push(insertObj);
+    }
+  } else {
+    return 'Vazio!';
   }
   return exitArray;
 }
