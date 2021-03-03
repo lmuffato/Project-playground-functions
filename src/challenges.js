@@ -91,8 +91,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Challenge 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayOfNumbers) {
+  let arrayFizzBuzz = [];
+  for(index=0; index < arrayOfNumbers.length; index += 1){
+    if(arrayOfNumbers[index] % 3 === 0 && arrayOfNumbers[index] % 5 === 0){
+      arrayFizzBuzz.push('fizzBuzz');
+    } else if (arrayOfNumbers[index] % 3 === 0) {
+      arrayFizzBuzz.push('fizz');
+    } else if(arrayOfNumbers[index] % 5 === 0) {
+      arrayFizzBuzz.push('buzz');
+    } else {
+      arrayFizzBuzz.push('bug!');
+    }
+  }
+  return arrayFizzBuzz;
 }
 
 // Challenge 9
