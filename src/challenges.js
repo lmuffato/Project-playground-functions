@@ -17,12 +17,12 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentence) {
-  sentence = sentence.split('');
-  return sentence
+  sentence = sentence.split(' ');
+  return sentence;
 }
 
 // Desafio 4
-function concatName() {
+function concatName(lastItem, firtItem) {
   // seu código aqui
 }
 
