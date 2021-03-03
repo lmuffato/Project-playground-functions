@@ -1,6 +1,7 @@
 // Desafio 10
 function techList(tech, name) {
   let newList = [];
+  tech = tech.sort();
   for (let index = 0; index < tech.length; index += 1) {
     newList.push({
       tech: tech[index],
