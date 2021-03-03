@@ -37,7 +37,7 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   let numbersCount = 0;
   let checkNumber = highestNumber(numbers);
-  for (let key in numbers){
+  for (let key in numbers){ //Usei esse formato por ser menor e, acho eu, que computa em menos tempo que um for normal
     if (checkNumber === numbers[key]){
       numbersCount += 1;
     }
@@ -98,21 +98,60 @@ function changeLettersE(value) {
   return value.replace(/e/g, '2');
 }
 
+function changeLettersI(value) {
+  return value.replace(/i/g, '3');
+}
+
+function changeLettersO(value) {
+  return value.replace(/o/g, '4');
+}
+
+function changeLettersU(value) {
+  return value.replace(/u/g, '5');
+}
+
+function changeNumbers1(value) {
+  return value.replace(/1/g, 'a');
+}
+
+function changeNumbers2(value) {
+  return value.replace(/2/g, 'e');
+}
+
+function changeNumbers3(value) {
+  return value.replace(/3/g, 'i');
+}
+
+function changeNumbers4(value) {
+  return value.replace(/4/g, 'o');
+}
+
+function changeNumbers5(value) {
+  return value.replace(/5/g, 'u');
+}
+
 function encode(string) {
-  //let changeString = string.split('');
   let changeString = string;
-  //changeString = changeString.replace(/a/g, '1');
   for (let index = 0; index < changeString.length; index += 1) {
-    changeLettersA(changeString);
-    changeLettersE(changeString);
+    changeString = changeLettersA(changeString);
+    changeString = changeLettersE(changeString);
+    changeString = changeLettersI(changeString);
+    changeString = changeLettersO(changeString);
+    changeString = changeLettersU(changeString);
   }
   return changeString;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let changeString = string;
+  for (let index = 0; index < changeString.length; index += 1) {
+    changeString = changeNumbers1(changeString);
+    changeString = changeNumbers2(changeString);
+    changeString = changeNumbers3(changeString);
+    changeString = changeNumbers4(changeString);
+    changeString = changeNumbers5(changeString);
+  }
+  return changeString;
 }
-
-console.log(encode('ala ele'));
 
 module.exports = {
   calcArea,
