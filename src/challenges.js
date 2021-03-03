@@ -81,16 +81,16 @@ function fizzBuzz(numberArray2) {
 
   for (let i = 0; i < numberArray2.length; i += 1){
         
-    if (numberArray2[i] % 3 === 0){
+    if ((numberArray2[i] % 3 === 0) && (numberArray2[i] % 5 === 0)){
+      numbers.push('fizzBuzz');
+    }
+
+    else if (numberArray2[i] % 3 === 0){
       numbers.push('fizz');
     }
     
     else if (numberArray2[i] % 5 === 0){
       numbers.push('buzz');
-    }
-
-    else if ((numberArray2[i] % 3 === 0) && (numberArray2[i] % 5 === 0)){
-      numbers.push('fizzBuzz');
     }
 
     else if ((numberArray2[i] % 3 !== 0) && (numberArray2[i] % 5 !== 0)){ 
@@ -131,7 +131,7 @@ function decode(numberToChar) {
 }
 
 
-console.log(highestCount([0, 0, 0]));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 module.exports = {
   calcArea,
