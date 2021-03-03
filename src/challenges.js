@@ -58,9 +58,22 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 } catAndMouse(1, 7, 13);
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(fizzBuzzNumbers) {
   // seu código aqui
-}
+  let fizzBuzzString = [];
+  for (let index = 0; index < fizzBuzzNumbers.length; index += 1) {
+    if (fizzBuzzNumbers[index] % 3 === 0 && fizzBuzzNumbers[index] % 5 === 0) {
+      fizzBuzzString.push('fizzBuzz');
+    } else if (fizzBuzzNumbers[index] % 3 === 0) {
+      fizzBuzzString.push('fizz');
+    } else if (fizzBuzzNumbers[index] % 5 === 0) {
+      fizzBuzzString.push('buzz');
+    } else {
+      fizzBuzzString.push('bug!');
+    }
+  } return fizzBuzzString;
+} fizzBuzz([9, 25]);
+
 // Desafio 9
 function encode() {
   // seu código aqui
