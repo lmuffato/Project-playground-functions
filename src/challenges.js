@@ -17,7 +17,6 @@ console.log(calcArea(51, 1));
 function splitSentence(sentence) {
   let splitted = sentence.split(' ');
   return splitted;
-
 }
 console.log(splitSentence('go Trybe'));
 console.log(splitSentence('vamo que vamo'));
@@ -29,10 +28,16 @@ function concatName() {
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let win = wins * 3;
+  let tie = ties * 1;
+  let sumPoints = win + tie;
+  return sumPoints;
 }
-
+console.log(footballPoints(14, 8));
+console.log(footballPoints(1, 2));
+console.log(footballPoints(0, 0));
 // Desafio 6
 function highestCount() {
   // seu código aqui
