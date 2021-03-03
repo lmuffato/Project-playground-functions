@@ -66,13 +66,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat2Distance = mouse - cat2;
 
   if (cat1Distance < cat2Distance) {
-    winner = 'cat1';
-  } else if (cat2Distance < cat1Distance) {
-    winner = 'cat2';
-  } else {
-    winner = 'os gatos trombam e o rato foge';
-  }
-  return winner;
+    return 'cat1';
+  } if (cat2Distance < cat1Distance) {
+    return 'cat2';
+  } return 'os gatos trombam e o rato foge';
+
 }
 
 // Desafio 8
