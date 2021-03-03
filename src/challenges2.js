@@ -21,7 +21,7 @@ function cellPhoneOrganizer(phoneNumberArrenge) {
     if (index === 0) {
       phoneNumberArrenge[index] = `(${phoneNumberArrenge[index]}`;
     } else if (index === 1) {
-      phoneNumberArrenge[index] = `${phoneNumberArrenge[index]})`;
+      phoneNumberArrenge[index] = `${phoneNumberArrenge[index]}) `;
     } else if (index === 6) {
       phoneNumberArrenge[index] = `${phoneNumberArrenge[index]}-`;
     }
@@ -38,7 +38,7 @@ function numbersRepeatCounter(repeatedNumbers) {
         counter += 1;
       }
     }
-    if (counter > 3) {
+    if (counter >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
     counter = 0;
@@ -48,7 +48,7 @@ function numbersRepeatCounter(repeatedNumbers) {
 
 // Confere se os números atendem a algumas exigências
 function numbersCheck(numbers) {
-  if (numbers.length > 11) {
+  if (numbers.length != 11) {
     return 'Array com tamanho incorreto.';
   }
   for (let index = 0; index < numbers.length; index += 1) {
@@ -63,10 +63,14 @@ function numbersCheck(numbers) {
 function generatePhoneNumber(phoneNumber) {
   return numbersCheck(phoneNumber);
 }
+console.log(generatePhoneNumber([0, 2, 3]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (Math.abs(lineA < lineB + lineC) && Math.abs(lineB < lineA + lineC) && Math.abs(lineC < lineA + lineB)) {
+    return true;
+  }
+  return false
 }
 
 // Desafio 13
