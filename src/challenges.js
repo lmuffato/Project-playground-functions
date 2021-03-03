@@ -56,8 +56,13 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  cat1 = (mouse - cat1);
-  cat2 = (mouse - cat2);
+  if (mouse >= 0) {
+    cat1 = (mouse - cat1);
+    cat2 = (mouse - cat2);
+  } else {
+    cat1 = ((-1 * mouse) - cat1);
+    cat2 = ((-1 * mouse) - cat2);
+  }
   if (cat1 < cat2) {
     return 'cat2';
   }
@@ -72,7 +77,7 @@ function fizzBuzz(numbers) {
   let string = [''];
   for (let index = 0; index < numbers.length; index += 1) {
     if ((numbers[index] % 3 === 0) && (numbers[index] % 5 === 0)) {
-      string[index] = 'fizzbuzz';
+      string[index] = 'fizzBuzz';
     } else if (numbers[index] % 3 === 0) {
       string[index] = 'fizz';
     } else if (numbers[index] % 5 === 0) {
@@ -92,8 +97,8 @@ function decode() {
   // seu código aqui
 }
 
-console.log(catAndMouse(0, 3, 3));
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(catAndMouse(-3, 3, 6));
+console.log(fizzBuzz([9, 25]));
 
 module.exports = {
   calcArea,
