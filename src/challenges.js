@@ -79,16 +79,17 @@ function fizzBuzz(numbersArray) {
   let mensage = [];
   for (let index = 0; index < numbersArray.length; index += 1) {
     if (numbersArray[index] % 3 === 0) {
-      word = 'fizz';
-      if (numbersArray[index] % 5 === 0) {
-        word = 'fizzBuzz';
-      }
+      word += 'fizz';
     } else if (numbersArray[index] % 5 === 0) {
-      word = 'buzz';
+      word += 'buzz';
     } else {
       word = 'bug!';
     }
+    if (word === 'fizzbuzz') {
+      word = 'fizzBuzz';
+    }
     mensage.push(word);
+    word = '';
   }
   return mensage;
 }

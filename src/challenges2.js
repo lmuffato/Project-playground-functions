@@ -58,10 +58,10 @@ function testValid(phoneNumberArray) {
 function mountPhoneNumber(phoneNumberArray) {
   let mensage = '(';
   for (let index = 0; index < phoneNumberArray.length; index += 1) {
-    if (index === '2') {
+    if (index === 2) {
       mensage += ') ';
     }
-    if (index === '7') {
+    if (index === 7) {
       mensage += '-';
     }
     mensage += phoneNumberArray[index];
@@ -83,7 +83,7 @@ function generatePhoneNumber(phoneNumberArray) {
   return mensage;
 }
 
-// console.log(generatePhoneNumber([3 , 0 , 4 , 8 , 9 , 4 , 7 , 2 , 1 , 2 , 0 ]));
+console.log(generatePhoneNumber([3, 0, 4, 8, 9, 4, 7, 2, 1, 2, 0]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
