@@ -5,7 +5,7 @@ function compareTrue(firstValue, secondValue) {
     return true;
   }
   return false;
-// Nesse exercício contei com a colaboração do Luan da turma 10A, meu cógdigo não estava passando no Evaluator por um simples erro e ele me ajudou a descobrir.
+// Nesse exercício contei com a colaboração do Luan Ramalho da turma 10A, meu cógdigo não estava passando no Evaluator por um simples erro e ele me ajudou a descobrir.
 }
 
 // Desafio 2
@@ -43,6 +43,10 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(_array) {
   let highestNumber = Math.max(..._array);
+  // Acessei esse conteúdo para compreender melhor o conceito de Math.max():
+  // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
+  // Acessei esse conteúdo para conhecer um pouco a respeito de spread e me ajudar na resolução do exercício:
+  // https://developer.mozilla.org/pt-BR/docs/conflicting/Web/JavaScript/Reference/Operators/Spread_syntax
   let result = 0;
   for (let index = 0; index <= _array.length; index += 1) {
     if (_array[index] === highestNumber) {
@@ -53,8 +57,18 @@ function highestCount(_array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1Difference = Math.max(cat1 - mouse);
+  let cat2Difference = Math.max(cat2 - mouse);
+
+  if (cat2Difference < cat1Difference) {
+    return ('cat 2');
+  } if (cat2Difference > cat1Difference) {
+    return ('cat 1');
+  }
+  if (cat2Difference === cat1Difference) {
+    return ('os gatos trombam e o rato fogem');
+  }
 }
 
 // Desafio 8
