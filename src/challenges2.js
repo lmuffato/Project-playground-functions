@@ -20,12 +20,18 @@ function techList(arr, name) {
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA >= lineB + lineC) {
+    return false;
+  } if (lineB >= lineA + lineC) {
+    return false;
+  } if (lineC >= lineA + lineB) {
+    return false;
+  }
+  return true;
 }
 
 // Desafio 13
