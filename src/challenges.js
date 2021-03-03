@@ -46,40 +46,41 @@ function highestCount(arrayNumbers) {
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  let distanceCat1 = cat1 - mouse;
-  let distanceCat2 = cat2 - mouse;
-  let result = '';
+function catAndMouse()  {
 
-  if (distanceCat1 < distanceCat2) {
-    result = 'cat1';
-  } else if (distanceCat2 < distanceCat1) {
-    result = 'cat2';
-  } else {
-    result = 'os gatos trombam e o rato foge';
-  }
-  return result;
-}
+  function catAndMouse(mouse, cat1, cat2) {
+    let distanceCat1 = cat1 - mouse;
+    let distanceCat2 = cat2 - mouse;
+    let result = '';
 
-// Desafio 8
-function fizzBuzz(arrayOfNumbers) {
-  let finalResult = [];
-
-  function verifyDiv(number) {
-    let result;
-
-    if (number % 3 === 0 && number % 5 === 0) {
-      result = 'fizzBuzz';
-    } else if (number % 3 === 0) {
-      result = 'fizz';
-    } else if (number % 5 === 0) {
-      result = 'buzz';
+    if (distanceCat1 < distanceCat2) {
+      result = 'cat1';
+    } else if (distanceCat2 < distanceCat1) {
+      result = 'cat2';
     } else {
-      result = 'bug!';
+      result = 'os gatos trombam e o rato foge';
     }
     return result;
   }
 
+// Desafio 8
+function verifyDiv(number) {
+  let result;
+
+  if (number % 3 === 0 && number % 5 === 0) {
+    result = 'fizzBuzz';
+  } else if (number % 3 === 0) {
+    result = 'fizz';
+  } else if (number % 5 === 0) {
+    result = 'buzz';
+  } else {
+    result = 'bug!';
+  }
+  return result;
+}
+
+function fizzBuzz(arrayOfNumbers) {
+  let finalResult = [];
   for (let i = 0; i < arrayOfNumbers.length; i += 1) {
     finalResult.push(verifyDiv(arrayOfNumbers[i]));
   }
