@@ -1,3 +1,5 @@
+/* eslint-disable sonarjs/no-unused-collection */
+/* eslint-disable no-unused-vars */
 // Desafio 1
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
@@ -57,8 +59,28 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function conditions(numberForVerification) {
+  let message;
+  if (numberForVerification % 3 === 0 && numberForVerification % 5 === 0) {
+    message = 'fizzBuzz';
+  } else if (numberForVerification % 3 === 0) {
+    message = 'fizz';
+  } else if (numberForVerification % 5 === 0) {
+    message = 'buzz';
+  } else {
+    message = 'bug!';
+  }
+  return message;
+}
+
+function fizzBuzz(array) {
+  let result = [];
+  let verification;
+  for (let index = 0; index < array.length; index += 1) {
+    verification = conditions(array[index]);
+    result.push(verification);
+  }
+  return result;
 }
 
 // Desafio 9
