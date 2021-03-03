@@ -61,7 +61,7 @@ function triangleCheck(lineA, lineB, lineC) {
   if (c < b - a && c > Math.abs(b - a)) {
     cont += 1;
   }
-  if (cont === 3) {
+  if (cont = 3) {
     return true;
   }
   return false;
