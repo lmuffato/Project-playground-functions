@@ -16,11 +16,11 @@ function compare(a, b) {
 function techList(array, name) {
   let techListObjects = [];
 
-  for (let index = 0; index < array.length; index += 1) {
-    if (array.length == null) {
-      return 'Vazio!';
-    }
+  if (array.length === 0) {
+    return 'Vazio!';
+  }
 
+  for (let index = 0; index < array.length; index += 1) {
     techListObjects.push({
       tech: array[index],
       name,
