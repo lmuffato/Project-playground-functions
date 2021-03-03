@@ -75,24 +75,52 @@ function generatePhoneNumber(phoneNumber) {
 
 
 // Desafio 12
+
+// Dividir em duas outras funções mais simples
+
+// 1 - Função que verifica a relação entre cada lado e a soma dos outros dois lados do triângulo.
+
+function verifySum(lineA, lineB, lineC) {
+
+  let sumOfAandB = lineA + lineB; // para lado C 
+  let sumOfAandC = lineA + lineC; // para lado B
+  let sumOfCandB = lineB + lineC; // para lado A
+
+  if (lineA < sumOfCandB && lineB < sumOfAandC && lineC < sumOfAandB) {
+      return true;
+  }
+  else {
+      return false;
+  }
+}
+
+// 2 - Função pra verificar a relação entre cada lado e a subtração dos outros dois. 
+
+function verifySubtraction(lineA, lineB, lineC) {
+
+  let subtractionOfAandB = Math.abs(lineA - lineB); // para lado C 
+  let subtractionOfAandC = Math.abs(lineA - lineC); // para lado B
+  let subtractionOfBandC = Math.abs(lineB - lineC); // para lado A
+
+  if (lineA > subtractionOfBandC && lineB > subtractionOfAandC && lineC > subtractionOfAandB) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 function triangleCheck(lineA, lineB, lineC) {
   
-  let sumOfAandB = lineA + lineB; // para linha C 
-  let sumOfAandC = lineA + lineC; // para linha B
-  let sumOfCandB = lineB + lineC; // para linha A
-  let subtractionOfAandB = lineA - lineB;
-  let subtractionOfAandC = lineA - lineC;
-  let subtractionOfBandC = lineB - lineC;
-  let verifyTriangle = false;
 
- if ((lineA < sumOfCandB || lineB < sumOfAandC || lineC < sumOfAandB) && 
-      (lineA > Math.abs(subtractionOfBandC) && lineB > Math.abs(subtractionOfAandC) && lineC > Math.abs(subtractionOfAandB))) {
-        verifyTriangle === true;
+ if (verifySum(lineA, lineB, lineC) === true && verifySubtraction(lineA, lineB, lineC) === true) {
+    return true;
  } else {
-       verifyTriangle === false;
+   return false;
  }
- return verifyTriangle;
 }
+// Referência utilizada para resolução de Desafio 12: 
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs 
+
 
 // Desafio 13
 function hydrate() {
