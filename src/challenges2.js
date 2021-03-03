@@ -94,11 +94,11 @@ function verifySubtraction(lineA, lineB, lineC) {
 }
 
 function triangleCheck(lineA, lineB, lineC) {
-  let triangleVerify = false;
   if (verifySum(lineA, lineB, lineC) === true && verifySubtraction(lineA, lineB, lineC) === true) {
-    return triangleVerify === true;
+    return true;
   }
 }
+
 // Referência utilizada para resolução de Desafio 12:
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 
