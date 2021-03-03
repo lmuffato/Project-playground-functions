@@ -104,8 +104,8 @@ function writeArray(value) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  let result = [''];
-  for (let index; index < array.length; index += 1) {
+  let result = [];
+  for (let index = 0; index < array.length; index += 1) {
     result.push(writeArray(array[index]));
   }
   return result;
@@ -141,7 +141,7 @@ function replaceDec(char) {
     result = 'o';
   } else if (char === '5') {
     result = 'u';
-  } 
+  }
   return result;
 }
 
