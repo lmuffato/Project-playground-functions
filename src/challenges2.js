@@ -4,7 +4,7 @@ function techList(techArray, name) {
   let listOfTechs = [];
   if (techArray.length === 0) {
     listOfTechs = 'Vazio!';    
-  } else if (techArray.length === 5){
+  } else {
     for (let index = 0; index < techArray.length; index += 1) {
       let techItem = {
         tech: '',
@@ -24,21 +24,23 @@ function techList(techArray, name) {
 
 // esta função retorna o número vezes aparece o número que mais se repete no arrayNumber
 
-function howManyRepete(arrayNumbers) {
+function howManyRepete(testedArray) {
   let count = 0;
-  let maxRepetions = 0;
+  let arrayNumbers = testedArray;
+  arrayNumbers.push();
+  let arrayOfRepetion = [];
+  let numberAvalided = arrayNumbers[0];
   for (let index1 = 0; index1 < arrayNumbers.length; index1 += 1) {
-    for (let index2 = 0; index2 < arrayNumbers.length; index2 += 1) {
-      if (arrayNumbers[index1] === arrayNumbers[index2]) {
-        count += 1;
-      }
+    if (arrayNumbers[index1] === numberAvalided) {
+      count += 1;
+    } else {
+      numberAvalided = arrayNumbers[index1];
+      arrayOfRepetion.push(count);
+      count = 1;
     }
-    if (count > maxRepetions) {
-      maxRepetions = count;
-    }
-    count = 0;
   }
-  return maxRepetions;
+  arrayOfRepetion.sort().reverse();
+  return arrayOfRepetion[0];
 }
 
 function testValid(phoneNumberArray) {
