@@ -83,7 +83,7 @@ function fizzBuzz(arrayNumbers) {
   let arrayFizzBuzz = [];
   for (let index = 0; index < arrayNumbers.length; index += 1){
     if (arrayNumbers[index] % 3 == 0 && arrayNumbers[index] % 5 == 0) {
-    arrayFizzBuzz[index] = "fizzbuzz";
+    arrayFizzBuzz[index] = "fizzBuzz";
     }
     else if (arrayNumbers[index] % 3 == 0 && arrayNumbers[index] % 5 != 0){
     arrayFizzBuzz[index] = 'fizz';
@@ -99,7 +99,7 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function encode() {
+function encode(codify) {
   // seu código aqui
 }
 function decode() {
