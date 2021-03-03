@@ -63,12 +63,12 @@ function highestCount(arrayNums) {
 }
 
 // Desafio 7
-function catAndMouse(cat1, cat2, mouse) {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let distCat1 = Math.abs(mouse - cat1);
   let distCat2 = Math.abs(mouse - cat2);
   if (distCat1 === distCat2) {
-    return console.log('os gatos trombam e o rato foge.');
+    return 'os gatos trombam e o rato foge.';
   } if (distCat1 < distCat2) {
     return 'cat1';
   } if (distCat2 < distCat1) {
@@ -80,12 +80,12 @@ function catAndMouse(cat1, cat2, mouse) {
 function fizzBuzz(arrayDivs) {
   // seu código aqui
   for (let i = 0; i < arrayDivs.length; i += 1) {
-    if (arrayDivs[i] % 3 === 0) {
-      arrayDivs[i] = 'fizz';
-    } else if (arrayDivs[i] % 5 === 0) {
-      arrayDivs[i] = 'Buzz';
-    } else if (arrayDivs[i] % 3 === 0 && arrayDivs[i] % 5 === 0) {
+    if (arrayDivs[i] % 3 === 0 && arrayDivs[i] % 5 === 0) {
       arrayDivs[i] = 'fizzBuzz';
+    } else if (arrayDivs[i] % 5 === 0) {
+      arrayDivs[i] = 'buzz';
+    } else if (arrayDivs[i] % 3 === 0) {
+      arrayDivs[i] = 'fizz';
     } else {
       arrayDivs[i] = 'bug!';
     }
