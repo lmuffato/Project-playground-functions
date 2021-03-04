@@ -1,8 +1,8 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
-  if (bool1 === true && bool2 === true) {
+  if (bool1  && bool2 ) {
     return true;
-  }
+  } else
   return false;
 }
 
@@ -93,23 +93,23 @@ function fizzBuzz(arrayFizz) {
   for (let index = 0; index < arrayFizz.length; index += 1) {
     fizzBuzze2.push(conditional(arrayFizz[index]));
   }
-  return fizzBuzze2
-} 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+  return fizzBuzze2;
+}
+
 // Desafio 9
 function encode(string) {
   let strSplit = string.split (' ')
   for (let index = 0; index < strSplit.length; index += 1) {
     if (strSplit[index] === 'a') {
-      strSplit.push(1)
+      strSplit.push(1);
     } else if (strSplit[index] === 'e') {
-      strSplit.push(2)
+      strSplit.push(2);
     } else if (strSplit[index] === 'i') {
-      strSplit.push(3)
+      strSplit.push(3);
     } else if (strSplit[index] === 'o') {
-      strSplit.push(4)
-    } else if (strSplit[index] === 'u'){
-      strSplit.push(5)
+      strSplit.push(4);
+    } else if (strSplit[index] === 'u') {
+      strSplit.push(5);
     }
   }
   return strSplit;
