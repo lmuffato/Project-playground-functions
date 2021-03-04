@@ -69,7 +69,7 @@ function checkFIrstIf(array) {
 // Desafio 11
 function generatePhoneNumber(array) {
   let result;
-  if (checkFIrstIf === true) {
+  if (checkFIrstIf(array) === true) {
     result = createPhone(array);
   } else if (array.length !== 11) {
     result = 'Array com tamanho incorreto.';
