@@ -67,6 +67,7 @@ function hydrate(string) {
   let numberInTheString = string.match(r);
   let sum = numberInTheString.map(Number).reduce((a, b) => a + b);
 
+  if (sum === 1) return `${sum} copo de água`;
   return `${sum} copos de água`;
 }
 
