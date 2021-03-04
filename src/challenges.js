@@ -119,14 +119,21 @@ let vogals = {
   u: 5,
 };
 
-function transformVogalsIntoNumber(word) {
+function checkVogals(character) {
+  for (let key in vogals) {
+    if (character === key) {
+      return vogals[key];
+    }
+  }
+  return false;
+}
+
+function transformVogalsIntoNumbers(word) {
   let codedWord = [];
   for (let index = 0; index < word.length; index += 1) {
-    for (let key in vogals) {
-      if (word[index] === key) {
-        codedWord.push(vogals[key]);
-      }
-    } if (codedWord[index] === undefined) {
+    if (checkVogals(word[index]) !== false) {
+      codedWord.push(checkVogals(word[index]));
+    } else if (checkVogals(word[index]) === false) {
       codedWord.push(word[index]);
     }
   }
@@ -135,18 +142,25 @@ function transformVogalsIntoNumber(word) {
 
 // Desafio 9
 function encode(word) {
-  let code = transformVogalsIntoNumber(word);
+  let code = transformVogalsIntoNumbers(word);
   return code;
+}
+
+function checkNumbers(character) {
+  for (let key in vogals) {
+    if (parseInt(character, 0) === vogals[key]) {
+      return key;
+    }
+  }
+  return false;
 }
 
 function transformNumbersIntoVogals(word) {
   let decodedWord = [];
   for (let index = 0; index < word.length; index += 1) {
-    for (let key in vogals) {
-      if (parseInt(word[index], 0) === vogals[key]) {
-        decodedWord.push(key);
-      }
-    } if (decodedWord[index] === undefined) {
+    if (checkNumbers(word[index]) !== false) {
+      decodedWord.push(checkNumbers(word[index]));
+    } else if (checkNumbers(word) === false) {
       decodedWord.push(word[index]);
     }
   }
@@ -157,7 +171,7 @@ function decode(word) {
   let decoding = transformNumbersIntoVogals(word);
   return decoding;
 }
-console.log(decode('h3 th2r2!'));
+
 module.exports = {
   calcArea,
   catAndMouse,
