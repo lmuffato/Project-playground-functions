@@ -66,6 +66,8 @@ function highestCount(arrayNumbers) {
  return vezesAparece;
 }
 console.log(highestCount([1, 2, 3, 3, 7, 7, 4, 4]));
+ 
+console.log(highestCount([3, 7, 0, 7, 7, 5]))
 
 // Desafio 7
 function catAndMouse() {
