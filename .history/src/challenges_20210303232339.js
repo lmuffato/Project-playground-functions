@@ -66,7 +66,7 @@ function highestCount(arrayDeNumeros) {
   }
   return count[highestNumber];
 }
-console.log(highestCount([3, 76, 0, 3, 6, 5]))
+console.log(highestCount([3, 76, 0, 76, 64, 5]))
 
 // Desafio 7
 function catAndMouse() {

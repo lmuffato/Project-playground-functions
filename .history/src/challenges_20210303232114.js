@@ -56,17 +56,17 @@ function highestCount(arrayDeNumeros) {
   for (let i of arrayDeNumeros) {
     count[i] = 0;
   }
-  for (let i of arrayDeNumeros) {
+  for (let itens of arrayDeNumeros) {
     count[i] += 1;
   }
   for (let i in arrayDeNumeros) {
     if (i > highestNumber) {
-      i = highestNumber;
+      itens = highestNumber;
     }
   }
   return count[highestNumber];
 }
-console.log(highestCount([3, 76, 0, 3, 6, 5]))
+console.log(highestCount([3, 3, 0, 76 , 64 ,5]))
 
 // Desafio 7
 function catAndMouse() {
