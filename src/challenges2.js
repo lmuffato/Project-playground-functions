@@ -26,7 +26,7 @@ function generatePhoneNumber(telNumber) {
     return 'Array com tamanho incorreto.';
   }
   for (let i = 0; i < telNumber.length; i += 1) {
-    if (telNumber[i] > 9 || telNumber[i] < 0) {
+    if (telNumber[i] > 9 || telNumber[i] < 0 || repete >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
     repete = 0;
@@ -34,9 +34,6 @@ function generatePhoneNumber(telNumber) {
       if (telNumber[i] === telNumber[j]) {
         repete += 1;
       }
-    }
-    if (repete >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
   ddd = `(${telNumber[0]}${telNumber[1]})`;
@@ -52,16 +49,13 @@ function triangleCheck(lineA, lineB, lineC) {
   let a = parseInt(lineA, 10);
   let b = parseInt(lineB, 10);
   let c = parseInt(lineC, 10);
-  if (a <= b + c && a >= Math.abs(b - c)) {
+  if (a <= b + c && b <= a + c && c <= b + a) {
     cont += 1;
   }
-  if (b <= a + c && b >= Math.abs(a - c)) {
+  if (a >= Math.abs(b - c) && b >= Math.abs(a - c) && c >= Math.abs(b - a)) {
     cont += 1;
   }
-  if (c <= b + a && c >= Math.abs(b - a)) {
-    cont += 1;
-  }
-  if (cont === 3) {
+  if (cont === 2) {
     return true;
   }
   return false;
