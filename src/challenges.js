@@ -50,7 +50,7 @@ function highestCount(array) {
   let bigger = array[0];
   let repeats = 0;
   for (i = 1; i < array.length; i += 1) {
-    if (array[i] > bigger){
+    if (array[i] > bigger) {
       bigger = array[i];
     }
   }
@@ -63,8 +63,17 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  if ( Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
+    return cat1;
+  }
+  else if ( Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+    return cat2;
+  }
+  else {
+  return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
