@@ -120,14 +120,26 @@ function fizzBuzz(arrayNunbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringCode) {
+  let newStringCode;
+  newStringCode = stringCode;
+  newStringCode = newStringCode.replace(/a/g, '1');
+  newStringCode = newStringCode.replace(/e/g, '2');
+  newStringCode = newStringCode.replace(/i/g, '3');
+  newStringCode = newStringCode.replace(/o/g, '4');
+  newStringCode = newStringCode.replace(/u/g, '5');
+  return newStringCode;
 }
-function decode() {
-  // seu código aqui
+function decode(stringDecode) {
+  let newStringDecode;
+  newStringDecode = stringDecode;
+  newStringDecode = newStringDecode.replace(/1/g, 'a');
+  newStringDecode = newStringDecode.replace(/2/g, 'e');
+  newStringDecode = newStringDecode.replace(/3/g, 'i');
+  newStringDecode = newStringDecode.replace(/4/g, 'o');
+  newStringDecode = newStringDecode.replace(/5/g, 'u');
+  return newStringDecode;
 }
-let a = [2, 15, 7, 9, 45];
-console.log(fizzBuzz(a));
 module.exports = {
   calcArea,
   catAndMouse,
