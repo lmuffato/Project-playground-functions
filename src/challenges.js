@@ -88,7 +88,7 @@ function fizzBuzz(numbersArray) {
   for (let index = 0; index < numbersArray.length; index += 1) {
     word = caseFizzBuzz(numbersArray[index]);
     mensage.push(word);
-  } 
+  }
   return mensage;
 }
 
