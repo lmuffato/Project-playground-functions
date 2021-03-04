@@ -100,7 +100,7 @@ function compareDivison(numberBuzz) {
   let newBuzz;
 
   if (numberBuzz % 3 === 0 && numberBuzz % 5 === 0) {
-    newBuzz = 'izBuzz';
+    newBuzz = 'fizzBuzz';
   } else if (numberBuzz % 3 === 0) {
     newBuzz = 'fizz';
   } else if (numberBuzz % 5 === 0) {
