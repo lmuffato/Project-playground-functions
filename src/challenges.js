@@ -95,8 +95,31 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+// Exercicio corrigido com a ajuda do Jodiel Briesemeister e Murilo Gonçalves
+function compareDivison(arrayBuzz){
+  let newBuzz;
+  for (let index = 0; index < arrayBuzz.length; index += 1) {
+    if (arrayBuzz[index] % 3 === 0 && arrayBuzz[index] % 5 === 0) {
+      newBuzz = 'fizzBuzz';
+    } else if (arrayBuzz[index] % 3 === 0) {
+      newBuzz = 'fizz';
+    } else if (arrayBuzz[index] % 5 === 0) {
+      newBuzz = 'buzz';
+    } else {
+      newBuzz = 'bug!';
+    }
+  }
+  return newBuzz;
+}
+
+function fizzBuzz(newBuzz) {
   // seu código aqui
+  let fizzBuzz = [];
+
+  for (let index = 0; index < newBuzz.length; index += 1) {
+    fizzBuzz[index] = compareDivison((newBuzz[index]));
+  }
+  return fizzBuzz;
 }
 
 // Desafio 9
