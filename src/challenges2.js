@@ -11,7 +11,15 @@ function generatePhoneNumber() {
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if ((lineA < (lineB + lineC)) && (lineB < (lineA + lineC)) && (lineC < (lineA + lineB)) && (lineA > Math.abs(lineB - lineC)) && (lineB > Math.abs(lineA - lineC)) && (lineC > Math.abs(lineA - lineB))) {
+  let condA = lineB + lineC;
+  let condB = lineA + lineC;
+  let condC = lineA + lineB;
+  let condD = Math.abs(lineB - lineC);
+  let condE = Math.abs(lineA - lineC);
+  let condF = Math.abs(lineA - lineB);
+  let hypotesisA = ((lineA < condA) && (lineB < condB) && (lineC < condC));
+  let hypotesisB = ((lineA > condD) && (lineB > condE) && (lineC > condF));
+  if (hypotesisA && hypotesisB) {
     return true;
   } return false;
 }
