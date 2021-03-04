@@ -65,7 +65,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz() {
 }
 
-// Desafio 9 credits: https://www.youtube.com/watch?v=7a-a6lKoyIQ - https://www.youtube.com/watch?v=ZYPqPoijCAQ
+// Desafio 9 credits https://www.youtube.com/watch?v=7a-a6lKoyIQ - https://www.youtube.com/watch?v=ZYPqPoijCAQ
 
 function encode() {
   // seu código aqui
