@@ -21,12 +21,12 @@ function calcArea(base, height) {
 // Desafio 3
 // Utilizei a dica do Rafael Medeiros de utilizar o .split no string.
 function splitSentence(phrase) {
-	let splitPhrase = phrase.split(' ');
-	return splitPhrase 
+  let splitPhrase = phrase.split(' ');
+  return splitPhrase;
 }
 // Desafio 4
 function concatName(name) {
-  let signature = name[name.length - 1]+', ' + name[0];
+  let signature = name[name.length - 1] + ', ' + name[0];
   return signature;
 }
 
