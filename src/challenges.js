@@ -105,15 +105,15 @@ function encode(frase) {
 function decode(mensageWithCode) {
   let numbersToVowels = {
     1: 'a',
-    2: 'b',
-    3: 'c',
-    4: 'd',
-    5: 'e',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
   };
   let getTheMassage = '';
   for (let index in mensageWithCode) {
     if (numbersToVowels[mensageWithCode[index]]) {
-      getTheMassage += mensageWithCode[index];
+      getTheMassage += numbersToVowels[mensageWithCode[index]];
     } else {
       getTheMassage += mensageWithCode[index];
     }
