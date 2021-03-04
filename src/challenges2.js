@@ -99,11 +99,10 @@ function verifySum(lineA, lineB, lineC) {
   let sumOfAandB = lineA + lineB; // para lado C
   let sumOfAandC = lineA + lineC; // para lado B
   let sumOfCandB = lineB + lineC; // para lado A
-  let condition = false;
-
   if (lineA < sumOfCandB && lineB < sumOfAandC && lineC < sumOfAandB) {
-    return condition === true;
+    return true;
   }
+  return false;
 }
 // 2 - Função pra verificar a relação entre cada lado e a subtração dos outros dois.
 
@@ -111,20 +110,18 @@ function verifySubtraction(lineA, lineB, lineC) {
   let subtractionOfAandB = Math.abs(lineA - lineB); // para lado C
   let subtractionOfAandC = Math.abs(lineA - lineC); // para lado B
   let subtractionOfBandC = Math.abs(lineB - lineC); // para lado A
-  let condition = false;
   if (lineA > subtractionOfBandC && lineB > subtractionOfAandC && lineC > subtractionOfAandB) {
-    return condition === true;
+    return true;
   }
+  return false;
 }
 
 function triangleCheck(lineA, lineB, lineC) {
-  let triangleCondition = false;
-
   if (verifySum(lineA, lineB, lineC) === true && verifySubtraction(lineA, lineB, lineC) === true) {
-    return triangleCondition === true;
+    return true;
   }
+  return false;
 }
-console.log(triangleCheck(10, 14, 8));
 
 // Referência utilizada para resolução de Desafio 12:
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
