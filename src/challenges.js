@@ -27,6 +27,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+// eslint-disable-next-line sonarjs/cognitive-complexity
 function highestCount(array) {
   let larger = 0;
   let result = 0;
