@@ -6,7 +6,7 @@ function techList(techNames, name) {
   };
   array = [];
 
-  if (techNames.length == 0) {
+  if (techNames.length === 0) {
     return 'Vazio!';
   }
 
@@ -18,10 +18,16 @@ function techList(techNames, name) {
     let a = x.tech.toUpperCase();
     let b = y.tech.toUpperCase();
 
-    return a == b ? 0 : a > b ? 1 : -1;
+    if (a == b) {
+      return 0;
+    } else if (a > b) {
+      return 1;
+    } else {
+      return -1;
+    }
   });
 
-  // Referência das linhas 24 a 29 (Ordenando objetos por uma propriedade string): https://ricardo-reis.medium.com/o-m%C3%A9todo-sort-do-array-javascript-482576734e0a
+  // Referência das linhas 18 a 27 (Ordenando objetos por uma propriedade string): https://ricardo-reis.medium.com/o-m%C3%A9todo-sort-do-array-javascript-482576734e0a
 
   return array;
 }
@@ -92,16 +98,15 @@ function hydrate(welcome) {
   let split = welcome.split('');
 
   for (let i = 0; i < split.length; i += 1) {
-    if (parseInt(split[i])) {
-      glassWater += parseInt(split[i]);
+    if (parseInt(split[i], 10)) {
+      glassWater += parseInt(split[i], 10);
     }
   }
 
   if (glassWater > 1) {
     return `${glassWater} copos de água`;
-  } else {
-    return `${glassWater} copo de água`;
   }
+  return `${glassWater} copo de água`;
 }
 
 module.exports = {

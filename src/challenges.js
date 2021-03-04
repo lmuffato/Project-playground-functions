@@ -55,6 +55,7 @@ function highestCount(numbers) {
       numberOfTime += 1;
     }
   }
+
   return numberOfTime;
 }
 // Desafio 7
