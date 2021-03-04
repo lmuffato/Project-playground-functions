@@ -32,7 +32,13 @@ function generatePhoneNumber(numbers) {
 
   let phoneNumber1 = (numbers.slice(3, 6));
   let phoneToString1 = phoneNumber1.map(String);
-  let phone1 = phoneToString1.join ('');
+  let phone1 = phoneToString1.join('');
+
+  let phoneNumber2 = (numbers.slice(3, 6));
+  let phoneToString2 = phoneNumber2.map(String);
+  let phone2 = phoneToString2.join('');
+
+  return `(${finalPrefix}) ${phone1}-${phone2}`;
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
