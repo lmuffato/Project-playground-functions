@@ -1,18 +1,18 @@
 // Desafio 10
 function techList(techsArray, name) {
-  techsArray = techsArray.sort();
-
   if (!techsArray || techsArray.length === 0) {
     return 'Vazio!';
   }
 
   let serializedTechs = [];
 
-  for (let index = 0; index < techsArray.length; index += 1) {
-    serializedTechs.push({
-      tech: techsArray[index],
-      nome: name,
-    });
+  for (const item of techsArray.sort()) {
+    serializedTechs.push(
+      {
+        tech: item,
+        nome: name,
+      },
+    );
   }
   return serializedTechs;
 }
