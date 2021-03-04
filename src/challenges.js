@@ -41,13 +41,20 @@ function highestCount(numberList) {
   }
   return countNumber;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1Position = mouse - cat1;
+  let cat2Position = mouse - cat2;
+  if (cat1Position > cat2Position){
+    return "cat2";
+  } else if (cat2Position > cat1Position) {
+    return "cat1";
+  } else {
+    return "os gatos trombam e o rato foge"
+  };
 }
-
+console.log(catAndMouse(5,2,1));
 // Desafio 8
 function fizzBuzz(arrayNumberList) {
   let fizzCode = [];
