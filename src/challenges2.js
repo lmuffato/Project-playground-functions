@@ -118,8 +118,6 @@ function hydrate(myDrink) {
   return myGlassH20;
 }
 
-console.log(hydrate('1 cerveja, 2 refrigerante'));
-
 module.exports = {
   generatePhoneNumber,
   techList,
