@@ -121,11 +121,11 @@ function encode(string) {
     } else if (array[index] === 'i') {
       newString += '3';
     } else if (array[index] === 'o') {
-    newString += '4';
+      newString += '4';
     } else if (array[index] === 'u') {
-    newString += '5';
+      newString += '5';
     } else {
-    newString += array[index];
+      newString += array[index];
     }
   }
   return newString;
@@ -142,11 +142,11 @@ function decode(string) {
     } else if (array[index] === '3') {
       newString += 'i';
     } else if (array[index] === '4') {
-    newString += 'o';
+      newString += 'o';
     } else if (array[index] === '5') {
-    newString += 'u';
+      newString += 'u';
     } else {
-    newString += array[index];
+      newString += array[index];
     }
   }
   return newString;

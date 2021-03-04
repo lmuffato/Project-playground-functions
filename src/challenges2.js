@@ -6,7 +6,7 @@ function techList(array, name) {
       tech: array[index],
       name });
   }
-  return objectArray;
+  return objectArray.sort();
 }
 
 let array = ["React", "Jest", "HTML", "CSS", "JavaScript"];
@@ -14,8 +14,8 @@ let name = "Rodrigo";
 console.log(techList(array,name));
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(array) {
+  for (let index = 0; index < array.lenght; )
 }
 
 // Desafio 12
