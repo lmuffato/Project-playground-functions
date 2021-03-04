@@ -111,7 +111,7 @@ console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode(string) {
-  let newString;
+  let newString ='';
   let array = string.split('');
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] === 'a') {
@@ -126,12 +126,15 @@ function encode(string) {
     newString += '5';
   } else {
     newString += array[index];
-  }}
-  return newstring;
+  }
+}
+  return newString;
 }
 
+console.log(encode("hi there!"));
+
 function decode(string) {
-  let newString;
+  let newString ='';
   let array = string.split('');
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] === '1') {
@@ -147,8 +150,11 @@ function decode(string) {
   } else {
     newString += array[index];
   }}
-  return newstring;
+  return newString;
 }
+
+console.log(decode("h3 th2r2!"));
+
 
 module.exports = {
   calcArea,
