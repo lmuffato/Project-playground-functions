@@ -14,7 +14,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentenceToSplit) {
-  return sentenceToSplit.split(' ')
+  return sentenceToSplit.split(' ');
 }
 // Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split //
 
@@ -53,8 +53,14 @@ function highestCount(numberArray) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  const cat1Position = cat1 - mouse;
-  const cat2Position = cat2 - mouse;
+  let cat1Position = cat1 - mouse;
+  let cat2Position = cat2 - mouse;
+
+  if (cat1Position < 0) {
+    cat1Position *= -1;
+  } if (cat2Position < 0) {
+    cat2Position *= -1;
+  }
 
   if (cat1Position > cat2Position) {
     return 'cat2';
