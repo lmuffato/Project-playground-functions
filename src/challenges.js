@@ -31,7 +31,7 @@ function footballPoints(wins,ties) {
 // Desafio 6
 function highestCount(array) {
   let highNumber = Math.max(...array);
-  let sumHighestCount = [];
+  let sumHighestCount = "";
   for (let index = 0; index < array.length; index += 1){
     let newArray = array[index];
 
