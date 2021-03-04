@@ -79,7 +79,8 @@ function fizzBuzz(arrayFizzBuzz) {
   }
  return result
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
+// Correção com a ajuda do Colega Rodrigo Luiz Rech
+
 // Desafio 9
 function encode() {
   // seu código aqui
