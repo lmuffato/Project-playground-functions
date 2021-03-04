@@ -77,7 +77,7 @@ function fizzBuzz(array) {
 function encode(string) {
   let codingString = "";
   for (let index = 0; index < string.length; index += 1){
-     codingString.push(string[index]);
+     codingString += string[index];
       switch (string[index]) {
         case string[index] === "a":
           codingString.replace(/a/i,'1');
@@ -109,7 +109,7 @@ function encode(string) {
 function decode(string) {
   let decodingString = "";
   for (let index = 0; index < string.length; index += 1){
-    decodingString.push(string[index]);
+    decodingString += string[index];
       switch (string[index]) {
         
         case string[index] === '1':
