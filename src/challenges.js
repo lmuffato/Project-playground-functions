@@ -6,6 +6,7 @@ function compareTrue(value1,value2) {
     return false;
   }
 }
+
 // Desafio 2
 function calcArea(base,height) {
   let triangleArea = (base * height)/2;
@@ -19,10 +20,10 @@ function splitSentence(string) {
 } 
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-
-  
+function concatName(array) {
+  let lastFirstArray = [array[array.length-1],array[0]];
+  return lastFirstArray;
+}
 
 // Desafio 5
 function footballPoints() {
