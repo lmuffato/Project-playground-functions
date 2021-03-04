@@ -24,15 +24,15 @@ function indexBiggerLower(array) {
 }
 
 function checkEqual(array) {
-  let isEqual = 0;
   for (let index = 0; index < array.length; index += 1) {
-    for (let index1 = index + 1; index1 < array.length - 1; index1 += 1) {
+    let isEqual = 0;
+    for (let index1 = 0; index1 < array.length; index1 += 1) {
       if (array[index] === array[index1]) {
         isEqual += 1;
       }
-    }
-    if (isEqual >= 3) {
-      return true;
+      if (isEqual >= 3) {
+        return true;
+      }
     }
   }
   return false;
@@ -59,6 +59,8 @@ function generatePhoneNumber(array) {
   }
   return result;
 }
+
+console.log(generatePhoneNumber(example));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
