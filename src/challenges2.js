@@ -88,8 +88,17 @@ function generatePhoneNumber(arrayOfNumbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let firstCheckPassed = false;
+  let secondCheckPassed = false;
+  if (lineA < (lineB + lineC)) {
+    firstCheckPassed = true;
+  } if (lineA > Math.abs(lineB - lineC)) {
+    secondCheckPassed = true;
+  } if (firstCheckPassed && secondCheckPassed) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 13
