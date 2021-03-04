@@ -80,23 +80,23 @@ function encode(string) {
      codingString = string[index]
       switch (string[index]) {
         case string[index] === "a":
-          codingString.replace('1');
+          codingString.replace(/a/i,'1');
           break;
 
         case string[index] === "e":
-        codingString.replace('2');
+        codingString.replace(/e/i,'2');
         break;
        
         case string[index] === "i":
-          codingString.replace('3');
+          codingString.replace(/i/i,'3');
           break;
 
         case string[index] === "o":
-        codingString.replace('4');
+        codingString.replace(/o/i,'4');
         break;
 
         case string[index] === "u":
-        codingString.replace('5');
+        codingString.replace(/u/i,'5');
         break;
 
         default:
@@ -113,30 +113,30 @@ function decode(string) {
       switch (string[index]) {
         
         case string[index] === '1':
-        decodingString.replace('a');
+        decodingString.replace(/a/i,'a');
         break;
 
         case string[index] === '2':
-        decodingString.replace('e');
+        decodingString.replace(/e/i,'e');
         break;
        
         case string[index] === "3":
-        decodingString.replace('i');
+        decodingString.replace(/i/i,'i');
         break;
 
         case string[index] === "4":
-        decodingString.replace('o');
+        decodingString.replace(/o/i,'o');
         break;
 
         case string[index] === "5":
-        decodingString.replace('u');
+        decodingString.replace(/u/i,'u');
         break;
 
         default:
         decodingString.replace(string[index])
       }
-      return decodingString
     }
+    return decodingString
 
 }
 
