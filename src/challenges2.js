@@ -29,65 +29,80 @@ function techList(array, name) {
 
 // Dividir a função em problemas menores.
 
-// 1 - Descobrir se há repetição no array.
+// 1 - Descobrir se há repetição na lista.
+function verifyDuplicates(numberList) {
+  let countNumber = {};
+  for (let number in numberList) {
+    if (countNumber[numberList[number]]) {
+      countNumber[numberList[number]] += 1;
+    } else {
+      countNumber[numberList[number]] = 1;
+    }
+  }
+  return countNumber;
+}
 
-// function findDuplicates(arrayOfNumbers) {
-// let sortedArrayOfNumbers = arrayOfNumbers.slice().sort();
-// let results = [];
-// let repetition;
-// for (let index = 0; index < sortedArrayOfNumbers.length; index += 1) {
-// if (sortedArrayOfNumbers[index + 1] === sortedArrayOfNumbers[index]) {
-//    return results.push(sortedArrayOfNumbers[index]);
-// }
-//  if (results.length >= 3) {
-//    return repetition === true;
-//  }
-// }
-//  return results && repetition;
-// }
+// 2 - Verificar o quantos números se repetem na lista
 
-// 2 - Acessar os valores do array.
-
-function theExcludentConditions(arrayOfNumbers) {
-  let excludentConditions = false;
-  for (let key of arrayOfNumbers) {
-    if (arrayOfNumbers[key] < 0 || arrayOfNumbers[key] > 9) {
-      return excludentConditions === true;
+function countDuplicates(numberList) {
+  let counter = verifyDuplicates(numberList);
+  for (let number in numberList) {
+    if (counter[numberList[number]] >= 3) {
+      return true;
     }
   }
 }
 
-// 3 - Transformar em string.
+// 3 - Verificar as outras condições de exclusão
+
+function theExcludentConditions(arrayOfNumbers) {
+  for (let key in arrayOfNumbers) {
+    if (arrayOfNumbers[key] < 0 || arrayOfNumbers[key] > 9) {
+      return true;
+    }
+  }
+}
+
+// 4 - Transformar em string.
 
 function convertArrayToString(arrayOfNumbers, firstIndex, secondIndex) {
   let result = ' ';
-
   for (let index = firstIndex; index <= secondIndex; index += 1) {
     result += arrayOfNumbers[index].toString();
   }
   return result;
 }
 
-function generatePhoneNumber(phoneNumber) {
-  let message = ' ';
-  if (phoneNumber.length !== 11) {
-    message = 'Array com tamanho incorreto.';
-  }
-  if (theExcludentConditions(phoneNumber) === true) {
-    message = 'não é possível gerar um número de telefone com esses valores';
-  } else {
-    message += `(${convertArrayToString(phoneNumber, 0, 1)}) `;
-    message += `${convertArrayToString(phoneNumber, 2, 6)}-`;
-    message += `${convertArrayToString(phoneNumber, 7, 10)}`;
-  }
+// 5 - Formato do número
+function phoneNumberFormat(phoneNumber) {
+  let message = `(${convertArrayToString(phoneNumber, 0, 1)})`;
+  message += `${convertArrayToString(phoneNumber, 2, 6)}`;
+  message += `-${convertArrayToString(phoneNumber, 7, 10)}`;
   return message;
 }
+
+function generatePhoneNumber(phoneNumber) {
+  if (phoneNumber.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  if (theExcludentConditions(phoneNumber)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  if (countDuplicates(phoneNumber) === true) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  return phoneNumberFormat(phoneNumber);
+}
+
+let myPhoneNumber = [1, 2, 3, 4, 5, 6, 9, 8, 9, 0, 1];
+console.log(generatePhoneNumber(myPhoneNumber));
 
 // Referências utilizadas para resolução do Desafio 11 (sobre laço for...of, toString, repetição de números):
 // https://woliveiras.com.br/posts/laços-de-repetição-for-for-in-for-of/
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
 // https://stackoverflow.com/questions/19395257/how-to-count-duplicate-value-in-an-array-in-javascript/19395302#19395302
+// O código do colega João Nascimento (@nascjoao) ajudou muito a clarear como estruturar as funções 1 e 2 que compõem a resposta do desafio 11.
 
 // Desafio 12
 
@@ -149,7 +164,6 @@ function hydrate(welcomeToTrybePub) {
     }
   }
 }
-
 // Para resolução do Desafio 13, foram consultadas as referências abaixo:
 // https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
 // https://javascript.plainenglish.io/javascript-algorithm-calculate-sum-of-numbers-in-a-string-dd007da460b7
