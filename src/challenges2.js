@@ -10,7 +10,7 @@ function techList(techsArray, name) {
     serializedTechs.push(
       {
         tech: item,
-        nome: name,
+        name,
       },
     );
   }
