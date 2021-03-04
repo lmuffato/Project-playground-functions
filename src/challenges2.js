@@ -71,8 +71,16 @@ console.log(numberRepeater([1, 1, 2, 3, 4, 6]));
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let soma1 = lineA + lineB;
+  let soma2 = lineB + lineC;
+  let absoluteValue = Math.abs(soma1 - soma2);
+  if (soma1 < soma2 && soma1 > absoluteValue) {
+    return true;
+  } if (soma2 < soma1 && soma2 > absoluteValue) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 13
