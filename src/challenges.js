@@ -8,7 +8,6 @@ function compareTrue(value1, value2) {
 // abaixo o comando printa o resultado da função (false, nesse caso)
 // console.log(compareTrue(false, true));
 
-
 // Desafio 2
 function calcArea() {
   // seu código aqui
