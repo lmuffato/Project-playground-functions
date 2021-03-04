@@ -39,6 +39,7 @@ function hydrate(drinks) {
 */
 
 // Refazendo com filter por estar inseguro com "/\D/g"
+// Verificação Number.isNaN retirada da doc do MDN https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN
 function hydrate(drinks) {
   let glassesOfWater = 0;
   const numbers = drinks
