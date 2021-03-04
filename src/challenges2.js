@@ -85,10 +85,11 @@ function hydrate(phrase) {
   }
   if (sum === 1) {
     result = '1 copo de água';
-  }
-  result = `${sum} copos de água`;
+  } else result = `${sum} copos de água`;
   return result;
 }
+
+console.log(hydrate('1 cerveja'));
 
 module.exports = {
   generatePhoneNumber,
