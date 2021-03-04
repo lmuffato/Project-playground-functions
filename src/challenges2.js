@@ -37,7 +37,7 @@ function phoneNumrepeat(arr) {
       }
     }
     if (repeat >= 3) {
-      return repeat;
+      return false;
     }
   }
 }
