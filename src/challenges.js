@@ -111,57 +111,43 @@ console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode(string) {
-  let newString
+  let newString;
+  let array = string.split('');
   for (let index = 0; index < string.length; index += 1) {
-    switch (string[index]){
-      case 'a':
-          newstring += '1';
-          break;
-      case 'e':
-        newstring += '2';
-        break;
-      case 'i':
-        newstring += '3';
-        break;
-      case 'o':
-          newstring += '4';
-        break;
-      case 'u':
-        newstring += '5';
-      break;
-      default:
-        newstring += string[index];
-        break;
-    }
-  }
+    if (array[index] === 'a') {
+      newString += '1';
+    } else if (array[index] === 'e') {
+      newString += '2';
+    }else if (array[index] === 'i') {
+      newString += '3';
+  }else if (array[index] === 'o') {
+    newString += '4';
+  }else if (array[index] === 'u') {
+    newString += '5';
+  } else {
+    newString += array[index];
+  }}
   return newstring;
 }
 
 function decode(string) {
-  let newString
+  let newString;
+  let array = string.split('');
   for (let index = 0; index < string.length; index += 1) {
-    switch (string[index]){
-      case 1:
-          newstring += 'a';
-          break;
-      case 2:
-        newstring += 'e';
-        break;
-      case 3:
-        newstring += 'i';
-        break;
-      case 4:
-          newstring += 'o';
-        break;
-      case 5:
-        newstring += 'u';
-      break;
-      default:
-        newstring += string[index];
-        break;
-    }
-  }
-  return newString;
+    if (array[index] === '1') {
+      newString += 'a';
+    } else if (array[index] === '2') {
+      newString += 'e';
+    }else if (array[index] === '3') {
+      newString += 'i';
+  }else if (array[index] === '4') {
+    newString += 'o';
+  }else if (array[index] === '5') {
+    newString += 'u';
+  } else {
+    newString += array[index];
+  }}
+  return newstring;
 }
 
 module.exports = {
