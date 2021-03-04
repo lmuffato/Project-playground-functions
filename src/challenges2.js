@@ -1,6 +1,5 @@
 // Desafio 10
 function techList(techArray, studantName) {
-  // seu código aqui
   let listOfTechs = [];
   if (techArray.length === 0) {
     listOfTechs = 'Vazio!';
@@ -17,7 +16,6 @@ function techList(techArray, studantName) {
 }
 
 // Esta função retorna o número vezes aparece que um número repete em um array de números.
-
 function manyRepete(arrayNumbers, numberAvalided) {
   let countRepete = 0;
   for (let index2 = 0; index2 < arrayNumbers.length; index2 += 1) {
@@ -29,7 +27,6 @@ function manyRepete(arrayNumbers, numberAvalided) {
 }
 
 // Esta função retorna o número vezes aparece o número que mais se repete no arrayNumber
-
 function howManyRepetions(arrayNumbers) {
   let count = 0;
   let maxRepetions = 0;
@@ -43,7 +40,6 @@ function howManyRepetions(arrayNumbers) {
 }
 
 // Esta função realiza os testes se o número é válido e retorna true se for e false se não for
-
 function testValid(phoneNumberArray) {
   let isValid = true;
   const testedArray = phoneNumberArray;
@@ -59,6 +55,7 @@ function testValid(phoneNumberArray) {
   return isValid;
 }
 
+// Esta função recebe um array com 11 números e retorna uma string com os números no formato (12) 34567-89AB
 function mountPhoneNumber(phoneNumberArray) {
   let mensage = '(';
   for (let index = 0; index < phoneNumberArray.length; index += 1) {
@@ -75,7 +72,6 @@ function mountPhoneNumber(phoneNumberArray) {
 
 // Desafio 11
 function generatePhoneNumber(phoneNumberArray) {
-  // seu código aqui
   let mensage = '';
   if (phoneNumberArray.length !== 11) {
     mensage = 'Array com tamanho incorreto.';
@@ -87,17 +83,13 @@ function generatePhoneNumber(phoneNumberArray) {
   return mensage;
 }
 
-console.log(generatePhoneNumber([3, 0, 4, 8, 9, 4, 7, 2, 1, 2, 0]));
-
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  // seu código aqui
   return (lineA + lineB) > lineC && Math.abs(lineA - lineB) < lineC;
 }
 
 // Desafio 13
 function hydrate(drinks) {
-  // seu código aqui
   let count = 0;
   let mensage = '';
   for (let index = 0; index < drinks.length; index += 1) {

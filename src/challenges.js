@@ -1,18 +1,15 @@
 // Desafio 1
 function compareTrue(test1, test2) {
   return test1 && test2;
-  // seu código aqui
 }
 
 // Desafio 2
 function calcArea(base, heigt) {
-  // seu código aqui
   return (base * heigt) / 2;
 }
 
 // Desafio 3
 function splitSentence(sentence) {
-  // seu código aqui
   let word = '';
   let sentenceSplited = [];
   for (let index in sentence) {
@@ -30,19 +27,16 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(originArray) {
-  // seu código aqui
   return `${originArray[originArray.length - 1]}, ${originArray[0]}`;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  // seu código aqui
   return wins * 3 + ties;
 }
 
 // Desafio 6
 function highestCount(numbersArray) {
-  // seu código aqui
   let count = 0;
   let testNumber = numbersArray[0];
   for (let index in numbersArray) {
@@ -58,7 +52,6 @@ function highestCount(numbersArray) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  // seu código aqui
   let cat1Distance = Math.abs(mouse - cat1);
   let cat2Distance = Math.abs(mouse - cat2);
   let result;
@@ -73,7 +66,6 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // a função avalia se o número é divisivel por 3, 5, 3 e 5, nem 3 nem 5; retornando respectivamente: 'fizz', 'buzz', 'fizzBuzz' e 'bug!'
-
 function caseFizzBuzz(numberAvalided) {
   let result = '';
   if (numberAvalided % 3 === 0) {
@@ -91,24 +83,22 @@ function caseFizzBuzz(numberAvalided) {
 
 // Desafio 8
 function fizzBuzz(numbersArray) {
-  // seu código aqui
   let word = '';
   let mensage = [];
   for (let index = 0; index < numbersArray.length; index += 1) {
     word = caseFizzBuzz(numbersArray[index]);
-  }
-  mensage.push(word);
+    mensage.push(word);
+  } 
   return mensage;
 }
 
-// Função verifica se caractere é uma vogal e retorna true se for e false se não for. 
+// Função verifica se caractere é uma vogal e retorna true se for e false se não for.
 function isVogal(char) {
   return (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u');
 }
 
 // Desafio 9
 function encode(decriptMensage) {
-  // seu código aqui
   let mensageEncripted = '';
   let codeDic = {
     a: '1',
@@ -133,7 +123,6 @@ function isNumber1to5(char) {
 }
 
 function decode(encriptMensage) {
-  // seu código aqui
   let mensageDecripted = '';
   let decodeDic = {
     1: 'a',
