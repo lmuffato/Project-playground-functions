@@ -43,19 +43,18 @@ function checkRange(array) {
   return result;
 }
 
-// função auxiliar exercicio 11 visto no w3school o slice 
+// função auxiliar exercicio 11 visto no w3school o slice
 function createPhone(array) {
-  let num1, num2, num3;
   let str1 = '(';
   let str2 = ') ';
   let str3 = '-';
   let part1 = array.slice(0, 2);
   let part2 = array.slice(2, 7);
   let part3 = array.slice(7, 11);
-  num1 = part1.join('');
-  num2 = part2.join('');
-  num3 = part3.join('');
-  return str1.concat(num1, str2, num2, str3, num3)
+  let num1 = part1.join('');
+  let num2 = part2.join('');
+  let num3 = part3.join('');
+  return str1.concat(num1, str2, num2, str3, num3);
 }
 
 // Desafio 11
