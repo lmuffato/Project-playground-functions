@@ -108,8 +108,9 @@ function encode(string) {
 }
 
 function decode(string) {
+  let decodingString = "";
   for (let index = 0; index < string.length; index += 1){
-    let decodingString = string[index]
+    decodingString = string[index]
       switch (string[index]) {
         
         case string[index] === '1':
@@ -135,7 +136,7 @@ function decode(string) {
         default:
         decodingString.push(string[index])
       }
-      return codingString
+      return decodingString
     }
 
 }
