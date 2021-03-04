@@ -5,16 +5,16 @@ function techList(name, techNames) {
   let techNameslist = {};
   let technologies = [];
   if (techNames.length === 0) {
-    console.log('Vazio!');
+    return 'Vazio!';
   }
   else {
     for (let tech in techNames) {
       techNameslist.name = name;
       techNameslist.tech = (techNames[tech]);
       technologies.push(techNameslist);
-    } return technologies;
-  }
-} techList('Alexandre', ['React', 'Jest', 'HTML', 'CSS', 'JavaScript']);
+    } 
+  }return technologies;
+} techList('Alexandre',['React', 'Jest', 'HTML', 'CSS', 'JavaScript']);
 
 
 // Desafio 11
