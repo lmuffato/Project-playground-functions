@@ -22,29 +22,11 @@ function techList(nomeTech, name) {
 function generatePhoneNumber(listNumber) {
   let listPhone = [];
   let delimitador = 0;
-  let numberZero = false;
-  let bigNumber = false;
-  let repetTree = false;
-  let contRepete = 0;
 
-  for (let index = 0; index < listNumber.length; index += 1) {
-
-  }
-
-  for (let index = 0; index < listNumber.length; index += 1) {
-    if (listNumber[index] === 0) {
-      numberZero = true;
-    } else if (listNumber[index] > 9) {
-      bigNumber = true;
-    } else if (listNumber[]) {
-
-    }
-  }
-
-  if (listNumber.length > 11) {
-    return "Array com tamanho incorreto."
-  } else if (numberZero === true || bigNumber === true || repetTree === true) {
-    return "não é possível gerar um número de telefone com esses valores"
+  if (testListPhone(listNumber) === true) {
+    return "não é possível gerar um número de telefone com esses valores";
+  } else if (listNumber.length > 11) {
+    return "Array com tamanho incorreto.";
   } else {
     for (let index = 0; index < listNumber.length + 4; index += 1) {
       if(index === 0) {
@@ -65,11 +47,42 @@ function generatePhoneNumber(listNumber) {
     }
   }
 
-  let phone = listPhone.join('');
-  return phone;
+  return listPhone.join('');
+}
+function testListPhone(listNumber) {
+  let numberZero = false;
+  let bigNumber = false;
+  let repetTree = false;
+  let contRepete = 0;
+  let numberRepet = 0;
+
+  for (let index = 0; index < listNumber.length; index += 1) {
+    if (listNumber[index] < 0) {
+      numberZero = true;
+    } else if (listNumber[index] > 9) {
+      bigNumber = true;
+    }
+    for (let indexTwo = 0; indexTwo < listNumber.length; indexTwo += 1) {
+      if (listNumber[index] === listNumber[indexTwo]) {
+        contRepete += 1;
+      }
+    }
+    if (contRepete > repetTree) {
+      numberRepet = contRepete;
+    }
+    contRepete = 0;
+  }
+  if (numberRepet >= 3) {
+    repetTree = true;
+  }
+  if (numberZero === true || bigNumber === true || repetTree === true) {
+    return true
+  } else {
+    return false
+  }
 }
 
-console.log(generatePhoneNumber())
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
