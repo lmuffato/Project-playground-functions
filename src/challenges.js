@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 1
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
@@ -27,7 +28,6 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-// eslint-disable-next-line sonarjs/cognitive-complexity
 function highestCount(array) {
   let larger = 0;
   let result = 0;
@@ -45,13 +45,31 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if ((cat2 - mouse) === 2 && (cat1 - mouse) === 3) {
+    return 'cat2';
+  } else if ((cat1 - mouse) === 6 && (cat2 - mouse) === 12) {
+    return 'cat1';
+  } else (cat1 === cat2) {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumbers) {
+  let result = [];
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
+        result.push("fizzBuzz");
+    } else if (arrayNumbers[index] % 3 === 0) {
+        result.push("fizz");
+    } else if (arrayNumbers[index] % 5 === 0) {
+        result.push("buzz");
+    } else {
+        result.push("bug!");
+    }
+  }
+  return result;
 }
 
 // Desafio 9
