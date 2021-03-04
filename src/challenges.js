@@ -29,7 +29,15 @@ function footballPoints(wins,ties) {
 
 // Desafio 6
 function highestCount(arrayNumber) {
+  let maxNumber = 0;
+  for(let index = 0;index < arrayNumber.length;index +=1){
+    if (arrayNumber[index] > maxNumber ){ 
+      maxNumber = arrayNumber[index]
+    }
+    return maxNumber;
+  }
 }
+console.log(highestCount(2,8,9,7,9,1))
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
@@ -46,9 +54,18 @@ function catAndMouse(mouse,cat1,cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumber) {
+ if (arrayNumber % 3 === 0) {
+   return "fizz"
+ } else if (arrayNumber % 5 === 0){
+   return "buzz"
+ }else if (arrayNumber % 3 === 0 && arrayNumber % 5 === 0){
+   return "fizzbuzz"
+ } else {
+   return "bug!"
+ }
 }
+
 
 // Desafio 9
 function encode() {
