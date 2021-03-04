@@ -26,49 +26,10 @@ function techList(arrayList, name) {
 }
 
 // Função auxiliar
-function highestValue(arrayNumbers) {
-  let larger;
-  let largerValueIndex;
-
-  for (let index = 0; index < arrayNumbers.length; index += 1) {
-    if (index === 0 || arrayNumbers[index] > larger) {
-      larger = arrayNumbers[index];
-      largerValueIndex = index;
-    }
-  }
-
-  return largerValueIndex;
-}
-
-function compareFull(index, compareIndex, arr, arrCompare) {
-  if ((index !== compareIndex) && (arr === arrCompare)) {
-    return 1;
-  }
-  return 0;
-}
-
-function moreIsRepeated(arrayNumbers) {
-  let numbers = [...arrayNumbers];
-
-  for (let index = 0; index < arrayNumbers.length; index += 1) {
-    for (let compareIndex = 0; compareIndex < arrayNumbers.length; compareIndex += 1) {
-      numbers[index] += compareFull(
-        index,
-        compareIndex,
-        arrayNumbers[index],
-        arrayNumbers[compareIndex],
-      );
-    }
-  }
-
-  let index = highestValue(numbers);
-
-  return arrayNumbers[index];
-}
-
 function validation(arr) {
   let err = 'não é possível gerar um número de telefone com esses valores';
   let countRepeated = 0;
+  let count = 0;
 
   if (arr.length !== 11) {
     return 'Array com tamanho incorreto.';
@@ -81,18 +42,28 @@ function validation(arr) {
   }
 
   for (let index = 0; index < arr.length; index += 1) {
-    if (arr[index] === moreIsRepeated(arr)) {
-      countRepeated += 1;
+    count = 0;
+    for (let newIndex = 0; newIndex < arr.length; newIndex += 1) {
+      if (arr[index] === arr[newIndex]) {
+        count += 1;
+        if (count >= 3) {
+          return 'não é possível gerar um número de telefone com esses valores';
+        }
+      }
     }
   }
+
+  console.log(count);
+
+  if(count >= 3){
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+
 }
 
 // Desafio 11
 function generatePhoneNumber(arrayNumbers) {
   let formatedPhoneNumber = '';
-  const err = 'não é possível gerar um número de telefone com esses valores';
-
-  validation(arrayNumbers);
 
   formatedPhoneNumber = formatedPhoneNumber.concat('(');
   for (let index = 0; index < 2; index += 1) {
@@ -111,7 +82,11 @@ function generatePhoneNumber(arrayNumbers) {
     formatedPhoneNumber = formatedPhoneNumber.concat(arrayNumbers[index]);
   }
 
-  return formatedPhoneNumber;
+  if(!validation(arrayNumbers)){
+    return formatedPhoneNumber;
+  }
+
+  return validation(arrayNumbers);
 }
 
 // Desafio 12
