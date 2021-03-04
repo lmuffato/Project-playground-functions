@@ -55,11 +55,11 @@ function highestCount(arrayDeNumeros) {
   let repeticoes = 0 
 
   for (let i = 0; i < arrayDeNumeros.length; i++) {
-     if ( arrayDeNumeros[i] > maior ) {
+     if ( [arrayDeNumeros] > maior ) {
         maior = arrayDeNumeros[i];
      }
   }
-  for (let i = 0; i < arrayDeNumeros.length; i ++) {
+  for (let i = 0; i < arrayDeNumeros.length; i += 1) {
     if (arrayDeNumeros[i] === maior)
     repeticoes = repeticoes + 1;
    } 

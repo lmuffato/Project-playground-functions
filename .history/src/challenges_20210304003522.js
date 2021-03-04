@@ -52,18 +52,16 @@ console.log(footballPoints(12,3))
 // Desafio 6
 function highestCount(arrayDeNumeros) {
   let maior = 0;
-  let repeticoes = 0 
-
   for (let i = 0; i < arrayDeNumeros.length; i++) {
-     if ( arrayDeNumeros[i] > maior ) {
+     if ( [arrayDeNumeros] > maior ) {
         maior = arrayDeNumeros[i];
      }
   }
-  for (let i = 0; i < arrayDeNumeros.length; i ++) {
-    if (arrayDeNumeros[i] === maior)
-    repeticoes = repeticoes + 1;
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
+    if (arrayNumbers[i] === numeroMaior)
+    vezesAparece = vezesAparece + 1;
    } 
-  return repeticoes;
+  return vezesAparece;
  }
 console.log(highestCount([3, 7, 0, 7, 7, 5]))
 
