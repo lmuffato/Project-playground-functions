@@ -26,8 +26,8 @@ function splitSentence(phrase) {
 }
 // Desafio 4
 function concatName(name) {
-  let sign = name[name.length - 1]+', ' + name[0];
-  return sign;
+  let signature = name[name.length - 1]+', ' + name[0];
+  return signature;
 }
 
 // Desafio 5
