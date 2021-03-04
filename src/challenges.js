@@ -90,35 +90,35 @@ function fizzBuzz(arrayN8) {
 // Desafio 9
 function encript(code) {
   switch (code) {
-    case "a":
-      return "1";
-    case "e":
-      return "2";
-    case "i":
-      return "3";
-    case "o":
-      return "4";
-    case "u":
-      return "5";
-    default:
-      return code;
+  case 'a':
+    return '1';
+  case 'e':
+    return '2';
+  case 'i':
+    return '3';
+  case 'o':
+    return '4';
+  case 'u':
+    return '5';
+  default:
+    return code;
   }
 }
 
 function decript(code) {
   switch (code) {
-    case "1":
-      return "a";
-    case "2":
-      return "e";
-    case "3":
-      return "i";
-    case "4":
-      return "o";
-    case "5":
-      return "u";
-    default:
-      return code;
+  case '1':
+    return 'a';
+  case '2':
+    return 'e';
+  case '3':
+    return 'i';
+  case '4':
+    return 'o';
+  case '5':
+    return 'u';
+  default:
+    return code;
   }
 }
 
@@ -127,12 +127,12 @@ function encode(stringIn) {
   for (let index = 0; index < stringIn.length; index += 1) {
     encodedString[index] = encript(stringIn[index]);
   }
-  return encodedString.join('')
+  return encodedString.join('');
 }
 
 function decode(stringOut) {
   let decodedString = stringOut.split('');
-  for (let index in decodedString) {
+  for (let index = 0; index < stringOut.length; index += 1) {
     decodedString[index] = decript(stringOut[index]);
   }
   return decodedString.join('');
