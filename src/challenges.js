@@ -66,11 +66,21 @@ function fizzBuzz(numbers) {
   return newArray;
 }
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let letterA = phrase.replace(/a/g, '1');
+  let letterE = letterA.replace(/e/g, '2');
+  let letterI = letterE.replace(/i/g, '3');
+  let letterO = letterI.replace(/o/g, '4');
+  let letterU = letterO.replace(/u/g, '5');
+  return letterU;
 }
-function decode() {
-  // seu código aqui
+function decode(phrase) {
+  let letterA = phrase.replace(/1/g, 'a');
+  let letterE = letterA.replace(/2/g, 'e');
+  let letterI = letterE.replace(/3/g, 'i');
+  let letterO = letterI.replace(/4/g, 'o');
+  let letterU = letterO.replace(/5/g, 'u');
+  return letterU;
 }
 
 module.exports = {
