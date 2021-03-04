@@ -36,18 +36,9 @@ function concatName(array) {
 // Desafio 5
 function footballPoints(wins, ties) {
  let vitorias = wins * 3;
- let empates = ties * 1;
- let result = vitorias + empates
-
- if (wins === true) {
-   wins = vitorias
- }
- if (ties === true) {
-   ties = empates;
- }
- return result
+ 
 }
-console.log(footballPoints(12,3))
+console.log(footballPoints(wins,ties))
 
 // Desafio 6
 function highestCount() {

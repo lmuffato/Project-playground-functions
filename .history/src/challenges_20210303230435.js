@@ -39,15 +39,11 @@ function footballPoints(wins, ties) {
  let empates = ties * 1;
  let result = vitorias + empates
 
- if (wins === true) {
-   wins = vitorias
+ if (wins == true) {
+   wins
  }
- if (ties === true) {
-   ties = empates;
- }
- return result
 }
-console.log(footballPoints(12,3))
+console.log(footballPoints(wins,ties))
 
 // Desafio 6
 function highestCount() {

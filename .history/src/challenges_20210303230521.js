@@ -43,11 +43,10 @@ function footballPoints(wins, ties) {
    wins = vitorias
  }
  if (ties === true) {
-   ties = empates;
+   ties = 
  }
- return result
 }
-console.log(footballPoints(12,3))
+console.log(footballPoints(wins,ties))
 
 // Desafio 6
 function highestCount() {
