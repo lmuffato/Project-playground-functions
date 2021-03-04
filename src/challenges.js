@@ -66,17 +66,29 @@ function catAndMouse(mouse, cat1, cat2) {
     catchMouse = 'cat1';
   } else if (distanceCat2Abs < distanceCat1Abs) {
     catchMouse = 'cat2';
-  } else{
+  } else {
     catchMouse = 'os gatos trombam e o rato foge';
   }
   return catchMouse;
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayFizz) {
+  let fizzBuzz = [];
+  for (let index = 0; index < arrayFizz.length; index += 1) {
+    if (arrayFizz[index] % 3 === 0 && arrayFizz[index] % 5 === 0) {
+    fizzBuzz.push('fizzBuzz');
+    } else if (arrayFizz[index] % 3 === 0) {
+      fizzBuzz.push('fizz');
+    } else if (arrayFizz[index] % 5 === 0) {
+      fizzBuzz.push('buzz');
+    } else {
+      fizzBuzz.push('bug!');
+    }
+  }
+  return fizzBuzz;  
 }
-
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
 function encode() {
   // seu código aqui
