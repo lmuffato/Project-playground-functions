@@ -104,8 +104,18 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
+// Links utilizado para estudo na realização deste desafio:
+// https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
 function hydrate(string) {
-  // seu código aqui
+  const countDrinksArray = string.match(/\d+/g);
+  let waterCup = 0;
+  for (let drinks = 0; drinks < countDrinksArray.length; drinks += 1) {
+    let currentDrink = Number(countDrinksArray[drinks]);
+    waterCup += currentDrink;
+  } if (waterCup === 1) {
+    return `${waterCup} copo de água`;
+  }
+  return `${waterCup} copos de água`;
 }
 
 module.exports = {
