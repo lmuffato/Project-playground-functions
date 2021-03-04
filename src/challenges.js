@@ -24,21 +24,11 @@ function footballPoints(win, ties) {
 }
 
 // Desafio 6
-
-function highestNumber(numbers) {
-  let greatestNumber = numbers[0];
+function highestCount(numbers) {
+  let highestNumber = Math.max(...[numbers])
+  let repetitionCounter = 0
   for (let index=0; index<numbers.length; index+=1) {
-    if(numbers[index] > greatestNumber) {
-      greatestNumber = numbers[index]
-    }
-  }
-  return greatestNumber;
-}
-
-function highestCount(numbers, greatestNumber) {
-  let repetitionCounter=0;
-  for (let index=0; index<numbers.length; index+=1) {
-    if (numbers[index] === greatestNumber) {
+    if (numbers[index] === highestNumber) {
     repetitionCounter += 1;
     }
   }
