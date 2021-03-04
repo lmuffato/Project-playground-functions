@@ -120,7 +120,7 @@ function encode(word) {
 }
 function decode(word) {
   let changeWord = [];
-  let encondeWord = '';
+  let decondeWord = '';
   for (let i = 0; i < word.length; i += 1) {
     changeWord.push(word[i]);
   }
@@ -138,9 +138,9 @@ function decode(word) {
     }
   }
   for (let i = 0; i < changeWord.length; i += 1) {
-    encondeWord += changeWord[i];
+    decondeWord += changeWord[i];
   }
-  return encondeWord;
+  return decondeWord;
 }
 
 // Desafio 10
