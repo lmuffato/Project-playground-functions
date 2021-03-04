@@ -63,22 +63,14 @@ function theExcludentConditions(arrayOfNumbers) {
   }
 }
 
-// 4 - Transformar em string.
+// 4 - Transformar em string e Formato do número
 
-function convertArrayToString(arrayOfNumbers, firstIndex, secondIndex) {
-  let result = ' ';
-  for (let index = firstIndex; index <= secondIndex; index += 1) {
-    result += arrayOfNumbers[index].toString();
-  }
-  return result;
-}
-
-// 5 - Formato do número
 function phoneNumberFormat(phoneNumber) {
-  let message = `(${convertArrayToString(phoneNumber, 0, 1)})`;
-  message += `${convertArrayToString(phoneNumber, 2, 6)}`;
-  message += `-${convertArrayToString(phoneNumber, 7, 10)}`;
-  return message;
+  let messageOne = `(${phoneNumber[0]}${phoneNumber[1]})`;
+  let messageTwo = `${phoneNumber[2]}${phoneNumber[3]}${phoneNumber[4]}`;
+  let messageThree = `${phoneNumber[5]}${phoneNumber[6]}`;
+  let messageFour = `-${phoneNumber[7]}${phoneNumber[8]}${phoneNumber[9]}${phoneNumber[10]}`;
+  return messageOne + messageTwo + messageThree + messageFour;
 }
 
 function generatePhoneNumber(phoneNumber) {
@@ -93,9 +85,6 @@ function generatePhoneNumber(phoneNumber) {
   }
   return phoneNumberFormat(phoneNumber);
 }
-
-let myPhoneNumber = [1, 2, 3, 4, 5, 6, 9, 8, 9, 0, 1];
-console.log(generatePhoneNumber(myPhoneNumber));
 
 // Referências utilizadas para resolução do Desafio 11 (sobre laço for...of, toString, repetição de números):
 // https://woliveiras.com.br/posts/laços-de-repetição-for-for-in-for-of/
