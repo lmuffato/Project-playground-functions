@@ -5,9 +5,34 @@ function techList() {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+  if (numbers.length < 11 || numbers.length > 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] > 9 || numbers[index] < 0) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  let numbersSort = numbers.sort();
+  let count = 1;
+  for (let index = 0; index < (numbersSort.length - 1); index += 1) {
+    if (numbersSort[index] === numbersSort[(index + 1)]) {
+      count += 1;
+      if (count === 3) {
+        return 'não é possível gerar um número de telefone com esses valores';
+      }
+    } else {
+      count = 1;
+    }
+  }
+  let prefix = (numbers.slice(0, 2));
+  let prefixToString = prefix.map(String);
+  let finalPrefix = prefixToString.join('');
 
+  let phoneNumber1 = (numbers.slice(3, 6));
+  let phoneToString1 = phoneNumber1.map(String);
+  let phone1 = phoneToString1.join ('');
 }
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
