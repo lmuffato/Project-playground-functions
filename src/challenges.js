@@ -133,7 +133,7 @@ function replaceDec(char) {
     }
   }
   return char;
-}}
+}
 
 // Desafio 9
 function encode(string) {
