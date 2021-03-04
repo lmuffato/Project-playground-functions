@@ -11,7 +11,11 @@ function techList(nomeTech, name) {
     myObject = {};
   }
 
-  return myObjectList;
+  if (myObjectList.length > 0) {
+    return myObjectList;
+  } else {
+    return 'Vazio!'
+  }
 }
 
 // Desafio 11
@@ -47,9 +51,23 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(myDrink) {
+  let arrayDrink = myDrink.split(' ');
+  let contCopy = 0;
+  let myCopyH20 = '';
+
+  for (let index = 0; index < arrayDrink.length; index += 1) {
+
+  }
+
+  if (contCopy > 0) {
+    myCopyH20 += contCopy + ' copo de água'
+  }
+
+  return myCopyH20;
 }
+
+hydrate('1 cerveja, 2 refrigerante')
 
 module.exports = {
   generatePhoneNumber,
@@ -57,8 +75,3 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
-
-// let object1 = ['Css', 'Adelino junior', 'HTML']
-// let object2 = []
-// object2.push(object1[1- 1])
-// console.log(object2)0
