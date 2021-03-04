@@ -17,7 +17,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(strArray) {
-  return strArray[0], strArray[(strArray.lenght) - 1]
+  return [strArray[strArray.length - 1], strArray[0]]
 }
 
 // Desafio 5
@@ -79,7 +79,7 @@ console.log(calcArea(51, 1))
 
 console.log(splitSentence('vamo que vamo'))
 
-console.log(concatName('Lucas', 'Cassiano', 'Ferraz', 'Paolillo'))
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 console.log(footballPoints(14, 8))
 
