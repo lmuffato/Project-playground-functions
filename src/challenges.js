@@ -57,9 +57,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat2Position = cat2 - mouse;
 
   if (cat1Position < 0) {
-    cat1Position *= -1;
+    Math.abs(cat1Position);
   } if (cat2Position < 0) {
-    cat2Position *= -1;
+    Math.abs(cat2Position);
   }
 
   if (cat1Position > cat2Position) {
@@ -70,6 +70,8 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return 'cat1';
 }
+
+// Consulta ao repositório do João Nasc: https://github.com/tryber/sd-010-a-project-playground-functions/pull/132/commits/e391 //
 
 // Desafio 8
 function fizzBuzz() {
