@@ -19,10 +19,11 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+// Utilizei a dica do Rafael Medeiros de utilizar o .split no string.
+function splitSentence(phrase) {
+	let splitPhrase = phrase.split(' ');
+	return splitPhrase 
 }
-
 // Desafio 4
 function concatName() {
   // seu código aqui
