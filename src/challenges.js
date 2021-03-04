@@ -73,14 +73,45 @@ function fizzBuzz(fizzBuzzNumbers) {
     }
   } return fizzBuzzString;
 } fizzBuzz([9, 25]);
-
 // Desafio 9
-function encode() {
+function encode(lettersEncode) {
   // seu código aqui
-}
-function decode() {
+  let encodeLetters = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  let stringLettersEncode = lettersEncode.split('');
+  let finalLettersEncode = [];
+  for (let letter in stringLettersEncode) {
+    if (encodeLetters[stringLettersEncode[letter]]) {
+      finalLettersEncode.push(encodeLetters[stringLettersEncode[letter]]);
+    } else {
+      finalLettersEncode.push(stringLettersEncode[letter]);
+    }
+  } return finalLettersEncode.join('');
+} encode('hi there!');
+function decode(lettersDecode) {
   // seu código aqui
-}
+  let decodeLetters = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  let stringLettersDecode = lettersDecode.split('');
+  let finalLettersDecode = [];
+  for (let letter in stringLettersDecode) {
+    if (decodeLetters[stringLettersDecode[letter]]) {
+      finalLettersDecode.push(decodeLetters[stringLettersDecode[letter]]);
+    } else {
+      finalLettersDecode.push(stringLettersDecode[letter]);
+    }
+  } return finalLettersDecode.join('');
+} decode('h3 th2r2!');
 module.exports = {
   calcArea,
   catAndMouse,
