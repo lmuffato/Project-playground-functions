@@ -151,15 +151,15 @@ function decode(string2) {
   let newphrases2 = string2.split('');
 
   for (let index = 0; index < string2.length; index += 1) {
-    if (string2[index] === 1) {
+    if (string2[index] == 1) {
       newphrases2[index] = 'a';
-    } else if (string2[index] === 2) {
+    } else if (string2[index] == 2) {
       newphrases2[index] = 'e';
-    } else if (string2[index] === 3) {
+    } else if (string2[index] == 3) {
       newphrases2[index] = 'i';
-    } else if (string2[index] === 4) {
+    } else if (string2[index] == 4) {
       newphrases2[index] = 'o';
-    } else if (string2[index] === 5) {
+    } else if (string2[index] == 5) {
       newphrases2[index] = 'u';
     } else {
       newphrases2[index] = string2[index];
