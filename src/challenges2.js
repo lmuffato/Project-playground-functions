@@ -9,6 +9,10 @@ function techList(array, name) {
   return objectArray;
 }
 
+let array = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+let name = "Rodrigo";
+console.log(techList(array,name));
+
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui

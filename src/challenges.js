@@ -95,13 +95,13 @@ function fizzBuzz(array) {
   let resultArray = [];
   for (let index = 0; index < array.length; index += 1) {
     if (divisibleBy3(array[index]) && divisibleBy5(array[index])) {
-      resultArray.push("fizzBuzz");
+      resultArray.push('fizzBuzz');
     } else if (divisibleBy3(array[index])) {
-      resultArray.push("fizz");
+      resultArray.push('fizz');
     } else if (divisibleBy5(array[index])) {
-      resultArray.push("buzz");
+      resultArray.push('buzz');
     } else {
-      resultArray.push("bug!");
+      resultArray.push('bug!');
     }
   }
   return resultArray;
@@ -111,50 +111,46 @@ console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode(string) {
-  let newString ='';
+  let newString = '';
   let array = string.split('');
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] === 'a') {
       newString += '1';
     } else if (array[index] === 'e') {
       newString += '2';
-    }else if (array[index] === 'i') {
+    } else if (array[index] === 'i') {
       newString += '3';
-  }else if (array[index] === 'o') {
+    } else if (array[index] === 'o') {
     newString += '4';
-  }else if (array[index] === 'u') {
+    } else if (array[index] === 'u') {
     newString += '5';
-  } else {
+    } else {
     newString += array[index];
+    }
   }
-}
   return newString;
 }
 
-console.log(encode("hi there!"));
-
 function decode(string) {
-  let newString ='';
+  let newString = '';
   let array = string.split('');
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] === '1') {
       newString += 'a';
     } else if (array[index] === '2') {
       newString += 'e';
-    }else if (array[index] === '3') {
+    } else if (array[index] === '3') {
       newString += 'i';
-  }else if (array[index] === '4') {
+    } else if (array[index] === '4') {
     newString += 'o';
-  }else if (array[index] === '5') {
+    } else if (array[index] === '5') {
     newString += 'u';
-  } else {
+    } else {
     newString += array[index];
-  }}
+    }
+  }
   return newString;
 }
-
-console.log(decode("h3 th2r2!"));
-
 
 module.exports = {
   calcArea,
