@@ -29,13 +29,40 @@ function concatName(names) {
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  const winsPoints = wins * 3;
+  const tiesPoints = ties;
+  return winsPoints + tiesPoints;
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(number) {
   // seu código aqui
+  let highestNumber = findingHighestNumber(number);
+
+  let highestRepeat = countingHighestNumber(number, highestNumber );
+  
+  function findingHighestNumber(arr) {//Procuro o maior numero dentro do vetor//
+    let maior = arr[0];
+    for (let index = 1; index < arr.length; index += 1) {
+      if (arr[index] > maior) {
+        maior = arr[index];
+      }
+    }
+    return maior;
+  }
+
+  function countingHighestNumber(arr2, maior) {//conta quantas vezes o maior numero repete//
+    let guardaSoma = 0;
+    for (let index in arr2) {
+      if (maior == arr2[index]) {
+        guardaSoma += 1;
+      }
+    }
+    return guardaSoma;
+  }
+  return highestRepeat;
 }
 
 // Desafio 7
