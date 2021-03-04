@@ -27,7 +27,6 @@ function footballPoints(wins, ties) {
   wins = wins*3;
   return wins + ties;
 }
-console.log(footballPoints(3,2));
 
 // Desafio 6
 function highestCount(myArrey) {
@@ -59,8 +58,24 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+
 function fizzBuzz(array) {
+  newArray = [];
+  for (let index = 0; index <array.length; index += 1) {
+      if (array[index] % 5 === 0 && array[index] % 3 === 0) {
+      array[index] = 'fizzBuzz';
+    } else if (array[index] % 5 === 0) {
+      array[index] = 'buzz';
+    } else if (array[index] % 3 === 0) {
+      array[index] = 'fizz';
+    } else {
+      array[index] = 'bug!';
+    } 
+  }
+  return array;
 }
+console.log(fizzBuzz([9, 25]))
+
 
 // Desafio 9
 function encode() {
@@ -81,4 +96,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-}
+}}
