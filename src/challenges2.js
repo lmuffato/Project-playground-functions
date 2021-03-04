@@ -1,23 +1,20 @@
 // Desafio 10
-function techList(techNames, name) {
+function techList(name, techNames) {
   // seu código aqui
-  techNames.sort()
-  let techNameslist = {}
+  techNames.sort();
+  let techNameslist = {};
   let technologies = [];
   if (techNames.length === 0) {
-    console.log('Vazio!')
+    console.log('Vazio!');
   }
   else {
-
     for (let tech in techNames) {
-
-      techNameslist.tech = (techNames[tech])
-      techNameslist.name = name
-      technologies.push(techNameslist)
-
-    } console.log(technologies)
+      techNameslist.name = name;
+      techNameslist.tech = (techNames[tech]);
+      technologies.push(techNameslist);
+    } return technologies;
   }
-} techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Alexandre')
+} techList('Alexandre', ['React', 'Jest', 'HTML', 'CSS', 'JavaScript']);
 
 
 // Desafio 11
