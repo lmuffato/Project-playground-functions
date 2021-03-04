@@ -6,22 +6,23 @@ function techList(array, name) {
   if (array.length === 0) {
     return 'Vazio!';
   }
-  for (let index = 0; index < array.length; index += 1) {
+  let arraySorted = array.sort();
+  for (let index = 0; index < arraySorted.length; index += 1) {
     objectArray.push({
       tech: array[index],
       name });
   }
-  let reorderObjectArray = objectArray.sort(function (a, b) {
+  return objectArray;
+}
+/*let reorderObjectArray = objectArray.sort(function (a, b) {
     if (a.tech > b.tech) {
       return 1;
     }
     if (a.tech < b.tech) {
       return -1;
     } return 0;
-  });
-  return reorderObjectArray;
-}
-let array = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+  });*/
+let array = [];
 let name = "Lucas";
 
 console.log(techList(array, name));
