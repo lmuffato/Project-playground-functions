@@ -1,4 +1,4 @@
-z// Desafio 1
+// Desafio 1
 function compareTrue(number1, number2) {
   // seu código aqui
   return number1 && number2;
@@ -13,15 +13,17 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
-  let i, j = 0, array = [string[0]];
+  let i;
+  let j = 0;
+  let array = [string[0]];
 
-  for (i = 1; i < string.length; i++){
+  for (i = 1; i < string.length; i += 1){
     if (string[i] != ' '){
-      array[j] = array[j] + string[i];
+      array[j] += string[i];
     }
     else {
-      j++;
-      i++;
+      j += 1;
+      i += 1;
       array[j] = string[i];
     }
   }
