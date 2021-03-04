@@ -55,15 +55,29 @@ function highestCount(numbers) {
 }
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
-// Desafio 7
+// Desafio 7 (fazer)
 function catAndMouse() {
-  // seu código aqui
+
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let modulo = [];
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] % 3 && numbers[index] % 5) {
+      modulo.push('bug!');
+    } else if (numbers[index] % 3) {
+      modulo.push('buzz');
+    } else if (numbers[index] % 5) {
+      modulo.push('fizz');
+    } else {
+      modulo.push('fizzBuzz!');
+    }
+  }
+  return modulo;
 }
+console.log(fizzBuzz([7, 9]));
+console.log('bug!', 'fizzBuzz', 'bug!', 'fizz', 'fizzBuzz'
 
 // Desafio 9
 function encode() {
