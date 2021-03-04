@@ -100,7 +100,7 @@ function encode(string) {
         break;
 
         default:
-          codingString.concat(string[index])
+          codingString.replace(string[index])
       }
       return codingString
     }
