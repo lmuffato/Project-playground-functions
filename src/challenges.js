@@ -37,11 +37,9 @@ function highestCount(numberArray) {
   for (let index = 1; index === Math.max.apply(...numberArray); index += 1) {
     return index === highestNumber;
   }
-  for (let index = 0; index < numberArray.length; index += 1) {
-    if (index <= index[highestNumber]) {
-      numCounter += 1;
-    } else {
-      index = numCounter;
+  for (let i = 0; i < numberArray.length; i += 1) {
+    if (i === numberArray[highestNumber]) {
+      numberArray[numCounter] = i;
     }
   }
   return highestCount[numCounter];
