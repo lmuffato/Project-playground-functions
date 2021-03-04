@@ -99,6 +99,7 @@ function encode(stringParameter) {
   }
   return codedArray.join('');
 }
+
 function decode(codedParameter) {
   let decodedArray = [];
   for (let index = 0; index < codedParameter.lenght; index += 1) {
