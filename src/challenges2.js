@@ -42,32 +42,44 @@ function numberCheckCorrect(numberArray) {
   for (let index = 0; index < numberArray.length; index += 1) {
     checkNumber[index] = numberArray[index];
     if (checkNumber[index] < 0 || checkNumber[index] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
+      return false;
     }
   }
-  return checkNumber;
+  return true;
 }
 
 function numberRepeater(numberArray) {
   let numberCheckRepeat = 0;
+  let checkNumber = numberArray;
   for (let index = 0; index < numberArray.length; index += 1) {
-    let checkNumber = numberArray[index];
-    for (let checklIndex = 0; checklIndex < checkNumber.length; checklIndex += 1) {
-      let checkedNumber = checkNumber[index];
-      if (checkedNumber === checkNumber) {
+    for (let checklIndex = 0; checklIndex < index; checklIndex += 1) {
+      if (checkNumber[index] === checkNumber[checklIndex]) {
         numberCheckRepeat += 1;
       }
     }
   }
-  return numberCheckRepeat;
+  if (numberCheckRepeat >= 3) {
+    return false;
+  }
+  return true;
+}
+
+function changeForTelephone(n) {
+  let changeNumberA = `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}`;
+  let changeNumberB = `-${n[7]}${n[8]}${n[9]}${n[10]}`;
+  let changeTotal = changeNumberA + changeNumberB;
+  return changeTotal;
 }
 
 function generatePhoneNumber(arrayPhone) {
   let telephoneNumber = getNumberArray(arrayPhone);
-  telephoneNumber = numberCheckCorrect(telephoneNumber);
+  if (numberCheckCorrect(telephoneNumber) === false || numberRepeater(telephoneNumber) === false) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  telephoneNumber = changeForTelephone(telephoneNumber);
   return telephoneNumber;
 }
-console.log(numberRepeater([1, 1, 2, 3, 4, 6]));
+
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
