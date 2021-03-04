@@ -100,7 +100,12 @@ function hydrate(string) {
       let int = Math.abs(array[index]);
       sum += int;
     }
-    result = sum + ' copos de água';
+    if (sum === 1) {
+      result = '1 copo de água';
+    } else if (sum > 1){
+      let num = sum.toString();
+      result = num.concat(' copos de água');
+    }
   }
   return result;
 }
