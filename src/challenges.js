@@ -32,18 +32,16 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numberList) {
-  let numberOfReplays = Number;
-  let numberMemory = numberList[0];
-  for (let index = 1; index < numberList.length; index += 1) {    
-    if ( numberList[index] > numberList[index -1]) {
-      numberMemory = numberList[index];
-    };
-    if (numberMemory === numberList[index]) {
-      numberOfReplays += 1;
+  let maxNumber = Math.max(...numberList);
+  let countNumber = 0;
+  for (let index = 0; index < numberList.length; index += 1) {
+    if(numberList[index] === maxNumber) {
+      countNumber += 1;
     };
   }
-  return numberOfReplays;
+  return countNumber;
 }
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse() {
