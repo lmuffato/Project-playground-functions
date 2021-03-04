@@ -62,7 +62,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbers) {
   let getFizzBuzz = [];
   for (let index in numbers) {
     if (numbers[index] % 3 === 0){
