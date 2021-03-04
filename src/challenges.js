@@ -62,10 +62,10 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat1Difference = Math.max(cat1 - mouse);
   let cat2Difference = Math.max(cat2 - mouse);
 
-  if (cat2Difference < cat1Difference) {
-    winnerCat = 'cat2';
-  } if (cat2Difference > cat1Difference) {
+  if (cat1Difference < cat2Difference) {
     winnerCat = 'cat1';
+  } if (cat2Difference < cat1Difference) {
+    winnerCat = 'cat2';
   } else {
     winnerCat = 'os gatos trombam e o rato foge';
   }
@@ -74,8 +74,32 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function compareNumber(arrayValue) {
+  let text;
+
+  if (arrayValue % 3 === 0 && arrayValue % 5 === 0) {
+    text = 'fizzBuzz';
+  } else if (arrayValue % 3 === 0) {
+    text = 'fizz';
+  } else if (arrayValue % 5 === 0) {
+    text = 'buzz';
+  } else {
+    text = 'bug';
+  }
+
+  return text;
+}
+// // Para esse exercício foi necessária a ajuda (via thread) do colega Gabriel Pereira,
+// da turma 10A, pois o exercicio estava correto mas ainda não estava dividido em duas funções,
+// por isso não estava passando.
+function fizzBuzz(array) {
+  let stringsArray = [];
+
+  for (let index = 0; index < array.length; index += 1) {
+    stringsArray.push(compareNumber(array[index]));
+  }
+
+  return stringsArray;
 }
 
 // Desafio 9
