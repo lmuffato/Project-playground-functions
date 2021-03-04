@@ -56,7 +56,7 @@ function catAndMouse(mouse, cat1, cat2) {
   const cat1Position = cat1 - mouse;
   const cat2Position = cat2 - mouse;
 
-  if (cat2Position < cat1Position) {
+  if (cat1Position > cat2Position) {
     return 'cat2';
   }
   if (cat1Position === cat2Position) {
