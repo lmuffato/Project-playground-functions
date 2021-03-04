@@ -57,10 +57,18 @@ function createPhone(array) {
   return str1.concat(num1, str2, num2, str3, num3);
 }
 
+// auxiliar desafio 11, primeiro if com 3 verificacoes, transformado em funcao para diminuir complexidade
+function checkFIrstIf(array) {
+  result = false;
+  if (array.length === 11 && checkRange(array) === true && repeat3Times(array) === false) {
+    result = true;
+  }
+}
+
 // Desafio 11
 function generatePhoneNumber(array) {
   let result;
-  if (array.length === 11 && checkRange(array) === true && repeat3Times(array) === false) {
+  if (checkFIrstIf === true) {
     result = createPhone(array);
   } else if (array.length !== 11) {
     result = 'Array com tamanho incorreto.';
