@@ -29,7 +29,7 @@ function phoneNumberConditionsVerify(phone) {
   };
   let isNumberInRange = phone.filter((num) => num < 0 || num > 9).length > 0;
 
-  return isNumberValid(phone) && isNumberInRange;
+  return isNumberValid(phone) || isNumberInRange;
 }
 
 function generatePhoneNumber(phone) {
