@@ -66,7 +66,7 @@ function theExcludentConditions(arrayOfNumbers) {
 // 4 - Transformar em string e Formato do número
 
 function phoneNumberFormat(phoneNumber) {
-  let messageOne = `(${phoneNumber[0]}${phoneNumber[1]})`;
+  let messageOne = `(${phoneNumber[0]}${phoneNumber[1]}) `;
   let messageTwo = `${phoneNumber[2]}${phoneNumber[3]}${phoneNumber[4]}`;
   let messageThree = `${phoneNumber[5]}${phoneNumber[6]}`;
   let messageFour = `-${phoneNumber[7]}${phoneNumber[8]}${phoneNumber[9]}${phoneNumber[10]}`;
