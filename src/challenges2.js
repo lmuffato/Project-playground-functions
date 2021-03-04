@@ -4,15 +4,16 @@ function techList(arrayNames, name) {
     return 'Vazio!'
   } 
   
-  let arrayTech = [];
+  let ObjetoTech = []; //criei o bjeto que vai ser retornado
+  let arrayOrdenado = arrayNames.sort() //coloquei em ordem 
 
-  for (let index = 0; index < arrayNames.length; index += 1){
-      arrayTech.push({
-      tech: arrayNames[index],
-      name: name
+  for (let index = 0; index < arrayOrdenado.length; index += 1){ // percorri o array e cada indice adicio no meu objetoTech
+   ObjetoTech.push({
+   tech: arrayNames[index],
+   name: name
     })
-  } 
-  return arrayTech;
+} 
+  return ObjetoTech;
 }
 
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'lucas'));
@@ -46,13 +47,14 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13 
 
 function hydrate(string) {
-  let stringCaracteres = string.split(' ');  //transformando a string em array       
+  let stringCaracteres = string.split('');  //transformando a string em array       
   let agua = 0;
 
   for (let index = 0; index < stringCaracteres.length; index += 1){
     let  converterCaracter = parseInt (stringCaracteres[index]) // A função parseInt() analisa um argumento string e retorna um inteiro
-    if (typeof(converterCaracter) === 'number'){ // O operador typeof retorna uma string indicando o tipo de um operando.
-      agua += agua;
+    //if (typeof(converterCaracter) === 'number'){ // O operador typeof retorna uma string indicando o tipo de um operando.
+    if (converterCaracter == Number){
+      agua += parseInt(stringCaracteres[index]);
     }
   }
 
@@ -65,6 +67,9 @@ function hydrate(string) {
 
 
 console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+
+
+
   
 
 module.exports = {
