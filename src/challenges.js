@@ -91,52 +91,48 @@ function fizzBuzz(array) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function lettersCheck(letters) {
-  if (letters === 'a') {
-    return 1;
-  } if (letters === 'e') {
-    return 2;
-  } if (letters === 'i') {
-    return 3;
-  } if (letters === 'o') {
-    return 4;
-  } if (letters === 'u') {
-    return 5;
-  }
-  return letters;
-}
+// Com adições sugeridas por Wanderson Sales - Turma 10 - Tribo A
+
+let coder = {
+  a: 1,
+  e: 2,
+  i: 3,
+  o: 4,
+  u: 5,
+};
 
 function encode(string) {
-  let code = [];
-  for (let letters = 0; letters < string.length; letters += 1) {
-    code.push(lettersCheck(string[letters]));
+  let code = '';
+  for (let letters in string) {
+    if (coder[string[letters]]) {
+      code = code.concat(coder[string[letters]]);
+    } else {
+      code = code.concat(string[letters]);
+    }
   }
-  return code.join('');
+  return code;
 }
 
 console.log(encode('hi there!'));
 
-function numbersCheck(character) {
-  if (character === '1') {
-    return 'a';
-  } if (character === '2') {
-    return 'e';
-  } if (character === '3') {
-    return 'i';
-  } if (character === '4') {
-    return 'o';
-  } if (character === '5') {
-    return 'u';
-  }
-  return character;
-}
+let decoder = {
+  1: 'a',
+  2: 'e',
+  3: 'i',
+  4: 'o',
+  5: 'u',
+};
 
-function decode(message) {
-  let uncode = [];
-  for (let chareter = 0; chareter < message.length; chareter += 1) {
-    uncode.push(numbersCheck(message[chareter]));
+function decode(string) {
+  let uncode = '';
+  for (let letters in string) {
+    if (decoder[string[letters]]) {
+      uncode = uncode.concat(decoder[string[letters]]);
+    } else {
+      uncode = uncode.concat(string[letters]);
+    }
   }
-  return uncode.join('');
+  return uncode;
 }
 
 console.log(decode('h3 th2r2!'));

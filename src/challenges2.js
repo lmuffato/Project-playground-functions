@@ -1,4 +1,5 @@
 // Desafio 10
+// Com adições sugeridas por Lucas Pedroso - Turma 10 - Tribo A
 function techList(technology, name) {
   if (technology.length === 0) {
     return 'Vazio!';
@@ -17,6 +18,7 @@ console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 // Desafio 11
 // Organiza os números do telefone
+// Com incrementos sugeridos por Lucas Pedroso - Turma 10 - Tribo A
 function cellPhoneOrganizer(phoneNumberArrenge) {
   for (let index = 0; index < phoneNumberArrenge.length; index += 1) {
     if (index === 0) {
@@ -32,17 +34,10 @@ function cellPhoneOrganizer(phoneNumberArrenge) {
 
 // Conta os números repetidos
 function numbersRepeatCounter(repeatedNumbers) {
-  let counter = 0;
-  for (let index in repeatedNumbers) {
-    for (let index2 in repeatedNumbers) {
-      if (repeatedNumbers[index2] === repeatedNumbers[index]) {
-        counter += 1;
-      }
-    }
-    if (counter >= 3) {
+  for (let index = 0; index < repeatedNumbers.length; index += 1) {
+    if (repeatedNumbers.filter((x) => x === repeatedNumbers[index]).length >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-    counter = 0;
   }
   return cellPhoneOrganizer(repeatedNumbers);
 }
@@ -68,7 +63,7 @@ function generatePhoneNumber(phoneNumber) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (Math.abs(lineA < lineB + lineC) && Math.abs(lineB < lineA + lineC)
-  && Math.abs(lineC < lineA + lineB)) {
+    && Math.abs(lineC < lineA + lineB)) {
     return true;
   }
   return false;
