@@ -1,11 +1,12 @@
 // Desafio 10
-function techList(array, studentName) {
+function techList(array, name) {
+  let objectArray = [];
   for (let index = 0; index < array.length; index += 1) {
-    return {
+    objectArray.push({
       tech: array[index],
-      name: studentName,
-    }
+      name });
   }
+  return objectArray;
 }
 
 // Desafio 11
