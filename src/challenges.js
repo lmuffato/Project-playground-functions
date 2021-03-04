@@ -113,35 +113,27 @@ function fizzBuzz(array) {
 
 // auxiliar desafio 9 encode
 function replace(char) {
-  if (char === 'a') {
-    char = '1';
-  } else if (char === 'e') {
-    char = '2';
-  } else if (char === 'i') {
-    char = '3';
-  } else if (char === 'o') {
-    char = '4';
-  } else if (char === 'u') {
-    char = '5';
+  let vog = ['a', 'e', 'i', 'o', 'u'];
+  let numb = ['1', '2', '3', '4', '5'];
+  for (let index = 0; index < vog.length; index += 1) {
+    if (char === vog[index]) {
+      char = numb[index];
+    }
   }
   return char;
 }
 
 // auxiliar desafio 9 decode
 function replaceDec(char) {
-  if (char === '1') {
-    char = 'a';
-  } else if (char === '2') {
-    char = 'e';
-  } else if (char === '3') {
-    char = 'i';
-  } else if (char === '4') {
-    char = 'o';
-  } else if (char === '5') {
-    char = 'u';
+  let vog = ['a', 'e', 'i', 'o', 'u'];
+  let numb = ['1', '2', '3', '4', '5'];
+  for (let index = 0; index < vog.length; index += 1) {
+    if (char === numb[index]) {
+      char = vog[index];
+    }
   }
   return char;
-}
+}}
 
 // Desafio 9
 function encode(string) {
