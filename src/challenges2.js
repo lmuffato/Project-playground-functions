@@ -70,6 +70,7 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(bebidas) {
   // seu código aqui
+  // https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
   let beba = bebidas;
   let numeros = beba.match(/\d+/g);
   let soma = 0;
@@ -77,9 +78,9 @@ function hydrate(bebidas) {
     soma += parseInt(numeros[i], 10);
   }
   if (soma === 1) {
-    return `${soma} copo de água.`;
+    return `${soma} copo de água`;
   }
-  return `${soma} copos de água.`;
+  return `${soma} copos de água`;
 }
 
 module.exports = {
