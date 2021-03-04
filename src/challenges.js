@@ -52,8 +52,16 @@ function highestCount(numberArray) {
 // Visita ao repositório do João Nasc: https://github.com/tryber/sd-010-a-project-playground-functions/pull/132/commits/e391 //
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  const cat1Position = cat1 - mouse;
+  const cat2Position = cat2 - mouse;
+  if (cat1Position < cat2Position) {
+    return 'cat1';
+  } if (cat2Position < cat1Position) {
+    return 'cat2';
+  } if (cat1Position === cat2Position) {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 // Desafio 8
