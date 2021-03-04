@@ -96,4 +96,5 @@ https://flaviocopes.com/how-to-get-index-in-for-of-loop/
 https://flaviocopes.com/how-to-find-duplicates-array-javascript/
 https://eslint.org/docs/rules/no-else-return
 https://stackoverflow.com/questions/24074968/does-sort-function-change-original-array
+https://oprea.rocks/blog/what-do-the-three-dots-mean-in-javascript/
 */
