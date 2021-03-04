@@ -1,4 +1,8 @@
 // Desafio 10
+function sorting(a, b) {
+  return b.tech > a.tech ? -1 : 1;
+}
+
 function techList(array, name) {
   let nameInTheList = name;
   let newArray = [];
@@ -12,9 +16,7 @@ function techList(array, name) {
       technologiesList.name = nameInTheList;
       newArray[key] = technologiesList;
     }
-    return newArray.sort(function (a, b) {
-      return b.tech > a.tech ? -1 : 1;
-    });
+    return newArray.sort(sorting);
   } if (array.length === 0) {
     return 'Vazio!';
   }
@@ -29,20 +31,20 @@ function techList(array, name) {
 
 // 1 - Descobrir se há repetição no array.
 
-function findDuplicates(arrayOfNumbers) {
-  let sortedArrayOfNumbers = arrayOfNumbers.slice().sort();
-  let results = [];
-  let repetition;
-  for (let index = 0; index < sortedArrayOfNumbers.length; index += 1) {
-    if (sortedArrayOfNumbers[index + 1] === sortedArrayOfNumbers[index]) {
-      return results.push(sortedArrayOfNumbers[index]);
-    }
-    if (results.length >= 3) {
-      return repetition === true;
-    }
-  }
-  return results && repetition;
-}
+// function findDuplicates(arrayOfNumbers) {
+// let sortedArrayOfNumbers = arrayOfNumbers.slice().sort();
+// let results = [];
+// let repetition;
+// for (let index = 0; index < sortedArrayOfNumbers.length; index += 1) {
+// if (sortedArrayOfNumbers[index + 1] === sortedArrayOfNumbers[index]) {
+//    return results.push(sortedArrayOfNumbers[index]);
+// }
+//  if (results.length >= 3) {
+//    return repetition === true;
+//  }
+// }
+//  return results && repetition;
+// }
 
 // 2 - Acessar os valores do array.
 
@@ -71,7 +73,7 @@ function generatePhoneNumber(phoneNumber) {
   if (phoneNumber.length !== 11) {
     message = 'Array com tamanho incorreto.';
   }
-  if (theExcludentConditions(phoneNumber) === true || findDuplicates(phoneNumber) === true) {
+  if (theExcludentConditions(phoneNumber) === true) {
     message = 'não é possível gerar um número de telefone com esses valores';
   } else {
     message += `(${convertArrayToString(phoneNumber, 0, 1)}) `;
