@@ -15,6 +15,7 @@ function calcArea(base, height) {
 function splitSentence(setence) {
   let setenceList = [];
   let split = '';
+
   for (let index = 0; index < setence.length + 1; index += 1) {
     if ((setence[index] === ' ') || (index + 1 === setence.length + 1)) {
       setenceList.push(split);
@@ -30,6 +31,7 @@ function splitSentence(setence) {
 function concatName(namesArray) {
   let firstItem;
   let secondItem;
+
   for (let index = 0; index < namesArray.length; index += 1) {
     if (index === 0) {
       secondItem = namesArray[index];
@@ -43,6 +45,7 @@ function concatName(namesArray) {
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = 0;
+
   for (let index = 1; index <= (wins + ties); index += 1) {
     if (index > wins) {
       points += 1;
@@ -57,6 +60,7 @@ function footballPoints(wins, ties) {
 function highestCount(numbersArray) {
   let highestNumber = numbersArray[0];
   let count = 0;
+
   for (let index of numbersArray) {
     if (index > highestNumber) {
       count = 1;
@@ -69,8 +73,23 @@ function highestCount(numbersArray) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let catDistance1 = mouse - cat1;
+  let catDistance2 = mouse - cat2;
+
+  if (catDistance1 < 0) {
+    catDistance1 *= -1;
+  }
+  if (catDistance2 < 0) {
+    catDistance2 *= -1;
+  }
+
+  if (catDistance1 < catDistance2) {
+    return 'cat1';
+  } if (catDistance2 < catDistance1) {
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
