@@ -31,7 +31,7 @@ function footballPoints(wins,ties) {
 // Desafio 6
 function highestCount(array) {
   let highNumber = Math.max(...array);
-  let sumHighestCount = "";
+  let sumHighestCount = 0
   for (let index = 0; index < array.length; index += 1){
     let newArray = array[index];
 
@@ -75,6 +75,7 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
+// PQ Q TÁ DANDO ERRO NO PUSH?
 function encode(string) {
   let codingString = [];
   for (let index = 0; index < string.length; index += 1){
