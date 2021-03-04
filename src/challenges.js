@@ -48,8 +48,8 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let positionOne = Math.abs (cat1 - mouse);
-  let positionTwo = Math.abs (cat2 - mouse);
+  let positionOne = Math.abs(cat1 - mouse);
+  let positionTwo = Math.abs(cat2 - mouse);
 
   if (positionOne < positionTwo) {
     return 'cat1';
@@ -61,8 +61,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let words = [];
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+      words.push('fizzBuzz');
+    } else if (numbers[index] % 3 === 0) {
+      words.push('fizz');
+    } else if (numbers[index] % 5 === 0) {
+      words.push('buzz');
+    } else {
+      words.push('bug!');
+    }
+  }
+  return words;
 }
 
 // Desafio 9
