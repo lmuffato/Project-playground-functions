@@ -1,7 +1,27 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(myArray, myString) {
+    
+  if (myArray == 0) {
+    return 'vazio';
+  }
+
+  let sortArray = myArray.sort();
+  let myObject = [];
+
+  for (let index = 0; index < sortArray.length; index += 1) {
+    myObject.push(
+      {
+        tech: sortArray[index],
+        name: myString
+      },
+    );
+  }
+
+  return myObject;
+  
 }
+
+console.log(techList([], 'Lucas'));
 
 // Desafio 11 
 function generatePhoneNumber(myArray) {
@@ -50,7 +70,7 @@ function generatePhoneNumber(myArray) {
 
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 3, 7, 8, 9, 3, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) { 
