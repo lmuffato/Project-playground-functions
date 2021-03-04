@@ -5,7 +5,7 @@ function techList(myArray, myString) {
   let myObject = [];
 
   if (myArray.length === 0) {
-    return 'vazio';
+    return 'Vazio';
   }
 
   for (let index = 0; index < myArray.length; index += 1) {
