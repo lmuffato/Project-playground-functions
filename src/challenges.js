@@ -73,38 +73,38 @@ function fizzBuzz(array) {
 // Desafio 9
 // PQ Q TÁ DANDO ERRO?
 function encode(string) {
-    let codingString = "";
+    let codingString = [...string];
     for (let index = 0; index < string.length; index += 1){
-       codingString += string[index];
+       codingString.push = string[index];
         switch (string[index]) {
           case string[index] === "a":
-            codingString.replace(/a/i,'1');
-            break;
+          codingString.push('1');
+          break;
 
           case string[index] === "e":
-          codingString.replace(/e/i,'2');
+          codingString.push('2');
           break;
 
           case string[index] === "i":
-            codingString.replace(/i/i,'3');
+            codingString.push('3');
             break;
 
           case string[index] === "o":
-          codingString.replace(/o/i,'4');
+          codingString.push('4');
           break;
 
           case string[index] === "u":
-          codingString.replace(/u/i,'5');
+          codingString.push('5');
           break;
 
           default:
-            codingString.replace(string[index]);
+            codingString.push(string[index]);
         }
         return codingString;
       }
   }
 
-  function decode(string) {
+function decode(string) {
      let decodingString = "";
   for (let index = 0; index < string.length; index += 1){
     decodingString += string[index];
