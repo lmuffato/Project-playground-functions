@@ -8,23 +8,23 @@
 //           case string[index] === "a":
 //             codingString.push('1');
 //             break;
-  
+
 //           case string[index] === "e":
 //           codingString.push('2');
 //           break;
-         
+
 //           case string[index] === "i":
 //             codingString.push('3');
 //             break;
-  
+
 //           case string[index] === "o":
 //           codingString.push('4');
 //           break;
-  
+
 //           case string[index] === "u":
 //           codingString.push('5');
 //           break;
-  
+
 //           default:
 //             codingString.push(string[index])
 //         }
@@ -33,11 +33,10 @@
 //     console.log(codingString)
 //   }
 
-
-let array = ['Jorge', 'Matheus', 'Cleker']
-let lastName = array[array.length-1];
+let array = ['Jorge', 'Matheus', 'Cleker'];
+let lastName = array[array.length - 1];
 let firstName = [array[0]];
-let newArray = lastName + ' ' + firstName;
+let newArray = `${lastName} ${firstName}`;
 // let resposta = newArray.concat(firstName);
 // return resposta
-console.log(newArray)
+console.log(newArray);
