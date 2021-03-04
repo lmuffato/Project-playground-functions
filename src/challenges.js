@@ -28,7 +28,25 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function findWhichIsBigger(numbers) {
+  let bigger = 0;
+  for (let key in numbers) {
+    if (numbers[key] > bigger) {
+      bigger = numbers[key];
+    }
+  }
+  return bigger;
+}
+
+function highestCount(numbers) {
+  let selecTheBigger = findWhichIsBigger(numbers);
+  let couter = 0;
+  for (let index; index < numbers.length - 1; index += 1) {
+    if (selecTheBigger === numbers[index]) {
+      couter += 1;
+    }
+  }
+  return couter;
 }
 
 // Desafio 7
