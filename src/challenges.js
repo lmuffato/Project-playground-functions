@@ -73,27 +73,48 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(arrayFizz) {
-  let fizzBuzze = [];
-  for (let index = 0; index < arrayFizz.length; index += 1) {
-    if (arrayFizz[index] % 3 === 0 && arrayFizz[index] % 5 === 0) {
-      fizzBuzze.push('fizzBuzz');
-    } else if (arrayFizz[index] % 3 === 0) {
-      fizzBuzze.push('fizz');
-    } else if (arrayFizz[index] % 5 === 0) {
-      fizzBuzze.push('buzz');
-    } else {
-      fizzBuzze.push('bug!');
-    }
+// Este código fiz com auxílio da minha amiga Elisa França.
+// Eu consegui desenvolver a lógica mas o Lint tava acusando complexidade nível 6 e o máximo era 5. Então ela me auxiliou a dividir o código em duas funções.
+function conditional(arrayN) {
+  let fizzBuzze;
+  if (arrayN % 3 === 0 && arrayN % 5 === 0) {
+    fizzBuzze = 'fizzBuzz';
+  } else if (arrayN % 3 === 0) {
+    fizzBuzze = 'fizz';
+  } else if (arrayN % 5 === 0) {
+    fizzBuzze = 'buzz';
+  } else {
+    fizzBuzze = 'bug!';
   }
   return fizzBuzze;
 }
+function fizzBuzz(arrayFizz) {
+  let fizzBuzze2 = [];
+  for (let index = 0; index < arrayFizz.length; index += 1) {
+    fizzBuzze2.push(conditional(arrayFizz[index]));
+  }
+  return fizzBuzze2
+} 
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let strSplit = string.split (' ')
+  for (let index = 0; index < strSplit.length; index += 1) {
+    if (strSplit[index] === 'a') {
+      strSplit.push(1)
+    } else if (strSplit[index] === 'e') {
+      strSplit.push(2)
+    } else if (strSplit[index] === 'i') {
+      strSplit.push(3)
+    } else if (strSplit[index] === 'o') {
+      strSplit.push(4)
+    } else if (strSplit[index] === 'u'){
+      strSplit.push(5)
+    }
+  }
+  return strSplit;
 }
-
+console.log(encode('euquerocomer'))
 function decode() {
   // seu código aqui
 }
