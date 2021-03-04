@@ -2,7 +2,7 @@
 function techList(array, name) {
   let result = [];
   let object = {
-    techs: '',
+    tech: '',
     nome: name,
   };
   if (array.length === 0) {
@@ -11,7 +11,7 @@ function techList(array, name) {
   array.sort();
   for (let index = 0; index < array.length; index += 1) {
     object = {
-      techs: array[index],
+      tech: array[index],
       nome: name };
     result.push(object);
   }
