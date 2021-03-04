@@ -5,7 +5,7 @@ function techList(techArray, name) {
     techArray = techArray.sort();
     let objectArray = [];
     for (let index = 0; index < techArray.length; index += 1) {
-      let object = { tech: techArray[index], name: name };
+      let object = { tech: techArray[index], name };
       objectArray.push(object);
     }
     result = objectArray;
@@ -57,11 +57,12 @@ function generatePhoneNumber(numberArray) {
   } else if (!arrayNumericalValidation(numberArray) || !arrayRepeatValidation(numberArray, 3)) {
     result = 'não é possível gerar um número de telefone com esses valores';
   } else {
-    result = '(' + numberArray.slice(0, 2).join('') + ') ' + numberArray.slice(2, 7).join('') + '-' + numberArray.slice(7, 11).join('');
+    let ddd = numberArray.slice(0, 2).join('');
+    result = `(${ddd}) ${numberArray.slice(2, 7).join('')}-${numberArray.slice(7, 11).join('')}`;
   }
   return result;
 }
-
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
