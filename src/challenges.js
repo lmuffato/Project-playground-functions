@@ -50,9 +50,20 @@ function highestCount(numbersArray) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (mouse - cat1 > mouse - cat2) {
+  let distance1 = mouse - cat1;
+  let distance2 = mouse - cat2;
+
+  if (distance1 < 0) {
+    distance1 *= -1;
+  }
+  if (distance2 < 0) {
+    distance2 *= -1;
+  }
+
+  if (distance1 < distance2) {
     return 'cat1';
-  } if (mouse - cat2 > mouse - cat1) {
+  }
+  if (distance2 < distance1) {
     return 'cat2';
   }
 
@@ -119,8 +130,6 @@ function decode(string) {
 
   return splitStringArray.join('');
 }
-
-console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
