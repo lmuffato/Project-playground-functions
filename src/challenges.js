@@ -77,7 +77,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   }
 
-  return 'os gatos trombam e o rato foge.';
+  return 'os gatos trombam e o rato foge';
 }
 console.log(catAndMouse(0, 6, 12));
 
