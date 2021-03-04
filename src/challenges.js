@@ -44,8 +44,18 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distance1 = cat1 - mouse;
+    let distance2 = cat2 - mouse;
+    if (distance1 < distance2) {
+        console.log('cat1');        
+    }
+    if (distance1 > distance2) {
+        console.log('cat2');
+    }
+    else if (distance1 === distance2) {
+        console.log('os gatos se trombam e o rato foge');
+    }// seu código aqui
 }
 
 // Desafio 8
