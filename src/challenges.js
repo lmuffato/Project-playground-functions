@@ -15,10 +15,10 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   let arrayString = [];
-  arrayString = string.split('');
+  arrayString = string.split(' ');
   return arrayString;
 }
-
+console.log(splitSentence("avenida brasil br sempre volta"))
 // Desafio 4
 
 function concatName(arrayString) {
