@@ -32,10 +32,20 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numberArray) {
-  return Math.max(numberArray) * [Math.max(numberArray)].length;
+  let highestNum = Math.max.apply(numberArray);
+  let numCounter = 0;
+
+  for (let index = 0; index < numberArray.length; index += 1) {
+    if (numberArray[index] === highestNum) {
+      numCounter += 1;
+    }
+  }
+  return numCounter;
 }
 
-// Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max //
+// Source: discussões no Slack, auxílio do Gabriel Pereira //
+// Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
+// Visita ao repositório do João Nasc: https://github.com/tryber/sd-010-a-project-playground-functions/pull/132/commits/e391 //
 
 // Desafio 7
 function catAndMouse() {
