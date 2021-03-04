@@ -35,8 +35,8 @@ function highestCount(array) {
   for (let index = 0; index < array.length; index += 1){
     let newArray = array[index];
 
-      if (newArray[index] === highNumber {
-        let sumHighestCount += 1;
+      if (newArray[index] === highNumber) {
+        sumHighestCount += 1;
       }
     }
     return sumHighestCount;
