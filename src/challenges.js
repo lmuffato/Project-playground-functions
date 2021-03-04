@@ -17,7 +17,7 @@ function splitSentence(string) {
 function concatName(array) {
   let lastName = array[array.length-1];
   let firstName = [array[0]];
-  let newArray = lastName + ' ' + firstName;
+  let newArray = lastName + ',' + ' ' + firstName;
   // let resposta = newArray.concat(firstName);
   return newArray
 }
@@ -77,7 +77,7 @@ function fizzBuzz(array) {
 function encode(string) {
   let codingString = [];
   for (let index = 0; index < string.length; index += 1){
-     codingString = string[index]
+     codingString.push(string[index])
       switch (string[index]) {
         case string[index] === "a":
           codingString.replace(/a/i,'1');
@@ -109,7 +109,7 @@ function encode(string) {
 function decode(string) {
   let decodingString = [];
   for (let index = 0; index < string.length; index += 1){
-    decodingString = string[index]
+    decodingString.push(string[index])
       switch (string[index]) {
         
         case string[index] === '1':
