@@ -105,8 +105,10 @@ function hydrate(myDrink) {
     contGlass += parseInt(arrayDrink[index]);
   }
 
-  if (contGlass > 0) {
-    myGlassH20 += `${contGlass} copo de água`;
+  if (contGlass === 1) {
+    myGlassH20 += contGlass + ' copo de água';
+  } else if (contGlass > 0) {
+    myGlassH20 += contGlass + ' copos de água';
   }
 
   return myGlassH20;
