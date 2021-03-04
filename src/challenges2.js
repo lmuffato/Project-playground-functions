@@ -81,18 +81,35 @@ function generatePhoneNumber(array) {
   return 'não é possível gerar um número de telefone com esses valores';
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+/**
+ * Para esse desafio me baseei na implementação do Arlesson Moura, link do repositório: https://github.com/tryber/sd-09-project-playground-functions/blob/ArlessonMoura-playground-functions/src/challenges.js
+ */
+function hydrate(string) {
+  let regex = /\d+/g;
+  let array = string.match(regex);
+  let couplesOfWater = 0;
 
+  for (let index = 0; index < array.length; index += 1) {
+    couplesOfWater += parseInt(array[index], 10);
+  }
+
+  if (couplesOfWater > 1 && couplesOfWater <= 9) {
+    return `${couplesOfWater} copos de água`;
+  }
+
+  if (couplesOfWater === 1) {
+    return `${couplesOfWater} copo de água`;
+  }
+
+  return 'Você não bebeu nenhum drink';
+}
+console.log(hydrate('1 cachaça'));
 module.exports = {
   generatePhoneNumber,
   techList,
