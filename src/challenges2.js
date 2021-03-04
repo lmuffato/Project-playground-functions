@@ -1,6 +1,27 @@
 // Desafio 10
-function techList() {
+function techList(array, name) {
+  let nameInTheList = name;
+  let newArray = [];
+  if (array.length === 5) {
+    for (let key = 0; key < 5; key += 1) {
+      let technologiesList = {
+        tech: ' ',
+        name: ' ',
+      };
+      technologiesList.tech = array[key];
+      technologiesList.name = nameInTheList;
+      newArray[key] = technologiesList;
+    }
+    return newArray.sort(function (a, b) {
+      return b.tech > a.tech ? -1 : 1;
+    });
+  } if (array.length === 0) {
+    return 'Vazio!';
+  }
 }
+
+// Referência usada para resolver o Desafio 10:
+// https://pt.stackoverflow.com/questions/338916/colocando-em-ordem-alfabética-um-array-de-objetos
 
 // Desafio 11
 
@@ -76,28 +97,32 @@ function verifySum(lineA, lineB, lineC) {
   let sumOfAandB = lineA + lineB; // para lado C
   let sumOfAandC = lineA + lineC; // para lado B
   let sumOfCandB = lineB + lineC; // para lado A
+  let condition = false;
 
   if (lineA < sumOfCandB && lineB < sumOfAandC && lineC < sumOfAandB) {
-    return true;
+    return condition === true;
   }
 }
-
 // 2 - Função pra verificar a relação entre cada lado e a subtração dos outros dois.
 
 function verifySubtraction(lineA, lineB, lineC) {
   let subtractionOfAandB = Math.abs(lineA - lineB); // para lado C
   let subtractionOfAandC = Math.abs(lineA - lineC); // para lado B
   let subtractionOfBandC = Math.abs(lineB - lineC); // para lado A
+  let condition = false;
   if (lineA > subtractionOfBandC && lineB > subtractionOfAandC && lineC > subtractionOfAandB) {
-    return true;
+    return condition === true;
   }
 }
 
 function triangleCheck(lineA, lineB, lineC) {
+  let triangleCondition = false;
+
   if (verifySum(lineA, lineB, lineC) === true && verifySubtraction(lineA, lineB, lineC) === true) {
-    return true;
+    return triangleCondition === true;
   }
 }
+console.log(triangleCheck(10, 14, 8));
 
 // Referência utilizada para resolução de Desafio 12:
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
