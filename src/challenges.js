@@ -61,12 +61,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat1Difference = Math.max(cat1 - mouse);
   let cat2Difference = Math.max(cat2 - mouse);
 
-  if (cat2Difference < cat1Difference) {
-    return ('cat2');
-  } if (cat2Difference === cat1Difference) {
+  if (cat1 === mouse && cat2 === mouse) {
     return ('os gatos trombam e o rato foge');
-  }
-  return ('cat1');
+  } if (cat2Difference < cat1Difference) {
+    return ('cat2');
+  } return ('cat1');
 }
 
 // Desafio 8
