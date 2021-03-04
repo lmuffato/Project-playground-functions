@@ -62,21 +62,8 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(numbers) {
-  let getFizzBuzz = [];
-  for (let index in numbers) {
-    if (numbers[index] % 3 === 0){
-      getFizzBuzz.push('fizz');
-    } 
-    else if (numbers[index] % 5 === 0) {
-      getFizzBuzz.push('buzz');
-    } else if (numbers[index] % 3 === 0) && (numbers[index] % 5 === 0) {
-      getFizzBuzz.push('fizzBuzz');
-    } else {
-      getFizzBuzz.push('bug!');
-    }
-  }
-  return getFizzBuzz;
+function fizzBuzz() {
+
 }
 
 // Desafio 9 credits https://www.youtube.com/watch?v=7a-a6lKoyIQ - https://www.youtube.com/watch?v=ZYPqPoijCAQ
