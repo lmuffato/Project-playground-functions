@@ -146,6 +146,24 @@ function decode(codStringDecodif) {
   return arrayDecodif.join('');
 }
 
+// Desafio 10
+function tecnologias(ListTech, name) {
+  let myObject = {};
+  let myObjectList = [];
+
+  for (let index in ListTech) {
+    myObject['tech'] = ListTech[index];
+    myObject['name'] = name;
+    myObjectList.push(myObject)
+    delete myObject.tech;
+    delete myObject.name;
+  }
+
+  return myObjectList
+}
+
+console.log(tecnologias(['CSS', 'HTML'], 'Lucas'))
+
 module.exports = {
   calcArea,
   catAndMouse,
@@ -158,3 +176,14 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+let object1 = {
+  tech: 'css',
+  nome: 'lucas'
+}
+
+for (let index in object1) {
+  object1['idade'] = 28
+}
+
+console.log(object1)
