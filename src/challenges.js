@@ -16,10 +16,10 @@ function splitSentence(string) {
 // Desafio 4 WHY?
 function concatName(array) {
   let lastName = array[array.length-1];
-  let newArray = [lastName];
   let firstName = [array[0]];
-  let resposta = newArray.concat(firstName);
-  return resposta
+  let newArray = lastName + ' ' + firstName;
+  // let resposta = newArray.concat(firstName);
+  return newArray
 }
 
 // Desafio 5 OK
@@ -33,9 +33,7 @@ function highestCount(array) {
   let highNumber = Math.max(...array);
   let sumHighestCount = 0
   for (let index = 0; index < array.length; index += 1){
-    let newArray = array[index];
-
-      if (newArray[index] === highNumber) {
+      if (array[index] === highNumber) {
         sumHighestCount += 1;
       }
     }
@@ -82,27 +80,27 @@ function encode(string) {
      codingString = string[index]
       switch (string[index]) {
         case string[index] === "a":
-          codingString.push('1');
+          codingString.concat('1');
           break;
 
         case string[index] === "e":
-        codingString.push('2');
+        codingString.concat('2');
         break;
        
         case string[index] === "i":
-          codingString.push('3');
+          codingString.concat('3');
           break;
 
         case string[index] === "o":
-        codingString.push('4');
+        codingString.concat('4');
         break;
 
         case string[index] === "u":
-        codingString.push('5');
+        codingString.concat('5');
         break;
 
         default:
-          codingString.push(string[index])
+          codingString.concat(string[index])
       }
       return codingString
     }
@@ -115,27 +113,27 @@ function decode(string) {
       switch (string[index]) {
         
         case string[index] === '1':
-        decodingString.push('a');
+        decodingString.concat('a');
         break;
 
         case string[index] === '2':
-        decodingString.push('e');
+        decodingString.concat('e');
         break;
        
         case string[index] === "3":
-        decodingString.push('i');
+        decodingString.concat('i');
         break;
 
         case string[index] === "4":
-        decodingString.push('o');
+        decodingString.concat('o');
         break;
 
         case string[index] === "5":
-        decodingString.push('u');
+        decodingString.concat('u');
         break;
 
         default:
-        decodingString.push(string[index])
+        decodingString.concat(string[index])
       }
       return decodingString
     }
