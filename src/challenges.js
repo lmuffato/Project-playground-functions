@@ -70,9 +70,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(array) {
-  divisible3 = 
-}
+function fizzBuzz() 
 
 // Desafio 9
 function encode() {
