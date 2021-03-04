@@ -1,8 +1,7 @@
-let nomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 function concatName(nomes) {
     return `${nomes[nomes.length -1]}, ${nomes[0]}`;
 }
-console.log(concatName(nomes));
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 /* let arrayString = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
 function concatName(primeiro, ultimo) {    
