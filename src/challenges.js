@@ -81,13 +81,44 @@ function fizzBuzz(numbers) {
   return arrayOfWords;
 }
 
-// Desafio 9 credits https://www.youtube.com/watch?v=7a-a6lKoyIQ - https://www.youtube.com/watch?v=ZYPqPoijCAQ
+// Desafio 9
 
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  let vowelsToNumbers = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  let getCode = '';
+  for (let index in frase) {
+    if (vowelsToNumbers[frase[index]]) {
+      getCode += vowelsToNumbers[frase[index]];
+    } else {
+      getCode += frase[index];
+    }
+  }
+  return getCode;
 }
-function decode() {
-  // seu código aqui
+
+function decode(mensageWithCode) {
+  let numbersToVowels = {
+    1: 'a',
+    2: 'b',
+    3: 'c',
+    4: 'd',
+    5: 'e',
+  };
+  let getTheMassage = '';
+  for (let index in mensageWithCode) {
+    if (numbersToVowels[mensageWithCode[index]]) {
+      getTheMassage += mensageWithCode[index];
+    } else {
+      getTheMassage = mensageWithCode[index];
+    }
+  }
+  return getTheMassage;
 }
 
 module.exports = {
