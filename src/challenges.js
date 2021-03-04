@@ -81,24 +81,19 @@ function catAndMouse(mouse, cat1, cat2) {
   let distance2 = cat2 - mouse;
 
   if (distance1 < 0) {
-    distance1 = (-1) * distance1;
+    distance1 = -distance1;
   }
-
   if (distance2 < 0) {
-    distance2 = (-1) * distance2;
+    distance2 = -distance2;
   }
-
   if (distance1 > distance2) {
     return 'cat2';
-  } else if (distance1 < distance2) {
-    return 'cat1';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  if (distance1 < distance2) {
+    return 'cat1';
+  }
+  return 'os gatos trombam e o rato foge';
 }
-
-console.log(catAndMouse(1, 1, 1));
-
 // Desafio 8
 function fizzBuzz(myArray) {
   let myResult = [];
@@ -116,35 +111,34 @@ function fizzBuzz(myArray) {
   }
   return myResult;
 }
+
 console.log(fizzBuzz([7, 9]));
 
 // Desafio 9
 function encode(str) {
-
- let code = '';
-
- for (let index = 0; index < str.length; index += 1){
-   switch(str[index]) {
-     case 'a':
-       code += '1';
-       break;
-      case 'e':
-        code += '2';
-        break;
-      case 'i':
-        code += '3';
-        break;
-      case 'o':
-        code += '4';
-        break;
-      case 'u':
-        code += '5';
-        break;
-      default:
-        code += str[index];
-   }
- }
- return code; 
+  let code = '';
+  for (let index = 0; index < str.length; index += 1) {
+    switch (str[index]) {
+    case 'a':
+      code += '1';
+      break;
+    case 'e':
+      code += '2';
+      break;
+    case 'i':
+      code += '3';
+      break;
+    case 'o':
+      code += '4';
+      break;
+    case 'u':
+      code += '5';
+      break;
+    default:
+      code += str[index];
+    }
+  }
+  return code;
 }
 
 console.log(encode('hi there!'));
@@ -152,32 +146,31 @@ console.log(encode('hi there!'));
 function decode(str) {
   let decode = '';
 
-  for (let index = 0; index < str.length; index += 1){
-    switch(str[index]) {
-      case '1':
-        decode += 'a';
-        break;
-       case '2':
-         decode += 'e';
-         break;
-       case '3':
-         decode += 'i';
-         break;
-       case '4':
-         decode += 'o';
-         break;
-       case '5':
-         decode += 'u';
-         break;
-       default:
-         decode += str[index];
+  for (let index = 0; index < str.length; index += 1) {
+    switch (str[index]) {
+    case '1':
+      decode += 'a';
+      break;
+    case '2':
+      decode += 'e';
+      break;
+    case '3':
+      decode += 'i';
+      break;
+    case '4':
+      decode += 'o';
+      break;
+    case '5':
+      decode += 'u';
+      break;
+    default:
+      decode += str[index];
     }
   }
-  return decode; 
- }
- 
- console.log(decode('h3 th2r2!'));
+  return decode;
+}
 
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
