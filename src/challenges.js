@@ -32,11 +32,14 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // select max number
-  // compare this number to each array element
-  // add to a variable each time 'match'
-  // return the variable with number of matches 
+function highestCount(sequence) {
+   let max = Math.max(sequence)
+   for (let index = 0, sequence.length - 1, index += 1) {
+    if (max === sequence[index]){
+      let addRep;
+      console.log(addRep);
+    }
+  }
 }
 
 // Desafio 7
