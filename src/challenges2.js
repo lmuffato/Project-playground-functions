@@ -60,7 +60,6 @@ function generatePhoneNumber(array) {
   return result;
 }
 
-console.log(generatePhoneNumber(example));
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
