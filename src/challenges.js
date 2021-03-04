@@ -20,8 +20,9 @@ function splitSentence() {
 function concatName(names) {
   let firstAndLast = '';
   let name = '';
-  name = names[names.length-1];
+  name = names[names.length - 1];
   firstAndLast = name;
+  firstAndLast = firstAndLast + ',';
   name = names[0];
   firstAndLast = firstAndLast + ' ' + name;
   return firstAndLast;
