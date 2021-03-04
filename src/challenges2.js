@@ -4,7 +4,7 @@ function techList(tech, name) {
     tech: tech.sort (),
     techList: []
   }
-  if (tech === 0) {
+  if (tech.length === 0) {
      return 'Vazio!'
   }
   for(let index in tech){
