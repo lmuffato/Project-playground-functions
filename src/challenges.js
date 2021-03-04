@@ -30,8 +30,8 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayRip) {
+  
 }
 
 // Desafio 7
@@ -40,8 +40,20 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(returnDeArray) {
+ let fizzBuzzArray = [];
+  for (let index = 0; index < returnDeArray.length; index += 1) {
+    if (returnDeArray[index] % 3 === 0 && returnDeArray[index] % 5 === 0) {
+        fizzBuzzArray.push('fizzBuzz');
+    } else if (returnDeArray[index] % 3 === 0) {
+      fizzBuzzArray.push('fizz');
+    } else if (returnDeArray[index] % 5 === 0) {
+      fizzBuzzArray.push('buzz');
+    } else {
+      fizzBuzzArray.push('bug!');
+    }
+  }
+  return fizzBuzzArray;
 }
 
 // Desafio 9
