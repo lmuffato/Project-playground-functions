@@ -20,8 +20,7 @@ function splitSentence(string) {
   for (i = 1; i < string.length; i += 1) {
     if (string[i] !== ' ') {
       array[j] += string[i];
-    }
-    else {
+    } else {
       j += 1;
       i += 1;
       array[j] = string[i];
@@ -46,7 +45,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(array) {
   // seu código aqui
-  let i = 0; 
+  let i = 0;
   let bigger = array[0];
   let repeats = 0;
   for (i = 1; i < array.length; i += 1) {
@@ -55,7 +54,7 @@ function highestCount(array) {
     }
   }
   for (i = 0; i < array.length; i += 1) {
-    if (bigger == array[i]) {
+    if (bigger === array[i]) {
       repeats += 1;
     }
   }
@@ -70,11 +69,9 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (d1 < d2) {
     return cat1;
-  }
-  else if (d2 < d1) {
+  } else if (d2 < d1) {
     return cat2;
-  }
-  else {
+  } else {
     return 'os gatos trombam e o rato foge';
   }
 }
@@ -84,15 +81,14 @@ function fizzBuzz(array) {
   // seu código aqui
   let result = [];
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % 3 == 0 && array[i] % 5 == 0) {
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       result[i] = 'fizzBuzz';
     }
-    else if (array[i] % 3 == 0) {
-        result[i] = 'fizz';
-    } else if (array[i] % 5 == 0) {
-        result[i] = 'buzz';
-    }
-    else {
+    else if (array[i] % 3 === 0) {
+      result[i] = 'fizz';
+    } else if (array[i] % 5 === 0) {
+      result[i] = 'buzz';
+    } else {
       result[i] = 'bug!';
     }
   }
