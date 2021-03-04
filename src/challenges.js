@@ -18,7 +18,7 @@ function splitSentence() {
 
 // Desafio 4
 function concatName(names) {
-  let firstAndLast = ();
+  let firstAndLast = '';
   let name = '';
   name = names[names.length-1];
   firstAndLast = name;
@@ -57,27 +57,56 @@ function catAndMouse(mouse, cat1, cat2) {
   if ((cat1 - mouse) < (cat2 - mouse)) {
     return 'cat1';
   } if ((cat1 - mouse) > (cat2 - mouse)) {
-  return 'cat2';
-} 
+    return 'cat2';
+  } 
   return same;
 }
 
 // Desafio 8
+// Dica do Murilo Gonçalves quanto a divisão da função em mais de uma para passar
 function fizzBuzz(array) {
   let codified = [];
   let index = 0;
   for (index = 0; index < array.lenght; index += 1) {
-    if ((array[index] % 3 && array[index] % 5) === 0) {
-      codified += 'fizzBuzz';
-    } else if (array[index] % 3 === 0) {
-      codified += 'fizz';
-    } else if (array[index] % 5 === 0) {
-    codified += 'buzz';
-    } else {
-    codified += 'bug!';
-    }
+    //if ((array[index] % 3 && array[index] % 5) === 0) {
+      //codified += 'fizzBuzz';
+  //  } else if (array[index] % 3 === 0) {
+    //  codified += 'fizz';
+   // } else if (array[index] % 5 === 0) {
+    //codified += 'buzz';
+    //} else {
+    //codified += 'bug!';
+    //}
+    doubledivision(array);
+    fizz(array);
+    buzz(array);
+    notdivisible(array);
   }
   return codified;
+}
+
+function doubledivision(array){
+  if ((array[index] % 3 && array[index] % 5) === 0) {
+    codified += 'fizzBuzz';
+}
+}
+
+function fizz(array){
+  if (array[index] % 3 === 0) {
+    codified += 'fizz';
+}
+}
+
+function buzz(array){
+  if (array[index] % 5 === 0) {
+    codified += 'buzz';
+}
+}
+
+function notdivisible(array){
+  if ((array[index] % 3 || array[index] % 5) === 0) {
+  codified += 'bug!';
+    }
 }
 
 // Desafio 9
