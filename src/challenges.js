@@ -59,32 +59,29 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function Div3(number) {
-  let div3 = number % 3 === 0 ? true : false;
+  let div3 = number % 3 === 0;
   return div3;
 }
 function Div5(number) {
-  let div5 = number % 5 === 0 ? true : false;
+  let div5 = number % 5 === 0;
   return div5;
 }
 
 function phrase(number) {
   let div3 = Div3(number);
   let div5 = Div5(number);
-  
   if (div3 === true && div5 === true) {
     return 'fizzBuzz';
-  } 
-  if (div3 === true) {
+  } if (div3 === true) {
     return 'fizz';
-  } 
-  if (div5 === true) {
+  } if (div5 === true) {
     return 'buzz';
   }
   return 'bug!';
 }
 
 function fizzBuzz(arrayN8) {
-  for (let index in arrayN8) {
+  for (let index = 0; index < arrayN8.length; index += 1) {
     arrayN8[index] = phrase(arrayN8[index]);
   }
   return arrayN8;
