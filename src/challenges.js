@@ -52,10 +52,20 @@ let arrayNum = [9, 1, 2, 8, 9, 5, 7];
 console.log(highestCount(arrayNum));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1Case = Math.abs(mouse - cat1); // consegui realizar essa etapa do desafio graças a documentação https://cutt.ly/jl8nnAr
+  let cat2Case = Math.abs(mouse - cat2);
+  let result = '';
+  if (cat1Case > cat2Case) {
+    result = 'cat2';
+  } else if (cat1Case < cat2Case) {
+    result = 'cat1';
+  } else {
+    result = 'os gatos trombam e o rato foge';
+  }
+  return result;
 }
-
+console.log(catAndMouse(4, 6, 8));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
