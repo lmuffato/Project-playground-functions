@@ -6,7 +6,7 @@ function techList(techsArray, name) {
     return 'Vazio!';
   }
 
-  let serializedTechs = [{}];
+  let serializedTechs = [];
 
   for (let index = 0; index < techsArray.length; index += 1) {
     serializedTechs.push({
@@ -22,10 +22,10 @@ function phoneNumberConditionsVerify(phone) {
   let isNumberValid = function numberAppearenceVerify(number) {
     for (const n of number) {
       if (number.filter((numChar) => numChar === n).length >= 3) {
-        return false;
+        return true;
       }
     }
-    return true;
+    return false;
   };
   let isNumberInRange = phone.filter((num) => num < 0 || num > 9).length > 0;
 
@@ -37,7 +37,7 @@ function generatePhoneNumber(phone) {
     return 'Array com tamanho incorreto.';
   }
 
-  if (!phoneNumberConditionsVerify(phone)) {
+  if (phoneNumberConditionsVerify(phone)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
 
@@ -67,7 +67,7 @@ function hydrate(string) {
   let numberInTheString = string.match(r);
   let sum = numberInTheString.map(Number).reduce((a, b) => a + b);
 
-  return `${sum} copos da água`;
+  return `${sum} copos de água`;
 }
 
 module.exports = {
