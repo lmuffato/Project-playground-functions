@@ -30,43 +30,28 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function countBigger(values, bigger) {
+function highestCount(values) {
+  let biggest = Math.max(...values);
   let counter = 0;
   for (let index = 0; index <= values.length; index += 1) {
-    if (values[index] === bigger) {
+    if (values[index] === biggest) {
       counter += 1;
     }
   }
   return counter;
 }
 
-function highestCount(values) {
-  let biggest = 0;
-  for (let index = 0; index < values.length; index += 1) {
-    if (values[index] > biggest) {
-      biggest = values[index];
-    }
-  }
-  return countBigger(values, biggest);
-}
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let cat1Distance = mouse - cat1;
-  let cat2Distance = mouse - cat2;
-  if (cat1Distance < 0) {
-    cat1Distance *= -1;
-  } if (cat2Distance < 0) {
-    cat2Distance *= -1;
-  } if (cat1Distance < cat2Distance) {
+  let cat1Distance = Math.abs(mouse - cat1);
+  let cat2Distance = Math.abs(mouse - cat2);
+  if (cat1Distance < cat2Distance) {
     return 'cat1';
   } if (cat1Distance > cat2Distance) {
     return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
 }
-
-console.log(catAndMouse(1, 3, 5));
 
 // Desafio 8
 function words(number) {
@@ -88,11 +73,8 @@ function fizzBuzz(array) {
   return string;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
 // Desafio 9
 // Com adições sugeridas por Wanderson Sales - Turma 10 - Tribo A
-
 let coder = {
   a: 1,
   e: 2,
@@ -113,8 +95,6 @@ function encode(string) {
   return code;
 }
 
-console.log(encode('hi there!'));
-
 let decoder = {
   1: 'a',
   2: 'e',
@@ -134,8 +114,6 @@ function decode(string) {
   }
   return uncode;
 }
-
-console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
