@@ -137,7 +137,7 @@ function decode(word) {
       changeWord[i] = 'u';
     }
   }
-  for (let i = 0; i < changeWord.length; i =+ 1) {
+  for (let i = 0; i < changeWord.length; i += 1) {
     encondeWord += changeWord[i];
   }
   return encondeWord;
