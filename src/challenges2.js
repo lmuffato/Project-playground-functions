@@ -1,9 +1,9 @@
 // Desafio 10
-function techList(array, name) {
+function techList(array, yourName) {
   let result = [];
   let object = {
     tech: '',
-    nome: name,
+    name: yourName,
   };
   if (array.length === 0) {
     return 'Vazio!';
@@ -12,7 +12,8 @@ function techList(array, name) {
   for (let index = 0; index < array.length; index += 1) {
     object = {
       tech: array[index],
-      nome: name };
+      name: yourName,
+    };
     result.push(object);
   }
   return result;
