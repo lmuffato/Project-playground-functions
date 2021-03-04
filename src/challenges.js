@@ -40,13 +40,13 @@ function concatName(array) {
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  return (3*wins) + ties; 
+  return (3 * wins) + ties;
 }
 
 // Desafio 6
 function highestCount(array) {
   // seu código aqui
-  let i = 0;
+  let i = 0; 
   let bigger = array[0];
   let repeats = 0;
   for (i = 1; i < array.length; i += 1) {
@@ -65,11 +65,14 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
-    return cat2;
-  }
-  else if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+  let d1 = Math.sqrt((mouse - cat1) ** 2);
+  let d2 = Math.sqrt((mouse - cat2) ** 2);
+
+  if (d1 < d2) {
     return cat1;
+  }
+  else if (d2 < d1) {
+    return cat2;
   }
   else {
     return 'os gatos trombam e o rato foge';
