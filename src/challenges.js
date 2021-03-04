@@ -34,25 +34,19 @@ function footballPoints(wins, ties) {
 }
 
 function arrayFirstBigger(list) {
-  let arrayList = [];
+  let biggerNumber = list[0];
   for (let index = 0; index < list.length - 1; index += 1) {
-    if (list[index] > list[index + 1]) {
-      arrayList.push(list[index]);
-    } else if (list[index] < list[index + 1]) {
-      arrayList.push(list[index + 1]);
-    } else {
-      arrayList.push(list[index]);
+    if (list[index] > biggerNumber) {
+      biggerNumber = list[index];
     }
   }
-  return arrayList;
+  return biggerNumber;
 }
 
 // Desafio 6
 function highestCount(list) {
-  let biggestNumber = 0;
   let timesRepeat = 0;
-  let array = arrayFirstBigger(list);
-  biggestNumber += array[0];
+  let biggestNumber = arrayFirstBigger(list);
   for (let index = 0; index < list.length; index += 1) {
     if (biggestNumber === list[index]) {
       timesRepeat += 1;
@@ -60,36 +54,36 @@ function highestCount(list) {
   }
   return timesRepeat;
 }
-
+let array = [0, 0, 0];
+console.log(highestCount(array));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let cat1ToMouse = cat1 - mouse;
-  let cat2Tomouse = cat2 - cat1;
-  Math.abs(cat1ToMouse);
-  Math.abs(cat2Tomouse);
-  if (cat1 === cat2) {
-    return 'os gatos trombam e o rato foge';
-  } else if (cat2Tomouse < cat1ToMouse) {
+  let cat1ToMouse = Math.abs(cat1 - mouse);
+  let cat2Tomouse = Math.abs(cat2 - mouse);
+  if (cat1ToMouse < cat2Tomouse) {
+    return 'cat1';
+  } if (cat2Tomouse > cat1ToMouse) {
     return 'cat2';
   } else {
-    return 'cat1';
+    return 'os gatos trombam e o rato foge';
   }
-}
-
-let list = [2, 15, 7, 9, 45];
-
-function arrayRunner(array) {
-  let result = [];
-  for (let index in array) {
-    result.push(array[index]);
-  }
-  return result;
 }
 
 // Desafio 8
 function fizzBuzz(array) {
-  let divBy = [3, 5];
-
+  let result = [];
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      result.push(35);
+    } if (array[index] % 3 === 0) {
+      result.push(3);
+    } if (array[index] % 5 === 0) {
+      result.push(5);
+    } else {
+      result.push(0);
+    }
+  }
+  return result;
 }
 
 // Desafio 9
