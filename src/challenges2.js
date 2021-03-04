@@ -9,7 +9,7 @@ function techList(stringArray, nameObject) {
     arrayObjects[index] = objects;
   }
   if (arrayObjects.length >= 5) {
-    arrayObjects.sort(function (a, b) {  // Entrei no MDN para entender sobre o comando sort de array, e lá tem essa explicação de como ordenar objetos.
+    arrayObjects.sort(function (a, b) { // Entrei no MDN para entender sobre o comando sort de array, e lá tem essa explicação de como ordenar objetos.
       if (a.tech > b.tech) {
         return 1;
       }
@@ -19,7 +19,7 @@ function techList(stringArray, nameObject) {
       return 0;
     });
     return arrayObjects;
-  } else if (arrayObjects.tech === undefined) {
+  } if (arrayObjects.tech === undefined) {
     return 'Vazio!';
   }
 }
@@ -71,13 +71,41 @@ console.log(numberRepeater([1, 1, 2, 3, 4, 6]));
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
-  let soma1 = lineA + lineB;
-  let soma2 = lineB + lineC;
-  let absoluteValue = Math.abs(soma1 - soma2);
-  if (soma1 < soma2 && soma1 > absoluteValue) {
+function checkValueA(lineA, lineB, lineC) {
+  let lineCheck = lineA;
+  let somaCheck = lineB + lineC;
+  let absoluteCheck = Math.abs(lineA - somaCheck);
+  if (lineCheck < somaCheck && lineCheck > absoluteCheck) {
     return true;
-  } if (soma2 < soma1 && soma2 > absoluteValue) {
+  }
+  return false;
+}
+
+function checkValueB(lineA, lineB, lineC) {
+  let lineCheck = lineB;
+  let somaCheck = lineA + lineC;
+  let absoluteCheck = Math.abs(lineB - somaCheck);
+  if (lineCheck < somaCheck && lineCheck > absoluteCheck) {
+    return true;
+  }
+  return false;
+}
+
+function checkValueC(lineA, lineB, lineC) {
+  let lineCheck = lineC;
+  let somaCheck = lineA + lineB;
+  let absoluteCheck = Math.abs(lineC - somaCheck);
+  if (lineCheck < somaCheck && lineCheck > absoluteCheck) {
+    return true;
+  }
+  return false;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  let valueA = checkValueA(lineA, lineB, lineC);
+  let valueB = checkValueB(lineA, lineB, lineC);
+  let valueC = checkValueC(lineA, lineB, lineC);
+  if (valueA === true || valueB === true || valueC === true) {
     return true;
   }
   return false;
