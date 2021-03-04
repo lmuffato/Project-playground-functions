@@ -25,9 +25,50 @@ function techList(stringArray, nameObject) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function getNumberArray(value) {
+  let arrayNumber = [];
+  let numberCheck = value.length;
+  if (numberCheck !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  for (let index = 0; index < value.length; index += 1) {
+    arrayNumber.push(value[index]);
+  }
+  return arrayNumber;
 }
+
+function numberCheckCorrect(numberArray) {
+  let checkNumber = [];
+  for (let index = 0; index < numberArray.length; index += 1) {
+    checkNumber[index] = numberArray[index];
+    if (checkNumber[index] < 0 || checkNumber[index] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  return checkNumber;
+}
+
+function numberRepeater(numberArray) {
+  let numberCheckRepeat = 0;
+  for (let index = 0; index < numberArray.length; index += 1) {
+    let checkNumber = numberArray[index];
+    for (let checklIndex = 0; checklIndex < checkNumber.length; checklIndex += 1) {
+      let checkedNumber = checkNumber[index];
+      if (checkedNumber === checkNumber) {
+        numberCheckRepeat += 1;
+      }
+    }
+  }
+  return numberCheckRepeat;
+}
+
+function generatePhoneNumber(arrayPhone) {
+  let telephoneNumber = getNumberArray(arrayPhone);
+  telephoneNumber = numberCheckCorrect(telephoneNumber);
+  return telephoneNumber;
+}
+console.log(numberRepeater([1, 1, 2, 3, 4, 6]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
