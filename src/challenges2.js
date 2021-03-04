@@ -107,12 +107,12 @@ function sumWater(string) {
 function hydrate(string) {
   let sum = sumWater(string);
   let result;
-    if (sum === 1) {
-      result = '1 copo de água';
-    } else if (sum > 1) {
-      let num = sum.toString();
-      result = num.concat(' copos de água');
-    }
+  if (sum === 1) {
+    result = '1 copo de água';
+  } else if (sum > 1) {
+    let num = sum.toString();
+    result = num.concat(' copos de água');
+  }
   return result;
 }
 
