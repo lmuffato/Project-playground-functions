@@ -47,13 +47,13 @@ function catAndMouse(mouse, cat1, cat2) {
   let positionCat1 = Math.abs(cat1 - mouse);
   let positionCat2 = Math.abs(cat2 - mouse);
 
-    if(positionCat1 < positionCat2) {
-      return 'cat1';
-    } else if (positionCat2 < positionCat1) {
-      return 'cat2';
-      } else {
-      return 'os gatos trombam e o rato foge';
-      }
+  if (positionCat1 < positionCat2) {
+   return 'cat1';
+  } else if (positionCat2 < positionCat1) {
+   return 'cat2';
+  } else {
+  return 'os gatos trombam e o rato foge';
+  }
 } // math.abs coletada no site; https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs//
 
 // Desafio 8
