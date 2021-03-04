@@ -27,7 +27,7 @@ function generatePhoneNumber(listNumber) {
 
   if (testListPhone(listNumber) === true) {
     return "não é possível gerar um número de telefone com esses valores";
-  } else if (listNumber.length > 11) {
+  } else if (listNumber.length > 10 || listNumber.length < 10) {
     return "Array com tamanho incorreto.";
   } else {
     for (let index = 0; index < 4; index += 1) {
@@ -72,7 +72,7 @@ function testListPhone(listNumber) {
         contRepete += 1;
       }
     }
-    if (contRepete > repetTree) {
+    if (contRepete > numberRepet) {
       numberRepet = contRepete;
     }
     contRepete = 0;
@@ -102,9 +102,10 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(myDrink) {
-  let arrayDrink = myDrink.split(' ');
+  let arrayDrink =  arrayDrink.replace(/\D/g, "");  // myDrink.split(' ');
   let contGlass = 0;
   let myGlassH20 = '';
+  console.log(arrayDrink)
 
   for (let index = 0; index < arrayDrink.length; index += 1) {
 
