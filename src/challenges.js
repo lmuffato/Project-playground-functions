@@ -38,7 +38,7 @@ function highestCount(numberArray) {
     if (numberArray[index] > highestNumber) {
       highestNumber = numberArray[index];
     }
-    for (highestNumber in numberArray) {
+    for (let index = 0; index < numberArray.length; index += 1) {
       if (numberArray[index] === highestNumber) {
         numberCounter += 1;
       }
