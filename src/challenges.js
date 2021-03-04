@@ -115,7 +115,7 @@ function decode(mensageWithCode) {
     if (numbersToVowels[mensageWithCode[index]]) {
       getTheMassage += mensageWithCode[index];
     } else {
-      getTheMassage = mensageWithCode[index];
+      getTheMassage += mensageWithCode[index];
     }
   }
   return getTheMassage;
