@@ -113,7 +113,7 @@ console.log(fizzBuzz([9, 25]));
 function encode(string) {
   let newString;
   let array = string.split('');
-  for (let index = 0; index < string.length; index += 1) {
+  for (let index = 0; index < array.length; index += 1) {
     if (array[index] === 'a') {
       newString += '1';
     } else if (array[index] === 'e') {
@@ -133,7 +133,7 @@ function encode(string) {
 function decode(string) {
   let newString;
   let array = string.split('');
-  for (let index = 0; index < string.length; index += 1) {
+  for (let index = 0; index < array.length; index += 1) {
     if (array[index] === '1') {
       newString += 'a';
     } else if (array[index] === '2') {
