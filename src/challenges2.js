@@ -47,12 +47,12 @@ function generatePhoneNumber(listNumber) {
     for (let index = 9; index < listNumber.length + delimitador; index += 1) {
       listLastPhone[index] = listNumber[index - delimitador];
     }
+    listFirstPhone = listFirstPhone.join('');
+    listDDDPhone = listDDDPhone.join('');
+    listLastPhone = listLastPhone.join('');
+    return listDDDPhone + ' ' + listFirstPhone + '-' + listLastPhone;
   }
 
-  listFirstPhone = listFirstPhone.join('');
-  listDDDPhone = listDDDPhone.join('');
-  listLastPhone = listLastPhone.join('');
-  return listDDDPhone + ' ' + listFirstPhone + '-' + listLastPhone;
 }
 function testListPhone(listNumber) {
   let numberZero = false;
@@ -77,6 +77,7 @@ function testListPhone(listNumber) {
     }
     contRepete = 0;
   }
+
   if (numberRepet >= 3) {
     repetTree = true;
   }
@@ -86,8 +87,6 @@ function testListPhone(listNumber) {
     return false
   }
 }
-
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -104,18 +103,18 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(myDrink) {
   let arrayDrink = myDrink.split(' ');
-  let contCopy = 0;
-  let myCopyH20 = '';
+  let contGlass = 0;
+  let myGlassH20 = '';
 
   for (let index = 0; index < arrayDrink.length; index += 1) {
 
   }
 
-  if (contCopy > 0) {
-    myCopyH20 += contCopy + ' copo de água'
+  if (contGlass > 0) {
+    myGlassH20 += contGlass + ' copo de água'
   }
 
-  return myCopyH20;
+  return myGlassH20;
 }
 
 console.log(hydrate('1 cerveja, 2 refrigerante'));
