@@ -152,12 +152,6 @@ function decode(str) {
   return decodedArr.join('');
 }
 
-console.log(encode('hi there!'));
-console.log(encode('Gustavo Sousa'));
-
-console.log(decode('h3 th2r2!'));
-console.log(decode('G5st1v4 S45s1'));
-
 module.exports = {
   calcArea,
   catAndMouse,
