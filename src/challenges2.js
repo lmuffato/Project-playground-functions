@@ -1,4 +1,6 @@
 // Desafio 10
+/*https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+Pelo site "aprendi" a dar sort em um array com objetos */
 function techList(array, name) {
   let objectArray = [];
   for (let index = 0; index < array.length; index += 1) {
@@ -6,12 +8,18 @@ function techList(array, name) {
       tech: array[index],
       name });
   }
-  return objectArray.sort();
-}
+  let reorderObjectArray = objectArray.sort(function(a,b) {
+    if (a.tech > b.tech) {
+      return 1;
+    }
+    if (a.tech < b.tech) {
+      return -1;
+    }
+    return 0;
+  })
 
-let array = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-let name = "Rodrigo";
-console.log(techList(array,name));
+  return reorderObjectArray;
+}
 
 // Desafio 11
 function generatePhoneNumber(array) {
