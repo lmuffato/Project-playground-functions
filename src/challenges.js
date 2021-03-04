@@ -34,20 +34,19 @@ function footballPoints(wins, ties) {
 function highestCount(numberArray) {
   let numCounter = 0;
   let highestNumber = 0;
-  for (let index = 1; index = Math.max.apply(...numberArray); index += 1) {
-    return index = highestNumber
+  for (let index = 1; index === Math.max.apply(...numberArray); index += 1) {
+    return index === highestNumber;
   }
   for (let index = 0; index < numberArray.length; index += 1) {
     if (index <= index[highestNumber]) {
-      numCounter += 1
+      numCounter += 1;
     } else {
-      index = numCounter
+      index = numCounter;
     }
   }
-  return index[numCounter]
+  return highestCount[numCounter];
 }
 
-}
 
 // Source: discussões no Slack, auxílio do Gabriel Pereira //
 // Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
