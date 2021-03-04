@@ -59,10 +59,11 @@ function createPhone(array) {
 
 // auxiliar desafio 11, primeiro if com 3 verificacoes, transformado em funcao para diminuir complexidade
 function checkFIrstIf(array) {
-  result = false;
+  let result = false;
   if (array.length === 11 && checkRange(array) === true && repeat3Times(array) === false) {
     result = true;
   }
+  return result;
 }
 
 // Desafio 11
