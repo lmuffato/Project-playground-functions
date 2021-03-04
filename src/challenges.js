@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(bool1, bool2) {
-  if (bool1 && bool2 ) {
+  if (bool1 && bool2) {
     return true;
   }
   return false;
@@ -98,7 +98,7 @@ function fizzBuzz(arrayFizz) {
 
 // Desafio 9
 function encode(string) {
-  let strSplit = string.split (' ')
+  let strSplit = string.split(' ');
   for (let index = 0; index < strSplit.length; index += 1) {
     if (strSplit[index] === 'a') {
       strSplit.push(1);
@@ -114,7 +114,7 @@ function encode(string) {
   }
   return strSplit;
 }
-console.log(encode('euquerocomer'))
+console.log(encode('euquerocomer'));
 function decode() {
   // seu código aqui
 }
