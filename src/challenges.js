@@ -57,7 +57,7 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7 (fazer)
 function catAndMouse() {
-
+  // seu código aqui
 }
 
 // Desafio 8
@@ -77,7 +77,6 @@ function fizzBuzz(numbers) {
   return modulo;
 }
 console.log(fizzBuzz([7, 9]));
-console.log('bug!', 'fizzBuzz', 'bug!', 'fizz', 'fizzBuzz'
 
 // Desafio 9
 function encode() {
