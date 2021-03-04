@@ -1,7 +1,7 @@
 // Desafio 10
 function techList(myArray, myString) {
     
-  if (myArray == 0) {
+  if (myArray.length < 1) {
     return 'vazio';
   }
 
