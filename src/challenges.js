@@ -28,11 +28,11 @@ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let winsPoints = wins * 3;  
-  let tiesPoints = ties *1 ;
+let winsPoints = wins * 3;  
+let tiesPoints = ties * 1;
   return winsPoints + tiesPoints;
 }
-console.log(footballPoints(1 , 2));
+console.log(footballPoints(1, 2));
 
 // Desafio 6
 function highestCount() {
