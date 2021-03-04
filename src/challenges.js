@@ -58,12 +58,26 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function Div3(number) {
+  let div3 = number % 3 === 0 ? true : false;
+  return div3;
+}
+function Div5(number) {
+  let div5 = number % 5 === 0 ? true : false;
+  return div5;
+}
+
 function phrase(number) {
-  if ((number % 3) === 0 && (number % 5) === 0) {
+  let div3 = Div3(number);
+  let div5 = Div5(number);
+  
+  if (div3 === true && div5 === true) {
     return 'fizzBuzz';
-  } if ((number % 3) === 0 && (number % 5) !== 0) {
+  } 
+  if (div3 === true) {
     return 'fizz';
-  } if ((number % 3) !== 0 && (number % 5) === 0) {
+  } 
+  if (div5 === true) {
     return 'buzz';
   }
   return 'bug!';
@@ -75,6 +89,7 @@ function fizzBuzz(arrayN8) {
   }
   return arrayN8;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function convert(stringX) {
