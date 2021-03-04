@@ -1,57 +1,59 @@
 // Desafio 10
-function techList(techArray, name) {
+function techList(techArray, studantName) {
   // seu código aqui
   let listOfTechs = [];
   if (techArray.length === 0) {
-    listOfTechs = 'Vazio!';    
+    listOfTechs = 'Vazio!';
   } else {
-    for (let index = 0; index < techArray.length; index += 1) {
-      let techItem = {
-        tech: '',
-        name: '',
+    for (let index = 0; index < techArray.sort().length; index += 1) {
+      const techItem = {
+        tech: techArray[index],
+        name: studantName,
       };
-      techItem.name = name;
-      techItem.tech = techArray[index];
       listOfTechs.push(techItem);
     }
   }
   return listOfTechs;
 }
 
-// let  technologies = ['zezim', 'huguim', 'luizim'];
-// let myName = 'Rogerio';
-// console.log(techList(technologies, myName));
+// Esta função retorna o número vezes aparece que um número repete em um array de números.
 
-// esta função retorna o número vezes aparece o número que mais se repete no arrayNumber
-
-function howManyRepete(testedArray) {
-  let count = 0;
-  let arrayNumbers = testedArray;
-  arrayNumbers.push();
-  let arrayOfRepetion = [];
-  let numberAvalided = arrayNumbers[0];
-  for (let index1 = 0; index1 < arrayNumbers.length; index1 += 1) {
-    if (arrayNumbers[index1] === numberAvalided) {
-      count += 1;
-    } else {
-      numberAvalided = arrayNumbers[index1];
-      arrayOfRepetion.push(count);
-      count = 1;
+function manyRepete(arrayNumbers, numberAvalided) {
+  let countRepete = 0;
+  for (let index2 = 0; index2 < arrayNumbers.length; index2 += 1) {
+    if (arrayNumbers[index2] === numberAvalided) {
+      countRepete += 1;
     }
   }
-  arrayOfRepetion.sort().reverse();
-  return arrayOfRepetion[0];
+  return countRepete;
 }
+
+// Esta função retorna o número vezes aparece o número que mais se repete no arrayNumber
+
+function howManyRepetions(arrayNumbers) {
+  let count = 0;
+  let maxRepetions = 0;
+  for (let index1 = 0; index1 < arrayNumbers.length; index1 += 1) {
+    count = manyRepete(arrayNumbers, arrayNumbers[index1]);
+    if (count > maxRepetions) {
+      maxRepetions = count;
+    }
+  }
+  return maxRepetions;
+}
+
+// Esta função realiza os testes se o número é válido e retorna true se for e false se não for
 
 function testValid(phoneNumberArray) {
   let isValid = true;
+  const testedArray = phoneNumberArray;
   for (let index = 0; index < phoneNumberArray.length; index += 1) {
     if (phoneNumberArray[index] < 0 || phoneNumberArray[index] > 9) {
       isValid = false;
       index = phoneNumberArray.length;
     }
   }
-  if (howManyRepete(phoneNumberArray) >= 3) {
+  if (howManyRepetions(testedArray) >= 3) {
     isValid = false;
   }
   return isValid;
@@ -105,9 +107,9 @@ function hydrate(drinks) {
     }
   }
   if (count > 1) {
-    mensage = count.toString(10) + ' copos de água';
+    mensage = `${count.toString(10)} copos de água`;
   } else {
-    mensage = count.toString(10) + ' copo de água';
+    mensage = `${count.toString(10)} copo de água`;
   }
   return mensage;
 }

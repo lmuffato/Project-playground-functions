@@ -31,7 +31,7 @@ function splitSentence(sentence) {
 // Desafio 4
 function concatName(originArray) {
   // seu código aqui
-  return originArray[originArray.length - 1] + ', ' + originArray[0];
+  return `${originArray[originArray.length - 1]}, ${originArray[0]}`;
 }
 
 // Desafio 5
@@ -72,28 +72,36 @@ function catAndMouse(mouse, cat1, cat2) {
   return result;
 }
 
+// a função avalia se o número é divisivel por 3, 5, 3 e 5, nem 3 nem 5; retornando respectivamente: 'fizz', 'buzz', 'fizzBuzz' e 'bug!'
+
+function caseFizzBuzz(numberAvalided) {
+  let result = '';
+  if (numberAvalided % 3 === 0) {
+    result = 'fizz';
+    if (numberAvalided % 5 === 0) {
+      result = 'fizzBuzz';
+    }
+  } else if (numberAvalided % 5 === 0) {
+    result = 'buzz';
+  } else {
+    result = 'bug!';
+  }
+  return result;
+}
+
 // Desafio 8
 function fizzBuzz(numbersArray) {
   // seu código aqui
   let word = '';
   let mensage = [];
   for (let index = 0; index < numbersArray.length; index += 1) {
-    if (numbersArray[index] % 3 === 0) {
-      word = 'fizz';
-      if (numbersArray[index] % 5 === 0) {
-        word = 'fizzBuzz';
-      }
-    } else if (numbersArray[index] % 5 === 0) {
-      word = 'buzz';
-    } else {
-      word = 'bug!';
-    }
-    mensage.push(word);
+    word = caseFizzBuzz(numbersArray[index]);
   }
+  mensage.push(word);
   return mensage;
 }
 
-// Função verifica se caractere é uma vogal e retorna true se for e false se não for.
+// Função verifica se caractere é uma vogal e retorna true se for e false se não for. 
 function isVogal(char) {
   return (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u');
 }
