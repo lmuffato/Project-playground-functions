@@ -41,17 +41,17 @@ function createPhoneNumber(number, index) {
   let stringNumber = number.toString();
 
   switch (index) {
-    case 0:
-      stringNumber = `(${stringNumber}`;
-      break;
-    case 1:
-      stringNumber = `${stringNumber}) `;
-      break;
-    case 7:
-      stringNumber = `-${stringNumber}`;
-      break;
+  case 0:
+    stringNumber = `(${stringNumber}`;
+    break;
+  case 1:
+    stringNumber = `${stringNumber}) `;
+    break;
+  case 7:
+    stringNumber = `-${stringNumber}`;
+    break;
 
-    default:
+  default:
   }
 
   return stringNumber;
