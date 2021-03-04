@@ -2,9 +2,8 @@
 function compareTrue(valueOne, valueTwo) {
   if (valueOne === true && valueTwo === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -26,7 +25,7 @@ function concatName(listName) {
   let indexLastName = listName.length;
   let lastName = listName[indexLastName - 1];
   let firstName = listName[0];
-  let concatNames = lastName + ', ' + firstName;
+  let concatNames = `${lastName}, ${firstName}`;
 
   return concatNames;
 }
@@ -91,15 +90,14 @@ function fizzBuzz(listNumbers) {
   let listArrayString = [];
 
   for (let index in listNumbers) {
-    
     if (listNumbers[index] % 3 === 0 && listNumbers[index] % 5 === 0) {
-      listArrayString.push("fizzBuzz");
+      listArrayString.push('fizzBuzz');
     } else if (listNumbers[index] % 3 === 0) {
-      listArrayString.push("fizz");
+      listArrayString.push('fizz');
     } else if (listNumbers[index] % 5 === 0) {
-      listArrayString.push("buzz");
+      listArrayString.push('buzz');
     } else {
-      listArrayString.push("bug!");
+      listArrayString.push('bug!');
     }
   }
 
@@ -108,7 +106,7 @@ function fizzBuzz(listNumbers) {
 
 // Desafio 9
 function encode(codStringCodif) {
-  let arrayCodif = codStringCodif.split("")
+  let arrayCodif = codStringCodif.split('');
 
   for (let index in arrayCodif) {
     if (arrayCodif[index] === 'a') {
@@ -127,7 +125,7 @@ function encode(codStringCodif) {
   return arrayCodif.join('');
 }
 function decode(codStringDecodif) {
-  let arrayDecodif = codStringDecodif.split("");
+  let arrayDecodif = codStringDecodif.split('');
 
   for (let index in arrayDecodif) {
     if (arrayDecodif[index] === '1') {
