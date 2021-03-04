@@ -28,27 +28,23 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbers) {
-  let higherNumber = 0;
   let count = 0;
-  for (let index = 0; index < numbers.lenght; index += 1) {
-    if (numbers[index] > higherNumber) {
-      higherNumber = numbers[index];
-    }
-  }
+  let higherNumber = Math.max(numbers);
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] === higherNumber) {
       count += 1;
     }
-    return count;
   }
+  return count;
 }
-
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
-  if (cat1 < cat2) {
-    return cat1;
-  } else if (cat2 < cat1) {
-    return cat2;
+  let distCat1 = cat1 - mouse;
+  let distCat2 = cat2 - mouse;
+  if (distCat1 < distCat2) {
+    return 'cat1';
+  } else if (distCat2 < distCat1) {
+    return 'cat2';
   } else {
     return 'Os gatos trombam e o rato foge';
   }
@@ -78,4 +74,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-}
+};
