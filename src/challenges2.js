@@ -5,7 +5,7 @@ function techList(myArray, myString) {
   let myObject = [];
 
   if (myArray.length === 0) {
-    return 'Vazio';
+    return 'Vazio!';
   }
 
   for (let index = 0; index < myArray.length; index += 1) {
@@ -16,12 +16,8 @@ function techList(myArray, myString) {
       },
     );
   }
-
   return myObject;
-  
 }
-
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'));
 
 // Desafio 11 
 function generatePhoneNumber(myArray) {
