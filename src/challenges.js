@@ -96,6 +96,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 // Exercicio corrigido com a ajuda do código do Jodiel Briesemeister e com as dicas de Lucas Pedroso, Anderson Nascimento e Guilherme Dornelles
+// Link: https://trybecourse.slack.com/archives/C01L16B9XC7/p1614728098441600
 function compareDivison(numberBuzz) {
   let newBuzz;
 
@@ -122,11 +123,49 @@ function fizzBuzz(arrayBuzz) {
 }
 
 // Desafio 9
-function encode() {
+//Exercicio corrigido com a ajuda do código do Jodiel Beatriz Barbosa e com as dicas de Orlando Flores, Rafael Medeiros e Murilo Gonçalves
+//Link: https://trybecourse.slack.com/archives/C01L16B9XC7/p1614777217479100
+function encode(string) {
   // seu código aqui
+  let newphrases = string.split('');
+
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === 'a') {
+      newphrases[index] = 1;
+    } else if (string[index] === 'e') {
+      newphrases[index] = 2;
+    } else if (string[index] === 'i') {
+      newphrases[index] = 3;
+    } else if (string[index] === 'o') {
+      newphrases[index] = 4;
+    } else if (string[index] === 'u') {
+      newphrases[index] = 5;
+    } else {
+      newphrases[index] = string[index];
+    }
+  }
+  return newphrases.join('');
 }
-function decode() {
+function decode(string2) {
   // seu código aqui
+  let newphrases2 = string2.split('');
+
+  for (let index = 0; index < string2.length; index += 1) {
+    if (string2[index] == 1) {
+      newphrases2[index] = 'a';
+    } else if (string2[index] == 2) {
+      newphrases2[index] = 'e';
+    } else if (string2[index] == 3) {
+      newphrases2[index] = 'i';
+    } else if (string2[index] == 4) {
+      newphrases2[index] = 'o';
+    } else if (string2[index] == 5) {
+      newphrases2[index] = 'u';
+    } else {
+      newphrases2[index] = string2[index];
+    }
+  }
+  return newphrases2.join('');
 }
 
 module.exports = {
