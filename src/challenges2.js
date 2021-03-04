@@ -24,11 +24,11 @@ function generatePhoneNumber(listNumber) {
   let listDDDPhone = [];
   let listLastPhone = [];
   let delimitador = 0;
-
-  if (testListPhone(listNumber) === true) {
+ 
+  if (listNumber.length > 11 || listNumber.length < 11) {
+    return "Array com tamanho incorreto."; 
+  } else if (testListPhone(listNumber) === true) {
     return "não é possível gerar um número de telefone com esses valores";
-  } else if (listNumber.length > 10 || listNumber.length < 10) {
-    return "Array com tamanho incorreto.";
   } else {
     for (let index = 0; index < 4; index += 1) {
       if(index === 0) {
