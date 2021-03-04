@@ -95,31 +95,30 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-// Exercicio corrigido com a ajuda do Jodiel Briesemeister e Murilo Gonçalves
-function compareDivison(arrayBuzz){
+// Exercicio corrigido com a ajuda do código do Jodiel Briesemeister e com as dicas de Lucas Pedroso, Anderson Nascimento e Guilherme Dornelles
+function compareDivison(numberBuzz) {
   let newBuzz;
-  for (let index = 0; index < arrayBuzz.length; index += 1) {
-    if (arrayBuzz[index] % 3 === 0 && arrayBuzz[index] % 5 === 0) {
-      newBuzz = 'fizzBuzz';
-    } else if (arrayBuzz[index] % 3 === 0) {
-      newBuzz = 'fizz';
-    } else if (arrayBuzz[index] % 5 === 0) {
-      newBuzz = 'buzz';
-    } else {
-      newBuzz = 'bug!';
-    }
+
+  if (numberBuzz % 3 === 0 && numberBuzz % 5 === 0) {
+    newBuzz = 'fizBuzz';
+  } else if (numberBuzz % 3 === 0) {
+    newBuzz = 'fizz';
+  } else if (numberBuzz % 5 === 0) {
+    newBuzz = 'buzz';
+  } else {
+    newBuzz = 'bug!';
   }
   return newBuzz;
 }
 
-function fizzBuzz(newBuzz) {
+function fizzBuzz(arrayBuzz) {
   // seu código aqui
-  let fizzBuzz = [];
+  let newBuzz = [];
 
-  for (let index = 0; index < newBuzz.length; index += 1) {
-    fizzBuzz[index] = compareDivison((newBuzz[index]));
+  for (let index = 0; index < arrayBuzz.length; index += 1) {
+    newBuzz.push(compareDivison(arrayBuzz[index]));
   }
-  return fizzBuzz;
+  return newBuzz;
 }
 
 // Desafio 9
