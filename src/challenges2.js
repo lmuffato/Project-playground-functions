@@ -130,20 +130,27 @@ console.log(triangleCheck(10, 14, 8));
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 
 // Desafio 13
+
 function hydrate(welcome) {
-  let glassOfWater = 'copo(s) de água';
-  let message;
+  let glassOfWater = 'copo de água';
+  let glassesOfWater = 'copos de água';
   for (let key = 0; key < welcome.length; key += 1) {
     if (welcome.match(/\d+/g).map(Number)) {
       let numbers = (welcome.match(/\d+/g).map(Number));
       let sumOfNumbers = numbers.reduce(function (total, num) {
         return parseFloat(total) + parseFloat(num);
       });
-      message = `${sumOfNumbers} ${glassOfWater}`;
+      if (sumOfNumbers > 1) {
+        return `${sumOfNumbers} ${glassesOfWater}`;
+      }
+      if (sumOfNumbers === 1) {
+        return `${sumOfNumbers} ${glassOfWater}`;
+      }
     }
   }
-  return message;
 }
+let myString = '1 cachaça';
+console.log(hydrate(myString));
 
 // Para resolução do Desafio 13, foram consultadas as referências abaixo:
 // https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
