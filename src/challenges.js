@@ -76,7 +76,7 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  let codingString = "";
+  let codingString = [];
   for (let index = 0; index < string.length; index += 1){
      codingString = string[index]
       switch (string[index]) {
@@ -108,7 +108,7 @@ function encode(string) {
 }
 
 function decode(string) {
-  let decodingString = "";
+  let decodingString = [];
   for (let index = 0; index < string.length; index += 1){
     decodingString = string[index]
       switch (string[index]) {
