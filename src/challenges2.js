@@ -1,20 +1,18 @@
 // Desafio 10
-function techList(techNames, name,) {
+function techList(techNames, name) {
   // seu código aqui
   let technologies = [];
   if (techNames.length <= 0) {
-    console.log('Vazio!');
+    return 'Vazio!';
   }
   for (let techName in techNames.sort()) {
     technologies.push({
       tech: techNames[techName],
       name: name,
     });
-  } return (technologies);
+  } return technologies;
 }
-techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Alexandre');
-
-
+techList([], 'Alexandre');
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
@@ -35,4 +33,4 @@ module.exports = {
   techList,
   hydrate,
   triangleCheck,
-}
+};
