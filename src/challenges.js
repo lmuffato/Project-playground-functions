@@ -122,11 +122,44 @@ function fizzBuzz(arrayNumbers) {
 // ou seja, recebe uma string contendo números
 // no lugar de letras minúsculas e retornará uma string
 // com vogais minúsculas no lugar dos números
-function encode() {
+
+function encode(phrase) {
+  let encodeConversionTable = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  let newPhrase;
+  newPhrase = phrase.replace(/a|e|i|o|u/g, function (match) {
+    return encodeConversionTable[match];
+  });
+  return newPhrase;
 }
 
-function decode() {
+function decode(phrase) {
+  let decodeConversionTable = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  let newPhrase;
+  newPhrase = phrase.replace(/1|2|3|4|5/g, function (match) {
+    return decodeConversionTable[match];
+  });
+  return newPhrase;
 }
+// Para a resolução do desafio 9, foi consultada a seguinte documentação:
+// https://stackoverflow.com/questions/16576983/replace-multiple-characters-in-one-replace-call#:~:text=If%20you%20want%20to%20replace%20multiple%20characters%20you%20can%20call,will%20use%20in%20that%20function.
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match
+// https://www.w3schools.com/jsref/jsref_replace.asp
+// https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176#:~:text=Em%20caso%20de%20mais%20de,express%C3%A3o%20regular%20no%20primeiro%20par%C3%A2metro.
+// https://www.alura.com.br/artigos/javascript-replace-manipulando-strings-e-regex
+// Deixo também meus agradecimentos ao colega Luciano Amâncio, que postou link para um vídeo ensinando o replace, segue link da thread no Slack:
+// https://trybecourse.slack.com/archives/C01L16B9XC7/p1614871138144700
 
 module.exports = {
   calcArea,
