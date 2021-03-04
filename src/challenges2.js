@@ -40,16 +40,18 @@ function verifyBiggerSmaller(telephone) {
 function createPhoneNumber(number, index) {
   let stringNumber = number.toString();
 
-  if (index === 0) {
-    return `(${stringNumber}`;
-  }
+  switch (index) {
+  case 0:
+    stringNumber = `(${stringNumber}`;
+    break;
+  case 1:
+    stringNumber = `${stringNumber}) `;
+    break;
+  case 7:
+    stringNumber = `-${stringNumber}`;
+    break;
 
-  if (index === 1) {
-    return `${stringNumber}) `;
-  }
-
-  if (index === 7) {
-    return `-${stringNumber}`;
+  default:
   }
 
   return stringNumber;
