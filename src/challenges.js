@@ -18,8 +18,8 @@ function concatName(array) {
   let lastName = array[array.length-1];
   let newArray = [lastName];
   let firstName = [array[0]];
-  let res = newArray.concat(firstName);
-  return res
+  let resposta = newArray.concat(firstName);
+  return resposta
 }
 
 // Desafio 5 OK
@@ -30,16 +30,16 @@ function footballPoints(wins,ties) {
 
 // Desafio 6
 function highestCount(array) {
-  // for (let index = 0; index < array.length; index += 1){
-  //   let newArray = array[index];
+  let highNumber = Math.max(...array);
+  let sumHighestCount = [];
+  for (let index = 0; index < array.length; index += 1){
+    let newArray = array[index];
 
-  //     if (newArray[index] === array[index]) {
-  //       let sumHighestCount += 1;
-  //     }
-// usar 2 fors, um para ver qual q é o maior, outro para contar cada ida
-  // }
-
-  // return sumHighestCount;
+      if (newArray[index] === highNumber {
+        let sumHighestCount += 1;
+      }
+    }
+    return sumHighestCount;
 }
 
 // Desafio 7 OK
