@@ -43,12 +43,13 @@ function catAndMouse(mouse, cat1, cat2) {
   let distCat2 = Math.abs(mouse - cat2);
   if (distCat1 < distCat2) {
     return 'cat1';
-  } else if (distCat2 < distCat1) {
+  } if (distCat2 < distCat1) {
     return 'cat2';
-  } else if (distCat1 === distCat2) {
+  } if (distCat1 === distCat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
+
 // Desafio 8
 function fizzBuzz(numbers) {
   let newArray = [];
