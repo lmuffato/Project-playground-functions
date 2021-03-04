@@ -41,17 +41,17 @@ function createPhoneNumber(number, index) {
   let stringNumber = number.toString();
 
   switch (index) {
-  case 0:
-    stringNumber = `(${stringNumber}`;
-    break;
-  case 1:
-    stringNumber = `${stringNumber}) `;
-    break;
-  case 7:
-    stringNumber = `-${stringNumber}`;
-    break;
+    case 0:
+      stringNumber = `(${stringNumber}`;
+      break;
+    case 1:
+      stringNumber = `${stringNumber}) `;
+      break;
+    case 7:
+      stringNumber = `-${stringNumber}`;
+      break;
 
-  default:
+    default:
   }
 
   return stringNumber;
@@ -74,8 +74,8 @@ function generatePhoneNumber(telephone) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  return 2 * Math.abs(lineA - lineB - lineC) < lineA + lineB + lineC;
 }
 
 // Desafio 13
@@ -99,4 +99,5 @@ https://flaviocopes.com/how-to-find-duplicates-array-javascript/
 https://eslint.org/docs/rules/no-else-return
 https://stackoverflow.com/questions/24074968/does-sort-function-change-original-array
 https://oprea.rocks/blog/what-do-the-three-dots-mean-in-javascript/
+Recomendação do Rafael Medeiros: https://en.wikipedia.org/wiki/Triangle_inequality
 */
