@@ -28,7 +28,7 @@ function footballPoints(wins,ties) {
   return(resultWins + ties);
 }
 
-// Desafio 6
+// Desafio 6 AGORA FOI!
 function highestCount(array) {
   let highNumber = Math.max(...array);
   let sumHighestCount = 0
@@ -80,23 +80,23 @@ function encode(string) {
      codingString = string[index]
       switch (string[index]) {
         case string[index] === "a":
-          codingString.concat('1');
+          codingString.replace('1');
           break;
 
         case string[index] === "e":
-        codingString.concat('2');
+        codingString.replace('2');
         break;
        
         case string[index] === "i":
-          codingString.concat('3');
+          codingString.replace('3');
           break;
 
         case string[index] === "o":
-        codingString.concat('4');
+        codingString.replace('4');
         break;
 
         case string[index] === "u":
-        codingString.concat('5');
+        codingString.replace('5');
         break;
 
         default:
@@ -113,27 +113,27 @@ function decode(string) {
       switch (string[index]) {
         
         case string[index] === '1':
-        decodingString.concat('a');
+        decodingString.replace('a');
         break;
 
         case string[index] === '2':
-        decodingString.concat('e');
+        decodingString.replace('e');
         break;
        
         case string[index] === "3":
-        decodingString.concat('i');
+        decodingString.replace('i');
         break;
 
         case string[index] === "4":
-        decodingString.concat('o');
+        decodingString.replace('o');
         break;
 
         case string[index] === "5":
-        decodingString.concat('u');
+        decodingString.replace('u');
         break;
 
         default:
-        decodingString.concat(string[index])
+        decodingString.replace(string[index])
       }
       return decodingString
     }
