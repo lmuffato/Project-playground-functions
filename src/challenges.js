@@ -34,21 +34,19 @@ function footballPoints(wins, ties) {
 function highestCount(numberArray) {
   let highestNumber = 0;
   let numberCounter = 0;
-  for (let index = 0; index <= [numberArray].length; index += 1) {
+  for (let index = 0; index < numberArray.length; index += 1) {
     if (numberArray[index] > highestNumber) {
-      numberArray[index] = highestNumber;
+      highestNumber = numberArray[index];
     }
-    for (highestNumber in numberArray[index]) {
-      if (numberCounter === highestNumber) {
-        numberCounter = undefined;
-      } else {
+    for (highestNumber in numberArray) {
+      if (numberArray[index] === highestNumber) {
         numberCounter += 1;
       }
-    }
-  } return numberCounter[numberArray];
+    } return numberCounter;
+}
 }
 
-
+// Source: https://www.w3schools.com/jsref/jsref_forin.asp //
 // Source: discussões no Slack, auxílio do Gabriel Pereira, auxílio do PH //
 // Source: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 // Visita ao repositório do João Nasc: https://github.com/tryber/sd-010-a-project-playground-functions/pull/132/commits/e391 //
