@@ -67,9 +67,56 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'cat1';
 }
 
-// Desafio 8
-function fizzBuzz() {
+function isDivisible(dividend, divisor) {
+  if (dividend % divisor === 0) {
+    return true;
+  }
+  return false;
+}
 
+function isFizz(currentIndex, challengueArray) {
+  let divBy3 = isDivisible(currentIndex, 3);
+  let divBy5 = isDivisible(currentIndex, 5);
+  if (divBy3 && !divBy5) {
+    challengueArray.push('fizz');
+  }
+}
+
+function isBuzz(currentIndex, challengueArray) {
+  let divBy3 = isDivisible(currentIndex, 3);
+  let divBy5 = isDivisible(currentIndex, 5);
+  if (!divBy3 && divBy5) {
+    challengueArray.push('buzz');
+  }
+}
+
+function isFizzBuzz(currentIndex, challengueArray) {
+  let divBy3 = isDivisible(currentIndex, 3);
+  let divBy5 = isDivisible(currentIndex, 5);
+  if (divBy3 && divBy5) {
+    challengueArray.push('fizzBuzz');
+  }
+}
+
+function bug(currentIndex, challengueArray) {
+  let divBy3 = isDivisible(currentIndex, 3);
+  let divBy5 = isDivisible(currentIndex, 5);
+  if (!divBy3 && !divBy5) {
+    challengueArray.push('bug!');
+  }
+}
+
+// Desafio 8
+function fizzBuzz(array) {
+  let result = [];
+  for (let index = 0; index < array.length; index += 1) {
+    let currentIndex = array[index];
+    isFizz(currentIndex, result);
+    isBuzz(currentIndex, result);
+    isFizzBuzz(currentIndex, result);
+    bug(currentIndex, result);
+  }
+  return result;
 }
 
 // Desafio 9
