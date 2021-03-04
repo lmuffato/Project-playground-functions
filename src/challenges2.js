@@ -74,7 +74,7 @@ console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 function checkValueA(lineA, lineB, lineC) {
   let lineCheck = lineA;
   let somaCheck = lineB + lineC;
-  let absoluteCheck = Math.abs(lineA - lineB - lineC);
+  let absoluteCheck = Math.abs(lineB - lineC);
   if (lineCheck < somaCheck && lineCheck > absoluteCheck) {
     return true;
   }
@@ -84,7 +84,7 @@ function checkValueA(lineA, lineB, lineC) {
 function checkValueB(lineA, lineB, lineC) {
   let lineCheck = lineB;
   let somaCheck = lineA + lineC;
-  let absoluteCheck = Math.abs(lineA - lineB - lineC);
+  let absoluteCheck = Math.abs(lineA - lineC);
   if (lineCheck < somaCheck && lineCheck > absoluteCheck) {
     return true;
   }
@@ -94,7 +94,7 @@ function checkValueB(lineA, lineB, lineC) {
 function checkValueC(lineA, lineB, lineC) {
   let lineCheck = lineC;
   let somaCheck = lineA + lineB;
-  let absoluteCheck = Math.abs(lineA - lineB - lineC);
+  let absoluteCheck = Math.abs(lineB - lineA);
   if (lineCheck < somaCheck && lineCheck > absoluteCheck) {
     return true;
   }
@@ -105,7 +105,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let valueA = checkValueA(lineA, lineB, lineC);
   let valueB = checkValueB(lineA, lineB, lineC);
   let valueC = checkValueC(lineA, lineB, lineC);
-  if (valueA === true || valueB === true || valueC === true) {
+  if (valueA === true && valueB === true && valueC === true) {
     return true;
   }
   return false;
