@@ -13,9 +13,8 @@ function calcArea(base, height) {
 }
 
 // Desafio 3 - Aprendi a usar o SPLIT no site https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254
-function splitSentence() {
-  let frase = "Boa tarde Turma-10 Tribo-A";
-  let fraseSplit = frase.split(" ");
+function splitSentence(frase, fraseSplit) {
+  let fraseSplit = frase.split(' ');
   return fraseSplit;
 }
 
