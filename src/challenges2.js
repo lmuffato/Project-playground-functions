@@ -24,15 +24,15 @@ function indexBiggerLower(array) {
 }
 
 function checkEqual(array) {
+  let isEqual = 0;
   for (let index = 0; index < array.length; index += 1) {
-    let isEqual = 0;
-    for (let index1 = 0; index1 < array.length; index1 += 1) {
+    for (let index1 = index + 1; index1 < array.length - 1; index1 += 1) {
       if (array[index] === array[index1]) {
         isEqual += 1;
       }
-      if (isEqual >= 3) {
-        return true;
-      }
+    }
+    if (isEqual >= 3) {
+      return true;
     }
   }
   return false;
@@ -43,7 +43,7 @@ function generatePhoneNumber(array) {
   let result = '';
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
-  } if (indexBiggerLower(array) === true && checkEqual(array) === true) {
+  } if ((indexBiggerLower(array)) === true || (checkEqual(array)) === true) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   for (let index = 0; index < array.length; index += 1) {
@@ -51,6 +51,7 @@ function generatePhoneNumber(array) {
       result += '(';
     } if (index === 2) {
       result += ')';
+      result += ' ';
     } if (index === 7) {
       result += '-';
     }
@@ -58,7 +59,6 @@ function generatePhoneNumber(array) {
   }
   return result;
 }
-
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
