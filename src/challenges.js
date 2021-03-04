@@ -2,54 +2,46 @@
 function compareTrue(a, b) {
   if (a && b) {
     return true;
-  }else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return ( (base * height) / 2)
+  return ((base * height) / 2);
 }
 
 // Desafio 3
 function splitSentence(phrase) {
-  return phrase.split(' ')
+  return phrase.split(' ');
 }
 
 // Desafio 4
 function concatName(stringsArray) {
-  let outputString = ''
+  let outputString = '';
 
-  outputString = `${stringsArray[stringsArray.length - 1]} ${stringsArray[0]}`
+  outputString = `${stringsArray[stringsArray.length - 1]} ${stringsArray[0]}`;
 
   return outputString;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let totalPoints = (wins * 3) + ties
+  let totalPoints = (wins * 3) + ties;
 
   return totalPoints;
 }
 
 // Desafio 6
 function highestCount(numbersArray) {
-  let highNumber = 0;
+  let highNumber = Math.max.apply(null, numbersArray);
   let highNumberCount = 0;
 
-  for (let index = 0 ; index < numbersArray.length ; index += 1){
-    if (numbersArray[index] > highNumber) {
-      highNumber = numbersArray[index];
-    }
-  }
-
-  numbersArray.map((number) => {
-    if (highNumber == number) {
+  for (let index = 0; index < numbersArray.length; index += 1) {
+    if (highNumber === numbersArray[index]) {
       highNumberCount += 1;
     }
-  })
-
+  }
   return highNumberCount;
 }
 
@@ -60,81 +52,60 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (distanceFirstCat > distanceSecondCat) {
     return 'cat2';
-  } else if (distanceFirstCat < distanceSecondCat) {
-    return 'cat1';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+
+  if (distanceFirstCat < distanceSecondCat) {
+    return 'cat1';
+  }
+
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
-function fizzBuzz(numbersArrayFizzBuzz) {
-  let fizzBuzzStringArray = [];
-
-  numbersArrayFizzBuzz.map((num) => {
-    if ( (num % 3) == 0 && (num % 5) == 0 ) {
-      fizzBuzzStringArray.push('fizzBuzz');
-    } else if ( (num % 3) == 0 ) {
-      fizzBuzzStringArray.push('fizz');
-    } else if ( (num % 5) == 0 ) {
-      fizzBuzzStringArray.push('buzz');
-    } else {
-      fizzBuzzStringArray.push('bug!')
+function fizzBuzz(numbersArray) {
+  return numbersArray.map((item) => {
+    if ((item % 15) === 0) {
+      return 'fizzBuzz';
     }
-  })
-
-  return fizzBuzzStringArray;
+    if ((item % 3) === 0) {
+      return 'fizz';
+    }
+    if ((item % 5) === 0) {
+      return 'buzz';
+    }
+    return 'bug!';
+  });
 }
 
 // Desafio 9
-function encode(encodeStringParam) {
-  function encodeLetter(letter) {
-    switch (letter) {
-      case 'a': 
-        return '1'
-      case 'e': 
-        return '2'
-      case 'i': 
-        return '3'
-      case 'o': 
-        return '4'
-      case 'u': 
-        return '5'
-      default:
-        return letter
+const letterToChange = {
+  a: 1,
+  e: 2,
+  i: 3,
+  o: 4,
+  u: 5,
+}; // Colega Lucas Pedroso me deu uma luz na criação deste objeto
+
+function encode(decodedString) {
+  let output = decodedString;
+  for (const letter in letterToChange) {
+    if (letter) { //  verifica existência da chave
+      const regex = `${letter}`;
+      output = output.replace(RegExp(regex, 'gi'), letterToChange[letter]);
     }
   }
-
-  let encodedString = encodeStringParam.split(' ').map((item) => {
-    return item.split('').map(encodeLetter).join('')
-  }).join(' ');
-
-  return encodedString;
+  return output;
 }
 
-function decode(decodeStringParam) {
-  function decodeNumber(number) {
-    switch (number) {
-      case '1': 
-        return 'a'
-      case '2': 
-        return 'e'
-      case '3': 
-        return 'i'
-      case '4': 
-        return 'o'
-      case '5': 
-        return 'u'
-      default:
-        return number
+function decode(encodedString) {
+  let output = encodedString;
+  for (const letter in letterToChange) {
+    if (letter) { //  verifica existência da chave
+      const regex = `${letter}`;
+      output = output.replace(RegExp(letterToChange[letter], 'gi'), regex);
     }
   }
-
-  let decodedString = decodeStringParam.split(' ').map((item) => {
-    return item.split('').map(decodeNumber).join('')
-  }).join(' ');
-
-  return decodedString;
+  return output;
 }
 
 module.exports = {
