@@ -53,8 +53,6 @@ function validation(arr) {
     }
   }
 
-  console.log(count);
-
   if(count >= 3){
     return 'não é possível gerar um número de telefone com esses valores';
   }
