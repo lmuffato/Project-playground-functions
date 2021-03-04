@@ -61,8 +61,14 @@ function generatePhoneNumber(array) {
   return result;
 }
 
+// função auxiliar exercicio 12 verifica se um lado é menor do que a soma dos outro dois
+function verifySum(lineA, lineB, lineC) {
+
+}
+// função auxiliar verifia se a soma dos dois lados é maior do que a diferenca em valor absoluto
+
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
 }
 
