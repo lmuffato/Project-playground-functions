@@ -22,13 +22,13 @@ function splitSentence(sentence) {
 // Desafio 4
 function concatName (name = []) {
   // seu código aqui
-    let lastName = name[name.length - 1];
-  concatName =  [lastName, name[0]]
+    let lastName = [name[name.length - 1]];
+  concatName =  lastName.concat(name[0])
     return concatName
+
  }
 
-
-// Desafio 5
+ // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
      return (wins*3 + ties);
