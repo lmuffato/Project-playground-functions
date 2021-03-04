@@ -90,23 +90,29 @@ function triangleCheck(lineA, lineB, lineC) {
   return result;
 }
 
-// Desafio 13
-function hydrate(string) {
+// auxiliar desafio 13 recebe uma string, trnasforma em array e conta os numeros
+function sumWater(string) {
   let array = string.split('');
   let sum = 0;
-  let result;
-  for (let index = 0; index < array.length; index +=1) {
+  for (let index = 0; index < array.length; index += 1) {
     if (array[index] >= 0 && array[index] <= 9) {
       let int = Math.abs(array[index]);
       sum += int;
     }
+  }
+  return sum;
+}
+
+// Desafio 13
+function hydrate(string) {
+  let sum = sumWater(string);
+  let result;
     if (sum === 1) {
       result = '1 copo de água';
-    } else if (sum > 1){
+    } else if (sum > 1) {
       let num = sum.toString();
       result = num.concat(' copos de água');
     }
-  }
   return result;
 }
 
