@@ -1,8 +1,7 @@
 // Desafio 1
 function compareTrue(boolean1, boolean2) {
   // seu código aqui.
-  if(boolean1 && boolean2 == true){
-    return true;
+  if (boolean1 && boolean2 == true){return true;
   }
   else {
     return false;
@@ -11,7 +10,6 @@ function compareTrue(boolean1, boolean2) {
 console.log(compareTrue(false, true));
 console.log(compareTrue(false, false));
 console.log(compareTrue(true, true));
-
 // Desafio 2
 function calcArea(base, height) {
   let count = base * height;
@@ -19,8 +17,8 @@ function calcArea(base, height) {
   return count2;
 }
 console.log(calcArea(10, 50));
-console.log(calcArea(5, 2));
-console.log(calcArea(51, 1));
+console.log(calcArea(5,2));
+console.log(calcArea(51,1));
 
 // Desafio 3
 function splitSentence(sentence) {
@@ -34,6 +32,7 @@ console.log(splitSentence('foguete'));
 // Desafio 4
 function concatName() {
   // seu código aqui
+ 
 }
 
 // Desafio 5
