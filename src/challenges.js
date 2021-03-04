@@ -42,8 +42,6 @@ let ocr = [num.forEach(higher)]
   return ocr
 }  
 
-console.log(highestCount(num[1,1,3,3,5]))
-
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
