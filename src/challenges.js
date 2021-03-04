@@ -63,15 +63,15 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distanceCat1 < distanceCat2) {
     return 'cat1';
   } else if (distanceCat2 < distanceCat1) {
-    return 'cat2;'
+    return 'cat2';
   } else {
     return 'os gatos trombam e o rato foge';
   }
 }
-console.log(catAndMouse(2, 5, 3));
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  divisible3 = 
 }
 
 // Desafio 9
