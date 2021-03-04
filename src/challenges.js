@@ -34,16 +34,15 @@ function highestCount(array) {
 }
 
 // Desafio 7
-const cat1Closed = (mouse, cat1, cat2) => (mouse < cat1 && cat1 < cat2)
-  || (mouse > cat1 && cat1 > cat2);
-const cat2Closed = (mouse, cat1, cat2) => (mouse < cat2 && cat2 < cat1)
-  || (mouse > cat2 && cat2 > cat1);
+// Wanderson Sales Tribo A me salvou me lembrando que 1 gato poderia estar abaixo do rato e o outro acima =D
 function catAndMouse(mouse, cat1, cat2) {
-  if (cat1 === cat2) return 'os gatos trombam e o rato foge';
+  let cat1Distance = Math.abs(mouse - cat1);
+  let cat2Distance = Math.abs(mouse - cat2);
+  if (cat1Distance === cat2Distance) return 'os gatos trombam e o rato foge';
   let result;
-  if (cat1Closed(mouse, cat1, cat2)) {
+  if (cat1Distance < cat2Distance) {
     result = 'cat1';
-  } else if (cat2Closed(mouse, cat1, cat2)) {
+  } else if (cat1Distance > cat2Distance) {
     result = 'cat2';
   }
   return result;
