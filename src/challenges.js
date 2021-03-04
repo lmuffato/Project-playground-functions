@@ -1,4 +1,4 @@
-// Desafio 1
+z// Desafio 1
 function compareTrue(number1, number2) {
   // seu código aqui
   return number1 && number2;
@@ -29,8 +29,9 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+  return (array[0] + ', ' + array[array.length -1]);
 }
 
 // Desafio 5
