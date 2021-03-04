@@ -3,6 +3,9 @@
 Pelo site "aprendi" a dar sort em um array com objetos */
 function techList(array, name) {
   let objectArray = [];
+  if (array.length === 0) {
+    return 'Vazio!';
+  }
   for (let index = 0; index < array.length; index += 1) {
     objectArray.push({
       tech: array[index],
@@ -14,11 +17,14 @@ function techList(array, name) {
     }
     if (a.tech < b.tech) {
       return -1;
-    }
-    return 0;
+    } return 0;
   });
   return reorderObjectArray;
 }
+let array = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+let name = "Lucas";
+
+console.log(techList(array, name));
 
 // Desafio 11
 function generatePhoneNumber(array) {
