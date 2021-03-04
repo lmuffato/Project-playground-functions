@@ -17,8 +17,8 @@ function splitSentence(string) {
   let j = 0;
   let array = [string[0]];
 
-  for (i = 1; i < string.length; i += 1){
-    if (string[i] != ' '){
+  for (i = 1; i < string.length; i += 1) {
+    if (string[i] !== ' ') {
       array[j] += string[i];
     }
     else {
@@ -33,13 +33,14 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   // seu código aqui
-  let string = array[array.length -1] + ', ' + array[0];
+  let string = array[array.length - 1] + ', ' + array[0];
   return string;
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  return (3 * wins) + ties; 
 }
 
 // Desafio 6
