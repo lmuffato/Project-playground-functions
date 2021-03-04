@@ -9,7 +9,7 @@ function compareTrue(option1, option2) {
     return false
   } 
 }
-console.log(compareTrue(option2, option1))
+
 // Desafio 2
 function calcArea() {
   // seu código aqui
