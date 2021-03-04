@@ -41,8 +41,8 @@ function findWhichIsBigger(numbers) {
 function highestCount(numbers) {
   let selecTheBigger = findWhichIsBigger(numbers);
   let couter = 0;
-  for (let index; index < numbers.length - 1; index += 1) {
-    if (selecTheBigger === numbers[index]) {
+  for (let key in numbers) {
+    if (selecTheBigger === numbers[key]) {
       couter += 1;
     }
   }
