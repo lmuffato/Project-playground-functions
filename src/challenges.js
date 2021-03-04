@@ -107,46 +107,31 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function letterToNumber(letter) {
-  if (letter === 'a') {
-    return 1;
-  }
-  if (letter === 'e') {
-    return 2;
-  }
-  if (letter === 'i') {
-    return 3;
-  }
-  if (letter === 'o') {
-    return 4;
-  }
-  if (letter === 'u') {
-    return 5;
+  let num = ['1', '2', '3', '4', '5'];
+  let vowel = ['a', 'e', 'i', 'o', 'u'];
+  for (let index = 0; index < num.length; index += 1) {
+    if (letter === vowel[index]) {
+      return num[index];
+    }
   }
   return letter;
+}
+
+function numberToLetter(number) {
+  let num = ['1', '2', '3', '4', '5'];
+  let vowel = ['a', 'e', 'i', 'o', 'u'];
+  for (let index = 0; index < num.length; index += 1) {
+    if (number === num[index]) {
+      return vowel[index];
+    }
+  }
+  return number;
 }
 
 function encode(string) {
   let aux = '';
   for (let index = 0; index < string.length; index += 1) {
-    switch (string[index]) {
-    case 'a':
-      aux += 1;
-      break;
-    case 'e':
-      aux += 2;
-      break;
-    case 'i':
-      aux += 3;
-      break;
-    case 'o':
-      aux += 4;
-      break;
-    case 'u':
-      aux += 5;
-      break;
-    default:
-      aux += string[index];
-    }
+    aux += letterToNumber(string[index]);
   }
   return aux;
 }
@@ -154,25 +139,7 @@ function encode(string) {
 function decode(string) {
   let aux = '';
   for (let index = 0; index < string.length; index += 1) {
-    switch (string[index]) {
-    case '1':
-      aux += 'a';
-      break;
-    case '2':
-      aux += 'e';
-      break;
-    case '3':
-      aux += 'i';
-      break;
-    case '4':
-      aux += 'o';
-      break;
-    case '5':
-      aux += 'u';
-      break;
-    default:
-      aux += string[index];
-    }
+    aux += numberToLetter(string[index]);
   }
   return aux;
 }
