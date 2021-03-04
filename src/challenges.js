@@ -1,12 +1,12 @@
 // Desafio 1
 function compareTrue(valueA, valueB) {
   // seu código aqui
-  if (valueA === true && valueB === true) {
-    return True;
-       } 
-       return False;
- }  
+   return (valueA && valueB)
 
+  }  
+
+
+console.log (compareTrue(true,false))
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
@@ -23,8 +23,8 @@ function splitSentence(sentence) {
 function concatName (name = []) {
   // seu código aqui
     let lastName = name[name.length - 1];
-  concatName = lastName.concat(name[0])
-    return concatName
+  concatName = [lastName.concat(name[0])]
+   return concatName
 
  }
  
@@ -36,9 +36,15 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(num = []) {
+  // seu código aqui 
+
+let higher = math.Max[num];
+let ocr = [num.forEach(higher)]
+  return ocr
+}  
+
+console.log(highestCount(num[1,1,3,3,5]))
 
 // Desafio 7
 function catAndMouse() {
