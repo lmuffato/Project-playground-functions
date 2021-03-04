@@ -20,11 +20,13 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName (name) {
+function concatName (name = []) {
   // seu código aqui
-    let concat = [name[0], lastIndexOf(name)];
-    return concat
+    let lastName = name[name.length - 1];
+  concatName =  [lastName, name[0]]
+    return concatName
  }
+
 
 // Desafio 5
 function footballPoints(wins, ties) {
