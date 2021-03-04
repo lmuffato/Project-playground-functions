@@ -24,7 +24,7 @@ function splitSentence(string) {
 function concatName(arrayString) {
   let lastItem = arrayString[arrayString.length - 1];
   let firstItem = arrayString[0];
-  let array = lastItem + ', ' + firstItem;
+  let array = `${lastItem}, ${firstItem}`;
   return array;
 }
 
@@ -37,11 +37,10 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestNumber(arr) {
-  let highest = arr[0];
-  /* for (let num of arr) if (num >= highest) highest = num; */
-  for (let index = 0; index < arr.length; index += 1) {
-    const num = arr[index];
+function highestNumber(array) {
+  let highest = array[0];
+  for (let index = 0; index < array.length; index += 1) {
+    const num = array[index];
     if (num >= highest) highest = num;
   }
   return highest;
@@ -50,7 +49,6 @@ function highestCount(arrayNumbers) {
   let countOutput = 0;
   let highest = highestNumber(arrayNumbers);
   for (let index = 0; index < arrayNumbers.length; index += 1) {
-
     let countInput = arrayNumbers[index];
     if (countInput === highest) countOutput += 1;
   }
@@ -60,9 +58,17 @@ function highestCount(arrayNumbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  
+  let distanceCat1 = Math.abs(mouse - cat1);
+  let distanceCat2 = Math.abs(mouse - cat2);
+  if (distanceCat1 < distanceCat2) {
+    return 'cat1';
+  } else if (distanceCat2 < distanceCat1) {
+    return 'cat2;'
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
-
+console.log(catAndMouse(2, 5, 3));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
