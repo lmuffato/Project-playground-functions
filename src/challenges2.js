@@ -88,6 +88,8 @@ function generatePhoneNumber(arrayOfNumbers) {
 }
 
 // Desafio 12
+// Link utilizado para estudo na realização deste desafio:
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 function triangleCheck(lineA, lineB, lineC) {
   let firstCheckPassed = false;
   let secondCheckPassed = false;
@@ -102,7 +104,7 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
 }
 
