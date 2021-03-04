@@ -5,8 +5,8 @@ function compareTrue(value1,value2) {
   } else {
     return false;
   }
-}
 
+}
 // Desafio 2
 function calcArea(base,height) {
   let triangleArea = (base * height)/2;
@@ -20,14 +20,19 @@ function splitSentence(string) {
 } 
 
 // Desafio 4
+let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+
 function concatName(array) {
-  let lastFirstArray = [array[array.length-1],array[0]];
-  return lastFirstArray;
+  let lastFirstArray = expect(array).toBe(array[array.length-1],array[0]);
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+let wins = 14;
+let ties = 8;
+
+function footballPoints(wins,ties) {
+  let championshipPoints = wins*3 + ties*1 ;
+  return championshipPoints;
 }
 
 // Desafio 6
@@ -65,3 +70,4 @@ module.exports = {
   highestCount,
   splitSentence,
 }
+
