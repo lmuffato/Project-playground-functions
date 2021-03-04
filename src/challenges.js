@@ -20,12 +20,11 @@ function splitSentence(string) {
 } 
 
 // Desafio 4
-let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-
 function concatName(array) {
-  let lastFirstArray = expect(array).toBe(array[array.length-1],array[0]);
+  let lastFirstArray = array[array.length-1] + ',' + array[0];
+  return lastFirstArray;
 }
-
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 // Desafio 5
 let wins = 14;
 let ties = 8;
@@ -36,13 +35,20 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+
+function highestCount([9, 1, 2, 3, 9, 5, 7]) {
+
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+if (mouse < cat1 && cat1 < cat2) {
+return 'cat1';
+} else if (mouse < cat2 && cat2 < cat1) {
+  return 'cat2';
+} else {
+  return 'os gatos trombam e o rato foge';
+}
 }
 
 // Desafio 8
