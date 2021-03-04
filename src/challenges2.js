@@ -79,8 +79,19 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(stringDrinks) {
+  let arrayDrinks = stringDrinks.replace(/\D/g, '').split('');
+  let soma = 0;
+
+  for (let index = 0; index < arrayDrinks.length; index += 1) {
+    soma += parseFloat(arrayDrinks[index]);
+  }
+
+  if (soma === 1) {
+    return '1 copo de água';
+  }
+
+  return `${soma} copos de água`;
 }
 
 module.exports = {
@@ -100,4 +111,5 @@ https://eslint.org/docs/rules/no-else-return
 https://stackoverflow.com/questions/24074968/does-sort-function-change-original-array
 https://oprea.rocks/blog/what-do-the-three-dots-mean-in-javascript/
 Recomendação do Rafael Medeiros: https://en.wikipedia.org/wiki/Triangle_inequality
+
 */
