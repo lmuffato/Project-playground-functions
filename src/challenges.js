@@ -13,7 +13,7 @@ function splitSentence(string) {
   return string.split(' ');
 }
 
-// Desafio 4 WHY?
+// Desafio 4 ALELUIA!
 function concatName(array) {
   let lastName = array[array.length-1];
   let firstName = [array[0]];
@@ -75,9 +75,9 @@ function fizzBuzz(array) {
 // Desafio 9
 // PQ Q TÁ DANDO ERRO NO PUSH?
 function encode(string) {
-  let codingString = [];
+  let codingString = "";
   for (let index = 0; index < string.length; index += 1){
-     codingString.push(string[index])
+     codingString.push(string[index]);
       switch (string[index]) {
         case string[index] === "a":
           codingString.replace(/a/i,'1');
@@ -100,16 +100,16 @@ function encode(string) {
         break;
 
         default:
-          codingString.replace(string[index])
+          codingString.replace(string[index]);
       }
-      return codingString
+      return codingString;
     }
 }
 
 function decode(string) {
-  let decodingString = [];
+  let decodingString = "";
   for (let index = 0; index < string.length; index += 1){
-    decodingString.push(string[index])
+    decodingString.push(string[index]);
       switch (string[index]) {
         
         case string[index] === '1':
@@ -133,10 +133,10 @@ function decode(string) {
         break;
 
         default:
-        decodingString.replace(string[index])
+        decodingString.replace(string[index]);
       }
     }
-    return decodingString
+    return decodingString;
 
 }
 
