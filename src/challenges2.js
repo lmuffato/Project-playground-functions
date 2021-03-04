@@ -20,7 +20,9 @@ function techList(nomeTech, name) {
 
 // Desafio 11
 function generatePhoneNumber(listNumber) {
-  let listPhone = [];
+  let listFirstPhone = [];
+  let listDDDPhone = [];
+  let listLastPhone = [];
   let delimitador = 0;
 
   if (testListPhone(listNumber) === true) {
@@ -28,26 +30,29 @@ function generatePhoneNumber(listNumber) {
   } else if (listNumber.length > 11) {
     return "Array com tamanho incorreto.";
   } else {
-    for (let index = 0; index < listNumber.length + 4; index += 1) {
+    for (let index = 0; index < 4; index += 1) {
       if(index === 0) {
-        listPhone[index] = '(';
+        listDDDPhone[index] = '(';
         delimitador += 1;
       } else if (index === 3) {
-        listPhone[index] = ')';
-        delimitador += 1;
-      } else if (index === 4) {
-        listPhone[index] == ' ';
-        delimitador += 1;
-      } else if (index === 10) {
-        listPhone[index] == '-';
+        listDDDPhone[index] = ')';
         delimitador += 1;
       } else {
-        listPhone[index] = listNumber[index - delimitador].toString()
+        listDDDPhone[index] = listNumber[index - delimitador];
       }
+    }
+    for (let index = 4; index < 9; index += 1) {
+      listFirstPhone[index] = listNumber[index - delimitador];
+    }
+    for (let index = 9; index < listNumber.length + delimitador; index += 1) {
+      listLastPhone[index] = listNumber[index - delimitador];
     }
   }
 
-  return listPhone.join('');
+  listFirstPhone = listFirstPhone.join('');
+  listDDDPhone = listDDDPhone.join('');
+  listLastPhone = listLastPhone.join('');
+  return listDDDPhone + ' ' + listFirstPhone + '-' + listLastPhone;
 }
 function testListPhone(listNumber) {
   let numberZero = false;
