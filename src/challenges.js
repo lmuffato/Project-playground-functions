@@ -86,27 +86,56 @@ function fizzBuzz(arrayN8) {
   }
   return arrayN8;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function convert(stringX) {
+function encript(code) {
+  switch (code) {
+    case "a":
+      return "1";
+    case "e":
+      return "2";
+    case "i":
+      return "3";
+    case "o":
+      return "4";
+    case "u":
+      return "5";
+    default:
+      return code;
+  }
+}
+
+function decript(code) {
+  switch (code) {
+    case "1":
+      return "a";
+    case "2":
+      return "e";
+    case "3":
+      return "i";
+    case "4":
+      return "o";
+    case "5":
+      return "u";
+    default:
+      return code;
+  }
 }
 
 function encode(stringIn) {
-  let encodedString = stringIn;
-  for (let indexIn in stringIn) {
-    encodedString[indexIn] = convert(stringIn[indexIn]);
+  let encodedString = stringIn.split('');
+  for (let index = 0; index < stringIn.length; index += 1) {
+    encodedString[index] = encript(stringIn[index]);
   }
-  return encodedString;
+  return encodedString.join('')
 }
 
 function decode(stringOut) {
-  let decodedString = stringOut;
-
-  for (let indexDec in decodedString) {
-    decodedString[indexDec] = convert(stringIn[indexDec])
+  let decodedString = stringOut.split('');
+  for (let index in decodedString) {
+    decodedString[index] = decript(stringOut[index]);
   }
-  return decodedString;
+  return decodedString.join('');
 }
 
 module.exports = {
