@@ -45,7 +45,7 @@ function createPhoneNumber(number, index) {
   }
 
   if (index === 1) {
-    return `${stringNumber})`;
+    return `${stringNumber}) `;
   }
 
   if (index === 7) {
@@ -70,8 +70,6 @@ function generatePhoneNumber(telephone) {
 
   return stringPhoneNumber;
 }
-
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
