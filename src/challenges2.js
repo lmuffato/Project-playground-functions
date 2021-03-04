@@ -64,13 +64,15 @@ function generatePhoneNumber(arrayPhoneNumber) {
   }
   return 'não é possível gerar um número de telefone com esses valores';
 }
-console.log(generatePhoneNumber([2, 5, 1, 4, 5, 6, 7, 8, 9, 0, 2]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  // lineA < lineB + lineC
-  // lineA > |lineB - lineC|
-
+  let distanceOne = Math.abs(lineA - lineB);
+  let distanceTwo = lineA + lineB;
+  if (lineC > distanceOne && lineC < distanceTwo) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 13
