@@ -21,8 +21,47 @@ function techList(arrayOfTechs, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function checkArrayLength(array) {
+  if (array.length !== 11) return 'Array com tamanho incorreto';
+  return true;
+}
+
+function checkArrayNumbers(array) {
+  let maxNumber = 9;
+  let error = 'não é possível gerar um número de telefone com esses valores';
+  for (let number of array) {
+    if (number > maxNumber || number < 0) return error;
+  }
+  return true;
+}
+/* https://stackoverflow.com/questions/49215358/checking-for-duplicate-strings-in-javascript-array */
+function checkRepeatedNumbers(array) {
+  let repeatedNumbers = {};
+  let error = 'não é possível gerar um número de telefone com esses valores';
+  array.forEach((index) => {
+    repeatedNumbers[index] = (repeatedNumbers[index] || 0) + 1;
+  });
+  for (let key in repeatedNumbers) {
+    if (repeatedNumbers[key] >= 3) return error;
+  }
+  return true;
+}
+
+function throwError(length, repeated, maxNumber) {
+  if (length !== true) return length;
+  if (repeated !== true) return repeated;
+  if (maxNumber !== true) return maxNumber;
+}
+/* https://stackoverflow.com/questions/8358084/regular-expression-to-reformat-a-us-phone-number-in-javascript */
+function generatePhoneNumber(phoneNumberArray) {
+  let isLengthCorrect = checkArrayLength(phoneNumberArray);
+  let isRepeatedNumbersCorrect = checkRepeatedNumbers(phoneNumberArray);
+  let isMaxNumberCorrect = checkArrayNumbers(phoneNumberArray);
+  let phoneString = phoneNumberArray.toString().replace(/\D/g, '');
+  if (typeof isLengthCorrect && isRepeatedNumbersCorrect && isMaxNumberCorrect === Boolean) {
+    return phoneString.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+  }
+  return throwError(isLengthCorrect, isRepeatedNumbersCorrect, isMaxNumberCorrect);
 }
 
 // Desafio 12
