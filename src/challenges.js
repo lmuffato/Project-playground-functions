@@ -28,8 +28,23 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
+/* vezes que numero aparece
+descobrir maior numero
+ */
 function highestCount(arrayNumber) {
-  
+  let guardaMaiorNumero = 0;
+  let contaMaiorNumero = 0;
+  for(let index = 0;index < arrayNumber.length;index +=1){
+    if (arrayNumber[index] > guardaMaiorNumero){
+      guardaMaiorNumero = arrayNumber[index]
+    }
+    for(let index =0;index < arrayNumber;indice += 1){
+      if (contaMaiorNumero == guardaMaiorNumero){
+        contaMaiorNumero += 1
+      }
+    }
+  }
+  return contaMaiorNumero;
 }
 console.log(highestCount(2,8,9,7,9,1))
 
@@ -53,22 +68,22 @@ function fizzBuzz(arrayNumber) {
 
   for(let index in arrayNumber){  
 
-  if (arrayNumber[index] % 3 === 0 && arrayNumber[index] % 5 === 0){
-    result.push("fizzbuzz")
-  } 
-  else if (arrayNumber[index] % 3 === 0) {
-    result.push("fizz")
-  } 
-  else if (arrayNumber[index] % 5 === 0){
-    result.push("buzz")
-  } 
-  else {
-    result.push("bug!")
+    if (arrayNumber[index] % 3 === 0 && arrayNumber[index] % 5 === 0){
+      result.push("fizzbuzz")
+    } 
+    else if (arrayNumber[index] % 3 === 0) {
+      result.push("fizz")
+    } 
+    else if (arrayNumber[index] % 5 === 0){
+      result.push("buzz")
+    } 
+    else {
+      result.push("bug!")
+    }
   }
-  return result;
-  }
+  return result
 }
-console.log(fizzBuzz([15,25,25]))
+console.log(fizzBuzz([2,5,15,20]))
 // Desafio 9
 function encode() {
   // seu código aqui
