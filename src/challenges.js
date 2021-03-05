@@ -1,3 +1,4 @@
+// fazer a função stringToArray
 // vamos começar
 // Desafio 1
 function compareTrue(value1, value2) {
