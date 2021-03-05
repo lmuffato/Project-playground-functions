@@ -87,7 +87,7 @@ function fizzBuzz(arrayN8) {
   return arrayN8;
 }
 
-// Desafio 9
+// Desafio 9 // - refatorado para hash object com a ajuda de Rafael Medeiros Gomes
 let encodeKey = {
   a: 1,
   e: 2,
