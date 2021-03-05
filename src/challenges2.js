@@ -47,15 +47,12 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13 
 
 function hydrate(string) {
-  let stringCaracteres = string.split('');  //transformando a string em array       
+  let stringNumeros = string.match(/\d+/g); //crio um array com os numeros dentro da string
   let agua = 0;
 
-  for (let index = 0; index < stringCaracteres.length; index += 1){
-    let  converterCaracter = parseInt (stringCaracteres[index]) // A função parseInt() analisa um argumento string e retorna um inteiro
-    //if (typeof(converterCaracter) === 'number'){ // O operador typeof retorna uma string indicando o tipo de um operando.
-    if (converterCaracter == Number){
-      agua += parseInt(stringCaracteres[index]);
-    }
+  for (let index = 0; index < stringNumeros.length; index += 1){
+    let  converterCaracter = parseInt (stringNumeros[index]); // A função parseInt() analisa um argumento string e retorna um inteiro
+    agua += converterCaracter;
   }
 
   if (agua === 1){
@@ -69,8 +66,6 @@ function hydrate(string) {
 console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 
-
-  
 
 module.exports = {
   generatePhoneNumber,
