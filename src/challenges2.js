@@ -14,34 +14,39 @@ function techList(techNames, name) {
 }
 techList([], 'Alexandre');
 // Desafio 11
-function generatePhoneNumber(phoneNumber) {
-  // seu código aqui
-  let firstPart = '';
-  let secondPart = '';
-  let thirdPart = '';
-  let allNumber = phoneNumber.join('');
-  let numberAdjusted = '';
+// seu código aqui
+function numberRepeat(verifyNumberRepeat) {
   for (let index = 0; index < phoneNumber.length; index += 1) {
     let numberRepeat = 0;
     for (let secondIndex = 0; secondIndex < phoneNumber.length; secondIndex += 1) {
       if ((phoneNumber[index] === phoneNumber[secondIndex])) {
         numberRepeat += 1;
-      } else if (phoneNumber.length !== 11) {
-        return 'Array com tamanho incorreto.';
-      } else if (phoneNumber[index] < 0 || phoneNumber[index] > 9) {
-        return 'não é possível gerar um número de telefone com esses valores';
       } if (numberRepeat >= 3) {
         return 'não é possível gerar um número de telefone com esses valores';
-      } else {
-        firstPart = allNumber.slice(0, 2);
-        secondPart = allNumber.slice(2, 7);
-        thirdPart = allNumber.slice(7, 11);
-        numberAdjusted = `(${firstPart}) ${secondPart}-${thirdPart}`;
       }
     }
   }
-  return numberAdjusted
-}; generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 0])
+}
+function generatePhoneNumber(phoneNumber) {
+
+  let firstPart = '';
+  let secondPart = '';
+  let thirdPart = '';
+  for (let index = 0; index < phoneNumber.length; index += 1) {
+    if (phoneNumber.length != 11) {
+      return 'Array com tamanho incorreto.'
+    } else if (phoneNumber[index] < 0 || phoneNumber[index] > 9) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    } else {
+      let allNumber = phoneNumber.join('');
+      firstPart = allNumber.slice(0, 2);
+      secondPart = allNumber.slice(2, 7);
+      thirdPart = allNumber.slice(7, 11);
+      numberAdjusted = `(${firstPart}) ${secondPart}-${thirdPart}`;
+    }
+    return numberAdjusted
+  }
+}
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
