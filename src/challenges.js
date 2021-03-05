@@ -23,7 +23,7 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(entry) {
-  let lastName = entry[entry.lenght - 1];
+  let lastName = entry[entry.length - 1];
   let firstName = entry[0];
   let concat = lastName + ', ' + firstName;
   return concat;
@@ -36,15 +36,16 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(numbers) {
-  let maxNumber = 0
-  for(let index = 0; index < highestCount.length; index ++){
-    if(highestCount[index] > maxNumber){
-      maxNumber = highestCount[index]
+function highestCount(numbers){
+  let maxNumber = 0;
+  for(let index = 0; index < numbers.length; index ++){
+    if(numbers[index] > maxNumber){
+      maxNumber = numbers[index];
     }
+      return maxNumber
   } console.log(maxNumber)
-  highestCount([1, 8, 9, 7])
-
+} 
+highestCount([1, 9, 8])
   /*
   let count = 0;
   for (let index=0; index<numbers.length; index =+ 1) {
