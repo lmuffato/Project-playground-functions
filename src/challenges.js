@@ -91,7 +91,6 @@ function fizzBuzz(numbersArray) {
   }
   return numbersArray;
 }
-
 // Consulta ao repositório do Jorge Meyrelles: https://github.com/tryber/sd-010-a-project-playground-functions/tree/jorgemeyrelles-project-playground-functions //
 
 // Desafio 9
