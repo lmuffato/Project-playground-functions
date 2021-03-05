@@ -85,13 +85,16 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(name) {
-  name = name.replace('a', '1').replace('e', '2').replace('i', '3').replace('o', '4').replace('u', '5');
+  name = name.replaceAll('a', '1').replaceAll('e', '2')
+    .replaceAll('i', '3').replaceAll('o', '4').replaceAll('u', '5');
   return name;
 }
 function decode(name) {
-  name = name.replace('1', 'a').replace('2', 'e').replace('3', 'i').replace('4', 'o').replace('5', 'u');
+  name = name.replaceAll('1', 'a').replaceAll('2', 'e')
+    .replaceAll('3', 'i').replaceAll('4', 'o').replaceAll('5', 'u');
   return name;
 }
+
 
 module.exports = {
   calcArea,
