@@ -15,7 +15,7 @@ function techList(techNames, name) {
 techList([], 'Alexandre');
 // Desafio 11
 // seu código aqui
-function numberRepeat(verifyNumberRepeat) {
+function numberRepeat(phoneNumber) {
   for (let index = 0; index < phoneNumber.length; index += 1) {
     let numberRepeat = 0;
     for (let secondIndex = 0; secondIndex < phoneNumber.length; secondIndex += 1) {
