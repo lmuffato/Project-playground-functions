@@ -60,25 +60,26 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8 //used a tip from Patrick Morais about how to reduce complexity
-function conditionsFizzBuzz {
-  if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+function conditionsFizzBuzz(numbers) {
+  if (numbers % 3 === 0 && numbers % 5 === 0) {
     return 'fizzBuzz';
-  } else if (numbers[index] % 3 === 0) {
+  } if (numbers % 3 === 0) {
     return 'fizz';
-  } else if (numbers[index] % 5 === 0) {
+  } if (numbers % 5 === 0) {
     return 'buzz';
-  } else {
-    return 'bug!';
   }
+  return 'bug!';
 }
-function fizzBuzz(numbers) {
+
+function fizzBuzz(arrayNumbers) {
   let result = [];
-  for (let index = 0; index < numbers.lenght; index += 1) {
-    result.push(conditionsFizzBuzz(numbers[index]));
+  for (let index = 0; index < arrayNumbers.lenght; index += 1) {
+    result.push(conditionsFizzBuzz(arrayNumbers[index]));
   }
   return result;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
+console.log(fizzBuzz(conditionsFizzBuzz([2, 15, 7, 9, 45])));
 
 // Desafio 9
 function encode() {
