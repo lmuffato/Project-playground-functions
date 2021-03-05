@@ -79,29 +79,43 @@ console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 function fizzBuzz(imputNumbers) {
-    let outputNumbers = [];
-    for (let fizzIndex = 0; fizzIndex < imputNumbers.length; fizzIndex += 1) {
-      if (imputNumbers[fizzIndex] % 3 === 0 && imputNumbers[fizzIndex] % 5 ===0) {
-        outputNumbers[fizzIndex] = 'fizzBuzz';
-      } else if (imputNumbers[fizzIndex] % 3 === 0) {
-        outputNumbers[fizzIndex] = 'fizz';
-      } else if (imputNumbers[fizzIndex] % 5 === 0) {
-        outputNumbers[fizzIndex] = 'buzz';
-      } else {
-        outputNumbers[fizzIndex] = 'bug!';
-      }
+  let outputNumbers = [];
+  for (let fizzIndex = 0; fizzIndex < imputNumbers.length; fizzIndex += 1) {
+    if (imputNumbers[fizzIndex] % 3 === 0 && imputNumbers[fizzIndex] % 5 === 0) {
+      outputNumbers[fizzIndex] = 'fizzBuzz';
+    } else if (imputNumbers[fizzIndex] % 3 === 0) {
+      outputNumbers[fizzIndex] = 'fizz';
+    } else if (imputNumbers[fizzIndex] % 5 === 0) {
+      outputNumbers[fizzIndex] = 'buzz';
+    } else {
+      outputNumbers[fizzIndex] = 'bug!';
     }
-    return outputNumbers;
-
+  }
+  return outputNumbers;
 }
 
 // Desafio 9
-function encode() {
+// Consulta em https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176
+function encode(stringEncode) {
   // seu código aqui
-}
-function decode() {
+  let string1 = stringEncode.replace(/a/g, '1');
+  let string2 = string1.replace(/e/g, '2');
+  let string3 = string2.replace(/i/g, '3');
+  let string4 = string3.replace(/o/g, '4');
+  let string5 = string4.replace(/u/g, '5');
+  return string5;
+
+}console.log(encode("hi there!"))
+
+function decode(stringDecode) {
   // seu código aqui
-}
+  let string1 = stringDecode.replace(/1/g, 'a');
+  let string2 = string1.replace(/2/g, 'e');
+  let string3 = string2.replace(/3/g, 'i');
+  let string4 = string3.replace(/4/g, 'o');
+  let string5 = string4.replace(/5/g, 'u');
+  return string5;
+} console.log(decode("h3 th2r2!"));
 
 module.exports = {
   calcArea,
