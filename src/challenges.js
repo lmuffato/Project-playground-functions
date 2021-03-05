@@ -1,13 +1,9 @@
 // Desafio 1
-let option1 = true;
-let option2 = false;
-
 function compareTrue(option1, option2) {
-  if(option1 && option2){
-    return true
-  }else{
-    return false
-  } 
+  if (option1 && option2) {
+  return true;
+  }
+  return false;
 }
 
 // Desafio 2
