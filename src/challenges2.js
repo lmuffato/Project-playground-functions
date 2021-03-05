@@ -53,10 +53,19 @@ function triangleCheck(lineA, lineB, lineC) {
   } return false;
 }
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(phrase) {
+  let convert = /\d+/g;
+  let convertToString = phrase.match(convert);
+  let convertToNumbers = convertToString.map(Number);
+  let sum = 0
+  for (let index=0; index < convertToNumbers.length; index += 1) {
+  sum = sum + convertToNumbers[index];
+  }
+  if (sum === 1) {
+    return `${sum} copo de água`;
+  } return `${sum} copos de água`;
 
+}
 module.exports = {
   generatePhoneNumber,
   techList,
