@@ -38,7 +38,6 @@ function generatePhoneNumber(numbers) {
   let phone2 = phoneToString2.join('');
   return `(${finalPrefix}) ${phone1}-${phone2}`;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 2, 6, 7, 8, 9, 0, 1]));
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let condA = lineB + lineC;
