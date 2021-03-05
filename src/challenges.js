@@ -16,6 +16,7 @@ function calcArea(base, height) {
 function splitSentence(sentenceToSplit) {
   return sentenceToSplit.split(' ');
 }
+//consultation made on the website : https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
 
 // Desafio 4
 function concatName(arrayNames) {
