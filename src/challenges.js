@@ -101,21 +101,32 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge';
 }
 
+let fizzBuzzObj = {
+  isDivisibleThree(number) {
+    if (number % 3 === 0) {
+      if (number % 5 === 0) {
+        return 'fizzBuzz';
+      }
+      return 'fizz';
+    }
+    if (number % 5 === 0) {
+      return 'buzz';
+    }
+    return 'bug!';
+  },
+};
+
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
   let newArray = [];
 
-  for (let index = 0; index < arrayNumbers.length; index += 1) {
-    if ((arrayNumbers[index] % 3 === 0) && (arrayNumbers[index] % 5 === 0)) {
-      newArray.push('fizzBuzz');
-    } else if (arrayNumbers[index] % 3 === 0) {
-      newArray.push('fizz');
-    } else if (arrayNumbers[index] % 5 === 0) {
-      newArray.push('buzz');
-    } else {
-      newArray.push('bug!');
+  arrayNumbers.map((number) => {
+    if (fizzBuzzObj.isDivisibleThree(number)) {
+      return newArray.push(fizzBuzzObj.isDivisibleThree(number));
     }
-  }
+    return 0;
+  });
+
   return newArray;
 }
 
@@ -142,24 +153,23 @@ function encode(stringKey) {
   return newString;
 }
 
+let ciferReverse = {
+  1: 'a',
+  2: 'e',
+  3: 'i',
+  4: 'o',
+  5: 'u',
+};
+
 function decode(stringKey) {
   let newString = '';
-  let inserted = false;
 
-  for (let index = 0; index < stringKey.length; index += 1) {
-    for (let key in cifer) {
-      if ((parseInt(stringKey[index], 10)) === cifer[key]) {
-        newString = newString.concat(key);
-        inserted = true;
-        break;
-      }
+  for (let key in stringKey) {
+    if (ciferReverse[stringKey[key]]) {
+      newString = newString.concat(ciferReverse[stringKey[key]]);
+    } else {
+      newString = newString.concat(stringKey[key]);
     }
-
-    if (inserted === false) {
-      newString = newString.concat(stringKey[index]);
-    }
-
-    inserted = false;
   }
 
   return newString;
@@ -179,7 +189,7 @@ console.log(highestCount([0, 0, 0]));
 
 console.log(catAndMouse(7, 9, 5));
 
-console.log(fizzBuzz([7, 9]));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 console.log(encode('hi there!'));
 
