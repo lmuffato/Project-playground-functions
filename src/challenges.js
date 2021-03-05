@@ -16,7 +16,7 @@ function calcArea(base, height) {
 function splitSentence(sentenceToSplit) {
   return sentenceToSplit.split(' ');
 }
-//consultation made on the website : https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
+// consultation made on the website : https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
 
 // Desafio 4
 function concatName(arrayNames) {
@@ -46,15 +46,15 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  if ((cat2 - mouse) === 2 && (cat1 - mouse) === 3) {
-    return 'cat2';
-  } else if ((cat1 - mouse) === 6 && (cat2 - mouse) === 12) {
-    return 'cat1';
-  } else (cat1 === cat2) {
-    return 'os gatos trombam e o rato foge';
-  }
-}
+// function catAndMouse(mouse, cat1, cat2) {
+//   if ((cat2 - mouse)  (cat1 - mouse) === 3) {
+//     return 'cat2';
+//   } else if ((cat1 - mouse) === 6 && (cat2 - mouse) === 12) {
+//     return 'cat1';
+//   } else if (cat1 === cat2) {
+//     return 'os gatos trombam e o rato foge';
+//   }
+// }
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
@@ -82,8 +82,8 @@ function decode(name) {
   let newname = name.replaceAll(1, 'a').replaceAll(2, 'e').replaceAll(3, 'i').replaceAll(4, 'o').replaceAll(5, 'u');
   return newname;
 }
-//consultation made on the website : https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace
-//consultation made on the website : https://ricardo-reis.medium.com/string-replace-para-substituir-substrings-no-javascript-6db625e5fbc5
+// consultation made on the website : https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+// consultation made on the website : https://ricardo-reis.medium.com/string-replace-para-substituir-substrings-no-javascript-6db625e5fbc5
 module.exports = {
   calcArea,
   catAndMouse,
