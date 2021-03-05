@@ -36,20 +36,30 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
+  GreatestNumber(array)
+  CountRepetitions(array, highest)
+}
+  
+function GreatestNumber(array) {
   let highest = 0;
   let index = 0;
-  let count = 1;
-  let indexcount = 0;
   for (index = 0; index < array.length; index += 1) {
     if ((array[index]) > highest) {
       highest = array[index];
     }
-  } for (indexcount = 0; indexcount < array.length; indexcount += 1) {
+  }
+  CountRepetitions(array, highest)
+}
+  
+function CountRepetitions (array, highest) {
+  let count = 0;
+  let indexcount = 0;
+  for (indexcount = 0; indexcount < array.length; indexcount += 1) {
     if (highest === array [indexcount]) {
       count += 1;
     }
-    return count;
   }
+  console.log(count);
 }
 
 // Desafio 7
