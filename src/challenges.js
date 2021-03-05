@@ -23,15 +23,16 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(entry) {
-  lastName = entry.lenght - 1;
-  firstName = entry[0];
-  return concatFirstLast = lastName.unshift, firstName.push;
+  let lastName = entry.lenght - 1;
+  let firstName = entry[0];
+  return lastName + firstName;
+
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-let victory = wins * 3;
-return victory + ties;
+  let victory = wins * 3;
+  return victory + ties;
 }
 
 // Desafio 6
