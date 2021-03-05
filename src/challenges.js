@@ -93,20 +93,19 @@ function encode(listEncode) {
     for (let i = 0; i < modify.length; i += 1) {
       switch (modify[i]) {
         case 'a':
-          console.log(modify[i]);
           modify[i] = '1';
           break;
         case 'e':
-          modify[i] = '2'
+          modify[i] = '2';
           break;
         case 'i':
           modify[i] = '3';
           break;
         case 'o':
-          modify[i] = '4'
+          modify[i] = '4';
           break;
         case 'U':
-          modify[i] = '5'
+          modify[i] = '5';
           break;  
       }
     }
@@ -118,7 +117,6 @@ function decode(listEncodeNumber) {
   for (let i = 0; i < modifyNumber.length; i += 1) {
     switch (modifyNumber[i]) {
       case '1':
-        console.log(modifyNumber[i]);
         modifyNumber[i] = 'a';
         break;
       case '2':
@@ -170,8 +168,8 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 5]));
 
-console.log(encode('hi there!'));
-console.log(decode('h3 th2r2!'));
+console.log(encode('hello'));
+console.log(decode('H4w 1r2 y45 t4d1y?'));
 
 module.exports = {
   calcArea,
