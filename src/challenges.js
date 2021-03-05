@@ -47,9 +47,27 @@ console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(array) {
+  // descobrir qual o maior número
+  let maior = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] > maior){
+      maior = array[index];
+    }
+  }
+  // percorrer array para saber quantas vezes o maior número se repete
+  let maiorRepete = 0;
+  for (let i = 0; i < array.length; i += 1){
+    if (maior === array[i]) {
+      maiorRepete += 1;
+    }
+  }
+  return maiorRepete;
+}  
+  
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
