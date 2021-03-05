@@ -61,9 +61,26 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let triangleArray = [];
+  triangleArray.push(lineA, lineB, lineC);
+  let isTriangle = true;
+  for (let index = 0; index < 2; index += 1) {
+    let position1 = triangleArray[index];
+    let position2 = triangleArray[index + 1];
+    if (triangleArray[index] > triangleArray[index + 1]) {
+      triangleArray[index + 1] = position1;
+      triangleArray[index] = position2;
+    }
+  }
+  if (triangleArray[0] > Math.abs(triangleArray[1] - triangleArray[2])) {
+    isTriangle = true;
+  } else {
+    isTriangle = false;
+  }
+  return isTriangle;
 }
+console.log(triangleCheck(13, 32, 12));
 
 // Desafio 13
 function hydrate() {
