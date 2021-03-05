@@ -75,17 +75,17 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numbersArray) {
-  for (let index = 0; index < numbersArray.length; index +=1) {
-    if (index % 3 === 0) {
+  for (let index = 0; index <= numbersArray.length; index += 1) {
+    if (index % 3 === 0 && index % 5 === 0) {
+      return 'fizzBuzz';
+    } if (index % 3 === 0) {
       return 'fizz';
-    } else if (index % 5 === 0) {
+    } if (index % 5 === 0 ) {
       return 'buzz';
-  } else if (index % 3 === 0 && index % 5 === 0) {
-    return 'fizzBuzz'
-  } else {
-    return 'bug!'
+    } else {
+      return 'bug!'
+    }
   }
-}
 }
 
 // Source: https://gist.github.com/jaysonrowe/1592432 //
