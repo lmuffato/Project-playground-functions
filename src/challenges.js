@@ -122,7 +122,7 @@ function encode(string) {
   return string2;
 }
 
-function decode() {
+function decode(string) {
   // seu código aqui
   let string2 = '';
 
