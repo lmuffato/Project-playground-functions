@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(x,y) {
-  if((x&&y)==true){
+  if ((x && y)==true){
     return true;
   }
   else{
@@ -110,16 +110,92 @@ function catAndMouse(mouse,cat1,cat2){
 return catcher
 }
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+
+function fizzBuzz(array) {
+let itsFizzOrBuzz=[];
+  for (let index = 0; index < array.length; index+=1) {
+        if(((array[index]%3)==0)&&((array[index]%5)==0)){
+            itsFizzOrBuzz.push("fizzBuzz")
+        }
+        else if((array[index]%3)==0){
+          itsFizzOrBuzz.push("fizz");
+        }
+        else if((array[index]%5)==0){
+          itsFizzOrBuzz.push("buzz");
+
+        }
+        else{
+          itsFizzOrBuzz.push("bug!");
+        }
+  }
+  return itsFizzOrBuzz;
+}
+n=[3,4,12,15,45,35,85,65]
+// Desafio 9
+function itsVowel(letter){
+let vowels=["a","e","i","o","u"]
+let itsVowel;
+  for (let index = 0; index < vowels.length; index++) {
+    if(letter==vowels[index])
+    itsVowel = true;
+  }
+  return itsVowel
 }
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+let stringEncoded="";
+  for (let index = 0; index < string.length; index++) {
+    if(itsVowel(string[index])==true){
+      switch (string[index]){
+        case "a":
+          stringEncoded+="1"
+          break;
+        case "e":
+          stringEncoded+="2"
+          break;
+        case "i":
+          stringEncoded+="3"
+          break;
+        case "o":
+          stringEncoded+="4"
+          break;
+        case "u":
+          stringEncoded+="5"
+          break;
+      }  
+    }else{
+      stringEncoded+=string[index];
+    }
+  }
+  return stringEncoded;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+let stringDecoded=""
+  for(index=0;index<string.length;index+=1){
+    let letter=string[index];
+      switch (letter) {
+        case "1":
+          stringDecoded+="a"
+          break;
+        case "2":
+          stringDecoded+="e"
+          break;
+        case "3":
+          stringDecoded+="i";
+          break;
+        case "4":
+          stringDecoded+="o"
+          break;
+        case "5":
+          stringDecoded+="u"
+          break;
+        default:
+          stringDecoded+=letter;
+          break;
+      }
+  }
+  return stringDecoded;
 }
 
 module.exports = {
