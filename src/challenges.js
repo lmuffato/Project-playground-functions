@@ -11,23 +11,25 @@ function calcArea(base, height) {
   let triangulo = (base * height) / 2;
   return triangulo;
 }
-console.log(calcArea(10, 50));
+// console.log(calcArea(10, 50));
 // Desafio 3
 function splitSentence(array) {
   let separaçaoString = array.split(' ');
   return separaçaoString;
 }
 console.log(splitSentence('go Trybe'));
-// Desafio 4
+// Desafio 4 ;
 function concatName() {
-  // seu código aqui
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let wins1 = wins * 3;
+  let ties1 = ties * 1;
+  return wins1 + ties1;
 }
 
+console.log(footballPoints(0, 0));
 // Desafio 6
 function highestCount() {
   // seu código aqui
