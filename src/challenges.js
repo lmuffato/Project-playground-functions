@@ -109,10 +109,10 @@ function fizzBuzz(numbers) {
     if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
       result.push('fizzBuzz');
     }
-    if (numbers[i] % 3 === 0 ) {
+    else if (numbers[i] % 3 === 0 ) {
       result.push('fizz');
     }
-    if (numbers[i] % 5 === 0) {
+    else if (numbers[i] % 5 === 0) {
       result.push('buzz');
     } else { 
       result.push('bug!');
@@ -127,8 +127,9 @@ console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
+function encode(words) {
   // seu código aqui
+  
 }
 function decode() {
   // seu código aqui
