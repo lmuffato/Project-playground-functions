@@ -61,7 +61,7 @@ function highestCount(numbers) {
  }
 
  for (let index = 0; index < numbers.length; index +=1){
-    if (numbers[index] == maior) {
+    if (numbers[index] === maior) {
       count +=1;
     }
   }
@@ -79,18 +79,18 @@ console.log(highestCount(meuArray));
 function catAndMouse(mouse, cat1, cat2) {
   let res;
 
-  if((cat1 - mouse) < (cat2 - mouse)){
+  if(Math.abs(mouse - cat1) < Math.abs(mouse - cat2)){
     res = 'cat1';
-  }else if((cat2 - mouse) < (cat1 - mouse)){
+  }else if(Math.abs(mouse - cat1) > Math.abs(mouse - cat2)){
     res = 'cat2';
-  }else if((cat2 - mouse) === (cat1 - mouse)){
+  } else {
     res = 'os gatos trombam e o rato foge' ;
   }
   return res;
 }
   console.log(catAndMouse(1, 4, 3));
   console.log(catAndMouse(0, 6, 12));
-  console.log(catAndMouse(2, 3, 3));
+  console.log(catAndMouse(1, 0, 2));
 
 
 // Desafio 8
@@ -98,11 +98,11 @@ function fizzBuzz(arrayNumber) {
   let number = [];
 
   for(let index = 0; index < arrayNumber.length; index += 1) {
-    if(arrayNumber[index] % 5 == 0 && arrayNumber[index] % 3 == 0) {
+    if(arrayNumber[index] % 5 === 0 && arrayNumber[index] % 3 === 0) {
       number.push ("fizzBuzz");
-    } else if(arrayNumber[index] % 5 == 0) {
+    } else if(arrayNumber[index] % 5 === 0) {
       number.push ("buzz");
-    } else if(arrayNumber[index] % 3 == 0) {
+    } else if(arrayNumber[index] % 3 === 0) {
       number.push ("fizz");
     } else {
       number.push ("bug!");
@@ -114,15 +114,19 @@ function fizzBuzz(arrayNumber) {
 
 // Desafio 9
 function encode(vowel) {
-  vowel = vowel.repleceAll('a', '1').repleceAll('e', '2').repleceAll('i', '3').repleceAll('o', '4').repleceAll('u', '5');
-  
+  vowel = vowel.replaceAll('a', '1');
+  vowel = vowel.replaceAll('e', '2');
+  vowel = vowel.replaceAll('i', '3');
+  vowel = vowel.replaceAll('o', '4');
+  vowel = vowel.replaceAll('u', '5');
     return vowel;
   }
-
+  console.log(encode('hi, there'));
 function decode(vowel) {
-  vowel = vowel.repleceAll('1', 'a').repleceAll('2', 'e').repleceAll('3', 'c').repleceAll('4', 'o').repleceAll('5', 'u');
+  vowel = vowel.replaceAll('1', 'a').replaceAll('2', 'e').replaceAll('3', 'c').replaceAll('4', 'o').replaceAll('5', 'u');
+  return vowel;
 }
-console.log('hi, there');
+console.log(encode('hi, there'));
 
 module.exports = {
   calcArea,
