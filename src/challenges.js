@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(option1, option2) {
-  if (option1 && option2) {
-  return true;
+  if (option1 === true && option2 === true) {
+    return true;
   }
   return false;
 }
