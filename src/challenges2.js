@@ -98,8 +98,12 @@ function triangleCheck(lineA, lineB, lineC) {
   return false;
 }
 
-// Referência utilizada para resolução de Desafio 12:
+// Referências utilizadas para resolução de Desafio 12:
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+// Agradecimento especial ao colega Rafael Medeiros Gomes, que deu uma dica sobre como refatorar o Desafio 12, segue link da thread no Slack:
+// https://trybecourse.slack.com/archives/C01L16B9XC7/p1614785978007300
+// Link para as regras/condições de Triângulo no Wikipedia:
+// https://en.wikipedia.org/wiki/Triangle_inequality
 
 // Desafio 13
 function hydrateInstructions(sumOfNumbers) {
