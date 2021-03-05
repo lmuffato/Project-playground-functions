@@ -74,13 +74,13 @@ function fizzBuzz(array) {
 }
 
 function ifelse (index) {  
-  if ((index % 3 && index % 5) === 0) {
+  if (index % 3 === 0 && index % 5 === 0) {
     return 'fizzBuzz';
 } if (index % 3 === 0) {
     return 'fizz';
 } if (index % 5 === 0) {
     return 'buzz';
-} if ((index % 3 && index % 5) !== 0) {
+} if (index % 3 !== 0 && index % 5 !== 0) {
     return 'bug!';
     }
   }
