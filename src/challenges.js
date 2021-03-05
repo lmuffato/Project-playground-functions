@@ -86,6 +86,9 @@ function fizzBuzz(numbersArray) {
     return 'bug!'
   }
 }
+}
+
+// Source: https://gist.github.com/jaysonrowe/1592432 //
 
 // Desafio 9
 function encode() {
