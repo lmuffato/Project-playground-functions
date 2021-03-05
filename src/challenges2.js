@@ -98,6 +98,7 @@ function generatePhoneNumber(phoneNumber) {
     return message;
   }
   number = generateDDD(phoneNumber);
+  number += ' ';
   number = firstPartNumber(phoneNumber, number);
   number = secondPartNumber(phoneNumber, number);
   return number;
