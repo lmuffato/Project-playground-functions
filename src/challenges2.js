@@ -39,11 +39,11 @@ function generatePhoneNumber(phoneNumber) {
       firstPart = allNumber.slice(0, 2);
       secondPart = allNumber.slice(2, 7);
       thirdPart = allNumber.slice(7, 11);
-      numberAdjusted = `(${firstPart}) ${secondPart}-${thirdPart}`;
+      let = numberAdjusted = `(${firstPart}) ${secondPart}-${thirdPart}`;
     }
     return numberAdjusted
   }
-} generatePhoneNumber([0,0,1,2,3])
+} generatePhoneNumber([1,2,3,4,5,5,5])
 
 // Desafio 12
 function triangleCheck() {
