@@ -28,15 +28,23 @@ function phonenumberValid(arr) {
   return true;
 }
 
-function phoneNumrepeat(arr) {
+function countNum(arr) {
+  let countArr = [];
   for (let index = 0; index < arr.length; index += 1) {
-    let repeat = 0;
+    let count = 0;
     for (let i = 0; i < arr.length; i += 1) {
       if (arr[index] === arr[i]) {
-        repeat += 1;
+        count += 1;
       }
     }
-    if (repeat >= 3) {
+    countArr.push(count);
+  }
+  return countArr;
+}
+
+function repeatCheck(arr) {
+  for (let index = 0; index < arr.length; index += 1) {
+    if (countNum(arr)[index] >= 3) {
       return false;
     }
   }
@@ -46,12 +54,14 @@ function generatePhoneNumber(a) {
   if (a.length > 11 || a.length < 11) {
     return 'Array com tamanho incorreto.';
   }
-  if (phonenumberValid(a) === false || phoneNumrepeat(a) === false) {
+  if (phonenumberValid(a) === false || repeatCheck(a) === false) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   let phone = `(${a[0]}${a[1]}) ${a[2]}${a[3]}${a[4]}${a[5]}${a[6]}-${a[7]}${a[8]}${a[9]}${a[10]}`;
   return phone;
 }
+
+// console.log(generatePhoneNumber([1, 2, 3, 5, 5, 2, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
