@@ -59,19 +59,22 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge';
 }
 
-// Desafio 8
+// Desafio 8 //used a tip from Patrick Morais about how to reduce complexity
+function conditionsFizzBuzz {
+  if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+    return 'fizzBuzz';
+  } else if (numbers[index] % 3 === 0) {
+    return 'fizz';
+  } else if (numbers[index] % 5 === 0) {
+    return 'buzz';
+  } else {
+    return 'bug!';
+  }
+}
 function fizzBuzz(numbers) {
   let result = [];
-  for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
-      result.push('fizzBuzz');
-    } else if (numbers[index] % 3 === 0) {
-      result.push('fizz');
-    } else if (numbers[index] % 5 === 0) {
-      result.push('buzz');
-    } else {
-      result.push('bug!');
-    }
+  for (let index = 0; index < numbers.lenght; index += 1) {
+    result.push(conditionsFizzBuzz(numbers[index]));
   }
   return result;
 }
