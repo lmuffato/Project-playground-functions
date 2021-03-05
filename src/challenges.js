@@ -46,9 +46,20 @@ let repeticao = 0;
   return repeticao; 
 }
 
-// Desafio 7
-function catAndMouse() {
-  // seu código aqui
+// Desafio 7 - calcule as distâncias entre o rato e os gatos 
+let rato = mouse;
+let gato1 = mouse - cat1;
+let gato2 = mouse - cat2;
+function catAndMouse(mouse,cat1,cat2) {
+  let gatoProximo1 = "cat1";
+  let gatoProximo2 = "cat2";
+  if (gato1 < gato2 ) {
+    return gatoProximo1;
+  }else if (gato2 < gato1) {
+    return gatoProximo2;
+  }else {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
