@@ -72,7 +72,7 @@ function highestCount(numberArray) {
 // console.log(highestCount([0, 0, 0]));
 
 // // por que não consigo printar o valor do highestNumber?
-// console.log(highestNumber); 
+// console.log(highestNumber);
 
 // Desafio 7
 function catAndMouse() {
