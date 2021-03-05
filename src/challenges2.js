@@ -14,56 +14,79 @@ function techList(techsArray, username) {
   }
   return arrayObjectTechs;
 }
-console.log(techList([], 'lucas'));
 
-function countNumber(array, number) {
-  let count = 0;
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] === number) {
-      count += 1;
+function countRepeatedNumbers(repeated) {
+  for (let numbers in repeated) {
+    if (repeated[numbers] >= 3) {
+      return true;
     }
   }
-  return count;
+  return false;
 }
 
-function validatePhoneNumber(array) {
-  for (let index = 0; index < array.length; index += 1) {
-    let number = array[index];
-    if ((countNumber(array, number)) >= 3 || number < 0 || number > 9) {
-      return false;
+function isRepeatedMoreThan3(phoneNumber) {
+  let repeated = [];
+  for (let j = 0; j < phoneNumber.length; j += 1) {
+    repeated[j] = 0;
+    for (let index = 0; index < phoneNumber.length; index += 1) {
+      if (phoneNumber[index] === phoneNumber[j]) {
+        repeated[j] += 1;
+      }
     }
+  }
+  if (countRepeatedNumbers(repeated)) {
+    return true;
+  }
+  return false;
+}
+
+function isNegative(phoneNumber) {
+  for (let index = 0; index < phoneNumber.length; index += 1) {
+    if (phoneNumber[index] === '-') {
+      return true;
+    }
+  }
+}
+
+function validatePhoneNumber(phoneNumber) {
+  let msg = 'valores errados';
+  if (phoneNumber.length !== 11) {
+    if (isNegative(phoneNumber)) {
+      return msg;
+    }
+    return false;
+  } if (isNegative(phoneNumber) || isRepeatedMoreThan3(phoneNumber)) {
+    return msg;
   }
   return true;
 }
 
-function phoneGenerator(array) {
+function phoneGenerator(arrayPhoneNumber, num1, num2) {
   let phoneNumber = [];
-  phoneNumber.push('(');
-  for (let index = 0; index < 2; index += 1) {
-    phoneNumber.push(array[index]);
+  for (let index = num1; index < num2; index += 1) {
+    phoneNumber.push(arrayPhoneNumber[index]);
   }
-  phoneNumber.push(') ');
-  for (let index = 2; index < 7; index += 1) {
-    phoneNumber.push(array[index]);
-  }
-  phoneNumber.push('-');
-  for (let index = 7; index < array.length; index += 1) {
-    phoneNumber.push(array[index]);
-  }
-  return phoneNumber.join('');
+  return phoneNumber;
+}
+
+function phoneConcatenate(arrayPhoneNumber) {
+  let phoneOne = phoneGenerator(arrayPhoneNumber, 0, 2).join('');
+  let phoneTwo = phoneGenerator(arrayPhoneNumber, 2, 7).join('');
+  let phoneThree = phoneGenerator(arrayPhoneNumber, 7, 11).join('');
+  return `(${phoneOne}) ${phoneTwo}-${phoneThree}`;
 }
 
 // Desafio 11
-function generatePhoneNumber(arrayPhoneNumber) {
-  if (arrayPhoneNumber.length !== 11) {
-    return 'Array com tamanho incorreto.';
-  }
-  if (validatePhoneNumber(arrayPhoneNumber)) {
-    let phone = phoneGenerator(arrayPhoneNumber);
+function generatePhoneNumber(phoneNumber) {
+  if (validatePhoneNumber(phoneNumber) === true) {
+    let phone = phoneConcatenate(phoneNumber);
     return phone;
+  } if (validatePhoneNumber(phoneNumber) === 'valores errados') {
+    return 'não é possível gerar um número de telefone com esses valores';
   }
-  return 'não é possível gerar um número de telefone com esses valores';
+  return 'Array com tamanho incorreto.';
 }
+console.log(generatePhoneNumber('1234567890923'));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -88,8 +111,6 @@ function hydrate(phrase) {
   } else result = `${sum} copos de água`;
   return result;
 }
-
-console.log(hydrate('1 cerveja'));
 
 module.exports = {
   generatePhoneNumber,
