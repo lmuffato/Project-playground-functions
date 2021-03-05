@@ -19,9 +19,12 @@ function splitSentence(array) {
 }
 console.log(splitSentence('go Trybe'));
 // Desafio 4 ;
-function concatName() {
-}
 
+function concatName(array) {
+  let string = `${array[array.length - 1]},${array[[0]]}`;
+  return string;
+}
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 // Desafio 5
 function footballPoints(wins, ties) {
   let wins1 = wins * 3;
