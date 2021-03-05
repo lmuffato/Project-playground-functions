@@ -5,18 +5,8 @@ function techList() {
 }
 
 // Desafio 11
-function countRepeated(numbers) {
-  let numbersSort = numbers.sort();
-  let count = 1;
-  for (let index = 0; index < (numbersSort.length - 1); index += 1) {
-    if (numbersSort[index] === numbersSort[(index + 1)]) {
-      count += 1;
-    } else {
-      count = 1;
-    }
-  } return count;
-}
 function generatePhoneNumber(numbers) {
+  let num = numbers;
   if (numbers.length < 11 || numbers.length > 11) {
     return 'Array com tamanho incorreto.';
   }
@@ -25,21 +15,30 @@ function generatePhoneNumber(numbers) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  let count = countRepeated();
-  if (count >= 3) {
-    return 'não é possível gerar um número de telefone com esses valores';
+  let numbersSort = numbers.slice().sort();
+  let count = 1;
+  for (let index = 0; index < (numbersSort.length - 1); index += 1) {
+    if (numbersSort[index] === numbersSort[(index + 1)]) {
+      count += 1;
+      if (count === 3) {
+        return 'não é possível gerar um número de telefone com esses valores';
+      }
+    } else {
+      count = 1;
+    }
   }
-  let prefix = (numbers.slice(0, 2));
+  let prefix = (num.slice(0, 2));
   let prefixToString = prefix.map(String);
   let finalPrefix = prefixToString.join('');
-  let phoneNumber1 = (numbers.slice(2, 7));
+  let phoneNumber1 = (num.slice(2, 7));
   let phoneToString1 = phoneNumber1.map(String);
   let phone1 = phoneToString1.join('');
-  let phoneNumber2 = (numbers.slice(7, 11));
+  let phoneNumber2 = (num.slice(7, 11));
   let phoneToString2 = phoneNumber2.map(String);
   let phone2 = phoneToString2.join('');
   return `(${finalPrefix}) ${phone1}-${phone2}`;
 }
+console.log(generatePhoneNumber([1, 2, 3, 4, 2, 6, 7, 8, 9, 0, 1]));
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let condA = lineB + lineC;
