@@ -28,7 +28,7 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let result = wins * 3 + ties * 1;
+  let result = wins * 3 + ties;
   return result;
 }
 
@@ -111,7 +111,7 @@ function fizzBuzz(numbers) {
   return result;
 }
 
-let vogals = {
+let vowels = {
   a: 1,
   e: 2,
   i: 3,
@@ -119,21 +119,20 @@ let vogals = {
   u: 5,
 };
 
-function checkVogals(character) {
-  for (let key in vogals) {
-    if (character === key) {
-      return vogals[key];
-    }
-  }
-  return false;
-}
+let numbers = {
+  1: 'a',
+  2: 'e',
+  3: 'i',
+  4: 'o',
+  5: 'u',
+};
 
-function transformVogalsIntoNumbers(word) {
+function transformVowelsIntoNumbers(word) {
   let codedWord = [];
   for (let index = 0; index < word.length; index += 1) {
-    if (checkVogals(word[index]) !== false) {
-      codedWord.push(checkVogals(word[index]));
-    } else if (checkVogals(word[index]) === false) {
+    if (vowels[word[index]]) {
+      codedWord.push(vowels[word[index]]);
+    } else {
       codedWord.push(word[index]);
     }
   }
@@ -142,25 +141,16 @@ function transformVogalsIntoNumbers(word) {
 
 // Desafio 9
 function encode(word) {
-  let code = transformVogalsIntoNumbers(word);
+  let code = transformVowelsIntoNumbers(word);
   return code;
 }
 
-function checkNumbers(character) {
-  for (let key in vogals) {
-    if (parseInt(character, 0) === vogals[key]) {
-      return key;
-    }
-  }
-  return false;
-}
-
-function transformNumbersIntoVogals(word) {
+function transformNumbersIntoVowels(word) {
   let decodedWord = [];
   for (let index = 0; index < word.length; index += 1) {
-    if (checkNumbers(word[index]) !== false) {
-      decodedWord.push(checkNumbers(word[index]));
-    } else if (checkNumbers(word) === false) {
+    if (numbers[word[index]]) {
+      decodedWord.push((numbers[word[index]]));
+    } else {
       decodedWord.push(word[index]);
     }
   }
@@ -168,7 +158,7 @@ function transformNumbersIntoVogals(word) {
 }
 
 function decode(word) {
-  let decoding = transformNumbersIntoVogals(word);
+  let decoding = transformNumbersIntoVowels(word);
   return decoding;
 }
 
