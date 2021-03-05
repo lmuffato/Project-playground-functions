@@ -97,6 +97,8 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
+catAndMouse(0,3,3);
+
 
 // Desafio 8
 function fizzBuzz(fizzBuzzParam) {
@@ -139,6 +141,7 @@ function encode(frase) {
   }  return console.log(newPhrase);
 }
 
+
 function decode(frase) {
   let encodingPhrase = frase;
   let newPhrase = '';
@@ -158,31 +161,37 @@ function decode(frase) {
     }
   }  return console.log(newPhrase);
 }
+decode('H2ll4');
+
+
 
 function tecnologies(paramTech, paramNome) {
 
     let arrayTec = [];
-    arrayTec = paramTech;
+    arrayTec = paramTech;          //Passando parametro 1 para array e ordenando
     arrayTec.sort();
 
     let name = '';
-    name = paramNome;
-  
-    let novoArray = [];
+    name = paramNome;              //Passando parametro 2 pra string
 
+    let novoArray = [];               
     let objetoSeparado = {}
 
     for (let index=0; index<arrayTec.length; index++){
-      objetoSeparado = { tech: arrayTec[index], name: name}
-      novoArray.push(objetoSeparado);
+
+        objetoSeparado = { tech: arrayTec[index], name: name}
+        novoArray.push(objetoSeparado);
+      
     }
     
-    return(console.log(novoArray));
 
-  }
-  
-  
-  tecnologies(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Luiz');
+    if (novoArray.length === 0) {
+      console.log('Vazio!')}
+      else {
+    return(console.log(novoArray));
+    }
+
+  } 
   
 
 
