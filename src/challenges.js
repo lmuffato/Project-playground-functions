@@ -28,7 +28,7 @@ console.log(splitSentence('foguete'));
 function concatName(array) {
   let concatStrings = '';
   for (let index = 0; index < array.length; index += 1) {
-    concatStrings = `${array[0]}, ${array[array.length - 1]}`;
+    concatStrings = `${array[array.length - 1]}, ${array[0]}`;
   }
   return concatStrings;
 }
