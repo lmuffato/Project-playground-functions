@@ -46,7 +46,7 @@ function checkRepeatedNumbers(array) {
 }
 
 function throwError(length, repeated, maxNumber) {
-  if (length !== true) return 'Array com tamanho incorreto';
+  if (length !== true) return 'Array com tamanho incorreto.';
   if (repeated !== true) return 'não é possível gerar um número de telefone com esses valores';
   if (maxNumber !== true) return 'não é possível gerar um número de telefone com esses valores';
 }
