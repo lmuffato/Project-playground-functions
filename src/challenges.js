@@ -118,7 +118,7 @@ function decode(listEncodeNumber) {
   for (let i = 0; i < modifyNumber.length; i += 1) {
     switch (modifyNumber[i]) {
       case '1':
-        console.log(modify[i]);
+        console.log(modifyNumber[i]);
         modifyNumber[i] = 'a';
         break;
       case '2':
