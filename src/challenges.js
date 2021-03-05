@@ -75,22 +75,24 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numbersArray) {
-
-  for (let index = 0; index <= numbersArray.length; index += 1) {
+let result = [];
+  for (let index = 0; index < numbersArray.length; index += 1) {
     if (numbersArray[index] % 3 === 0 && numbersArray[index] % 5 === 0) {
-      numbersArray[index] = 'fizzBuzz';
+      result.push('fizzBuzz');
     }
-    if (numbersArray[index] % 3 === 0) {
-      numbersArray[index] = 'fizz';
+    else if (numbersArray[index] % 3 === 0) {
+      result.push('fizz');
     }
-    if (numbersArray[index] % 5 === 0) {
-      numbersArray[index] = 'buzz';
+    else if (numbersArray[index] % 5 === 0) {
+      result.push('buzz')
     } else {
-      numbersArray[index] = 'bug!'
+      result.push('bug!')
     }
   }
-  return numbersArray;
+return result;
+
 }
+
 // Consulta ao repositório do Jorge Meyrelles: https://github.com/tryber/sd-010-a-project-playground-functions/tree/jorgemeyrelles-project-playground-functions //
 
 // Desafio 9
