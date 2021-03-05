@@ -3,7 +3,7 @@ function compareTrue(a, b) {
   if (a && b === true) {
     return true; 
   } return false;
-}}
+}
 
 // Desafio 2
 function calcArea(base, height) {
@@ -39,8 +39,7 @@ function highestCount(myArrey) {
   }
   for (let index2 = 0; index2 < myArrey.length; index2 += 1) {
     if (higherNumber === myArrey[index2]){
-      equalNumbers += 1; 
-    }
+      equalNumbers += 1;}
   } return equalNumbers;
 }
 
@@ -115,7 +114,7 @@ function encode(string) {
 console.log(enconde("hi there"))
 
 function decode() {
-  // seu código aqui
+  // seu código aqui//
 }
 
 module.exports = {
