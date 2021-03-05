@@ -51,9 +51,6 @@ function highestCount(array) {
   return count;
 }
 
-
-highestCount([0, 2, 1])
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let same = 'os gatos trombam e o rato foge';
