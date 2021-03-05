@@ -29,6 +29,7 @@ function generatePhoneNumber(phoneNumber) {
   let firstPart = '';
   let secondPart = '';
   let thirdPart = '';
+  let numberAdjusted = 0
   for (let index = 0; index < phoneNumber.length; index += 1) {
     if (phoneNumber.length != 11) {
       return 'Array com tamanho incorreto.'
@@ -39,7 +40,7 @@ function generatePhoneNumber(phoneNumber) {
       firstPart = allNumber.slice(0, 2);
       secondPart = allNumber.slice(2, 7);
       thirdPart = allNumber.slice(7, 11);
-      let = numberAdjusted = `(${firstPart}) ${secondPart}-${thirdPart}`;
+      numberAdjusted = `(${firstPart}) ${secondPart}-${thirdPart}`;
     }
     return numberAdjusted
   }
