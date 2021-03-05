@@ -1,7 +1,7 @@
 // Desafio 1:
 function compareTrue(a, b) {
   if (a && b === true) {
-    return true; 
+    return true;
   } return false;
 }
 
@@ -44,22 +44,6 @@ function highestCount(myArrey) {
   } return equalNumbers;
 }
 
-// Desafio 6
-function highesttCount(myArrey) {
-  let equalNumbers = 0;
-  let higherNmber = 0;
-  for (let index = 0; index < myArrey.length; index += 1); {
-    if (higherNmber < myArrey[index]) {
-      higherNmber = myArrey[index];
-    }
-  }
-  for (let index2 = 0; index2 < myArrey.length; index2 += 1); {
-    if (higherNumber === myArrey[index2]) {
-      equalNumbers += 1;
-    }
-  } return equalNumbers;
-}
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = Math.abs(mouse - cat1);
@@ -67,18 +51,15 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distanceCat2 > distanceCat1) {
     return 'cat1';
   } else if (distanceCat1 > distanceCat2) {
-    return 'cat2'; 
-  } else {
-    return 'os gatos trombam e o rato foge';
+    return 'cat2';
+  } return 'os gatos trombam e o rato foge';
   }
-}
 
 // Desafio 8
-
 function fizzBuzz(array) {
   let newArray = [];
-  for (let index = 0; index <array.length; index += 1) {
-      if (array[index] % 5 === 0 && array[index] % 3 === 0) {
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] % 5 === 0 && array[index] % 3 === 0) {
       newArray.push('fizzBuzz');
     } else if (array[index] % 5 === 0) {
       newArray.push('buzz');
@@ -86,21 +67,73 @@ function fizzBuzz(array) {
       newArray.push('fizz');
     } else {
       newArray.push('bug!');
-    } 
+    }
   }
   return newArray;
 }
 
 // Desafio 9
-function encode(string) {
- string = string.replace('a', '1').replace('e', '2').replace('i', '3').replace('o', '4').replace('u', '5');
- return string;
+function zencode(string) {
+  string = string.replace('a', '1')
+    .replace('e', '2').replace('i', '3')
+    .replace('o', '4')
+    .replace('u', '5');
+  return string;
 }
-console.log(encode("passo suadinho"));
 
-function decode() {
-  // seu código aqui//
+function zdecode(string) {
+  string = string.replace('1', 'a').replace('2', 'e').replace('3', 'i')
+    .replace('4', 'o')
+    .replace('5', 'u');
+  return string;
 }
+console.log(zdecode('Th3s 3s 1n 2nc4d3ng t2st.'));
+//Desafio 9 versao 2
+
+function encode(string) {
+  let newString = '';
+
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === 'a') {
+      newString += '1';
+    } else if (string[index] === 'e') {
+      newString += '2';
+    } else if (string[index] === 'i') {
+      newString += '3';
+    } else if (string[index] === 'o') {
+      newString += '4';
+    } else if (string[index] === 'u') {
+      newString += '5';
+    } else {
+      newString += string[index];
+    }
+    return newString;
+  }
+ function decode(string) {
+   let newString = '';
+
+   for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === '1') {
+      newString += 'a';
+    } else if (string[index] === '2') {
+      newString += 'e';
+    } else if (string[index] === '3') {
+      newString += 'i';
+    } else if (string[index] === '4') {
+      newString += 'o';
+    } else if (string[index] === '5') {
+      newString += 'u';
+    } else {
+      newString += string[index];
+    }
+    return newString;
+ }
+ console.log(decode('Th3s 3s 1n 2nc4d3ng t2st.'));
+
+
+
+
+
 
 module.exports = {
   calcArea,
