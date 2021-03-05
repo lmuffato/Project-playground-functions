@@ -12,7 +12,7 @@ console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, heigth) {
-  return (base * heigth) / 2; 
+  return (base * heigth) / 2;
 }
 
 console.log(calcArea(10, 50));
@@ -37,7 +37,7 @@ console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-return (wins * 3 + ties);
+  return (wins * 3 + ties);
 }
 
 console.log(footballPoints(14, 8));
@@ -50,16 +50,16 @@ function highestCount(numbers) {
   let count = 0;
 
   for (let index = 0; index < numbers.length; index += 1) {
-  if (numbers[index] > maior) {
-    maior = numbers[index];
+    if (numbers[index] > maior) {
+      maior = numbers[index];
     }
- }
-
-  for (let index = 0; index < numbers.length; index += 1){
-  if (numbers[index] === maior) {
-  count += 1;
   }
-}
+
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] === maior) {
+      count += 1;
+    }
+  }
   return count;
 }
 
@@ -76,7 +76,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
     res = 'cat1';
-  }else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
+  } else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
     res = 'cat2';
   } else {
     res = 'os gatos trombam e o rato foge';
@@ -112,6 +112,7 @@ function encode(vowel) {
   res = vowel.replace(/a/g, '1').replace(/e/g, '2').replace(/i/g, '3').replace(/o/g, '4').replace(/u/g, '5');
   return res;
 }
+console.log(encode('hi, there'));
 
 function decode(vowel) {
   res = vowel.replace(/1/g, 'a').replace(/2/g, 'e').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
