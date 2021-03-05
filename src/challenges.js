@@ -28,9 +28,23 @@ function splitSentence(string) {
 // console.log(splitSentence('foguete'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(stringArray) {
+  let lastItem = stringArray[stringArray.length - 1];
+  let firstItem = stringArray[0];
+  let space = ', ';
+  return lastItem + space + firstItem;
 }
+
+// // console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+// // console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+// // console.log(concatName(['captain', 'my', 'captain']));
+
+// // outra opção seria:
+// function concatName(stringArray) {
+//   return (stringArray[stringArray.length - 1]) + ', ' + stringArray[0];
+// }
+
+// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
