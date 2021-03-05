@@ -15,48 +15,44 @@ function techList(techsArray, username) {
   return arrayObjectTechs;
 }
 
-function countRepeatedNumbers(repeated) {
-  for (let numbers in repeated) {
-    if (repeated[numbers] >= 3) {
-      return true;
-    }
-  }
-  return false;
-}
-
 function isRepeatedMoreThan3(phoneNumber) {
-  let repeated = [];
-  for (let j = 0; j < phoneNumber.length; j += 1) {
-    repeated[j] = 0;
-    for (let index = 0; index < phoneNumber.length; index += 1) {
-      if (phoneNumber[index] === phoneNumber[j]) {
-        repeated[j] += 1;
-      }
+  let result = false;
+  let repeatedNumbers = {};
+  for (let number of phoneNumber) {
+    repeatedNumbers[number] = 0;
+  }
+  for (let number of phoneNumber) {
+    repeatedNumbers[number] += 1;
+  }
+  for (let number in repeatedNumbers) {
+    if (repeatedNumbers[number] >= 3) {
+      result = true;
     }
   }
-  if (countRepeatedNumbers(repeated)) {
-    return true;
-  }
-  return false;
+  return result;
 }
 
 function isNegative(phoneNumber) {
   for (let index = 0; index < phoneNumber.length; index += 1) {
-    if (phoneNumber[index] === '-') {
+    if (phoneNumber[index] < 0) {
+      return true;
+    }
+  }
+}
+
+function isHigherThan9(phoneNumber) {
+  for (let index = 0; index < phoneNumber.length; index += 1) {
+    if (phoneNumber[index] > 9) {
       return true;
     }
   }
 }
 
 function validatePhoneNumber(phoneNumber) {
-  let msg = 'valores errados';
   if (phoneNumber.length !== 11) {
-    if (isNegative(phoneNumber)) {
-      return msg;
-    }
     return false;
-  } if (isNegative(phoneNumber) || isRepeatedMoreThan3(phoneNumber)) {
-    return msg;
+  } if (isNegative(phoneNumber) || isHigherThan9(phoneNumber) || isRepeatedMoreThan3(phoneNumber)) {
+    return 'valores errados';
   }
   return true;
 }
@@ -86,7 +82,7 @@ function generatePhoneNumber(phoneNumber) {
   }
   return 'Array com tamanho incorreto.';
 }
-console.log(generatePhoneNumber('1234567890923'));
+console.log(generatePhoneNumber([7, 7, 7, 2, 3, 4, 5, 6, 7, 8, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
