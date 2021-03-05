@@ -5,18 +5,27 @@ function compareTrue(value1, value2) {
   }
   return false;
 }
-// abaixo o comando printa o resultado da função (false, nesse caso)
+// abaixo o print do resultado da função (false, nesse caso)
 // console.log(compareTrue(false, true));
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return base*height/2;
 }
 
+// abaixo o print do resultado da função
+// console.log(calcArea(10, 50));
+// console.log(calcArea(5, 2));
+// console.log(calcArea(51, 1));
+
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  return string.split(' ');
 }
+
+// console.log(splitSentence('go Trybe'));
+// console.log(splitSentence('vamo que vamo'));
+// console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName() {
