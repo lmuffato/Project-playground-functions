@@ -76,16 +76,16 @@ function catAndMouse(mouse, cat1, cat2) {
 // 1 - Função para criar novo array com as strings, segundo cada condição.
 
 function fizzBuzzConvert(number) {
-  switch (true) {
-  case (number % 5 === 0 && number % 3 === 0):
+  if (number % 5 === 0 && number % 3 === 0) {
     return 'fizzBuzz';
-  case (number % 3 === 0):
-    return 'fizz';
-  case (number % 5 === 0):
-    return 'buzz';
-  default:
-    return 'bug!';
   }
+  if (number % 3 === 0) {
+    return 'fizz';
+  }
+  if (number % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
 }
 
 function fizzBuzz(arrayNumbers) {
