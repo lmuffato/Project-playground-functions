@@ -26,16 +26,17 @@ console.log(calcArea(5, 2));
 console.log(calcArea(51, 1));
 
 // Desafio 3
-function splitSentence(separatee, limiter) {
+function splitSentence(separatee) {
   // seu código aqui
+  let limiter = ' ';
   let result = separatee.split(limiter);
   return result;
 }
 
 console.log('Desafio 3');
-console.log(splitSentence('go Trybe', ' '));
-console.log(splitSentence('vamo que vamo', ' '));
-console.log(splitSentence('foguete', ' '));
+console.log(splitSentence('go Trybe'));
+console.log(splitSentence('vamo que vamo'));
+console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName(names) {
@@ -51,7 +52,7 @@ console.log(concatName(['captain', 'my', 'captain']));
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  let total =((wins * 3) + ties );
+  let total = ((wins * 3) + ties );
   return total;
 }
 
@@ -66,12 +67,12 @@ function highestCount(numbers) {
   let high = numbers[0];
   for (let u = 1; u < numbers.length; u++) {
     if (numbers[u] > high) {
-      high = numbers[u]
+      high = numbers[u];
     }
   }
-    let counter = 0;
+  let counter = 0;
   for (let i = 0; i < numbers.length; i++) {
-    if (numbers[i] == high) {
+    if (numbers[i] === high) {
       counter++ ;
     }
   }
@@ -89,10 +90,10 @@ function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1';
   } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
-      return 'cat2';
-    } else {
-      return 'os gatos trombam e o rato foge'
-    } 
+    return 'cat2';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 
 console.log('Desafio 7');
@@ -101,9 +102,29 @@ console.log(catAndMouse(5, 80, 17));
 console.log(catAndMouse(5, 2, 8));
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbers) {
   // seu código aqui
+  let result = [];
+  for(let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
+      result.push('fizzBuzz');
+    }
+    if (numbers[i] % 3 === 0 ) {
+      result.push('fizz');
+    }
+    if (numbers[i] % 5 === 0) {
+      result.push('buzz');
+    } else { 
+      result.push('bug!');
+    }
+  }
+  return result;
 }
+
+console.log('Desafio 8');
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([7, 9]));
+console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode() {
