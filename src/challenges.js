@@ -51,19 +51,19 @@ function highestCount(array) {
   // descobrir qual o maior número
   let maior = 0;
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] > maior){
+    if (array[index] > maior) {
       maior = array[index];
     }
   }
   // percorrer array para saber quantas vezes o maior número se repete
   let maiorRepete = 0;
-  for (let i = 0; i < array.length; i += 1){
+  for (let i = 0; i < array.length; i += 1) {
     if (maior === array[i]) {
       maiorRepete += 1;
     }
   }
   return maiorRepete;
-}  
+  }  
   
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
@@ -80,7 +80,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } if (cat2 < mouse) {
     distanciaCat2 = distanciaCat2 + mouse - cat2;
   } else if (cat2 > mouse) {
-    distanciaCat2 = distanciaCat2 + cat2 - mouse
+    distanciaCat2 = distanciaCat2 + cat2 - mouse;
   } if (distanciaCat1 > distanciaCat2) {
     return 'cat2';
   } if (distanciaCat1 < distanciaCat2) {
@@ -122,7 +122,7 @@ function encode(string) {
   string = string.replace('i', '3');
   string = string.replace('o', '4');
   string = string.replace('u', '5');
-  return string
+  return string;
 }
 console.log(encode('hi there!'));
 
