@@ -1,12 +1,10 @@
 // Desafio 1
 function compareTrue(value1, value2) {
   // seu código aqui.
-  if (value1 && value2 === true){
+  if (value1 === true && value2 === true){
     return true;
   }
-  else {
     return false;
-  };
 }
 console.log(compareTrue(false, true));
 console.log(compareTrue(false, false));
@@ -36,8 +34,7 @@ function concatName(array) {
   // seu código aqui
  let lastItem = array.pop();
  let firstItem = array.shift();
- let result = [lastItem, firstItem];
- return result;
+ return lastItem + ', ' + firstItem;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
