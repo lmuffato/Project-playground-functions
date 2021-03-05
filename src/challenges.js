@@ -86,15 +86,52 @@ function ifelse (index) {
   }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let letter = '';
+  for (let index = 0; index < phrase.length; index += 1){
+    letter += (ifElse(phrase[index]));
+  }
+  console.log(letter);
+  decode (letter);
 }
 
-function decode() {
-  // seu código aqui
+function ifElse (index) {  
+  if (index === 'a') {
+    return '1';
+} if (index === 'e') {
+    return '2';
+} if (index === 'i') {
+    return '3';
+} if (index === 'o') {
+    return '4';
+} if (index === 'u') {
+    return '5';
+  } 
+  return index;
 }
 
+function decode (letter) {
+  let originalLetter = '';
+  for (let index = 0; index < letter.length; index += 1){
+    originalLetter += (ifElseNumber(letter[index]));
+  }
+  return originalLetter;
+}
 
+function ifElseNumber (index) {  
+  if (index === '1') {
+    return 'a';
+} if (index === '2') {
+    return 'e';
+} if (index === '3') {
+    return 'i';
+} if (index === '4') {
+    return 'o';
+} if (index === '5') {
+    return 'u';
+  } 
+  return index;
+}
 
 module.exports = {
   calcArea,
