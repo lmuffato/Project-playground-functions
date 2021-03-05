@@ -26,37 +26,54 @@ function techList(arrayList, name) {
 }
 
 // Função auxiliar
-function validation(arr) {
-  let err = 'não é possível gerar um número de telefone com esses valores';
-  let countRepeated = 0;
-  let count = 0;
+let phone = {
+  isRepeatedNumer(arr) {
+    for (let index of arr) {
+      return arr.filter((n) => (n === index)).length;
+    }
+  },
+  lessThanZeroAndGreaterThanNine(arr) {
+    for (let index = 0; index < arr.length; index += 1) {
+      if (arr[index] < 0 || arr[index] > 9) {
+        return false;
+      }
+    }
+  },
+  firstBlock(arrayNumbers) {
+    let formatedPhoneNumber = '';
+    for (let index = 0; index < 2; index += 1) {
+      formatedPhoneNumber = formatedPhoneNumber.concat(arrayNumbers[index]);
+    }
+    return formatedPhoneNumber;
+  },
+  secondBlock(arrayNumbers) {
+    let formatedPhoneNumber = '';
+    for (let index = 2; index < 7; index += 1) {
+      formatedPhoneNumber = formatedPhoneNumber.concat(arrayNumbers[index]);
+    }
+    return formatedPhoneNumber;
+  },
+  thirdBlock(arrayNumbers) {
+    let formatedPhoneNumber = '';
+    for (let index = 7; index < 11; index += 1) {
+      formatedPhoneNumber = formatedPhoneNumber.concat(arrayNumbers[index]);
+    }
+    return formatedPhoneNumber;
+  },
+};
 
+function validation(arr) {
   if (arr.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
 
-  for (let index = 0; index < arr.length; index += 1) {
-    if (arr[index] < 0 || countRepeated >= 3 || arr[index] > 9) {
-      return err;
-    }
-  }
-
-  for (let index = 0; index < arr.length; index += 1) {
-    count = 0;
-    for (let newIndex = 0; newIndex < arr.length; newIndex += 1) {
-      if (arr[index] === arr[newIndex]) {
-        count += 1;
-        if (count >= 3) {
-          return 'não é possível gerar um número de telefone com esses valores';
-        }
-      }
-    }
-  }
-
-  if(count >= 3){
+  if (phone.lessThanZeroAndGreaterThanNine(arr) === false) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
 
+  if (phone.isRepeatedNumer(arr) >= 3) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
 }
 
 // Desafio 11
@@ -64,23 +81,17 @@ function generatePhoneNumber(arrayNumbers) {
   let formatedPhoneNumber = '';
 
   formatedPhoneNumber = formatedPhoneNumber.concat('(');
-  for (let index = 0; index < 2; index += 1) {
-    formatedPhoneNumber = formatedPhoneNumber.concat(arrayNumbers[index]);
-  }
+  formatedPhoneNumber = formatedPhoneNumber.concat(phone.firstBlock(arrayNumbers));
 
   formatedPhoneNumber = formatedPhoneNumber.concat(') ');
 
-  for (let index = 2; index < 7; index += 1) {
-    formatedPhoneNumber = formatedPhoneNumber.concat(arrayNumbers[index]);
-  }
+  formatedPhoneNumber = formatedPhoneNumber.concat(phone.secondBlock(arrayNumbers));
 
   formatedPhoneNumber = formatedPhoneNumber.concat('-');
 
-  for (let index = 7; index < 11; index += 1) {
-    formatedPhoneNumber = formatedPhoneNumber.concat(arrayNumbers[index]);
-  }
+  formatedPhoneNumber = formatedPhoneNumber.concat(phone.thirdBlock(arrayNumbers));
 
-  if(!validation(arrayNumbers)){
+  if (!validation(arrayNumbers)) {
     return formatedPhoneNumber;
   }
 
