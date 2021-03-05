@@ -3,7 +3,7 @@ function compareTrue(a, b) {
   if (a && b === true) {
     return true; 
   } return false;
-}
+}}
 
 // Desafio 2
 function calcArea(base, height) {
@@ -24,21 +24,37 @@ function concatName(content) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  wins = wins*3;
+  wins = wins * 3;
   return wins + ties;
 }
 
 // Desafio 6
 function highestCount(myArrey) {
   let equalNumbers = 0;
+  let higherNumber = 0;
+  for (let index = 0; index < myArrey.length; index += 1) {
+    if (higherNumber < myArrey[index]) {
+      higherNumber = myArrey[index];
+    }
+  }
+  for (let index2 = 0; index2 < myArrey.length; index2 += 1) {
+    if (higherNumber === myArrey[index2]){
+      equalNumbers += 1; 
+    }
+  } return equalNumbers;
+}
+
+// Desafio 6
+function highesttCount(myArrey) {
+  let equalNumbers = 0;
   let higherNmber = 0;
-  for (let index = 0; index < myArrey.length; index +=1) {
+  for (let index = 0; index < myArrey.length; index += 1); {
     if (higherNmber < myArrey[index]) {
       higherNmber = myArrey[index];
     }
   }
-  for (let index2 = 0; index2 < myArrey.length; index2 +=1) {
-    if (higherNmber === myArrey[index2]) {
+  for (let index2 = 0; index2 < myArrey.length; index2 += 1); {
+    if (higherNumber === myArrey[index2]) {
       equalNumbers += 1;
     }
   } return equalNumbers;
@@ -46,8 +62,8 @@ function highestCount(myArrey) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  distanceCat1 = (cat1 - mouse);
-  distanceCat2 = (cat2 - mouse);
+  let distanceCat1 = Math.abs(mouse - cat1);
+  let distanceCat2 = Math.abs(mouse - cat2);
   if (distanceCat2 > distanceCat1) {
     return 'cat1';
   } else if (distanceCat1 > distanceCat2) {
@@ -56,6 +72,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
+console.log(catAndMouse(0, -6, -3));
 
 // Desafio 8
 
@@ -74,13 +91,29 @@ function fizzBuzz(array) {
   }
   return array;
 }
-console.log(fizzBuzz([9, 25]))
-
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let newString = [];
+  // percorrendo a string
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] = 'a') {
+      newString = 1;
+    } else if (string[index] = 'e') {
+      newString = 2;
+    } else if (string[index] = 'i') {
+      newString = 3;
+    } else if (string[index] = 'o') {
+      newString = 4;
+    } else if (string[index] = 'u') {
+      newString = 5;
+    } else {
+      newString = string;
+    }
+  }
 }
+console.log(enconde("hi there"))
+
 function decode() {
   // seu código aqui
 }
@@ -96,4 +129,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-}}
+}
