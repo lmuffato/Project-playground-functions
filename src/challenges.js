@@ -41,7 +41,7 @@ function highestCount(arrayNumber) {
     let countGreatest = countNumberInArray(arrayNumber, greatestNumber);
     return countGreatest;
   } 
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
+console.log(highestCount([0, 0, 0]));
 
   function findGreatestNumberInArray(arrayNumber) {
     let larger = 0;
@@ -51,7 +51,7 @@ console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
       }
     }
   }
-  console.log(findGreatestNumberInArray([0, 4, 4, 4, 9, 2, 1]));
+  console.log(findGreatestNumberInArray([0, 0, 0]));
 
   function countNumberInArray(arrayNumber, number) {
   let counter = 0;
@@ -61,7 +61,7 @@ console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
         }
       }
   }
-console.log(countNumberInArray([0, 4, 4, 4, 9, 2, 1], 4 ));
+console.log(countNumberInArray([0, 0, 0], 0 ));
 
 // Desafio 7
 function catAndMouse() {
