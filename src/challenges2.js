@@ -1,7 +1,7 @@
 // Desafio 10
 function techList(technologyList , name) {
   // seu código aqui
-  if (technologyList.length === []){
+  if (technologyList.length === 0){
     return 'Vazio!';
   }
  let arrayList = []; 
