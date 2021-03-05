@@ -64,51 +64,26 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-// Dica do Murilo Gonçalves quanto a divisão da função em mais de uma para passar
+// Lógica vista e compreendida no código do Iago Ferreira  https://github.com/tryber/sd-010-a-project-playground-functions/blob/iagopferreira-project-playground-functions/src/challenges.js
 function fizzBuzz(array) {
   let codified = [];
-  let index = 0;
-  for (index = 0; index < array.lenght; index += 1) {
-    //if ((array[index] % 3 && array[index] % 5) === 0) {
-      //codified += 'fizzBuzz';
-  //  } else if (array[index] % 3 === 0) {
-    //  codified += 'fizz';
-   // } else if (array[index] % 5 === 0) {
-    //codified += 'buzz';
-    //} else {
-    //codified += 'bug!';
-    //}
-    doubledivision(array);
-    fizz(array);
-    buzz(array);
-    notdivisible(array);
+  for (let index = 0; index < array.length; index += 1) {
+    codified.push(ifelse(array[index]))
   }
   return codified;
 }
 
-function doubledivision(array){
-  if ((array[index] % 3 && array[index] % 5) === 0) {
-    codified += 'fizzBuzz';
-}
-}
-
-function fizz(array){
-  if (array[index] % 3 === 0) {
-    codified += 'fizz';
-}
-}
-
-function buzz(array){
-  if (array[index] % 5 === 0) {
-    codified += 'buzz';
-}
-}
-
-function notdivisible(array){
-  if ((array[index] % 3 || array[index] % 5) === 0) {
-  codified += 'bug!';
+function ifelse (index) {  
+  if ((index % 3 && index % 5) === 0) {
+    return 'fizzBuzz';
+} if (index % 3 === 0) {
+    return 'fizz';
+} if (index % 5 === 0) {
+    return 'buzz';
+} if ((index % 3 && index % 5) !== 0) {
+    return 'bug!';
     }
-}
+  }
 
 // Desafio 9
 function encode() {
