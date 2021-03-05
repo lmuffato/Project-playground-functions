@@ -82,7 +82,7 @@ function fizzCheck(numbers) {
     if (numbers[index] % 3 === 0) {
       numbers[index] = 'fizz';
     }
-  } 
+  }
   return numbers;
 }
 
