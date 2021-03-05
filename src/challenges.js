@@ -8,7 +8,6 @@ function compareTrue(gradeProject, goingToLectures) {
 
 // Desafio 2
 function calcArea(base, height) {
-  // seu código aqui
   let areaTriangle;
   areaTriangle = (base * height) / 2;
   return areaTriangle;
@@ -25,7 +24,6 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(nameList) {
-  // seu código aqui
   let newString = `${nameList[nameList.length - 1]}, ${nameList[0]}`;
   return newString;
 }
@@ -38,7 +36,6 @@ function concatName(nameList) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  // seu código aqui
   let tablePoints = (3 * wins) + ties;
   return tablePoints;
 }
@@ -104,24 +101,6 @@ function fizzBuzz(arrayNumbers) {
 // https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Looping_code
 
 // Desafio 9
-// Crie duas funções: a primeira deverá se chamar encode e,
-// ao receber uma string como parâmetro, deverá trocar todas
-// as vogais minúsculas por números, de acordo com o formato a seguir:
-
-// a -> 1
-// e -> 2
-// i -> 3
-// o -> 4
-// u -> 5
-
-// Ou seja, caso o parâmetro de encode seja "hi there!",
-// o retorno deverá ser "h3 th2r2!".
-
-// A segunda função deverá se chamar decode
-// e faz o contrário de encode
-// ou seja, recebe uma string contendo números
-// no lugar de letras minúsculas e retornará uma string
-// com vogais minúsculas no lugar dos números
 
 function encode(phrase) {
   let encodeConversionTable = {

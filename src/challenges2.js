@@ -42,8 +42,7 @@ function verifyDuplicates(numberList) {
   return countNumber;
 }
 
-// 2 - Verificar o quantos números se repetem na lista
-
+// 2 - Verificar o quantos números se repetem na lista.
 function countDuplicates(numberList) {
   let counter = verifyDuplicates(numberList);
   for (let number in numberList) {
@@ -53,8 +52,7 @@ function countDuplicates(numberList) {
   }
 }
 
-// 3 - Verificar as outras condições de exclusão
-
+// 3 - Verificar as outras condições de exclusão.
 function theExcludentConditions(arrayOfNumbers) {
   for (let key in arrayOfNumbers) {
     if (arrayOfNumbers[key] < 0 || arrayOfNumbers[key] > 9) {
@@ -63,8 +61,7 @@ function theExcludentConditions(arrayOfNumbers) {
   }
 }
 
-// 4 - Transformar em string e Formato do número
-
+// 4 - Transformar em string e colocar em formato de número de telefone.
 function phoneNumberFormat(phoneNumber) {
   let messageOne = `(${phoneNumber[0]}${phoneNumber[1]}) `;
   let messageTwo = `${phoneNumber[2]}${phoneNumber[3]}${phoneNumber[4]}`;
@@ -94,34 +91,8 @@ function generatePhoneNumber(phoneNumber) {
 // O código do colega João Nascimento (@nascjoao) ajudou muito a clarear como estruturar as funções 1 e 2 que compõem a resposta do desafio 11.
 
 // Desafio 12
-
-// Dividir em duas outras funções mais simples
-
-// 1 - Função que verifica a relação entre cada lado e a soma dos outros dois lados do triângulo.
-
-function verifySum(lineA, lineB, lineC) {
-  let sumOfAandB = lineA + lineB; // para lado C
-  let sumOfAandC = lineA + lineC; // para lado B
-  let sumOfCandB = lineB + lineC; // para lado A
-  if (lineA < sumOfCandB && lineB < sumOfAandC && lineC < sumOfAandB) {
-    return true;
-  }
-  return false;
-}
-// 2 - Função pra verificar a relação entre cada lado e a subtração dos outros dois.
-
-function verifySubtraction(lineA, lineB, lineC) {
-  let subtractionOfAandB = Math.abs(lineA - lineB); // para lado C
-  let subtractionOfAandC = Math.abs(lineA - lineC); // para lado B
-  let subtractionOfBandC = Math.abs(lineB - lineC); // para lado A
-  if (lineA > subtractionOfBandC && lineB > subtractionOfAandC && lineC > subtractionOfAandB) {
-    return true;
-  }
-  return false;
-}
-
 function triangleCheck(lineA, lineB, lineC) {
-  if (verifySum(lineA, lineB, lineC) === true && verifySubtraction(lineA, lineB, lineC) === true) {
+  if (lineA + lineB > lineC && lineB + lineC > lineA && lineC + lineA > lineB) {
     return true;
   }
   return false;
