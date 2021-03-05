@@ -90,17 +90,17 @@ function encode(string) {
   return encoded;
 }
 
-function decode(numbers) {
-    const numbers = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' }; // mesmo código acima, apenas troca a chave pelo value.
-    let decoded = '';
-    for (let symbol in numbers) {
-      if (numbers[numbers[symbol]]) {
-        decoded += numbers[numbers[symbol]];
-      } else {
-        decoded += numbers[symbol];
-      }
+function decode(code) {
+  const numbers = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' }; // mesmo código acima, apenas troca a chave pelo valor.
+  let decoded = '';
+  for (let symbol in code) {
+    if (numbers[code[symbol]]) {
+      decoded += numbers[code[symbol]];
+    } else {
+      decoded += code[symbol];
     }
-    return decoded;
+  }
+  return decoded;
 }
 
 module.exports = {
