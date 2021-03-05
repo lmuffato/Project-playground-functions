@@ -114,16 +114,13 @@ function fizzBuzz(arrayNumber) {
 
 // Desafio 9
 function encode(vowel) {
-  vowel = vowel.replaceAll('a', '1');
-  vowel = vowel.replaceAll('e', '2');
-  vowel = vowel.replaceAll('i', '3');
-  vowel = vowel.replaceAll('o', '4');
-  vowel = vowel.replaceAll('u', '5');
-    return vowel;
-  }
-  console.log(encode('hi, there'));
+  let res = '';
+  res = vowel.replace(/a/g, '1').replace(/e/g, '2').replace(/i/g, '3').replace(/o/g, '4').replace(/u/g, '5');
+  return res;
+}
+
 function decode(vowel) {
-  vowel = vowel.replaceAll('1', 'a').replaceAll('2', 'e').replaceAll('3', 'c').replaceAll('4', 'o').replaceAll('5', 'u');
+  res = vowel.replace(/1/g, 'a').replace(/2/g, 'e').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
   return vowel;
 }
 console.log(encode('hi, there'));
