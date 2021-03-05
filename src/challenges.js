@@ -92,7 +92,6 @@ function encode(phrase) {
     letter += (ifElse(phrase[index]));
   }
   console.log(letter);
-  decode (letter);
 }
 
 function ifElse (index) {  
@@ -109,6 +108,7 @@ function ifElse (index) {
   } 
   return index;
 }
+
 
 function decode (letter) {
   let originalLetter = '';
