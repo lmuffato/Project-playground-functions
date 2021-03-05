@@ -25,13 +25,15 @@ function splitSentence(stringValue) {
 
 // Desafio 4
 function concatName(arrayOfStrings) {
-  let resultConcat = `${arrayOfStrings[arrayOfStrings.length - 1]}, ${arrayOfStrings[0]}`;
+  let resultConcat = `${arrayOfStrings[arrayOfStrings.length - 1]}, ${
+    arrayOfStrings[0]
+  }`;
   return resultConcat;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let result = (wins * 3) + ties;
+  let result = wins * 3 + ties;
   return result;
 }
 
@@ -63,27 +65,56 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function divisibleOrNo(number) {
+  if (number % 3 === 0 && number % 5 === 0) {
+    return 'fizzBuzz';
+  }
+  if (number % 3 === 0) {
+    return 'fizz';
+  }
+  if (number % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
+
 function fizzBuzz(arrayOfNumbers) {
   let arrayFizzBuzz = [];
 
   for (let i = 0; i < arrayOfNumbers.length; i += 1) {
-    if (arrayOfNumbers[i] % 3 === 0 && arrayOfNumbers[i] % 5 === 0) {
-      arrayFizzBuzz.push('fizzBuzz');
-    } else if (arrayOfNumbers[i] % 3 === 0) {
-      arrayFizzBuzz.push('fizz');
-    } else if (arrayOfNumbers[i] % 5 === 0) {
-      arrayFizzBuzz.push('buzz');
-    } else {
-      arrayFizzBuzz.push('bug!');
-    }
+    arrayFizzBuzz.push(divisibleOrNo(arrayOfNumbers[i]));
   }
   return arrayFizzBuzz;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let lettersNumbers = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  lettersNumbersSize = Object.keys(lettersNumbers).length;
+
+  let stringArray = string.split('');
+
+  for (i = 0; i < stringArray.length; i += 1) {
+    for (j = 0; j < lettersNumbersSize; j += 1) {
+      let letterKey = Object.keys(lettersNumbers);
+      let letter = Object.keys(letterKey[j]);
+
+      if (letter.toString() === stringArray[i]) {
+        let letterValue = lettersNumbers(letterKey);
+        stringArray[i] = letterValue;
+      }
+    }
+  }
+  return stringArray;
 }
+console.log(encode('hi there!'));
+
 function decode() {
   // seu código aqui
 }
