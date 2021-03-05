@@ -94,9 +94,34 @@ function fizzBuzz(array) {
   return result;
 }
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
+  let string2 = '';
+
+  for ( let i = 0; i < string.length; i += 1) {
+    switch (string[i]) {
+      case 'a':
+        string2 += '1';
+      break;
+      case 'e':
+        string2 += '2';
+      break;
+      case 'i':
+        string2 += '3';
+      break;
+      case 'o':
+        string2 += '4';
+      break;
+      case 'u':
+        string2 += '5';
+      break;
+      default:
+        string2 += string[i]
+    }
+  }
+  return string2;
 }
+
 function decode() {
   // seu código aqui
 }
