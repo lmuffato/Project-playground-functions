@@ -46,7 +46,6 @@ function highestCount(arrayNumber) {
   }
   return contaMaiorNumero;
 }
-console.log(highestCount(2,8,9,7,9,1))
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
@@ -69,7 +68,7 @@ function fizzBuzz(arrayNumber) {
   for(let index in arrayNumber){  
 
     if (arrayNumber[index] % 3 === 0 && arrayNumber[index] % 5 === 0){
-      result.push("fizzbuzz")
+      result.push("fizzBuzz")
     } 
     else if (arrayNumber[index] % 3 === 0) {
       result.push("fizz")
@@ -83,7 +82,7 @@ function fizzBuzz(arrayNumber) {
   }
   return result
 }
-console.log(fizzBuzz([2,5,15,20]))
+
 // Desafio 9
 function encode() {
   // seu código aqui
