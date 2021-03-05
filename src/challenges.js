@@ -18,10 +18,10 @@ calcArea(5, 2)
 // Desafio 3
 function splitSentence(name) {
   
-  let result = name.split();
+  let result = name.split(' ');
   return result;
 }
-splitSentence('go Trybe');
+console.log(splitSentence('go Trybe'));
 
 // Desafio 4
 function concatName(array) {
