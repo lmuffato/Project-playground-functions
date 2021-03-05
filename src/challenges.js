@@ -57,21 +57,21 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numberArray) {
-  let highestNumber = Math.max.apply(Math, numberArray);
+  let highestNumber = Math.max.apply(null, numberArray);
   let repetion = 0;
-  for (let index=0; index < numberArray.length; index += 1) {
+  for (let index = 0; index < numberArray.length; index += 1) {
     if (highestNumber === numberArray[index]) {
       repetion += 1;
     }
   }
-  return repetion
+  return repetion;
 }
 
 // console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 // console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 // console.log(highestCount([0, 0, 0]));
 
-// // por que não consigo printar o valor do highestNumber ?
+// // por que não consigo printar o valor do highestNumber?
 // console.log(highestNumber); 
 
 // Desafio 7
