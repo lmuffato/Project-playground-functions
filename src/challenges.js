@@ -1,13 +1,21 @@
 // Desafio 1
 function compareTrue(val1, val2) {
-  val1 = Boolean;
-  val2 = Boolean;
 
-  if ((val1 === true) && (val2 === true)) {
-    return true;
+  let aux1 = Boolean;
+  aux1 = val1;
+
+  let aux2 = Boolean;
+  aux2 = val2;
+
+  let res = Boolean;
+
+  if ((aux1 === true) && (aux2 === true)) {
+    res = true;
   } else {
-    return false;
+    res = false;
   }
+  return(console.log(res));
+
 }
 
 compareTrue(true, true);
@@ -96,8 +104,6 @@ function catAndMouse(mouse, cat1, cat2) {
     return (console.log('os gatos trombam e o rato foge'));
   }
 }
-
-catAndMouse(0,3,3);
 
 
 // Desafio 8
