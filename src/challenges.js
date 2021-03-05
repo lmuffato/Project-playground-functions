@@ -6,14 +6,12 @@ function compareTrue(value1, value2) {
     return false;
   }
 }
-compareTrue(true, true);
 
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
 }
-calcArea(5, 2)
 
 // Desafio 3
 function splitSentence(name) {
@@ -21,21 +19,18 @@ function splitSentence(name) {
   let result = name.split(' ');
   return result;
 }
-console.log(splitSentence('go Trybe'));
 
 // Desafio 4
 function concatName(array) {
   let lastFirst = array[array.length - 1] + ',' + array[0];
   return lastFirst;
 }
-(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let result = (wins * 3) + (ties);
   return result;
 }
-footballPoints(14, 8);
 
 // Desafio 6
 function highestCount(array) {
@@ -53,7 +48,6 @@ function highestCount(array) {
   }
   return result;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -70,7 +64,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return result;
 }
-catAndMouse(1, 5, 6);
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -88,10 +81,9 @@ function fizzBuzz(array) {
   }
   return result;
 }
-fizzBuzz([2, 15, 7, 9, 45]);
 
 // Desafio 9
-function encode() {
+function encode(name) {
   // seu código aqui
 }
 function decode() {
