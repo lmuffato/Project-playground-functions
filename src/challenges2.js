@@ -15,7 +15,7 @@ function techList(techNames, name) {
 techList([], 'Alexandre');
 // Desafio 11
 // seu código aqui
-function numberRepeat(phoneNumber) {
+function generatePhoneNumber(phoneNumber) {
   for (let index = 0; index < phoneNumber.length; index += 1) {
     let numberRepeat = 0;
     for (let secondIndex = 0; secondIndex < phoneNumber.length; secondIndex += 1) {
@@ -26,9 +26,6 @@ function numberRepeat(phoneNumber) {
       }
     }
   }
-}
-function generatePhoneNumber(phoneNumber) {
-
   let firstPart = '';
   let secondPart = '';
   let thirdPart = '';
@@ -46,7 +43,8 @@ function generatePhoneNumber(phoneNumber) {
     }
     return numberAdjusted
   }
-}
+} generatePhoneNumber([0,0,1,2,3])
+
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
