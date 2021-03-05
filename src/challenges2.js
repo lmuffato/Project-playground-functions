@@ -60,19 +60,19 @@ function numberCheckCorrect(numberArray) {
   return true;
 }
 
-function numberRepeater(numberArray) {
-  let numberCheckRepeat = 0;
-  for (let index = 0; index < numberArray.length; index += 1) {
-    let checkNumber = numberArray[index];
-    for (let checklIndex = 0; checklIndex < index; checklIndex += 1) {
-      if (checkNumber === numberArray[checklIndex]) {
-        numberCheckRepeat += 1;
-        } if (numberCheckRepeat >= 3) {
+// slice e join()!
+
+function numberRepeater(numberArray) { // Nessa função eu utilizei a Lógica que a Marilía usou para comparação de vezes, em que o número apareceu.
+  let checkNumber = numberArray.slice().sort();
+  let sameNumberTimes = 1;
+  for (let index = 0; index < (checkNumber.length - 1); index += 1) {
+    if (checkNumber[index] === checkNumber[(index + 1)]) {
+      sameNumberTimes += 1;
+      if (sameNumberTimes === 3) {
         return false;
       }
-    }
-    if (numberCheckRepeat >= 2){
-      numberCheckRepeat = 0;
+    } else {
+      sameNumberTimes = 1;
     }
   }
   return true;
@@ -96,7 +96,7 @@ function generatePhoneNumber(arrayPhone) {
   telephoneNumber = changeForTelephone(telephoneNumber);
   return telephoneNumber;
 }
-console.log(generatePhoneNumber([0, 2, 4, 2, 5, 5, 6, 8, 9, 2, 1]));
+console.log(generatePhoneNumber([0, 2, 4, 2, 5, 5, 5, 8, 9, 2, 1]));
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 console.log(generatePhoneNumber([5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0]));
 console.log(generatePhoneNumber([8, 2, 3, 6, 5, 3, 6, 2, 8, 9, 0]));
