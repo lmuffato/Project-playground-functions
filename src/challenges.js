@@ -88,14 +88,15 @@ function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = cat1 - mouse;
   let distCat2 = cat2 - mouse;
 
-  if (cat1 < cat2) {
+  if (distCat1 < distCat2) {
     console.log('cat1');
   } else if (cat2 < cat1) {
     console.log('cat2');
-  } else if (cat1 === cat2) {
+  } else {
     return (console.log('os gatos trombam e o rato foge'));
   }
 }
+
 
 // Desafio 8
 function fizzBuzz(fizzBuzzParam) {
@@ -108,11 +109,9 @@ function fizzBuzz(fizzBuzzParam) {
       symbols.push('fizzBuzz');
     } else if (status[index] % 3 === 0) {
       symbols.push('fizz');
-    } 
-    else if (status[index] % 5 === 0) {
+    } else if (status[index] % 5 === 0) {
       symbols.push('buzz');
-    }
-    else {
+    } else {
       symbols.push('bug');
     }
   }
@@ -122,14 +121,70 @@ function fizzBuzz(fizzBuzzParam) {
 // Desafio 9
 function encode(frase) {
   let encodingPhrase = frase;
-  return (console.log(encodingPhrase));
+  let newPhrase = '';
+  for (let index in encodingPhrase) {
+    if (encodingPhrase[index] === 'a') {
+      newPhrase += '1';
+    } else if (encodingPhrase[index] ==='e') {
+      newPhrase += '2';
+    } else if (encodingPhrase[index] ==='i') {
+      newPhrase += '3';
+    } else if (encodingPhrase[index] ==='o') {
+      newPhrase += '4';
+    } else if (encodingPhrase[index] ==='u') {
+      newPhrase += '5';
+    } else {
+      newPhrase += encodingPhrase[index];
+    }
+  }  return console.log(newPhrase);
 }
 
-encode('Hi there');
-
-function decode() {
-  // seu código aqui
+function decode(frase) {
+  let encodingPhrase = frase;
+  let newPhrase = '';
+  for (let index in encodingPhrase) {
+    if (encodingPhrase[index] === '1') {
+      newPhrase += 'a';
+    } else if (encodingPhrase[index] ==='2') {
+      newPhrase += 'e';
+    } else if (encodingPhrase[index] ==='3') {
+      newPhrase += 'i';
+    } else if (encodingPhrase[index] ==='4') {
+      newPhrase += 'o';
+    } else if (encodingPhrase[index] ==='5') {
+      newPhrase += 'u';
+    } else {
+      newPhrase += encodingPhrase[index];
+    }
+  }  return console.log(newPhrase);
 }
+
+function tecnologies(paramTech, paramNome) {
+
+    let arrayTec = [];
+    arrayTec = paramTech;
+    arrayTec.sort();
+
+    let name = '';
+    name = paramNome;
+  
+    let novoArray = [];
+
+    let objetoSeparado = {}
+
+    for (let index=0; index<arrayTec.length; index++){
+      objetoSeparado = { tech: arrayTec[index], name: name}
+      novoArray.push(objetoSeparado);
+    }
+    
+    return(console.log(novoArray));
+
+  }
+  
+  
+  tecnologies(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Luiz');
+  
+
 
 module.exports = {
   calcArea,
