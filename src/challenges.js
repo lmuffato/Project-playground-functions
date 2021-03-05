@@ -74,8 +74,17 @@ function catAndMouse(mouse, cat1, cat2) {
 // Consulta ao repositório do João Nasc: https://github.com/tryber/sd-010-a-project-playground-functions/pull/132/commits/e391 //
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbersArray) {
+  for (let index = 0; index < numbersArray.length; index +=1) {
+    if (index % 3 === 0) {
+      return 'fizz';
+    } else if (index % 5 === 0) {
+      return 'buzz';
+  } else if (index % 3 === 0 && index % 5 === 0) {
+    return 'fizzBuzz'
+  } else {
+    return 'bug!'
+  }
 }
 
 // Desafio 9
