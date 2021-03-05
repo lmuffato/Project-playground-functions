@@ -61,9 +61,9 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 
   if (situationOne < situationTwo) {
-    return 'cat1';}
+    return 'cat1'; }
   else if (situationTwo < situationOne) {
-   return 'cat2';
+    return 'cat2';
   } else if (situationOne === situationTwo) {
     return 'os gatos trombam e o rato foge';
   }
@@ -72,30 +72,70 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numberFizzBuzz) {
   let collectFizzBuzz = [];
-  for (let i = 0; i < numberFizzBuzz.length; i += 1){
+  for (let i = 0; i < numberFizzBuzz.length; i += 1) {
     if (numberFizzBuzz[i] % 3 === 0 && numberFizzBuzz[i] % 5 === 0) {
       collectFizzBuzz[i] = 'fizzBuzz';
      } // 2, 15, 7, 9, 45
-     else if (numberFizzBuzz[i] % 3 === 0) {
-       collectFizzBuzz[i] = 'fizz';
-     }
-     else if (numberFizzBuzz[i] % 5 === 0 ) {
-       collectFizzBuzz[i]= 'buzz';
-     }
-     else {
+    else if (numberFizzBuzz[i] % 3 === 0) {
+      collectFizzBuzz[i] = 'fizz';
+    } else if (numberFizzBuzz[i] % 5 === 0 ) {
+       collectFizzBuzz[i] = 'buzz';
+     } else {
        collectFizzBuzz[i] = 'bug!';
-     }
+    }
   }
   return collectFizzBuzz;  
 }
 
 // Desafio 9
 function encode(listEncode) {
-
+    let modify = listEncode.split('');
+    for (let i = 0; i < modify.length; i += 1) {
+      switch (modify[i]) {
+        case 'a':
+          console.log(modify[i]);
+          modify[i] = '1';
+          break;
+        case 'e':
+          modify[i] = '2'
+          break;
+        case 'i':
+          modify[i] = '3';
+          break;
+        case 'o':
+          modify[i] = '4'
+          break;
+        case 'U':
+          modify[i] = '5'
+          break;  
+      }
+    }
+  return modify.join('');
 }
 
-function decode() {
-  // seu código aqui
+function decode(listEncodeNumber) {
+  let modifyNumber = listEncodeNumber.split('');
+  for (let i = 0; i < modifyNumber.length; i += 1) {
+    switch (modifyNumber[i]) {
+      case '1':
+        console.log(modify[i]);
+        modifyNumber[i] = 'a';
+        break;
+      case '2':
+        modifyNumber[i] = 'e'
+        break;
+      case '3':
+        modifyNumber[i] = 'i';
+        break;
+      case '4':
+        modifyNumber[i] = 'o'
+        break;
+      case '5':
+        modifyNumber[i] = 'u'
+        break;  
+    }
+  }
+return modifyNumber.join('');
 }
 
 console.log(compareTrue(true, true));
@@ -130,6 +170,9 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 5]));
 
+console.log(encode('hi there!'));
+console.log(decode('h3 th2r2!'));
+
 module.exports = {
   calcArea,
   catAndMouse,
@@ -142,4 +185,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-
