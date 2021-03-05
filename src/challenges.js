@@ -73,13 +73,16 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(name) {
+  let newname = name.replaceAll('a', 1).replaceAll('e', 2).replaceAll('i', 3).replaceAll('o', 4).replaceAll('u', 5);
+  return newname;
 }
-function decode() {
-  // seu código aqui
+function decode(name) {
+  let newname = name.replaceAll(1, 'a').replaceAll(2, 'e').replaceAll(3, 'i').replaceAll(4, 'o').replaceAll(5, 'u');
+  return newname;
 }
-
+//consultation made on the website : https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+//consultation made on the website : https://ricardo-reis.medium.com/string-replace-para-substituir-substrings-no-javascript-6db625e5fbc5
 module.exports = {
   calcArea,
   catAndMouse,

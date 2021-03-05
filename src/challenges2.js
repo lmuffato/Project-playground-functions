@@ -10,6 +10,7 @@ function techList(arrayTech, fame) {
   }
   return newArrayObjects;
 }
+// Consultation made on the website : https://pt.stackoverflow.com/questions/83588/em-javascript-como-verificar-que-um-objeto-est%C3%A1-vazio-sem-jquery
 
 // Desafio 11
 function generatePhoneNumber() {
@@ -26,6 +27,7 @@ function triangleCheck(lineA, lineB, lineC) {
     return false;
   }
 }
+// consultation made on the website : https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 
 // Desafio 13
 function hydrate() {
