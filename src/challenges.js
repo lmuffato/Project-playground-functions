@@ -39,14 +39,35 @@ function footballPoints(win, ties) {
 console.log(footballPoints(1, 2));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function encontraMaiorValorRepetido(valoresRecebidos) {
+  let maiorValor = 0;
+  for (let index = 0; index < valoresRecebidos.length; index += 1) {
+    if (maiorValor < valoresRecebidos[index]) {
+      maiorValor = valoresRecebidos[index];
+    }
+  }
+  return maiorValor;
 }
+
+function highestCount(valoresRecebidos) {
+  let count = 0;
+  let maiorValor = encontraMaiorValorRepetido(valoresRecebidos);
+  for (let index2 = 0; index2 < valoresRecebidos.length; index2 += 1) {
+    if (maiorValor === valoresRecebidos[index2]) {
+      count += 1;
+    }
+  }
+  return count;
+}
+
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
 }
+
+console.log(catAndMouse());
 
 // Desafio 8
 function fizzBuzz() {
