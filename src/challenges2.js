@@ -29,7 +29,7 @@ function getNumberArray(value) {
   let arrayNumber = [];
   let numberCheck = value.length;
   if (numberCheck !== 11) {
-    return 'Array com tamanho incorreto.';
+    return false;
   }
   for (let index = 0; index < value.length; index += 1) {
     arrayNumber.push(value[index]);
@@ -50,16 +50,18 @@ function numberCheckCorrect(numberArray) {
 
 function numberRepeater(numberArray) {
   let numberCheckRepeat = 0;
-  let checkNumber = numberArray;
   for (let index = 0; index < numberArray.length; index += 1) {
+    let checkNumber = numberArray[index];
     for (let checklIndex = 0; checklIndex < index; checklIndex += 1) {
-      if (checkNumber[index] === checkNumber[checklIndex]) {
+      if (checkNumber === numberArray[checklIndex]) {
         numberCheckRepeat += 1;
+        } if (numberCheckRepeat >= 3) {
+        return false;
       }
     }
-  }
-  if (numberCheckRepeat >= 3) {
-    return false;
+    if (numberCheckRepeat >= 2){
+      numberCheckRepeat = 0;
+    }
   }
   return true;
 }
@@ -73,12 +75,19 @@ function changeForTelephone(n) {
 
 function generatePhoneNumber(arrayPhone) {
   let telephoneNumber = getNumberArray(arrayPhone);
+  if (getNumberArray(telephoneNumber) === false) {
+    return 'Array com tamanho incorreto.';
+  }
   if (numberCheckCorrect(telephoneNumber) === false || numberRepeater(telephoneNumber) === false) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   telephoneNumber = changeForTelephone(telephoneNumber);
   return telephoneNumber;
 }
+console.log(generatePhoneNumber([0, 2, 4, 2, 5, 5, 6, 8, 9, 2, 1]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0]));
+console.log(generatePhoneNumber([8, 2, 3, 6, 5, 3, 6, 2, 8, 9, 0]));
 
 // Desafio 12
 function checkValueA(lineA, lineB, lineC) {
@@ -122,8 +131,32 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function changeStringInArray(string) {
+  let stringChange = string.replace(/\D/g, '');
+  stringChange = stringChange.split('');
+  for (let index = 0; index < stringChange.length; index += 1) {
+    stringChange[index] = Number(stringChange[index]);
+  }
+  return stringChange;
+}
+
+function arraySum(arrayValue) {
+  let arrayNumbers = arrayValue;
+  let summArray = 0;
+
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    summArray += arrayNumbers[index];
+  }
+  return summArray;
+}
+
+function hydrate(string) {
+  let arrayNumbers = changeStringInArray(string);
+  arrayNumbers = arraySum(arrayNumbers);
+  if (arrayNumbers === 1) {
+    return `${arrayNumbers} copo de água`;
+  }
+  return `${arrayNumbers} copos de água`;
 }
 
 module.exports = {
