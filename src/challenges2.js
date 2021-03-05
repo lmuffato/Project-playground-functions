@@ -26,7 +26,7 @@ function generatePhoneNumber(phoneNumber) {
     for (let secondIndex = 0; secondIndex < phoneNumber.length; secondIndex += 1) {
       if ((phoneNumber[index] === phoneNumber[secondIndex])) {
         numberRepeat += 1;
-      } else if (phoneNumber.length < 11 || phoneNumber.length > 11) {
+      } else if (phoneNumber.length !== 11) {
         return 'Array com tamanho incorreto.';
       } else if (phoneNumber[index] < 0 || phoneNumber[index] > 9) {
         return 'não é possível gerar um número de telefone com esses valores';
@@ -36,12 +36,12 @@ function generatePhoneNumber(phoneNumber) {
         firstPart = allNumber.slice(0, 2);
         secondPart = allNumber.slice(2, 7);
         thirdPart = allNumber.slice(7, 11);
-        numberAdjusted = `(${firstPart})${secondPart}-${thirdPart}`;
+        numberAdjusted = `(${firstPart}) ${secondPart}-${thirdPart}`;
       }
     }
   }
   return numberAdjusted
-}; generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])
+}; generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 0])
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
