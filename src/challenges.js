@@ -45,12 +45,12 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distance1 = cat1 - mouse;
-    let distance2 = cat2 - mouse;
+  let distance1 = mouse - cat1;
+    let distance2 = mouse - cat2;
     if (distance1 < distance2) {
         console.log('cat1');        
     }
-    if (distance1 > distance2) {
+    else if (distance1 > distance2) {
         console.log('cat2');
     }
     else if (distance1 === distance2) {
@@ -59,7 +59,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   let result = [];
     for (let index = 0; index < array.length; index += 1){
         if (array[index] % 3 === 0 && array[index] % 5 === 0){
@@ -79,76 +79,76 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   let output = [];
-    let encodeString = [];
-    for (let index = 0; index < arraystring.length; ){
-        if (arraystring[index] === 'a'){
-            encodeString.push('1');
-            index += 1;
-        }
-        if (arraystring[index] === 'e'){
-            encodeString.push('2');
-            index += 1;
-            
-        }
-        if (arraystring[index] === 'i'){
-            encodeString.push('3');
-            index += 1;
-        }
-        if (arraystring[index] === 'o'){
-            encodeString.push('4');
-            index += 1;
-        }
-        if (arraystring[index] === 'u'){
-            encodeString.push('5');
-            index += 1;
-        }
-        else {
-            encodeString.push(arraystring[index]);
-            index += 1;
-        }
-    }
-    encodeString.pop();
-    for(index = 0; index < encodeString.length; index += 1){
-        output = output + encodeString[index];
-    }
-    console.log(output)// seu código aqui
-}
-function decode() {
-  let output = [];
-    let decodeString = [];
-    for (let index = 0; index < arraystring.length + 1; ){
-        if (arraystring[index] === '1'){
-            decodeString.push('a');
-            index += 1;
-        }
-        if (arraystring[index] === '2'){
-            decodeString.push('e');
-            index += 1;
-        }
-        if (arraystring[index] === '3'){
-            decodeString.push('i');
-            index += 1;
-        }
-        if (arraystring[index] === '4'){
-            decodeString.push('o');
-            index += 1;
-        }
-        if (arraystring[index] === '5'){
-            decodeString.push('u');
-            index += 1;
-        }
-        else {
-            decodeString.push(arraystring[index]);
-            index += 1;
-        }
-    }
-    decodeString.pop();
-    for(index = 0; index < decodeString.length; index += 1){
-        output = output + decodeString[index];
-    }
-    console.log(output)// seu código aqui
+      let encodeString = [];
+      for (let index = 0; index < string.length; ){
+          if (string[index] === 'a'){
+              encodeString.push('1');
+              index += 1;
+          }
+          if (string[index] === 'e'){
+              encodeString.push('2');
+              index += 1;
+              
+          }
+          if (string[index] === 'i'){
+              encodeString.push('3');
+              index += 1;
+          }
+          if (string[index] === 'o'){
+              encodeString.push('4');
+              index += 1;
+          }
+          if (string[index] === 'u'){
+              encodeString.push('5');
+              index += 1;
+          }
+          else {
+              encodeString.push(string[index]);
+              index += 1;
+          }
+      }
+      encodeString.pop();
+      for(index = 0; index < encodeString.length; index += 1){
+          output = output + encodeString[index];
+      }
+      console.log(output)// seu código aqui
+  }
+  function decode(string) {
+    let output = [];
+      let decodeString = [];
+      for (let index = 0; index < string.length + 1; ){
+          if (string[index] === '1'){
+              decodeString.push('a');
+              index += 1;
+          }
+          if (string[index] === '2'){
+              decodeString.push('e');
+              index += 1;
+          }
+          if (string[index] === '3'){
+              decodeString.push('i');
+              index += 1;
+          }
+          if (string[index] === '4'){
+              decodeString.push('o');
+              index += 1;
+          }
+          if (string[index] === '5'){
+              decodeString.push('u');
+              index += 1;
+          }
+          else {
+              decodeString.push(string[index]);
+              index += 1;
+          }
+      }
+      decodeString.pop();
+      for(index = 0; index < decodeString.length; index += 1){
+          output = output + decodeString[index];
+      }
+      console.log(output)// seu código aqui
 }
 
 module.exports = {
