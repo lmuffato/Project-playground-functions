@@ -73,13 +73,13 @@ function conditionsFizzBuzz(numbers) {
 
 function fizzBuzz(arrayNumbers) {
   let result = [];
-  for (let index = 0; index < arrayNumbers.lenght; index += 1) {
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
     result.push(conditionsFizzBuzz(arrayNumbers[index]));
   }
   return result;
 }
 
-console.log(fizzBuzz(conditionsFizzBuzz([2, 15, 7, 9, 45])));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
