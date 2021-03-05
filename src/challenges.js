@@ -83,7 +83,7 @@ function catAndMouse(mouse, cat1, cat2) {
     res = 'cat1';
   }else if((cat2 - mouse) < (cat1 - mouse)){
     res = 'cat2';
-  }else{
+  }else if((cat2 - mouse) === (cat1 - mouse)){
     res = 'os gatos trombam e o rato foge' ;
   }
   return res;
@@ -113,12 +113,16 @@ function fizzBuzz(arrayNumber) {
   console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(vowel) {
+  vowel = vowel.repleceAll('a', '1').repleceAll('e', '2').repleceAll('i', '3').repleceAll('o', '4').repleceAll('u', '5');
+  
+    return vowel;
+  }
+
+function decode(vowel) {
+  vowel = vowel.repleceAll('1', 'a').repleceAll('2', 'e').repleceAll('3', 'c').repleceAll('4', 'o').repleceAll('5', 'u');
 }
-function decode() {
-  // seu código aqui
-}
+console.log('hi, there');
 
 module.exports = {
   calcArea,
