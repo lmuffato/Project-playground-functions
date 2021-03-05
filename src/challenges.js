@@ -43,7 +43,7 @@ function highestCount(numberRepeat) {
   for (let index = 0; index < numberRepeat.length; index += 1) {
     let walks = numberRepeat[index];
     if (walks === maxNumber) {
-    count += 1;
+      count += 1;
     }
   }
   return count;
@@ -53,12 +53,13 @@ function highestCount(numberRepeat) {
 function catAndMouse(mouse, cat1, cat2) {
   let situationOne = mouse - cat1;
   let situationTwo = mouse - cat2;
-  if (situationOne < 0) {
+  if (situationOne < 0 ) {
     situationOne *= -1;
   }
-  if (situationTwo < 0) {
+  if (situationTwo < 0 ) {
     situationTwo *= -1;
-  }                         
+  }
+
   if (situationOne < situationTwo) {
     return 'cat1';}
   else if (situationTwo < situationOne) {
@@ -73,17 +74,17 @@ function fizzBuzz(numberFizzBuzz) {
   let collectFizzBuzz = [];
   for (let i = 0; i < numberFizzBuzz.length; i += 1){
     if (numberFizzBuzz[i] % 3 === 0 && numberFizzBuzz[i] % 5 === 0) {
-     collectFizzBuzz[i] = 'fizzBuzz';
-    } // 2, 15, 7, 9, 45
-    else if (numberFizzBuzz[i] % 3 === 0) {
-      collectFizzBuzz[i] = 'fizz';
-    }
-    else if (numberFizzBuzz[i] % 5 === 0 ) {
-      collectFizzBuzz[i]= 'buzz';
-    }
-    else {
-      collectFizzBuzz[i] = 'bug!';
-    }
+      collectFizzBuzz[i] = 'fizzBuzz';
+     } // 2, 15, 7, 9, 45
+     else if (numberFizzBuzz[i] % 3 === 0) {
+       collectFizzBuzz[i] = 'fizz';
+     }
+     else if (numberFizzBuzz[i] % 5 === 0 ) {
+       collectFizzBuzz[i]= 'buzz';
+     }
+     else {
+       collectFizzBuzz[i] = 'bug!';
+     }
   }
   return collectFizzBuzz;  
 }
@@ -92,7 +93,6 @@ function fizzBuzz(numberFizzBuzz) {
 function encode(listEncode) {
 
 }
-  
 
 function decode() {
   // seu código aqui
@@ -125,7 +125,6 @@ console.log(highestCount([0, 0, 0]));
 console.log(catAndMouse(0, 3, 2));
 console.log(catAndMouse(10, 9, 22));
 console.log(catAndMouse(1, 0, 2));
-
 
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 console.log(fizzBuzz([7, 9]));
