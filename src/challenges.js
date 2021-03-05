@@ -12,8 +12,10 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+// Questão realizada após rever o conteúdo no W3 Schools - https://www.w3schools.com/jsref/jsref_split.asp
+function splitSentence(str) {
+  var answer = str.split(" ");
+  console.log(answer);
 }
 
 // Desafio 4
@@ -35,6 +37,7 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+// Após tentar resolver com uma função for dentro da outra e não ter conseguido, percebi outra forma mais fácil de resolver me inspirando no print do código da Gal da turma 09 no slack
 function highestCount(array) {
   let count = 0
   let ordem = array.sort();
@@ -46,7 +49,7 @@ function highestCount(array) {
     }  
   }
   return count;
-  }
+}
 
 
 highestCount([0, 2, 1])
