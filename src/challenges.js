@@ -88,55 +88,47 @@ function fizzBuzz(arrayN8) {
 }
 
 // Desafio 9
-function encript(code) {
-  switch (code) {
-  case 'a':
-    return '1';
-  case 'e':
-    return '2';
-  case 'i':
-    return '3';
-  case 'o':
-    return '4';
-  case 'u':
-    return '5';
-  default:
-    return code;
+let encodeKey = {
+  a: 1,
+  e: 2,
+  i: 3,
+  o: 4,
+  u: 5,
+};
+
+function encode(string) {
+  let encryptedString = '';
+  for (let charIndex in string) {
+    if (typeof encodeKey[string[charIndex]] !== 'undefined') {
+      encryptedString += encodeKey[string[charIndex]];
+    } else {
+      decriptedString += string[charIndex];
+    }
   }
+  return decriptedString;
 }
 
-function decript(code) {
-  switch (code) {
-  case '1':
-    return 'a';
-  case '2':
-    return 'e';
-  case '3':
-    return 'i';
-  case '4':
-    return 'o';
-  case '5':
-    return 'u';
-  default:
-    return code;
+let decodeKey = {
+  1: 'a',
+  2: 'e',
+  3: 'i',
+  4: 'o',
+  5: 'u',
+};
+  
+function decode(string) {
+  let decriptedString = '';
+  for (let charIndex in string) {
+    if (typeof decodeKey[string[charIndex]] !== 'undefined') {
+      decriptedString += decodeKey[string[charIndex]];
+    } else {
+      decriptedString += string[charIndex];
+    }
   }
-}
+  return decriptedString;
+};
 
-function encode(stringIn) {
-  let encodedString = stringIn.split('');
-  for (let index = 0; index < stringIn.length; index += 1) {
-    encodedString[index] = encript(stringIn[index]);
-  }
-  return encodedString.join('');
-}
-
-function decode(stringOut) {
-  let decodedString = stringOut.split('');
-  for (let index = 0; index < stringOut.length; index += 1) {
-    decodedString[index] = decript(stringOut[index]);
-  }
-  return decodedString.join('');
-}
+console.log(encode("hi there"))
 
 module.exports = {
   calcArea,
