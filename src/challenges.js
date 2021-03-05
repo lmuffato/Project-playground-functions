@@ -98,25 +98,25 @@ function encode(string) {
   // seu código aqui
   let string2 = '';
 
-  for ( let i = 0; i < string.length; i += 1) {
+  for (let i = 0; i < string.length; i += 1) {
     switch (string[i]) {
-      case 'a':
-        string2 += '1';
+    case 'a':
+      string2 += '1';
       break;
-      case 'e':
-        string2 += '2';
+    case 'e':
+      string2 += '2';
       break;
-      case 'i':
-        string2 += '3';
+    case 'i':
+      string2 += '3';
       break;
-      case 'o':
-        string2 += '4';
+    case 'o':
+      string2 += '4';
       break;
-      case 'u':
-        string2 += '5';
+    case 'u':
+      string2 += '5';
       break;
-      default:
-        string2 += string[i]
+    default:
+        string2 += string[i];
     }
   }
   return string2;
@@ -124,6 +124,30 @@ function encode(string) {
 
 function decode() {
   // seu código aqui
+  let string2 = '';
+
+  for (let i = 0; i < string.length; i += 1) {
+    switch (string[i]) {
+    case '1':
+      string2 += 'a';
+      break;
+    case '2':
+      string2 += 'e';
+      break;
+    case '3':
+      string2 += 'i';
+      break;
+    case '4':
+      string2 += 'o';
+      break;
+    case '5':
+      string2 += 'u';
+      break;
+    default:
+        string2 += string[i];
+    }
+  }
+  return string2;
 }
 
 module.exports = {
