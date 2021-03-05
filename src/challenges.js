@@ -73,12 +73,34 @@ function fizzBuzz(numbersArray) {
   return fizzBuzzArray;
 }
 
-// Desafio 9 - raciocinando neste. Verificar se o 7 consertou - ainda nao dei push.
+// Desafio 9
+// Obtive ajuda para fazer este desafio pelo código de João Vitor Nascimento (Usuário no Github: nascjoao). Link: 
+// https://github.com/tryber/sd-010-a-project-playground-functions/pull/132/files
+
 function encode(string) {
- 
+  const vowels = { a: 1, e: 2, i: 3, o: 4, u: 5 };
+  let encoded = '';
+  for (let letter in string) {
+    if (vowels[string[letter]]) { //se encontrar o valor da chave, adiciona a chave à variável encoded.
+      encoded += vowels[string[letter]];
+    } else {
+      encoded += string[letter];
+    }
+  }
+  return encoded;
 }
-function decode(string) {
-  // seu código aqui
+
+function decode(numbers) {
+    const numbers = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' }; // mesmo código acima, apenas troca a chave pelo value.
+    let decoded = '';
+    for (let symbol in numbers) {
+      if (numbers[numbers[symbol]]) {
+        decoded += numbers[numbers[symbol]];
+      } else {
+        decoded += numbers[symbol];
+      }
+    }
+    return decoded;
 }
 
 module.exports = {
