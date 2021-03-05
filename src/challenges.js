@@ -50,6 +50,7 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = Math.abs(mouse - cat1);
   let distanceCat2 = Math.abs(mouse - cat2);
+
   if (distanceCat1 < distanceCat2) {
     return 'cat1';
   } if (distanceCat1 > distanceCat2) {
@@ -59,18 +60,22 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+let result = [];
 function fizzBuzz(numbers) {
   for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] % 3 === 0) {
-      return 'fizz';
-    } if (numbers[index] % 5 === 0) {
-      return 'buzz';
-    } if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
-      return 'fizzBuzz';
-    }    
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+      result.push('fizzBuzz');
+    } else if (numbers[index] % 3 === 0) {
+      result.push('fizz');
+    } else if (numbers[index] % 5 === 0) {
+      result.push('buzz');
+    } else {
+      result.push('bug!');
+    }
   }
-  return 'bug!';
+  return result;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
