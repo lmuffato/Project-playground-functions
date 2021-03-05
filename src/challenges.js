@@ -38,8 +38,9 @@ function highestCount(myArrey) {
     }
   }
   for (let index2 = 0; index2 < myArrey.length; index2 += 1) {
-    if (higherNumber === myArrey[index2]){
-      equalNumbers += 1;}
+    if (higherNumber === myArrey[index2]) {
+      equalNumbers += 1;
+    }
   } return equalNumbers;
 }
 
@@ -71,47 +72,31 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
-console.log(catAndMouse(0, -6, -3));
 
 // Desafio 8
 
 function fizzBuzz(array) {
-  newArray = [];
+  let newArray = [];
   for (let index = 0; index <array.length; index += 1) {
       if (array[index] % 5 === 0 && array[index] % 3 === 0) {
-      array[index] = 'fizzBuzz';
+      newArray.push('fizzBuzz');
     } else if (array[index] % 5 === 0) {
-      array[index] = 'buzz';
+      newArray.push('buzz');
     } else if (array[index] % 3 === 0) {
-      array[index] = 'fizz';
+      newArray.push('fizz');
     } else {
-      array[index] = 'bug!';
+      newArray.push('bug!');
     } 
   }
-  return array;
+  return newArray;
 }
 
 // Desafio 9
 function encode(string) {
-  let newString = [];
-  // percorrendo a string
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index] = 'a') {
-      newString = 1;
-    } else if (string[index] = 'e') {
-      newString = 2;
-    } else if (string[index] = 'i') {
-      newString = 3;
-    } else if (string[index] = 'o') {
-      newString = 4;
-    } else if (string[index] = 'u') {
-      newString = 5;
-    } else {
-      newString = string;
-    }
-  }
+ string = string.replace('a', '1').replace('e', '2').replace('i', '3').replace('o', '4').replace('u', '5');
+ return string;
 }
-console.log(enconde("hi there"))
+console.log(encode("passo suadinho"));
 
 function decode() {
   // seu código aqui//
