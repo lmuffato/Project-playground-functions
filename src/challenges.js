@@ -118,14 +118,14 @@ function decode(stringDecode) {
 } console.log(decode("h3 th2r2!"));
 
 // Desafio 10
-function techList (listOfTech, name){
+function techList(listOfTech, name) {
   let techListSort = listOfTech.sort();
-  let ultimateList = []
-
-  for ( let index = 0; index < techListSort.length; index += 1) {
-  ultimateList.push({ tech: techListSort[index], name: name });
-  }if (listOfTech.length === 0){
-    return "Vazio!";
+  let ultimateList = [];
+  for (let index = 0; index < techListSort.length; index += 1) {
+    ultimateList.push({ tech: techListSort[index], name: name });
+  } if (listOfTech.length === 0)
+  {
+    return 'Vazio!';
   }
   return ultimateList;
 }
