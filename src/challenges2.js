@@ -66,15 +66,21 @@ function triangleCheck(lineA, lineB, lineC) {
   lineA = Math.abs(lineA);
   lineB = Math.abs(lineB);
   lineC = Math.abs(lineC);
-  if (((lineB - lineC) < lineA && (lineB - lineC) < (lineB + lineC))) {
+  let paramA = false;
+  let paramB = false;
+  let paramC = false;
+  if (lineA < (lineB + lineC)) {
+    paramA = true;
+  } if (lineB < (lineA + lineC)) {
+    paramB = true;
+  } if (lineC < (lineA + lineB)) {
+    paramC = true;
+  } if (paramA && paramB && paramC) {
     return true;
-  } if (((lineA - lineC) < lineB && (lineA - lineC) < (lineA + lineC))) {
-    return true;
-  } if (((lineA - lineB) < lineC && (lineA - lineB) < (lineA + lineB))) {
-    return true;
+  } else {
+    return false;
   }
-  return false;
-}
+} triangleCheck(10, 8, 14)
 // Desafio 13
 function hydrate() {
   // seu código aqui
