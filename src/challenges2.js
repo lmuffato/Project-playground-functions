@@ -30,7 +30,17 @@ function generatePhoneNumber(phoneNumb) {
 
   phoneNumb.some(wrongRangeCheck);
 
-
+  for (let index = 0; index < phoneNumb.length; index += 1) {
+    let repeat = 0
+    for (let index2 = index + 1; index2 < phoneNumb.lenght; index2 += 1) {
+      if(phoneNumb[index] === phoneNumb[index2]) {
+        repeat += 1;
+      }
+    }
+    if (repeat >= 3) {
+      return "não é possível gerar um número de telefone com esses valores"
+    }
+  }
   return `(${arr[0]}${arr[1]}) ${arr[2]}${arr[3]}${arr[4]}${arr[5]}${arr[6]}-${arr[7]}${arr[8]}${arr[9]}${arr[10]}`;
 }
 
