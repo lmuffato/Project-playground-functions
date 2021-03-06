@@ -27,13 +27,14 @@ function techList(arrayList, name) {
 
 // Função auxiliar
 let phone = {
-  isRepeatedNumer: function (arr) {
+  isRepeatedNumer(arr) {
     let resultado = arr.reduce((acc, val) => {
-      if (!acc[val]) acc[val] = {
-        "número": val,
-        "quantidade": 1
-      };
-      else acc[val]["quantidade"]++;
+      if (!acc[val]) {
+        acc[val] = {
+          número: val,
+          quantidade: 1,
+        };
+      } else acc[val].quantidade += 1;
       return acc;
     }, {});
 
@@ -78,19 +79,13 @@ function validation(arr) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
 
-
   for (let el of phone.isRepeatedNumer(arr)) {
-    if (parseInt(el.quantidade) >= 3) {
+    if (parseInt(el.quantidade, 10) >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
 
   return 0;
-
-
-  // if (phone.isRepeatedNumer(arr) >= 3) {
-  //   return 'não é possível gerar um número de telefone com esses valores';
-  // }
 }
 
 // Desafio 11
@@ -110,7 +105,7 @@ function generatePhoneNumber(arrayNumbers) {
 
   if (validation(arrayNumbers) === 0) {
     return formatedPhoneNumber;
-  };
+  }
 
   return validation(arrayNumbers);
 }
@@ -167,7 +162,7 @@ function hydrate(stringPhrase) {
 
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Wanderson'));
 
-console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
