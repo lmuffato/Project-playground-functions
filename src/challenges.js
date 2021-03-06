@@ -45,6 +45,8 @@ function highestCount(list) {
 function catAndMouse(mouse, cat1, cat2) {
   let distCat1 = cat1 - mouse;
   let distCat2 = cat2 - mouse;
+  distCat1 = Math.abs(distCat1);
+  distCat2 = Math.abs(distCat2);
   if (distCat1 < distCat2) {
     return 'cat1';
   }
