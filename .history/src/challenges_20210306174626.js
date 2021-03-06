@@ -110,7 +110,7 @@ function fizzBuzz(numeroArray) {
   }
   return numeros
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
+console.log(fizzBuzz([2, 15, ]))
 
 // Desafio 9
 function encode() {

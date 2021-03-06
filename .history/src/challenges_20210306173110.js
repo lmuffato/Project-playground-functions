@@ -87,12 +87,12 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(5, 3, 3))
 
 // Desafio 8
-function fizzBuzz(numeroArray) {
+function fizzBuzz() {
   let numeros = [];
 
   for (let i = 0; i < numeroArray.length; i ++) {
-    if ((numeroArray[i] % 3 === 0) && (numeroArray[i] % 5 === 0)) {
-      numeros.push('fizzBuzz')
+    if ((numeroArray[i] % 2 ===0) && (numeroArray[i] % 5 === 0)) {
+      nummeros.push('fizzBuzz')
     }
 
     if (numeroArray[i] % 3 === 0) {
@@ -100,17 +100,16 @@ function fizzBuzz(numeroArray) {
     }
 
     if ((numeroArray[i] % 5 === 0)) {
-      numeros.push('buzz')
+      nummeros.push('buzz')
     }
 
-    if ((numeroArray[i] % 3 !==0) && (numeroArray[i] % 5 !== 0)) {
-      numeros.push('bug!')
+    if ((numeroArray[i] % 3 !==0) && (numeroArray[i] % 5 == 0)) {
+      nummeros.push('bug!')
     }
 
   }
   return numeros
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
 function encode() {
