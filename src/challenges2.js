@@ -10,25 +10,25 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (la() || lb() || lc()){
+  if (la(lineA, lineB, lineC) && lb(lineA, lineB, lineC) && lc(lineA, lineB, lineC)){
     return true;
   } 
     return false;
 }
 
-function la() {
+function la(lineA, lineB, lineC) {
   if ((lineA < lineB + lineC) && (lineA > Math.abs (lineB - lineC)));{
     return true;
   }
 }
 
-function lb() {
+function lb(lineA, lineB, lineC) {
   if (lineB < lineA + lineC && lineB > Math.abs (lineA - lineC)){
     return true;
   }
 }
 
-function lc() {
+function lc(lineA, lineB, lineC) {
   if (lineC < lineB + lineA && lineC > Math.abs (lineB - lineA)){
     return true;
   }
