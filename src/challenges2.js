@@ -8,7 +8,7 @@ function techList(techs, name) {
   for (let index = 0; index < techs.length; index += 1) {
     techAndNameObject.push({
       tech: techs[index],
-      name,
+      name
     });
   }
   return techAndNameObject;
@@ -17,9 +17,7 @@ function techList(techs, name) {
 // Desafio 11
 
 function wrongRangeCheck(currentValue) {
-  if (currentValue > 9 || currentValue < 0) {
-    return "não é possível gerar um número de telefone com esses valores"
-  }
+  (currentValue > 9 || currentValue < 0);
 }
 
 function generatePhoneNumber(phoneNumb) {
@@ -28,20 +26,13 @@ function generatePhoneNumber(phoneNumb) {
     return "Array com tamanho incorreto."
   };
 
-  phoneNumb.some(wrongRangeCheck);
-
-  for (let index = 0; index < phoneNumb.length; index += 1) {
-    let repeat = 0
-    for (let index2 = index + 1; index2 < phoneNumb.lenght; index2 += 1) {
-      if(phoneNumb[index] === phoneNumb[index2]) {
-        repeat += 1;
-      } if (repeat >= 3) {
-        return "não é possível gerar um número de telefone com esses valores"
-      }
-    }      
+  if (phoneNumb.some(wrongRangeCheck) === true) {
+    return "não é possível gerar um número de telefone com esses valores"
   }
+  
   return `(${arr[0]}${arr[1]}) ${arr[2]}${arr[3]}${arr[4]}${arr[5]}${arr[6]}-${arr[7]}${arr[8]}${arr[9]}${arr[10]}`;
-}
+} 
+
 
 let aaa = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 console.log(generatePhoneNumber(aaa));
