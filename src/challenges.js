@@ -59,12 +59,17 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-% 3 return 'fizz';
-% 5 return 'buzz';
-% 3 && % 5, return 'fizzBuzz;
-else % 3 && % 5 return 'bug!';
+function fizzBuzz(number) {
+  if (number % 3) {
+  return 'fizz';
+} if (number % 5) {
+  return 'buzz';
+} if (number % 3 && number % 5) {
+  return 'fizzBuzz';
+} if (number % 3 && number % 5) {
+  return 'bug!';
 }
+
 
 // Desafio 9
 function encode() {
