@@ -75,7 +75,7 @@ function fizzBuzz(array) {
     } else if (array[index] % 5 === 0) {
       output.push('buzz');
     } else {
-      output.push('bug');
+      output.push('bug!');
     }
   }
   return output;
