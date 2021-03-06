@@ -1,15 +1,13 @@
 // Desafio 1
-function compareTrue(value1,value2) {
-  if(value1 == true && value2 == true){
-    return true;
-  } else{
-    return false;
-  }
+function compareTrue(value1, value2) {
+  if (value1 === true && value2 === true){
+    return true; }
+  return false;
 }
 
 // Desafio 2
-function calcArea(base,height) {
-  return (base*height)/2;
+function calcArea(base, height) {
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -34,18 +32,20 @@ descobrir maior numero
 function highestCount(arrayNumber) {
   let guardaMaiorNumero = 0;
   let contaMaiorNumero = 0;
-  for(let index = 0;index < arrayNumber.length;index +=1){
+
+  for(let index = 0; index < arrayNumber.length; index += 1){
     if (arrayNumber[index] > guardaMaiorNumero){
       guardaMaiorNumero = arrayNumber[index]
     }
-    for(let index =0;index < arrayNumber;indice += 1){
-      if (contaMaiorNumero == guardaMaiorNumero){
-        contaMaiorNumero += 1
-      }
+  }
+  for(let index =0; index < arrayNumber.length; index += 1){
+    if (arrayNumber[index] === guardaMaiorNumero){
+      contaMaiorNumero += 1
     }
   }
   return contaMaiorNumero;
 }
+console.log(highestCount([2,5,6,8,9,9]))
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
@@ -84,12 +84,55 @@ function fizzBuzz(arrayNumber) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encodeReplace(letter) {
+  let letters = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+
+  for (let index in letters) {
+    if (letter === index) {
+      return letters[index];
+    }
+  }
+  return letter;
 }
-function decode() {
-  // seu código aqui
+function encode(string) {
+  let encodedString = '';
+  for (let index = 0; index < string.length; index += 1) {
+    encodedString += encodeReplace(string[index]);
+  }
+  return encodedString;
 }
+
+function decodeReplace(letter) {
+  let letters = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+
+  for (let index in letters) {
+    if (letter === letters[index].toString()) {
+      return index;
+    }
+  }
+  return letter;
+}
+
+function decode(string) {
+  let decodedString = '';
+  for (let index = 0; index < string.length; index += 1) {
+    decodedString += decodeReplace((string[index]));
+  }
+  return decodedString;
+}
+console.log (decode('1p2n1s um teste'))
 
 module.exports = {
   calcArea,
