@@ -24,18 +24,33 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+  let first = array[0];
+  let last = array[array.length - 1];
+  let comma = ', ';
+  return last + comma + first;
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let winsPoints = wins * 3;
+  let tiesPoints = ties * 1;
+  return winsPoints + tiesPoints;
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(array) {
   // seu código aqui
+  let maiornumero = Math.max.apply(null, array);
+  let soma = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] === maiornumero) {
+      soma += 1;
+    }
+  }
+  console.log(soma);
 }
 
 // Desafio 7
