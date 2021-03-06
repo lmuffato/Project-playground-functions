@@ -45,12 +45,21 @@ function footballPoints(wins, ties) {
 //console.log(footballPoints(0,0))
 
 // Desafio 6
-function highestCount(numbers) {
-  if(index = 0; index < numbers.length; index++) {
 
-  }
+function highestCount(arrayNumbers) {
+let maxNumbers = Math.max.apply(this, arrayNumbers);
+let contador = 0;
+for (index = 0; index < arrayNumbers.length; index +=1) {
+  if (maxNumbers === arrayNumbers[index]) {
+    contador += 1;
+  } 
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+return contador;
+}
+let arrayNumbers = [0, 0, 0];
+return highestCount (arrayNumbers)
+
+//pesquisei o método no site "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply"
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
@@ -62,20 +71,82 @@ function catAndMouse(mouse,cat1,cat2) {
    return "cat1"
  }
 }
-console.log(catAndMouse(0,3,2))
+//console.log(catAndMouse(0,3,2))
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+let array = [9, 25]
+function fizzBuzz(array) {
+  let result = [];
+  
+  for(let index = 0; index < array.length; index += 1) {
+  
+  if (array[index] % 3 != 0 && array[index] % 5 != 0 )  {
+      result.push("bug!");
+    
+    } else if (array[index] % 3 == 0 && array[index] % 5 == 0) {
+      result.push("fizzBuzz");
+    
+    }else if (array[index] % 5 == 0) {
+      result.push("buzz");
+    
+    } else if (array[index] % 3 == 0 ) {
+      result.push("fizz");
+    } 
+} //console.log(result)
+} return fizzBuzz(array)
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
-}
+//let stringNumbers = 'hi there!'
+function encode(stringNumbers) {
+  let vogal = [];
+  let textArray = stringNumbers.split('');
+  
+  for (index = 0; index < stringNumbers.length; index += 1) {
+    if (textArray[index] === 'a') {
+      vogal.push('1');
+    } else if (textArray[index] === 'e') {
+      vogal.push('2');
+    }else if (textArray[index] === 'i') {
+      vogal.push('3');
+    }else if (textArray[index] === 'o') {
+      vogal.push('4');
+    }else if (textArray[index] === 'u') {
+      vogal.push('5');
+    }else {
+      vogal.push(stringNumbers[index])
+    }
+  } 
+  let result = vogal.join('')
+  //console.log(result)
+  return result
+} return encode(stringNumbers)
+
+//let vogalNumbers = 'h3 th2r2!'
+function decode(vogalNumbers) {
+  let vogalArray = [];
+  let text = vogalNumbers.split('');
+  
+  for (index = 0; index < vogalNumbers.length; index += 1) {
+    if (text[index] === '1') {
+      vogalArray.push('a');
+    } else if (text[index] === '2') {
+      vogalArray.push('e');
+    }else if (text[index] === '3') {
+      vogalArray.push('i');
+    }else if (text[index] === '4') {
+      vogalArray.push('o');
+    }else if (text[index] === '5') {
+      vogalArray.push('u');
+    }else {
+      vogalArray.push(vogalNumbers[index])
+    }
+  } 
+  let result = vogalArray.join('')
+  // console.log(result)
+  return result
+} return decode(vogalNumbers)
+
+//pesquisei o método no site: "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/join"
 
 module.exports = {
   calcArea,
