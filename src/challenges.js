@@ -51,16 +51,6 @@ for (let i = 0; i < num.length; i++) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  if (cat1 <=  mouse && cat2 <= mouse && cat1 > cat2); {
-  return cat1
-}
-  else if (cat1 < mouse && cat2 < mouse && cat1 < cat2); {
-  return cat2
-  }
-
-  else if (cat1 == cat2); {
-    return 'Os gatos trombam e o rato foge';
-  }
 
 }
 
