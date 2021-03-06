@@ -117,6 +117,21 @@ function decode(stringDecode) {
   return string5;
 } console.log(decode("h3 th2r2!"));
 
+function techList (listOfTech, name){
+  let techListSort = listOfTech.sort();
+  let ultimatelist = []
+if (listOfTech.length === 0){
+  return 'Vazio!';
+} for ( let index = 0; index < techListSort.length; index += 1) {
+  ultimatelist.push ( {
+    tech: techListSort[index],
+    name: name,
+  };
+  );
+};
+return  ultimatelist;
+};
+
 module.exports = {
   calcArea,
   catAndMouse,
