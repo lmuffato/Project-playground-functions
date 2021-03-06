@@ -24,22 +24,22 @@ function techList(tech, name) {
 function generatePhoneNumber(numbers) {
   const isLengthValid = numbers.length === 11;
   const isNumbersValid = numbers.find((number) => number < 0 | number > 9) ? false : true;
-  const repeatedNumber = numbers.find((element) => element === element );
-  const hasThreeRepeatedNumber = numbers.filter(number => number === repeatedNumber).length >= 3 ? true : false;
-
-  if(!isLengthValid) {
+  // const repeatedNumber = numbers.find((element) => element === element );
+  if (!isLengthValid) {
     return 'Array com tamanho incorreto.'; 
   }
   
-  if (!isNumbersValid | hasThreeRepeatedNumber) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  }
-
   let phoneNumber = [];
   
   for (let index in numbers) {
     let number = numbers[index];
-  
+
+    const hasThreeRepeatedNumber = numbers.filter(element => element === number).length >= 3 ? true : false;
+
+    if (!isNumbersValid | hasThreeRepeatedNumber) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+
     switch(Number(index)) {
       case 0:
         phoneNumber.push('(', number);
@@ -59,7 +59,7 @@ function generatePhoneNumber(numbers) {
 
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]))
 
 // Desafio 12
 function triangleCheck() {
