@@ -88,6 +88,7 @@ function fizzBuzz(arrayOfNumbers) {
 }
 
 // Desafio 9
+// eslint-disable-next-line max-lines-per-function
 function encode(string) {
   let lettersNumbers = {
     a: 1,
@@ -96,27 +97,41 @@ function encode(string) {
     o: 4,
     u: 5,
   };
-  lettersNumbersSize = Object.keys(lettersNumbers).length;
-
+  let lettersNumbersSize = Object.keys(lettersNumbers).length;
   let stringArray = string.split('');
-
-  for (i = 0; i < stringArray.length; i += 1) {
-    for (j = 0; j < lettersNumbersSize; j += 1) {
-      let letterKey = Object.keys(lettersNumbers);
-      let letter = Object.keys(letterKey[j]);
-
-      if (letter.toString() === stringArray[i]) {
-        let letterValue = lettersNumbers(letterKey);
-        stringArray[i] = letterValue;
+  let letterKeys = Object.keys(lettersNumbers);
+  let letterValues = Object.values(lettersNumbers);
+  for (let i = 0; i < stringArray.length; i += 1) {
+    for (let j = 0; j < lettersNumbersSize; j += 1) {
+      if (letterKeys[j] === stringArray[i]) {
+        stringArray[i] = letterValues[j];
       }
     }
   }
-  return stringArray;
+  return stringArray.join('');
 }
-console.log(encode('hi there!'));
 
-function decode() {
-  // seu código aqui
+// eslint-disable-next-line max-lines-per-function
+function decode(string) {
+  let numbersLetters = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  let numbersLettersSize = Object.keys(numbersLetters).length;
+  let stringArray = string.split('');
+  let letterKeys = Object.keys(numbersLetters);
+  let letterValues = Object.values(numbersLetters);
+  for (let i = 0; i < stringArray.length; i += 1) {
+    for (let j = 0; j < numbersLettersSize; j += 1) {
+      if (letterKeys[j] === stringArray[i]) {
+        stringArray[i] = letterValues[j];
+      }
+    }
+  }
+  return stringArray.join('');
 }
 
 module.exports = {
