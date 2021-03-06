@@ -48,6 +48,16 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+function bigValue(listNumbers) {
+  let valueHighest = listNumbers[0];
+
+  for (let indexOne = 0; indexOne < listNumbers.length; indexOne += 1) {
+    if (listNumbers[indexOne] > valueHighest) {
+      valueHighest = listNumbers[indexOne];
+    }
+  }
+  return valueHighest;
+}
 function highestCount(listNumbers) {
   let contRepete = 0;
 
@@ -57,16 +67,6 @@ function highestCount(listNumbers) {
     }
   }
   return contRepete;
-}
-function bigValue(listNumbers) {
-  let valueHighest = listNumbers[0];
-
-  for (let indexOne = 0; indexOne < listNumbers.length; indexOne += 1) {
-    if (listNumbers[indexOne] > valueHighest) {
-      valueHighest = listNumbers[indexOne];
-    }
-  }
-  return valueHighest
 }
 
 // Desafio 7
@@ -104,41 +104,35 @@ function fizzBuzz(listNumbers) { // Porque isso nao passa no lint
 }
 
 // Desafio 9
-function encode(codStringCodif) {
-  let arrayCodif = codStringCodif.split('');
-
-  for (let index = 0; index < arrayCodif.length; index += 1) {
-    for (let indexObj in codString) {
-      if (arrayCodif[index] === codString[indexObj]) {
-        arrayCodif[index] = indexObj
-      }
-    } 
-  }
-
-  return arrayCodif.join('');
-}
-function decode(codStringDecodif) {
-  let arrayDecodif = codStringDecodif.split('');
-
-  for (let indexArray = 0; indexArray < arrayDecodif.length; indexArray += 1 ) {
-    for (let indexObj in codString) {
-      if (arrayDecodif[indexArray] === indexObj) {
-        arrayDecodif[indexArray] = codString[indexObj]
-      }
-    }
-  }
-
-  return arrayDecodif.join('');
-}
 const codString = {
   1: 'a',
   2: 'e',
   3: 'i',
   4: '0',
-  5: 'u'
+  5: 'u',
+};
+function encode(codStringCodif) { // Porque isso nao passa no lint
+  let arrayCodif = codStringCodif.split('');
+  for (let index = 0; index < arrayCodif.length; index += 1) {
+    for (let indexObj in codString) {
+      if (arrayCodif[index] === codString[indexObj]) {
+        arrayCodif[index] = indexObj;
+      }
+    }
+  }
+  return arrayCodif.join('');
 }
-console.log(decode("h3 th2r2!"))
-
+function decode(codStringDecodif) { // Porque isso nao passa no lint
+  let arrayDecodif = codStringDecodif.split('');
+  for (let indexArray = 0; indexArray < arrayDecodif.length; indexArray += 1) {
+    for (let indexObj in codString) {
+      if (arrayDecodif[indexArray] === indexObj) {
+        arrayDecodif[indexArray] = codString[indexObj];
+      }
+    }
+  }
+  return arrayDecodif.join('');
+}
 
 module.exports = {
   calcArea,

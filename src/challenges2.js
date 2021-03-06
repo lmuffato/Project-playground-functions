@@ -97,7 +97,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(myDrink) {
-  let arrayDrink = myDrink.match(/\d/g);     // .replace(/\D/g, ' ');
+  let arrayDrink = myDrink.match(/\d/g); // .replace(/\D/g, ' ');
   let contGlass = 0;
   let myGlassH20 = '';
 
@@ -106,9 +106,9 @@ function hydrate(myDrink) {
   }
 
   if (contGlass === 1) {
-    myGlassH20 += contGlass + ' copo de água';
+    myGlassH20 += `${contGlass} copo de água`;
   } else if (contGlass > 0) {
-    myGlassH20 += contGlass + ' copos de água';
+    myGlassH20 += `${contGlass} copos de água`;
   }
 
   return myGlassH20;
