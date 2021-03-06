@@ -15,7 +15,7 @@ function techList(tech, name) {
       },
     );
   }
-  console.log(techs);
+  return techs;
 }
 
 // Desafio 11
