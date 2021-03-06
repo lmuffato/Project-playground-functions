@@ -127,11 +127,17 @@ function hydrate(order) {
   /** Source: https://stackoverflow.com/questions/30607419/return-only-numbers-from-string */
   let drinks = order.replace(/\D/g, '');
   let glassOfWater = 0;
+  let answer = '';
 
   for (let index = 0; index < drinks.length; index += 1) {
     glassOfWater += Number(drinks[index]);
   }
-  return glassOfWater;
+  if (glassOfWater > 1) {
+    answer = `${glassOfWater.toString()} copos de água`;
+  } else {
+    answer = `${glassOfWater.toString()} copo de água`;
+  }
+  return answer;
 }
 
 module.exports = {
