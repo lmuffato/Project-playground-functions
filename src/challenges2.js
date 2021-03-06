@@ -11,13 +11,13 @@ function techList(array,name) {
       arrayWithObject.push(newObject); 
     }
   if(array.length<=0){
-      return "Vazio" 
+      return "Vazio!" 
     }
   else{
-   
-    return arrayWithObject;
+   return arrayWithObject;
   }
 }
+
 
 // Desafio 11
 function generatePhoneNumber() {
