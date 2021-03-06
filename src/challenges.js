@@ -104,7 +104,7 @@ function encode(listEncode) {
         case 'o':
           modify[i] = '4';
           break;
-        case 'U':
+        case 'u':
           modify[i] = '5';
           break;  
       }
@@ -129,7 +129,7 @@ function decode(listEncodeNumber) {
         modifyNumber[i] = 'o'
         break;
       case '5':
-        modifyNumber[i] = 'u'
+        modifyNumber[i] = 'u';
         break;  
     }
   }
@@ -168,7 +168,7 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 5]));
 
-console.log(encode('hello'));
+console.log(encode('How are you today?'));
 console.log(decode('H4w 1r2 y45 t4d1y?'));
 
 module.exports = {
