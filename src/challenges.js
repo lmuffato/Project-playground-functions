@@ -146,12 +146,12 @@ function decode(word) {
 
 // Desafio 10
 function techList(testArray, name) {
-  testArray.sort(); 
+  testArray.sort();
   let userArray = [];
   for (let i = 0; i < testArray.length; i += 1) {
     userArray[i] = {
       tech: testArray[i],
-      userName: name
+      userName: name,
     };
   }
   return userArray;
@@ -167,4 +167,5 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
+  techList,
 };
