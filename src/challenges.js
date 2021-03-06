@@ -20,7 +20,7 @@ function splitSentence(frase, fraseSplit) {
 
 // Desafio 4
 function concatName(listaDeNomes, ultimoPrimeiroNome) {
-  ultimoPrimeiroNome = [listaDeNomes[listaDeNomes.length - 1] + listaDeNomes[0]];
+  ultimoPrimeiroNome = listaDeNomes[listaDeNomes.length - 1] + listaDeNomes[0];
   return ultimoPrimeiroNome;
 }
 
