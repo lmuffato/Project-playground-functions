@@ -123,8 +123,15 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(order) {
+  /** Source: https://stackoverflow.com/questions/30607419/return-only-numbers-from-string */
+  let drinks = order.replace(/\D/g, '');
+  let glassOfWater = 0;
+
+  for (let index = 0; index < drinks.length; index += 1) {
+    glassOfWater += Number(drinks[index]);
+  }
+  return glassOfWater;
 }
 
 module.exports = {
