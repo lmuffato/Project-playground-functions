@@ -6,12 +6,11 @@ function TechNames(techArray, nome) {
     for (let index = 0; index < techArray.length; index += 1) {
       tecnologias[index] = {
         tecnologia: techOrdem[index],
-        User: nome
+        User: nome,
       }
     }
     tecOutput = tecnologias;
-  }
-  else {
+  } else {
     tecOutput = "Vazio!";
   }
   return tecOutput;

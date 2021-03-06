@@ -1,12 +1,11 @@
 function FizzBuzz(arrayNumb) {
   let numb = [];
-  for (i = 0; i < arrayNumb.length; i += 1) {
-    if (arrayNumb[i] % 3 == 0 && arrayNumb[i] % 5 == 0) {
+  for (let i = 0; i < arrayNumb.length; i += 1) {
+    if (arrayNumb[i] % 3 === 0 && arrayNumb[i] % 5 === 0) {
       numb.push('fizzBuzz');
-    } else if (arrayNumb[i] % 3 == 0 && arrayNumb[i] % 5 !== 0) {
+    } else if (arrayNumb[i] % 3 === 0 && arrayNumb[i] % 5 !== 0) {
       numb.push('fizz');
-
-    } else if (arrayNumb[i] % 3 !== 0 && arrayNumb[i] % 5 == 0) {
+    } else if (arrayNumb[i] % 3 !== 0 && arrayNumb[i] % 5 === 0) {
       numb.push('buzz');
     } else {
       numb.push('bug!');
