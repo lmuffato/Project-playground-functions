@@ -72,12 +72,12 @@ function fizzBuzz(numbers) {
     } else if (numbers[index] % 5 === 0) {
       modulo.push('buzz');
     } else {
-      modulo.push('bug');
+      modulo.push('bug!');
     }
   }
   return modulo;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode() {
