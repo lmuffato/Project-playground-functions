@@ -14,13 +14,46 @@ function techList(techArray, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(array) {
-  let countMax = 1;
-  let countElement = 0;
-  let phoneNumber = '';
+function completePhoneNumber(array) {
   let firstPart = '';
   let secondPart = '';
   let thirdPart = '';
+  let okNumber;
+
+  for (let index = 0; index < array.length; index += 1) {
+    if (index < 2) {
+      firstPart += array[index];
+    } else if (index < 7) {
+      secondPart += array[index];
+    } else {
+      thirdPart += array[index];
+    }
+  }
+  okNumber = `(${firstPart}) ${secondPart}-${thirdPart}`;
+  return okNumber;
+}
+
+function countRepeated(array) {
+  let countElement = 0;
+  let phoneNumber = '';
+  for (let index = 0; index < array.length; index += 1) {
+    for (let indexRepeated = index; indexRepeated < array.length + 1; indexRepeated += 1) {
+      if (countElement > 2) {
+        return 'não é possível gerar um número de telefone com esses valores';
+      }
+      if (array[index] === array[indexRepeated]) {
+        countElement += 1;
+      }
+    }
+    countElement = 0;
+    phoneNumber += array[index];
+  }
+  return completePhoneNumber(phoneNumber);
+}
+
+// pesquisei a ideia do contador no site www.stackoverflow.com, segue o link: https://stackoverflow.com/questions/31227687/find-the-most-frequent-item-of-an-array-not-just-strings/31227768
+
+function numberErrors(array) {
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
@@ -28,32 +61,22 @@ function generatePhoneNumber(array) {
     if (array[index] < 0 || array[index] > 9) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-    for (let indexRepeated = index; indexRepeated < array.length + 1; indexRepeated += 1) {
-      if (countElement > 2) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
-      if (array[index] === array[indexRepeated]) {
-        countElement += 1;
-      } else if (countElement > countMax) {
-        countMax = countElement;
-      }
-    }
-    countElement = 0;
-    phoneNumber += array[index];
   }
-  // pesquisei a ideia do contado no site www.stackoverflow.com, segue o link: https://stackoverflow.com/questions/31227687/find-the-most-frequent-item-of-an-array-not-just-strings/31227768
-  for (let index = 0; index < phoneNumber.length; index += 1) {
-    if (index < 2) {
-      firstPart += phoneNumber[index];
-    } else if (index < 7) {
-      secondPart += phoneNumber[index];
-    } else {
-      thirdPart += phoneNumber[index];
-    }
-  }
-  phoneNumber = `(${firstPart}) ${secondPart}-${thirdPart}`;
-  return phoneNumber;
+  return countRepeated(array);
 }
+
+function generatePhoneNumber(array) {
+  return numberErrors(array);
+}
+
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 8]));
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+// console.log(generatePhoneNumber([1, 2, 2, 4, 5, 6, 7, 2, 9, 0, 1]));
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, -3]));
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 11]));
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 3, 9, 3, 1]));
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 3, 9, 4, 1]));
 
 // Desafio 12
 function checkSideA(lineA, lineB, lineC) {
@@ -87,13 +110,21 @@ function checkSideC(lineA, lineB, lineC) {
 }
 
 function triangleCheck(lineA, lineB, lineC) {
-  return (checkSideA(lineA, lineB, lineC)
-        === (checkSideB(lineA, lineB, lineC))
-        === checkSideC((lineA, lineB, lineC)));
+  let result;
+  if ((checkSideA(lineA, lineB, lineC))
+    + (checkSideB(lineA, lineB, lineC))
+    + (checkSideC(lineA, lineB, lineC)) === 3) {
+    result = true;
+  } else {
+    result = false;
+  }
+  return result;
 }
 
-console.log(triangleCheck(10, 14, 8));
-console.log(triangleCheck(10, 14, 6));
+// console.log(triangleCheck(10, 14, 8)); // true
+// console.log(triangleCheck(2, 3, 4)); // true
+// console.log(triangleCheck(16, 20, 30)); // true
+// console.log(triangleCheck(16, 20, -30)); // false
 
 // Desafio 13
 function hydrate(string) {
