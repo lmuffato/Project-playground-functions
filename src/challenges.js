@@ -47,7 +47,6 @@ function highestNumber(arr) {
       highest = arr[index];
     }
   }
-
   return highest;
 }
 
@@ -72,7 +71,6 @@ function calcDistance(position1, position2) {
   } else {
     distance = Math.abs(position2 - position1);
   }
-
   return distance;
 }
 
@@ -88,7 +86,6 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     message = 'cat2';
   }
-
   return message;
 }
 
@@ -100,7 +97,6 @@ function dividers(number) {
       dividersArray.push(index);
     }
   }
-
   return dividersArray;
 }
 
@@ -109,7 +105,6 @@ function checkFizz(hasDivider3) {
   if (hasDivider3) {
     isFizz = true;
   }
-
   return isFizz;
 }
 
@@ -118,7 +113,6 @@ function checkBuzz(hasDivider5) {
   if (hasDivider5) {
     isBuzz = true;
   }
-
   return isBuzz;
 }
 
@@ -130,7 +124,6 @@ function checkDivider3(dividersArray) {
       divider3 = true;
     }
   }
-
   return divider3;
 }
 
@@ -142,7 +135,6 @@ function checkDivider5(dividersArray) {
       divider5 = true;
     }
   }
-
   return divider5;
 }
 
@@ -152,7 +144,6 @@ function checkBug(hasDivider3, hasDivider5) {
   if (!hasDivider3 && !hasDivider5) {
     isBug = true;
   }
-
   return isBug;
 }
 
@@ -166,6 +157,8 @@ function fizzBuzzResult(dividersArray) {
     return 'buzz';
   case checkFizz(checkDivider3(dividersArray)):
     return 'fizz';
+  default:
+    console.log('Something went wrong!');
   }
 }
 
@@ -179,16 +172,60 @@ function fizzBuzz(numbersArray) {
     word = fizzBuzzResult(dividersArray);
     fizzBuzzArray.push(word);
   }
-
   return fizzBuzzArray;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function findVowel(char) {
+  switch (char) {
+  case 'a':
+    return '1';
+  case 'e':
+    return '2';
+  case 'i':
+    return '3';
+  case 'o':
+    return '4';
+  case 'u':
+    return '5';
+  default:
+    return char;
+  }
 }
-function decode() {
-  // seu código aqui
+
+function findNumber(char) {
+  switch (char) {
+  case '1':
+    return 'a';
+  case '2':
+    return 'e';
+  case '3':
+    return 'i';
+  case '4':
+    return 'o';
+  case '5':
+    return 'u';
+  default:
+    return char;
+  }
+}
+
+function encode(phrase) {
+  let encodedPhrase = phrase;
+  for (let index = 0; index < encodedPhrase.length; index += 1) {
+  /** Source: https://www.w3schools.com/js/js_string_methods.asp */
+    encodedPhrase = encodedPhrase.replace(encodedPhrase[index], findVowel(encodedPhrase[index]));
+  }
+  return encodedPhrase;
+}
+
+function decode(phrase) {
+  let encodedPhrase = phrase;
+  for (let index = 0; index < encodedPhrase.length; index += 1) {
+  /** Source: https://www.w3schools.com/js/js_string_methods.asp */
+    encodedPhrase = encodedPhrase.replace(encodedPhrase[index], findNumber(encodedPhrase[index]));
+  }
+  return encodedPhrase;
 }
 
 module.exports = {
