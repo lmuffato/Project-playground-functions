@@ -1,17 +1,18 @@
 // Desafio 10
 function techList(tech, name) {
   let techListObject = {};
-  let returnObject = [];
+  let retornoObject = [];
   tech = tech.sort();
   if (tech.length === 0) {
     return 'Vazio!';
   }
-  for (let i = 0; i < tech.length; i++) {
+  for (let i = 0; i < tech.length; i += 1) {
     techListObject.tech = tech[i];
     techListObject.name = name;
+    retornoObject.push({ tech: [tech[i]], name });
     retornoObject.push({ tech: tech[i], name });
   }
-  return returnObject;
+  return retornoObject;
 }
 
 // Desafio 11
