@@ -44,8 +44,8 @@ function highestCount(numberList) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let cat1Distance = mouse - cat1;
-  let cat2Distance = mouse - cat2;
+  let cat1Distance = Math.abs(mouse - cat1);
+  let cat2Distance = Math.abs(mouse - cat2);
   let resultCats = '';
   if (cat1Distance > cat2Distance) {
     resultCats = 'cat2';
@@ -80,25 +80,25 @@ function encode(string) {
   let stringIn = string.split('');
   for (let index = 0; index < stringIn.length; index += 1) {
     switch (stringIn[index]) {
-      case "a":
-        stringOut += "1";
-        break;
-      case "e":
-        stringOut += "2";
-        break;
-      case "i":
-        stringOut += "3";
-        break;
-      case "o":
-        stringOut += "4";
-        break;
-      case "u":
-        stringOut += "5";
-        break;
-      default:
-        stringOut += stringIn[index];
-    };
-  };
+    case 'a':
+      stringOut += '1';
+      break;
+    case 'e':
+      stringOut += '2';
+      break;
+    case 'i':
+      stringOut += '3';
+      break;
+    case 'o':
+      stringOut += '4';
+      break;
+    case 'u':
+      stringOut += '5';
+      break;
+    default:
+      stringOut += stringIn[index];
+    }
+  }
   return stringOut;
 }
 
@@ -107,28 +107,28 @@ function decode(stringBack) {
   let stringIn = stringBack.split('');
   for (let index = 0; index < stringIn.length; index += 1) {
     switch (stringIn[index]) {
-      case "1":
-        stringOut += "a";
+    case '1':
+      stringOut += 'a';
         break;
-      case "2":
-        stringOut += "e";
-        break;
-      case "3":
-        stringOut += "i";
-        break;
-      case "4":
-        stringOut += "o";
-        break;
-      case "5":
-        stringOut += "u";
-        break;
-      default:
-        stringOut += stringIn[index];
-    };
-  };
+    case '2':
+      stringOut += 'e';
+      break;
+    case '3':
+      stringOut += 'i';
+      break;
+    case '4':
+      stringOut += 'o';
+      break;
+    case '5':
+      stringOut += 'u';
+      break;
+    default:
+      stringOut += stringIn[index];
+    }
+  }
   return stringOut;
 }
-decode('h3 th2r2');
+
 module.exports = {
   calcArea,
   catAndMouse,
