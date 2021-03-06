@@ -21,7 +21,7 @@ function splitSentence(sentence) {
 function concatName (name = []) {
   // seu código aqui
     let lastName = name[name.length - 1];
-  concatName = [lastName.concat(name[0])]
+  concatName = lastName + (name[0])
    return concatName
 
  }
@@ -36,12 +36,17 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(num = []) {
   // seu código aqui 
+let higher = Math.max[num];
+let rep = 0;
 
-let higher = math.Max[num];
-let ocr = [num.forEach(higher)]
-  return ocr
-}  
-
+for (let i = 0; i < num.length; i++) {
+    if (num[i] === higher) rep++; 
+  }
+  return rep
+}
+ 
+  
+  
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
