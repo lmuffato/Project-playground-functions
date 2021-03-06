@@ -34,17 +34,13 @@ function footballPoints(wins, ties) {
 }
 console.log(footballPoints(1, 2));
 
-//Desafio 6
-function highestCount(myArray) {
-
-
+// Desafio 6
+function highestCount() {
 
 }
 
-
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  
+function catAndMouse(mouse , cat1 , cat2) {  
   let index = {
   cat1Distance: Math.abs (cat1 - mouse),
   cat2Distance: Math.abs (cat2 - mouse),
