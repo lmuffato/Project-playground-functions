@@ -48,7 +48,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat2Distance = mouse - cat2;
   let resultCats = "";
   if (cat1Distance > cat2Distance) {
-    resultCats= "cat2";
+    resultCats = "cat2";
   } else if (cat2Distance > cat1Distance) {
     resultCats = "cat1";
   } else {
@@ -75,9 +75,35 @@ function fizzBuzz(arrayNumberList) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let stringOut = [];
+  let stringIn = string.split('');
+  for (let index = 0; index < stringIn.length; index += 1) {
+    switch (stringIn[index]) {
+      case "a":
+        stringOut += "1";
+        break;
+      case "e":
+        stringOut += "2";
+        break;
+      case "i":
+        stringOut += "3";
+        break;
+      case "o":
+        stringOut += "4";
+        break;
+      case "u":
+        stringOut += "5";
+        break;
+      default:
+        stringOut += stringIn[index];
+    };
+  };
+  return console.log(stringOut);
 }
+encode('hi there');
+console.log('hi there');
+console.log(['h','i',' ','t','h']);
 function decode() {
   // seu código aqui
 }
