@@ -76,11 +76,48 @@ function fizzBuzz(returnDeArray) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(codifique) {
+  let vogaisCodifique = codifique.split('');
+  for (let index in vogaisCodifique) {
+    if (vogaisCodifique[index] === 'a') {
+      vogaisCodifique[index] = 1;
+    }
+    if (vogaisCodifique[index] === 'e') {
+      vogaisCodifique[index] = 2;
+    }
+    if (vogaisCodifique[index] === 'i') {
+      vogaisCodifique[index] = 3;
+    }
+    if (vogaisCodifique[index] === 'o') {
+      vogaisCodifique[index] = 4;
+    }
+    if (vogaisCodifique[index] === 'u') {
+      vogaisCodifique[index] = 5;
+    }
+  }
+  return vogaisCodifique.join('');
 }
-function decode() {
-  // seu código aqui
+
+function decode(decodifique) {
+  let numerosDecofique = decodifique.split('');
+  for (let index in numerosDecofique) {
+    if (numerosDecofique[index] === '1') {
+      numerosDecofique[index] = 'a';
+    }
+    if (numerosDecofique[index] === '2') {
+      numerosDecofique[index] = 'e';
+    }
+    if (numerosDecofique[index] === '3') {
+      numerosDecofique[index] = 'i';
+    }
+    if (numerosDecofique[index] === '4') {
+      numerosDecofique[index] = 'o';
+    }
+    if (numerosDecofique[index] === '5') {
+      numerosDecofique[index] = 'u';
+    }
+  }
+  return numerosDecofique.join('');
 }
 
 module.exports = {

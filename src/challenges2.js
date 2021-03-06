@@ -1,6 +1,6 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  // 10 - Crie uma função de lista de tecnologias
 }
 
 // Desafio 11
