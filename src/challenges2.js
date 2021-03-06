@@ -47,7 +47,7 @@ function generatePhoneNumber(phoneNumber) {
   if (invalidNumbers(phoneNumber) === true || repeatedNumbers(phoneNumber) === true) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  return `(${phoneNumber[0]}${phoneNumber[1]}) ${phoneNumber[2]}${phoneNumber[3]}${phoneNumber[4]}${phoneNumber[5]}-${phoneNumber[6]}${phoneNumber[7]}${phoneNumber[8]}${phoneNumber[9]}${phoneNumber[10]}`;
+  return `(${phoneNumber[0]}${phoneNumber[1]}) ${phoneNumber[2]}${phoneNumber[3]}${phoneNumber[4]}${phoneNumber[5]}${phoneNumber[6]}-${phoneNumber[7]}${phoneNumber[8]}${phoneNumber[9]}${phoneNumber[10]}`;
 }
 
 // Desafio 12
