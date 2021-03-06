@@ -116,7 +116,7 @@ function hydrate(stringPedido) {
   // seu código aqui
 }
 // let teste = hydrate('1 copo de 10 cerveja');
-// console.log(teste);
+// console.log(teste); 
 
 module.exports = {
   generatePhoneNumber,
