@@ -47,23 +47,19 @@ function splitSentence(frase) {
 function concatName(paramNomes) {
   let nomes = [];
   let primeiroNome = '';
-  let segundoNome = '';
+  let ultimoNome = '';
 
   for (let index in paramNomes) {
     nomes.push (paramNomes[index]);
   }
 
   primeiroNome = nomes[nomes.length - 1];
-  segundoNome = nomes[0];
+  ultimoNome = nomes[0];
   
-  let fullName = primeiroNome + ', ' + segundoNome;
+  let fullName = primeiroNome + ', ' + ultimoNome;
   
   return console.log(fullName);
 }
-
-// console.log('Desafio 4: ');
-// concatName('Luiz Felipe')
-// console.log ('---------------------');
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -72,10 +68,6 @@ function footballPoints(wins, ties) {
   let sum = vit + emp;
   return (console.log(sum));
 }
-
-// console.log('Desafio 5: ')
-// footballPoints(4,9);
-// console.log ('---------------------');
 
 // Desafio 6
 function highestCount(numeros) {
@@ -97,10 +89,6 @@ function highestCount(numeros) {
   }
   return console.log(cont);
 }
-
-// console.log('Desafio 6: ')
-// highestCount(9);
-// console.log ('---------------------');
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
