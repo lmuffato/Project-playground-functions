@@ -53,7 +53,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (distanceCat1 > distanceCat2) {
     return 'cat2';
   } return 'os gatos trombam e o rato foge';
-  }
+}
 
 // Desafio 8
 function fizzBuzz(array) {
@@ -88,7 +88,8 @@ function zdecode(string) {
   return string;
 }
 console.log(zdecode('Th3s 3s 1n 2nc4d3ng t2st.'));
-//Desafio 9 versao 2
+
+// Desafio 9 versao 2
 
 function encode(string) {
   let newString = '';
@@ -109,31 +110,29 @@ function encode(string) {
     }
     return newString;
   }
- function decode(string) {
-   let newString = '';
+}
+console.log(encode('paralelepipedo paradinho'));
+function decode(string) {
+  let newString = '';
 
-   for (let index = 0; index < string.length; index += 1) {
+  for (let index = 0; index < string.length; index += 1) {
     if (string[index] === '1') {
-      newString += 'a';
+      newString.push('a');
     } else if (string[index] === '2') {
-      newString += 'e';
+      newString.push('e');
     } else if (string[index] === '3') {
-      newString += 'i';
+      newString.push('i');
     } else if (string[index] === '4') {
-      newString += 'o';
+      newString.push('o');
     } else if (string[index] === '5') {
-      newString += 'u';
+      newString.push('u');
     } else {
-      newString += string[index];
+      newString.push(string[index]);
     }
     return newString;
- }
- console.log(decode('Th3s 3s 1n 2nc4d3ng t2st.'));
-
-
-
-
-
+  }
+}
+console.log(decode('Th3s 3s 1n 2nc4d3ng t2st.'));
 
 module.exports = {
   calcArea,
