@@ -127,6 +127,17 @@ function fizzBuzz(arrayBuzz) {
 // Link: https://trybecourse.slack.com/archives/C01L16B9XC7/p1614777217479100
 function encode(string) {
   // seu código aqui
+  let comparing = comparingEncode(string);
+  return comparing;
+}
+
+function decode(string2) {
+  // seu código aqui
+  let comparing2 = comparingDecode(string2);
+  return comparing2;
+}
+
+function comparingEncode(string) {
   let newphrases = string.split('');
 
   for (let index = 0; index < string.length; index += 1) {
@@ -146,8 +157,9 @@ function encode(string) {
   }
   return newphrases.join('');
 }
-function decode(string2) {
-  // seu código aqui
+
+function comparingDecode(string2) {
+
   let newphrases2 = string2.split('');
 
   for (let index = 0; index < string2.length; index += 1) {
@@ -166,6 +178,7 @@ function decode(string2) {
     }
   }
   return newphrases2.join('');
+   
 }
 
 module.exports = {
