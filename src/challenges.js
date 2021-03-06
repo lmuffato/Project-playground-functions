@@ -82,8 +82,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbersGroup) {
+  let numbersGroupResult = [];
+  for (positionIndex = 0; positionIndex < numbersGroup.length; positionIndex++) {
+    if (numbersGroup[positionIndex] % 3 == 0 && numbersGroup[positionIndex] % 5 == 0) {
+      numbersGroupResult[positionIndex] = "fizzBuzz";
+    } else if (numbersGroup[positionIndex] % 3 == 0) {
+      numbersGroupResult[positionIndex] = "fizz";
+    } else if (numbersGroup[positionIndex] % 5 == 0) {
+      numbersGroupResult[positionIndex] = "buzz";
+    } else {
+      numbersGroupResult[positionIndex] = "bug!";
+    }
+  }
+  return numbersGroupResult;
 }
 
 // Desafio 9
