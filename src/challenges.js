@@ -97,27 +97,45 @@ function fizzBuzz(arrayFizz) {
 }
 
 // Desafio 9
+//Com auxílio do Lucas Pedroso pude entender como o regex é poderoso para fazer buscas automatizadas;
+  let code = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5
+}
+
 function encode(string) {
-  let strSplit = string.split(' ');
-  for (let index = 0; index < strSplit.length; index += 1) {
-    if (strSplit[index] === 'a') {
-      strSplit.push(1);
-    } else if (strSplit[index] === 'e') {
-      strSplit.push(2);
-    } else if (strSplit[index] === 'i') {
-      strSplit.push(3);
-    } else if (strSplit[index] === 'o') {
-      strSplit.push(4);
-    } else if (strSplit[index] === 'u') {
-      strSplit.push(5);
-    }
+  let phrase = string;
+  
+  for (let key in code) {
+    // console.log(key);
+    let regex = `${key}`;
+    phrase = phrase.replace(RegExp(regex, 'g'), code[key]);
   }
-  return strSplit;
+  return phrase;
+} 
+console.log(encode('Ola tudo bem?'));
+
+let code = {
+  a: 1,
+  e: 2,
+  i: 3,
+  o: 4,
+  u: 5
 }
-console.log(encode('euquerocomer'));
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let phrase = string;
+  
+  for (let key in code) {
+    // console.log(key);
+    let regex = `${key}`;
+    phrase = phrase.replace(RegExp(code[key], 'g'), regex);
+  }
+  return phrase;
 }
+console.log(decode('Ol1 t5d4 b2m?'));
 
 module.exports = {
   calcArea,
