@@ -24,7 +24,7 @@ function splitSentence(string) {
 function concatName(array) {
   let firstName = array[0];
   let lastName = array[array.length - 1];
-  return lastName + ', ' + firstName;
+  return `${lastName}, ${firstName}`;
 }
 
 // Desafio 5
@@ -67,14 +67,14 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let fizzOrBuzzOrBug = [];
-  for (let index = 0; index < array.length; index += 1 ) {
+  for (let index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       fizzOrBuzzOrBug.push('fizzBuzz');
-  } else if (array[index] % 3 === 0 && array[index] % 5 !== 0) {
+    } else if (array[index] % 3 === 0 && array[index] % 5 !== 0) {
       fizzOrBuzzOrBug.push('fizz');
-  } else if (array[index] % 5 === 0 && array[index] % 3 !== 0) {
+    } else if (array[index] % 5 === 0 && array[index] % 3 !== 0) {
       fizzOrBuzzOrBug.push('buzz');
-  } else {
+    } else {
       fizzOrBuzzOrBug.push('bug!');
     }
   }
@@ -83,20 +83,20 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  let encoded = ''
+  let encoded = '';
   for (let index = 0; index < string.length; index += 1) {
     if (string[index] === 'a') {
-        encoded += '1';
+      encoded += '1';
     } else if (string[index] === 'e') {
-        encoded += '2';
+      encoded += '2';
     } else if (string[index] === 'i') {
-        encoded += '3';
+      encoded += '3';
     } else if (string[index] === 'o') {
-        encoded += '4';
+      encoded += '4';
     } else if (string[index] === 'u') {
-        encoded += '5';
+      encoded += '5';
     } else {
-        encoded += string[index];
+      encoded += string[index];
     }
   }
   return encoded;
@@ -106,19 +106,19 @@ function decode(string) {
   let decoded = '';
   for (let index = 0; index < string.length; index += 1) {
     if (string[index] === '1') {
-        decoded += 'a';
+      decoded += 'a';
     } else if (string[index] === '2') {
-        decoded += 'e';
+      decoded += 'e';
     } else if (string[index] === '3') {
-        decoded += 'i';
+      decoded += 'i';
     } else if (string[index] === '4') {
-        decoded += 'o';
+      decoded += 'o';
     } else if (string[index] === '5') {
-       decoded += 'u';
+      decoded += 'u';
     } else {
-        decoded += string[index];
+      decoded += string[index];
+    }
   }
-}
   return decoded;
 }
 

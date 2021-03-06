@@ -6,7 +6,9 @@ function techList(techArray, name) {
     arrayOfObjects = 'Vazio!';
   }
   for (let index = 0; index < techArray.length; index += 1) {
-    arrayOfObjects.push({ tech: techArray[index], name: name });
+    arrayOfObjects.push({
+      tech: techArray[index],
+      name });
   }
   return arrayOfObjects;
 }
@@ -33,13 +35,13 @@ function generatePhoneNumber(array) {
       if (array[index] === array[indexRepeated]) {
         countElement += 1;
       } else if (countElement > countMax) {
-          countMax = countElement;
-      } 
+        countMax = countElement;
+      }
     }
     countElement = 0;
     phoneNumber += array[index];
   }
-  // pesquisei a ideia do contado no site www.stackoverflow.com, segue o link: https://stackoverflow.com/questions/31227687/find-the-most-frequent-item-of-an-array-not-just-strings/31227768 
+  // pesquisei a ideia do contado no site www.stackoverflow.com, segue o link: https://stackoverflow.com/questions/31227687/find-the-most-frequent-item-of-an-array-not-just-strings/31227768
   for (let index = 0; index < phoneNumber.length; index += 1) {
     if (index < 2) {
       firstPart += phoneNumber[index];
@@ -49,37 +51,64 @@ function generatePhoneNumber(array) {
       thirdPart += phoneNumber[index];
     }
   }
-  phoneNumber = '(' + firstPart + ') ' + secondPart + '-' + thirdPart;
-  return phoneNumber;  
+  phoneNumber = `(${firstPart}) ${secondPart}-${thirdPart}`;
+  return phoneNumber;
 }
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
-  let triangleChecked;
-  if (lineA < lineB + lineC && lineA > Math.abs(lineB-lineC) || 
-      lineB < lineA + lineC && lineB > Math.abs(lineA - lineC) || 
-      lineC < lineA+lineB && lineC > Math.abs(lineA - lineB)) {
-    triangleChecked = true;
+function checkSideA(lineA, lineB, lineC) {
+  let sideAChecked;
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+    sideAChecked = true;
   } else {
-    triangleChecked = false;
+    sideAChecked = false;
   }
-  return triangleChecked;
+  return sideAChecked;
 }
+
+function checkSideB(lineA, lineB, lineC) {
+  let sideBChecked;
+  if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
+    sideBChecked = true;
+  } else {
+    sideBChecked = false;
+  }
+  return sideBChecked;
+}
+
+function checkSideC(lineA, lineB, lineC) {
+  let sideCChecked;
+  if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
+    sideCChecked = true;
+  } else {
+    sideCChecked = false;
+  }
+  return sideCChecked;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  return (checkSideA(lineA, lineB, lineC)
+        === (checkSideB(lineA, lineB, lineC))
+        === checkSideC((lineA, lineB, lineC)));
+}
+
+console.log(triangleCheck(10, 14, 8));
+console.log(triangleCheck(10, 14, 6));
 
 // Desafio 13
 function hydrate(string) {
-  //pesquisei a ideia de retirar os numbers da string no stackoverflor. Segue o link: https://stackoverflow.com/questions/30607419/return-only-numbers-from-string
-  let quantityOfDrinks = string.replace(/\D/g, "")
+  // pesquisei a ideia de retirar os numbers da string no stackoverflor. Segue o link: https://stackoverflow.com/questions/30607419/return-only-numbers-from-string
+  let quantityOfDrinks = string.replace(/\D/g, '');
   let sum = 0;
   let cupOfWater;
   for (let index = 0; index < quantityOfDrinks.length; index += 1) {
-    sum += parseInt(quantityOfDrinks[index]);
+    sum += parseInt(quantityOfDrinks[index], 10);
   }
 
   if (sum < 2) {
-    cupOfWater = sum + ' copo de água';
+    cupOfWater = `${sum} copo de água`;
   } else {
-    cupOfWater = sum + ' copos de água';
+    cupOfWater = `${sum} copos de água`;
   }
   return cupOfWater;
 }
