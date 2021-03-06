@@ -1,8 +1,8 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if(value1 === true && value2 === true){
+  if (value1 === true && value2 === true) {
     return true;
-  }else{
+  } else {
     return false;
   }
 }
@@ -10,13 +10,13 @@ function compareTrue(value1, value2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base*height)/2;
+  return (base * height) / 2;
 }
 //console.log(calcArea(10, 50));
 
 // Desafio 3
 function splitSentence(phrase) {
-    return phrase.split(' ');
+  return phrase.split(' ');
 }
 //console.log(splitSentence('go trybe'));
 
@@ -30,7 +30,7 @@ function concatName(arrayNames) {
 // Desafio 5
 function footballPoints(wins, ties) {
   let point = 0;
-  return 3*wins + ties;
+  return 3 * wins + ties;
 }
 //console.log(footballPoints(0, 0));
 
@@ -39,14 +39,14 @@ function highestCount(arrayNumbers) {
   let maior = 0;
   let repeat = 0;
   //descobrindo o maior número do array.
-  for(let i = 0; i < arrayNumbers.length; i += 1){
-    if(maior < arrayNumbers[i]){
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
+    if (maior < arrayNumbers[i]) {
       maior = arrayNumbers[i];
     }
   }
   //verificando qtd de vezes que esse tal maior se repete
-  for(let i = 0; i < arrayNumbers.length; i += 1){
-    if(maior === arrayNumbers[i]){
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
+    if (maior === arrayNumbers[i]) {
       repeat += 1;
     }
   }
@@ -59,11 +59,11 @@ function highestCount(arrayNumbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let distCatOne = Math.abs(mouse - cat1);
   let distCatTwo = Math.abs(mouse - cat2);
-  if(distCatOne === distCatTwo){
+  if (distCatOne === distCatTwo) {
     return 'os gatos trombam e o rato foge';
-  }else if(distCatOne > distCatTwo){
+  } else if (distCatOne > distCatTwo) {
     return 'cat2';
-  }else if(distCatOne < distCatTwo){
+  } else if (distCatOne < distCatTwo) {
     return 'cat1';
   }
 }
@@ -74,14 +74,14 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
   let arrayReturn = [];
-  for(let i = 0; i < arrayNumbers.length; i += 1){
-    if(arrayNumbers[i] % 3 == 0 && arrayNumbers[i] % 5 == 0){
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
+    if (arrayNumbers[i] % 3 == 0 && arrayNumbers[i] % 5 == 0) {
       arrayReturn.push('fizzBuzz');
-    }else if(arrayNumbers[i] % 3 == 0){
+    } else if (arrayNumbers[i] % 3 == 0) {
       arrayReturn.push('fizz');
-    }else if(arrayNumbers[i] % 5 == 0){
+    } else if (arrayNumbers[i] % 5 == 0) {
       arrayReturn.push('buzz');
-    }else{
+    } else {
       arrayReturn.push('bug!');
     }
   }
@@ -92,19 +92,19 @@ function fizzBuzz(arrayNumbers) {
 
 // Desafio 9
 function encode(phrase) {
-  let spacedPhrase = ''; 
+  let spacedPhrase = '';
   spacedPhrase = phrase.split(""); //aqui transformo a string em um array de caracteres, onde cada letra é um indice.
   //percorrendo o array e alterando os valores
-  for(let i = 0; i < spacedPhrase.length; i += 1){
-    if(spacedPhrase[i] == 'a'){
+  for (let i = 0; i < spacedPhrase.length; i += 1) {
+    if (spacedPhrase[i] == 'a') {
       spacedPhrase[i] = '1';
-    }else if(spacedPhrase[i] == 'e'){
+    } else if (spacedPhrase[i] == 'e') {
       spacedPhrase[i] = '2';
-    }else if(spacedPhrase[i] == 'i'){
+    } else if (spacedPhrase[i] == 'i') {
       spacedPhrase[i] = '3';
-    }else if(spacedPhrase[i] == 'o'){
+    } else if (spacedPhrase[i] == 'o') {
       spacedPhrase[i] = '4';
-    }else if(spacedPhrase[i] == 'u'){
+    } else if (spacedPhrase[i] == 'u') {
       spacedPhrase[i] = '5';
     }
   }
@@ -116,16 +116,16 @@ function encode(phrase) {
 function decode(array) {
   let spacedArray = '';
   spacedArray = array.split("");
-  for(let i = 0; i < spacedArray.length; i += 1){
-    if(spacedArray[i] == '1'){
+  for (let i = 0; i < spacedArray.length; i += 1) {
+    if (spacedArray[i] == '1') {
       spacedArray[i] = 'a';
-    }else if(spacedArray[i] == '2'){
+    } else if (spacedArray[i] == '2') {
       spacedArray[i] = 'e';
-    }else if(spacedArray[i] == '3'){
+    } else if (spacedArray[i] == '3') {
       spacedArray[i] = 'i';
-    }else if(spacedArray[i] == '4'){
+    } else if (spacedArray[i] == '4') {
       spacedArray[i] = 'o';
-    }else if(spacedArray[i] == '5'){
+    } else if (spacedArray[i] == '5') {
       spacedArray[i] = 'u';
     }
   }
