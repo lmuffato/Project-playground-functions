@@ -3,22 +3,22 @@ function techList(arrayIn, name) {
   let exitArray = [];
   let obj = {};
   if (arrayIn.length === 0) {
-    return console.log('Vazio!');
+    return 'Vazio!';
   } else {
     for (let key in arrayIn) {
       obj = {
-        'tech': arrayIn[key],
-        'name': name
+        tech: arrayIn[key],
+        name: name,
       };
       exitArray.push(obj);
     }
     return console.log(exitArray);
   }
 }
-console.log(techList([],'lucas'));
+
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+  
 }
 
 // Desafio 12
