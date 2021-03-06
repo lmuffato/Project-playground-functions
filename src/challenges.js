@@ -54,10 +54,10 @@ for (index = 0; index < arrayNumbers.length; index +=1) {
     contador += 1;
   } 
 }
-return contador;
-}
-let arrayNumbers = [0, 0, 0];
 return highestCount (arrayNumbers)
+}
+//let arrayNumbers = [0, 0, 0];
+return contador;
 
 //pesquisei o método no site "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply"
 
@@ -145,7 +145,6 @@ function decode(vogalNumbers) {
   // console.log(result)
   return result
 } return decode(vogalNumbers)
-
 //pesquisei o método no site: "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/join"
 
 module.exports = {
