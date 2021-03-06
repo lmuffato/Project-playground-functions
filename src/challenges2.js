@@ -21,9 +21,32 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+  let phoneNumber = [];
+  
+  for (let index in numbers) {
+    let number = numbers[index];
+  
+    switch(Number(index)) {
+      case 0:
+        phoneNumber.push('(', number);
+        break;
+      case 1:
+        phoneNumber.push(number, ')');
+        break;
+      case 6:
+        phoneNumber.push(number, '-');
+        break;
+      default:
+        phoneNumber.push(number);
+    }
+  }
+
+  return phoneNumber.join('');
+
 }
+
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck() {
