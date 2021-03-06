@@ -66,10 +66,32 @@ function catAndMouse(mouse, cat1, cat2) {
   return result;
 }
 console.log(catAndMouse(4, 6, 8));
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function arrayVerify(numToVerify) {
+  let result;
+  if (numToVerify % 3 === 0 && numToVerify % 5 === 0) {
+    result = 'fizzBuzz';
+  } else if (numToVerify % 3 === 0) {
+    result = 'fizz';
+  } else if (numToVerify % 5 === 0) {
+    result = 'buzz';
+  } else {
+    result = 'bug!';
+  }
+  return result;
 }
+function fizzBuzz(array) {
+  let result = [];
+  let verification;
+  for (let index = 0; index < array.length; index += 1) {
+    verification = arrayVerify(array[index]);
+    result.push(verification);
+  }
+  return result;
+}
+let numToVerify = [2, 15, 7, 9, 45];
+console.log(fizzBuzz(numToVerify));
 
 // Desafio 9
 function encode() {
