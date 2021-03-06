@@ -124,7 +124,8 @@ function decode(phrase) {
   });
   return newPhrase;
 }
-
+console.log(encode('hey there!'));
+console.log(decode('h2y th2r2!'));
 module.exports = {
   calcArea,
   catAndMouse,
