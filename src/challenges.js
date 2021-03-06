@@ -48,7 +48,7 @@ function highestCount(arrayRip) {
 
 // Desafio 7 - calcule as distâncias entre o rato e os gatos
 function catAndMouse(mouse, cat1, cat2) {
-  let gato1 = cat1 - mouse;
+  let gato1 = mouse - cat1;
   let gato2 = cat2 - mouse;
   if (gato1 < gato2) {
     return 'cat1';
@@ -63,7 +63,7 @@ function fizzBuzz(returnDeArray) {
   let fizzBuzzArray = [];
   for (let index = 0; index < returnDeArray.length; index += 1) {
     if (returnDeArray[index] % 3 === 0 && returnDeArray[index] % 5 === 0) {
-        fizzBuzzArray.push('fizzBuzz');
+      fizzBuzzArray.push('fizzBuzz');
     } else if (returnDeArray[index] % 3 === 0) {
       fizzBuzzArray.push('fizz');
     } else if (returnDeArray[index] % 5 === 0) {
