@@ -18,9 +18,12 @@ let value = calcArea(10, 50);
 console.log(value);
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   // seu código aqui
+  let frase = string.split(' ');
+  console.log(frase);
 }
+splitSentence('vamo que vamo');
 
 // Desafio 4
 function concatName() {
