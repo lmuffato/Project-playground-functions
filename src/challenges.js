@@ -48,8 +48,8 @@ function highestCount(arrayRip) {
 
 // Desafio 7 - calcule as distâncias entre o rato e os gatos
 function catAndMouse(mouse, cat1, cat2) {
-  let gato1 = mouse - cat1;
-  let gato2 = cat2 - mouse;
+  let gato1 = Math.abs(mouse - cat1);
+  let gato2 = Math.abs(mouse - cat2);
   if (gato1 < gato2) {
     return 'cat1';
   } else if (gato2 < gato1) {
