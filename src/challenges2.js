@@ -5,7 +5,7 @@ function techList(techName, humanName) {
       }
       let list = [];
       for (let i = 0; i < techName.length; i += 1){
-        list.push([{name: humanName, tech: techName[i]}]);
+        list.push({name: humanName, tech: techName[i]});
         }
       return list;
     }
