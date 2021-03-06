@@ -20,10 +20,8 @@ console.log(value);
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
-  let frase = string.split(' ');
-  console.log(frase);
+  return string.split(' ');
 }
-splitSentence('vamo que vamo');
 
 // Desafio 4
 function concatName() {
