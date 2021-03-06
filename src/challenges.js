@@ -20,8 +20,8 @@ function splitSentence(frase, fraseSplit) {
 
 // Desafio 4
 function concatName(listaDeNomes, ultimoPrimeiroNome) {
-  ultimoPrimeiroNome = 'listaDeNomes[listaDeNomes.length -1]' + ', ' + 'listaDeNomes[0]';
-  return listaDeNomes;
+  ultimoPrimeiroNome = listaDeNomes[listaDeNomes.length -1] + ', ' + listaDeNomes[0];
+  return ultimoPrimeiroNome;
 }
 
 // Desafio 5
