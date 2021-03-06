@@ -117,6 +117,7 @@ function decode(stringDecode) {
   return string5;
 } console.log(decode("h3 th2r2!"));
 
+
 function techList (listOfTech, name){
   let techListSort = listOfTech.sort();
   let ultimatelist = []
@@ -126,9 +127,9 @@ if (listOfTech.length === 0){
   ultimatelist.push ( {
     tech: techListSort[index],
     name: name,
-  };
-  );
-};
+  }
+  )
+}
 return  ultimatelist;
 };
 
