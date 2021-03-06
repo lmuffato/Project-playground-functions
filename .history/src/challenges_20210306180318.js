@@ -116,32 +116,8 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]))
 function encode(string) {
   let newString = '';
 
-  for (let i = 0; i < string.length; i++) {
-    switch (string[i]) {
-      case 'a':
-        newString += '1';
-        break
-      case 'e':
-        newString += '2';
-        break
-        case 'i':
-        newString += '3';
-        break
-        case 'o':
-        newString += '4';
-        break
-        case 'u':
-        newString += '5';
-        break
-        default:
-          newString += string[i]
-          break        
-    }
-  }
-  return newString
+  for (let i = 0; i )
 }
-console.log(encode('Fala aliado'))
-
 function decode() {
   // seu código aqui
 }

@@ -119,7 +119,7 @@ function encode(string) {
   for (let i = 0; i < string.length; i++) {
     switch (string[i]) {
       case 'a':
-        newString += '1';
+        newString[i] += '1';
         break
       case 'e':
         newString += '2';

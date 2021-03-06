@@ -119,29 +119,11 @@ function encode(string) {
   for (let i = 0; i < string.length; i++) {
     switch (string[i]) {
       case 'a':
-        newString += '1';
-        break
-      case 'e':
-        newString += '2';
-        break
-        case 'i':
-        newString += '3';
-        break
-        case 'o':
-        newString += '4';
-        break
-        case 'u':
-        newString += '5';
-        break
-        default:
-          newString += string[i]
-          break        
+        newString[i] = '1';
+        case 'e
     }
   }
-  return newString
 }
-console.log(encode('Fala aliado'))
-
 function decode() {
   // seu código aqui
 }
