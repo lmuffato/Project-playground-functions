@@ -30,21 +30,19 @@ console.log(generatePhoneNumber([0,1,2,3,]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-   if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC) {
+   if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
      return true;
+   } else {
+     return false;
    }
-} 
-
-//implesmente verificar, para qualquer um dos três lados, se ele não é maior que a soma dos 
-//outros dois e ao mesmo tempo não é menor que o valor absoluto da diferença dos outros dois. 
-
-console.log(triangleCheck(10,14,8));
+}
+console.log(triangleCheck(10, 14, 8));
 console.log(triangleCheck(50, 10, 11));
 console.log(triangleCheck(7, 20, 10));
 
 // Desafio 13
 function hydrate(string) {
-  let numbers = string.replace(/[^0-9]/g,''); // string vira só número 
+  let numbers = string.replace(/[^0-9]/g,''); // string vira só número (mas continua sendo string)
   let numbersArray = [] //array para armazenar
   let array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] // array para comparar
   let soma = 0;
