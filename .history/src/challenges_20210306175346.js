@@ -95,15 +95,15 @@ function fizzBuzz(numeroArray) {
       numeros.push('fizzBuzz')
     }
 
-   else if (numeroArray[i] % 3 === 0) {
+    if (numeroArray[i] % 3 === 0) {
       numeros.push('fizz')
     }
 
-    else if (numeroArray[i] % 5 === 0) {
+    if (numeroArray[i] % 5 === 0) {
       numeros.push('buzz')
     }
 
-    else if ((numeroArray[i] % 3 !==0) && (numeroArray[i] % 5 !== 0)) {
+    if ((numeroArray[i] % 3 !==0) && (numeroArray[i] % 5 !== 0)) {
       numeros.push('bug!')
     }
 
