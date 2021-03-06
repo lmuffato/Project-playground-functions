@@ -39,8 +39,7 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  let msg = '';
+function catAndMouse(mouse, cat1, cat2, msg) {
   if (mouse - cat1 < mouse - cat2) {
     msg = 'cat1';
   } else if (cat1 - mouse === cat2 - mouse) {
