@@ -1,22 +1,23 @@
 // Desafio 10
-function techList(tech, name) {
-  if (tech.length === 0) {
-    return 'vazio!';
-  }
-  tech.sort();
+function techList(technologies, name) {
 
   let techs = [];
 
-  for (let index = 0; index < tech.length; index += 1) {
+  if (technologies.length <= 0) {
+    return 'vazio!';
+  }
+
+  for (let index in technologies.sort()) {
     techs.push(
       {
-        tech: tech[index],
+        tech: technologies[index],
         name: name,
       },
     );
   }
   return techs;
 }
+// desafio realizado com contriuição de alguns colegas (nilson/mauricio)
 
 // Desafio 11
 function generatePhoneNumber() {
