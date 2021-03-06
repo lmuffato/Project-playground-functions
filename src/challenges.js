@@ -152,20 +152,23 @@ function decode(string2) {
   for (let index = 0; index < string2.length; index += 1) {
     if (string2[index] == 1) {
       newphrases2[index] = 'a';
-    } else if (string2[index] == 2) {
+    } else if (string2[index] === '2') {
       newphrases2[index] = 'e';
-    } else if (string2[index] == 3) {
+    } else if (string2[index] === '3') {
       newphrases2[index] = 'i';
-    } else if (string2[index] == 4) {
+    } else if (string2[index] === '4') {
       newphrases2[index] = 'o';
-    } else if (string2[index] == 5) {
+    } else if (string2[index] === '5') {
       newphrases2[index] = 'u';
     } else {
       newphrases2[index] = string2[index];
     }
   }
-  return newphrases2.join('');
+  return console.log(newphrases2.join(''));
 }
+
+decode('h3 th2r2!');
+
 
 module.exports = {
   calcArea,
