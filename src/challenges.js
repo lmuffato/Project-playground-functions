@@ -1,33 +1,35 @@
 // Desafio 1
+
 function compareTrue(value1, value2) {
-  let checker = false;
-  if (value1 === true && value2 === true) {
-    checker = true;
-  }
+  let checker = value1 === value2;
   return checker;
 }
 
 // Desafio 2
+
 function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
 }
 
 // Desafio 3
+
 function splitSentence(string) {
   let stringArray = string.split(' ');
   return stringArray;
 }
 
 // Desafio 4
-function concatName(array) {
-  let firstItem = array[0];
-  let lastItem = array[array.length - 1];
+
+function concatName(arrayNames) {
+  let firstItem = arrayNames[0];
+  let lastItem = arrayNames[arrayNames.length - 1];
   let stringItems = `${lastItem}, ${firstItem}`;
   return stringItems;
 }
 
 // Desafio 5
+
 function footballPoints(wins, ties) {
   let totalPoints = (wins * 3) + (ties * 1);
   return totalPoints;
@@ -37,10 +39,8 @@ function footballPoints(wins, ties) {
 
 function highestNumber(arrayHighestNumber) {
   let number = 0;
-  for (let index = 0; index < arrayHighestNumber.length; index += 1) {
-    if (arrayHighestNumber[index] > number) {
-      number = arrayHighestNumber[index];
-    }
+  for (let index of arrayHighestNumber) {
+    if (index > number) number = index;
   }
   return number;
 }
@@ -48,12 +48,9 @@ function highestNumber(arrayHighestNumber) {
 function highestCount(arrayHighestCount) {
   let number = highestNumber(arrayHighestCount);
   let numberTime = 0;
-  for (let index = 0; index < arrayHighestCount.length; index += 1) {
-    if (number === arrayHighestCount[index]) {
-      numberTime += 1;
-    }
+  for (let index of arrayHighestCount) {
+    if (number === index) numberTime += 1;
   }
-
   return numberTime;
 }
 
@@ -63,16 +60,15 @@ function checkDistance(mouse, cat) {
   // Poderia utilizar Math.abs(), mas quis priorizar o que viemos aprendendo até agora.
   let catDistance = mouse - cat;
 
-  if (catDistance < 0) {
-    catDistance *= -1;
-  }
+  if (catDistance < 0) catDistance *= -1;
+
   return catDistance;
 }
 
 function catAndMouse(mouse, cat1, cat2) {
   let firstCat = checkDistance(mouse, cat1);
   let secondCat = checkDistance(mouse, cat2);
-  let chaseResult = '';
+  let chaseResult;
 
   if (firstCat === secondCat) {
     chaseResult = 'os gatos trombam e o rato foge';
@@ -116,13 +112,15 @@ function fizzBuzz(arrayFizzBuzzNumbers) {
 
 function checkLetterToEncode(letterToCode) {
   let vowelCoded = letterToCode;
-  let vowels = ['a', 'e', 'i', 'o', 'u'];
-  let numbers = ['1', '2', '3', '4', '5'];
-
-  for (let index = 0; index < vowels.length; index += 1) {
-    if (letterToCode === vowels[index]) {
-      vowelCoded = numbers[index];
-    }
+  let vowelsAndNumbers = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  for (let key in vowelsAndNumbers) {
+    if (letterToCode === key) vowelCoded = vowelsAndNumbers[key];
   }
   return vowelCoded;
 }
@@ -131,8 +129,8 @@ function encode(stringToEncode) {
   let splitedStringToEncode = stringToEncode.split('');
   let codedString = '';
 
-  for (let index = 0; index < splitedStringToEncode.length; index += 1) {
-    codedString += checkLetterToEncode(splitedStringToEncode[index]);
+  for (let index of splitedStringToEncode) {
+    codedString += checkLetterToEncode(index);
   }
   return codedString;
 }
@@ -141,13 +139,16 @@ function encode(stringToEncode) {
 
 function checkNumberToDecode(numberToDecode) {
   let numberDecoded = numberToDecode;
-  let vowels = ['a', 'e', 'i', 'o', 'u'];
-  let numbers = ['1', '2', '3', '4', '5'];
+  let numbersAndVowels = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
 
-  for (let index = 0; index < vowels.length; index += 1) {
-    if (numberToDecode === numbers[index]) {
-      numberDecoded = vowels[index];
-    }
+  for (let key in numbersAndVowels) {
+    if (numberToDecode === key) numberDecoded = numbersAndVowels[key];
   }
   return numberDecoded;
 }
@@ -156,8 +157,8 @@ function decode(stringToDecode) {
   let splitedStringToDecode = stringToDecode.split('');
   let decodedString = '';
 
-  for (let index = 0; index < splitedStringToDecode.length; index += 1) {
-    decodedString += checkNumberToDecode(splitedStringToDecode[index]);
+  for (let key of splitedStringToDecode) {
+    decodedString += checkNumberToDecode(key);
   }
   return decodedString;
 }

@@ -79,19 +79,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
+
 function hydrate(stringDrinks) {
-  let arrayDrinks = stringDrinks.replace(/\D/g, '').split('');
-  let soma = 0;
+  let arrayDrinks = stringDrinks.match(/\d/g);
+  let sum = 0;
 
   for (let index = 0; index < arrayDrinks.length; index += 1) {
-    soma += parseFloat(arrayDrinks[index]);
+    sum += parseFloat(arrayDrinks[index]);
   }
 
-  if (soma === 1) {
+  if (sum === 1) {
     return '1 copo de água';
   }
 
-  return `${soma} copos de água`;
+  return `${sum} copos de água`;
 }
 
 module.exports = {
