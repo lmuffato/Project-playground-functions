@@ -22,6 +22,19 @@ function techList(tech, name) {
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
+  const isLengthValid = numbers.length === 11;
+  const isNumbersValid = numbers.find((number) => number < 0 | number > 9) ? false : true;
+  const repeatedNumber = numbers.find((element) => element === element );
+  const hasThreeRepeatedNumber = numbers.filter(number => number === repeatedNumber).length >= 3 ? true : false;
+
+  if(!isLengthValid) {
+    return 'Array com tamanho incorreto.'; 
+  }
+  
+  if (!isNumbersValid | hasThreeRepeatedNumber) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+
   let phoneNumber = [];
   
   for (let index in numbers) {
