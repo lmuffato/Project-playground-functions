@@ -82,24 +82,24 @@ function triangleCheck(lineA, lineB, lineC) {
   }
 } triangleCheck(10, 8, 14);
 // Desafio 13
+let glassesWater = {
+  1: 1,
+  2: 2,
+  3: 3,
+  4: 4,
+  5: 5,
+  6: 6,
+  7: 7,
+  8: 8,
+  9: 9,
+};
 function hydrate(string) {
   // seu código aqui
-  let glassesWater = {
-    1: 1,
-    2: 2,
-    3: 3,
-    4: 4,
-    5: 5,
-    6: 6,
-    7: 7,
-    8: 8,
-    9: 9,
-  }
   let wordInParts = string.split('');
   let glassesAmount = 0;
   for (let word in wordInParts) {
     if (glassesWater[wordInParts[word]]) {
-      glassesAmount = glassesAmount + glassesWater[wordInParts[word]]
+      glassesAmount += glassesWater[wordInParts[word]];
     }
   } if (glassesAmount === 1) {
     return `${glassesAmount} copo de água`;
@@ -107,6 +107,10 @@ function hydrate(string) {
     return `${glassesAmount} copos de água`;
   }
 }
+// Os seguintes sites abaixo fora utilizados para consultas e auxilio no entendimento de alguns exercícios.
+// https://www.w3schools.com/js/js_array_methods.asp
+// https://brainly.com.br/tarefa/5567585
+// https://www.alura.com.br/artigos/criando-uma-mascara-de-telefone-com-javascript
 module.exports = {
   generatePhoneNumber,
   techList,
