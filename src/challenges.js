@@ -99,15 +99,36 @@ function encode(string) {
         stringOut += stringIn[index];
     };
   };
-  return console.log(stringOut);
-}
-encode('hi there');
-console.log('hi there');
-console.log(['h','i',' ','t','h']);
-function decode() {
-  // seu código aqui
+  return stringOut;
 }
 
+function decode(stringBack) {
+  let stringOut = [];
+  let stringIn = stringBack.split('');
+  for (let index = 0; index < stringIn.length; index += 1) {
+    switch (stringIn[index]) {
+      case "1":
+        stringOut += "a";
+        break;
+      case "2":
+        stringOut += "e";
+        break;
+      case "3":
+        stringOut += "i";
+        break;
+      case "4":
+        stringOut += "o";
+        break;
+      case "5":
+        stringOut += "u";
+        break;
+      default:
+        stringOut += stringIn[index];
+    };
+  };
+  return stringOut;
+}
+decode('h3 th2r2');
 module.exports = {
   calcArea,
   catAndMouse,
