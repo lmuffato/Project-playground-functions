@@ -27,6 +27,8 @@ function techList(arrayList, name) {
 
 // Função auxiliar
 let phone = {
+  // A função isRepeatedNumber() foi resultado de estudos e pesquisar realizadas em uma das respostas do Stack Overflow, conforme o link abaixo:
+  // link: https://pt.stackoverflow.com/questions/459413/verificar-quantas-vezes-um-n%C3%BAmero-aparece-no-array#:~:text=Se%20voc%C3%AA%20sempre%20estiver%20trabalhando,)%20%7B%20const%20countMap%20%3D%20Object.
   isRepeatedNumer(arr) {
     let resultado = arr.reduce((acc, val) => {
       if (!acc[val]) {
