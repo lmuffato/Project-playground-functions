@@ -80,17 +80,33 @@ function triangleCheck(lineA, lineB, lineC) {
   } else {
     return false;
   }
-} triangleCheck(10, 8, 14)
+} triangleCheck(10, 8, 14);
 // Desafio 13
 function hydrate(string) {
   // seu código aqui
-  let wordInParts = string.replace(/\D/g, "");
-  if (wordInParts === '1') {
-    return `${wordInParts} copo de água`;
-  } else {
-    return `${wordInParts} copos de água`;
+  let glassesWater = {
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    5: 5,
+    6: 6,
+    7: 7,
+    8: 8,
+    9: 9,
   }
-};
+  let wordInParts = string.split('');
+  let glassesAmount = 0;
+  for (let word in wordInParts) {
+    if (glassesWater[wordInParts[word]]) {
+      glassesAmount = glassesAmount + glassesWater[wordInParts[word]]
+    }
+  } if (glassesAmount === 1) {
+    return `${glassesAmount} copo de água`;
+  } else {
+    return `${glassesAmount} copos de água`;
+  }
+}
 module.exports = {
   generatePhoneNumber,
   techList,
