@@ -44,7 +44,7 @@ function highestCount(numbers) {
       maxNumber = numbers[index];
       }
        }  
-  for (index = 0; index<numbers.length; index += 1) {
+  for (index = 0; index < numbers.length; index += 1) {
     if (numbers[index] === maxNumber) {
       count += 1;
     }
@@ -58,10 +58,10 @@ function catAndMouse(mouse, cat1, cat2) {
   let dist2 = cat2 - mouse;
   if (dist1 > dist2) {
     return 'cat2';
-  } else if (dist1 === dist2) {
+  } if (dist1 === dist2) {
     return 'os gatos trombam e o rato foge';
   }
-    return 'cat1';
+  return 'cat1';
 }
 
 // Desafio 8
