@@ -56,7 +56,7 @@ console.log(catAndMouse([1, 0, 2]));
 // Desafio 8
 function conditionFizzBuzz(numArray2) {
   let numArrayResult;
-if (numArray2 % 3 === 0 && numArray2 % 5 === 0) {
+  if (numArray2 % 3 === 0 && numArray2 % 5 === 0) {
     numArrayResult = 'fizzBuzz';
   } else if (numArray2 % 3 === 0) {
     numArrayResult = 'fizz';
