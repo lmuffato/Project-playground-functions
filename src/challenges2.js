@@ -36,8 +36,15 @@ function lc(lineA, lineB, lineC) {
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+// resposta feita a partir do video https://www.youtube.com/watch?v=pfkkdzeyx6U
+function hydrate(phrase) {
+  let reg = /\d+/g;
+  let result = phrase.match(reg);
+  let answer = 0;
+  for (index = 0; index < result.length; index += 1) {
+    answer += parseInt(result[index]);
+  }
+  console.log(answer + ' copos de água');
 }
 
 module.exports = {
