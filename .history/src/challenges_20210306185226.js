@@ -167,11 +167,9 @@ function decode(string) {
             break        
       }
     
-
+    return newString
   }
-  return newString
 }
-console.log(decode('2394623652938756'))
 
 module.exports = {
   calcArea,

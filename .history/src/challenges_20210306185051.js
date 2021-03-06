@@ -143,6 +143,7 @@ function encode(string) {
 console.log(encode('Fala aliado'))
 
 function decode(string) {
+  function encode(string) {
     let newString = '';
   
     for (let i = 0; i < string.length; i++) {
@@ -166,12 +167,11 @@ function decode(string) {
             newString += string[i]
             break        
       }
-    
-
+    }
+    return newString
   }
-  return newString
+  console.log(encode('Fala aliado'))
 }
-console.log(decode('2394623652938756'))
 
 module.exports = {
   calcArea,

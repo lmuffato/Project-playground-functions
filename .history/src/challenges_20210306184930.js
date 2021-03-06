@@ -142,36 +142,8 @@ function encode(string) {
 }
 console.log(encode('Fala aliado'))
 
-function decode(string) {
-    let newString = '';
-  
-    for (let i = 0; i < string.length; i++) {
-      switch (string[i]) {
-        case '1':
-          newString += 'a';
-          break
-        case '2':
-          newString += 'e';
-          break
-          case '3':
-          newString += 'i';
-          break
-          case '4':
-          newString += 'o';
-          break
-          case '5':
-          newString += 'u';
-          break
-          default:
-            newString += string[i]
-            break        
-      }
-    
-
-  }
-  return newString
+function decode() {
 }
-console.log(decode('2394623652938756'))
 
 module.exports = {
   calcArea,

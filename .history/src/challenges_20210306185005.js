@@ -142,18 +142,19 @@ function encode(string) {
 }
 console.log(encode('Fala aliado'))
 
-function decode(string) {
+function decode() {
+  function encode(string) {
     let newString = '';
   
     for (let i = 0; i < string.length; i++) {
       switch (string[i]) {
-        case '1':
-          newString += 'a';
+        case 'a':
+          newString += '1';
           break
-        case '2':
-          newString += 'e';
+        case 'e':
+          newString += '2';
           break
-          case '3':
+          case 'i':
           newString += 'i';
           break
           case '4':
@@ -166,12 +167,11 @@ function decode(string) {
             newString += string[i]
             break        
       }
-    
-
+    }
+    return newString
   }
-  return newString
+  console.log(encode('Fala aliado'))
 }
-console.log(decode('2394623652938756'))
 
 module.exports = {
   calcArea,

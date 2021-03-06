@@ -167,11 +167,10 @@ function decode(string) {
             break        
       }
     
-
+    return newString
   }
-  return newString
+  console.log(decode('Fala aliado'))
 }
-console.log(decode('2394623652938756'))
 
 module.exports = {
   calcArea,
