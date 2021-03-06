@@ -91,7 +91,7 @@ function encode(phrase) {
   for (let index = 0; index < phrase.length; index += 1){
     letter += (ifElse(phrase[index]));
   }
-  console.log(letter);
+  return letter;
 }
 
 function ifElse (index) {  
@@ -110,12 +110,12 @@ function ifElse (index) {
 }
 
 
-function decode (letter) {
-  let originalLetter = '';
-  for (let index = 0; index < letter.length; index += 1){
-    originalLetter += (ifElseNumber(letter[index]));
+function decode (phrase) {
+  let letter = '';
+  for (let index = 0; index < phrase.length; index += 1){
+    letter += (ifElseNumber(phrase[index]));
   }
-  return originalLetter;
+  return letter;
 }
 
 function ifElseNumber (index) {  
