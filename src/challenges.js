@@ -82,7 +82,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let message;
 
   if (distanceMouseCat1 === distanceMouseCat2) {
-    message = 'Os gatos trombam e o rato foge';
+    message = 'os gatos trombam e o rato foge';
   } else if (distanceMouseCat1 < distanceMouseCat2) {
     message = 'cat1';
   } else {
