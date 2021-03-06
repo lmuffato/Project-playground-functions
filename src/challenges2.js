@@ -67,13 +67,13 @@ function triangleCheck(lineA, lineB, lineC) {
   lineB = Math.abs(lineB);
   lineC = Math.abs(lineC);
   if (((lineB - lineC) < lineA && (lineB - lineC) < (lineB + lineC))) {
-    return console.log(true);
+    return true;
   } if (((lineA - lineC) < lineB && (lineA - lineC) < (lineA + lineC))) {
-    return console.log(true);
+    return true;
   } if (((lineA - lineB) < lineC && (lineA - lineB) < (lineA + lineB))) {
-    return console.log(true);
+    return true;
   }
-  return console.log(false);
+  return false;
 }
 // Desafio 13
 function hydrate() {
