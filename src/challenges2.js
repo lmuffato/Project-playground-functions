@@ -44,7 +44,11 @@ function hydrate(phrase) {
   for (index = 0; index < result.length; index += 1) {
     answer += parseInt(result[index]);
   }
+  if (answer === 1){
+    console.log(answer + ' copo de água');
+  } else {
   console.log(answer + ' copos de água');
+  }
 }
 
 module.exports = {
