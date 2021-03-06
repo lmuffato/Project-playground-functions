@@ -63,35 +63,25 @@ function highestCount(array) {
     }
   }
   return maiorRepete;
-  }  
-  
+  }
+
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanciaCat1 = 0;
-  let distanciaCat2 = 0;
-  if (cat1 < mouse) {
-    distanciaCat1 = distanciaCat1 + mouse - cat1;
-  } else if (cat1 > mouse) {
-    distanciaCat1 = distanciaCat1 + cat1 - mouse;
-  } if (cat2 < mouse) {
-    distanciaCat2 = distanciaCat2 + mouse - cat2;
-  } else if (cat2 > mouse) {
-    distanciaCat2 = distanciaCat2 + cat2 - mouse;
-  } if (distanciaCat1 > distanciaCat2) {
-    return 'cat2';
-  } if (distanciaCat1 < distanciaCat2) {
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1';
-  } if (distanciaCat1 = distanciaCat2) {
+  } else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
+    return 'cat2';
+  } else {
     return 'os gatos trombam e o rato foge';
   }
 }
 
-console.log(catAndMouse(8, 2, 10));
-console.log(catAndMouse(2, 20, 1));
+console.log(catAndMouse(4, 7, 2));
+console.log(catAndMouse(6, 0, 18));
 console.log(catAndMouse(15, 20, 10));
 
 // Desafio 8
