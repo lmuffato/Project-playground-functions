@@ -18,23 +18,21 @@ techList([], 'Alexandre');
 let firstPart = '';
 let secondPart = '';
 let thirdPart = '';
-let numberAdjusted = ''
-let allNumber = ''
-
+let numberAdjusted = '';
+let allNumber = '';
 function verifyArrayIndex(arrayNumbers) {
   for (let number in arrayNumbers) {
     if (arrayNumbers[number] < 0 || arrayNumbers[number] > 9) {
-      return false
+      return false;
     }
-  } return true
-}
+  } return true;
+};
 function verifyArrayLength(arrayNumbers) {
-  for (let index = 0; index < arrayNumbers.length; index += 1) {
-    if (arrayNumbers.length != 11) {
-      return false
-    }
-  } return true
-}
+  if (arrayNumbers.length !== 11) {
+    return false;
+  }
+  return true;
+};
 function verifyRepeatedNumber(arrayNumbers) {
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     let numberRepeat = 0;
@@ -42,26 +40,26 @@ function verifyRepeatedNumber(arrayNumbers) {
       if (arrayNumbers[index] === arrayNumbers[secondIndex]) {
         numberRepeat += 1;
       } if ((numberRepeat >= 3)) {
-        return false
+        return false;
       }
     }
-  } return true
-}
+  } return true;
+};
 function generatePhoneNumber(phoneNumber) {
   if (verifyRepeatedNumber(phoneNumber) === false) {
-    return 'não é possível gerar um número de telefone com esses valores'
+    return 'não é possível gerar um número de telefone com esses valores';
   } if (verifyArrayLength(phoneNumber) === false) {
-    return 'Array com tamanho incorreto.'
+    return 'Array com tamanho incorreto.';
   } if (verifyArrayIndex(phoneNumber) === false) {
-    return 'não é possível gerar um número de telefone com esses valores'
+    return 'não é possível gerar um número de telefone com esses valores';
   }
   allNumber = phoneNumber.join('');
   firstPart = allNumber.slice(0, 2);
   secondPart = allNumber.slice(2, 7);
   thirdPart = allNumber.slice(7, 11);
   numberAdjusted = `(${firstPart}) ${secondPart}-${thirdPart}`;
-  return numberAdjusted
-} generatePhoneNumber([2, 4, 5, 6, 5, 8, 9, 3, 4, 8, 1])
+  return numberAdjusted;
+} generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
