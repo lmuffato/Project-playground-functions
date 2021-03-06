@@ -153,6 +153,7 @@ function encode(stringKey) {
   return newString;
 }
 
+// O Iago e o Lucas Pedroso, estudantes da turma 10, colaboraram em partes da função abaixo
 let ciferReverse = {
   1: 'a',
   2: 'e',
