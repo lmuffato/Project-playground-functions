@@ -23,9 +23,8 @@ function triangleCheck(lineA, lineB, lineC) {
    && lineB > Math.abs(lineA - lineC) && lineB < (lineA + lineC)
    && lineC > Math.abs(lineA - lineB) && lineC < (lineA + lineB)) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 // consultation made on the website : https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 
