@@ -74,10 +74,25 @@ function highestCount(numberArray) {
 // // por que não consigo printar o valor do highestNumber?
 // console.log(highestNumber);
 
+// por que ao utilizar let highestNumber = Math.max.apply(Math, numberArray) 
+// retorna Linha 60: Use the spread operator instead of '.apply()'.
+
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if ((Math.abs(mouse - cat1)) < (Math.abs(mouse - cat2))) {
+    return 'cat1'
+  }
+  if ((Math.abs(mouse - cat2)) < (Math.abs(mouse - cat1))) {
+    return 'cat2'
+  }
+  if ((Math.abs(mouse - cat1)) === (Math.abs(mouse - cat2))) {
+    return 'os gatos trombam e o rato foge'
+  }
 }
+
+// console.log(catAndMouse(5, 2, 3));
+// console.log(catAndMouse(0, 6, 12));
+// console.log(catAndMouse(0, -2, 2));
 
 // Desafio 8
 function fizzBuzz() {
