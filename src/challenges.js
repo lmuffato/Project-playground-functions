@@ -6,7 +6,7 @@ function compareTrue(number1, number2) {
     return false;
   }
 }
-//console.log(compareTrue(true,false))
+// console.log(compareTrue(true,false))
 
 // Desafio 2
 function calcArea(base, height) {
@@ -22,8 +22,8 @@ function splitSentence(phrase) {
  return result;
  
 }
-//console.log(splitSentence("go Trybe"))
-//pesquisei o método no site "https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254"
+// console.log(splitSentence("go Trybe"))
+// pesquisei o método no site "https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254"
 
 // Desafio 4
 function concatName(strings) {
@@ -33,7 +33,7 @@ function concatName(strings) {
   }
   
 }
-//console.log(concatName(['captain', 'my', 'captain']))
+// console.log(concatName(['captain', 'my', 'captain']))
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -42,7 +42,7 @@ function footballPoints(wins, ties) {
   let resultado = (wins * vitoria + ties * empate);
   return resultado;
 }
-//console.log(footballPoints(0,0))
+// console.log(footballPoints(0,0))
 
 // Desafio 6
 
@@ -56,8 +56,8 @@ for (index = 0; index < arrayNumbers.length; index +=1) {
 }
 return contador;
 }
-//let arrayNumbers = [0, 0, 0];
-//pesquisei o método no site "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply"
+// let arrayNumbers = [0, 0, 0];
+// pesquisei o método no site "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply"
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
@@ -69,33 +69,33 @@ function catAndMouse(mouse,cat1,cat2) {
    return "cat1"
  }
 }
-//console.log(catAndMouse(0,3,2))
+// console.log(catAndMouse(0,3,2))
 
 // Desafio 8
-//let array = [9, 25]
+// let array = [9, 25]
 function fizzBuzz(array) {
   let result = [];
   
   for(let index = 0; index < array.length; index += 1) {
   
-  if (array[index] % 3 != 0 && array[index] % 5 != 0 )  {
+  if (array[index] % 3 !== 0 && array[index] % 5 !== 0)  {
       result.push("bug!");
     
     } else if (array[index] % 3 == 0 && array[index] % 5 == 0) {
       result.push("fizzBuzz");
     
-    }else if (array[index] % 5 == 0) {
+    } else if (array[index] % 5 == 0) {
       result.push("buzz");
     
-    } else if (array[index] % 3 == 0 ) {
+    } else if (array[index] % 3 == 0) {
       result.push("fizz");
     } 
 } return fizzBuzz(array) 
-//console.log(result)
+// console.log(result)
 } 
 
 // Desafio 9
-//let stringNumbers = 'hi there!'
+// let stringNumbers = 'hi there!'
 function encode(stringNumbers) {
   let vogal = [];
   let textArray = stringNumbers.split('');
@@ -105,38 +105,37 @@ function encode(stringNumbers) {
       vogal.push('1');
     } else if (textArray[index] === 'e') {
       vogal.push('2');
-    }else if (textArray[index] === 'i') {
+    } else if (textArray[index] === 'i') {
       vogal.push('3');
-    }else if (textArray[index] === 'o') {
+    } else if (textArray[index] === 'o') {
       vogal.push('4');
-    }else if (textArray[index] === 'u') {
+    } else if (textArray[index] === 'u') {
       vogal.push('5');
-    }else {
+    } else {
       vogal.push(stringNumbers[index])
     }
   } 
   let result = vogal.join('')
-  //console.log(result)
+  // console.log(result)
   return result
 }
 
-//let vogalNumbers = 'h3 th2r2!'
+// let vogalNumbers = 'h3 th2r2!'
 function decode(vogalNumbers) {
   let vogalArray = [];
   let text = vogalNumbers.split('');
-  
   for (index = 0; index < vogalNumbers.length; index += 1) {
     if (text[index] === '1') {
       vogalArray.push('a');
     } else if (text[index] === '2') {
       vogalArray.push('e');
-    }else if (text[index] === '3') {
+    } else if (text[index] === '3') {
       vogalArray.push('i');
-    }else if (text[index] === '4') {
+    } else if (text[index] === '4') {
       vogalArray.push('o');
-    }else if (text[index] === '5') {
+    } else if (text[index] === '5') {
       vogalArray.push('u');
-    }else {
+    } else {
       vogalArray.push(vogalNumbers[index])
     }
   } 
@@ -144,7 +143,7 @@ function decode(vogalNumbers) {
   // console.log(result)
   return result
 }
-//pesquisei o método no site: "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/join"
+// pesquisei o método no site: "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/join"
 
 module.exports = {
   calcArea,
