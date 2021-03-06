@@ -48,6 +48,7 @@ function highestCount(arrayNumbers) {
 }
 
 // Desafio 7
+// Referência para o Math.abs: (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs).
 function catAndMouse(mouse, cat1, cat2) {
   let positionCat1 = Math.abs(mouse - cat1);
   let positionCat2 = Math.abs(mouse - cat2);
@@ -74,14 +75,14 @@ function fizzBuzz(numbersArray) {
 }
 
 // Desafio 9
-// Obtive ajuda para fazer este desafio pelo código de João Vitor Nascimento (Usuário no Github: nascjoao). Link: 
+// Obtive ajuda para fazer este desafio no repositório de João Vitor Nascimento (Usuário no Github: nascjoao). Link: 
 // https://github.com/tryber/sd-010-a-project-playground-functions/pull/132/files
 
 function encode(string) {
   const vowels = { a: 1, e: 2, i: 3, o: 4, u: 5 };
   let encoded = '';
   for (let letter in string) {
-    if (vowels[string[letter]]) { //se encontrar o valor da chave, adiciona a chave à variável encoded.
+    if (vowels[string[letter]]) { //se encontrar (pelo for) a key (vogal) na string passada, adiciona o value (número) à variável encode.
       encoded += vowels[string[letter]];
     } else {
       encoded += string[letter];
@@ -91,7 +92,7 @@ function encode(string) {
 }
 
 function decode(code) {
-  const numbers = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' }; // mesmo código acima, apenas troca a chave pelo valor.
+  const numbers = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' }; // mesmo código acima, apenas troca a key pelo value.
   let decoded = '';
   for (let symbol in code) {
     if (numbers[code[symbol]]) {
