@@ -58,8 +58,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-console.log(catAndMouse(2, 18, 10))
-
 // Desafio 8
 function fizzBuzz(number) {
   if (number % 3) {
@@ -71,7 +69,6 @@ function fizzBuzz(number) {
 } if (number % 3 && number % 5) {
   return 'bug!';
 }
-
 
 // Desafio 9
 function encode() {
