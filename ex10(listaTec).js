@@ -1,18 +1,21 @@
-function TechNames(techArray, nameUser) {
+function TechNames(techArray, nome) {
+    let techOrdem = techArray.sort();
     let tecnologias = [];
-    let techArray = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-    if (techArray.length <= 0) {
-        return 'Vazio!';
-    } 
-    for (let index in techArray.sort()) {
-        tecnologias.push( 
-            {
-                tech: index,
-                name: nameUser,
-            },
-        );
+    let tecOutput;
+    if (techArray.length >= 1) {
+        for (let index = 0; index < techArray.length; index +=1) {
+            tecnologias[index] = {
+                tecnologia: techOrdem[index],
+                User: nome 
+            }
+        }
+        tecOutput = tecnologias;
     }
-    let nameUser = 'Felipe';
-    return tecnologias;
+    else {
+        tecOutput = "Vazio!";
     }
-console.log(Technames(tecnologias));
+    return tecOutput;
+}
+let array = ["React", "Jest", "HTML", "CSS", "Javascript"];
+let nome = "Felipe";
+console.log(TechNames(array, nome));
