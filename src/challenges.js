@@ -52,16 +52,17 @@ function highestCount(arrayNumbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let diffCat1 = Math.abs(mouse - cat1);
+  let diffCat2 = Math.abs(mouse - cat2);
 
-  if (cat1 < cat2 && cat1 >= mouse) {
+  if (diffCat1 < diffCat2) {
     return 'cat1';
   }
-  if (cat2 < cat1 && cat2 >= mouse) {
+  if (diffCat2 < diffCat1) {
     return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
 }
-console.log(catAndMouse(1, 1, 1));
 
 // Desafio 8
 function divisibleOrNo(number) {
