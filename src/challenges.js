@@ -57,7 +57,7 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7 (fazer)
 function catAndMouse(mouse, cat1, cat2) {
-  if ((cat1 - mouse) < (cat2 - mouse)) {
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1';
   }
   if ((cat1 - mouse) > (cat2 - mouse)) {
