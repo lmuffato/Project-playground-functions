@@ -78,27 +78,47 @@ function fizzBuzz(array) {
   return arrayResult;
 }
 
-// Desafio 9
+// Desafio 9 - teste sem o for in
 function encode(string) {
-  let encodeString = [];
-  encodeString = string.split('');
-  return encodeString;
-  for (let index = 0; index <= encodeString.length; index += 1) {
-    if (encodeString[index] === 'a') {
-      encodeString[index] = 1;
-    }
-    if (encodeString[index] === 'e') {
-      encodeString[index] = 2;
+  let stringToEncode = string.split(''); // separa a string que será codificada
+  for (let index = 0; index < string.length; index += 1){
+    if (string[index] === 'a') {
+      stringToEncode = '1';
+    } else if (string[index] === 'e') {
+      stringToEncode = '2';
+    } else if (string[index] === 'i') {
+      stringToEncode = '3';
+    } else if (string[index] === 'o') {
+      stringToEncode = '4';
+    } else if (string[index] === 'u') {
+      stringToEncode = '5';
+    } else {
+      stringToEncode = string[index]; // mantem as consoantes * importante
     }
   }
-  return encodeString;
+ return stringToEncode.join(''); // junta a array em string
 }
-
-console.log(encode('eduardo'));
 
 function decode() {
-  // seu código aqui
+  let stringToEncode = string.split(''); // separa a string que será codificada
+  for (let index = 0; index < string.length; index += 1){
+    if (string[index] === '1') {
+      stringToEncode = 'a';
+    } else if (string[index] === '2') {
+      stringToEncode = 'e';
+    } else if (string[index] === '3') {
+      stringToEncode = 'i';
+    } else if (string[index] === '4') {
+      stringToEncode = 'o';
+    } else if (string[index] === '5') {
+      stringToEncode = 'u';
+    } else {
+      stringToEncode = string[index]; // mantem as consoantes * importante
+    }
+  }
+ return stringToEncode.join(''); // junta a array em string
 }
+
 
 module.exports = {
   calcArea,
