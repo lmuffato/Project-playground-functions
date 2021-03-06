@@ -88,10 +88,39 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function lessThanSum(number1, number2, number3) {
+  return number1 < number2 + number3;
+}
+function checkTriangleBySum(lineA, lineB, lineC) {
+  return lessThanSum(lineA, lineB, lineC) && lessThanSum(lineB, lineA, lineC) && lessThanSum(lineC, lineB, lineA);
 }
 
+function greaterThanDifference(number1, number2, number3) {
+  let isGreater = false;
+  if (number2 > number3) {
+    isGreater = number1 > number2 - number3;
+  } else {
+    isGreater = number1 > number3 - number2;
+  }
+  return isGreater;
+}
+
+function checkTriangleByDifference(lineA, lineB, lineC) {
+  return greaterThanDifference(lineA, lineB, lineC) && greaterThanDifference(lineB, lineA, lineC) && greaterThanDifference(lineC, lineB, lineA);
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  let existTriangle = false;
+  let sum = checkTriangleBySum(lineA, lineB, lineC);
+  let difference = checkTriangleByDifference(lineA, lineB, lineC);
+  if (sum && difference) {
+    existTriangle = true;
+  } else {
+    existTriangle = false;
+  }
+
+  return existTriangle;
+  
 // Desafio 13
 function hydrate() {
   // seu código aqui
