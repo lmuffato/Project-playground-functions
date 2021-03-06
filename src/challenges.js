@@ -20,13 +20,14 @@ function splitSentence(frase, fraseSplit) {
 
 // Desafio 4
 function concatName(listaDeNomes, ultimoPrimeiroNome) {
-  ultimoPrimeiroNome = listaDeNomes[listaDeNomes.length - 1] + ", " + listaDeNomes[0];
+  ultimoPrimeiroNome = listaDeNomes[listaDeNomes.length - 1] + ', ' + listaDeNomes[0];
   return ultimoPrimeiroNome;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties, score) {
+  score = wins * 3 + ties * 1;
+  return score;
 }
 
 // Desafio 6
