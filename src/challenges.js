@@ -35,9 +35,22 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(1, 2));
 
 // Desafio 6
-function highestCount() {
 
+function getMaxNumber(numberArray2) {
+  return Math.max.apply(null, numberArray2);
 }
+
+function highestCount(numberArray) {
+  let maxNumber = getMaxNumber(numberArray);
+  let maxNumberCount = 0;
+  for (let number of numberArray){
+    if (number === maxNumber){
+      maxNumberCount += 1;
+    }
+  }
+  return maxNumberCount
+}
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
