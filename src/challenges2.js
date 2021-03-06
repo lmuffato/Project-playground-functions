@@ -64,8 +64,18 @@ function generatePhoneNumber(numberArray) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  // é necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois
+  // e maior que o valor absoluto da diferença entre essas medidas.
+  let isTriangle;
+  if (lineA >= lineB + lineC || lineB >= lineA + lineC || lineC >= lineB + lineA) {
+    isTriangle = false;
+  } else if (lineA <= Math.abs(lineB - lineC) || lineB <= Math.abs(lineA - lineC) || lineC <= Math.abs(lineB - lineA)) {
+    isTriangle = false;
+  } else {
+    isTriangle = true;
+  }
+  return isTriangle;
 }
 
 // Desafio 13
