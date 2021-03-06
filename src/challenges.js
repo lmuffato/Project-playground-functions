@@ -18,16 +18,14 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayStrings) {
-  let lastItem = arrayStrings.length - 1;
-  if (lastItem > 0) {
-  return(arrayStrings[lastItem] + ' , ' + arrayStrings[0])
-  } return(arrayStrings)
+  let lastItem = (arrayStrings.length - 1);
+    return (arrayStrings[lastItem] + ' , ' + arrayStrings[0]);
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let vitorias = 3;
-  let empates = 1
+  let empates = 1;
   return(vitorias * wins + empates * ties)
 }
 
