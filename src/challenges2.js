@@ -29,16 +29,18 @@ function invalidNumbers(arrayNumbers) {
 }
 
 function repeatedNumbers(arrayNumbers) {
-  let counter = [];
+  let counter = 0;
   for (let index of arrayNumbers) {
     if (arrayNumbers[index] === index) {
-      counter.push(index);
-    }
-    if (counter.length >= 3) {
-      return true;
+      counter += 1;
+      if (counter >= 3) {
+        return true;
+      }
     }
   }
 }
+
+console.log(repeatedNumbers([1, 1, 1]));
 
 function generatePhoneNumber(phoneNumber) {
   if (phoneNumber.length !== 11) {
@@ -47,8 +49,10 @@ function generatePhoneNumber(phoneNumber) {
   if (invalidNumbers(phoneNumber) === true || repeatedNumbers(phoneNumber) === true) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  return `(${phoneNumber[0]}${phoneNumber[1]}) ${phoneNumber[2]}${phoneNumber[3]}${phoneNumber[4]}${phoneNumber[5]}${phoneNumber[6]}-${phoneNumber[7]}${phoneNumber[8]}${phoneNumber[9]}${phoneNumber[10]}`;
+  return `(${phoneNumber[0]}${phoneNumber[1]}) ${phoneNumber[2]}${phoneNumber[3]}${phoneNumber[4]}${phoneNumber[5]}-${phoneNumber[6]}${phoneNumber[7]}${phoneNumber[8]}${phoneNumber[9]}${phoneNumber[10]}`;
 }
+
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2]));
 
 // Desafio 12
 function triangleCheck() {
