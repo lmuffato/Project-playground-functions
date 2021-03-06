@@ -94,14 +94,40 @@ function fizzBuzz(Number) {
 }
 let arrayNumber = [7, 9];
 console.log(fizzBuzz(arrayNumber));
-// Desafio 9
-function encode() {
-  // seu código aqui
 
+// Desafio 9
+function encode(phraseconvert) {
+  let convert = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  let textonovo;
+  textonovo = phraseconvert.replace(/a|e|i|o|u/g, function (index) {
+    return convert[index];
+  });
+  return textonovo;
 }
-function decode() {
-  // seu código aqui
+
+function decode(phraseconvert) {
+  let convertNumber = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  let textnumber;
+  textnumber = phraseconvert.replace(/1|2|3|4|5/g, function (index) {
+    return convertNumber[index];
+  });
+  return textnumber;
 }
+console.log(encode('hi there'));
+console.log(decode('h3 th2r2!'));
+// neste exercicio peguei exemplo de alguns alunos pois n entendia muito bem o comando replace
 
 module.exports = {
   calcArea,
