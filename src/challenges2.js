@@ -120,7 +120,8 @@ function triangleCheck(lineA, lineB, lineC) {
   }
 
   return existTriangle;
-  
+}
+
 // Desafio 13
 function hydrate() {
   // seu código aqui
