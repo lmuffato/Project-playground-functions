@@ -67,7 +67,7 @@ console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
-function catAndMouse(cat1, cat2, mouse) {
+function catAndMouse(mouse, cat1, cat2) {
   let distance1 = Math.abs(mouse - cat1);
   let distance2 = Math.abs(mouse - cat2);
   let result = '';
@@ -80,9 +80,9 @@ function catAndMouse(cat1, cat2, mouse) {
   }
   return result;
 }
-console.log(catAndMouse(5, 6, 8));
-console.log(catAndMouse(10, 28, 16));
-console.log(catAndMouse(3, 3, 8));
+console.log(catAndMouse(8, 5, 6));
+console.log(catAndMouse(16, 10, 28));
+console.log(catAndMouse(8, 3, 3));
 
 // Desafio 8
 function fizzBuzz(array) {
