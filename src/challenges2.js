@@ -82,10 +82,15 @@ function triangleCheck(lineA, lineB, lineC) {
   }
 } triangleCheck(10, 8, 14)
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
-}
-
+  let wordInParts = string.replace(/\D/g, "");
+  if (wordInParts === '1') {
+    return `${wordInParts} copo de água`;
+  } else {
+    return `${wordInParts} copos de água`;
+  }
+};
 module.exports = {
   generatePhoneNumber,
   techList,
