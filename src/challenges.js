@@ -5,7 +5,7 @@ function compareTrue(firstValue, secondValue) {
     return true;
   }
   return false;
-// Nesse exercício contei com a colaboração do Luan Ramalho da turma 10A, meu cógdigo não estava passando no Evaluator por um simples erro e ele me ajudou a descobrir.
+  // Nesse exercício contei com a colaboração do Luan Ramalho da turma 10A, meu cógdigo não estava passando no Evaluator por um simples erro e ele me ajudou a descobrir.
 }
 
 // Desafio 2
@@ -24,7 +24,7 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   return `${array[array.length - 1]}, ${array[0]}`;
-// Precisei consultar a respeito de Template Literals para conseguir desenvolver essa parte do código e ser aprovado no lint: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Template_literals
+  // Precisei consultar a respeito de Template Literals para conseguir desenvolver essa parte do código e ser aprovado no lint: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Template_literals
 }
 
 // Desafio 5
@@ -103,11 +103,30 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let encodeString = string;
+  // Para esse desafio, com a dica do Luciano Amâncio em uma thread do canal da turma, assisti ao vídeo da trybe: https://www.youtube.com/watch?v=UShV_TFxs_A;
+  // Além disso precisei estudar uma forma de substituir todas as ocorrências do caracter na string, para isso li o artigo a seguir e utilizei o apoio das regex: https://www.alura.com.br/artigos/javascript-replace-manipulando-strings-e-regex?gclid=Cj0KCQiA7YyCBhD_ARIsALkj54rQZyIUUtE_l8xDKYCDozC2ywyeKxExaGCtWR8Bl7mHQZz_Tyh3_cEaAoLYEALw_wcB;
+  encodeString = encodeString.replace(/a/g, '1');
+  encodeString = encodeString.replace(/e/g, '2');
+  encodeString = encodeString.replace(/i/g, '3');
+  encodeString = encodeString.replace(/o/g, '4');
+  encodeString = encodeString.replace(/u/g, '5');
+
+  return encodeString;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let decodeString = string;
+  // Para esse desafio, com a dica do Luciano Amâncio em uma thread do canal da turma, assisti ao vídeo da trybe: https://www.youtube.com/watch?v=UShV_TFxs_A;
+  // Além disso precisei estudar uma forma de substituir todas as ocorrências do caracter na string, para isso li o artigo a seguir e utilizei o apoio das regex: https://www.alura.com.br/artigos/javascript-replace-manipulando-strings-e-regex?gclid=Cj0KCQiA7YyCBhD_ARIsALkj54rQZyIUUtE_l8xDKYCDozC2ywyeKxExaGCtWR8Bl7mHQZz_Tyh3_cEaAoLYEALw_wcB;
+  decodeString = decodeString.replace(/1/g, 'a');
+  decodeString = decodeString.replace(/2/g, 'e');
+  decodeString = decodeString.replace(/3/g, 'i');
+  decodeString = decodeString.replace(/4/g, 'o');
+  decodeString = decodeString.replace(/5/g, 'u');
+
+  return decodeString;
 }
 
 module.exports = {
