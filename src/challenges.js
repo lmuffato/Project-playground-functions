@@ -1,3 +1,4 @@
+/* eslint-disable complexity */
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
@@ -69,10 +70,30 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 console.log(catAndMouse(4, 9, 10));
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function Numbers(arrayNumber) {
+  let result;
+  if (arrayNumber % 3 === 0 && arrayNumber % 5 === 0) {
+    result = 'fizzBuzz';
+  } else if (arrayNumber % 3 === 0) {
+    result = 'fizz';
+  } else if (arrayNumber % 5 === 0) {
+    result = 'buzz';
+  } else {
+    result = 'bug!';
+  }
+  return result;
 }
-
+function fizzBuzz(Number) {
+  let result = [];
+  let verify;
+  for (let index = 0; index < Number.length; index += 1) {
+    verify = Numbers(Number[index]);
+    result.push(verify);
+  }
+  return result;
+}
+let arrayNumber = [7, 9];
+console.log(fizzBuzz(arrayNumber));
 // Desafio 9
 function encode() {
   // seu código aqui
