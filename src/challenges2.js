@@ -1,15 +1,15 @@
 // Desafio 10
-function techList(tech, name) {
-  if (!tech || tech.length === 0) {
+function techList(techs, name) {
+  if (!techs || techs.length === 0) {
     return 'Vazio!';
   }
 
-  let techsList = tech.sort();
+  techs = techs.sort();
   let list = [];
-  for (let index in techsList) {
+  for (let tech of techs) {
     list.push(
       {
-        tech: tech[index],
+        tech,
         name,
       },
     );

@@ -35,6 +35,10 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function findHighestValue(array) {
+  /*
+  Para entender o metodo .sort, e faze-lo ordernar os itens em ordem cresente procurei na documentação
+  link: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+  */
   array.sort((a, b) => a - b);
   return array[array.length - 1];
 }
