@@ -20,12 +20,14 @@ function splitSentence(sentence) {
 // Desafio 4
 function concatName (name = []) {
   // seu código aqui
-    let lastName = name[name.length - 1];
-  concatName = lastName + (name[0])
-   return concatName
-
- }
+  let completeName = name[name.length - 1] + " " + name[0]
  
+  return completeName
+  
+ }
+ console.log(concatName(name = ['kaue', 'tauil', 'taue']))
+
+
  // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
