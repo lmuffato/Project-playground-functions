@@ -94,11 +94,35 @@ let numToVerify = [2, 15, 7, 9, 45];
 console.log(fizzBuzz(numToVerify));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+// Só consegui fazer esse exercicio graças ao Luciano Amâncio.
+function encode(phrase) {
+  let encodeConvert = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  let newText;
+  newText = phrase.replace(/a|e|i|o|u/g, function (index) {
+    return encodeConvert[index];
+  });
+  return newText;
 }
-function decode() {
-  // seu código aqui
+
+function decode(phrase) {
+  let decodeConvert = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  let newPhrase;
+  newPhrase = phrase.replace(/1|2|3|4|5/g, function (index) {
+    return decodeConvert[index];
+  });
+  return newPhrase;
 }
 
 module.exports = {
