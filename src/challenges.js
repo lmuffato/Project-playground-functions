@@ -125,7 +125,7 @@ function techList (listOfTech, name){
   for ( let index = 0; index < techListSort.length; index += 1) {
   ultimateList.push({ tech: techListSort[index], name: name });
   }if (listOfTech.length === 0){
-    return 'Vazio!';
+    return "Vazio!";
   }
   return ultimateList;
 }
