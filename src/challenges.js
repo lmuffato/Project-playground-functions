@@ -96,10 +96,10 @@ function encode(string) {
       stringToEncode = string[index]; // mantem as consoantes * importante
     }
   }
- return stringToEncode.join(''); // junta a array em string
+ return stringToEncode.concat(stringToEncode); // junta a array em string
 }
 
-function decode() {
+function decode(string) {
   let stringToEncode = string.split(''); // separa a string que será codificada
   for (let index = 0; index < string.length; index += 1){
     if (string[index] === '1') {
@@ -116,7 +116,7 @@ function decode() {
       stringToEncode = string[index]; // mantem as consoantes * importante
     }
   }
- return stringToEncode.join(''); // junta a array em string
+ return stringToEncode.concat(stringToEncode); // junta a array em string
 }
 
 
