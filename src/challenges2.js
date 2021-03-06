@@ -16,7 +16,7 @@ function techList(techs, name) {
 
 // Desafio 11
 
-function wrongRangeCheck(currentValue, index, arr) {
+function wrongRangeCheck(currentValue) {
   if (currentValue > 9 || currentValue < 0) {
     return "não é possível gerar um número de telefone com esses valores"
   }
@@ -35,11 +35,10 @@ function generatePhoneNumber(phoneNumb) {
     for (let index2 = index + 1; index2 < phoneNumb.lenght; index2 += 1) {
       if(phoneNumb[index] === phoneNumb[index2]) {
         repeat += 1;
+      } if (repeat >= 3) {
+        return "não é possível gerar um número de telefone com esses valores"
       }
-    }
-    if (repeat >= 3) {
-      return "não é possível gerar um número de telefone com esses valores"
-    }
+    }      
   }
   return `(${arr[0]}${arr[1]}) ${arr[2]}${arr[3]}${arr[4]}${arr[5]}${arr[6]}-${arr[7]}${arr[8]}${arr[9]}${arr[10]}`;
 }
