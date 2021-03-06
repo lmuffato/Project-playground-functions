@@ -121,16 +121,16 @@ function decode(stringDecode) {
 function techList (listOfTech, name){
   let techListSort = listOfTech.sort();
   let ultimatelist = []
-if (listOfTech.length === 0){
-  return 'Vazio!';
-} for ( let index = 0; index < techListSort.length; index += 1) {
-  ultimatelist.push ( {
-    tech: techListSort[index],
-    name: name,
+
+    if (listOfTech.length === 0){
+    return 'Vazio!';
+  } for ( let index = 0; index < techListSort.length; index += 1) {
+    ultimatelist.push ({
+      tech: techListSort[index],
+      name: name,
+    });
   }
-  )
-}
-return  ultimatelist;
+  return ultimatelist;
 };
 
 module.exports = {
