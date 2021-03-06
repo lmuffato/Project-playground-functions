@@ -110,35 +110,65 @@ function generatePhoneNumber(arrayNumbers) {
   return validation(arrayNumbers);
 }
 
+// Função auxiliar
+let triangleObj = {
+  checkLadoA(ladoA, ladoB, ladoC) {
+    if (ladoA > (ladoB + ladoC)) {
+      return false;
+    }
+    return true;
+  },
+  checkLadoB(ladoA, ladoB, ladoC) {
+    if (ladoB > (ladoA + ladoC)) {
+      return false;
+    }
+    return true;
+  },
+  checkLadoC(ladoA, ladoB, ladoC) {
+    if (ladoC > (ladoA + ladoB)) {
+      return false;
+    }
+    return true;
+  },
+  checkAbsLadoA(ladoA, ladoB, ladoC) {
+    if (ladoA < Math.abs(ladoB - ladoC)) {
+      return false;
+    }
+    return true;
+  },
+  checkAbsLadoB(ladoA, ladoB, ladoC) {
+    if (ladoB < Math.abs(ladoA - ladoC)) {
+      return false;
+    }
+    return true;
+  },
+  checkAbsLadoC(ladoA, ladoB, ladoC) {
+    if (ladoC < Math.abs(ladoA - ladoB)) {
+      return false;
+    }
+    return true;
+  },
+};
+
 // Desafio 12
 function triangleCheck(ladoA, ladoB, ladoC) {
-  let isTriangle = true;
+  let isTriangle = [];
 
-  if (ladoA > (ladoB + ladoC)) {
-    return false;
+  isTriangle.push(triangleObj.checkLadoA(ladoA, ladoB, ladoC));
+  isTriangle.push(triangleObj.checkLadoB(ladoA, ladoB, ladoC));
+  isTriangle.push(triangleObj.checkLadoC(ladoA, ladoB, ladoC));
+
+  isTriangle.push(triangleObj.checkAbsLadoA(ladoA, ladoB, ladoC));
+  isTriangle.push(triangleObj.checkAbsLadoB(ladoA, ladoB, ladoC));
+  isTriangle.push(triangleObj.checkAbsLadoC(ladoA, ladoB, ladoC));
+
+  for (let index = 0; index < isTriangle.length; index += 1) {
+    if (isTriangle[index] === false) {
+      return false;
+    }
   }
 
-  if (ladoB > (ladoA + ladoC)) {
-    return false;
-  }
-
-  if (ladoC > (ladoA + ladoB)) {
-    return false;
-  }
-
-  if (ladoA < Math.abs(ladoB - ladoC)) {
-    return false;
-  }
-
-  if (ladoB < Math.abs(ladoA - ladoC)) {
-    return false;
-  }
-
-  if (ladoC < Math.abs(ladoA - ladoB)) {
-    return false;
-  }
-
-  return isTriangle;
+  return true;
 }
 
 // Desafio 13
