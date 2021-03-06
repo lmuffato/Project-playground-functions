@@ -21,14 +21,14 @@ let thirdPart = '';
 let numberAdjusted = ''
 let allNumber = ''
 
-function verifyArrayLength(arrayNumbers) {
+function verifyArrayIndex(arrayNumbers) {
   for (let number in arrayNumbers) {
     if (arrayNumbers[number] < 0 || arrayNumbers[number] > 9) {
       return false
     }
   } return true
 }
-function verifyArrayIndex(arrayNumbers) {
+function verifyArrayLength(arrayNumbers) {
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     if (arrayNumbers.length != 11) {
       return false
