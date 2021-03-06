@@ -18,10 +18,10 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName ([name]) {
+function concatName (name) {
   // seu código aqui
   let lastName = name[name.length - 1];
-  let completeName = lastName + ',' + name[0]; 
+  let completeName = lastName + ', ' + name[0]; 
   return completeName
   
  }
@@ -49,8 +49,19 @@ for (let i = 0; i < num.length; i++) {
   
   
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  if (cat1 <=  mouse && cat2 <= mouse && cat1 > cat2); {
+  return cat1
+}
+  else if (cat1 < mouse && cat2 < mouse && cat1 < cat2); {
+  return cat2
+  }
+
+  else if (cat1 == cat2); {
+    return 'Os gatos trombam e o rato foge';
+  }
+
 }
 
 // Desafio 8
