@@ -43,12 +43,12 @@ function getMaxNumber(numberArray2) {
 function highestCount(numberArray) {
   let maxNumber = getMaxNumber(numberArray);
   let maxNumberCount = 0;
-  for (let number of numberArray){
-    if (number === maxNumber){
+  for (let number of numberArray) {
+    if (number === maxNumber) {
       maxNumberCount += 1;
     }
   }
-  return maxNumberCount
+  return maxNumberCount;
 }
 console.log(highestCount([0, 0, 0]));
 
