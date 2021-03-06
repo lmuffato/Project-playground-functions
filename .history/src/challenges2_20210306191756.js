@@ -9,7 +9,7 @@ function techList(tech, name) {
   for (let i = 0; i < tech.length; i++) {
     techListObject.tech = tech[i];
     techListObject.name = name;
-    returnObject.push({ tech: tech[i], name });
+    retornObject.push({ tech: tech[i], name });
   }
   return returnObject;
 }
