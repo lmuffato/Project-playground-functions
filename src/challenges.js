@@ -50,7 +50,7 @@ function highestCount(array) {
       soma += 1;
     }
   }
-  console.log(soma);
+  return soma;
 }
 
 // Desafio 7
