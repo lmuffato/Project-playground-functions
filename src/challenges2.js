@@ -11,11 +11,28 @@ function techList(array, names) {
   return techs;
 }
 
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Anderson'));
-
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+// A função ArrayFilterRepeat foi contribuição do @Lucas Pedroso.
+function arrayFilterRepeat(array) {
+  for (let index = 0; index < array.length; index += 1) {
+    const element = array[index];
+    if ((array.filter((number) => number === element)).length >= 3) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function generatePhoneNumber(array) {
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  let arrayFilters = array.filter((number) => number < 0 || number > 9);
+  if (arrayFilters.length > 0 || arrayFilterRepeat(array) === true) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  let arrayToString = array.toString().replace(/,/g, '');
+  return arrayToString.replace(/(\d{2})(\d{5})(\d{3})/g, '($1) $2-$3');
 }
 
 // Desafio 12
