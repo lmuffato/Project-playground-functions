@@ -7,6 +7,9 @@ function techList(techNames, personName) {
 
     techObjects.push(techObject);
   }
+  if (techObjects === []) {
+    return 'Vazio!';
+  }
   return techObjects;
 }
 
