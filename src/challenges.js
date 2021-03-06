@@ -93,22 +93,28 @@ function highestCount(numeros) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
 
-  let distCat1 = cat1 - mouse;
-  let distCat2 = cat2 - mouse;
+    let dist1 = cat1 - mouse;
+    let dist2 = cat2 - mouse;
 
-  if (distCat1 < distCat2) {
-    console.log('cat1');
-  } else if (cat2 < cat1) {
-    console.log('cat2');
-  } else {
-    return (console.log('os gatos trombam e o rato foge'));
+    if ((mouse > cat1) || (mouse > cat2)) {
+
+      if (dist1 > dist2) {
+        console.log ('cat1');
+      } else if (dist1 < dist2) {
+        console.log ('cat2')
+      } else if (dist1 === dist2) {
+        console.log('os gatos trombam e o rato foge');
+      }
+    } else {
+      if (dist1 > dist2) {
+        console.log ('cat2');
+      } else if (dist1 < dist2) {
+        console.log ('cat1')
+      } else if (dist1 === dist2) {
+        console.log('os gatos trombam e o rato foge')
+    }
   }
 }
-
-// console.log('Desafio 7: ')
-// catAndMouse(0,3,4);
-// console.log ('---------------------');
-
 
 // Desafio 8
 function fizzBuzz(fizzBuzzParam) {
@@ -124,15 +130,11 @@ function fizzBuzz(fizzBuzzParam) {
     } else if (status[index] % 5 === 0) {
       symbols.push('buzz');
     } else {
-      symbols.push('bug');
+      symbols.push('bug!');
     }
   }
   return console.log(symbols);
 }
-
-// console.log('Desafio 8: ');
-// fizzBuzz(23)
-// console.log ('---------------------');
 
 // Desafio 9
 function encode(frase) {
@@ -155,9 +157,6 @@ function encode(frase) {
   }  return console.log(newPhrase);
 }
 
-// console.log('Desafio 9: ')
-// encode('Hi There');
-
 function decode(frase) {
   let encodingPhrase = frase;
   let newPhrase = '';
@@ -177,8 +176,6 @@ function decode(frase) {
     }
   }  return console.log(newPhrase);
 }
-
-// decode('H2ll4');
 
 function tecnologies(paramTech, paramNome) {
 
@@ -204,10 +201,6 @@ function tecnologies(paramTech, paramNome) {
     return(console.log(novoArray));
     }
   } 
-  
-// console.log('Desafio 10: ');
-// tecnologies(['Javascript', 'CSS', 'HTML', 'React', 'Jest'], 'Luiz');
-// console.log ('---------------------');
 
 module.exports = {
   calcArea,
