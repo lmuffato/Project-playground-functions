@@ -1,6 +1,7 @@
 // Desafio 10
 function techList(array,name) {
-let arrayWithObject=[];
+  array.sort()
+  let arrayWithObject=[];
   for(let index=0;index<array.length;index+=1){
       techonology=array[index];
      let newObject={
@@ -13,6 +14,7 @@ let arrayWithObject=[];
       return "Vazio" 
     }
   else{
+   
     return arrayWithObject;
   }
 }
