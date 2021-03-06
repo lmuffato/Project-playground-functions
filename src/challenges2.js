@@ -24,6 +24,7 @@ function indexBiggerLower(array) {
 }
 
 function checkEqual(array) {
+  let result = false;
   for (let index = 0; index < array.length; index += 1) {
     let isEqual = 0;
     for (let index1 = 0; index1 < array.length; index1 += 1) {
@@ -31,21 +32,15 @@ function checkEqual(array) {
         isEqual += 1;
       }
       if (isEqual >= 3) {
-        return true;
+        result = true;
       }
     }
   }
-  return false;
+  return result;
 }
 
-// Desafio 11
-function generatePhoneNumber(array) {
+function createNumber(array) {
   let result = '';
-  if (array.length !== 11) {
-    return 'Array com tamanho incorreto.';
-  } if ((indexBiggerLower(array)) === true || (checkEqual(array)) === true) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  }
   for (let index = 0; index < array.length; index += 1) {
     if (index === 0) {
       result += '(';
@@ -57,6 +52,18 @@ function generatePhoneNumber(array) {
     }
     result += `${array[index]}`;
   }
+  return result;
+}
+
+// Desafio 11
+function generatePhoneNumber(array) {
+  let result = '';
+  if (array.length !== 11) return 'Array com tamanho incorreto.';
+
+  if (indexBiggerLower(array) === true || checkEqual(array) === true) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  result += createNumber(array);
   return result;
 }
 
@@ -80,11 +87,23 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return isTriangle;
 }
-console.log(triangleCheck(13, 32, 12));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let agua = '';
+  let filterString = /\d+/g;
+  let strindFiltred = string.match(filterString);
+  let resultFinal = 0;
+  for (let index = 0; index < strindFiltred.length; index += 1) {
+    resultFinal += parseInt(strindFiltred[index], 10);
+  }
+  let waterDrink = ' copo de água';
+  if (resultFinal > 1) {
+    waterDrink = ' copos de água';
+  }
+  resultFinal = `${resultFinal}`;
+  agua += resultFinal + waterDrink;
+  return agua;
 }
 
 module.exports = {
