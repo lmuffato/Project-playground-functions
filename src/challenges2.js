@@ -64,18 +64,23 @@ function triangleCheck(lineA, lineB, lineC) {
   let islineBValid = verifyTriangleLine(lineB, lineA, lineC);
   let islineCValid = verifyTriangleLine(lineC, lineA, lineB);
 
-  if (islineAValid === islineBValid === islineCValid) {
+  if (islineAValid === islineBValid === islineCValid === true) {
     return true;
   }
 
   return false;
 }
 
-console.log(triangleCheck(10, 14, 8));
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  string = string.split(' ');
+  let arrayOfDrinks = string.filter((element) => element > 0).map((value) => Number(value));
+  let numberOfDrinks = arrayOfDrinks.reduce((currentValue, total) => currentValue + total);
+
+  if (numberOfDrinks === 1) {
+    return `${numberOfDrinks} copo de água`;
+  }
+  return `${numberOfDrinks} copos de água`;
 }
 
 module.exports = {
