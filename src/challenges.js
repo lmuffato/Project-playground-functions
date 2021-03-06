@@ -60,9 +60,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat2Jerry = Math.abs(mouse - cat2);
   let result = '';
   if (cat1Tom > cat2Jerry) {
-    result = 'cat1';
-  } else if (cat2Jerry > cat1Tom) {
     result = 'cat2';
+  } else if (cat1Tom < cat2Jerry) {
+    result = 'cat1';
   } else {
     result = 'os gatos trombam e o rato foge';
   }
