@@ -26,13 +26,13 @@ function verifyArrayIndex(arrayNumbers) {
       return false;
     }
   } return true;
-};
+}
 function verifyArrayLength(arrayNumbers) {
   if (arrayNumbers.length !== 11) {
     return false;
   }
   return true;
-};
+}
 function verifyRepeatedNumber(arrayNumbers) {
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     let numberRepeat = 0;
@@ -44,7 +44,7 @@ function verifyRepeatedNumber(arrayNumbers) {
       }
     }
   } return true;
-};
+}
 function generatePhoneNumber(phoneNumber) {
   if (verifyRepeatedNumber(phoneNumber) === false) {
     return 'não é possível gerar um número de telefone com esses valores';
@@ -61,8 +61,19 @@ function generatePhoneNumber(phoneNumber) {
   return numberAdjusted;
 } generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  lineA = Math.abs(lineA);
+  lineB = Math.abs(lineB);
+  lineC = Math.abs(lineC);
+  if (((lineB - lineC) < lineA && (lineB - lineC) < (lineB + lineC))) {
+    return console.log(true);
+  } if (((lineA - lineC) < lineB && (lineA - lineC) < (lineA + lineC))) {
+    return console.log(true);
+  } if (((lineA - lineB) < lineC && (lineA - lineB) < (lineA + lineB))) {
+    return console.log(true);
+  }
+  return console.log(false);
 }
 // Desafio 13
 function hydrate() {
