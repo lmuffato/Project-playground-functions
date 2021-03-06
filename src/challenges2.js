@@ -8,7 +8,7 @@ function techList(techs, name) {
   for (let index = 0; index < techs.length; index += 1) {
     techAndNameObject.push({
       tech: techs[index],
-      name
+      name,
     });
   }
   return techAndNameObject;
