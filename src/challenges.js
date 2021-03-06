@@ -20,23 +20,23 @@ function splitSentence(string) {
 function concatName(arrayStrings) {
   let lastItem = (arrayStrings.length - 1);
     return (arrayStrings[lastItem] + ', ' + arrayStrings[0]);
-} console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
+}
 
 // Desafio 5
 function footballPoints(wins, ties) {
   let vitorias = 3;
   let empates = 1;
-  return(vitorias * wins + empates * ties)
+  return (vitorias * wins + empates * ties);
 }
 
 // Desafio 6
-let repeticoes = 0
+let repeticoes = 0;
 let maiorItem = 0;
 function highestCount(values) {
   for (let index in values) {
     if (values[index] > maiorItem) {
-      maiorItem = values[index]
-    } 
+      maiorItem = values[index];
+    }
   } for (let currentNumber in values) {
     if (values[currentNumber] === maiorItem) {
       repeticoes += 1
