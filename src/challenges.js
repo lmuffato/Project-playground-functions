@@ -18,14 +18,13 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName (name = []) {
+function concatName (name) {
   // seu código aqui
-  let completeName = name[name.length - 1] + " " + name[0]
- 
+  let lastName = name[name.length - 1];
+  let completeName = lastName + ',' + name[0]; 
   return completeName
   
  }
- console.log(concatName(name = ['kaue', 'tauil', 'taue']))
 
 
  // Desafio 5
