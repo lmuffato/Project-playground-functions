@@ -55,12 +55,23 @@ function generatePhoneNumber(numbers) {
   return phoneNumber.join('');
 }
 
-console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function verifyTriangleLine(currentLine, line1, line2) {
+  return currentLine < line1 + line2 && currentLine > Math.abs(line1 - line2);
 }
+function triangleCheck(lineA, lineB, lineC) {
+  let islineAValid = verifyTriangleLine(lineA, lineB, lineC);
+  let islineBValid = verifyTriangleLine(lineB, lineA, lineC);
+  let islineCValid = verifyTriangleLine(lineC, lineA, lineB);
+
+  if (islineAValid === islineBValid === islineCValid) {
+    return true;
+  }
+
+  return false;
+}
+
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
