@@ -31,8 +31,10 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(names) {
+  let lastName = names[names.length - 1];
+  let firstName = names[0];
+  return lastName + ", " + firstName
 }
 
 // Desafio 5
