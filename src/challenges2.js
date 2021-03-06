@@ -30,19 +30,23 @@ function arrayNumericalValidation(array) {
   return true;
 }
 
+function countRepetitions(array, numberToCount) {
+  // Counts how many times the number is repeated in the array
+  let count = 0;
+  for (let number of array) {
+    if (number === numberToCount) {
+      count += 1;
+    }
+  }
+  return count;
+}
+
 function arrayRepeatValidation(array, maxRepetitions) {
-  // Checa se o array tem numeros se repetindo x vezes ou mais
+  // Retorna false se o array tem numeros se repetindo x vezes ou mais
   let result = true;
-  let numberCount = {};
-  for (let index of array) {
-    if (index in numberCount) {
-      numberCount[index] += 1;
-      if (numberCount[index] === maxRepetitions) {
-        result = false;
-        break;
-      }
-    } else {
-      numberCount[index] = 1;
+  for (let number of array) {
+    if (countRepetitions(array, number) >= maxRepetitions) {
+      result = false;
     }
   }
   return result;
@@ -62,7 +66,7 @@ function generatePhoneNumber(numberArray) {
   }
   return result;
 }
-
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 4]));
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // é necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois

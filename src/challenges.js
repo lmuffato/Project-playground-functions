@@ -37,22 +37,25 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(numberArray) {
-  // Encontrar o maior numero e guardar na variavel largestNumber
+function findLargest(numberArray) {
   let largestNumber = 0;
-  for (let i = 0; i < numberArray.length; i += 1) {
-    if (numberArray[i] > largestNumber) {
-      largestNumber = numberArray[i];
+  for (let index = 0; index < numberArray.length; index += 1) {
+    if (numberArray[index] > largestNumber) {
+      largestNumber = numberArray[index];
     }
   }
-  // Contar quantas vezes o largestNumber aparece
-  let count = 0;
-  for (let j = 0; j < numberArray.length; j += 1) {
-    if (numberArray[j] === largestNumber) {
-      count += 1;
+  return largestNumber;
+}
+
+function highestCount(numberArray) {
+  let largest = findLargest(numberArray);
+  let largestCount = 0;
+  for (let index = 0; index < numberArray.length; index += 1) {
+    if (numberArray[index] === largest) {
+      largestCount += 1;
     }
   }
-  return count;
+  return largestCount;
 }
 
 // Desafio 7
@@ -69,14 +72,24 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function checkIfDivisible(num1, num2) {
+  let result;
+  if (num1 % num2 === 0) {
+    result = true;
+  } else {
+    result = false;
+  }
+  return result;
+}
+
 function fizzBuzz(numberArray) {
   let fizzBuzzArray = [];
   for (let index = 0; index < numberArray.length; index += 1) {
-    if (numberArray[index] % 3 === 0 && numberArray[index] % 5 === 0) {
+    if (checkIfDivisible(numberArray[index], 3) && checkIfDivisible(numberArray[index], 5)) {
       fizzBuzzArray.push('fizzBuzz');
-    } else if (numberArray[index] % 3 === 0) {
+    } else if (checkIfDivisible(numberArray[index], 3)) {
       fizzBuzzArray.push('fizz');
-    } else if (numberArray[index] % 5 === 0) {
+    } else if (checkIfDivisible(numberArray[index], 5)) {
       fizzBuzzArray.push('buzz');
     } else {
       fizzBuzzArray.push('bug!');
