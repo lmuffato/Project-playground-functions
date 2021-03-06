@@ -54,11 +54,9 @@ for (index = 0; index < arrayNumbers.length; index +=1) {
     contador += 1;
   } 
 }
-return highestCount (arrayNumbers)
+return contador;
 }
 //let arrayNumbers = [0, 0, 0];
-return contador;
-
 //pesquisei o método no site "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply"
 
 // Desafio 7
@@ -74,7 +72,7 @@ function catAndMouse(mouse,cat1,cat2) {
 //console.log(catAndMouse(0,3,2))
 
 // Desafio 8
-let array = [9, 25]
+//let array = [9, 25]
 function fizzBuzz(array) {
   let result = [];
   
@@ -92,8 +90,9 @@ function fizzBuzz(array) {
     } else if (array[index] % 3 == 0 ) {
       result.push("fizz");
     } 
-} //console.log(result)
-} return fizzBuzz(array)
+} return fizzBuzz(array) 
+//console.log(result)
+} 
 
 // Desafio 9
 //let stringNumbers = 'hi there!'
@@ -119,7 +118,7 @@ function encode(stringNumbers) {
   let result = vogal.join('')
   //console.log(result)
   return result
-} return encode(stringNumbers)
+}
 
 //let vogalNumbers = 'h3 th2r2!'
 function decode(vogalNumbers) {
@@ -144,7 +143,7 @@ function decode(vogalNumbers) {
   let result = vogalArray.join('')
   // console.log(result)
   return result
-} return decode(vogalNumbers)
+}
 //pesquisei o método no site: "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/join"
 
 module.exports = {
