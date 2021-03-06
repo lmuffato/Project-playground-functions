@@ -19,7 +19,7 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(stringList) {
-  let concat = stringList[stringList.length - 1] + ' ' + stringList[0];
+  let concat = `${stringList[stringList.length - 1]}, ${stringList[0]}`;
   return concat;
 }
 
