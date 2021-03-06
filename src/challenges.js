@@ -23,8 +23,9 @@ function splitSentence(string) {
 console.log(splitSentence('foguete'));
 
 // Desafio 4
+
 function concatName(names) {
-  let first = `${names[0]}. ${names[names.length - 1]}`;
+  let first = `${names[names.length - 1]}, ${names[0]}`;
   return first;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -60,8 +61,7 @@ function catAndMouse(mouse, cat1, cat2) {
   let result = '';
   if (cat1Tom > cat2Jerry) {
     result = 'cat1';
-  }
-  else if (cat2Jerry > cat1Tom) {
+  } else if (cat2Jerry > cat1Tom) {
     result = 'cat2';
   } else {
     result = 'os gatos trombam e o rato foge';
@@ -97,6 +97,7 @@ console.log(fizzBuzz(arrayNumber));
 // Desafio 9
 function encode() {
   // seu código aqui
+
 }
 function decode() {
   // seu código aqui
