@@ -154,7 +154,7 @@ function techList(testArray, name) {
     for (let i = 0; i < testArray.length; i += 1) {
       userArray[i] = {
         tech: testArray[i],
-        userName: name,
+        name: name,
       };
     }
   }
