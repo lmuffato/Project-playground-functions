@@ -1,22 +1,21 @@
 // Desafio 10
 function techList(technologies, name) {
-
   let techs = [];
+  technologies.sort();
 
   if (technologies.length <= 0) {
     return 'vazio!';
   }
-
-  for (let index in technologies.sort()) {
+  for (let index = 0; index < technologies.length; index += 1) {
     techs.push(
       {
         tech: technologies[index],
         name: name,
       },
     );
-  }
-  return techs;
+  } return techs;
 }
+
 // desafio realizado com contriuição de alguns colegas (nilson/mauricio)
 
 // Desafio 11
