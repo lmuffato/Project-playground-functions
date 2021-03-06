@@ -3,10 +3,10 @@ function TechNames(techArray, nome) {
     let tecnologias = [];
     let tecOutput;
     if (techArray.length >= 1) {
-        for (let index = 0; index < techArray.length; index +=1) {
+        for (let index = 0; index < techArray.length; index += 1) {
             tecnologias[index] = {
                 tecnologia: techOrdem[index],
-                User: nome 
+                User: nome
             }
         }
         tecOutput = tecnologias;

@@ -1,6 +1,6 @@
 function FizzBuzz(arrayNumb) {
     let numb = [];
-    for (i = 0; i < arrayNumb.length; i+=1) {
+    for (i = 0; i < arrayNumb.length; i += 1) {
         if (arrayNumb[i] % 3 == 0 && arrayNumb[i] % 5 == 0) {
             numb.push('fizzBuzz');
         } else if (arrayNumb[i] % 3 == 0 && arrayNumb[i] % 5 !== 0) {

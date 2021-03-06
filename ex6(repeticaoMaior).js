@@ -12,15 +12,3 @@ function highestCount(arrayNumbers) {
     return contaRepeticao;
 }
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-
-/* function maiorPalavra(string) {
-    let maiorPalavra = string[0];
-    for (let indice in string) {
-      if (maiorPalavra.length < string[indice].length) {
-        maiorPalavra = string[indice];
-      }
-    }
-    return maiorPalavra;
-  }
-  
-  console.log(maiorPalavra(['José', 'Lucas', 'Tibúrcio', 'Fernanda', 'Cairo', 'Joana'])); */
