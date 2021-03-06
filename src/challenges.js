@@ -19,8 +19,9 @@ function splitSentence(string_1) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(myArray) {
+  
+  return myArray[myArray.length-1] + ' ' + myArray[0];
 }
 
 // Desafio 5
@@ -51,6 +52,9 @@ function decode() {
   // seu código aqui
 }
 
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+
+ 
 module.exports = {
   calcArea,
   catAndMouse,
