@@ -27,7 +27,9 @@ function techList(paramTech, paramNome) {
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
-}
+} 
+
+generatePhoneNumber();
 
 // Desafio 12
 function triangleCheck() {
