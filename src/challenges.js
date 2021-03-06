@@ -17,40 +17,31 @@ function compareTrue(val1, val2) {
   return(console.log(res));
 
 }
-console.log ('Desafio 1: ')
-compareTrue(true, true);
-console.log ('---------------------');
 
 // Desafio 2
 function calcArea(base, height) {
   return console.log(((base * height) / 2));
 }
 
-console.log('Desafio 2: ')
-calcArea(3,4);
-console.log ('---------------------');
-
 // Desafio 3
-function splitSentence(strings) {
+function splitSentence(frase) {
 
-  let armazenaPalavras = [];
-  let palavra = [];
-  strings+=' ';
+  let str = '';
+  str = frase;
+  str += ' ';
+  let letra = [];
+  let armazenaPalavra = [];
 
-  for (let index in strings) {    
-    if (strings[index] !== ' ') {
-      armazenaPalavras += strings[index];
+  for (let index=0; index<str.length; index++){
+    if (str[index] != ' '){
+      letra += str[index];
     } else {
-      palavra.push(armazenaPalavras);
-      armazenaPalavras = [];
-    }
+      armazenaPalavra.push(letra);
+      letra = [];
+    }    
   }
-  return (console.log(palavra));
+  return (console.log(armazenaPalavra));
 }
-
-console.log('Desafio 3: ')
-splitSentence('Luiz Felipe Rodrigues Araujo')
-console.log ('---------------------');
 
 // Desafio 4
 function concatName(paramNomes) {
@@ -70,9 +61,9 @@ function concatName(paramNomes) {
   return console.log(fullName);
 }
 
-console.log('Desafio 4: ');
-concatName('Luiz Felipe')
-console.log ('---------------------');
+// console.log('Desafio 4: ');
+// concatName('Luiz Felipe')
+// console.log ('---------------------');
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -82,9 +73,9 @@ function footballPoints(wins, ties) {
   return (console.log(sum));
 }
 
-console.log('Desafio 5: ')
-footballPoints(4,9);
-console.log ('---------------------');
+// console.log('Desafio 5: ')
+// footballPoints(4,9);
+// console.log ('---------------------');
 
 // Desafio 6
 function highestCount(numeros) {
@@ -107,9 +98,9 @@ function highestCount(numeros) {
   return console.log(cont);
 }
 
-console.log('Desafio 6: ')
-highestCount(9);
-console.log ('---------------------');
+// console.log('Desafio 6: ')
+// highestCount(9);
+// console.log ('---------------------');
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -126,9 +117,9 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-console.log('Desafio 7: ')
-catAndMouse(0,3,4);
-console.log ('---------------------');
+// console.log('Desafio 7: ')
+// catAndMouse(0,3,4);
+// console.log ('---------------------');
 
 
 // Desafio 8
@@ -151,9 +142,9 @@ function fizzBuzz(fizzBuzzParam) {
   return console.log(symbols);
 }
 
-console.log('Desafio 8: ');
-fizzBuzz(23)
-console.log ('---------------------');
+// console.log('Desafio 8: ');
+// fizzBuzz(23)
+// console.log ('---------------------');
 
 // Desafio 9
 function encode(frase) {
@@ -176,8 +167,8 @@ function encode(frase) {
   }  return console.log(newPhrase);
 }
 
-console.log('Desafio 9: ')
-encode('Hi There');
+// console.log('Desafio 9: ')
+// encode('Hi There');
 
 function decode(frase) {
   let encodingPhrase = frase;
@@ -199,7 +190,7 @@ function decode(frase) {
   }  return console.log(newPhrase);
 }
 
-decode('H2ll4');
+// decode('H2ll4');
 
 function tecnologies(paramTech, paramNome) {
 
@@ -226,9 +217,9 @@ function tecnologies(paramTech, paramNome) {
     }
   } 
   
-console.log('Desafio 10: ');
-tecnologies(['Javascript', 'CSS', 'HTML', 'React', 'Jest'], 'Luiz');
-console.log ('---------------------');
+// console.log('Desafio 10: ');
+// tecnologies(['Javascript', 'CSS', 'HTML', 'React', 'Jest'], 'Luiz');
+// console.log ('---------------------');
 
 module.exports = {
   calcArea,
