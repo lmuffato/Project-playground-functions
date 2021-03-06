@@ -148,11 +148,15 @@ function decode(word) {
 function techList(testArray, name) {
   testArray.sort();
   let userArray = [];
-  for (let i = 0; i < testArray.length; i += 1) {
-    userArray[i] = {
-      tech: testArray[i],
-      userName: name,
-    };
+  if (testArray.length === 0) {
+    userArray = 'Vazio!';
+  } else {
+    for (let i = 0; i < testArray.length; i += 1) {
+      userArray[i] = {
+        tech: testArray[i],
+        userName: name,
+      };
+    }
   }
   return userArray;
 }
