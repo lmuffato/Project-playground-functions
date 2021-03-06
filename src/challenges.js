@@ -6,8 +6,6 @@ function compareTrue(value1, value2) {
   }
   return false;
 }
-let result = compareTrue(true, true);
-console.log(result);
 
 // Desafio 2
 function calcArea(base, heigth) {
@@ -58,15 +56,15 @@ function catAndMouse(Mouse, cat1, cat2) {
   // seu código aqui
   let distanciaCat1 = Mouse - cat1;
   let distanciaCat2 = Mouse - cat2;
+  let resultado;
   if (distanciaCat1 === distanciaCat2) {
-    return 'os gatos trombam e o rato foge';
-  };
-  else if (distanciaCat1 < distanciaCat2) {
-    return "cat1"
+    resultado = 'os gatos trombam e o rato foge';
+  } else if (distanciaCat1 < distanciaCat2) {
+    resultado = 'cat1';
+  } else {
+    resultado = 'cat2';
   }
-  else{
-    return "cat2"
-  }
+  return resultado;
 }
 
 // Desafio 8
