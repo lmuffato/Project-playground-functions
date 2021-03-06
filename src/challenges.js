@@ -123,7 +123,7 @@ function fizzBuzz(arrayBuzz) {
 }
 
 // Desafio 9
-// Exercicio corrigido com a ajuda do código do Jodiel Beatriz Barbosa e com as dicas de Orlando Flores, Rafael Medeiros e Murilo Gonçalves
+// Exercicio corrigido com a ajuda do código do Jodiel, Beatriz Barbosa e com as dicas de Orlando Flores, Rafael Medeiros e Murilo Gonçalves
 // Link: https://trybecourse.slack.com/archives/C01L16B9XC7/p1614777217479100
 function encode(string) {
   // seu código aqui
@@ -150,7 +150,7 @@ function decode(string2) {
   // seu código aqui
   let newphrases2 = string2.split('');
   for (let index = 0; index < string2.length; index += 1) {
-    if (string2[index] == 1) {
+    if (string2[index] === '1') {
       newphrases2[index] = 'a';
     } else if (string2[index] === '2') {
       newphrases2[index] = 'e';
@@ -164,11 +164,8 @@ function decode(string2) {
       newphrases2[index] = string2[index];
     }
   }
-  return console.log(newphrases2.join(''));
+  return newphrases2.join('');
 }
-
-decode('h3 th2r2!');
-
 
 module.exports = {
   calcArea,
