@@ -19,8 +19,9 @@ function splitSentence(frase, fraseSplit) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(listaDeNomes, ultimoPrimeiroNome) {
+  let ultimoPrimeiroNome = listaDeNomes[listaDeNomes.length -1] + ' ' + listaDeNomes[0];
+  return listaDeNomes;
 }
 
 // Desafio 5
