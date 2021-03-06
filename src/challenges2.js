@@ -49,24 +49,23 @@ function verifyRepeatedNumber(arrayNumbers) {
 }
 function generatePhoneNumber(phoneNumber) {
   if (verifyRepeatedNumber(phoneNumber) === false) {
-    return console.log('não é possível gerar um número de telefone com esses valores')
+    return 'não é possível gerar um número de telefone com esses valores'
   } if (verifyArrayLength(phoneNumber) === false) {
-    return console.log('Array com tamanho incorreto.')
+    return 'Array com tamanho incorreto.'
   } if (verifyArrayIndex(phoneNumber) === false) {
-    return console.log('não é possível gerar um número de telefone com esses valores')
+    return 'não é possível gerar um número de telefone com esses valores'
   }
   allNumber = phoneNumber.join('');
   firstPart = allNumber.slice(0, 2);
   secondPart = allNumber.slice(2, 7);
   thirdPart = allNumber.slice(7, 11);
   numberAdjusted = `(${firstPart}) ${secondPart}-${thirdPart}`;
-  return console.log(numberAdjusted)
+  return numberAdjusted
 } generatePhoneNumber([2, 4, 5, 6, 5, 8, 9, 3, 4, 8, 1])
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
 }
-
 // Desafio 13
 function hydrate() {
   // seu código aqui
