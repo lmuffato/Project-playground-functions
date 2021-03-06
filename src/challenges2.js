@@ -15,37 +15,41 @@ function techList(techNames, name) {
 techList([], 'Alexandre');
 // Desafio 11
 // seu código aqui
-function generatePhoneNumber(phoneNumber) {
+
+
+function verifyRepeatNumber(phoneNumber) {
   for (let index = 0; index < phoneNumber.length; index += 1) {
     let numberRepeat = 0;
     for (let secondIndex = 0; secondIndex < phoneNumber.length; secondIndex += 1) {
       if ((phoneNumber[index] === phoneNumber[secondIndex])) {
         numberRepeat += 1;
-      } if (numberRepeat >= 3) {
+      } else if (phoneNumber[index] < 0) {
+        return console.log('Array com tamanho incorreto.');
+      } else if (phoneNumber[index] > 11) {
+        return console.log('Array com tamanho incorreto2.');
+      } if ((numberRepeat >= 3)) {
         return console.log('não é possível gerar um número de telefone com esses valores');
-      } if (phoneNumber[index] < 0) {
-        return 'Array com tamanho incorreto.';
-      } else if (phoneNumber[index] > 0) {
-        return 'Array com tamanho incorreto.';
       }
     }
-  }
+  } return verifyRepeatNumber
+}
+function generatePhoneNumber() {
   let firstPart = '';
   let secondPart = '';
   let thirdPart = '';
   let numberAdjusted = 0
   for (let thirdIndex = 0; thirdIndex < phoneNumber.length; thirdIndex += 1) {
     if (phoneNumber.length != 11) {
-      return 'não é possível gerar um número de telefone com esses valores';
+      return console.log('não é possível gerar um número de telefone com esses valores');
     } else {
       let allNumber = phoneNumber.join('');
       firstPart = allNumber.slice(0, 2);
       secondPart = allNumber.slice(2, 7);
       thirdPart = allNumber.slice(7, 11);
       numberAdjusted = `(${firstPart}) ${secondPart}-${thirdPart}`;
-    } return numberAdjusted
-  }
-} generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 77, 7])
+    }
+  } return console.log(numberAdjusted)
+} verifyRepeatNumber([1, 2, 3, 4, 5, 6, 7, 8, 8, 9,0])
 
 // Desafio 12
 function triangleCheck() {
