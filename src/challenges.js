@@ -76,7 +76,7 @@ function fizzBuzz(arrayNum) {
     } else if (arrayNum[index] % 3 === 0) {
       result.push('fizz');
     } else if (arrayNum[index] % 5 === 0) {
-      result.push('Buzz');
+      result.push('buzz');
     } else {
       result.push('bug!');
     }
