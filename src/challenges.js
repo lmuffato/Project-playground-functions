@@ -49,8 +49,16 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(listNumbers) {
-  let indexHighestValue = 0;
   let contRepete = 0;
+
+  for (let indexTwo = 0; indexTwo < listNumbers.length; indexTwo += 1) {
+    if (listNumbers[indexTwo] === bigValue(listNumbers)) {
+      contRepete += 1;
+    }
+  }
+  return contRepete;
+}
+function bigValue(listNumbers) {
   let valueHighest = listNumbers[0];
 
   for (let indexOne = 0; indexOne < listNumbers.length; indexOne += 1) {
@@ -58,14 +66,7 @@ function highestCount(listNumbers) {
       valueHighest = listNumbers[indexOne];
     }
   }
-
-  for (let indexTwo = 0; indexTwo < listNumbers.length; indexTwo += 1) {
-    if (listNumbers[indexTwo] === valueHighest) {
-      contRepete += 1;
-    }
-  }
-
-  return contRepete;
+  return valueHighest
 }
 
 // Desafio 7
@@ -86,9 +87,8 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(listNumbers) {
+function fizzBuzz(listNumbers) { // Porque isso nao passa no lint
   let listArrayString = [];
-
   for (let index in listNumbers) {
     if (listNumbers[index] % 3 === 0 && listNumbers[index] % 5 === 0) {
       listArrayString.push('fizzBuzz');
@@ -100,7 +100,6 @@ function fizzBuzz(listNumbers) {
       listArrayString.push('bug!');
     }
   }
-
   return listArrayString;
 }
 
@@ -108,18 +107,12 @@ function fizzBuzz(listNumbers) {
 function encode(codStringCodif) {
   let arrayCodif = codStringCodif.split('');
 
-  for (let index in arrayCodif) {
-    if (arrayCodif[index] === 'a') {
-      arrayCodif[index] = 1;
-    } else if (arrayCodif[index] === 'e') {
-      arrayCodif[index] = 2;
-    } else if (arrayCodif[index] === 'i') {
-      arrayCodif[index] = 3;
-    } else if (arrayCodif[index] === 'o') {
-      arrayCodif[index] = 4;
-    } else if (arrayCodif[index] === 'u') {
-      arrayCodif[index] = 5;
-    }
+  for (let index = 0; index < arrayCodif.length; index += 1) {
+    for (let indexObj in codString) {
+      if (arrayCodif[index] === codString[indexObj]) {
+        arrayCodif[index] = indexObj
+      }
+    } 
   }
 
   return arrayCodif.join('');
@@ -127,22 +120,25 @@ function encode(codStringCodif) {
 function decode(codStringDecodif) {
   let arrayDecodif = codStringDecodif.split('');
 
-  for (let index in arrayDecodif) {
-    if (arrayDecodif[index] === '1') {
-      arrayDecodif[index] = 'a';
-    } else if (arrayDecodif[index] === '2') {
-      arrayDecodif[index] = 'e';
-    } else if (arrayDecodif[index] === '3') {
-      arrayDecodif[index] = 'i';
-    } else if (arrayDecodif[index] === '4') {
-      arrayDecodif[index] = 'o';
-    } else if (arrayDecodif[index] === '5') {
-      arrayDecodif[index] = 'u';
+  for (let indexArray = 0; indexArray < arrayDecodif.length; indexArray += 1 ) {
+    for (let indexObj in codString) {
+      if (arrayDecodif[indexArray] === indexObj) {
+        arrayDecodif[indexArray] = codString[indexObj]
+      }
     }
   }
 
   return arrayDecodif.join('');
 }
+const codString = {
+  1: 'a',
+  2: 'e',
+  3: 'i',
+  4: '0',
+  5: 'u'
+}
+console.log(decode("h3 th2r2!"))
+
 
 module.exports = {
   calcArea,
