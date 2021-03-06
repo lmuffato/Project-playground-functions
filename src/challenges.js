@@ -81,7 +81,7 @@ function fizzBuzz(array) {
 // Desafio 9 - teste sem o for in
 function encode(string) {
   let stringToEncode = string.split(''); // separa a string que será codificada
-  for (let index = 0; index < string.length; index += 1){
+  for (let index = 0; index < string.length; index += 1) {
     if (string[index] === 'a') {
       stringToEncode = '1';
     } else if (string[index] === 'e') {
@@ -96,12 +96,12 @@ function encode(string) {
       stringToEncode = string[index]; // mantem as consoantes * importante
     }
   }
- return stringToEncode.concat(stringToEncode); // junta a array em string
+  return stringToEncode.concat(stringToEncode); // junta a array em string
 }
 
 function decode(string) {
   let stringToEncode = string.split(''); // separa a string que será codificada
-  for (let index = 0; index < string.length; index += 1){
+  for (let index = 0; index < string.length; index += 1) {
     if (string[index] === '1') {
       stringToEncode = 'a';
     } else if (string[index] === '2') {
@@ -116,9 +116,8 @@ function decode(string) {
       stringToEncode = string[index]; // mantem as consoantes * importante
     }
   }
- return stringToEncode.concat(stringToEncode); // junta a array em string
+  return stringToEncode.concat(stringToEncode); // junta a array em string
 }
-
 
 module.exports = {
   calcArea,

@@ -6,19 +6,18 @@ function techList(array, name) {
     techlist.push(
       {
         tech: array[index],
-        name
-      }
-      );
+        name,
+      },
+    );
   }
-      if (array.length === 0) {
+  if (array.length === 0) {
         return 'Vazio!'
       }
   return techlist;
-
 }
 
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
-"Lucas"));
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'],
+'Lucas'));
 
 // Desafio 11
 function generatePhoneNumber() {
