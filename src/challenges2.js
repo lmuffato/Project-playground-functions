@@ -5,7 +5,9 @@ function techList(techName, humanName) {
       }
       let list = [];
       for (let i = 0; i < techName.length; i += 1){
-        list.push({name: humanName, tech: techName[i]});
+        list.push({
+          tech: techName[i], name: humanName
+        });
         }
       return list;
     }
@@ -25,7 +27,7 @@ function hydrate() {
   // seu código aqui
 }
 
-console.log(techList(['react', 'jest', 'HTML', 'CSS', 'javascript'], 'Matheus'));
+console.log(techList(['react', 'jest', 'HTML', 'CSS', 'javascript'], 'lucas'));
 
 module.exports = {
   generatePhoneNumber,
