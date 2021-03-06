@@ -29,7 +29,7 @@ function splitSentence(phrase) {
 function concatName(arr) {
   let firstName = arr[0];
   let lastName = arr[arr.length - 1];
-  let names = lastName + ', ' + firstName;
+  let names = `${lastName}, ${firstName}`;
   return names;
 }
 
@@ -92,19 +92,95 @@ function catAndMouse(mouse, cat1, cat2) {
   return message;
 }
 
-console.log(catAndMouse(-10, -7, -8));
-console.log(catAndMouse(-4, 2, -16));
-console.log(catAndMouse(0, -6, -6));
-console.log(catAndMouse(-4, 2, -2));
-
 // Desafio 8
 function dividers(number) {
+  let dividersArray = [];
   for (let index = 1; index <= number; index += 1) {
+    if (number % index === 0) {
+      dividersArray.push(index);
+    }
+  }
 
+  return dividersArray;
+}
+
+function checkFizz(hasDivider3) {
+  let isFizz = false;
+  if (hasDivider3) {
+    isFizz = true;
+  }
+
+  return isFizz;
+}
+
+function checkBuzz(hasDivider5) {
+  let isBuzz = false;
+  if (hasDivider5) {
+    isBuzz = true;
+  }
+
+  return isBuzz;
+}
+
+function checkDivider3(dividersArray) {
+  let divider3 = false;
+
+  for (let index = 0; index < dividersArray.length; index += 1) {
+    if (dividersArray[index] === 3) {
+      divider3 = true;
+    }
+  }
+
+  return divider3;
+}
+
+function checkDivider5(dividersArray) {
+  let divider5 = false;
+
+  for (let index = 0; index < dividersArray.length; index += 1) {
+    if (dividersArray[index] === 5) {
+      divider5 = true;
+    }
+  }
+
+  return divider5;
+}
+
+function checkBug(hasDivider3, hasDivider5) {
+  let isBug = false;
+
+  if (!hasDivider3 && !hasDivider5) {
+    isBug = true;
+  }
+
+  return isBug;
+}
+
+function fizzBuzzResult(dividersArray) {
+  switch (true) {
+  case checkBug(checkDivider3(dividersArray), checkDivider5(dividersArray)):
+    return 'bug!';
+  case checkFizz(checkDivider3(dividersArray) && checkDivider5(dividersArray)):
+    return 'fizzBuzz';
+  case checkBuzz(checkDivider5(dividersArray)):
+    return 'buzz';
+  case checkFizz(checkDivider3(dividersArray)):
+    return 'fizz';
   }
 }
-function fizzBuzz() {
-  // seu código aqui
+
+function fizzBuzz(numbersArray) {
+  let fizzBuzzArray = [];
+  let word = '';
+
+  for (let index = 0; index < numbersArray.length; index += 1) {
+    let dividersArray = dividers(numbersArray[index]);
+
+    word = fizzBuzzResult(dividersArray);
+    fizzBuzzArray.push(word);
+  }
+
+  return fizzBuzzArray;
 }
 
 // Desafio 9
