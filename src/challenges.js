@@ -78,45 +78,13 @@ function fizzBuzz(array) {
   return arrayResult;
 }
 
-// Desafio 9 - teste sem o for in
+// Desafio 9 - tentativa com replace
 function encode(string) {
-  let stringToEncode = string.split(''); // separa a string que será codificada
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === 'a') {
-      stringToEncode = '1';
-    } else if (string[index] === 'e') {
-      stringToEncode = '2';
-    } else if (string[index] === 'i') {
-      stringToEncode = '3';
-    } else if (string[index] === 'o') {
-      stringToEncode = '4';
-    } else if (string[index] === 'u') {
-      stringToEncode = '5';
-    } else {
-      stringToEncode = string[index]; // mantem as consoantes * importante
-    }
-  }
-  return stringToEncode.concat(stringToEncode); // junta a array em string
+  return string.replaceAll('a', 1).replaceAll('e', 2).replaceAll('i', 3).replaceAll('o', 4).replaceAll('u', 5);
 }
 
 function decode(string) {
-  let stringToEncode = string.split(''); // separa a string que será codificada
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === '1') {
-      stringToEncode = 'a';
-    } else if (string[index] === '2') {
-      stringToEncode = 'e';
-    } else if (string[index] === '3') {
-      stringToEncode = 'i';
-    } else if (string[index] === '4') {
-      stringToEncode = 'o';
-    } else if (string[index] === '5') {
-      stringToEncode = 'u';
-    } else {
-      stringToEncode = string[index]; // mantem as consoantes * importante
-    }
-  }
-  return stringToEncode.concat(stringToEncode); // junta a array em string
+  return string.replaceAll(1, 'a').replaceAll(2, 'e').replaceAll(3, 'i').replaceAll(4, 'o').replaceAll(5, 'u');
 }
 
 module.exports = {
