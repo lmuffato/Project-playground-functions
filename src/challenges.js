@@ -46,28 +46,28 @@ function highestCount(array) {
 }
 
 // Desafio 7
-// function catAndMouse(mouse, cat1, cat2) {
-//   if ((cat2 - mouse)  (cat1 - mouse) === 3) {
-//     return 'cat2';
-//   } else if ((cat1 - mouse) === 6 && (cat2 - mouse) === 12) {
-//     return 'cat1';
-//   } else if (cat1 === cat2) {
-//     return 'os gatos trombam e o rato foge';
-//   }
-// }
+function catAndMouse(mouse, cat1, cat2) {
+  if ((cat1 - mouse) < (cat2 - mouse)) {
+    return 'cat1';
+  } if ((cat1 - mouse) > (cat2 - mouse)) {
+    return 'cat2';
+  } if ((cat1 - mouse) === (cat2 - mouse)) {
+    return 'os gatos trombam e o rato foge';
+  }
+}
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
   let result = [];
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
-        result.push("fizzBuzz");
+      result.push('fizzBuzz');
     } else if (arrayNumbers[index] % 3 === 0) {
-        result.push("fizz");
+      result.push('fizz');
     } else if (arrayNumbers[index] % 5 === 0) {
-        result.push("buzz");
+      result.push('buzz');
     } else {
-        result.push("bug!");
+      result.push('bug!');
     }
   }
   return result;
@@ -75,11 +75,13 @@ function fizzBuzz(arrayNumbers) {
 
 // Desafio 9
 function encode(name) {
-  let newname = name.replaceAll('a', 1).replaceAll('e', 2).replaceAll('i', 3).replaceAll('o', 4).replaceAll('u', 5);
+  let newname = name.replaceAll('a', 1).replaceAll('e', 2).replaceAll('i', 3).replaceAll('o', 4)
+    .replaceAll('u', 5);
   return newname;
 }
 function decode(name) {
-  let newname = name.replaceAll(1, 'a').replaceAll(2, 'e').replaceAll(3, 'i').replaceAll(4, 'o').replaceAll(5, 'u');
+  let newname = name.replaceAll(1, 'a').replaceAll(2, 'e').replaceAll(3, 'i').replaceAll(4, 'o')
+    .replaceAll(5, 'u');
   return newname;
 }
 // consultation made on the website : https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace
