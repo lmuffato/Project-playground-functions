@@ -2,17 +2,20 @@
 function techList(arrayIn, name) {
   let exitArray = [];
   let obj = {};
-  for (let key in arrayIn) {
-    obj = {
-      'tech': arrayIn[key],
-      'name': name
-    };
-    exitArray.push(obj);
+  if (arrayIn.length === 0) {
+    return console.log('Vazio!');
+  } else {
+    for (let key in arrayIn) {
+      obj = {
+        'tech': arrayIn[key],
+        'name': name
+      };
+      exitArray.push(obj);
+    }
+    return console.log(exitArray);
   }
-  return console.log(exitArray);
 }
-techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas");
-
+console.log(techList([],'lucas'));
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
