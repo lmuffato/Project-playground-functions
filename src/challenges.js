@@ -17,23 +17,22 @@ function calcArea(base, height) {
 
 // Desafio 3
 let splited = [];
-let word = "";
+let word = '';
 function splitSentence(frase) {
-  for (let split = 0; split < frase.length; split += 1) {
-    word += frase[split];
-    if (frase[split] == " ") {
-      frase[split] = "";
+  for (let index = 0; index < frase.length; index += 1) {
+    word += frase[index];
+    if (frase[index] === ' ') {
+      frase[index] = '';
       splited.push(word);
-      word = "";
+      word = '';
     }
-    //word += frase[split];
   }
 
-  if(word.length > 0) {
+  if (word.length > 0) {
     splited.push(word);
   }
 
-  console.log(splited);
+  return splited;
 }
 
 splitSentence('vamo que vamo');
