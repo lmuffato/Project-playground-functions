@@ -44,17 +44,17 @@ function highestCount(conjuntoNumeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let qualGato = '';
-  if (cat1 < cat2) {
-    qualGato = 'cat1';
+  let distanciaCat1 = cat1 - mouse;
+  let distanciaCat2 = cat2 - mouse;
+  if (distanciaCat1 < distanciaCat2) {
+    return 'cat1';
   }
-  if (cat2 < cat1) {
-    qualGato = 'cat2';
+  if (distanciaCat2 < distanciaCat1) {
+    return 'cat2';
   }
-  if (cat2 === cat1) {
-    qualGato = 'os gatos trombam e o rato foge';
+  if (distanciaCat1 === distanciaCat2) {
+    return 'os gatos trombam e o rato foge';
   }
-  return qualGato;
 }
 
 // Desafio 8
