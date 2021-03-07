@@ -129,45 +129,6 @@ function decode(string) {
   return decodeString;
 }
 
-// Desafio 10
-// Colaborações de Luan Ramalho, Anderson Nascimento e Rodrigo Queiroz. Todos da turma 10, tentaram me ajudar a entender o motivo do desafio não passar no Evaluator e dedicaram horas tentando compreender o erro do meu código.
-function techList(tech, name) {
-  if (tech.length === 0) {
-    return 'Vazio!';
-  }
-
-  let technologies = [];
-  let orderedTechnologies = tech.sort();
-
-  for (let index = 0; index < orderedTechnologies.length; index += 1) {
-    technologies.push(
-      {
-        tech: orderedTechnologies[index],
-        name,
-      },
-    );
-  }
-  return technologies;
-}
-
-// Desafio 11
-function generatePhoneNumber(phoneNumberArray) )
-  if (phoneNumberArray !== 11) {
-    return "Array com tamanho incorreto."
-  }
-  
-}
-
-// Desafio 12
-function triangleCheck() {
-  // código
-}
-
-// Desafio 13
-function hydrate() {
-  // código
-}
-
 module.exports = {
   calcArea,
   catAndMouse,
@@ -179,8 +140,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-  generatePhoneNumber,
-  techList,
-  hydrate,
-  triangleCheck,
 };
