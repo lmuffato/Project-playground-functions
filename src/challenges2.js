@@ -1,11 +1,12 @@
 // Desafio 10
 function techList(array, name) {
   let retorno = [];
-  let objeto = {
-    tech: '',
-    name: name,
-  };
+  let arraySort = array.sort();
   for (let index in array) {
+    let objeto = {
+      tech: '',
+      name: name,
+    };
     objeto.tech = array[index];
     retorno[index] = objeto;
   }
@@ -53,7 +54,7 @@ function triangleCheck(lineA, lineB, lineC) {
   return false;
 }
 
-// Desafio 13
+// Desafio 13  //faltaaaaaa a questão 13
 function hydrate(string) {
   let values = string.match(/\d+/gm);
   let arrarNumbers = [];
@@ -64,6 +65,9 @@ function hydrate(string) {
   for (let j = 0; j < values.length; j += 1) {
     sum += arrarNumbers[j];
   }
+  if (sum = 1) {
+    return sum + ' copo de água';
+  };
   return sum + ' copos de água';
 }
 
@@ -76,4 +80,4 @@ module.exports = {
 // console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"));
 // console.log(generatePhoneNumber([3,1,9,8,5,3,0,1,9,5,8]));
 // console.log(triangleCheck(1,2,3));
-console.log(hydrate('1 cerveja'));
+console.log(hydrate('3 cerveja'));
