@@ -16,9 +16,11 @@ function splitSentence(phrase) {
 
 function concatName(arrayPhrase) {
 
-let phraseDisposition =  arrayPhrase[arrayPhrase.length - 1] + ", " + arrayPhrase[0];
+let phraseDisposition = [];
 
-return phraseDisposition
+phraseDisposition = `${arrayPhrase[arrayPhrase.length - 1]},${arrayPhrase[0]}`;
+
+return phraseDisposition;
 
 }
 
