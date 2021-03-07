@@ -23,15 +23,19 @@ function techList(array, name) {
 }
 
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Giovanni'));
-// Desafio 1
+// Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA + lineB > lineC && lineB + lineC > lineA && lineC + lineA > lineB) {
+    return true;
+  }
+  return false;
 }
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
