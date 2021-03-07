@@ -63,11 +63,9 @@ function fizzBuzz(sequenciaNumeros) {
   for (let index = 0; index < sequenciaNumeros.length; index += 1) {
     if (sequenciaNumeros[index] % 3 === 0 && sequenciaNumeros[index] % 5 === 0) {
       sequenciaStrings.push('fizzBuzz');
-    }
-    if (sequenciaNumeros[index] % 3 === 0) {
+    } else if (sequenciaNumeros[index] % 3 === 0) {
       sequenciaStrings.push('fizz');
-    }
-    if (sequenciaNumeros[index] % 5 === 0) {
+    } else if (sequenciaNumeros[index] % 5 === 0) {
       sequenciaStrings.push('buzz');
     } else {
       sequenciaStrings.push('bug!');
