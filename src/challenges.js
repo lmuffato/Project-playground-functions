@@ -129,6 +129,26 @@ function decode(string) {
   return decodeString;
 }
 
+// Desafio 10
+function technologyList(array, name) {
+  let technologies = [];
+  let orderedTechnologies = array.sort();
+
+  if (orderedTechnologies.length === 0) {
+    return 'Vazio!';
+  }
+
+  for (let index = 0; index < orderedTechnologies.length; index += 1) {
+    technologies.push(
+      {
+        tech: orderedTechnologies[index],
+        name,
+      },
+    );
+  }
+  return technologies;
+}
+
 module.exports = {
   calcArea,
   catAndMouse,
@@ -140,4 +160,5 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
+  technologyList,
 };
