@@ -95,11 +95,43 @@ function fizzBuzz(arrayFizz) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+//Com auxílio do Lucas Pedroso pude entender como o regex é poderoso para fazer buscas automatizadas;
+let code = {
+  a: 1,
+  e: 2,
+  i: 3,
+  o: 4,
+  u: 5
 }
-function decode() {
-  // seu código aqui
+
+function encode(string) {
+let phrase = string;
+
+for (let key in code) {
+  // console.log(key);
+  let regex = `${key}`;
+  phrase = phrase.replace(RegExp(regex, 'g'), code[key]);
+}
+return phrase;
+} 
+
+let code2 = {
+a: 1,
+e: 2,
+i: 3,
+o: 4,
+u: 5
+}
+
+function decode(string) {
+let phrase = string;
+
+for (let key in code2) {
+  // console.log(key);
+  let regex = `${key}`;
+  phrase = phrase.replace(RegExp(code2[key], 'g'), regex);
+}
+return phrase;
 }
 
 module.exports = {
