@@ -25,17 +25,18 @@ function generatePhoneNumber(list) {
     }
     return counter;
   }
+  
   for (let index of list) {
-    if (times(list, index) >= 3 || index > 9 || index < 0) {
+    if (list.length != 11) {
+      return 'Array com tamanho incorreto.'
+    }
+    else if (times(list, index) >= 3 || index > 9 || index < 0) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
-  }
-  if (list.length != 11) {
-    return 'Array com tamanho incorreto.'
-  }
-  else {
-    return '(' + list[0] + list[1] + ')' + ' ' + list[2] + list[3] + list[4] + list[5] + list[6] + '-' + list[7] + list[8] + list[9] + list[10]  
-  }
+    else {
+      return '(' + list[0] + list[1] + ')' + ' ' + list[2] + list[3] + list[4] + list[5] + list[6] + '-' + list[7] + list[8] + list[9] + list[10]  
+    }
+  }  
 }
 console.log(generatePhoneNumber([1,2,6,8,7,9,8,3,4,5,6]))
 
