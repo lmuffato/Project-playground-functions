@@ -65,7 +65,7 @@ function numberCheckCorrect(numberArray) {
 function numberRepeater(numberArray) {
   let checkNumber = numberArray.slice().sort();
   let sameNumberTimes = 0;
-  for (let index = 0; index < (checkNumber.length); index += 1) {
+  for (let index = 0; index < checkNumber.length; index += 1) {
     if (checkNumber[index] === checkNumber[(index + 1)]) {
       sameNumberTimes += 1;
       if (sameNumberTimes === 3) {
