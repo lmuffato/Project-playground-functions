@@ -115,9 +115,9 @@ function sidesDiffCheck(lineA, lineB, lineC) {
   let itsValid = true;
 
   if (
-    lineA < differenceSidesA ||
-    lineB < differenceSidesB ||
-    lineC < differenceSidesC
+    lineA < differenceSidesA
+    || lineB < differenceSidesB
+    || lineC < differenceSidesC
   ) {
     itsValid = false;
   }
@@ -140,8 +140,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let numbers = string.replace(/[^0-9]/g, '');
+  let stringArray = numbers.split('');
+  let quantityGlassesWater = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  let glassesWater = 0;
+
+  for (let i = 0; i < stringArray.length; i += 1) {
+    for (let j = 0; j < quantityGlassesWater.length; j += 1) {
+      if (parseInt(stringArray[i], 10) === quantityGlassesWater[j]) {
+        glassesWater += quantityGlassesWater[j];
+      }
+    }
+  }
+  return glassesWater;
 }
 
 module.exports = {
