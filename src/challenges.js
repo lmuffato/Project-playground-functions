@@ -59,17 +59,17 @@ function catAndMouse(cat1, cat2, mouse) {
 let fizzOrBuzz = [];
 function fizzBuzz(divisibleNumbers) {
   for (let currentDivisible in divisibleNumbers) {
-    if (divisibleNumbers[currentDivisible] % 3 && divisibleNumbers[currentDivisible] % 5 === 0) {
-      fizzOrBuzz.push('fizzbuzz');
+    if (divisibleNumbers[currentDivisible] % 3 === 0 && divisibleNumbers[currentDivisible] % 5 === 0) {
+      fizzOrBuzz.push('fizzBuzz');
     } else if (divisibleNumbers[currentDivisible] % 3 === 0) {
       fizzOrBuzz.push('fizz');
     } else if (divisibleNumbers[currentDivisible] % 5 === 0) {
       fizzOrBuzz.push('buzz');
     } else {
-      fizzOrBuzz.push('bug');
+      fizzOrBuzz.push('bug!');
     }
   } return fizzOrBuzz;
-} 
+}
 
 // Desafio 9
 function encode(encript) {
