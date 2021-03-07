@@ -25,67 +25,73 @@ console.log(splitSentence('Go Trybe'));
 // Desafio 4
 function concatName(string) {
   let name = string;
-  name = string[(string.length - 1)] + ", " + string[0];
+  name = (`${string[string.length - 1]}, ${string[0]}`);
   return name;
 }
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
+// ou:
+// function concatName(array){
+// result = array[(array.length - 1)] + ", " + array[0];
+// return result
+
+// Concatenar String em JS:
+// https://pt.stackoverflow.com/questions/231359/qual-a-forma-correta-de-concatenar-strings-em-javascript
+// https://wesbos.com/javascript-template-strings
+
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = wins * 3 + ties;    
+  let points = (wins * 3) + (ties * 1);
   return points;
 }
 console.log(footballPoints(14, 8));
 
 // Desafio 6
-function highestCount(numbers) {
-  let higherNumber = 0;
-  for (let index in numbers) {
-  if (numbers[index] > higherNumber) {
-      higherNumber = numbers[index];
-      }
-    }
-  let numMax = 0;  
-  for (let index2 in numbers) {
-      if (higherNumber == numbers[index2]){
-      numMax = numMax + 1;
-      }
-    } 
-    return numMax;
+function highestCount() {
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));         
-// *Função para obter o maior valor https://www.youtube.com/watch?v=pkJXwPvselI
+
+function heightNumber(numbers) {
+  let height = 0;
+  for (let index in numbers) {
+    if (numbers[index] > height) {
+      height = numbers[index];
+    }
+  }
+  return height;
+}
+function countNumbers(numbers) {
+  let firstheight = heightNumber(numbers);
+  let counter = 0;
+  for (let index2 in numbers) {
+    if (firstheight === numbers[index2]) {
+      counter += 1;
+    }
+  }
+  return counter;
+}
+console.log(countNumbers([9, 1, 10, 9, 9, 2, 3, 9, 5, 7]));
+// *Função para obter o maior valor https://pt.stackoverflow.com/questions/99193/valor-em-array-com-a-maior-ocorr%C3%AAncia
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+  let distanceCat1 = Math.abs(cat1 - mouse);
+  let distanceCat2 = Math.abs(cat2 - mouse);
+  let result = '';
+  if (distanceCat1 < distanceCat2) {
+    result = 'cat1';
+  } else if (distanceCat2 < distanceCat1) {
+    result = 'cat2';
+  } else {
+    result = 'os gatos trombam e o rato foge';
+  }
+  return result;
 }
+console.log(catAndMouse(10, 2, 1));
 
 // Desafio 8
-function fizzBuzz(numbers) {
-  let result = [];
-  for (let index in numbers){
-      if (numbers[index] % 3 === 0){
-          numbers[index] = "fizz"
-      }
-  }
-  for (let index in numbers){
-    if (numbers[index] % 5 === 0){
-        numbers[index] = "buzz"
-    }
-  }
-  for (let index in numbers){
-    if (numbers[index] % 3 != 0 && numbers[index] % 5 != 0){
-        numbers[index] = "fizzBuzz"
-    }
-  }
-  for (let index in numbers){
-    if (numbers[index] % 3 != 0 && numbers[index] % 5 != 0){
-        numbers[index] = "fizzBuzz"
-    }
-  }
-  return result   
+function fizzBuzz() {
+  // seu código aqui
 }
-console.log(fizzBuzz[2, 15, 7, 9, 45]);
 
 // Desafio 9
 function encode() {
@@ -106,4 +112,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-}
+};
