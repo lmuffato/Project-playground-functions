@@ -30,8 +30,8 @@ function invalidNumbers(arrayNumbers) {
 
 function repeatedNumbers(Numbers) {
   let counter = 0;
-  for (let index = 0; index < Numbers.length; index += 1) {
-    for (let index2 = 1; index2 < Numbers.length; index2 += 1) {
+  for (let index = 0; index < Numbers; index += 1) {
+    for (let index2 = 1; index2 < Numbers; index2 += 1) {
       if (Numbers[index] === Numbers[index2]) {
         counter += 1;
         if (counter >= 3) {
@@ -40,9 +40,10 @@ function repeatedNumbers(Numbers) {
       }
     }
   }
+  return false;
 }
 
-console.log(repeatedNumbers([1, 2, 8, 0, 5, 3, 7, 8, 9, 1, 8]));
+console.log(repeatedNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 function generatePhoneNumber(phoneNumber) {
   if (phoneNumber.length !== 11) {
