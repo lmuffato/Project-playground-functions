@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if(value1 == true && value2 == true) {
+  if (value1 === true && value2 === true) {
     return true;
   } else {
     return false;
@@ -14,38 +14,71 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let splited = [];
+  splited = string.split(' ');
+
+  return console.log(splited)
 }
 
+splitSentence('foguete');
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayNames) {
+
+  // definir o array em variável
+  // definir uma função com comandos
+  // comandos percorrer e retornar ultimos e prmeiros.
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(win, ties) {
+  // definir variavel coeficiente de pontos pra win
+  // definir variavel coeficiente de pontos pra ties
+  // variável cálculo da soma
+  // condicionar 0 pontos se win = 0 tier = 0
+  // retornar cálculo
 }
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+  // colocar o array em ordem crescente
+  // identificar o maior
+  // percorrer o array crescente e condicionar quantas vezes igualdade com array inicial aparece
+  // a recorrencia retorna quantas vezes aparece
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  // as proximidades dos gatos depende da posição do rato
+  // rato sempre como referencial
+  // valores como posições em eixo x
+  // atribuir variavel distanciaReal em calculo de subtração
+  // comparar os valores de distânciaReal, menor vence 
+  // condicionar se distancia iguais, nenhum cat ganha
+
 }
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  // atribuir array vazio fizzBuzzy
+  // percorrer o array de números passados
+  // condicionar as divisões
+  // critérios de divisões definem o .push no array vazio
+  // retornar o array fizzBuzzy com as palavras 
 }
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+  // atribuir variável = 0
+  // percorrer a string
+  // criar um objeto para a tabela de trocar
+  // usar o for pra percorrer o objeto
+  // condicionar as trocas de letras
+  // retornar a string decodificada
+  
+  
+
 }
 function decode() {
   // seu código aqui
