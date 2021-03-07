@@ -60,20 +60,24 @@ function numberCheckCorrect(numberArray) {
   return true;
 }
 
-// slice e join()!
+// Na função numbersCount eu utilizei parte do código da Marília Cegalla onde ela usa essa lógica para percorrer o array e fazer a contagem do número de vezes iguais.
 
-function numberRepeater(numberArray) { // Nessa função eu utilizei a Lógica que a Marilía usou para comparação de vezes, em que o número apareceu.
-  let checkNumber = numberArray.slice().sort();
-  let sameNumberTimes = 1;
+function numbersCount(numbersArray) {
+  let sameNumberTimes = 0;
+  let checkNumber = numbersArray.slice().sort();
   for (let index = 0; index < (checkNumber.length - 1); index += 1) {
     if (checkNumber[index] === checkNumber[(index + 1)]) {
       sameNumberTimes += 1;
-      if (sameNumberTimes === 3) {
-        return false;
-      }
     } else {
       sameNumberTimes = 1;
     }
+  }
+  return sameNumberTimes;
+}
+
+function numberRepeater(numberArray) {
+  if (numbersCount(numberArray) >= 3) {
+    return false;
   }
   return true;
 }
@@ -96,10 +100,6 @@ function generatePhoneNumber(arrayPhone) {
   telephoneNumber = changeForTelephone(telephoneNumber);
   return telephoneNumber;
 }
-console.log(generatePhoneNumber([0, 2, 4, 2, 5, 5, 5, 8, 9, 2, 1]));
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-console.log(generatePhoneNumber([5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0]));
-console.log(generatePhoneNumber([8, 2, 3, 6, 5, 3, 6, 2, 8, 9, 0]));
 
 // Desafio 12
 function checkValueA(lineA, lineB, lineC) {
