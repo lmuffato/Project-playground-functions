@@ -75,12 +75,12 @@ function catAndMouse(Mouse, cat1, cat2) {
 function fizzBuzz(array) {
   // seu código aqui
   let result = [];
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 5 === 0 && array[index] % 3 === 0) {
+  for (let index of array) {
+    if (index % 5 === 0 && index % 3 === 0) {
       result.push('fizzbuzz');
-    } else if (array[index] % 3 === 0) {
+    } else if (index % 3 === 0) {
       result.push('fizz');
-    } else if (array[index] % 5 === 0) {
+    } else if (index % 5 === 0) {
       result.push('buzz');
     } else {
       result.push('bug');
@@ -88,7 +88,6 @@ function fizzBuzz(array) {
   }
   return result;
 }
-
 // Desafio 9
 function encode() {
   // seu código aqui
