@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 10
 function techList(techName, name) {
   let techListArray = [];
@@ -19,7 +20,6 @@ function techList(techName, name) {
 }
 
 // Desafio 11
-// eslint-disable-next-line sonarjs/cognitive-complexity
 function numberRepetition(arrayNumbers) {
   let repeatedNumber = 0;
   for (let i = 0; i < arrayNumbers.length; i += 1) {
@@ -90,16 +90,53 @@ function generatePhoneNumber(arrayNumbers) {
   if (numberGreaterLimit(arrayNumbers) > 9) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-
   numberTel = `(${generateDdd(arrayNumbers)}) ${generateNumber(arrayNumbers)}`;
 
   return numberTel;
 }
-console.log(generatePhoneNumber([0, 1, 6]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function sidesSumCheck(lineA, lineB, lineC) {
+  let sumSidesA = lineB + lineC;
+  let sumSidesB = lineC + lineA;
+  let sumSidesC = lineA + lineB;
+  let itsValid = true;
+
+  if (lineA > sumSidesA || lineB > sumSidesB || lineC > sumSidesC) {
+    itsValid = false;
+  }
+  return itsValid;
+}
+
+function sidesDiffCheck(lineA, lineB, lineC) {
+  let differenceSidesA = Math.abs(lineB - lineC);
+  let differenceSidesB = Math.abs(lineC - lineA);
+  let differenceSidesC = Math.abs(lineA - lineB);
+  let itsValid = true;
+
+  if (
+    lineA < differenceSidesA ||
+    lineB < differenceSidesB ||
+    lineC < differenceSidesC
+  ) {
+    itsValid = false;
+  }
+  return itsValid;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  if (
+    sidesSumCheck(lineA, lineB, lineC) === true
+    && sidesDiffCheck(lineA, lineB, lineC) === true
+  ) {
+    return true;
+  }
+  if (
+    sidesSumCheck(lineA, lineB, lineC) === false
+    || sidesDiffCheck(lineA, lineB, lineC) === false
+  ) {
+    return false;
+  }
 }
 
 // Desafio 13
