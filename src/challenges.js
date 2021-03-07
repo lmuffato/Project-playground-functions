@@ -36,8 +36,8 @@ function highestCount(maxArray) {
   let repetição = 0;
 
   for (let index = 0; index < maxArray.length; index += 1) {
-      let numMax = Math.max.apply(Math, maxArray);
-    }
+    let numMax = Math.max.apply(Math, maxArray);
+  }
   for (let i = 0; i < maxArray.length; i += 1) {
     if (maxArray[i] === numMax) {
       repetição += 1
@@ -47,10 +47,16 @@ function highestCount(maxArray) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
-
+function catAndMouse(mouse, cat1, cat2) {
+ if(Math.abs(mouse - cat2) < Math.abs(mouse - cat1)){
+   return cat2;
+ }else if(Math.abs(mouse - cat1) < Math.abs(mouse - cat2)){
+  return cat1;
+ }else{
+   return "os gatos trombam e o rato foge"
+ }
+ }
+ 
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
