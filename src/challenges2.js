@@ -17,7 +17,7 @@ for (let indexTech = 0; indexTech < tech.length; indexTech += 1){
     });
   }
 
-  return result
+  return techs
 }
 
 
