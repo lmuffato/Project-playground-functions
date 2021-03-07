@@ -37,24 +37,21 @@ function generatePhoneNumber(numbers) {
       if (numbers[repeatIndex] === numbers[compareIndex]) {
         repeatedNumber += 1;
       }
-
       if (repeatedNumber >= 3) {
         comparedNumber += 1;
       }
-
       if (compareIndex === (numbers.length - 1)) {
         repeatedNumber = 0;
       }
     }
   }
 
-  if (numbers.length > 11 || numbers.length < 11) {
-    telephoneNumber = 'Array com tamanho incorreto.';
+  if (numbers.length === 11) {
+    telephoneNumber = `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`
   } else if (lowerNumber < 0 || comparedNumber > 2 || maxNumber > 9) {
     telephoneNumber = 'não é possível gerar um número de telefone com esses valores';
   }
-   
-  telephoneNumber = `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`
+  telephoneNumber = 'Array com tamanho incorreto.';
 
   return telephoneNumber;
 }
@@ -81,7 +78,7 @@ function hydrate(text) {
 
   let sumNumberos = 0;
 
-  for (index = 0; index < numberos.length; index += 1) {
+  for (let index = 0; index < numberos.length; index += 1) {
     sumNumberos += Number(numberos[index]);
   }
 
