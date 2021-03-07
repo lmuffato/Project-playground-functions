@@ -28,7 +28,8 @@ let stringDeNomes = []
 function concatName(arrayDeNomes) {
   stringDeNomes.push(arrayDeNomes[arrayDeNomes.length - 1]);
   stringDeNomes.push(arrayDeNomes[0]);
-  return stringDeNomes;
+  let ultimoNomeMaisPrimeiro = stringDeNomes.toString();
+  return ultimoNomeMaisPrimeiro
 }
  console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
@@ -80,17 +81,72 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(8, 19, 4));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+let arrayFizzBuzzResposta = []
+let marcadorFizzBuzz = 0
+function fizzBuzz(arrayFizzBuzz) {
+  for (let index3 = 0; index3 < arrayFizzBuzz.length; index3 += 1) {
+    marcadorFizzBuzz = arrayFizzBuzz[index3];
+    if ((marcadorFizzBuzz % 3 === 0) && (marcadorFizzBuzz % 5 === 0)) {
+      return arrayFizzBuzzResposta.push('fizzBuzz')
+    } else if (marcadorFizzBuzz % 3 === 0) {
+      return arrayFizzBuzzResposta.push('fizz')
+    } else if (marcadorFizzBuzz % 5 === 0) {
+      return arrayFizzBuzzResposta.push('buzz')
+    } else {
+      return arrayFizzBuzzResposta.push('bug!')
+    }
+  }
 }
+console.log(fizzBuzz([5]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(trocar) {
+  newArray = trocar.split('');
+  for (let index4 = 0; index4 < newArray.length; index4 += 1) {
+    if (newArray[index4] === 'a') {
+      newArray[index4] = '1'
+    }
+    if (newArray[index4] === 'e') {
+      newArray[index4] = '2'
+    }
+    if (newArray[index4] === 'i') {
+      newArray[index4] = '3'
+    }
+    if (newArray[index4] === 'o') {
+      newArray[index4] = '4'
+    }
+    if (newArray[index4] === 'u') {
+      newArray[index4] = '5'
+    }
+  }
+  newString1 = newArray.join('');
+  return newString1;
 }
-function decode() {
-  // seu código aqui
+console.log(encode('frase'));
+
+function decode(destrocar) {
+  newArray = destrocar.split('')
+  for (let index5 = 0; index5 < newArray.length; index5 += 1) {
+    if (newArray[index5] === '1') {
+      newArray[index5] = 'a'
+    }
+    if (newArray[index5] === '2') {
+      newArray[index5] = 'e'
+    }
+    if (newArray[index5] === '3') {
+      newArray[index5] = 'i'
+    }
+    if (newArray[index5] === '4') {
+      newArray[index5] = 'o'
+    }
+    if (newArray[index5] === '5') {
+      newArray[index5] = 'u'
+    }
+  }
+  newString2 = newArray.join('');
+  return newString2;
 }
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
