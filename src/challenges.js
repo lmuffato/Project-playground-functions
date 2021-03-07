@@ -123,23 +123,12 @@ function fizzBuzz(arrayBuzz) {
 }
 
 // Desafio 9
-// Exercicio corrigido com a ajuda do código do Felipe Flores, por causa da complexidade acusada pelo ESLint, precisei diminuir
-// a complexidade
-// Link: https://github.com/tryber/sd-010-a-project-playground-functions/pull/51/commits/f8cab22680dfa6837317bd33becd72b6efadb3f2
+// Exercicio corrigido com a ajuda do código do Jodiel Briesemeister
+// e com as dicas de Orlando Flores, Rafael Medeiros e Murilo Gonçalves
+// Link: https://trybecourse.slack.com/archives/C01L16B9XC7/p1614777217479100
 function encode(string) {
-  let newphrases = comparingEncode(string);
-  return newphrases;
-}
-
-function decode(string2) {
   // seu código aqui
-  let newphrases2 = comparingDecode(string2);
-  return newphrases2;
-}
-
-function comparingEncode(string){
-  // seu código aqui
-  let newphrases = string;
+  let newphrases = string.split('');
   let cont = '';
   let vogais = {
     a: 1,
@@ -149,35 +138,20 @@ function comparingEncode(string){
     u: 5,
   };
 
-  for (let index = 0; index < newphrases.length; index += 1) {
+  for (let index = 0; index < newphrases.length; index++) {
     if (vogais[newphrases[index].toLowerCase()]) {
       cont += vogais[newphrases[index]];
     } else {
       cont += newphrases[index];
     }
+    return cont;
   }
-  return console.log(cont);
 }
+encode('hi there!');
 
-function comparingDecode(string2) {
-  let newphrases2 = string2;
-  let cont = '';
-  let vogais = {
-    1: 'a',
-    2: 'e',
-    3: 'i',
-    4: 'o',
-    5: 'u',
-  };
-
-  for (let index = 0; index < newphrases2.length; index += 1) {
-    if (vogais[newphrases2[index].toLowerCase()]) {
-      cont += vogais[newphrases2[index]];
-    } else {
-      cont += newphrases2[index];
-    }
-  }
-  return console.log(cont);
+function decode(string2) {
+  // seu código aqui
+  
 }
 
 module.exports = {
