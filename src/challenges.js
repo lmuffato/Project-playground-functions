@@ -131,11 +131,11 @@ function encode(string) {
 console.log(encode('hi there!'));
 function decode(newString) {
   let letters = {
-    a: '1',
-    e: '2',
-    i: '3',
-    o: '4',
-    u: '5',
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
   };
   let secondPhrase = '';
   for (let index in newString) {
