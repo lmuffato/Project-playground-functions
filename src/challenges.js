@@ -130,13 +130,13 @@ function decode(string) {
 }
 
 // Desafio 10
-function technologyList(array, name) {
-  if (array.length === 0) {
+function technologyList(technologiesList, name) {
+  if (technologiesList.length === 0) {
     return 'Vazio!';
   }
 
   let technologies = [];
-  let orderedTechnologies = array.sort();
+  let orderedTechnologies = technologiesList.sort();
 
   for (let index = 0; index < orderedTechnologies.length; index += 1) {
     technologies.push(
