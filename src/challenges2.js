@@ -1,7 +1,7 @@
 // Desafio 10
 function techList(techName, humanName) {
-      if (techName.length < 0) {
-    console.log('Vazio!');
+      if (techName.length === 0) {
+    return 'Vazio!';
   }
     let list = [];
     let object = {}
