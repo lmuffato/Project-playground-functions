@@ -31,8 +31,8 @@ function concatName(string) {
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // ou:
-// function concatName(array){
-// result = array[(array.length - 1)] + ", " + array[0];
+// function concatName(string){
+// result = string[(string.length - 1)] + ", " + string[0];
 // return result
 
 // Concatenar String em JS:
@@ -105,18 +105,49 @@ function fizzBuzz(numbers) {
   }
   return array;
 }
-
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // * Resolução baseada em discussão no slack: https://trybecourse.slack.com/archives/C01L16B9XC7/p1614728098441600
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let letters = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  };
+  let phrase = '';
+  for (let index in string) {
+    if (letters[string[index]]) {
+      phrase += letters[string[index]];
+    } else {
+      phrase += string[index];
+    }
+  }
+  return phrase;
 }
-function decode() {
-  // seu código aqui
+console.log(encode('hi there!'));
+function decode(newString) {
+  let letters = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  };
+  let secondPhrase = '';
+  for (let index in newString) {
+    if (letters[newString[index]]) {
+      secondPhrase += letters[newString[index]];
+    } else {
+      secondPhrase += newString[index];
+    }
+  }
+  return secondPhrase;
 }
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
