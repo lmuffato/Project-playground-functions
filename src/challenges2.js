@@ -115,9 +115,9 @@ function sidesDiffCheck(lineA, lineB, lineC) {
   let itsValid = true;
 
   if (
-    lineA < differenceSidesA
-    || lineB < differenceSidesB
-    || lineC < differenceSidesC
+    lineA < differenceSidesA ||
+    lineB < differenceSidesB ||
+    lineC < differenceSidesC
   ) {
     itsValid = false;
   }
@@ -126,14 +126,14 @@ function sidesDiffCheck(lineA, lineB, lineC) {
 
 function triangleCheck(lineA, lineB, lineC) {
   if (
-    sidesSumCheck(lineA, lineB, lineC) === true
-    && sidesDiffCheck(lineA, lineB, lineC) === true
+    sidesSumCheck(lineA, lineB, lineC) === true &&
+    sidesDiffCheck(lineA, lineB, lineC) === true
   ) {
     return true;
   }
   if (
-    sidesSumCheck(lineA, lineB, lineC) === false
-    || sidesDiffCheck(lineA, lineB, lineC) === false
+    sidesSumCheck(lineA, lineB, lineC) === false ||
+    sidesDiffCheck(lineA, lineB, lineC) === false
   ) {
     return false;
   }
@@ -145,6 +145,7 @@ function hydrate(string) {
   let stringArray = numbers.split('');
   let quantityGlassesWater = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   let glassesWater = 0;
+  let stringReturn = '';
 
   for (let i = 0; i < stringArray.length; i += 1) {
     for (let j = 0; j < quantityGlassesWater.length; j += 1) {
@@ -153,7 +154,11 @@ function hydrate(string) {
       }
     }
   }
-  return glassesWater;
+  stringReturn =
+    glassesWater === 1
+      ? `${glassesWater} copo de água`
+      : `${glassesWater} copos de água`;
+  return stringReturn;
 }
 
 module.exports = {
