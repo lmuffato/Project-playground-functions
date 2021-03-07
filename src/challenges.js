@@ -20,7 +20,7 @@ function concatName(arrayPhrase) {
 
   phraseDisposition = `${arrayPhrase[arrayPhrase.length - 1]}, ${arrayPhrase[0]}`;
 
-return phraseDisposition;
+  return phraseDisposition;
 }
 
 function footballPoints(wins, ties) {
@@ -62,7 +62,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 function fizzBuzz(numbers) {
-let resultado = [];
+  let resultado = [];
   for (let index = 0; index < numbers.length; index += 1){
     
     if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0){
@@ -79,12 +79,12 @@ let resultado = [];
 }
 
 function encode(text) {
-let arrayPhrase = [];
+  let arrayPhrase = [];
 
   for (let index = 0; index < text.length; index += 1) {
 
-  if (text[index] === 'a') {
-    arrayPhrase.push(1);
+    if (text[index] === 'a') {
+     arrayPhrase.push(1);
     } else if (text[index] === 'e') {
       arrayPhrase.push(2);
     } else if (text[index] === 'i') {

@@ -49,20 +49,20 @@ function generatePhoneNumber(numbers) {
   
   if (numbers.length > 11 || numbers.length < 11){
     telephoneNumber = 'Array com tamanho incorreto.';
-  } else if (lowerNumber < 0 || comparedNumber > 2 || maxNumber > 9){
-    telephoneNumber = 'não é possível gerar um número de telefone com esses valores';
-  } else {
-    telephoneNumber = '('
+    } else if (lowerNumber < 0 || comparedNumber > 2 || maxNumber > 9){
+      telephoneNumber = 'não é possível gerar um número de telefone com esses valores';
+    } else {
+      telephoneNumber = '('
     for (let indexTel = 0; indexTel < 2; indexTel += 1){
-    telephoneNumber += numbers[indexTel]
+      telephoneNumber += numbers[indexTel];
     }
-    telephoneNumber += ') '
+      telephoneNumber += ') ';
     for (let indexTel = 2; indexTel < 7; indexTel += 1){
-      telephoneNumber += numbers[indexTel]
-      }
-    telephoneNumber += '-'
-  for (let indexTel = 7; indexTel < 11; indexTel += 1){
-    telephoneNumber += numbers[indexTel]
+      telephoneNumber += numbers[indexTel];
+    }
+      telephoneNumber += '-';
+    for (let indexTel = 7; indexTel < 11; indexTel += 1){
+     telephoneNumber += numbers[indexTel];
       } 
   }
 
@@ -71,14 +71,14 @@ return telephoneNumber
 
 function triangleCheck(lineA, lineB, lineC) {
 
-let sideA = (Math.abs(lineB - lineC)) < lineA && lineA < (lineB + lineC)
-let sideB = (Math.abs(lineA - lineC)) < lineB && lineB < (lineA + lineC)
-let sideC = (Math.abs(lineA - lineB)) < lineC && lineC < (lineA + lineB)
+  let sideA = (Math.abs(lineB - lineC)) < lineA && lineA < (lineB + lineC);
+  let sideB = (Math.abs(lineA - lineC)) < lineB && lineB < (lineA + lineC);
+  let sideC = (Math.abs(lineA - lineB)) < lineC && lineC < (lineA + lineB);
 
-    if (sideA === sideB === sideC === true){
-      return true;
-    } 
-  return false
+  if (sideA === sideB === sideC === true){
+    return true;
+  } 
+  return false;
 }
 
 function hydrate(text) {
@@ -91,18 +91,18 @@ function hydrate(text) {
   
   let sumNumberos = 0; 
   
-  for (index = 0; index < numberos.length; index += 1){
+  for (index = 0; index < numberos.length; index += 1) {
     sumNumberos += Number(numberos[index]);
   }
   
-  if (sumNumberos === 1){
+  if (sumNumberos === 1) {
     return sumNumberos + ' copo de água';
   }
 
   return sumNumberos + ' copos de água';
 }
 
-console.log(hydrate('1 cerveja'))
+console.log(hydrate('1 cerveja'));
 
 module.exports = {
   generatePhoneNumber,
