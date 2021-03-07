@@ -13,6 +13,7 @@ function compareTrue(val1, val2) {
 // Desafio 2
 function calcArea(base, height) {
   let area = (base * height) / 2;
+  console.log(area);
   return area;
 }
 
@@ -25,9 +26,14 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(strArray) {
+  let result;
+  result = strArray[strArray.length - 1] + ', ' + strArray[0];
+  console.log(result);
+  return result;
 }
+
+concatName(['captain', 'my', 'captain']);
 
 // Desafio 5
 function footballPoints() {
