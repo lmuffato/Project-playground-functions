@@ -43,7 +43,7 @@ function phoneNumberError(numbersArray) {
   let error = { bool: null, msg: null };
   if (numbersArray.length !== 11) {
     error.bool = true;
-    error.msg = 'Array com tamanho incorreto';
+    error.msg = 'Array com tamanho incorreto.';
     return error;
   }
 
