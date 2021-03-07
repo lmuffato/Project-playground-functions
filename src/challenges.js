@@ -38,20 +38,20 @@ function highestCount(numbers) {
   // Math.max.apply(Math,Array) found in https://stackoverflow.com/questions/1669190/find-the-min-max-element-of-an-array-in-javascript, Author GSerg
  
   for (index = 0; index < numbers.length; index += 1){
-        if (maxNumber === numbers[index]){
-    resultado += 1;  
-          }}
+    if (maxNumber === numbers[index]){
+      resultado += 1;  
+      } }
     return resultado
-    };
+};
 
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Distance = cat1 - mouse;
   let cat2Distance = cat2 - mouse;
 
   if (cat1Distance < 0){
-   cat1Distance = cat1Distance *-1
+    cat1Distance = cat1Distance * -1
   } else if (cat2Distance < 0) {
-    cat2Distance = cat2Distance*-1
+    cat2Distance = cat2Distance * -1;
   }
 
   if (cat1Distance > cat2Distance){
@@ -91,7 +91,7 @@ let arrayPhrase = [];
 
 for (let index = 0; index < text.length; index += 1){
 
-  if (text[index] === "a"){
+  if (text[index] === "a") {
     arrayPhrase.push(1);
   } else if (text[index] === "e") {
     arrayPhrase.push(2);
@@ -109,14 +109,11 @@ for (let index = 0; index < text.length; index += 1){
 return arrayPhrase.join("")
 }
 
-
-
-
 function decode(text) {
   let arrayPhrase = [];
 
 for (let index = 0; index < text.length; index += 1){
-  if (text[index] == "1"){
+  if (text[index] == "1") {
     arrayPhrase.push("a");
   } else if (text[index] == "2") {
     arrayPhrase.push("e");

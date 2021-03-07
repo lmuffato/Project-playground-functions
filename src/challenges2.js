@@ -78,7 +78,7 @@ let sideA = (Math.abs(lineB - lineC)) < lineA && lineA < (lineB + lineC)
 let sideB = (Math.abs(lineA - lineC)) < lineB && lineB < (lineA + lineC)
 let sideC = (Math.abs(lineA - lineB)) < lineC && lineC < (lineA + lineB)
 
-if (sideA == sideB == sideC == true){
+if (sideA === sideB === sideC === true){
   return true
 } else {
   return false
