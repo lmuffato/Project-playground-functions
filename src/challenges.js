@@ -88,9 +88,28 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(10, 2, 1));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+// function fizzBuzz() {
+function find(findBuzz) {
+  if (findBuzz % 3 === 0 && findBuzz % 5 === 0) {
+    return 'fizzBuzz';
+  } if (findBuzz % 3 === 0) {
+    return 'fizz';
+  } if (findBuzz % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
 }
+function fizzBuzz(numbers) {
+  let array = [];
+  for (let index = 0; index < numbers.length; index += 1) {
+    array.push(find(numbers[index]));
+  }
+  return array;
+}
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
+// * Resolução baseada em discussão no slack: https://trybecourse.slack.com/archives/C01L16B9XC7/p1614728098441600
 
 // Desafio 9
 function encode() {
