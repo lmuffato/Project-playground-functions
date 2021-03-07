@@ -4,7 +4,7 @@
 function techList(technologies, studantsname) {
   let arrayOfTechs = [];
 
-  for (let index = 0; index < technologies.length; index += 1) {
+  for (let index = 0; index < technologies.sort().length; index += 1) {
     let newObject = { tech: technologies[index], name: studantsname };
     arrayOfTechs.push(newObject);
   }
