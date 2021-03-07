@@ -1,14 +1,15 @@
 // Desafio 10
-function techList(array, name) {
+function techList(array, nome) {
   let retorno = [];
-  let arraySort = array.sort();
-  for (let index in array) {
-    let objeto = {
-      tech: '',
-      name: name,
-    };
-    objeto.tech = array[index];
-    retorno[index] = objeto;
+  if (array.length > 0) {
+    for (let index in array) {
+      let objeto = {
+        tech: '',
+        name: nome,
+      };
+      objeto.tech = array[index];
+      retorno[index] = objeto;
+    }
   }
   return retorno;
 }
@@ -47,8 +48,9 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB && lineA > Math.abs(lineB - lineC) &&
-    lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
+  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB
+    && lineA > Math.abs(lineB - lineC)
+    && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
     return true;
   }
   return false;
@@ -65,10 +67,10 @@ function hydrate(string) {
   for (let j = 0; j < values.length; j += 1) {
     sum += arrarNumbers[j];
   }
-  if (sum = 1) {
-    return sum + ' copo de água';
-  };
-  return sum + ' copos de água';
+  if (sum === 1) {
+    return `${sum} copo de água`;
+  }
+  return `${sum} copos de água`;
 }
 
 module.exports = {

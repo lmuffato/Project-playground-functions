@@ -12,11 +12,6 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(string) {
-
-  return splt(string);
-}
-
 function splt(string) {
   let arr = [];
   let i = 0;
@@ -33,6 +28,10 @@ function splt(string) {
     }
   }
   return arr;
+}
+
+function splitSentence(string) {
+  return splt(string);
 }
 
 // Desafio 4
@@ -64,12 +63,15 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   let distanciaCat1 = mouse - cat1;
   let distanciaCat2 = mouse - cat2;
+  let menorDistancia;
   if (Math.abs(distanciaCat1) < Math.abs(distanciaCat2)) {
-    return 'cat1';
+    menorDistancia = 'cat1';
   } else if (Math.abs(distanciaCat2) < Math.abs(distanciaCat1)) {
-    return 'cat2';
+    menorDistancia = 'cat2';
+  } else {
+    menorDistancia = 'os gatos trombam e o rato foge';
   }
-  return 'os gatos trombam e o rato foge';
+  return menorDistancia;
 }
 
 // Desafio 8
@@ -113,8 +115,7 @@ function encode(string) {
       default:
         codigo = string[index];
       }
-    }
-    else {
+    } else {
       switch (string[index]) {
       case 'a':
         codigo += '1';
@@ -136,7 +137,7 @@ function encode(string) {
       }
     }
   }
-    return codigo;
+  return codigo;
 }
 
 function decode(string) {
@@ -162,8 +163,7 @@ function decode(string) {
       default:
         codigo = string[index];
       }
-    }
-    else {
+    } else {
       switch (string[index]) {
       case '1':
         codigo += 'a';
