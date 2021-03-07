@@ -18,23 +18,40 @@ function techList(arrayNames, name) {
 
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'lucas'));
 
-// Desafio 11
+// Desafio 11 (12) 34567-8901
 function generatePhoneNumber(arrayNumbers) {
-  let telephoneNumber = [];
- 
+
+  // conferindo se o array é diferente de 11 numeros
   if (arrayNumbers.length !== 11){
     return "Array com tamanho incorreto.";
-  } else if (arrayNumbers.length < 0){
-    return "não é possível gerar um número de telefone com esses valores";
-  } else if (arrayNumbers.length > 9){
-    return "não é possível gerar um número de telefone com esses valores";
   } 
+
+  // conferindo se o array tem numero 0 ou numero maior q 9
+  for (let index = 0; index < arrayNumbers.length; index += 1){
+    if (arrayNumbers[index] = 0 || arrayNumbers[index] > 9) {
+    return "não é possível gerar um número de telefone com esses valores";
+    }
   }
 
+  // conferindo se o numero repete mais de 3 vezes
+  let = contaNumeroRepetido = 0;
+  for (let index = 0; index < arrayNumbers.length; index += 1){
+    if (arrayNumbers[index] === arrayNumbers[index]){
+    contaNumeroRepetido += 1;
+    }
+  return contaNumeroRepetido;  
+  }
 
- //for (index = 0; index < 11; index += 1){
-  //  telephoneNumber.push(Math.ceil(Math.random() * 9));
-  //}
+  if (contaNumeroRepetido >= 3){
+  return "não é possível gerar um número de telefone com esses valores";
+  }
+ 
+  // montando o numero de telefone
+  for (let index = 0; index < arrayNumbers.length; index += 1){
+  }
+
+}
+
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -47,7 +64,7 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13 
 
 function hydrate(string) {
-  let stringNumeros = string.match(/\d+/g); //crio um array com os numeros dentro da string
+  let stringNumeros = string.match(/\d+/g); //crio um array com os numeros dentro da string o \d+ retorna os numeros juntos /g faz ser global, buscar em toda a frase e não apenas a primeira ocorrência
   let agua = 0;
 
   for (let index = 0; index < stringNumeros.length; index += 1){
@@ -63,7 +80,7 @@ function hydrate(string) {
 }
 
 
-console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+//console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 
 
