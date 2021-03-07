@@ -4,7 +4,7 @@ function techList(technologies, name) {
   technologies.sort();
 
   if (technologies.length <= 0) {
-    return 'vazio!';
+    return 'Vazio!';
   }
   for (let index = 0; index < technologies.length; index += 1) {
     techs.push(
