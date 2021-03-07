@@ -1,7 +1,14 @@
 // Desafio 10
 function techList(tech, name) {
-  // 10 - Crie uma função de lista de tecnologias
+  let listaDeTech = {};
+  for (let index = 0; index < tech.length; index += 1) {
+    listaDeTech.tech = tech[index];
+    listaDeTech.name = name;
+    
+  }
+  return listaDeTech;
 }
+console.log(techList(sell,edu));
 
 // Desafio 11
 function generatePhoneNumber() {
