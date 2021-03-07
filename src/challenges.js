@@ -2,9 +2,9 @@
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
+
 }
 
 // Desafio 2
@@ -21,7 +21,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let lastFirstArray = array[array.length - 1] + ', ' + array[0];
+  let lastFirstArray = array[array.length - 1] + ',' + ' ' + array[0];
   return lastFirstArray;
 }
 
@@ -51,43 +51,48 @@ function highestCount(arrayOfNumbers) {
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1';
-  } else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
+  }
+  if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
     return 'cat2';
-  } else if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
+  }
+  if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
     return 'os gatos trombam e o rato foge';
   }
 }
 
 // Desafio 8
-let array = [2,15,7,9,45];
-
+let array = [2, 15, 7, 9, 45];
 function fizzBuzz() {
-  let arrayToReturn = [];
-  for (let index = 0; index < array.length; index +=1){
-      if (array[index] % 15 === 0 ) {
-        arrayToReturn.push('fizzBuzz');
-      } else if (array[index] % 3 === 0) {
-        arrayToReturn.push('fizz');
-      } else if (array[index] % 5 === 0) {
-        arrayToReturn.push('buzz');
-      } else {
-        arrayToReturn.push('bug!');
-      }
+let arrayToReturn = [];
+for (let index = 0; index < array.length; index += 1) {
+  if (array[index] % 15 === 0) {
+    arrayToReturn.push('fizzBuzz');
+  }
+  if (array[index] % 3 === 0) {
+    arrayToReturn.push('fizz');
+  }
+  if (array[index] % 5 === 0) {
+    arrayToReturn.push('buzz');
+  } else {
+    arrayToReturn.push('bug!');
+  }
   }
   return arrayToReturn;
 }
 // Desafio 9
 
 function encode(string) {
-  string = string.replace(/a/g, 1).replace(/e/g, 2).replace(/i/g, 3).replace(/o/g, 4).replace(/u/g, 5)
-  return string;
+string = string.replace(/a/g, 1).replace(/e/g, 2).replace(/i/g, 3)
+.replace(/o/g, 4).replace(/u/g, 5);
+return string;
 }
-console.log(encode("abcdefghijklmnopqrstuvxzaeiou"));
+
 function decode(string) {
-  string = string.replace(/1/g, 'a').replace(/2/g, 'e').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u')
-  return string;
+string = string.replace(/1/g, 'a').replace(/2/g, 'e').replace(/3/g, 'i')
+.replace(/4/g, 'o').replace(/5/g, 'u');
+return string;
 }
-console.log(decode("1bcd2fgh3jklmn4pqrst5vxz12345"));
+
 
 module.exports = {
   calcArea,
