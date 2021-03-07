@@ -19,18 +19,6 @@ for (let indexTech = 0; indexTech < tech.length; indexTech += 1){
 }
 
 
-numbers = [1, 2, 0, 4, 4, 0, 7, 8, 7, 9, 1];
-
-
-
-
-
-
-
-
-
-
-
 function generatePhoneNumber(numbers) {
 
   let telephoneNumber;
@@ -69,7 +57,7 @@ function generatePhoneNumber(numbers) {
     for (let indexTel = 0; indexTel < 2; indexTel += 1){
     telephoneNumber += numbers[indexTel]
     }
-    telephoneNumber += ")"
+    telephoneNumber += ") "
     for (let indexTel = 2; indexTel < 7; indexTel += 1){
       telephoneNumber += numbers[indexTel]
       }
