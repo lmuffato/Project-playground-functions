@@ -16,12 +16,11 @@ function splitSentence(phrase) {
 
 function concatName(arrayPhrase) {
 
-let phraseDisposition = [];
+  let phraseDisposition = [];
 
-phraseDisposition = `${arrayPhrase[arrayPhrase.length - 1]},${arrayPhrase[0]}`;
+  phraseDisposition = `${arrayPhrase[arrayPhrase.length - 1]}, ${arrayPhrase[0]}`;
 
 return phraseDisposition;
-
 }
 
 function footballPoints(wins, ties) {
@@ -39,13 +38,11 @@ function highestCount(numbers) {
   // Math.max.apply(Math,Array) found in https://stackoverflow.com/questions/1669190/find-the-min-max-element-of-an-array-in-javascript, Author GSerg
  
   for (index = 0; index < numbers.length; index += 1){
-  if (maxNumber === numbers[index]){
-  resultado += 1;  
-  } 
-}
-return resultado
-}
-
+        if (maxNumber === numbers[index]){
+    resultado += 1;  
+          }}
+    return resultado
+    };
 
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Distance = cat1 - mouse;
@@ -58,11 +55,11 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 
   if (cat1Distance > cat2Distance){
-    return 'cat2'
+    return 'cat2';
   } else if (cat1Distance < cat2Distance){
-    return 'cat1'
+    return 'cat1';
   } else {
-    return 'os gatos trombam e o rato foge'
+    return 'os gatos trombam e o rato foge';
   }
 }
 
