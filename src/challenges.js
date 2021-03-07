@@ -49,7 +49,6 @@ console.log(footballPoints(14, 8));
 // Desafio 6
 function highestCount() {
 }
-
 function heightNumber(numbers) {
   let height = 0;
   for (let index in numbers) {
@@ -69,7 +68,7 @@ function countNumbers(numbers) {
   }
   return counter;
 }
-console.log(countNumbers([9, 1, 10, 9, 9, 2, 3, 9, 5, 7]));
+console.log(countNumbers([9, 1, 2, 3, 9, 5, 7]));
 // *Função para obter o maior valor https://pt.stackoverflow.com/questions/99193/valor-em-array-com-a-maior-ocorr%C3%AAncia
 
 // Desafio 7
