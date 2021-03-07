@@ -64,7 +64,7 @@ let array = [2,15,7,9,45];
 function fizzBuzz() {
   let arrayToReturn = [];
   for (let index = 0; index < array.length; index +=1){
-      if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      if (array[index] % 15 === 0 ) {
         arrayToReturn.push('fizzBuzz');
       } else if (array[index] % 3 === 0) {
         arrayToReturn.push('fizz');
@@ -76,8 +76,6 @@ function fizzBuzz() {
   }
   return arrayToReturn;
 }
-fizzBuzz 
-console.log(fizzBuzz(array));
 // Desafio 9
 
 function encode(string) {
