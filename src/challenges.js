@@ -92,38 +92,35 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9
 function encode(arrayPhrase) {
   let vowels = {
-    a : 1,
-    e : 2,
-    i : 3,
-    o : 4,
-    u : 5,
+  a : 1,
+  e : 2,
+  i : 3,
+  o : 4,
+  u : 5,
   };
 
   let stringWords = '';
-  
   for (let index = 0; index < arrayPhrase.length; index += 1) {
     if (vowels[arrayPhrase[index].toLowerCase()]) {
     stringWords += vowels[arrayPhrase[index]];
-    } else {
+      } else {
     stringWords += arrayPhrase[index];
-    }
+      }
   }
   return stringWords;
 }
 console.log(encode('hi there!'));
 
-
 function decode(arrayPhrase) {
   let vowels = {
-    1 : 'a',
-    2 : 'e',
-    3 : 'i',
-    4 : 'o',
-    5 : 'u',
+  1 : 'a',
+  2 : 'e',
+  3 : 'i',
+  4 : 'o',
+  5 : 'u',
   };
 
   let stringWords = '';
-  
   for (let index = 0; index < arrayPhrase.length; index += 1) {
     if (vowels[arrayPhrase[index].toLowerCase()]) {
     stringWords += vowels[arrayPhrase[index]];
