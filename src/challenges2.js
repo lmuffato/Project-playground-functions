@@ -75,7 +75,7 @@ function generatePhoneNumber(numbersArray) {
   // https://www.w3schools.com/jsref/jsref_substring.asp
   let firstPart = number.substring(0, 5);
   let secondPart = number.substring(5);
-  return `(${ddd})${firstPart}-${secondPart}`;
+  return `(${ddd}) ${firstPart}-${secondPart}`;
 }
 
 // Desafio 12
