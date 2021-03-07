@@ -1,4 +1,3 @@
-// Desafio 1
 function compareTrue(bolean1, bolean2) {
   if (bolean1 && bolean2 === true) {
     return true;
@@ -35,8 +34,8 @@ function highestCount(numbers) {
 
   let maxNumber = Math.max.apply(Math, numbers);
   // Math.max.apply(Math,Array) found in https://stackoverflow.com/questions/1669190/find-the-min-max-element-of-an-array-in-javascript, Author GSerg
- 
-  for (let index = 0; index < numbers.length; index += 1){
+
+  for (let index = 0; index < numbers.length; index += 1) {
     if (maxNumber === numbers[index]) {
       resultado += 1;  
     } }
@@ -55,7 +54,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (cat1Distance > cat2Distance) {
     return 'cat2';
-  } else if (cat1Distance < cat2Distance){
+  } else if (cat1Distance < cat2Distance) {
     return 'cat1';
   }
   return 'os gatos trombam e o rato foge';
@@ -63,8 +62,8 @@ function catAndMouse(mouse, cat1, cat2) {
 
 function fizzBuzz(numbers) {
   let resultado = [];
-  for (let index = 0; index < numbers.length; index += 1){
-    
+  for (let index = 0; index < numbers.length; index += 1) {
+
     if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0){
       resultado.push('fizzBuzz');     
     } else if (numbers[index] % 3 === 0){
@@ -84,7 +83,7 @@ function encode(text) {
   for (let index = 0; index < text.length; index += 1) {
 
     if (text[index] === 'a') {
-     arrayPhrase.push(1);
+      arrayPhrase.push(1);
     } else if (text[index] === 'e') {
       arrayPhrase.push(2);
     } else if (text[index] === 'i') {
