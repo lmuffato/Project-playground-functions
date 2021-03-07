@@ -1,40 +1,15 @@
 // Desafio 10
-// function techList(array, names) {
-//   if (array.length === 0) {
-//     return 'Vazio!';
-//   }
-//   let order = array.sort();
-//   let techs = order.map((item) => {
-//     let obj = { tech: item, name: names };
-//     return obj;
-//   }, {});
-//   return techs;
-// }
-
-// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
-// "Lucas"))
-
-function techList(technologiesList, name) {
-  if (technologiesList.length === 0) {
+function techList(array, names) {
+  if (array.length === 0) {
     return 'Vazio!';
   }
-  let technologies = [];
-  let orderedTechnologies = technologiesList.sort();
-  for (let index = 0; index < orderedTechnologies.length; index += 1) {
-    technologies.push(
-      {
-        tech: orderedTechnologies[index],
-        name,
-      },
-    );
-  }
-  return technologies;
+  let order = array.sort();
+  let techs = order.map((item) => {
+    let obj = { tech: item, name: names };
+    return obj;
+  }, {});
+  return techs;
 }
-
-// console.log(Object.prototype.toString.call(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
-// "Lucas")[0]))
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],
-"Lucas"));
 
 // Desafio 11
 // A função ArrayFilterRepeat foi contribuição do @Lucas Pedroso.
