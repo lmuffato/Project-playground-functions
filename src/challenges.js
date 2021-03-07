@@ -79,32 +79,38 @@ function highestCount(arrayOfNumbers) {
 // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 
 function catAndMouse(mouse, cat1, cat2) {
-  cat1Proximity = Math.abs(mouse-cat1);
-  cat2Proximity = Math.abs(mouse-cat2);
-  if(cat1Proximity < cat2Proximity){
+  let cat1Proximity = Math.abs(mouse - cat1);
+  let cat2Proximity = Math.abs(mouse - cat2);
+  if (cat1Proximity < cat2Proximity) {
     return 'cat1';
-  }else if (cat1Proximity > cat2Proximity) {
-    return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  if (cat1Proximity > cat2Proximity) {
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Challenge 8
-function fizzBuzz(arrayOfNumbers) {
-  let arrayFizzBuzz = [];
-  for(index=0; index < arrayOfNumbers.length; index += 1){
-    if(arrayOfNumbers[index] % 3 === 0 && arrayOfNumbers[index] % 5 === 0){
-      arrayFizzBuzz.push('fizzBuzz');
-    } else if (arrayOfNumbers[index] % 3 === 0) {
-      arrayFizzBuzz.push('fizz');
-    } else if(arrayOfNumbers[index] % 5 === 0) {
-      arrayFizzBuzz.push('buzz');
-    } else {
-      arrayFizzBuzz.push('bug!');
-    }
+function checksFizzBuzz(number) {
+  let response = '';
+  if (number % 3 === 0 && number % 5 === 0) {
+    response = 'fizzBuzz';
+  } else if (number % 3 === 0) {
+    response = 'fizz';
+  } else if (number % 5 === 0) {
+    response = 'buzz';
+  } else {
+    response = 'bug!';
   }
-  return arrayFizzBuzz;
+  return response;
+}
+
+function fizzBuzz(arrayOfNumbers) {
+  let array = [];
+  for (let index = 0; index < arrayOfNumbers.length; index += 1) {
+    array.push(checksFizzBuzz(arrayOfNumbers[index]));
+  }
+  return array;
 }
 
 // Crie duas funções: a primeira deverá se chamar `encode` e, ao receber uma string como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
@@ -117,38 +123,14 @@ function fizzBuzz(arrayOfNumbers) {
 
 // Challenge 9
 function encode(string) {
-  for(let index = 0; index < string.length; index += 1 ){
-    switch(string[index]){
-      case 'a': string = replaceAllVowels(string, 'a', '1'); break;
-      case 'e': string = replaceAllVowels(string, 'e', '2'); break;
-      case 'i': string = replaceAllVowels(string, 'i', '3'); break;
-      case 'o': string = replaceAllVowels(string, 'o', '4'); break;
-      case 'u': string = replaceAllVowels(string, 'u', '5'); break;
-      default: break;
-    }
-  }
-  return string;
-}
 
-function replaceAllVowels(string, vowel, number){
-  return string.replaceAll(vowel, number);
 }
 
 function decode(string) {
-  for(let index = 0; index < string.length; index += 1 ){
-    switch(string[index]){
-      case '1': string = replaceAllVowels(string, '1', 'a'); break;
-      case '2': string = replaceAllVowels(string, '2', 'e'); break;
-      case '3': string = replaceAllVowels(string, '3', 'i'); break;
-      case '4': string = replaceAllVowels(string, '4', 'o'); break;
-      case '5': string = replaceAllVowels(string, '5', 'u'); break;
-      default: break;
-    }
-  }
-  return string;
+
 }
 
-console.log(decode("12345"));
+
 
 module.exports = {
   calcArea,
