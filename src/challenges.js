@@ -53,9 +53,18 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
+//resolução baseada no codigo da pessoa estudante Daniel Ribeiro, onde foi identificado 
+//a multiplicação dos numeros menores que zero por -1. 
+//https://github.com/tryber/sd-010-a-project-playground-functions/tree/defauth98-project-playground-functions 
 function catAndMouse(mouse, cat1, cat2) {
   let dist1 = cat1 - mouse;
   let dist2 = cat2 - mouse;
+    if (dist1 < 0) {
+    dist1 *= -1;
+  }
+  if (dist2 < 0) {
+    dist2 *= -1;
+  }
   if (dist1 < dist2) {
     return 'cat1';
   } 
