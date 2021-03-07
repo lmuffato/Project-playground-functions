@@ -10,7 +10,7 @@ function techList(tecnologias, nome) {
   for (let index = 0; index < arrayTech.length; index += 1) {
     newArray.push(
       {
-        tech: arrayTech[key],
+        tech: arrayTech[index],
         name: nome,
       },
     ); 
