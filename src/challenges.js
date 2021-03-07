@@ -39,13 +39,13 @@ function highestCount(values) {
     }
   } for (let currentNumber in values) {
     if (values[currentNumber] === maiorItem) {
-      repeticoes += 1
-      } 
-  } return(repeticoes)
-} 
+      repeticoes += 1;
+    }
+  } return repeticoes;
+}
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
+function catAndMouse(cat1, cat2, mouse) {
   if (cat1 - mouse < cat2 - mouse) {
     return("cat1")
   } else if (cat2 - mouse < cat1 - mouse) {
