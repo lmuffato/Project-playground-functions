@@ -19,8 +19,8 @@ function techList(technologies, name) {
 // desafio realizado com contriuição de alguns colegas (nilson/mauricio)
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(foneNumber) {
+  
 }
 
 // Desafio 12
