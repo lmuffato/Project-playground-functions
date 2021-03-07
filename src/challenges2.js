@@ -3,8 +3,8 @@ function techList(tech, name) {
   tech.sort();
   let techs = [];
 
-  if (tech.length === 0){
-    return 'Vazio!'
+  if (tech.length === 0) {
+    return 'Vazio!';
   }
 
   for (let indexTech = 0; indexTech < tech.length; indexTech += 1) {
@@ -14,16 +14,16 @@ function techList(tech, name) {
         name: name, 
       });
   }
-  return techs
+  return techs;
 }
 
 function generatePhoneNumber(numbers) {
 
   let telephoneNumber;
 
-  let lowerNumber = Math.min.apply(Math,numbers)
+  let lowerNumber = Math.min.apply(Math, numbers);
 
-  let maxNumber = Math.max.apply(Math,numbers)
+  let maxNumber = Math.max.apply(Math, numbers);
   
   let repeatedNumber = 0;
   
@@ -38,29 +38,29 @@ function generatePhoneNumber(numbers) {
       } 
   
       if (repeatedNumber >= 3){
-        comparedNumber += 1
+        comparedNumber += 1;
       } 
   
-     if (compareIndex === (numbers.length-1)){
+      if (compareIndex === (numbers.length -1)) {
         repeatedNumber = 0;
       }
     } 
   }
   
   if (numbers.length > 11 || numbers.length < 11){
-    telephoneNumber = "Array com tamanho incorreto.";
+    telephoneNumber = 'Array com tamanho incorreto.';
   } else if (lowerNumber < 0 || comparedNumber > 2 || maxNumber > 9){
-    telephoneNumber = "não é possível gerar um número de telefone com esses valores";
+    telephoneNumber = 'não é possível gerar um número de telefone com esses valores';
   } else {
-    telephoneNumber = "("
+    telephoneNumber = '('
     for (let indexTel = 0; indexTel < 2; indexTel += 1){
     telephoneNumber += numbers[indexTel]
     }
-    telephoneNumber += ") "
+    telephoneNumber += ') '
     for (let indexTel = 2; indexTel < 7; indexTel += 1){
       telephoneNumber += numbers[indexTel]
       }
-    telephoneNumber += "-"
+    telephoneNumber += '-'
   for (let indexTel = 7; indexTel < 11; indexTel += 1){
     telephoneNumber += numbers[indexTel]
       } 
@@ -96,10 +96,10 @@ function hydrate(text) {
   }
   
   if (sumNumberos === 1){
-    return sumNumberos + " copo de água";
+    return sumNumberos + ' copo de água';
   }
 
-  return sumNumberos + " copos de água";
+  return sumNumberos + ' copos de água';
 }
 
 console.log(hydrate('1 cerveja'))
