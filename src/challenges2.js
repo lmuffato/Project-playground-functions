@@ -4,7 +4,7 @@ function techList(listOfTech, name) {
   let techListSort = listOfTech.sort();
   let ultimateList = [];
   for (let index = 0; index < techListSort.length; index += 1) {
-    ultimateList.push({ tech: techListSort[index], name: name });
+    ultimateList.push({ tech: techListSort[index], name });
   } if (listOfTech.length === 0) {
     return 'Vazio!';
   }

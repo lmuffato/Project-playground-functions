@@ -21,11 +21,11 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-
+// Consulta sobre template literals https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Template_literals
 function concatName(phraseArray) {
   let firstItem = phraseArray[0];
   let lastItem = phraseArray[phraseArray.length - 1];
-  let phraseString = lastItem + ', ' + firstItem;
+  let phraseString = `${lastItem}, ${firstItem}`;
   return (phraseString);
 }
 
@@ -43,19 +43,16 @@ function footballPoints(wins, ties) {
 function highestCount(numberArray) {
   let countRepeat = 0;
   let HighNumber = 0;
-
   for (let indexH = 0; indexH < numberArray.length; indexH += 1) {
     if (HighNumber < numberArray[indexH]) {
       HighNumber = numberArray[indexH];
     }
   }
-
   for (let indexR = 0; indexR < numberArray.length; indexR += 1) {
     if (HighNumber === numberArray[indexR]) {
       countRepeat += 1;
     }
   }
-
   return countRepeat;
 }
 
@@ -104,8 +101,7 @@ function encode(stringEncode) {
   let string4 = string3.replace(/o/g, '4');
   let string5 = string4.replace(/u/g, '5');
   return string5;
-
-}console.log(encode("hi there!"))
+}console.log(encode('hi there!'));
 
 function decode(stringDecode) {
   // seu código aqui
@@ -115,7 +111,7 @@ function decode(stringDecode) {
   let string4 = string3.replace(/4/g, 'o');
   let string5 = string4.replace(/5/g, 'u');
   return string5;
-} console.log(decode("h3 th2r2!"));
+} console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
