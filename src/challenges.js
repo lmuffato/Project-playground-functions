@@ -27,18 +27,17 @@ function footballPoints(wins, ties) {
   wins = wins * 3;
   ties = ties * 1;
 
-  return wins + ties
+  return wins + ties;
 }
-
 
 function highestCount(numbers) {
   let resultado = 0;
 
-  maxNumber = Math.max.apply(Math,numbers)
+  let maxNumber = Math.max.apply(Math, numbers)
   // Math.max.apply(Math,Array) found in https://stackoverflow.com/questions/1669190/find-the-min-max-element-of-an-array-in-javascript, Author GSerg
  
-  for (index = 0; index < numbers.length; index += 1){
-    if (maxNumber === numbers[index]){
+  for (let index = 0; index < numbers.length; index += 1){
+    if (maxNumber === numbers[index]) {
       resultado += 1;  
     } }
       return resultado;
@@ -58,9 +57,8 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   } else if (cat1Distance < cat2Distance){
     return 'cat1';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 function fizzBuzz(numbers) {
@@ -87,16 +85,16 @@ let arrayPhrase = [];
 
   if (text[index] === "a") {
     arrayPhrase.push(1);
-  } else if (text[index] === "e") {
-    arrayPhrase.push(2);
-  } else if (text[index] === "i") {
-    arrayPhrase.push(3);
-  } else if (text[index] === "o") {
-    arrayPhrase.push(4);
-  } else if (text[index] === "u") {
-    arrayPhrase.push(5);
-  } else  {
-    arrayPhrase.push(text[index]);
+    } else if (text[index] === "e") {
+      arrayPhrase.push(2);
+    } else if (text[index] === "i") {
+      arrayPhrase.push(3);
+    } else if (text[index] === "o") {
+      arrayPhrase.push(4);
+    } else if (text[index] === "u") {
+      arrayPhrase.push(5);
+    } else  {
+      arrayPhrase.push(text[index]);
   }
 }
 
@@ -106,20 +104,20 @@ return arrayPhrase.join("");
 function decode(text) {
   let arrayPhrase = [];
 
-for (let index = 0; index < text.length; index += 1){
-  if (text[index] == "1") {
-    arrayPhrase.push("a");
-  } else if (text[index] == "2") {
-    arrayPhrase.push("e");
-  } else if (text[index] == "3") {
-    arrayPhrase.push("i");
-  } else if (text[index] == "4") {
-    arrayPhrase.push("o");
-  } else if (text[index] == "5") {
-    arrayPhrase.push("u");
-  } else  {
-    arrayPhrase.push(text[index])
-  }
+  for (let index = 0; index < text.length; index += 1){
+    if (text[index] == "1") {
+      arrayPhrase.push("a");
+    } else if (text[index] == "2") {
+      arrayPhrase.push("e");
+    } else if (text[index] == "3") {
+      arrayPhrase.push("i");
+    } else if (text[index] == "4") {
+      arrayPhrase.push("o");
+    } else if (text[index] == "5") {
+      arrayPhrase.push("u");
+    } else  {
+      arrayPhrase.push(text[index])
+    }
 }
 
 return arrayPhrase.join("");

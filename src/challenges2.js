@@ -1,23 +1,21 @@
-
 function techList(tech, name) {
 
   tech.sort();
   let techs = [];
 
-if (tech.length === 0){
-  return 'Vazio!'
-}
+  if (tech.length === 0){
+    return 'Vazio!'
+  }
 
-for (let indexTech = 0; indexTech < tech.length; indexTech += 1){
+  for (let indexTech = 0; indexTech < tech.length; indexTech += 1) {
     techs.push(
-    { 
-      tech: tech[indexTech],   
-      name: name, 
-    });
+      { 
+        tech: tech[indexTech],   
+        name: name, 
+      });
   }
   return techs
 }
-
 
 function generatePhoneNumber(numbers) {
 
@@ -30,7 +28,6 @@ function generatePhoneNumber(numbers) {
   let repeatedNumber = 0;
   
   let comparedNumber = 0;
-  
   
   for (let repeatIndex = 0; repeatIndex < numbers.length; repeatIndex += 1){
   
@@ -78,13 +75,11 @@ let sideA = (Math.abs(lineB - lineC)) < lineA && lineA < (lineB + lineC)
 let sideB = (Math.abs(lineA - lineC)) < lineB && lineB < (lineA + lineC)
 let sideC = (Math.abs(lineA - lineB)) < lineC && lineC < (lineA + lineB)
 
-if (sideA === sideB === sideC === true){
-  return true
-} else {
+    if (sideA === sideB === sideC === true){
+      return true;
+    } 
   return false
 }
-}
-
 
 function hydrate(text) {
 
@@ -97,14 +92,14 @@ function hydrate(text) {
   let sumNumberos = 0; 
   
   for (index = 0; index < numberos.length; index += 1){
-    sumNumberos += Number(numberos[index])
+    sumNumberos += Number(numberos[index]);
   }
   
   if (sumNumberos === 1){
-  return sumNumberos + " copo de água"
+    return sumNumberos + " copo de água";
   }
 
-  return sumNumberos + " copos de água"
+  return sumNumberos + " copos de água";
 }
 
 console.log(hydrate('1 cerveja'))
