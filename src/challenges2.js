@@ -11,6 +11,8 @@ function techList(array, nome) {
       objeto.tech = array2[index];
       retorno[index] = objeto;
     }
+  } else {
+    return 'Vazio!';
   }
   return retorno;
 }
@@ -80,7 +82,3 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"));
-// console.log(generatePhoneNumber([3,1,9,8,5,3,0,1,9,5,8]));
-// console.log(triangleCheck(1,2,3));
-// console.log(hydrate('3 cerveja'));
