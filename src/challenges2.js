@@ -45,7 +45,7 @@ function testListPhoneBig(listNumber) {
       bigNumber = true;
     }
   }
-  if (bigNumber === false) {
+  if (bigNumber === true) {
     return true;
   } else {
     return false;
@@ -101,6 +101,7 @@ function generatePhoneNumber(listNumber) {
   return `${phoneDDDNumber(listNumber)} ${phoneFirstNumber(listNumber)}-${phoneLastNumber(listNumber)}`;
 }
 
+console.log(generatePhoneNumber([1, 2, 18, 0, 5, 3, 17, 8, 9, 1, 8]))
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let somaBC = lineB + lineC;
