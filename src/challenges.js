@@ -127,8 +127,7 @@ function fizzBuzz(arrayBuzz) {
 // e com as dicas de Orlando Flores, Rafael Medeiros e Murilo Gonçalves
 // Link: https://trybecourse.slack.com/archives/C01L16B9XC7/p1614777217479100
 function encode(string) {
-  // seu código aqui
-  let newphrases = string.split('');
+  let newphrases = string;
   let cont = '';
   let vogais = {
     a: 1,
@@ -138,7 +137,7 @@ function encode(string) {
     u: 5,
   };
 
-  for (let index = 0; index < newphrases.length; index++) {
+  for (let index = 0; index < newphrases.length; index += 1) {
     if (vogais[newphrases[index].toLowerCase()]) {
       cont += vogais[newphrases[index]];
     } else {
@@ -147,11 +146,26 @@ function encode(string) {
     return cont;
   }
 }
-encode('hi there!');
 
 function decode(string2) {
   // seu código aqui
-  
+  let newphrases = string2;
+  let cont = '';
+  let vogais = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  for (let index = 0; index < newphrases.length; index += 1) {
+    if (vogais[newphrases[index].toLowerCase()]) {
+      cont += vogais[newphrases[index]];
+    } else {
+      cont += newphrases[index];
+    }
+    return cont;
+  }
 }
 
 module.exports = {
