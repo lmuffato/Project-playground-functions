@@ -110,12 +110,49 @@ console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let encodeString = string.split('');
+  let encodeArraySplit = [];
+  for (let index = 0; index < encodeString.length; index += 1) {
+    if (encodeString[index] === 'a') {
+      encodeArraySplit.push(encodeString[index].replace('a', 1));
+    } else if (encodeString[index] === 'e') {
+      encodeArraySplit.push(encodeString[index].replace('e', 2));
+    } else if (encodeString[index] === 'i') {
+      encodeArraySplit.push(encodeString[index].replace('i', 3));
+    } else if (encodeString[index] === 'o') {
+      encodeArraySplit.push(encodeString[index].replace('o', 4));
+    } else if (encodeString[index] === 'u') {
+      encodeArraySplit.push(encodeString[index].replace('u', 5));
+    } else {
+      encodeArraySplit.push(encodeString[index]);
+    }
+  }
+  return encodeArraySplit.join('');
 }
-function decode() {
-  // seu código aqui
+console.log(encode('hi there!'));
+
+function decode(string) {
+  let decodeString = string.split('');
+  let decodeArraySplit = [];
+  for (let index = 0; index < decodeString.length; index += 1) {
+    if (decodeString[index] === '1') {
+      decodeArraySplit.push(decodeString[index].replace('1', 'a'));
+    } else if (decodeString[index] === '2') {
+      decodeArraySplit.push(decodeString[index].replace('2', 'e'));
+    } else if (decodeString[index] === '3') {
+      decodeArraySplit.push(decodeString[index].replace('3', 'i'));
+    } else if (decodeString[index] === '4') {
+      decodeArraySplit.push(decodeString[index].replace('4', 'o'));
+    } else if (decodeString[index] === '5') {
+      decodeArraySplit.push(decodeString[index].replace('5', 'u'));
+    } else {
+      decodeArraySplit.push(decodeString[index]);
+    }
+  }
+  return decodeArraySplit.join('');
 }
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
