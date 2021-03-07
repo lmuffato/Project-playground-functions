@@ -4,7 +4,7 @@ function techList(arrayNames, name) {
     return 'Vazio!'
   } 
   
-  let ObjetoTech = []; //criei o bjeto que vai ser retornado
+  let ObjetoTech = []; // criei o bjeto que vai ser retornado
   let arrayOrdenado = arrayNames.sort() //coloquei em ordem 
 
   for (let index = 0; index < arrayOrdenado.length; index += 1){ // percorri o array e cada indice adicio no meu objetoTech
@@ -16,12 +16,12 @@ function techList(arrayNames, name) {
   return ObjetoTech;
 }
 
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'lucas'));
+//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'lucas'));
 
-/* Desafio 11 (12) 34567-8901
+//Desafio 11 
 function generatePhoneNumber(arrayNumbers) {
 
-  // conferindo se o array é diferente de 11 numeros
+/*  // conferindo se o array é diferente de 11 numeros
   if (arrayNumbers.length !== 11){
     return "Array com tamanho incorreto.";
   } 
@@ -49,8 +49,9 @@ function generatePhoneNumber(arrayNumbers) {
   // montando o numero de telefone
   for (let index = 0; index < arrayNumbers.length; index += 1){
   }
+*/
 
-}*/
+}
 
 
 // Desafio 12
@@ -61,6 +62,7 @@ function triangleCheck(lineA, lineB, lineC) {
     return false; 
   } 
 }
+
 // Desafio 13 
 
 function hydrate(string) {
