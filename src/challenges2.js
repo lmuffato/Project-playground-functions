@@ -60,22 +60,18 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
-  let sum = 0;
+function triangleSideCheck(lineA, lineB, lineC) {
   if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
-    sum += 1;
+    return true;
   }
-  if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
-    sum += 1;
-  }
-  if (lineC < lineA + lineA && lineC > Math.abs(lineA - lineB)) {
-    sum += 1;
-  }
-  if (sum === 3) {
-    return true
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  if (triangleSideCheck(lineA, lineB, lineC) && triangleSideCheck(lineB, lineA, lineC) 
+  && triangleSideCheck(lineC, lineA, lineB)) {
+    return true;
   }
   return false;
-
 }
 
 // Desafio 13
