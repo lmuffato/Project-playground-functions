@@ -2,24 +2,20 @@
 function techList(arrayTech, string) {
   arrayTech.sort();
   let techOrder = [];
-  
-    if (arrayTech.length === 0) {
-      return 'Vazio!';
-    }
-    for (let index = 0; index < arrayTech.length; index += 1) {
-      techOrder.push(
-        {
-          tech: arrayTech[index],
-          name: string,
-        },
-      );
-    }
-    return techOrder;
+  if (arrayTech.length === 0) {
+    return 'Vazio!';
   }
-  
-  console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Diego'));
-
-
+  for (let index = 0; index < arrayTech.length; index += 1) {
+    techOrder.push(
+      {
+        tech: arrayTech[index],
+        name: string,
+      },
+    );
+  }
+  return techOrder;
+} 
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Diego'));
 
 // Desafio 11
 function generatePhoneNumber() {
