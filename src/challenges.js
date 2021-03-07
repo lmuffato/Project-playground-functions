@@ -32,6 +32,7 @@ let countBiggest = countBiggestNumber(arr, biggestNumber);
     if (arr[ind] > biggestNumber) {
       biggestNumber = arr[ind]
     }
+    return biggestNumber
   }
 } function countBiggestNumber(arr, biggestNumber) {
   let repetitionCounter = 0
