@@ -154,10 +154,9 @@ function hydrate(string) {
       }
     }
   }
-  stringReturn =
-    glassesWater === 1
-      ? `${glassesWater} copo de água`
-      : `${glassesWater} copos de água`;
+  stringReturn = glassesWater === 1
+    ? `${glassesWater} copo de água`
+    : `${glassesWater} copos de água`;
   return stringReturn;
 }
 
