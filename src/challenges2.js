@@ -34,11 +34,11 @@ function checkConditions(arrNum) {
 }
 
 function generatePhoneNumber(arrNum) {
-  if (checkConditions(arrNum) === true || checkRepeat(arrNum) >= 3) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  }
   if (arrNum.length !== 11) {
     return 'Array com tamanho incorreto.';
+  }
+  if (checkConditions(arrNum) === true || checkRepeat(arrNum) >= 3) {
+    return 'não é possível gerar um número de telefone com esses valores';
   }
   return `(${arrNum[0]}${arrNum[1]})${arrNum[2]}${arrNum[3]}\
 ${arrNum[4]}${arrNum[5]}${arrNum[6]}-${arrNum[7]}${arrNum[8]}\
