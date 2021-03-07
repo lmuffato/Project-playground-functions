@@ -136,20 +136,19 @@ function encode(string) {
     o: 4,
     u: 5,
   };
-
   for (let index = 0; index < newphrases.length; index += 1) {
     if (vogais[newphrases[index].toLowerCase()]) {
       cont += vogais[newphrases[index]];
     } else {
       cont += newphrases[index];
     }
-    return cont;
   }
+  return cont;
 }
 
 function decode(string2) {
   // seu código aqui
-  let newphrases = string2;
+  let newphrases2 = string2;
   let cont = '';
   let vogais = {
     1: 'a',
@@ -158,14 +157,14 @@ function decode(string2) {
     4: 'o',
     5: 'u',
   };
-  for (let index = 0; index < newphrases.length; index += 1) {
-    if (vogais[newphrases[index].toLowerCase()]) {
-      cont += vogais[newphrases[index]];
+  for (let index = 0; index < newphrases2.length; index += 1) {
+    if (vogais[newphrases2[index].toLowerCase()]) {
+      cont += vogais[newphrases2[index]];
     } else {
-      cont += newphrases[index];
+      cont += newphrases2[index];
     }
-    return cont;
   }
+  return cont;
 }
 
 module.exports = {
