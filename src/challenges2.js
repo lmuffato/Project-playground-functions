@@ -69,7 +69,7 @@ function generatePhoneNumber(numbers) {
     for (let indexTel = 0; indexTel < 2; indexTel += 1){
     telephoneNumber += numbers[indexTel]
     }
-    telephoneNumber += ") "
+    telephoneNumber += ")"
     for (let indexTel = 2; indexTel < 7; indexTel += 1){
       telephoneNumber += numbers[indexTel]
       }
