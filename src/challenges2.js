@@ -78,6 +78,8 @@ function generatePhoneNumber(numbers) {
     telephoneNumber += numbers[indexTel]
       } 
   }
+
+return telephoneNumber
 }
 
 // Desafio 12
