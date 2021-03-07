@@ -59,9 +59,9 @@ let distanceCat2 = Math.abs(mouse - cat2);
   } else if (distanceCat2 > distanceCat1){
     return 'cat1';
   }
-  return 'Os gatos se trombam, e o rato foge';
+  return 'Os gatos trombam, e o rato foge';
 }
-console.log(catAndMouse(20,14,8));
+
 
 // Desafio 8
 function fizzBuzz() {
