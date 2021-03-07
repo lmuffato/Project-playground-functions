@@ -20,10 +20,9 @@ function splitSentence(str) {
 
 // Desafio 4
 function concatName(arr) {
-  // sites usados como referência https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Template_literals, https://www.devmedia.com.br/javascript-concat-concatenando-arrays-e-strings/37964, https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254, https://pt.stackoverflow.com/questions/87416/como-retornar-o-%C3%BAltimo-registro-de-um-array-com-javascript-ou-jquery
+// sites usados como referência https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Template_literals, https://www.devmedia.com.br/javascript-concat-concatenando-arrays-e-strings/37964, https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254, https://pt.stackoverflow.com/questions/87416/como-retornar-o-%C3%BAltimo-registro-de-um-array-com-javascript-ou-jquery
   return `${arr[arr.length - 1]}, ${arr[0]}`;
 }
-//console.log(concatName(' lucas chaves rodrigues'))
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -33,18 +32,18 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(elementArr) {
-  let bigNumber = Math.max(parseInt(elementArr))
-  function number (value) {
-    return value === bigNumber
+  let bigNumber = Math.max(parseInt(elementArr));
+  function number(value) {
+    return value === bigNumber;
   }
-  let retunrNumber =  elementArr.filter(number)
-  return retunrNumber.length
+  let retunrNumber = elementArr.filter(number);
+  return retunrNumber.length;
+  // sites usados para referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math, https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max, https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array, https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filter,
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-
+function catAndMouse() {
+// asdasdasd
 }
 
 // Desafio 8
@@ -53,7 +52,7 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode(str) {
+function encode() {
   // seu código aqui
 }
 
