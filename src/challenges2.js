@@ -14,7 +14,7 @@ function techList(arrayTech, string) {
     );
   }
   return techOrder;
-} 
+}
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Diego'));
 
 // Desafio 11
