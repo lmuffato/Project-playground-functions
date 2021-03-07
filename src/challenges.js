@@ -55,7 +55,6 @@ function highestCount(numberArray) {
   }
   return countRepeat;
 }
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let winner;
