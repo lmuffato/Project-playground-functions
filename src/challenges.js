@@ -73,8 +73,6 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-// Este código fiz com auxílio da minha amiga Elisa França.
-// Eu consegui desenvolver a lógica mas o Lint tava acusando complexidade nível 6 e o máximo era 5. Então ela me auxiliou a dividir o código em duas funções.
 function conditional(arrayN) {
   let fizzBuzze;
   if (arrayN % 3 === 0 && arrayN % 5 === 0) {
@@ -97,43 +95,11 @@ function fizzBuzz(arrayFizz) {
 }
 
 // Desafio 9
-//Com auxílio do Lucas Pedroso pude entender como o regex é poderoso para fazer buscas automatizadas;
-  let code = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5
+function encode() {
+  // seu código aqui
 }
-
-function encode(string) {
-  let phrase = string;
-  
-  for (let key in code) {
-    // console.log(key);
-    let regex = `${key}`;
-    phrase = phrase.replace(RegExp(regex, 'g'), code[key]);
-  }
-  return phrase;
-} 
-
-let code = {
-  a: 1,
-  e: 2,
-  i: 3,
-  o: 4,
-  u: 5
-}
-
-function decode(string) {
-  let phrase = string;
-  
-  for (let key in code) {
-    // console.log(key);
-    let regex = `${key}`;
-    phrase = phrase.replace(RegExp(code[key], 'g'), regex);
-  }
-  return phrase;
+function decode() {
+  // seu código aqui
 }
 
 module.exports = {
