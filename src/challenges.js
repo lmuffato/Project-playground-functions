@@ -52,6 +52,7 @@ function highestCount(array) {
 console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 
 // Desafio 7
+// Ajuda sobre o math.abs da Maria Luiza Victorio Castelar Rodrigues ;
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1';
