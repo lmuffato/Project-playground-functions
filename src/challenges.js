@@ -60,7 +60,7 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let dist1 = cat1 - mouse;
   let dist2 = cat2 - mouse;
-    if (dist1 < 0) {
+  if (dist1 < 0) {
     dist1 *= -1;
   }
   if (dist2 < 0) {
@@ -68,9 +68,9 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   if (dist1 < dist2) {
     return 'cat1';
-  } 
+  }
   if (dist2 < dist1) {
-    return 'cat2' ;
+    return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
 }
@@ -81,31 +81,32 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-  //joão nascimento : nascjoao-project-playground-functions
+//joão nascimento : nascjoao-project-playground-functions; codigo serviu como base para
+//o desenvolvimento desta questão.
 function encode(iText) {
-   let codVowels = { a: 1, e: 2, i: 3, o: 4, u: 5 };
-   let encodeText = '';
-   for (let letter in iText) {
-     if (codVowels[iText[letter]]) {
-       encodeText += codVowels[iText[letter]];
-     } else {
-       encodeText += iText[letter];
-     }
-   }
+  let codVowels = { a: 1, e: 2, i: 3, o: 4, u: 5 };
+  let encodeText = '';
+  for (let letter in iText) {
+    if (codVowels[iText[letter]]) {
+      encodeText += codVowels[iText[letter]];
+    } else {
+      encodeText += iText[letter];
+    }
+  }
    return encodeText;
  }
 
 function decode(codText) {
- let codNumbers = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
- let decodedText = '';
- for (let number in codText) {
-   if (codNumbers[codText[number]]) {
-     decodedText += codNumbers[codText[number]];
-   } else {
-     decodedText += codText[number];
-   }
- }
- return decodedText;
+  let codNumbers = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+  let decodedText = '';
+  for (let number in codText) {
+    if (codNumbers[codText[number]]) {
+      decodedText += codNumbers[codText[number]];
+    } else {
+      decodedText += codText[number];
+    }
+  }
+  return decodedText;
 }
 
 module.exports = {
