@@ -80,15 +80,49 @@ function fizzBuzz(array) {
   }
   return output;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([9, 25]));
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let string = str.split('');
+  let numPorConsoantes = ['a', 'e', 'i', 'o', 'u'];
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === numPorConsoantes[0]) {
+      string[index] = '1';
+    } else if (string[index] === numPorConsoantes[1]) {
+      string[index] = '2';
+    } else if (string[index] === numPorConsoantes[2]) {
+      string[index] = '3';
+    } else if (string[index] === numPorConsoantes[3]) {
+      string[index] = '4';
+    } else if (string[index] === numPorConsoantes[4]) {
+      string[index] = '5';
+    }
+  }
+  let concatenacao = string.join('');
+  return concatenacao;
 }
-function decode() {
+console.log(encode('hi there!'));
+function decode(str) {
+  let string1 = str.split('');
+  let consoantesPorNumeros = ['1', '2', '3', '4', '5'];
+  for (let index = 0; index < string1.length; index += 1) {
+    if (string1[index] === consoantesPorNumeros[0]) {
+      string1[index] = 'a';
+    } else if (string1[index] === consoantesPorNumeros[1]) {
+      string1[index] = 'e';
+    } else if (string1[index] === consoantesPorNumeros[2]) {
+      string1[index] = 'i';
+    } else if (string1[index] === consoantesPorNumeros[3]) {
+      string1[index] = 'o';
+    } else if (string1[index] === consoantesPorNumeros[4]) {
+      string1[index] = 'u';
+    }
+  }
+  let concat = string1.join('');
   // seu código aqui
+  return concat;
 }
-
+console.log(decode('h3 th2r2!'));
 module.exports = {
   calcArea,
   catAndMouse,
