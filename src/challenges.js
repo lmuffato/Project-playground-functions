@@ -59,20 +59,35 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+let array = [2,15,7,9,45];
 
 function fizzBuzz() {
+  let arrayToReturn = [];
+  for (let index = 0; index < array.length; index +=1){
+      if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+        arrayToReturn.push('fizzBuzz');
+      } else if (array[index] % 3 === 0) {
+        arrayToReturn.push('fizz');
+      } else if (array[index] % 5 === 0) {
+        arrayToReturn.push('buzz');
+      } else {
+        arrayToReturn.push('bug!');
+      }
+  }
+  return arrayToReturn;
 }
-
+fizzBuzz 
+console.log(fizzBuzz(array));
 // Desafio 9
 
 function encode(string) {
- string = string.replace(/a/g,1).replace(/e/g,2).replace(/i/g,3).replace(/o/g,4).replace(/u/g,5)
- return string;
+  string = string.replace(/a/g, 1).replace(/e/g, 2).replace(/i/g, 3).replace(/o/g, 4).replace(/u/g, 5)
+  return string;
 }
 console.log(encode("abcdefghijklmnopqrstuvxzaeiou"));
 function decode(string) {
-  string = string.replace(/1/g,'a').replace(/2/g,'e').replace(/3/g,'i').replace(/4/g,'o').replace(/5/g,'u')
-  return string; 
+  string = string.replace(/1/g, 'a').replace(/2/g, 'e').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u')
+  return string;
 }
 console.log(decode("1bcd2fgh3jklmn4pqrst5vxz12345"));
 
