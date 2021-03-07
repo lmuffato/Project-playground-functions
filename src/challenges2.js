@@ -72,12 +72,19 @@ function generatePhoneNumber(numbers) {
 return telephoneNumber
 }
 
-console.log(generatePhoneNumber([1, 2, 18, 0, 5, 3, 17, 8, 9, 1, 8]))
+function triangleCheck(lineA, lineB, lineC) {
 
-// Desafio 12
-function triangleCheck() {
-  // seu código aqui
+let sideA = (Math.abs(lineB - lineC)) < lineA && lineA < (lineB + lineC)
+let sideB = (Math.abs(lineA - lineC)) < lineB && lineB < (lineA + lineC)
+let sideC = (Math.abs(lineA - lineB)) < lineC && lineC < (lineA + lineB)
+
+if (sideA == sideB == sideC == true){
+  return true
+} else {
+  return false
 }
+}
+
 
 // Desafio 13
 function hydrate() {
