@@ -111,12 +111,47 @@ function fizzBuzz(stringNumeros) {
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  let auxiliar = frase.split('');
+  for (let index = 0; index < frase.length; index += 1) {
+    switch (frase[index]) {
+    case 'a':
+      auxiliar[index] = '1'; break;
+    case 'e':
+      auxiliar[index] = '2'; break;
+    case 'i':
+      auxiliar[index] = '3'; break;
+    case 'o':
+      auxiliar[index] = '4'; break;
+    case 'u':
+      auxiliar[index] = '5'; break;
+    default: break;
+    }
+  } return auxiliar.join('');
 }
-function decode() {
-  // seu código aqui
+
+console.log(encode('hi there!'));
+
+function decode(frase) {
+  let auxiliar = frase.split('');
+  for (let index = 0; index < frase.length; index += 1) {
+    switch (frase[index]) {
+    case '1':
+      auxiliar[index] = 'a'; break;
+    case '2':
+      auxiliar[index] = 'e'; break;
+    case '3':
+      auxiliar[index] = 'i'; break;
+    case '4':
+      auxiliar[index] = 'o'; break;
+    case '5':
+      auxiliar[index] = 'u'; break;
+    default: break;
+    }
+  } return auxiliar.join('');
 }
+
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
