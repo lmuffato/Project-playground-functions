@@ -72,11 +72,12 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(drinks) {
-  let amount = drinks.split(' ', 1);
-  if (amount[0] > 1) {
-    return `${amount} copos de água`;
+  let amount = drinks.match(/\d+/g).map(Number);
+  let sum = amount.reduce((acumulador, index) => acumulador + index);
+  if (sum > 1) {
+    return `${sum} copos de água`;
   }
-  return `${amount} copo de água`;
+  return `${sum} copo de água`;
 }
 
 module.exports = {
