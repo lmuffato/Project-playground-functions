@@ -20,8 +20,9 @@ function concatName(value) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+  totalPoints = (wins * 3) + (ties * 1);
+  return totalPoints + " pontos";
 }
 
 // Desafio 6
@@ -74,3 +75,8 @@ console.log(calcArea(51,1));
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 console.log(concatName(['captain', 'my', 'captain']));
+
+// Testando a função footballPoints
+console.log(footballPoints(14,8));
+console.log(footballPoints(1,2));
+console.log(footballPoints(0,0));
