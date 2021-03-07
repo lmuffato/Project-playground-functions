@@ -25,24 +25,22 @@ function footballPoints(win, ties) {
 
 // Desafio 6
 function highestCount(arr) {
-let biggestNumber = findBiggestNumber(arr);
-let countBiggest = countBiggestNumber(arr, biggestNumber);
-} function findBiggestNumber(arr) {
-  let biggestNumber = 0
-  for (let index = 0; index < arr.length; index += 1) {
-    if (arr[index] > biggestNumber) {
-      biggestNumber = arr[ind]
-    }
-    return biggestNumber
+
+let biggestNumber = 0;
+let repetitionCount = 0;
+
+for (let index = 0; index < arr.length; index += 1) {
+  if (arr[index] > biggestNumber) {
+    biggestNumber = arr[index]
   }
-} function countBiggestNumber(arr, biggestNumber) {
-  let repetitionCounter = 0
-  for (let index=0; index<arr.length; index+=1) {
-    if (arr[index] === biggestNumber) {
-     repetitionCounter += 1;
-    }
-    }
-    return repetitionCounter;
+}
+
+for (let index = 0; index < arr.length; index += 1) {
+  if (arr[index] === biggestNumber) {
+    repetitionCount += 1;
+  }
+}
+return repetitionCount;
 }
 
   
