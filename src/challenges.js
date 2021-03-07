@@ -2,7 +2,8 @@
 function compareTrue(param1, param2) {
   if (param1 && param2 === true) {
     return true;
-  } return false;
+  }
+  return false;
   // código do inicio do esclarecimento técnico
 }
 
@@ -14,7 +15,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(str) {
   return str.split(' ');
-// Pesquisei nos sites seguintes: https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254 ,  https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
+  // sites usados como referência https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254 ,  https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
 }
 
 // Desafio 4
@@ -22,21 +23,28 @@ function concatName(arr) {
   // sites usados como referência https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Template_literals, https://www.devmedia.com.br/javascript-concat-concatenando-arrays-e-strings/37964, https://www.devmedia.com.br/javascript-split-dividindo-separando-strings/39254, https://pt.stackoverflow.com/questions/87416/como-retornar-o-%C3%BAltimo-registro-de-um-array-com-javascript-ou-jquery
   return `${arr[arr.length - 1]}, ${arr[0]}`;
 }
+//console.log(concatName(' lucas chaves rodrigues'))
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let ganhou = wins * 3;
-  return ganhou + ties;
+  let games = wins * 3;
+  return games + ties;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(elementArr) {
+  let bigNumber = Math.max(parseInt(elementArr))
+  function number (value) {
+    return value === bigNumber
+  }
+  let retunrNumber =  elementArr.filter(number)
+  return retunrNumber.length
 }
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+
 }
 
 // Desafio 8
@@ -45,7 +53,7 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
+function encode(str) {
   // seu código aqui
 }
 
