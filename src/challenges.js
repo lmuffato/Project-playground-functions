@@ -30,21 +30,17 @@ function footballPoints(wins, ties, score) {
   return score;
 }
 
-// Desafio 6
-function highestCount(conjuntoNumeros, maiorNumero, quantidade) {
-  maiorNumero = 0;
-  quantidade = 0;
+// Desafio 6 - ?Aprendi neste link https://www.youtube.com/watch?v=IY7TRbXLU6c
+function highestCount(conjuntoNumeros) {
+  let quantidadeVezes = 0;
+  let maiorNumero = Math.max(...conjuntoNumeros);
   for (index = 0; index < conjuntoNumeros.length; index += 1) {
-    if (conjuntoNumeros[index] > maiorNumero) {
-      maiorNumero = conjuntoNumeros[index];
-    }
-  }
-  for (index2 = 0; index2 < conjuntoNumeros.length; index2 +=1) {
     if (maiorNumero === conjuntoNumeros[index]) {
-      quantidade = quantidade += 1;
+      quantidadeVezes = quantidadeVezes + 1;
     }
   }
- }
+  return quantidadeVezes;
+}
 
 // Desafio 7
 function catAndMouse() {
