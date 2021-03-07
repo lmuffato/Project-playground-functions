@@ -42,10 +42,10 @@ function highestCount(conjuntoNumeros) {
   return quantidadeVezes;
 }
 
-// Desafio 7
+// Desafio 7 - Entendi melhor sobre o Math.abs neste link https://www.youtube.com/watch?v=DvNeAlmJ3ZU
 function catAndMouse(mouse, cat1, cat2) {
-  let distanciaCat1 = cat1 - mouse;
-  let distanciaCat2 = cat2 - mouse;
+  let distanciaCat1 = Math.abs(mouse - cat1);
+  let distanciaCat2 = Math.abs(mouse - cat2);
   if (distanciaCat1 < distanciaCat2) {
     return 'cat1';
   }
