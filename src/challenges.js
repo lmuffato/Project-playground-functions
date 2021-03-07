@@ -1,11 +1,12 @@
 // Desafio 1
-let result;
 function compareTrue(val1, val2) {
+  let result;
   if (val1 === true && val2 === true) {
     result = true;
   } else {
     result = false;
   }
+  console.log(result);
   return result;
 }
 
@@ -16,14 +17,12 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-split = []
 function splitSentence(frase) {
+  let split = [];
   split = frase.split(' ');
   console.log(split);
   return split;
 }
-
-splitSentence('vamo que vamo');
 
 // Desafio 4
 function concatName() {
