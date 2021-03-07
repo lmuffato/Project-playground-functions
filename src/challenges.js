@@ -55,7 +55,8 @@ function highestCount(numbers) {
 // Desafio 7
 //resolução baseada no codigo da pessoa estudante Daniel Ribeiro, onde foi identificado 
 //a multiplicação dos numeros menores que zero por -1. 
-//https://github.com/tryber/sd-010-a-project-playground-functions/tree/defauth98-project-playground-functions 
+//https://github.com/tryber/sd-010-a-project-playground-functions/tree/defauth98-project-playground-functions
+
 function catAndMouse(mouse, cat1, cat2) {
   let dist1 = cat1 - mouse;
   let dist2 = cat2 - mouse;
@@ -80,11 +81,31 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
+  //joão nascimento : nascjoao-project-playground-functions
+function encode(iText) {
+   let codVowels = { a: 1, e: 2, i: 3, o: 4, u: 5 };
+   let encodeText = '';
+   for (let letter in iText) {
+     if (codVowels[iText[letter]]) {
+       encodeText += codVowels[iText[letter]];
+     } else {
+       encodeText += iText[letter];
+     }
+   }
+   return encodeText;
+ }
+
+function decode(codText) {
+ let codNumbers = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+ let decodedText = '';
+ for (let number in codText) {
+   if (codNumbers[codText[number]]) {
+     decodedText += codNumbers[codText[number]];
+   } else {
+     decodedText += codText[number];
+   }
+ }
+ return decodedText;
 }
 
 module.exports = {
