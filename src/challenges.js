@@ -23,10 +23,11 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayNames) {
-
-  // definir o array em variável
-  // definir uma função com comandos
-  // comandos percorrer e retornar ultimos e prmeiros.
+  let firstWord = arrayNames[0];
+  let lastWord = arrayNames.pop();
+  
+  let lastFirst = firstWord.concat(', ', lastWord);
+  return lastFirst;
 }
 
 // Desafio 5
