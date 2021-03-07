@@ -13,7 +13,7 @@ function techList(tecnologias, nome) {
         tech: arrayTech[index],
         name: nome,
       },
-    ); 
+    );
   }
   return newArray;
 }
