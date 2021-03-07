@@ -28,13 +28,15 @@ function invalidNumbers(arrayNumbers) {
   }
 }
 
-function repeatedNumbers(arrayNumbers) {
+function repeatedNumbers(Numbers) {
   let counter = 0;
-  for (let index of arrayNumbers) {
-    if (arrayNumbers[index] === arrayNumbers[index]) {
-      counter += 1;
-      if (counter >= 3) {
-        return true;
+  for (let index = 0; index < Numbers.length; index += 1) {
+    for (let index2 = 1; index2 < Numbers.length; index2 += 1) {
+      if (Numbers[index] === Numbers[index2]) {
+        counter += 1;
+        if (counter >= 3) {
+          return true;
+        }
       }
     }
   }
@@ -49,7 +51,7 @@ function generatePhoneNumber(phoneNumber) {
   if (invalidNumbers(phoneNumber) === true || repeatedNumbers(phoneNumber) === true) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  return `(${phoneNumber[0]}${phoneNumber[1]}) ${phoneNumber[2]}${phoneNumber[3]}${phoneNumber[4]}${phoneNumber[5]}-${phoneNumber[6]}${phoneNumber[7]}${phoneNumber[8]}${phoneNumber[9]}${phoneNumber[10]}`;
+  return `(${phoneNumber[0]}${phoneNumber[1]}) ${phoneNumber[2]}${phoneNumber[3]}${phoneNumber[4]}${phoneNumber[5]}${phoneNumber[6]}-${phoneNumber[7]}${phoneNumber[8]}${phoneNumber[9]}${phoneNumber[10]}`;
 }
 
 console.log(generatePhoneNumber([1, 2, 8, 0, 5, 3, 7, 8, 9, 1, 8]));
