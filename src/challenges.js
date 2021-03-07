@@ -30,7 +30,7 @@ function footballPoints(wins, ties, score) {
   return score;
 }
 
-// Desafio 6 - ?Aprendi neste link https://www.youtube.com/watch?v=IY7TRbXLU6c
+// Desafio 6 - Entendi melhor sobre o Math.max neste link https://www.youtube.com/watch?v=IY7TRbXLU6c
 function highestCount(conjuntoNumeros) {
   let quantidadeVezes = 0;
   let maiorNumero = Math.max(...conjuntoNumeros);
@@ -58,8 +58,22 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(sequenciaNumeros) {
+  let sequenciaStrings = [];
+  for (lex index = 0; < sequenciaNumeros.length; index += 1) {
+    if (sequenciaNumeros[index] % 3 === 0 && sequenciaNumeros[index] % 5 === 0) {
+      sequenciaStrings.push('fizzBuzz');
+    }
+    if (sequenciaNumeros[index] % 3 === 0) {
+      sequenciaStrings.push('fizz');
+    }
+    if (sequenciaNumeros[index] % 5 === 0) {
+      sequenciaStrings.push('buzz');
+    } else {
+      sequenciaStrings.push('bug!');
+    }
+  }
+  return sequenciaStrings;
 }
 
 // Desafio 9
