@@ -108,7 +108,7 @@ const codString = {
   1: 'a',
   2: 'e',
   3: 'i',
-  4: '0',
+  4: 'o',
   5: 'u',
 };
 function encode(codStringCodif) { // Porque isso nao passa no lint
@@ -133,6 +133,7 @@ function decode(codStringDecodif) { // Porque isso nao passa no lint
   }
   return arrayDecodif.join('');
 }
+console.log(encode("hello"))
 
 module.exports = {
   calcArea,
