@@ -2,10 +2,9 @@
 function compareTrue(bolean1, bolean2) {
   if (bolean1 && bolean2 === true){
     return true
-  } else {
-    return false
-  }
-}
+  } 
+  return false
+};
 
 
 function calcArea(base, height) {
