@@ -100,9 +100,16 @@ function hydrate(text) {
     sumNumberos += Number(numberos[index])
   }
   
+  if (sumNumberos === 1){
+  return sumNumberos + " copo de água"
+  
+  }
+
   return sumNumberos + " copos de água"
+  
 }
 
+console.log(hydrate('1 cerveja'))
 
 module.exports = {
   generatePhoneNumber,
