@@ -1,12 +1,46 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(technology, name) {
+  if (technology.length === 0) {
+    return 'Vazio!';
+  };
+  let techsort = technology.sort();
+  let techs = [];
+  for (let index in techsort) {
+    techs.push ({
+      tech: techsort[index],
+      name: name,
+    });
+  }
+  return techs;
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numbers) {
+  let index = 0;
+  let repetition = numbers[index];
+  let number = '';
+  let count = 0;
+  if (numbers.length !== 11) {
+    console.log ("Array com tamanho incorreto.");
+  }
+  for (index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] < 0 || numbers[index] > 9){
+      console.log('não é possível gerar um número de telefone com esses valores');
+    } else if (repetition === numbers[index]) {
+      count += 1;
+    }
+  } if (count >= 3){
+      console.log('não é possível gerar um número de telefone com esses valores');
+  }
 }
+
+function phoneDivision (numbers){
+  let ddd = numbers[0] + numbers[1];
+  let firstPartPhone = numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6];
+  let secondPartPhone = numbers[7] + numbers[8] + numbers[9] + numbers[10];
+  console.log('(' + ddd + ')' + ' ' + firstPartPhone + '-' + secondPartPhone);
+}
+
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {

@@ -37,7 +37,8 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-// Após tentar resolver com uma função for dentro da outra e não ter conseguido, percebi outra forma mais fácil de resolver me inspirando no print do código da Gal da turma 09 no slack
+// Após tentar resolver com uma função for dentro da outra e não ter conseguido, percebi outra forma mais fácil de resolver tomando como direcao o print do código da Gal da turma 09 no slack
+// https://trybecourse.slack.com/archives/C01DJFH0DNW/p1607010243137100?thread_ts=1607007991.123300&cid=C01DJFH0DNW
 function highestCount(array) {
   let count = 0;
   let ordem = array.sort();
