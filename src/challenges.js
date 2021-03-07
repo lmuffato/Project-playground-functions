@@ -75,30 +75,29 @@ function fizzBuzz(divisibleNumbers) {
 function encode(encript) {
   let fraseEncode = '';
   let alt = {
-      a: 1,
-      e: 2,
-      i: 3,
-      o: 4,
-      u: 5,
-    } 
-      for (let cript of encript) {
-      if (alt[cript]) {
-      fraseEncode += alt[cript]
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+    };
+    for (let cript of encript) {
+    if (alt[cript]) {
+      fraseEncode += alt[cript];
     } else {
-      fraseEncode += cript
+      fraseEncode += cript;
     }
   } return fraseEncode;
 }
-console.log(encode("hi, there"))
 
 function decode(decript) {
-    let fraseDecode = '';
-    let alt = {
-        1: 'a',
-        2: 'e',
-        3: 'i',
-        4: 'o',
-        5: 'u',
+  let fraseDecode = '';
+  let alt = {
+      1: 'a',
+      2: 'e',
+      3: 'i',
+      4: 'o',
+      5: 'u',
       } 
         for (let uncript of decript) {
         if (alt[uncript]) {
