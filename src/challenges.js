@@ -34,9 +34,9 @@ function footballPoints(wins, ties, score) {
 function highestCount(conjuntoNumeros) {
   let quantidadeVezes = 0;
   let maiorNumero = Math.max(...conjuntoNumeros);
-  for (index = 0; index < conjuntoNumeros.length; index += 1) {
+  for (let index = 0; index < conjuntoNumeros.length; index += 1) {
     if (maiorNumero === conjuntoNumeros[index]) {
-      quantidadeVezes = quantidadeVezes + 1;
+      quantidadeVezes += 1;
     }
   }
   return quantidadeVezes;
