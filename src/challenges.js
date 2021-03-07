@@ -116,7 +116,6 @@ function encode(string) {
   }
   return phrase;
 } 
-console.log(encode('Ola tudo bem?'));
 
 let code = {
   a: 1,
@@ -125,6 +124,7 @@ let code = {
   o: 4,
   u: 5
 }
+
 function decode(string) {
   let phrase = string;
   
@@ -135,7 +135,6 @@ function decode(string) {
   }
   return phrase;
 }
-console.log(decode('Ol1 t5d4 b2m?'));
 
 module.exports = {
   calcArea,
