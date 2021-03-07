@@ -28,8 +28,9 @@ function highestCount(arr) {
 let biggestNumber = findBiggestNumber(arr);
 let countBiggest = countBiggestNumber(arr, biggestNumber);
 } function findBiggestNumber(arr) {
-  for (let ind = 0; ind < arr.length; ind += 1) {
-    if (arr[ind] > biggestNumber) {
+  let biggestNumber = 0
+  for (let index = 0; index < arr.length; index += 1) {
+    if (arr[index] > biggestNumber) {
       biggestNumber = arr[ind]
     }
     return biggestNumber
