@@ -86,10 +86,23 @@ if (sideA == sideB == sideC == true){
 }
 
 
-// Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(text) {
+
+  let filter = /\d+/g;
+
+  //let filter found in https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994, author jesterjunk answered May 11 '15 at 6:36
+  
+  let numberos = text.match(filter);
+  
+  let sumNumberos = 0; 
+  
+  for (index = 0; index < numberos.length; index += 1){
+    sumNumberos += Number(numberos[index])
+  }
+  
+  return sumNumberos + " copos de água"
 }
+
 
 module.exports = {
   generatePhoneNumber,
