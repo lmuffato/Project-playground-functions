@@ -1,10 +1,9 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 == true && value2 == true) {  
+  if (value1 && value2) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -20,7 +19,7 @@ function splitSentence(string_1) {
 
 // Desafio 4
 function concatName(myArray) {
-  
+
   return myArray[myArray.length-1] + ', ' + myArray[0];
 }
 
@@ -37,22 +36,32 @@ function highestCount(numberArray) {
   for (let index = 1; index < numberArray.length; index += 1) {
     if (highest < numberArray[index]) {
       highest = numberArray[index];
-    } 
+    }
   }
 
   let equal = 0;
 
   for (let index = 0; index < numberArray.length; index += 1) {
-    if (highest === numberArray[index]) equal += 1;    
+    if (highest === numberArray[index]) equal += 1;
   }
-  
+
   return equal;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(mouse, cat1, cat2) {
+// referência de lógica do Anderson Silva (Andy) Tribo A - Turma 10
+let distanceCat1 = (mouse - cat1);
+let distanceCat2 = (mouse - cat2);
+
+  if (distanceCat1 > distanceCat2) {
+    return 'cat2';
+  } else if (distanceCat2 > distanceCat1){
+    return 'cat1';
+  } else (distanceCat1 === distanceCat2)
+    return 'Os gatos se trombam, e o rato foge';
+  }
+
 
 // Desafio 8
 function fizzBuzz() {
