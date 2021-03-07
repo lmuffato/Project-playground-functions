@@ -71,8 +71,8 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  return `${drinks.split(' ', 1)} copos de água`;
 }
 
 module.exports = {
