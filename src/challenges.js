@@ -1,20 +1,18 @@
 // Desafio 1
 function compareTrue(bolean1, bolean2) {
-  if (bolean1 && bolean2 === true){ 
+  if (bolean1 && bolean2 === true) {
     return true;
   }
   return false;
 }
 
 function calcArea(base, height) {
-  return (base*height)/2
+  return (base * height) / 2;
 }
-
 
 function splitSentence(phrase) {
   return phrase.split(' ');
 }
-
 
 function concatName(arrayPhrase) {
 
