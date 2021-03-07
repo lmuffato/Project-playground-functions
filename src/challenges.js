@@ -25,8 +25,9 @@ function concatName(myArray) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+  let points = 0;
+  return  points = (wins*3)+(ties*1);
 }
 
 // Desafio 6
@@ -52,9 +53,8 @@ function decode() {
   // seu código aqui
 }
 
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
- 
+
 module.exports = {
   calcArea,
   catAndMouse,
