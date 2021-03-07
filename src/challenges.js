@@ -46,15 +46,17 @@ function highestCount(values) {
 
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
-  if (cat1 - mouse < cat2 - mouse) {
+  let distance1 = cat1 - mouse
+  let distance2 = cat2 - mouse
+  if (distance1 < distance2) {
     return 'cat1';
-  } else if (cat2 - mouse < cat1 - mouse) {
+  } else if (distance2 < distance1) {
     return 'cat2';
   } return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
-let fizzOrBuzz = []
+let fizzOrBuzz = [];
 function fizzBuzz(divisibleNumbers) {
   for(let currentDivisible in divisibleNumbers) {
     if (divisibleNumbers[currentDivisible] % 3 && divisibleNumbers[currentDivisible] % 5 === 0) {
@@ -66,7 +68,7 @@ function fizzBuzz(divisibleNumbers) {
     } else {
       fizzOrBuzz.push("bug")
     }
-  } return fizzOrBuzz
+  } return fizzOrBuzz;
 } console.log(fizzBuzz([2, 15, 7, 9, 45]))
 
 // Desafio 9
