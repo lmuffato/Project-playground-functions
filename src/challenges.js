@@ -149,6 +149,21 @@ function techList(tech, name) {
   return technologies;
 }
 
+// Desafio 11
+function generatePhoneNumber() {
+  // código
+}
+
+// Desafio 12
+function triangleCheck() {
+  // código
+}
+
+// Desafio 13
+function hydrate() {
+  // código
+}
+
 module.exports = {
   calcArea,
   catAndMouse,
@@ -160,5 +175,8 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
+  generatePhoneNumber,
   techList,
+  hydrate,
+  triangleCheck,
 };
