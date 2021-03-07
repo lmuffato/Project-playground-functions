@@ -84,11 +84,31 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function validaDivisibilidade(stringNumeros) {
+  let fizzBuzzLightYear;
+  if (stringNumeros % 3 === 0 && stringNumeros % 5 === 0) {
+    fizzBuzzLightYear = 'fizzBuzz';
+  } else if ((stringNumeros % 5) === 0) {
+    fizzBuzzLightYear = 'buzz';
+  } else if (stringNumeros % 3 === 0) {
+    fizzBuzzLightYear = 'fizz';
+  } else {
+    fizzBuzzLightYear = 'bug!';
+  }
+  return fizzBuzzLightYear;
 }
 
-console.log(fizzBuzz());
+function fizzBuzz(stringNumeros) {
+  let respostaFizzBuzz = [];
+  let recebeFuncAnterior;
+  for (let index = 0; index < stringNumeros.length; index += 1) {
+    recebeFuncAnterior = validaDivisibilidade(stringNumeros[index]);
+    respostaFizzBuzz.push(recebeFuncAnterior);
+  }
+  return respostaFizzBuzz;
+}
+
+console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode() {
