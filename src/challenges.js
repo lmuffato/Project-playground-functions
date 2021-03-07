@@ -130,7 +130,7 @@ function decode(string) {
 }
 
 // Desafio 10
-function technologyList(technologiesList, name) {
+function techList(technologiesList, name) {
   if (technologiesList.length === 0) {
     return 'Vazio!';
   }
@@ -160,5 +160,5 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-  technologyList,
+  techList,
 };
