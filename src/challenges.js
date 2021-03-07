@@ -2,9 +2,9 @@
 function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
+ 
 }
 
 // Desafio 2
@@ -18,10 +18,8 @@ function splitSentence(string) {
   let splited = [];
   splited = string.split(' ');
 
-  return console.log(splited)
+  return splited;
 }
-
-splitSentence('foguete');
 
 // Desafio 4
 function concatName(arrayNames) {
