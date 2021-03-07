@@ -3,12 +3,12 @@ function techList(arrayIn, name) {
   let exitArray = [];
   let obj = {};
   if (arrayIn.length === 0) {
-    exitArray = 'Vazio!'
+    exitArray = 'Vazio!';
   } else {
     for (let key in arrayIn) {
       obj = {
         tech: arrayIn[key],
-        name: name,
+        name: name
       };
       exitArray.push(obj);
     }
@@ -16,11 +16,9 @@ function techList(arrayIn, name) {
   return exitArray;
 }
 
-techList(['react','ruby','javascript'],'lucas');
 // Desafio 11
 function generatePhoneNumber() {
-  
-}
+  }
 
 // Desafio 12
 function triangleCheck() {
