@@ -64,14 +64,14 @@ function fizzBuzz(numbers) {
   let resultado = [];
   for (let index = 0; index < numbers.length; index += 1) {
 
-    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0){
-      resultado.push('fizzBuzz');     
-    } else if (numbers[index] % 3 === 0){
-      resultado.push('fizz'); 
-    } else if (numbers[index] % 5 === 0){
-      resultado.push('buzz'); 
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+      resultado.push('fizzBuzz');
+    } else if (numbers[index] % 3 === 0) {
+      resultado.push('fizz');
+    } else if (numbers[index] % 5 === 0) {
+      resultado.push('buzz');
     } else {
-      resultado.push('bug!'); 
+      resultado.push('bug!');
     }
   }
   return resultado;
@@ -92,7 +92,7 @@ function encode(text) {
       arrayPhrase.push(4);
     } else if (text[index] === 'u') {
       arrayPhrase.push(5);
-    } else  {
+    } else {
       arrayPhrase.push(text[index]);
     }
   }
@@ -103,7 +103,7 @@ function encode(text) {
 function decode(text) {
   let arrayPhrase = [];
 
-  for (let index = 0; index < text.length; index += 1){
+  for (let index = 0; index < text.length; index += 1) {
     if (text[index] === '1') {
       arrayPhrase.push('a');
     } else if (text[index] === '2') {
