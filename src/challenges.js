@@ -83,7 +83,7 @@ let resultado = [];
 function encode(text) {
 let arrayPhrase = [];
 
-for (let index = 0; index < text.length; index += 1){
+  for (let index = 0; index < text.length; index += 1) {
 
   if (text[index] === "a") {
     arrayPhrase.push(1);
