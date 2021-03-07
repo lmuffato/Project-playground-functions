@@ -24,6 +24,8 @@ function generatePhoneNumber(numbers) {
   let telephoneNumber;
 
   let lowerNumber = Math.min.apply(Math,numbers)
+
+  let maxNumber = Math.max.apply(Math,numbers)
   
   let repeatedNumber = 0;
   
@@ -50,7 +52,7 @@ function generatePhoneNumber(numbers) {
   
   if (numbers.length > 11 || numbers.length < 11){
     telephoneNumber = "Array com tamanho incorreto.";
-  } else if (lowerNumber < 0 || comparedNumber > 2){
+  } else if (lowerNumber < 0 || comparedNumber > 2 || maxNumber > 9){
     telephoneNumber = "não é possível gerar um número de telefone com esses valores";
   } else {
     telephoneNumber = "("
@@ -69,6 +71,8 @@ function generatePhoneNumber(numbers) {
 
 return telephoneNumber
 }
+
+console.log(generatePhoneNumber([1, 2, 18, 0, 5, 3, 17, 8, 9, 1, 8]))
 
 // Desafio 12
 function triangleCheck() {
