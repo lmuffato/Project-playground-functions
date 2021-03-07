@@ -19,7 +19,7 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(arrayStrings) {
   let lastItem = (arrayStrings.length - 1);
-    return (arrayStrings[lastItem] + ', ' + arrayStrings[0]);
+  return (arrayStrings[lastItem] + ', ' + arrayStrings[0]);
 }
 
 // Desafio 5
@@ -47,12 +47,10 @@ function highestCount(values) {
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
   if (cat1 - mouse < cat2 - mouse) {
-    return("cat1")
+    return 'cat1';
   } else if (cat2 - mouse < cat1 - mouse) {
-    return("cat2")
-  } else {
-    return("os gatos trombam e o rato foge")
-  }
+    return 'cat2';
+  } return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
