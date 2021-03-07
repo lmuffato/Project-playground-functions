@@ -60,7 +60,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(sequenciaNumeros) {
   let sequenciaStrings = [];
-  for (lex index = 0; < sequenciaNumeros.length; index += 1) {
+  for (let index = 0; < sequenciaNumeros.length; index += 1) {
     if (sequenciaNumeros[index] % 3 === 0 && sequenciaNumeros[index] % 5 === 0) {
       sequenciaStrings.push('fizzBuzz');
     }
