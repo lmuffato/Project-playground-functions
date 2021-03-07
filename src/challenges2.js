@@ -1,8 +1,8 @@
 // Desafio 10
-//Este código fiz com ajuda da Elisa França.
+// Este código fiz com ajuda da Elisa França.
 // Usei também o W3School para aprender sobre o sort.
 function techList(tech, name) {
-  if(tech.length === 0) {
+  if (tech.length === 0) {
     return 'Vazio!';
   }
   let tecno = tech.sort();
@@ -12,7 +12,7 @@ function techList(tech, name) {
       {
         tech: tecno[index],
         name,
-      }
+      },
     );
   }
   return techSortList;
