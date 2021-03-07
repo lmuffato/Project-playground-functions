@@ -57,13 +57,13 @@ function catAndMouse(cat1, cat2, mouse) {
 
 // Desafio 8
 let fizzOrBuzz = [];
-function fizzBuzz(divisibleNumbers) {
-  for (let currentDivisible in divisibleNumbers) {
-    if (divisibleNumbers[currentDivisible] % 3 === 0 && divisibleNumbers[currentDivisible] % 5 === 0) {
+function fizzBuzz(divisible) {
+  for (let currentNumber in divisible) {
+    if (divisible[currentNumber] % 3 === 0 && divisible[currentNumber] % 5 === 0) {
       fizzOrBuzz.push('fizzBuzz');
-    } else if (divisibleNumbers[currentDivisible] % 3 === 0) {
+    } else if (divisible[currentNumber] % 3 === 0) {
       fizzOrBuzz.push('fizz');
-    } else if (divisibleNumbers[currentDivisible] % 5 === 0) {
+    } else if (divisible[currentNumber] % 5 === 0) {
       fizzOrBuzz.push('buzz');
     } else {
       fizzOrBuzz.push('bug!');
@@ -98,15 +98,15 @@ function decode(decript) {
       3: 'i',
       4: 'o',
       5: 'u',
-      } 
-        for (let uncript of decript) {
-        if (alt[uncript]) {
-        fraseDecode += alt[uncript]
-      } else {
-        fraseDecode += uncript
-      }
-    } return fraseDecode;
-  } console.log(decode("h3, th2r2"))
+    } 
+      for (let uncript of decript) {
+      if (alt[uncript]) {
+      fraseDecode += alt[uncript]
+    } else {
+      fraseDecode += uncript
+    }
+  } return fraseDecode;
+}
 
 module.exports = {
   calcArea,
