@@ -1,4 +1,5 @@
 // Desafio 10
+// parte do push do objeto feito a partir da lógica do video do plantão dado pelo Isaac da turma 9 - https://trybecourse.slack.com/files/U0192L1KL5U/F01G1FJET51/chsd009_-_dia_5.1_-_plant__o_18h_-_isaac.mp4?origin_team=TMDDFEPFU&origin_channel=C01L16B9XC7
 function techList(technology, name) {
   if (technology.length === 0) {
     return 'Vazio!';
