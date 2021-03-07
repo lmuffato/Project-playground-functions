@@ -44,8 +44,8 @@ function highestCount(numbers) {
       maxNumber = numbers[index];
       }
        }  
-  for (index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] === maxNumber) {
+  for (let indexM = 0; indexM < numbers.length; indexM += 1) {
+    if (numbers[indexM] === maxNumber) {
       count += 1;
     }
   }
