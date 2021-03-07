@@ -113,24 +113,71 @@ function fizzBuzz(arrayOfNumbers) {
   return array;
 }
 
-// Crie duas funções: a primeira deverá se chamar `encode` e, ao receber uma string como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
-
-// a -> 1 \
-// e -> 2 \
-// i -> 3 \
-// o -> 4 \
-// u -> 5
-
 // Challenge 9
-function encode(string) {
 
+function isVowel(string) {
+  let vowels = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  let vowel = '';
+
+  for (let key in vowels) {
+    if (string === key) {
+      vowel = vowels[key];
+    }
+  }
+  return vowel;
+}
+
+function isNumber(string) {
+  let vowels = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  let vowel = '';
+
+  for (let key in vowels) {
+    if (string === key) {
+      vowel = vowels[key];
+    }
+  }
+  return vowel;
+}
+
+function encode(string) {
+  let newString = '';
+
+  for (let index = 0; index < string.length; index += 1) {
+    let vowel = isVowel(string[index]);
+    if (vowel !== '') {
+      newString += vowel;
+    } else {
+      newString += string[index];
+    }
+  }
+  return newString;
 }
 
 function decode(string) {
+  let newString = '';
 
+  for (let index = 0; index < string.length; index += 1) {
+    let number = isNumber(string[index]);
+    if (number !== '') {
+      newString += number;
+    } else {
+      newString += string[index];
+    }
+  }
+  return newString;
 }
-
-
 
 module.exports = {
   calcArea,
