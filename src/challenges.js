@@ -30,15 +30,21 @@ function footballPoints(wins, ties, score) {
   return score;
 }
 
-// Desafio 6 - Aprendi no site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
+// Desafio 6
 function highestCount(conjuntoNumeros, maiorNumero, quantidade) {
-  maiorNumero = Math.max.apply(null, conjuntoNumeros);
+  maiorNumero = 0;
+  quantidade = 0;
   for (index = 0; index < conjuntoNumeros.length; index += 1) {
-    if (maiorNumero === conjuntoNumeros[index]) {
-      quantidade = quantidade + 1;
+    if (conjuntoNumeros[index] > maiorNumero) {
+      maiorNumero = conjuntoNumeros[index];
     }
   }
-}
+  for (index2 = 0; index2 < conjuntoNumeros.length; index2 +=1) {
+    if (maiorNumero === conjuntoNumeros[index]) {
+      quantidade = quantidade += 1;
+    }
+  }
+ }
 
 // Desafio 7
 function catAndMouse() {
