@@ -10,7 +10,8 @@ function techList(array, name) {
   for (let index = 0; index < arraySorted.length; index += 1) {
     objectArray.push({
       tech: array[index],
-      name });
+      name
+    });
   }
   return objectArray;
 }
@@ -44,9 +45,9 @@ function generatePhoneNumber(array) {
   let phoneNumber = '';
   if (array.length === 11) {
     for (let index = 0; index < array.length; index += 1) {
-    if (array[index] < 0 || array[index] > 9 || numbersRepetitionVerificator(array)) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
+      if (array[index] < 0 || array[index] > 9 || numbersRepetitionVerificator(array)) {
+        return 'não é possível gerar um número de telefone com esses valores';
+      }
       phoneNumber += array[index];
     }
     phoneNumber = phoneNumber.substring(0, 0) + '(' + phoneNumber.substring(0, phoneNumber.length);
@@ -58,11 +59,23 @@ function generatePhoneNumber(array) {
   return 'Array com tamanho incorreto.';
 }
 
-console.log(generatePhoneNumber([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let sum = 0;
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+    sum += 1;
+  }
+  if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
+    sum += 1;
+  }
+  if (lineC < lineA + lineA && lineC > Math.abs(lineA - lineB)) {
+    sum += 1;
+  }
+  if (sum === 3) {
+    return true
+  }
+  return false;
+
 }
 
 // Desafio 13
