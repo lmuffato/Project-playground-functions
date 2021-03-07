@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 1
 function compareTrue(value1, value2) {
   // seu código aqui
@@ -68,8 +69,24 @@ function catAndMouse(Mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+// eslint-disable-next-line complexity
+// eslint-disable-next-line sonarjs/cognitive-complexity
+// eslint-disable-next-line complexity
+function fizzBuzz(array) {
   // seu código aqui
+  let result = [];
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] % 5 === 0 && array[index] % 3 === 0) {
+      result.push('fizzbuzz');
+    } else if (array[index] % 3 === 0) {
+      result.push('fizz');
+    } else if (array[index] % 5 === 0) {
+      result.push('buzz');
+    } else {
+      result.push('bug');
+    }
+  }
+  return result;
 }
 
 // Desafio 9
