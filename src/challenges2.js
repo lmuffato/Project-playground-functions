@@ -115,9 +115,9 @@ function sidesDiffCheck(lineA, lineB, lineC) {
   let itsValid = true;
 
   if (
-    lineA < differenceSidesA ||
-    lineB < differenceSidesB ||
-    lineC < differenceSidesC
+    lineA < differenceSidesA
+    || lineB < differenceSidesB
+    || lineC < differenceSidesC
   ) {
     itsValid = false;
   }
@@ -126,14 +126,14 @@ function sidesDiffCheck(lineA, lineB, lineC) {
 
 function triangleCheck(lineA, lineB, lineC) {
   if (
-    sidesSumCheck(lineA, lineB, lineC) === true &&
-    sidesDiffCheck(lineA, lineB, lineC) === true
+    sidesSumCheck(lineA, lineB, lineC) === true
+    && sidesDiffCheck(lineA, lineB, lineC) === true
   ) {
     return true;
   }
   if (
-    sidesSumCheck(lineA, lineB, lineC) === false ||
-    sidesDiffCheck(lineA, lineB, lineC) === false
+    sidesSumCheck(lineA, lineB, lineC) === false
+    || sidesDiffCheck(lineA, lineB, lineC) === false
   ) {
     return false;
   }
