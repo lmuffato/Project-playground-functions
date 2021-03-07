@@ -110,9 +110,9 @@ function encode(string) {
   for (let key in code) {
     let regex = `${key}`;
     phrase = phrase.replace(RegExp(regex, 'g'), code[key]);
-}
+  }
   return phrase;
-} 
+}
 
 let code2 = {
   a: 1,
@@ -131,7 +131,7 @@ function decode(string) {
     phrase = phrase.replace(RegExp(code2[key], 'g'), regex);
   }
   return phrase;
-};
+}
 
 module.exports = {
   calcArea,
