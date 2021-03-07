@@ -18,52 +18,10 @@ function techList(nomeTech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(listNumber) {
-  let listFirstPhone = [];
-  let listDDDPhone = [];
-  let listLastPhone = [];
-  let delimitador = 0;
-
-  if (listNumber.length > 11 || listNumber.length < 11) {
-    return 'Array com tamanho incorreto.';
-  } if (testListPhone(listNumber) === true) {
-    return 'não é possível gerar um número de telefone com esses valores';
-  }
-  for (let index = 0; index < 4; index += 1) {
-    if (index === 0) {
-      listDDDPhone[index] = '(';
-      delimitador += 1;
-    } else if (index === 3) {
-      listDDDPhone[index] = ')';
-      delimitador += 1;
-    } else {
-      listDDDPhone[index] = listNumber[index - delimitador];
-    }
-  }
-  for (let index = 4; index < 9; index += 1) {
-    listFirstPhone[index] = listNumber[index - delimitador];
-  }
-  for (let index = 9; index < listNumber.length + delimitador; index += 1) {
-    listLastPhone[index] = listNumber[index - delimitador];
-  }
-  listFirstPhone = listFirstPhone.join('');
-  listDDDPhone = listDDDPhone.join('');
-  listLastPhone = listLastPhone.join('');
-  return `${listDDDPhone} ${listFirstPhone}-${listLastPhone}`;
-}
-function testListPhone(listNumber) {
-  let numberZero = false;
-  let bigNumber = false;
-  let repetTree = false;
+function testListPhoneRepete(listNumber) {
   let contRepete = 0;
   let numberRepet = 0;
-
   for (let index = 0; index < listNumber.length; index += 1) {
-    if (listNumber[index] < 0) {
-      numberZero = true;
-    } else if (listNumber[index] > 9) {
-      bigNumber = true;
-    }
     for (let indexTwo = 0; indexTwo < listNumber.length; indexTwo += 1) {
       if (listNumber[index] === listNumber[indexTwo]) {
         contRepete += 1;
@@ -74,15 +32,66 @@ function testListPhone(listNumber) {
     }
     contRepete = 0;
   }
-
   if (numberRepet >= 3) {
-    repetTree = true;
+    return true
+  } else {
+    return false
   }
-  if (numberZero === true || bigNumber === true || repetTree === true) {
+}
+function testListPhoneZeroNine(listNumber) {
+  let bigNumber = false;
+  let numberZero = false;
+  for (let indexOne = 0; indexOne < listNumber.length; indexOne += 1) {
+    if (listNumber[indexOne] < 0) {
+      numberZero = true;
+    } else if (listNumber[indexOne] > 9) {
+      bigNumber = true;
+    }
+  }
+  if (bigNumber === false || numberZero === false) {
+    return false;
+  } else {
     return true;
   }
-  return false;
 }
+function testListPhone(listNumber) {
+  if (testListPhoneZeroNine(listNumber) === true || testListPhoneRepete(listNumber) === true) {
+    return true;
+  } else {
+    return false;
+  }
+}
+function phoneDDDNumber(listNumber) {
+  let listDDDPhone = ['(', '0', '0', ')'];
+  for (let index = 0; index < 2; index += 1) {
+    listDDDPhone[index + 1] = listNumber[index];
+  }
+  return listDDDPhone.join('');
+}
+function phoneFirstNumber(listNumber) {
+  let listFirstPhone = [];
+  for (let index = 2; index < 7; index += 1) {
+    listFirstPhone.push(listNumber[index]);
+  }
+  return listFirstPhone.join('');
+}
+function phoneLastNumber(listNumber) {
+  let listLastPhone = [];
+  for (let index = 7; index < listNumber.length; index += 1) {
+    listLastPhone.push(listNumber[index]);
+  }
+  return listLastPhone.join('');
+}
+function generatePhoneNumber(listNumber) {
+  if (listNumber.length > 11 || listNumber.length < 11) {
+    return 'Array com tamanho incorreto.';
+  } else if (testListPhone(listNumber) === true) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  } else {
+    return phoneDDDNumber(listNumber) + ' ' + phoneFirstNumber(listNumber) + '-' + phoneLastNumber(listNumber);
+  }
+}
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
