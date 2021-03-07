@@ -27,7 +27,7 @@ function invalidNumbers(arrayNumbers) {
     }
   }
 }
-
+// função retirada desse link https://pt.stackoverflow.com/questions/484146/como-contar-ocorr%C3%AAncias-de-um-valor-dentro-de-um-array
 function repeatedNumbers(array) {
   for (let index = 0; index < array.length; index += 1) {
     const element = array[index];
@@ -37,8 +37,6 @@ function repeatedNumbers(array) {
     }
   }
 }
-
-// console.log(repeatedNumbers([0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4]));
 
 function generatePhoneNumber(phoneNumber) {
   if (phoneNumber.length !== 11) {
@@ -50,11 +48,26 @@ function generatePhoneNumber(phoneNumber) {
   return `(${phoneNumber[0]}${phoneNumber[1]}) ${phoneNumber[2]}${phoneNumber[3]}${phoneNumber[4]}${phoneNumber[5]}${phoneNumber[6]}-${phoneNumber[7]}${phoneNumber[8]}${phoneNumber[9]}${phoneNumber[10]}`;
 }
 
-// console.log(generatePhoneNumber([1, 2, 8, 0, 5, 3, 7, 8, 9, 1, 8]));
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function sumCheck(lineA, lineB, lineC) {
+  if (lineA + lineB > lineC || lineA + lineC > lineB || lineB + lineC > lineA) {
+    return false;
+  }
+  return true;
+}
+
+function diferenceCheck(lineA, lineB, lineC) {
+  if (Math.abs(lineA - lineB) > lineC || Math.abs(lineA - lineC) > lineB || Math.abs(lineB - lineC) > lineA) {
+    return false;
+  }
+  return true;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  if (sumCheck(lineA, lineB, lineC) === false && diferenceCheck(lineA, lineB, lineC) === false) {
+    return false;
+  }
+  return true;
 }
 
 // Desafio 13
