@@ -15,16 +15,31 @@ function techList(arrayIn, name) {
   }
   return exitArray;
 }
+console.log(techList([], 'lucas'));
 
 // Desafio 11
-function generatePhoneNumber() {
-  }
+function generatePhoneNumber(numbersArray) {
 
-// Desafio 12
-function triangleCheck() {
-  // seu código aqui
 }
 
+// Desafio 12
+function triangleCheck(lineA, lineB, lineC) {
+  let result = true;
+  let objRules = {
+    case1: lineA + lineB,
+    case2: lineA + lineC,
+    case3: lineB + lineC,
+    case4: Math.abs(lineA - lineB),
+    case5: Math.abs(lineA - lineC),
+    case6: Math.abs(lineB - lineC)
+  };
+  if (objRules.case1 < lineC || objRules.case2 < lineB || objRules.case3 < lineA || objRules.case4 > lineC ||
+    objRules.case5 > lineB || objRules.case6 > lineC) {
+    result = false;
+  }
+  return result;
+}
+console.log(triangleCheck(3,4,8));
 // Desafio 13
 function hydrate() {
   // seu código aqui
