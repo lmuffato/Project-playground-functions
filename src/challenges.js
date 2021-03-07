@@ -17,20 +17,27 @@ function calcArea(base, height) {
 console.log(calcArea(10, 50));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(sentence) {
+  sentence = sentence.split(' ');
+  return sentence
 }
+console.log('foguete trybe')
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(words) {
+  for (index = 0; index < words.length; index = index + 1) {
+    let firstWord = words[0];
+    let lastWord = words.length - 1; 
+    return firstWord + ' ' + lastWord;
+  }
 }
+console.log(concatName("André", "Augusto", "Dias", "Aguilar"));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let vitorias = wins * 3;
-  let empates = ties * 1;
-  let totalPontos = vitorias + empates;
+  let pontuacaoVitorias = wins * 3;
+  let pontuacaoEmpates = ties * 1;
+  let totalPontos = pontuacaoVitorias + pontuacaoEmpates;
   return totalPontos
 }
 console.log(footballPoints(14,8));
