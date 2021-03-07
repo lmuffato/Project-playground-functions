@@ -60,24 +60,20 @@ function numberCheckCorrect(numberArray) {
   return true;
 }
 
-// Na função numbersCount eu utilizei parte do código da Marília Cegalla onde ela usa essa lógica para percorrer o array e fazer a contagem do número de vezes iguais.
+// Na função numbersRepeater eu utilizei parte do código da Marília Cegalla onde ela usa essa lógica para percorrer o array e fazer a contagem do número de vezes iguais.
 
-function numbersCount(numbersArray) {
+function numberRepeater(numberArray) {
+  let checkNumber = numberArray.sort();
   let sameNumberTimes = 0;
-  let checkNumber = numbersArray.slice().sort();
-  for (let index = 0; index < (checkNumber.length - 1); index += 1) {
+  for (let index = 0; index < (checkNumber.length); index += 1) {
     if (checkNumber[index] === checkNumber[(index + 1)]) {
       sameNumberTimes += 1;
+      if (sameNumberTimes === 3) {
+        return false;
+      }
     } else {
       sameNumberTimes = 1;
     }
-  }
-  return sameNumberTimes;
-}
-
-function numberRepeater(numberArray) {
-  if (numbersCount(numberArray) >= 3) {
-    return false;
   }
   return true;
 }
