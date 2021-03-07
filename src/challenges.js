@@ -24,16 +24,22 @@ function footballPoints(win, ties) {
 }
 
 // Desafio 6
-function highestCount(numbers) {
-  let highestNumber = Math.max(...[numbers]);
-  let repetitionCounter = 0;
-  for (let index=0; index<numbers.length; index+=1) {
-    if (numbers[index] === highestNumber) {
-    repetitionCounter += 1;
+function highestCount(arr) {
+let biggestNumber = findBiggestNumber(arr);
+let countBiggest = countBiggestNumber(arr, biggestNumber);
+} function findBiggestNumber(arr) {
+  return Math.max(...arr)
+} function countBiggestNumber(arr, biggestNumber) {
+  let repetitionCounter = 0
+  for (let index=0; index<arr.length; index+=1) {
+    if (arr[index] === biggestNumber) {
+     repetitionCounter += 1;
     }
-  }
-  return repetitionCounter;
+    }
+    return repetitionCounter;
 }
+
+  
 
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
