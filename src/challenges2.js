@@ -63,7 +63,7 @@ function numberCheckCorrect(numberArray) {
 // Na função numbersRepeater eu utilizei parte do código da Marília Cegalla onde ela usa essa lógica para percorrer o array e fazer a contagem do número de vezes iguais.
 
 function numberRepeater(numberArray) {
-  let checkNumber = numberArray.sort();
+  let checkNumber = numberArray.slice().sort();
   let sameNumberTimes = 0;
   for (let index = 0; index < (checkNumber.length); index += 1) {
     if (checkNumber[index] === checkNumber[(index + 1)]) {
