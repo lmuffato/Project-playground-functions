@@ -117,21 +117,6 @@ function decode(stringDecode) {
   return string5;
 } console.log(decode("h3 th2r2!"));
 
-// Desafio 10
-function techList(listOfTech, name) {
-  let techListSort = listOfTech.sort();
-  let ultimateList = [];
-  for (let index = 0; index < techListSort.length; index += 1) {
-    ultimateList.push({ tech: techListSort[index], name: name });
-  } if (listOfTech.length === 0)
-  {
-    return 'Vazio!';
-  }
-  return ultimateList;
-}
-
-console.log(techList([], 'Lucas'));
-
 module.exports = {
   calcArea,
   catAndMouse,
@@ -143,5 +128,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-  techList,
 };
