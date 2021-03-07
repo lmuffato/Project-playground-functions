@@ -97,9 +97,11 @@ function fizzBuzz(array) {
   return resultArray;
 }
 
-console.log(fizzBuzz([9, 25, 7]));
-
 // Desafio 9
+
+fuction 
+
+
 function encode(string) {
   let newString = '';
   let array = string.split('');
