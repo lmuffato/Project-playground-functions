@@ -40,16 +40,16 @@ function highestCount(numbers) {
   for (index = 0; index < numbers.length; index += 1){
     if (maxNumber === numbers[index]){
       resultado += 1;  
-      } }
-    return resultado
-};
+    } }
+      return resultado;
+}
 
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Distance = cat1 - mouse;
   let cat2Distance = cat2 - mouse;
 
-  if (cat1Distance < 0){
-    cat1Distance = cat1Distance * -1
+  if (cat1Distance < 0) {
+    cat1Distance = cat1Distance * -1;
   } else if (cat2Distance < 0) {
     cat2Distance = cat2Distance * -1;
   }
@@ -63,10 +63,6 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 
-
-
-
-// Desafio 8
 function fizzBuzz(numbers) {
 let resultado = [];
   for (let index = 0; index < numbers.length; index += 1){
@@ -84,8 +80,6 @@ let resultado = [];
   return resultado
 }
 
-
-
 function encode(text) {
 let arrayPhrase = [];
 
@@ -102,11 +96,11 @@ for (let index = 0; index < text.length; index += 1){
   } else if (text[index] === "u") {
     arrayPhrase.push(5);
   } else  {
-    arrayPhrase.push(text[index])
+    arrayPhrase.push(text[index]);
   }
 }
 
-return arrayPhrase.join("")
+return arrayPhrase.join("");
 }
 
 function decode(text) {
@@ -128,7 +122,7 @@ for (let index = 0; index < text.length; index += 1){
   }
 }
 
-return arrayPhrase.join("")
+return arrayPhrase.join("");
 }
 
 
