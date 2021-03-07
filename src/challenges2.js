@@ -18,7 +18,7 @@ function techList(arrayIn, name) {
 console.log(techList([], 'lucas'));
 
 // Desafio 11
-function generatePhoneNumber(numbersArray) {
+function generatePhoneNumber() {
 
 }
 
@@ -39,12 +39,18 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return result;
 }
-console.log(triangleCheck(3,4,8));
-// Desafio 13
-function hydrate() {
-  // seu código aqui
-}
 
+// Desafio 13
+function hydrate(drinks) {
+  let excludeWords = drinks.replace(/\D+/g, "");
+  let drinksToArray = excludeWords.split('').map(Number);
+  let sum = 0;
+  for (let index = 0; index < drinksToArray.length; index += 1) {
+    sum += drinksToArray[index];
+}
+return sum + ' copos de água';
+}
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"))
 module.exports = {
   generatePhoneNumber,
   techList,
