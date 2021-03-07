@@ -34,7 +34,7 @@ function generatePhoneNumber(number) {
   }
 }
 
-// Desafio 12 - Ajuda de Bruno Bastos e biblioteca do Mozila sobre ABS
+// Desafio 12 - Ajuda de Bruno Bastos e biblioteca do Mozilla sobre ABS
 function triangleCheck(lineA, lineB, lineC) {
 
   if ((lineA < lineB + lineC) && (lineA > Math.abs(lineB - lineC))) {
@@ -54,10 +54,28 @@ function triangleCheck(lineA, lineB, lineC) {
   }
 }
 
-// Desafio 13
-function hydrate() {
-  // seu código aqui
+// Desafio 13 - Peguei a referência do reduce e sua manipulação no https://stackoverflow.com/questions/1230233/how-to-find-the-sum-of-an-array-of-numbers.
+function hydrate(string) {
+
+  let array = [];
+
+  let number = string.match(/\d/g,);
+
+  for(let index in number) {
+    array.push(parseInt(number[index]))
+  }
+
+  let sumArrays = array.reduce((a, b) => (a + b));
+
+  if (sumArrays === 1) {
+    return `${sumArrays} copo de água`;
+  }
+
+  else {
+    return `${sumArrays} copos de água`;
+  }
 }
+console.log(hydrate('1 cerveja, 5 cachaças'));
 
 module.exports = {
   generatePhoneNumber,
