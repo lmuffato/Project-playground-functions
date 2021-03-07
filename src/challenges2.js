@@ -81,7 +81,10 @@ function hydrate(string) {
   for (let index = 0; index < array.length; index += 1) {
     waterCups += parseInt(array[index], 10);
   }
-  return `${waterCups} copos de água`;
+  if (waterCups > 1) {
+    return `${waterCups} copos de água`;
+  }
+  return `${waterCups} copo de água`;
 }
 
 module.exports = {
