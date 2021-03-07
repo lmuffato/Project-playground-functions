@@ -133,7 +133,7 @@ function decode(codStringDecodif) { // Porque isso nao passa no lint
   }
   return arrayDecodif.join('');
 }
-console.log(encode("hello"))
+console.log(encode('hello'));
 
 module.exports = {
   calcArea,
