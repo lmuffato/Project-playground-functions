@@ -98,9 +98,23 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  // https://www.encodedna.com/javascript/how-to-get-numbers-from-a-string-in-javascript.htm
+  // https://stackoverflow.com/questions/1230233/how-to-find-the-sum-of-an-array-of-numbers
+  // https://www.tutorialrepublic.com/faq/how-to-find-the-sum-of-an-array-of-numbers-in-javascript.php
+  // https://www.w3schools.com/jsref/jsref_reduce.asp
+  let sum = parseInt(drinks.match(/\d+/g).reduce((total, number) => {
+    total = parseInt(total, 10);
+    number = parseInt(number, 10);
+    return total + number;
+  }), 10);
+
+  if (sum === 1) {
+    return `${sum} copo de água`;
+  }
+  return `${sum} copos de água`;
 }
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
