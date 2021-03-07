@@ -81,7 +81,7 @@ function lessThanZero(arrayNumbers) {
 function generatePhoneNumber(arrayNumbers) {
   let numberTel = '';
 
-  if (arrayNumbers.length > 11) {
+  if (arrayNumbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
   if (numberRepetition(arrayNumbers) >= 3 || lessThanZero(arrayNumbers) < 0) {
@@ -95,7 +95,7 @@ function generatePhoneNumber(arrayNumbers) {
 
   return numberTel;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+console.log(generatePhoneNumber([0, 1, 6]));
 
 // Desafio 12
 function triangleCheck() {
