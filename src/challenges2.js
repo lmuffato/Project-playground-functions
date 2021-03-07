@@ -3,22 +3,24 @@
 // Desafio 10
 function techList(tech, name) {
 
+  tech.sort();
   let techs = [];
-  techs.sort();
 
-if (techs.length === 0){
+if (tech.length === 0){
   return 'Vazio!'
 }
 
 for (let indexTech = 0; indexTech < tech.length; indexTech += 1){
     techs.push(
-    { tech: tech[indexTech],   
+    { 
+      tech: tech[indexTech],   
       name: name, 
     });
   }
-
   return techs
 }
+
+techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas")
 
 
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
