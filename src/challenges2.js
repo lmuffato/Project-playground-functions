@@ -12,8 +12,8 @@ function techList(tech, name) {
       {
         tech: tech[indexTech], 
         name: name,
-      });
-
+      }
+    );
   }
   return techs;
 }
@@ -30,7 +30,7 @@ function generatePhoneNumber(numbers) {
 
   let comparedNumber = 0;
 
-  for (let repeatIndex = 0; repeatIndex < numbers.length; repeatIndex += 1){
+  for (let repeatIndex = 0; repeatIndex < numbers.length; repeatIndex += 1) {
 
     for (let compareIndex = 0; compareIndex < numbers.length; compareIndex += 1) {
 
@@ -38,7 +38,7 @@ function generatePhoneNumber(numbers) {
         repeatedNumber += 1;
       }
 
-      if (repeatedNumber >= 3){
+      if (repeatedNumber >= 3) {
         comparedNumber += 1;
       }
 
@@ -52,20 +52,10 @@ function generatePhoneNumber(numbers) {
     telephoneNumber = 'Array com tamanho incorreto.';
   } else if (lowerNumber < 0 || comparedNumber > 2 || maxNumber > 9) {
     telephoneNumber = 'não é possível gerar um número de telefone com esses valores';
-  } else {
-    telephoneNumber = '(';
-    for (let indexTel = 0; indexTel < 2; indexTel += 1) {
-      telephoneNumber += numbers[indexTel];
-    }
-    telephoneNumber += ') ';
-    for (let indexTel = 2; indexTel < 7; indexTel += 1) {
-      telephoneNumber += numbers[indexTel];
-    }
-    telephoneNumber += '-';
-    for (let indexTel = 7; indexTel < 11; indexTel += 1) {
-      telephoneNumber += numbers[indexTel];
-    }
   }
+   
+  telephoneNumber = `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`
+
   return telephoneNumber;
 }
 
@@ -96,10 +86,10 @@ function hydrate(text) {
   }
 
   if (sumNumberos === 1) {
-    return sumNumberos + ' copo de água';
+    return `${sumNumberos} copo de água`;
   }
 
-  return sumNumberos + ' copos de água';
+  return `${sumNumberos} copos de água`;
 }
 
 module.exports = {
