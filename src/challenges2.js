@@ -28,8 +28,8 @@ function numbersRepetitionVerificator(array) {
   let sum;
   for (let index = 0; index < array.length; index += 1) {
     sum = 0;
-    for (let index2 = 0; index2 < array.lenth; index2 += 1) {
-      if (array.charAt(index) === array.charAt(index2)) {
+    for (let index2 = 0; index2 < array.length; index2 += 1) {
+      if (array[index] === array[index2]) {
         sum += 1;
       }
     }
