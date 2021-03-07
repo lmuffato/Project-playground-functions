@@ -18,7 +18,7 @@ function techList(arrayNames, name) {
 
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'lucas'));
 
-// Desafio 11 (12) 34567-8901
+/* Desafio 11 (12) 34567-8901
 function generatePhoneNumber(arrayNumbers) {
 
   // conferindo se o array é diferente de 11 numeros
@@ -50,7 +50,7 @@ function generatePhoneNumber(arrayNumbers) {
   for (let index = 0; index < arrayNumbers.length; index += 1){
   }
 
-}
+}*/
 
 
 // Desafio 12
