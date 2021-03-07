@@ -123,48 +123,61 @@ function fizzBuzz(arrayBuzz) {
 }
 
 // Desafio 9
-// Exercicio corrigido com a ajuda do código do Jodiel, Beatriz Barbosa e com as dicas de Orlando Flores, Rafael Medeiros e Murilo Gonçalves
-// Link: https://trybecourse.slack.com/archives/C01L16B9XC7/p1614777217479100
+// Exercicio corrigido com a ajuda do código do Felipe Flores, por causa da complexidade acusada pelo ESLint, precisei diminuir
+// a complexidade
+// Link: https://github.com/tryber/sd-010-a-project-playground-functions/pull/51/commits/f8cab22680dfa6837317bd33becd72b6efadb3f2
 function encode(string) {
-  // seu código aqui
-  let newphrases = string.split('');
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === 'a') {
-      newphrases[index] = 1;
-    } else if (string[index] === 'e') {
-      newphrases[index] = 2;
-    } else if (string[index] === 'i') {
-      newphrases[index] = 3;
-    } else if (string[index] === 'o') {
-      newphrases[index] = 4;
-    } else if (string[index] === 'u') {
-      newphrases[index] = 5;
-    } else {
-      newphrases[index] = string[index];
-    }
-  }
-  return newphrases.join('');
+  let newphrases = comparingEncode(string);
+  return newphrases;
 }
 
 function decode(string2) {
   // seu código aqui
-  let newphrases2 = string2.split('');
-  for (let index = 0; index < string2.length; index += 1) {
-    if (string2[index] === '1') {
-      newphrases2[index] = 'a';
-    } else if (string2[index] === '2') {
-      newphrases2[index] = 'e';
-    } else if (string2[index] === '3') {
-      newphrases2[index] = 'i';
-    } else if (string2[index] === '4') {
-      newphrases2[index] = 'o';
-    } else if (string2[index] === '5') {
-      newphrases2[index] = 'u';
+  let newphrases2 = comparingDecode(string2);
+  return newphrases2;
+}
+
+function comparingEncode(string){
+  // seu código aqui
+  let newphrases = string;
+  let cont = '';
+  let vogais = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+
+  for (let index = 0; index < newphrases.length; index += 1) {
+    if (vogais[newphrases[index].toLowerCase()]) {
+      cont += vogais[newphrases[index]];
     } else {
-      newphrases2[index] = string2[index];
+      cont += newphrases[index];
     }
   }
-  return newphrases2.join('');
+  return console.log(cont);
+}
+
+function comparingDecode(string2) {
+  let newphrases2 = string2;
+  let cont = '';
+  let vogais = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+
+  for (let index = 0; index < newphrases2.length; index += 1) {
+    if (vogais[newphrases2[index].toLowerCase()]) {
+      cont += vogais[newphrases2[index]];
+    } else {
+      cont += newphrases2[index];
+    }
+  }
+  return console.log(cont);
 }
 
 module.exports = {
