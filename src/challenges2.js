@@ -33,7 +33,7 @@ function generatePhoneNumber(array) {
     }
     phoneNumber = phoneNumber.substring(0, 0) + '(' + phoneNumber.substring(0, phoneNumber.length);
     phoneNumber = phoneNumber.substring(0, 3) + ') ' + phoneNumber.substring(3, phoneNumber.length);
-    phoneNumber = phoneNumber.substring(0, 10) + '-' + phoneNumber.substring(10, phoneNumber.length);
+    phoneNumber = phoneNumber.substring(0, 10) + '-'+ phoneNumber.substring(10, phoneNumber.length);
 
     return phoneNumber;
   }
