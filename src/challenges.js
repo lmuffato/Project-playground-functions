@@ -14,8 +14,9 @@ function splitSentence() {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(value) {
+  lastName = value[value.length-1] + ', ' +value[0];
+  return lastName;
 }
 
 // Desafio 5
@@ -68,3 +69,8 @@ console.log(compareTrue(true, true));
 console.log(calcArea(10,50));
 console.log(calcArea(5,2));
 console.log(calcArea(51,1));
+
+// Testando a função concatName
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+console.log(concatName(['captain', 'my', 'captain']));
