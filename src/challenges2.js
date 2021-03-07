@@ -9,12 +9,14 @@ function techList(tecnologias, nome) {
   let newArray = [];
 
   for (let key in arrayTech) {
-    newArray.push(
-      {
-        tech: arrayTech[key],
-        name: nome,
-      },
-    );
+    if(arrayTech.length ===! 0) {
+      newArray.push(
+        {
+          tech: arrayTech[key],
+          name: nome,
+        },
+      );
+    }
   }
   return newArray;
 }
