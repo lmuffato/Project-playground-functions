@@ -72,7 +72,7 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanceCat1 = Math.abs(cat1 - mouse);
+  let distanceCat1 = Math.abs(cat1 - mouse); // Para obter o valor absoluto de um número em JavaScript.
   let distanceCat2 = Math.abs(cat2 - mouse);
   let result = '';
   if (distanceCat1 < distanceCat2) {
