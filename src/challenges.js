@@ -28,7 +28,11 @@ function highestCount(arr) {
 let biggestNumber = findBiggestNumber(arr);
 let countBiggest = countBiggestNumber(arr, biggestNumber);
 } function findBiggestNumber(arr) {
-  return Math.max(...arr)
+  for (let ind = 0; ind < arr.length; ind += 1) {
+    if (arr[ind] > biggestNumber) {
+      biggestNumber = arr[ind]
+    }
+  }
 } function countBiggestNumber(arr, biggestNumber) {
   let repetitionCounter = 0
   for (let index=0; index<arr.length; index+=1) {
