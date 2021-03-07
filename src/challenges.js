@@ -59,7 +59,7 @@ let distanceCat2 = Math.abs(mouse - cat2);
   } else if (distanceCat2 > distanceCat1){
     return 'cat1';
   }
-  return 'Os gatos trombam, e o rato foge';
+  return 'os gatos trombam e o rato foge';
 }
 
 
