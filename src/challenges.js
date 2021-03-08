@@ -72,7 +72,7 @@ function fizzBuzz(number) {
       array.push('bug!');
     }
   }
-  
+  return array;
 }
 
 // Desafio 9
