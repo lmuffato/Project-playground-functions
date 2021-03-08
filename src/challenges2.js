@@ -21,7 +21,7 @@ function techList(tecnologias, nome) {
 // Desafio 11
 // Exercício corrigido com a ajuda do código do Felipe Flores
 // Link: https://github.com/tryber/sd-010-a-project-playground-functions/blob/9cc66910b7a0b4bd1a816105407ad14e7594d1b1/src/challenges2.js
-function comparantionsNumbers(contador, numbers) {
+function comparantionsNumbers(contador, numbers,index) {
   for (let index2 = 0; index2 < numbers.length; index2 += 1) {
     if (numbers[index] === numbers[index2]) {
       contador += 1;
@@ -34,7 +34,7 @@ function comparantionsNumbers(contador, numbers) {
 }
 
 function checkingRepetition(numbers) {
-  let comparando
+  let comparando;
   for (let index = 0; index < numbers.length; index += 1) {
     let contador = 0;
     comparando = comparantionsNumbers(contador, numbers);
