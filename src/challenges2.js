@@ -2,7 +2,7 @@
 function techList(tech, name) {
   // seu código aqui
   let techArray = [];
-  let techObj = [];
+  let techObj = {};
 
   if (tech.length === 0) {
     return 'Vazio!';
@@ -10,7 +10,7 @@ function techList(tech, name) {
   for (let index = 0; index < tech.length; index += 1) {
     techArray.tech = tech[index];
     techList.name = name;
-    techObj.push({ tech: tech[index], name });
+    techObj[index] = { tech: tech[index], name });
   }
   return techObj;
 }
