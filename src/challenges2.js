@@ -24,20 +24,17 @@ function techList(tecnologias, nome) {
 function generatePhoneNumber(numbers) {
   // seu código aqui
   let numberFone = [];
-
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-
   for (let index = 0; index < numbers.length; index += 1) {
     let numbersArray = checkingBiggerAndSmaller(numbers[index]);
-    let checkRepeat = checkingRepetition(numbers,numbersArray);
+    let checkRepeat = checkingRepetition(numbers, numbersArray);
 
     if (numbersArray === true || checkRepeat === true) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-
   numberFone = `${'('}${numbers[0]}${numbers[1]}${')'}`;
   numberFone += `${' '}${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}`;
   numberFone += `${'-'}${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
@@ -46,22 +43,22 @@ function generatePhoneNumber(numbers) {
 
 function checkingBiggerAndSmaller(numbers) {
   let evaluator = false;
-    if (numbers[index] < 0 || numbers[index] > 9) {
-      evaluator = true;
-    }
+  if (numbers[index] < 0 || numbers[index] > 9) {
+    evaluator = true;
+  }
   return evaluator;
 }
 
 function checkingRepetition(array, numbers) {
-    let contadorNumbers = 0;
-    for (let index = 0; index < array.length; index += 1) {
-      if (numbers  === array[index]) {
-        contadorNumbers += 1;
-      }
+  let contadorNumbers = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    if (numbers === array[index]) {
+      contadorNumbers += 1;
     }
-    if (contadorNumbers >= 3) {
-      return true;
-    }
+  }
+  if (contadorNumbers >= 3) {
+    return true;
+  }
   return false;
 }
 
