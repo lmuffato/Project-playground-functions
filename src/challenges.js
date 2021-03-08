@@ -81,9 +81,25 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayParam) {
+  let result = [];
+  for (let index = 0; index < arrayParam.length; index += 1) {
+    let divisibleByThree = arrayParam[index] % 3;
+    let divisibleByFive = arrayParam[index] % 5;
+    if (divisibleByThree === 0 && divisibleByFive != 0) {
+      result.push('fizz');
+    } else if (divisibleByFive === 0 && divisibleByThree != 0) {
+      result.push('buzz');
+    } else if (divisibleByThree === 0 && divisibleByFive === 0) {
+      result.push('fizzBuzz');
+    } else {
+      result.push('bug!');
+    }
+  }
+  return result;
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
