@@ -83,14 +83,11 @@ function fizzBuzz(numArray) {
   for (let index in numArray) {
     if (numArray[index] % 3 === 0 && numArray[index] % 5 === 0) {
       fizzArray.push('fizzBuzz');
-    }
-    else if (numArray[index] % 3 === 0) {
+    } else if (numArray[index] % 3 === 0) {
       fizzArray.push('fizz');
-    }
-    else if (numArray[index] % 5 === 0) {
+    } else if (numArray[index] % 5 === 0) {
       fizzArray.push('buzz');
-    }
-    else {
+    } else {
       fizzArray.push('bug!');
     }
   }
@@ -118,8 +115,24 @@ function encode(phrase) {
   }
   return code;
 }
-function decode() {
-  // seu código aqui
+function decode(code) {
+  let phrase = '';
+  for (let index = 0; index < code.length; index += 1) {
+    if (code[index] === '1') {
+      phrase += 'a';
+    } else if (code[index] === '2') {
+      phrase += 'e';
+    } else if (code[index] === '3') {
+      phrase += 'i';
+    } else if (code[index] === '4') {
+      phrase += 'o';
+    } else if (code[index] === '5') {
+      phrase += 'u';
+    } else {
+      phrase += code[index];
+    }
+  }
+  return phrase;
 }
 
 module.exports = {
