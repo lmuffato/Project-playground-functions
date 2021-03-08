@@ -37,7 +37,7 @@ function conditionsPhoneNumber(arrayPhoneNumber) {
   function repeatNumberPhone(arrayNumber){
   if (arrayNumber[index] < 0 || arrayNumber[index] > 9 || count >= 3){
     return 'não é possível gerar um número de telefone com esses valores';
-  }
+ }
 }
 function generateNumber(arrayNumber){
   let arrayPhone = [];
@@ -47,10 +47,12 @@ function generateNumber(arrayNumber){
     }
   }
 }
+function allFunctionsPhone(conditions,createNumber){
+  conditions = conditionsPhoneNumber + countPhoneNumber ;
+  createNumber = repeatNumberPhone + generateNumber;
+}
 function generatePhoneNumber(arrayPhone){
-  let conditions = conditionsPhoneNumber + countPhoneNumber ;
-  let createNumber = repeatNumberPhone + generateNumber;
-  let phone = conditions + createNumber;
+  let phone = allFunctionsPhone;
   if (phone = generatePhoneNumber){
     phone = `(${arrayPhone[0]}${arrayPhone[1]})`;
     phone += `${arrayPhone[2]}${arrayPhone[3]}${arrayPhone[4]}${arrayPhone[5]}${arrayPhone[6]}`;
