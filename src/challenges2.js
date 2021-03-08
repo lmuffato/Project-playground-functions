@@ -44,17 +44,16 @@ function generateNumber(arrayNumber) {
     }
   }
 }
-function allFunctionsPhone(conditionsPhoneNumber, countPhoneNumber, generateNumber) {
-  conditionsPhoneNumber;
-  countPhoneNumber;
-  generateNumber;
+function allFunctionsPhone(functionsPhone) {
+functionsPhone = conditionsPhoneNumber + countPhoneNumber + generateNumber;
 }
 function generatePhoneNumber(arrayPhone) {
-  let phone = allFunctionsPhone;
+  let functionsPhone = allFunctionsPhone;
+  let phone = functionsPhone;
   phone = `(${arrayPhone[0]}${arrayPhone[1]})`;
   phone += `${arrayPhone[2]}${arrayPhone[3]}${arrayPhone[4]}${arrayPhone[5]}${arrayPhone[6]}`;
   phone += `-${arrayPhone[7]}${arrayPhone[8]}${arrayPhone[9]}${arrayPhone[10]}`;
-    return phone;
+  return phone;
 }
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
