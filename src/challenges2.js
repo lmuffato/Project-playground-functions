@@ -47,8 +47,10 @@ function checkRepeatedNumbers(array) {
 
 function throwError(length, repeated, maxNumber) {
   if (length !== true) return 'Array com tamanho incorreto.';
-  if (repeated !== true) return 'não é possível gerar um número de telefone com esses valores';
-  if (maxNumber !== true) return 'não é possível gerar um número de telefone com esses valores';
+  if (repeated !== true)
+    return 'não é possível gerar um número de telefone com esses valores';
+  if (maxNumber !== true)
+    return 'não é possível gerar um número de telefone com esses valores';
 }
 /* https://stackoverflow.com/questions/8358084/regular-expression-to-reformat-a-us-phone-number-in-javascript */
 function generatePhoneNumber(phoneNumberArray) {
@@ -59,12 +61,27 @@ function generatePhoneNumber(phoneNumberArray) {
   if (isLengthCorrect && isRepeatedNumbersCorrect && isMaxNumberCorrect) {
     return phoneString.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
   }
-  return throwError(isLengthCorrect, isRepeatedNumbersCorrect, isMaxNumberCorrect);
+  return throwError(
+    isLengthCorrect,
+    isRepeatedNumbersCorrect,
+    isMaxNumberCorrect
+  );
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 1]));
+
+function checkTriangleValues(valueA, valueB, valueC) {
+  let checkA = valueA < valueB + valueC && valueA > Math.abs(valueB - valueC);
+  let checkB = valueB < valueA + valueC && valueA > Math.abs(valueA - valueC);
+  let checkC = valueC < valueA + valueB && valueA > Math.abs(valueA - valueB);
+  let result = [];
+  result.push(checkA, checkB, checkC);
+  return result;
+}
+
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let check = checkTriangleValues(lineA, lineB, lineC);
+  if (!check.includes(false)) return true;
+  return false;
 }
 
 // Desafio 13
