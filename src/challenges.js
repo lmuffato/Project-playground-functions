@@ -15,7 +15,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(frase) {
-  for (index = 0; index=length[frase]; index ++){
+  for (index = 0; index=length.frase; index ++){
     let caracter = frase[index]
     palavra = ''
     spliter =[]
@@ -31,8 +31,30 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(lista) {
+  let caracter = ''
+  let primeiraPalavra = ''
+  let ultimaPalavra = ''
+  for (index = 0; index = length.lista; index++){
+    if (lista[index] != ' '){
+      primeiraPalavra.append(lista[index])
+    }
+    else{
+      break
+    }
+  }
+  for (index = lengh.lista - 1; index = 0; index -=1){
+    if (lista[index] != ' '){
+      ultimaPalavra.append(lista[index])
+    }
+    else{
+      break
+    }
+  }
+let listaRetorno =[]
+listaRetorno.append(primeiraPalavra)
+listaRetorno.append(ultimaPalavra)
+return(listaRetorno)
 }
 
 // Desafio 5
