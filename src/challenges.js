@@ -83,23 +83,25 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(8, 19, 4));
 
 // Desafio 8
-let arrayFizzBuzzResposta = []
-let marcadorFizzBuzz = 0
+
 function fizzBuzz(arrayFizzBuzz) {
+  let arrayFizzBuzzResposta = []
+  let marcadorFizzBuzz = 0
   for (let index3 = 0; index3 < arrayFizzBuzz.length; index3 += 1) {
     marcadorFizzBuzz = arrayFizzBuzz[index3];
     if ((marcadorFizzBuzz % 3 === 0) && (marcadorFizzBuzz % 5 === 0)) {
-      return arrayFizzBuzzResposta.push('fizzBuzz')
+      arrayFizzBuzzResposta.push('fizzBuzz')
     } else if (marcadorFizzBuzz % 3 === 0) {
-      return arrayFizzBuzzResposta.push('fizz')
+      arrayFizzBuzzResposta.push('fizz')
     } else if (marcadorFizzBuzz % 5 === 0) {
-      return arrayFizzBuzzResposta.push('buzz')
+      arrayFizzBuzzResposta.push('buzz')
     } else {
-      return arrayFizzBuzzResposta.push('bug!')
+      arrayFizzBuzzResposta.push('bug!')
     }
   }
+  return arrayFizzBuzzResposta
 }
-console.log(fizzBuzz([5]));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(trocar) {
