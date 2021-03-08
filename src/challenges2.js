@@ -1,6 +1,9 @@
 // Desafio 10
 function techList(namesTech, name) {
   let listTech = [];
+  if (namesTech.isEmpty) {
+    return 'Vazio!';
+  }
   for (let i = 0; i < namesTech.length; i += 1) {
     let listTechItem = {
       tech: namesTech[i],
