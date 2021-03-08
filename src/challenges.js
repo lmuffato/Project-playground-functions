@@ -63,10 +63,10 @@ function fizzBuzz(number) {
   let array = [];
   for (let index = 0; index < number.length; index += 1) {
     if (number[index] % 3 === 0) {
-       array.push('fizz');
+      array.push('fizz');
     } else if (number[index] % 5 === 0) {
-       array.push('buzz');
-    } else if ((number[index] % 3) === 0 && (number[index] % 5) === 0) {
+      array.push('buzz');
+    } else if ((number[index] % 3 === 0) && (number[index] % 5 === 0)) {
       array.push('fizzBuzz');
     } else {
       array.push('bug!');
