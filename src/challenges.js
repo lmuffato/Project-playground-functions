@@ -66,15 +66,14 @@ function fizzBuzz(number) {
        array.push('fizz');
     } else if (number[index] % 5 === 0) {
        array.push('buzz');
-    } else if ((number[index] % 3) === 0) && (number[index] % 5) === 0) {
+    } else if ((number[index] % 3) === 0 && (number[index] % 5) === 0) {
       array.push('fizzBuzz');
     } else {
       array.push('bug!');
     }
+    return array;
   }
-  return array;
 }
-console.log(fizzBuzz([5, 6, 15, 9, 12, 2]));
 
 // Desafio 9
 function encode(encodeArray) {
