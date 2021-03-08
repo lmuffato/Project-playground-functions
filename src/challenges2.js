@@ -91,9 +91,12 @@ function hydrate(string) {
   let catchNumbers = string.replace(/\D/g, '').split('').map((number) => Number(number));
   let result = catchNumbers.reduce((acc, curr) => acc + curr);
 
+  if (result === 1) {
+    return `${result} copo de água`;
+  }
   return `${result} copos de água`;
 }
-console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
+console.log(hydrate('1 cachaça'));
 
 module.exports = {
   generatePhoneNumber,
