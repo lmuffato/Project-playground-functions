@@ -57,8 +57,21 @@ function catAndMouse(mouse, cat1, cat2) {
 } // math.abs coletada no site; https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs//
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumbers) {
+ let arrayReturn = [];
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
+    let numbers = arrayNumbers[i];
+    
+    if (numbers % 3 === 0 && numbers % 5 === 0) {
+      arrayReturn.push('fizzBuzz');
+    } else if (numbers % 3 === 0) {
+      arrayReturn.push('fizz');
+    } else if (numbers % 5 === 0) {
+      arrayReturn.push('buzz');
+    } else {
+      arrayReturn.push('bug');
+    }
+  }console.log(arrayReturn);
 }
 
 // Desafio 9
