@@ -32,7 +32,7 @@ function generatePhoneNumber (array){
 return phoneNumber;}
 
 // Desafio 12
-function triangleCheck ([lineA, lineB, lineC]) {
+function triangleCheck (lineA, lineB, lineC) {
   let array = [ lineA, lineB, lineC, lineA, lineB ];
       for (index = 1; index < (array.length - 1); index += 1) {     
       if (array[index] > array[index-1] + array[index+1]) {return false};
