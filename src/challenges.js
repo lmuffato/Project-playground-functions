@@ -38,13 +38,10 @@ function concatName(arrayString) {
   }
   return names;
 }
-
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 console.log(concatName(['captain', 'my', 'captain']));
-
 // Desafio 5
-
 function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
@@ -74,7 +71,7 @@ function catAndMouse(cat1, cat2, mouse) {
 // Desafio 8
 function fizzBuzz(arrayNumber) {
   let returnArray = [];
-  for (index=0; index < arrayNumber.length; index += 1){
+  for (index = 0; index < arrayNumber.length; index += 1){
     if (arrayNumber[index] % 3 === 0 && arrayNumber[index] % 5 !== 0){
       returnArray.push('fizz');
     } else if (arrayNumber[index] % 5 === 0 && arrayNumber[index] % 3 !== 0){
@@ -91,22 +88,48 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
-}
+function encode(string) {
+  let returnEncode = string.replace(/a/g,'1').replace(/e/g, '2').replace(/i/g, '3').replace(/o/g, '4').replace(/u/g, '5');
+  //  for (index=0; index < string.length; index += 1){
+  //    switch (string[index]){
+  //     case 'a': 
+  //     returnEncode = returnEncode + '1';
+  //     break;
+  //     case 'e':
+  //       returnEncode = returnEncode + '2';
+  //     break; 
+  //     case 'i':
+  //       returnEncode = returnEncode + '3';
+  //     break;
+  //     case 'o':
+  //       returnEncode = returnEncode + '4';
+  //     break;
+  //     case 'u':
+  //       returnEncode = returnEncode + '5';
+  //     break; 
+  //     default: returnEncode = returnEncode + string[index];
+  //    }
+  //   } 
+    return returnEncode ;
+  }
+  var code = encode("hi there!");
+    console.log(code);
+function decode(string) {
+    let returndecode = string.replace(/1/g,'a').replace(/2/g, 'e').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
+      return returndecode;
+    }
+      console.log(decode(code));
+// }
 
-module.exports = {
-  calcArea,
-  catAndMouse,
-  compareTrue,
-  concatName,
-  decode,
-  encode,
-  fizzBuzz,
-  footballPoints,
-  highestCount,
-  splitSentence,
-};
+// module.exports = {
+//   calcArea,
+//   catAndMouse,
+//   compareTrue,
+//   concatName,
+//   decode,
+//   encode,
+//   fizzBuzz,
+//   footballPoints,
+//   highestCount,
+//   splitSentence,
+// };
