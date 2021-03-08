@@ -155,20 +155,23 @@ console.log(decode('h3 th2r2!'));
 // Desafio 10
     function trybe(techs, name) {
     let object = {
-        tech: '',
-        name: ''
-      }
-    let objectArray = []
-    //techs = techs.sort()
-    for (index6 = 0; index6 < techs.length; index6 += 1) {
-      object.tech = techs[index6];
-      object.name = name;
-      objectArray.push(object);
+      tech: '',
+      name: ''
     }
-    //return techs
+    let objectArray = []
+    if (techs.length === 0) {
+      objectArray = 'Vazio!'
+    } else {
+      techs = techs.sort()
+      for (index6 = 0; index6 < techs.length; index6 += 1) {
+        object['tech'] = techs[index6];
+        object['name'] = name;
+        objectArray.push(object);
+      }
+    }
     return objectArray
   }
-  console.log(trybe(["React", "Jest", "HTML", "CSS", "JavaScript"], 'eric'));
+  console.log(trybe(['teste1', 'teste2', 'teste3'], 'eric'));
 
 module.exports = {
   calcArea,
