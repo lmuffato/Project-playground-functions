@@ -49,7 +49,6 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge';
 }
 
-console.log(catAndMouse(10, 5, 4));
 // Desafio 8
 function isFizzBuzz(number) {
   if (number % 3 === 0 && number % 5 === 0) {
