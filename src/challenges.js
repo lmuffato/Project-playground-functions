@@ -40,26 +40,26 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(14,8));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numeros) {
+  let repetidos = 0; 
+  let numeroM = 0;
+    for (let index = 0; index < numeros.length; index = index + 1){
+        if (numeroM < numeros[index]){
+            numeroM = numeros[index]
+        }
+    }
+    for (index = 0; index < numeros.length; index = index + 1){
+        if (numeroM === numeros[index]){
+            repetidos = repetidos + 1;
+        }
+    }
+  return repetidos;
 }
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  let dist1 = mouse - cat1;
-  let dist2 = mouse - cat2;
-
-  if (dist1 < dist2) {
-    console.log(cat1)
-  }
-  else if ( dist2 < dist1) {
-    console.log(cat2);
-  }
-  else {
-    console.log("os gatos trombam e o rato foge");
-  }
+function catAndMouse() {
+  // seu código aqui
 }
-
 
 // Desafio 8
 function fizzBuzz() {
