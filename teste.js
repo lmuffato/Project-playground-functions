@@ -33,10 +33,25 @@
 //     console.log(codingString)
 //   }
 
-let array = ['Jorge', 'Matheus', 'Cleker'];
-let lastName = array[array.length - 1];
-let firstName = [array[0]];
-let newArray = `${lastName} ${firstName}`;
-// let resposta = newArray.concat(firstName);
-// return resposta
-console.log(newArray);
+// let array = ['Jorge', 'Matheus', 'Cleker'];
+// let lastName = array[array.length - 1];
+// let firstName = [array[0]];
+// let newArray = `${lastName} ${firstName}`;
+// // let resposta = newArray.concat(firstName);
+// // return resposta
+// console.log(newArray);
+
+
+let string = 'acabate'
+let codingString = Array.from(string);
+console.log(codingString)
+codingString.push('5')
+console.log(codingString)
+let code = codingString.toString()
+console.log(code)
+const aa = /\s/g
+const bb = ''
+let result = code.replace(aa, bb)
+console.log(result)
+
+

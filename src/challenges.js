@@ -71,69 +71,16 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-// PQ Q TÁ DANDO ERRO?
+// ESQUECE O ARRAY e For SEU TROUXA
+// Solução idealizada pelo Douglas Santana
 function encode(string) {
-    let codingString = [...string];
-    for (let index = 0; index < string.length; index += 1){
-       codingString.push = string[index];
-        switch (string[index]) {
-          case string[index] === "a":
-          codingString.push('1');
-          break;
+    let codingString = string.replaceAll('a','1').replaceAll('e','2').replaceAll('i','3').replaceAll('o','4').replaceAll('u','5');
+    return codingString;
 
-          case string[index] === "e":
-          codingString.push('2');
-          break;
-
-          case string[index] === "i":
-            codingString.push('3');
-            break;
-
-          case string[index] === "o":
-          codingString.push('4');
-          break;
-
-          case string[index] === "u":
-          codingString.push('5');
-          break;
-
-          default:
-            codingString.push(string[index]);
-        }
-        return codingString;
-      }
   }
 
 function decode(string) {
-     let decodingString = "";
-  for (let index = 0; index < string.length; index += 1){
-    decodingString += string[index];
-      switch (string[index]) {
-
-        case string[index] === '1':
-        decodingString.replace(/a/i,'a');
-        break;
-
-        case string[index] === '2':
-        decodingString.replace(/e/i,'e');
-        break;
-
-        case string[index] === "3":
-        decodingString.replace(/i/i,'i');
-        break;
-
-        case string[index] === "4":
-        decodingString.replace(/o/i,'o');
-        break;
-
-        case string[index] === "5":
-        decodingString.replace(/u/i,'u');
-        break;
-
-        default:
-        decodingString.replace(string[index]);
-      }
-    }
+    let decodingString = string.replaceAll('1','a').replaceAll('2','e').replaceAll('3','i').replaceAll('4','o').replaceAll('5','u');
     return decodingString;
 }
 
