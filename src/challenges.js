@@ -18,7 +18,7 @@ function splitSentence(string) {
   arrayString = string.split(' ');
   return arrayString;
 }
-console.log(splitSentence("avenida brasil br sempre volta"))
+
 // Desafio 4
 
 function concatName(arrayString) {
@@ -93,12 +93,47 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+const 
+function encode(string) {
+  let phrase = '';
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] != 'a' && string[index] != 'e' && string[index] != 'i' && string[index] != 'o' && string[index] != 'u') {
+      phrase += string[index];
+    } else if (string[index] == 'a') {
+      phrase += '1';
+    } else if (string[index] == 'e') {
+      phrase += '2';
+    } else if (string[index] == 'i') {
+      phrase += '3';
+    } else if (string[index] == 'o') {
+      phrase += '4';
+    } else if (string[index] == 'u') {
+      phrase += '5';
+    }
+  }
+  return phrase;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let phraseDecode = '';
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] != '1' && string[index] != '2' && string[index] != '3' && string[index] != '4' && string[index] != '5') {
+      phraseDecode += string[index];
+    } else if (string[index] == '1') {
+      phraseDecode += 'a';
+    } else if (string[index] == '2') {
+      phraseDecode += 'e';
+    } else if (string[index] == '3') {
+      phraseDecode += 'i';
+    } else if (string[index] == '4') {
+      phraseDecode += 'o';
+    } else if (string[index] == '5') {
+      phraseDecode += 'u';
+    }
+  }
+  return phraseDecode;
 }
+console.log(decode('v2m q52 v2m'));
 
 module.exports = {
   calcArea,
