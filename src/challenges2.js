@@ -10,7 +10,7 @@ function techList(tech, name) {
   for (let index = 0; index < tech.length; index += 1) {
     techArray.tech = tech[index];
     techList.name = name;
-    techObj[index] = { tech: tech[index], name });
+    techObj[index] = { tech: tech[index], name };
   }
   return techObj;
 }
