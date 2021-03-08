@@ -113,8 +113,10 @@ function encode(phrase) {
       code += phrase[index];
     }
   }
+  console.log(code);
   return code;
 }
+
 function decode(code) {
   let phrase = '';
   for (let index = 0; index < code.length; index += 1) {
@@ -132,6 +134,7 @@ function decode(code) {
       phrase += code[index];
     }
   }
+  console.log(phrase);
   return phrase;
 }
 
