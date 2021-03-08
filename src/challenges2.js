@@ -70,8 +70,8 @@ function generatePhoneNumber(phoneNumberArray) {
 
 function checkTriangleValues(valueA, valueB, valueC) {
   let checkA = valueA < valueB + valueC && valueA > Math.abs(valueB - valueC);
-  let checkB = valueB < valueA + valueC && valueA > Math.abs(valueA - valueC);
-  let checkC = valueC < valueA + valueB && valueA > Math.abs(valueA - valueB);
+  let checkB = valueB < valueA + valueC && valueB > Math.abs(valueA - valueC);
+  let checkC = valueC < valueA + valueB && valueC > Math.abs(valueA - valueB);
   let result = [];
   result.push(checkA, checkB, checkC);
   return result;
