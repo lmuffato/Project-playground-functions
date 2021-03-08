@@ -104,18 +104,15 @@ function triangleCheck(lineA, lineB, lineC) {
   let output = false;
 
   if (
-    lineACheck(lineA, lineB, lineC) &&
-    lineBCheck(lineA, lineB, lineC) &&
-    lineCCheck(lineA, lineB, lineC)
+    lineACheck(lineA, lineB, lineC)
+    && lineBCheck(lineA, lineB, lineC)
+    && lineCCheck(lineA, lineB, lineC)
   ) {
     output = true;
   }
 
   return output;
 }
-
-console.log(triangleCheck(2, 3, 4));
-console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 // Função replace e parâmetros retirados do Stackoverflow(https://stackoverflow.com/questions/30607419/return-only-numbers-from-string) combinado com documentação do MDN
