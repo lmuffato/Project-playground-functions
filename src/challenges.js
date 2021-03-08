@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  let result; 
+  let result;
   if (value1 === true && value2 === true) {
     result = true;
   } else {
@@ -63,9 +63,23 @@ function highestCount(numbersArray) {
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let catOneDistance = cat1 - mouse;
+  let catTwoDistance = cat2 - mouse;
+  let result = '';
+
+  if (catOneDistance < catTwoDistance) {
+    result = 'cat1';
+  } else if (catTwoDistance < catOneDistance) {
+    result = 'cat2';
+  } else if (catOneDistance === catTwoDistance) {
+    result = 'os gatos trombam e o rato foge';
+  }
+  
+  return result;
 }
+
+console.log(catAndMouse(0, 3, 2));
 
 // Desafio 8
 function fizzBuzz() {
