@@ -1,15 +1,15 @@
 // Desafio 10
 function techList(techs, name) {
   
-  techs.sort();
+  let sortTechs = techs.sort();
   let techAndNameObj = [];
   if (techs.length === 0) {
     return 'Vazio!';
   }
-  for (let index = 0; index < techs.length; index += 1) {
+  for (let index = 0; index < sortTechs.length; index += 1) {
     techAndNameObj[index] = {
-      tech: techs[index],
-      name,
+      tech: sortTechs[index],
+      name: name
     };
   }
   return techAndNameObj;
@@ -41,12 +41,15 @@ function generatePhoneNumber(phoneNumb) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
 
-  if ((lineA > (lineB - lineC)) && (lineA < (Math.abs(lineB + lineC))) && (lineA > (lineB - lineC)) && (lineA < (Math.abs(lineB + lineC))) && ((lineC > (lineA - lineB))) && (lineC < (Math.abs(lineA + lineB)))) {
+  if ((lineA > (lineB - lineC)) && (lineA < (Math.abs(lineB + lineC))) 
+  && (lineB > (lineA - lineC)) && (lineB < (Math.abs(lineA + lineC))) 
+  && ((lineC > (lineA - lineB))) && (lineC < (Math.abs(lineA + lineB)))) {
     return true;
   };
+  return false;
 };
 
-console.log(triangleCheck(10, 14, 8));
+//console.log(triangleCheck(10, 14, 8));
 
 /*
   Para que seja possível formar um triângulo, é necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas.
