@@ -21,25 +21,25 @@ function techList(tecnologias, nome) {
 // Desafio 11
 // Exercício corrigido com a ajuda do código do Felipe Flores
 // Link: https://github.com/tryber/sd-010-a-project-playground-functions/blob/9cc66910b7a0b4bd1a816105407ad14e7594d1b1/src/challenges2.js
-
 function comparantionsNumbers(contador, numbers) {
-
   for (let index2 = 0; index2 < numbers.length; index2 += 1) {
     if (numbers[index] === numbers[index2]) {
       contador += 1;
     }
   }
-  if (contadorNumbers >= 3) {
+  if (contador >= 3) {
     return true;
   }
   return false;
 }
 
 function checkingRepetition(numbers) {
+  let comparando
   for (let index = 0; index < numbers.length; index += 1) {
     let contador = 0;
-    comparantionsNumbers(contador, numbers);
+    comparando = comparantionsNumbers(contador, numbers);
   }
+  return comparando;
 }
 
 function checkingBiggerAndSmaller(numbers) {
