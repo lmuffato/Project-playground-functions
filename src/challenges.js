@@ -50,15 +50,15 @@ function highestCount(arraynumber) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  let huntingrats;
+  let huntingrats = 0;
   if ((Math.abs(cat1 - mouse)) === (Math.abs(cat2 - mouse))) {
   huntingrats = "os gatos trombam e o rato foge";
   }
   if ((Math.abs(cat1 - mouse)) < (Math.abs(cat2 - mouse))) {
   huntingrats = "cat1";
   }
-  if ((Math.abs(cat1 - mouse)) < (Math.abs(cat2 - mouse))) {
-  huntingrats = "cat1";
+  if ((Math.abs(cat1 - mouse)) > (Math.abs(cat2 - mouse))) {
+  huntingrats = "cat2";
   }
   return huntingrats; 
 }
