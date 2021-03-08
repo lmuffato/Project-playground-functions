@@ -35,13 +35,11 @@ function comparantionsNumbers(contador, numbers) {
   return false;
 }
 
-
-
-
 function checkingRepetition(numbers) {
   for (let index = 0; index < numbers.length; index += 1) {
     let contador = 0;
     comparantionsNumbers(contador, numbers);
+  }
 }
 
 function checkingBiggerAndSmaller(numbers) {
