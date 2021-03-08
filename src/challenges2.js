@@ -40,9 +40,12 @@ function generatePhoneNumber(phoneNumb) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  
-  return (lineA < math.abs(lineB + lineC) && linelineB < math.abs(lineA + lineC) && linelineC < math.abs(lineB + lineC);
-}
+
+  if ((lineA > (lineB - lineC)) && (lineA < (Math.abs(lineB + lineC))) && (lineA > (lineB - lineC)) && (lineA < (Math.abs(lineB + lineC))) && ((lineC > (lineA - lineB))) && (lineC < (Math.abs(lineA + lineB)))) {
+    return true;
+  };
+};
+
 console.log(triangleCheck(10, 14, 8));
 
 /*
