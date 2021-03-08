@@ -1,7 +1,7 @@
 // Desafio 10
 function techList(namesTech, name) {
   let listTech = [];
-  if (namesTech.isEmpty) {
+  if (namesTech.length === 0) {
     return 'Vazio!';
   }
   for (let i = 0; i < namesTech.length; i += 1) {
@@ -16,8 +16,8 @@ function techList(namesTech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(phoneNumbers) {
+
 }
 
 // Desafio 12
@@ -36,5 +36,3 @@ module.exports = {
   hydrate,
   triangleCheck,
 };
-let arrayNames = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
-console.log(techList(arrayNames, 'Lucas'));
