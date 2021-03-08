@@ -40,11 +40,25 @@ function footballPoints(wins, ties) {
 }
 console.log(footballPoints(0,0));
 
-// Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+// Desafio 6 <!-Contribuição Lucas Godoi->
+function highestCount(arrayNumbers) {
+  let high = 0;
+  let count = 0;
+    for (let index = 0; index < arrayNumbers.length; index +=1) {
+      if (arrayNumbers[index] > high) {
+        high = arrayNumbers[index];
+      }
+    }
 
+    for (let indexx = 0; indexx < arrayNumbers.length; indexx +=1) {
+      if (arrayNumbers[indexx] === high) {
+        count += 1;
+      }
+    }
+    return count
+
+}
+      console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
