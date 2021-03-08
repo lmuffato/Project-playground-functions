@@ -23,7 +23,7 @@ function techList(tecnologias, nome) {
 // Link: https://github.com/tryber/sd-010-a-project-playground-functions/blob/9cc66910b7a0b4bd1a816105407ad14e7594d1b1/src/challenges2.js
 function checkingBiggerAndSmaller(numbers) {
   if (numbers < 0 || numbers > 9) {
-    return number;
+    return numbers;
   }
 }
 
