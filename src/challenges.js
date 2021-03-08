@@ -71,7 +71,7 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-// ESQUECE O ARRAY e For SEU TROUXA
+// ESQUECE O ARRAY e For
 // Solução idealizada pelo Douglas Santana
 function encode(string) {
   let codingStringStage = string.replaceAll('i', '3').replaceAll('o', '4').replaceAll('u', '5');
