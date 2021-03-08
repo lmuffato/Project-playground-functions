@@ -63,7 +63,7 @@ function catAndMouse(cat1, cat2, mouse) {
 // Desafio 8
 function fizzBuzz(divisible) {
   let fizzOrBuzz = [];
-  for (let currentNumber in divisible) {
+  for (let currentNumber= 0; currentNumber < divisible; currentNumber += 1) {
     if (divisible[currentNumber] % 3 === 0 && divisible[currentNumber] % 5 === 0) {
       fizzOrBuzz.push('fizzBuzz');
     } else if (divisible[currentNumber] % 3 === 0) {
@@ -97,16 +97,16 @@ function encode(encript) {
 }
 
 function decode(decript) {
-let fraseDecode = '';
-let alt = {
+  let fraseDecode = '';
+  let alt = {
     1: 'a',
     2: 'e',
     3: 'i',
     4: 'o',
     5: 'u',
   };
-    for (let uncript of decript) {
-      if (alt[uncript]) {
+  for (let uncript of decript) {
+    if (alt[uncript]) {
       fraseDecode += alt[uncript];
     } else {
       fraseDecode += uncript;
