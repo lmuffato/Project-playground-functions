@@ -47,10 +47,12 @@ function checkRepeatedNumbers(array) {
 
 function throwError(length, repeated, maxNumber) {
   if (length !== true) return 'Array com tamanho incorreto.';
-  if (repeated !== true)
+  if (repeated !== true) {
     return 'não é possível gerar um número de telefone com esses valores';
-  if (maxNumber !== true)
+  }
+  if (maxNumber !== true) {
     return 'não é possível gerar um número de telefone com esses valores';
+  }
 }
 /* https://stackoverflow.com/questions/8358084/regular-expression-to-reformat-a-us-phone-number-in-javascript */
 function generatePhoneNumber(phoneNumberArray) {
@@ -64,7 +66,7 @@ function generatePhoneNumber(phoneNumberArray) {
   return throwError(
     isLengthCorrect,
     isRepeatedNumbersCorrect,
-    isMaxNumberCorrect
+    isMaxNumberCorrect,
   );
 }
 
@@ -85,9 +87,13 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let catchNumbers = string.replace(/\D/g, '').split('').map((number) => Number(number));
+  let result = catchNumbers.reduce((acc, curr) => acc + curr);
+
+  return `${result} copos de água`;
 }
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
