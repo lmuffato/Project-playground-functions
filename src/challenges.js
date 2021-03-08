@@ -84,13 +84,37 @@ return(maiorContador)
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distance1 = mouse - cat1
+  let distance2 = mouse - cat2
+  if (distance1 > distance2){
+    return(cat1)
+  }
+  else if (distance2 > distance1){
+    return(cat2)
+  }
+  else if (distance1 == distance2){
+    return("os gatos trombam e o rato foge")
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+  for (index = 0; index < length.numeros; index++){
+    if (numeros[index] % 3 == 0 && numeros[index] % 5 == 0){
+      console.log('fizzBuzz')
+    }
+    if (numeros[index] % 3 == 0 && numeros[index] % 5 != 0){
+      console.log('fizz')
+    }
+    else if (numeros[index] % 3 == 0 && numeros[index] % 5 == 0){
+      console.log('buzz')
+    }
+    else{
+      console.log('bug!')
+    }
+
+  }
 }
 
 // Desafio 9
