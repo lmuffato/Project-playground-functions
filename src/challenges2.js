@@ -28,17 +28,17 @@ function generatePhoneNumber(phoneNumber) {
     let number = phoneNumber[index];
     let count = 0;
     if (number < 0 || number > 9) {
-      return 'não é possível gerar um número de telefone com esses valores'
+      return 'não é possível gerar um número de telefone com esses valores';
     }
     for (let index2 = 0; index2 < phoneNumber.length; index2 += 1) {
       if (number === phoneNumber[index2]) {
         count += 1;
       }
       if (count >= 3) {
-          return 'não é possível gerar um número de telefone com esses valores'
+          return 'não é possível gerar um número de telefone com esses valores';
       }
-    };
-  };
+    }
+  }
   return `(${phoneNumber[0]}${phoneNumber[1]}) ${phoneNumber[2]}${phoneNumber[3]}${phoneNumber[4]}${phoneNumber[5]}${phoneNumber[6]}-${phoneNumber[7]}${phoneNumber[8]}${phoneNumber[9]}${phoneNumber[10]}`;
 }
 
