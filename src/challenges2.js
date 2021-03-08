@@ -33,7 +33,7 @@ function generatePhoneNumber(numbers) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
 
-  numberFone = '(' + numbers[0] + numbers[1] + ')' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10];
+  numberFone = '(' + numbers[0] + numbers[1] + ')' + ' ' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10];
   return numberFone;
 }
 
