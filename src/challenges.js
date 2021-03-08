@@ -14,13 +14,13 @@ function splitSentence(phrase) {
   let words = [];
   for (let index = 0; index < phrase.length; index += 1) {
     if (phrase[index] === ' ') {
-      words.push(word); 
+      words.push(word);
       word = '';
-    } else if (index === phrase.length -1) {
+    } else if (index === phrase.length - 1) {
       word += phrase[index];
       words.push(word);
     } else {
-      word += phrase[index]; 
+      word += phrase[index];
     }
   }
   return words;
