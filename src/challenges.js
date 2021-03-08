@@ -28,7 +28,9 @@ function highestCount(arrayNumbers) {
   let higherNumber = arrayNumbers[0];
   let higherNumberCount = 0;
   for (let index = 0; index < arrayNumbers.length; index += 1) {
-    higherNumber = arrayNumbers[index] > higherNumber ? arrayNumbers[index] : higherNumber;
+    higherNumber = arrayNumbers[index] > higherNumber
+      ? arrayNumbers[index]
+      : higherNumber;
   }
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     higherNumberCount += arrayNumbers[index] === higherNumber;
@@ -48,18 +50,23 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function isFizzBuzz(number) {
+  if (number % 3 === 0 && number % 5 === 0) {
+    return 'fizzBuzz';
+  }
+  if (number % 3 === 0) {
+    return 'fizz';
+  }
+  if (number % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
+
 function fizzBuzz(arrayNumbers) {
   let result = [];
   for (let number of arrayNumbers) {
-    if (number % 3 === 0 && number % 5 === 0) {
-      result.push('fizzBuzz');
-    } else if (number % 3 === 0) {
-      result.push('fizz');
-    } else if (number % 5 === 0) {
-      result.push('buzz');
-    } else {
-      result.push('bug!');
-    }
+    result.push(isFizzBuzz(number));
   }
   return result;
 }
@@ -86,6 +93,7 @@ function encode(phrase) {
   }
   return phraseEncode;
 }
+
 function decode() {
   // seu código aqui
 }
