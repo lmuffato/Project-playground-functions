@@ -72,21 +72,30 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function encode(phrase) {
-  let dictionary = {
+function populateDictionary() {
+  return {
     a: 1,
     e: 2,
     i: 3,
     o: 4,
     u: 5,
   };
+}
+
+function encodeDictionary(char) {
+  let dictionary = populateDictionary();
+  for (let dictionaryKey in dictionary) {
+    if (char === dictionaryKey) {
+      return dictionary[dictionaryKey];
+    }
+  }
+  return '';
+}
+
+function encode(phrase) {
   let phraseEncode = '';
   for (let index = 0; index < phrase.length; index += 1) {
-    for (let dictionaryKey in dictionary) {
-      if (phrase[index] === dictionaryKey) {
-        phraseEncode += dictionary[dictionaryKey];
-      }
-    }
+    phraseEncode += encodeDictionary(phrase[index]);
     if (phraseEncode[index] === undefined) {
       phraseEncode += phrase[index];
     }
