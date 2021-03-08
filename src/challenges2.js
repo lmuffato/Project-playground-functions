@@ -143,7 +143,7 @@ https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-str
   tomei por base o código postado aqui:
 https://javascript.plainenglish.io/javascript-algorithm-calculate-sum-of-numbers-in-a-string-dd007da460b7
 
-- Sobre o uso da expressão (/\d+/g) na linha 125, tomei por base as referências anteriores e também 
+- Sobre o uso da expressão (/\d+/g) na linha 125, tomei por base as referências anteriores e também
   a documentação abaixo:
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions
 
