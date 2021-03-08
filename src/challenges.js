@@ -23,17 +23,37 @@ function concatName(value) {
 // Desafio 5
 function footballPoints(wins, ties) {
   let totalPoints = (wins * 3) + (ties * 1);
-  return `${totalPoints} pontos`;
+  return totalPoints;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let counter = 0;
+  let biggestNumber = numbers[0];
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] > biggestNumber) {
+      biggestNumber = numbers[index];
+    }
+  }
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] === biggestNumber) {
+      counter += 1;
+    }
+  }
+  return counter;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceCat1 = mouse - cat1;
+  let distanceCat2 = mouse - cat2;
+  if (distanceCat1 < distanceCat2) {
+    return 'cat 1';
+  } else if (distanceCat1 === distanceCat2) {
+    return 'os gatos trombam e o rato foge'    
+  } else {
+    return 'cat 2';
+  }
 }
 
 // Desafio 8
@@ -81,3 +101,13 @@ console.log(concatName(['captain', 'my', 'captain']));
 console.log(footballPoints(14, 8));
 console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0));
+
+// Testando a função highestCount
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
+console.log(highestCount([0, 0, 0]));
+
+// Testando a função catAndMouse
+console.log(catAndMouse(30, 27, 28));
+console.log(catAndMouse(30, 24, 18));
+console.log(catAndMouse(30, 25, 25));
