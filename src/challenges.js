@@ -24,14 +24,11 @@ function splitSentence(sentence) {
 console.log('foguete trybe')
 
 // Desafio 4
-function concatName(words) {
-  for (index = 0; index < words.length; index = index + 1) {
-    let firstWord = words[0];
-    let lastWord = words.length - 1; 
-    return firstWord + ' ' + lastWord;
-  }
+function concatName(array) {
+  return array[array.length - 1] + ", " + array[0];   
 }
-console.log(concatName("André", "Augusto", "Dias", "Aguilar"));
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -49,8 +46,20 @@ function highestCount() {
 
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+  let dist1 = mouse - cat1;
+  let dist2 = mouse - cat2;
+
+  if (dist1 < dist2) {
+    return cat1;
+  }
+  else if ( dist2 < dist1) {
+    return cat2;
+  }
+  else {
+    return "os gatos trombam e o rato foge"
+  }
 }
+console.log(mouse, cat1, cat2);
 
 // Desafio 8
 function fizzBuzz() {
