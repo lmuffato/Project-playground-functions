@@ -41,8 +41,8 @@ function highestCount(number) {
   // seu código aqui
   let highestNumber = findingHighestNumber(number);
 
-  let highestRepeat = countingHighestNumber(number, highestNumber );
-  
+  let highestRepeat = countingHighestNumber(number, highestNumber);
+
   function findingHighestNumber(arr) {//Procuro o maior numero dentro do vetor//
     let maior = arr[0];
     for (let index = 1; index < arr.length; index += 1) {
@@ -69,12 +69,12 @@ function highestCount(number) {
 function catAndMouse(cat1, cat2, mouse) {
   // seu código aqui
 
-if(cat1 - mouse < cat2 -mouse ) {
-  return 'cat1';
-}
-if(cat2 - mouse < cat1 - mouse) {
-  return 'cat2';
-}
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+    return 'cat1';
+  }
+  if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
+    return 'cat2';
+  }
   return 'os gatos trombam e o rato foge';
 }
 
