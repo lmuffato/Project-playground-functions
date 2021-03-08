@@ -34,14 +34,14 @@ function highestCount(arraynumber) {
   let maior = 0; 
   let cont = 0;
 
-  for (let index = 0; inde < arraynumber.length; index += 1){
+  for (let index = 0; index < arraynumber.length; index += 1){
     if (arraynumber[index] > maior) {
       maior = arraynumber[index]
     };
   }
-  for (let index =0; index < arraynumber.length; index += 1) {
+  for (let index = 0; index < arraynumber.length; index += 1) {
     if (arraynumber[index] === maior) {
-      cont+=1;
+      cont += 1;
     }
   }
   return cont;
