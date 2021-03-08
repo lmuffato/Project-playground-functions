@@ -69,6 +69,7 @@ function fizzBuzz(number) {
 } if (number % 3 && number % 5) {
   return 'bug!';
 }
+}
 
 // Desafio 9
 function encode(encodeArray) {
