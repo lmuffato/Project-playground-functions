@@ -101,12 +101,13 @@ function triangleCheck(lineA, lineB, lineC) {
   return false;
 }
 
-// Referências utilizadas para resolução de Desafio 12:
-// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
-// Agradecimento especial ao colega Rafael Medeiros Gomes, que deu uma dica sobre como refatorar o Desafio 12, segue link da thread no Slack:
-// https://trybecourse.slack.com/archives/C01L16B9XC7/p1614785978007300
-// Link para as regras/condições de Triângulo no Wikipedia:
-// https://en.wikipedia.org/wiki/Triangle_inequality
+/* Referências utilizadas para resolução de Desafio 12:
+  https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+- Agradecimento especial ao colega Rafael Medeiros Gomes, que deu uma dica sobre como refatorar
+  o Desafio 12, segue link da thread no Slack:
+https://trybecourse.slack.com/archives/C01L16B9XC7/p1614785978007300
+- Link para as regras/condições de Triângulo no Wikipedia:
+https://en.wikipedia.org/wiki/Triangle_inequality */
 
 // Desafio 13
 function hydrateInstructions(sumOfNumbers) {
@@ -133,11 +134,26 @@ function hydrate(welcomeToTrybePub) {
 }
 
 /* Para resolução do Desafio 13, foram consultadas as referências abaixo:
-Para a linha 126 do código acima (que busca a correspondência e extrai números de strings), foi utilizado o código postado neste fórum aqui: https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
-Para as linhas 127 e 128 do código acima (que somam os números dentro de strings), tomei por base o código postado aqui: https://javascript.plainenglish.io/javascript-algorithm-calculate-sum-of-numbers-in-a-string-dd007da460b7
-Inicialmente, utilizava o parseFloat, mas depois pensei que faria mais sentido substituir pelo ParseInt, por isso seguem abaixo as referências das documentações usadas sobre
-os dois métodos e os respectivos parâmetros. Uso o 9 como base, em conformidade com as instruções do desafio 13,
-que orientam a considerar que o número na frente de cada bebida está no intervalo entre 1 e 9:
+
+- Para a linha 126 do código acima (que busca a correspondência e extrai números de strings),
+  foi utilizado o código postado neste fórum aqui:
+https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
+
+- Para as linhas 127 e 128 do código acima (que somam os números dentro de strings),
+  tomei por base o código postado aqui:
+https://javascript.plainenglish.io/javascript-algorithm-calculate-sum-of-numbers-in-a-string-dd007da460b7
+
+- Sobre o uso da expressão (/\d+/g) na linha 125, tomei por base as referências anteriores e também 
+  a documentação abaixo:
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions
+
+- Sobre método reduce:
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+
+- Inicialmente, utilizava o parseFloat, mas depois pensei que faria mais sentido substituir pelo ParseInt,
+  por isso seguem abaixo as referências das documentações usadas sobre os dois métodos e os
+  respectivos parâmetros. Uso o 9 como base, em conformidade com as instruções do desafio 13,
+  que orientam a considerar que o número na frente de cada bebida está no intervalo entre 1 e 9:
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseFloat
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt */
 
