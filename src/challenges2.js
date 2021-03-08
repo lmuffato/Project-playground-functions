@@ -46,14 +46,14 @@ function generatePhoneNumber(numbers) {
     }
   }
 
-    
-  if (lowerNumber < 0 || comparedNumber > 2 || maxNumber > 9) {
+  if (numbers.length > 11 || numbers.length < 11){
+    telephoneNumber = 'Array com tamanho incorreto.';    
+  } else if (lowerNumber < 0 || comparedNumber > 2 || maxNumber > 9) {
     telephoneNumber = 'não é possível gerar um número de telefone com esses valores';
-  } else if ((numbers.length === 11)) {
-    telephoneNumber = `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`
   } else {
-  telephoneNumber = 'Array com tamanho incorreto.'; 
+  telephoneNumber = `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`
   }
+
   return telephoneNumber;
 }
 
