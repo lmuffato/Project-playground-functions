@@ -37,7 +37,7 @@ function checkingRepetition(numbers) {
   let comparando;
   for (let index = 0; index < numbers.length; index += 1) {
     let contador = 0;
-    comparando = comparantionsNumbers(contador, numbers);
+    comparando = comparantionsNumbers(contador, numbers, index);
   }
   return comparando;
 }
