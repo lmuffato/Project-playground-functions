@@ -16,17 +16,17 @@ function techList(array, name) {
 }
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Heloísa'));
 
-// Desafio 11
+// Desafio 11  | Realizado com a ajuda do Lucas, que ensinou como usar o 'filter' 
 function repetedNumber(arrayNumbers) {
   for (let index = 0; index < arrayNumbers.length; index += 1) {
-    let arrayFiltred = arrayNumbers.filter(function (x) { return arrayNumbers[index] === x});
+    let arrayFiltred = arrayNumbers.filter(function (x) { return arrayNumbers[index] === x; });
     if (arrayFiltred.length >= 3) {
       return true;
-    } return false;
-  }
+    }
+  } return false;
 }
 function generatePhoneNumber(array) {
-  let ddd = ''; 
+  let ddd = '';
   let fiveNumbers = '';
   let fourNumbers = '';
   let result = '';
@@ -34,9 +34,9 @@ function generatePhoneNumber(array) {
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  let arrayCopy = array.filter(function (x) {return x < 0 || x > 9; });
+  let arrayCopy = array.filter(function (x) { return x < 0 || x > 9; });
   if (arrayCopy.length > 0 || repetedNumber(array)) {
-    return 'não é possível gerar um número de telefone com esses valores'; 
+    return 'não é possível gerar um número de telefone com esses valores';
   }
   ddd += '(' + array[0] + '' + array[1] + ') ';
   fiveNumbers += array[2] + '' + array[3] + array[4] + '' + array[5] + '' + array[6] + '-';
