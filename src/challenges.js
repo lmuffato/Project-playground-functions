@@ -50,15 +50,26 @@ function catAndMouse(mouse, cat1, cat2) {
   if (distanceCat1 < distanceCat2) {
     return 'cat 1';
   } else if (distanceCat1 === distanceCat2) {
-    return 'os gatos trombam e o rato foge'    
+    return 'os gatos trombam e o rato foge';    
   } else {
     return 'cat 2';
   }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  for (index = 0; index < numbers.length; index += 1) {
+    if ((numbers[index] % 3 === 0) && (numbers[index] % 5 != 0)) {
+      numbers[index] = 'fizz';
+    } else if ((numbers[index] % 3 != 0) && (numbers[index] % 5 === 0)) {
+      numbers[index] = 'buzz';
+    } else if ((numbers[index] % 3 === 0) && (numbers[index] % 5 === 0)) {
+      numbers[index] = 'fizzBuzz';
+    } else if ((numbers[index] % 3 != 0) && (numbers[index] % 5 != 0)) {
+      numbers[index] = 'bug!';
+    } 
+  }
+  return numbers;
 }
 
 // Desafio 9
@@ -111,3 +122,8 @@ console.log(highestCount([0, 0, 0]));
 console.log(catAndMouse(30, 27, 28));
 console.log(catAndMouse(30, 24, 18));
 console.log(catAndMouse(30, 25, 25));
+
+// Testando a função fizzBuzz
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([7, 9]));
+console.log(fizzBuzz([9, 25]));
