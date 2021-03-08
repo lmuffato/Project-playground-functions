@@ -118,11 +118,53 @@ function fizzBuzz(numeros) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(fraseNormal) {
+  fraseEncriptada = ''
+  for (index = 0; index <length.fraseNormal; index++){
+    if (fraseNormal[index] == 'a'){
+    fraseEncriptada.append('1')
+    }
+    else if (fraseNormal[index] == 'e'){
+      fraseEncriptada.append('2')
+    }
+    else if (fraseNormal[index] == 'i'){
+      fraseEncriptada.append('3')
+    }
+    else if (fraseNormal[index] == 'o'){
+      fraseEncriptada.append('4')
+    }
+    else if (fraseNormal[index] == 'u'){
+      fraseEncriptada.append('5')
+    }
+    else{
+      fraseEncriptada.append(fraseNormal[index])
+    }
+  }
+return(fraseEncriptada)
 }
-function decode() {
-  // seu código aqui
+function decode(fraseEncriptada) {
+  fraseNormal = ''
+  for (index = 0; index <length.fraseEncriptada; index++){
+    if (fraseEncriptada[index] == '1'){
+      fraseNormal.append('a')
+    }
+    else if (fraseEncriptada[index] == '2'){
+      fraseNormal.append('e')
+    }
+    else if (fraseEncriptada[index] == '3'){
+      fraseNormal.append('i')
+    }
+    else if (fraseEncriptada[index] == '4'){
+      fraseNormal.append('o')
+    }
+    else if (fraseEncriptada[index] == '5'){
+      fraseNormal.append('u')
+    }
+    else{
+      fraseNormal.append(fraseEncriptada[index])
+    }
+  }
+return(fraseNormal)
 }
 
 module.exports = {
