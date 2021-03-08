@@ -123,9 +123,8 @@ function fizzBuzz(arrayBuzz) {
 }
 
 // Desafio 9
-// Exercicio corrigido com a ajuda do código do Jodiel Briesemeister
-// e com as dicas de Orlando Flores, Rafael Medeiros e Murilo Gonçalves
-// Link: https://trybecourse.slack.com/archives/C01L16B9XC7/p1614777217479100
+// Exercício corrigido com a ajuda do código do Felipe Flores
+// Link: https://github.com/tryber/sd-010-a-project-playground-functions/pull/51/commits/f8cab22680dfa6837317bd33becd72b6efadb3f2
 function encode(string) {
   let newphrases = string;
   let cont = '';
