@@ -22,8 +22,9 @@ function techList(array, name) {
   }
 }
 
-/* Referência usada para resolver o Desafio 10:
- https://pt.stackoverflow.com/questions/338916/colocando-em-ordem-alfabética-um-array-de-objetos */
+/* Referências usadas para resolver o Desafio 10:
+ https://pt.stackoverflow.com/questions/338916/colocando-em-ordem-alfabética-um-array-de-objetos
+ O plantão do instrutor Bernardo foi de grande ajuda para pensar a estrutura lógica do código deste desafio */
 
 // Desafio 11
 
@@ -42,7 +43,7 @@ function verifyDuplicates(numberList) {
   return countNumber;
 }
 
-// 2 - Verificar o quantos números se repetem na lista.
+// 2 - Verificar quantos números se repetem na lista (se o número de repetições é igual ou maior do que 3).
 function countDuplicates(numberList) {
   let counter = verifyDuplicates(numberList);
   for (let number in numberList) {
@@ -51,6 +52,8 @@ function countDuplicates(numberList) {
     }
   }
 }
+/* Consultei o código do colega João Nascimento (@nascjoao) para estruturar as funções 1 e 2 acima
+(sobre como encontrar números que se repetem no array por 3 vezes ou mais) */
 
 // 3 - Verificar as outras condições de exclusão.
 function theExcludentConditions(arrayOfNumbers) {
@@ -88,7 +91,7 @@ https://woliveiras.com.br/posts/laços-de-repetição-for-for-in-for-of/
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
 https://stackoverflow.com/questions/19395257/how-to-count-duplicate-value-in-an-array-in-javascript/19395302#19395302
-O código do colega João Nascimento (@nascjoao) ajudou muito a clarear como estruturar as funções 1 e 2 que compõem a resposta do desafio 11. */
+E deixo aqui meu agradecimento ao colega João Nascimento, pois seu código ajudou muito a perceber em qual parte do meu código eu estava errando */
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -130,8 +133,11 @@ function hydrate(welcomeToTrybePub) {
 }
 
 /* Para resolução do Desafio 13, foram consultadas as referências abaixo:
-https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
-https://javascript.plainenglish.io/javascript-algorithm-calculate-sum-of-numbers-in-a-string-dd007da460b7
+Para a linha 126 do código acima (que busca a correspondência e extrai números de strings), foi utilizado o código postado neste fórum aqui: https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
+Para as linhas 127 e 128 do código acima (que somam os números dentro de strings), tomei por base o código postado aqui: https://javascript.plainenglish.io/javascript-algorithm-calculate-sum-of-numbers-in-a-string-dd007da460b7
+Inicialmente, utilizava o parseFloat, mas depois pensei que faria mais sentido substituir pelo ParseInt, por isso seguem abaixo as referências das documentações usadas sobre
+os dois métodos e os respectivos parâmetros. Uso o 9 como base, em conformidade com as instruções do desafio 13,
+que orientam a considerar que o número na frente de cada bebida está no intervalo entre 1 e 9:
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseFloat
 https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt */
 

@@ -69,6 +69,11 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
+/* Referências consultadas sobre o uso de Math.abs:
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+https://www.devmedia.com.br/matematica-em-javascript-o-objeto-math/27439
+*/
+
 // Desafio 8
 
 // Necessário dividir em problemas menores.
@@ -131,14 +136,16 @@ function decode(phrase) {
   });
   return newPhrase;
 }
-// Para a resolução do desafio 9, foi consultada a seguinte documentação:
-// https://stackoverflow.com/questions/16576983/replace-multiple-characters-in-one-replace-call#:~:text=If%20you%20want%20to%20replace%20multiple%20characters%20you%20can%20call,will%20use%20in%20that%20function.
-// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match
-// https://www.w3schools.com/jsref/jsref_replace.asp
-// https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176#:~:text=Em%20caso%20de%20mais%20de,express%C3%A3o%20regular%20no%20primeiro%20par%C3%A2metro.
-// https://www.alura.com.br/artigos/javascript-replace-manipulando-strings-e-regex
-// Deixo também meus agradecimentos ao colega Luciano Amâncio, que postou link para um vídeo ensinando o replace, e aos colegas Renzo e Rafael Medeiros (sobre o uso de objetos), segue link da thread no Slack:
-// https://trybecourse.slack.com/archives/C01L16B9XC7/p1614871138144700
+/* Para a resolução do desafio 9, foi consultada a seguinte documentação:
+https://stackoverflow.com/questions/16576983/replace-multiple-characters-in-one-replace-call#:~:text=If%20you%20want%20to%20replace%20multiple%20characters%20you%20can%20call,will%20use%20in%20that%20function.
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match
+https://www.w3schools.com/jsref/jsref_replace.asp
+https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176#:~:text=Em%20caso%20de%20mais%20de,express%C3%A3o%20regular%20no%20primeiro%20par%C3%A2metro.
+https://www.alura.com.br/artigos/javascript-replace-manipulando-strings-e-regex
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match
+Deixo também meus agradecimentos ao colega Luciano Amâncio, que postou link para um vídeo ensinando o replace, e aos colegas Renzo e Rafael Medeiros (sobre o uso de objetos), segue link da thread no Slack:
+https://trybecourse.slack.com/archives/C01L16B9XC7/p1614871138144700
+Link para vídeo sobre uso do Replace no Javascript:  https://www.youtube.com/watch?v=UShV_TFxs_A */
 
 module.exports = {
   calcArea,
