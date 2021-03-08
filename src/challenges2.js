@@ -27,12 +27,7 @@ function checkphoneNumber3(number, check) {
     sete: 0,
     oito: 0,
     nove: 0,
-  }
-for(let index = 0;index < number.length; index += 1) {
-     if(number[index] === index) {
-        che
-     }
-}
+  };
 }
 function checkPhoneNumber2(number, check) {
   for (let index = 0; index < number.length; index += 1) {
