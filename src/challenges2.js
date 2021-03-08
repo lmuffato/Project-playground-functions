@@ -22,10 +22,9 @@ function techList(tecnologias, nome) {
 // Exercício corrigido com a ajuda do código do Felipe Flores
 // Link: https://github.com/tryber/sd-010-a-project-playground-functions/blob/9cc66910b7a0b4bd1a816105407ad14e7594d1b1/src/challenges2.js
 function checkingBiggerAndSmaller(numbers) {
-  if (numbers <= 0 || numbers >= 9) {
-    return true;
+  if (numbers <= 9 || numbers >= 0) {
+    return numbers;
   }
-  return false;
 }
 
 function checkingRepetition(array, numbers) {
@@ -48,7 +47,7 @@ function generatePhoneNumber(numbers) {
     let numbersArray = checkingBiggerAndSmaller(numbers[index]);
     let checkRepeat = checkingRepetition(numbers, numbersArray);
 
-    if (numbersArray === true || checkRepeat >= 3) {
+    if (numbersArray === undefined || checkRepeat >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
