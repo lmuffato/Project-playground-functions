@@ -36,8 +36,6 @@ function techList(technologiesArray, name) {
 }
 
 let array = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
-let name = 'Lucas';
-console.log(techList(array, name));
 
 // Challenge 11
 
@@ -79,8 +77,6 @@ function isAValidArray(arrayOfNumbers) {
   return true;
 }
 
-// Returns true if any number is repeated three times.
-
 function generatePhoneNumber(arrayOfNumbers) {
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
@@ -90,13 +86,6 @@ function generatePhoneNumber(arrayOfNumbers) {
   }
   return 'não é possível gerar um número de telefone com esses valores';
 }
-
-// Returns true if the array is valid.
-
-array = [1, 2, 3, 6, 6, 6, 7, 8, 9, 1, 2];
-console.log(generatePhoneNumber(array));
-
-// Caso algum dos números da array seja menor que 0, maior que 9 ou se repita 3 vezes ou mais, `generatePhoneNumber` deverá retornar a string `"não é possível gerar um número de telefone com esses valores"`.
 
 // Challenge 12
 function triangleCheck() {
