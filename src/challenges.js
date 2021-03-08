@@ -39,11 +39,11 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   let maxNumber = 0;
   let count = 0;
-  for (let index = 0; index < numbers.length; index += 1){
+  for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] > maxNumber) {
       maxNumber = numbers[index];
-      }
-       }  
+    }
+  }
   for (let indexM = 0; indexM < numbers.length; indexM += 1) {
     if (numbers[indexM] === maxNumber) {
       count += 1;
@@ -53,9 +53,9 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-//resolução baseada no codigo da pessoa estudante Daniel Ribeiro, onde foi identificado 
-//a multiplicação dos numeros menores que zero por -1. 
-//https://github.com/tryber/sd-010-a-project-playground-functions/tree/defauth98-project-playground-functions
+// resolução baseada no codigo da pessoa estudante Daniel Ribeiro, onde foi identificado
+// a multiplicação dos numeros menores que zero por -1.
+// https://github.com/tryber/sd-010-a-project-playground-functions/tree/defauth98-project-playground-functions
 
 function catAndMouse(mouse, cat1, cat2) {
   let dist1 = cat1 - mouse;
@@ -81,8 +81,8 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-//joão nascimento : nascjoao-project-playground-functions; codigo serviu como base para
-//o desenvolvimento desta questão.
+// joão nascimento : nascjoao-project-playground-functions; codigo serviu como base para
+// o desenvolvimento desta questão.
 function encode(iText) {
   let codVowels = { a: 1, e: 2, i: 3, o: 4, u: 5 };
   let encodeText = '';
@@ -93,8 +93,8 @@ function encode(iText) {
       encodeText += iText[letter];
     }
   }
-   return encodeText;
- }
+  return encodeText;
+}
 
 function decode(codText) {
   let codNumbers = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
