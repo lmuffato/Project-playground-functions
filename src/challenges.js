@@ -17,7 +17,7 @@ function splitSentence(string) {
 function concatName(array) {
   let lastName = array[array.length - 1];
   let firstName = [array[0]];
-  let newArray = `${lastName},` + ` ${firstName}`;
+  let newArray = `${lastName}, ${firstName}`;
   // let resposta = newArray.concat(firstName);
   return newArray;
 }
@@ -57,14 +57,14 @@ function fizzBuzz(array) {
   let arrayFizzBuzz = [];
   for (let index = 0; index < array.length; index += 1) {
     let testFizzBuzz = array[index];
-    if (testFizzBuzz % 3 === 0 && testFizzBuzz % 5 === 0) {
-      arrayFizzBuzz.push('fizzBuzz');
-    } else if (testFizzBuzz % 5 === 0) {
-      arrayFizzBuzz.push('buzz');
-    } else if (testFizzBuzz % 3 === 0) {
-      arrayFizzBuzz.push('fizz');
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      array[index] = 'fizzBuzz';
+    } else if (array[index] % 5 === 0) {
+      array[index] = 'buzz';
+    } else if (array[index] % 3 === 0) {
+      array[index] = 'fizz';
     } else {
-      arrayFizzBuzz.push('bug!');
+      array[index] = 'bug!';
     }
   }
   return arrayFizzBuzz;
