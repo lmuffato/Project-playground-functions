@@ -35,7 +35,7 @@ function repeatCount(numbersArray) {
 
 function wrongRangeCheck(currentValue) {
   if (currentValue > 9 || currentValue < 0) {
-    return console.log("não é possível gerar um número de telefone com esses valores");
+    return "não é possível gerar um número de telefone com esses valores";
   }
 }
 
@@ -52,8 +52,8 @@ function generatePhoneNumber(phoneNumb) {
   return `(${phoneNumb[0]}${phoneNumb[1]}) ${phoneNumb[2]}${phoneNumb[3]}${phoneNumb[4]}${phoneNumb[5]}${phoneNumb[6]}-${phoneNumb[7]}${phoneNumb[8]}${phoneNumb[9]}${phoneNumb[10]}`;
 } 
 
-//let aaa = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-//console.log(generatePhoneNumber(aaa));
+let aaa = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+console.log(generatePhoneNumber(aaa));
 
 // Desafio 12
 
