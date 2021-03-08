@@ -48,30 +48,30 @@ function highestCount(maxArray) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
- if(Math.abs(mouse - cat2) < Math.abs(mouse - cat1)){
-   return 'cat2';
- }else if(Math.abs(mouse - cat1) < Math.abs(mouse - cat2)){
-  return 'cat1';
- }else{
-   return 'os gatos trombam e o rato foge'
- }
- }
+  if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
+    return 'cat2';
+  } else if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+    return 'cat1';
+  } else {
+    return 'os gatos trombam e o rato foge'
+  }
+}
 
 // Desafio 8
 function fizzBuzz(arraynum) {
- let strnum = [];
- for(index = 0; index < arraynum.length; index += 1){
-   if(arraynum[index] %3 === 0 && arraynum[index] % 5 === 0){
-     strnum[index] = 'fizzBuzz';
-   }else if(arraynum[index] %3 === 0){
-    strnum = 'fizz';
-  }else if( arraynum[index] %5 === 0){
-    strnum = 'Buzz';
-  }else{
-    strnum[index] = 'bug!';
+  let strnum = [];
+  for (index = 0; index < arraynum.length; index += 1) {
+    if (arraynum[index] % 3 === 0 && arraynum[index] % 5 === 0) {
+      strnum[index] = 'fizzBuzz';
+    } else if (arraynum[index] % 3 === 0) {
+      strnum = 'fizz';
+    } else if (arraynum[index] % 5 === 0) {
+      strnum = 'Buzz';
+    } else {
+      strnum[index] = 'bug!';
+    }
   }
- }
- return strnum;
+  return strnum;
 }
 
 // Desafio 9
