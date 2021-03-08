@@ -23,20 +23,22 @@ function conditionsPhoneNumber(arrayPhoneNumber) {
   if (arrayPhoneNumber.length !== 11){
     return 'Array com tamanho incorreto';
   }
-  for (let index in arrayPhoneNumber){
+}
+  function repeatConditionsPhone(arrayNumber){
+  for (let index in arrayNumber){
     let count = 0;
-  for(let key in arrayPhoneNumber){
-     if (arrayPhoneNumber[index] === arrayPhoneNumber[key]){
+  for(let key in arrayNumber){
+     if (arrayNumber[index] === arrayNumber[key]){
        count +=1;
       }
     }
-    if (arrayPhoneNumber[index] < 0 || arrayPhoneNumber[index] > 9 || count >= 3){
+    if (arrayNumber[index] < 0 || arrayNumber[index] > 9 || count >= 3){
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
 }
-  function generatePhoneNumber(arrayPhone){
-  let phone = conditionsPhoneNumber;
+function generatePhoneNumber(arrayPhone){
+  let phone = conditionsPhoneNumber + repeatConditionsPhone;
   for (let index = 0; index < arrayPhone.length; index += 1){
     if (arrayPhone[index] === arrayPhone[index]){
       phone = `(${arrayPhone[0]}${arrayPhone[1]})`; 
