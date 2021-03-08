@@ -55,25 +55,51 @@ console.log(footballPoints(0 , 0));
 
 // Desafio 6
 function highestCount(arrayNumbers) {
+  let maiorNumero = 0 ; 
+  let repete = 0 ;
   for(let item of arrayNumbers){
-    
+   
+  if(item > maiorNumero){
+    maiorNumero = item ; 
+    repete = 1 ;
+
+  }else if(item == maiorNumero){
+    repete = repete + 1 ;
+  }
+ 
 
   }
   
-  return arrayNumbers ;
+  return repete ;
  
 }
-highestCount
+console.log(highestCount([3, 1, 2, 3, 9, 5, 9]));
+
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(cat1, cat2, mouse) {
+  
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumber) {
+  let returnArray =[] ;
+  for(index=0; index<arrayNumber.length; index+=1){
+    if(arrayNumber[index] % 3 == 0 && arrayNumber[index] % 5 != 0){
+      returnArray.push('fizz') ;
+    }else if (arrayNumber[index] % 5 == 0 && arrayNumber[index] % 3 != 0){
+     returnArray.push('buzz') ;
+    }else if(arrayNumber[index] % 5 == 0 && arrayNumber[index] % 3 == 0){
+       returnArray.push('fizzbuzz') ;
+    }else{
+      returnArray.push('bug')
+    }
+  }
+  return returnArray;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([7, 9]));
+console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode() {
