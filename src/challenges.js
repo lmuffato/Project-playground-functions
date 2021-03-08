@@ -24,12 +24,29 @@ function concatName(arrayselect) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins*3)+(ties*1);
+  return (wins * 3) + (ties * 1);
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+// 1. Achar o maior numero do array
+// 2. contar a quantidade de vezes que ele aparece no array
+
+let max = 0;
+let cont = 0;
+function highestCount(arr, cont) {
+  for (let index2 = 0; index2 < arr.length; index2 += 1) {
+    if (arr[index2] === max) {
+      cont +=1;
+    }
+  }
+}
+
+function higherNumber (arr,max) {
+  for (let index = 0; index < arr.length; index += 1) {
+    if (arr [index] > max ) {
+      max = arr [index];
+    }
+  }
 }
 
 // Desafio 7
