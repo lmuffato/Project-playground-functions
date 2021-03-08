@@ -56,7 +56,6 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   let arrayFizzBuzz = [];
   for (let index = 0; index < array.length; index += 1) {
-    let testFizzBuzz = array[index];
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       array[index] = 'fizzBuzz';
     } else if (array[index] % 5 === 0) {
@@ -67,7 +66,7 @@ function fizzBuzz(array) {
       array[index] = 'bug!';
     }
   }
-  return arrayFizzBuzz;
+  return array;
 }
 
 // Desafio 9
