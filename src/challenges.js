@@ -81,14 +81,14 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
-function fizzBuzz(arrayParam) {
+function fizzBuzz(array) {
   let result = [];
-  for (let index = 0; index < arrayParam.length; index += 1) {
-    let divisibleByThree = arrayParam[index] % 3;
-    let divisibleByFive = arrayParam[index] % 5;
-    if (divisibleByThree === 0 && divisibleByFive != 0) {
+  for (let index = 0; index < array.length; index += 1) {
+    let divisibleByThree = array[index] % 3;
+    let divisibleByFive = array[index] % 5;
+    if (divisibleByThree === 0 && divisibleByFive !== 0) {
       result.push('fizz');
-    } else if (divisibleByFive === 0 && divisibleByThree != 0) {
+    } else if (divisibleByFive === 0 && divisibleByThree !== 0) {
       result.push('buzz');
     } else if (divisibleByThree === 0 && divisibleByFive === 0) {
       result.push('fizzBuzz');
@@ -102,12 +102,49 @@ function fizzBuzz(arrayParam) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(text) {
+  let encodeString = '';
+  for (let index = 0; index < text.length; index += 1) {
+    if (text[index] === 'a') {
+      encodeString += '1';
+    } else if (text[index] === 'e') {
+      encodeString += '2';
+    } else if (text[index] === 'i') {
+      encodeString += '3';
+    } else if (text[index] === 'o') {
+      encodeString += '4';
+    } else if (text[index] === 'u') {
+      encodeString += '5';
+    } else {
+      encodeString += text[index];
+    }
+  }
+  return encodeString;
 }
-function decode() {
-  // seu código aqui
+
+console.log(encode('hi there!'));
+
+function decode(text) {
+  let decodeString = '';
+  for (let index = 0; index < text.length; index += 1) {
+    if (text[index] === '1') {
+      decodeString += 'a';
+    } else if (text[index] === '2') {
+      decodeString += 'e';
+    } else if (text[index] === '3') {
+      decodeString += 'i';
+    } else if (text[index] === '4') {
+      decodeString += 'o';
+    } else if (text[index] === '5') {
+      decodeString += 'u';
+    } else {
+      decodeString += text[index];
+    }
+  }
+  return decodeString;
 }
+
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
