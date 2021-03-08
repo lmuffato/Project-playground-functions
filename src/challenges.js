@@ -64,7 +64,8 @@ function fizzBuzz(array) {
     } else if (testFizzBuzz % 3 === 0) {
       arrayFizzBuzz.push('fizz');
     } else {
-    arrayFizzBuzz.push('bug!');
+      arrayFizzBuzz.push('bug!');
+    }
   }
   return arrayFizzBuzz;
 }
@@ -93,4 +94,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-}
+};
