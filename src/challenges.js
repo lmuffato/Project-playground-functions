@@ -66,7 +66,7 @@ function fizzBuzz(arraynum) {
     } else if (arraynum[index] % 3 === 0) {
       strnum.push('fizz');
     } else if (arraynum[index] % 5 === 0) {
-      strnum.push('Buzz');
+      strnum.push('buzz');
     } else {
       strnum.push('bug!');
     }
