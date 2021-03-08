@@ -31,7 +31,7 @@ function generatePhoneNumber(numbers) {
     let numbersArray = checkingBiggerAndSmaller(numbers[index]);
     let checkRepeat = checkingRepetition(numbers, numbersArray);
 
-    if (numbersArray === undefined || checkRepeat >= 3) {
+    if (numbersArray === true || checkRepeat >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
