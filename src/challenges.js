@@ -93,7 +93,7 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-const 
+ 
 function encode(string) {
   let phrase = '';
   for (let index = 0; index < string.length; index += 1) {
@@ -113,7 +113,7 @@ function encode(string) {
   }
   return phrase;
 }
-
+console.log(encode('vem que vem'));
 function decode(string) {
   let phraseDecode = '';
   for (let index = 0; index < string.length; index += 1) {
