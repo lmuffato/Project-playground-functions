@@ -84,7 +84,6 @@ function generatePhoneNumber(arrayOfNumbers) {
   }
   return 'não é possível gerar um número de telefone com esses valores';
 }
-console.log(generatePhoneNumber(array2));
 
 // Challenge 12
 function triangleCheck() {
