@@ -24,14 +24,15 @@ function splitSentence(text){
 console.log(splitSentence('Esse texto é um teste'))
 
 // Desafio 4
-let stringDeNomes = []
+
 function concatName(arrayDeNomes) {
+  let stringDeNomes = [];
   stringDeNomes.push(arrayDeNomes[arrayDeNomes.length - 1]);
   stringDeNomes.push(arrayDeNomes[0]);
   let ultimoNomeMaisPrimeiro = stringDeNomes.join(', ');
   return ultimoNomeMaisPrimeiro
 }
- console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+ console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -41,9 +42,10 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(14, 8));
 
 // Desafio 6
-bigger = 0;
-countBigger = 0;
+
 function highestCount(arrayDeNumeros) {
+  let bigger = 0;
+  let countBigger = 0;
   for (let index = 0; index < arrayDeNumeros.length; index += 1) {
     if (bigger < arrayDeNumeros[index]) {
       bigger = arrayDeNumeros[index]
