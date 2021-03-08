@@ -35,8 +35,6 @@ function techList(technologiesArray, name) {
   return sortedArray;
 }
 
-let array = ['React', 'Jest', 'HTML', 'CSS', 'JavaScript'];
-
 // Challenge 11
 
 function formatsNumber(arrayOfNumbers) {
@@ -78,7 +76,7 @@ function isAValidArray(arrayOfNumbers) {
 }
 
 function generatePhoneNumber(arrayOfNumbers) {
-  if (array.length !== 11) {
+  if (arrayOfNumbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
   if (isAValidArray(arrayOfNumbers)) {
@@ -86,6 +84,7 @@ function generatePhoneNumber(arrayOfNumbers) {
   }
   return 'não é possível gerar um número de telefone com esses valores';
 }
+console.log(generatePhoneNumber(array2));
 
 // Challenge 12
 function triangleCheck() {
