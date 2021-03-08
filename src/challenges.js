@@ -101,7 +101,7 @@ function fizzBuzz(arrayFizzBuzz) {
   }
   return arrayFizzBuzzResposta
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([2, 15, 5, 9, 45]));
 
 // Desafio 9
 function encode(trocar) {
@@ -153,17 +153,20 @@ function decode(destrocar) {
 console.log(decode('h3 th2r2!'));
 
 // Desafio 10
-  let object = {}
-  let objectArray = []
-  function trybe(techs, name) {
-    techs = techs.sort()
+    function trybe(techs, name) {
+    let object = {
+        tech: '',
+        name: ''
+      }
+    let objectArray = []
+    //techs = techs.sort()
     for (index6 = 0; index6 < techs.length; index6 += 1) {
-      object['tech'] = techs[index6];
-      object['name'] = name;
+      object.tech = techs[index6];
+      object.name = name;
       objectArray.push(object);
     }
-    //return objectArray
-    return techs
+    //return techs
+    return objectArray
   }
   console.log(trybe(["React", "Jest", "HTML", "CSS", "JavaScript"], 'eric'));
 
