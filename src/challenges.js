@@ -66,9 +66,9 @@ function fizzBuzz(array) {
     }
       arrayFizzBuzz.push('bug!');
     }
+    return arrayFizzBuzz;
   }
-  return arrayFizzBuzz;
-}
+
 
 // Desafio 9
 // ESQUECE O ARRAY e For SEU TROUXA

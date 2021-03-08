@@ -41,7 +41,6 @@
 // // return resposta
 // console.log(newArray);
 
-
 // let string = 'acabate'
 // let codingString = Array.from(string);
 // console.log(codingString)
@@ -53,5 +52,3 @@
 // const bb = ''
 // let result = code.replace(aa, bb)
 // console.log(result)
-
-
