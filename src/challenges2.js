@@ -21,6 +21,22 @@ function techList(tecnologias, nome) {
 // Desafio 11
 // Exercício corrigido com a ajuda do código do Felipe Flores
 // Link: https://github.com/tryber/sd-010-a-project-playground-functions/blob/9cc66910b7a0b4bd1a816105407ad14e7594d1b1/src/challenges2.js
+function checkingBiggerAndSmaller(numbers) {
+  if (numbers < 0 || numbers > 9) {
+    return number;
+  }
+}
+
+function checkingRepetition(array, numbers) {
+  let contadorNumbers = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    if (numbers === array[index]) {
+      contadorNumbers += 1;
+    }
+  }
+  return contadorNumbers;
+}
+
 function generatePhoneNumber(numbers) {
   // seu código aqui
   let numberFone = [];
@@ -39,24 +55,6 @@ function generatePhoneNumber(numbers) {
   numberFone += `${' '}${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}`;
   numberFone += `${'-'}${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
   return numberFone;
-}
-
-function checkingBiggerAndSmaller(numbers) {
-  let evaluator = false;
-  if (numbers < 0 || numbers > 9) {
-    evaluator = true;
-  }
-  return evaluator;
-}
-
-function checkingRepetition(array, numbers) {
-  let contadorNumbers = 0;
-  for (let index = 0; index < array.length; index += 1) {
-    if (numbers === array[index]) {
-      contadorNumbers += 1;
-    }
-  }
-  return contadorNumbers;
 }
 
 // Desafio 12
