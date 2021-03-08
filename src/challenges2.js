@@ -26,19 +26,20 @@ function conditionsPhoneNumber(arrayPhoneNumber) {
 }
   function countPhoneNumber(arrayNumber){
   for (let index in arrayNumber){
+    if(arrayNumber[index] === arrayNumber[index]){
     let count = 0;
+    }
   for(let key in arrayNumber){
      if (arrayNumber[index] === arrayNumber[key]){
        count +=1;
       }
+      if (arrayNumber[index] < 0 || arrayNumber[index] > 9 || count >= 3){
+        return 'não é possível gerar um número de telefone com esses valores';
+     }
     }    
   }
 }
-  function repeatNumberPhone(arrayNumber){
-  if (arrayNumber[index] < 0 || arrayNumber[index] > 9 || count >= 3){
-    return 'não é possível gerar um número de telefone com esses valores';
- }
-}
+ 
 function generateNumber(arrayNumber){
   let arrayPhone = [];
   for (let index = 0; index < arrayNumber.length; index += 1){
