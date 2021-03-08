@@ -30,7 +30,7 @@ function generatePhoneNumber(numbers) {
   }
 
   if (checkingBiggerAndSmaller(numbers) === true || checkingRepetition(numbers) === true) {
-    return 'Não é possível gerar um número de telefone com esses valores';
+    return 'não é possível gerar um número de telefone com esses valores';
   }
 
   numberFone = '(' + numbers[0] + numbers[1] + ')' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10];
