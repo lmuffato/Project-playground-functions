@@ -138,8 +138,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(string) {
-  let numbers = string.replace(/[^0-9]/g, '');
-  let stringArray = numbers.split('');
+  let stringArray = string.replace(/[^0-9]/g, '').split(''); 
   let quantityGlassesWater = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   let glassesWater = 0;
   let stringReturn = '';
