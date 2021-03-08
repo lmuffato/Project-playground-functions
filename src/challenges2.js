@@ -27,15 +27,16 @@ function repeatCount(numbersArray) {
         repeat += 1;
       };
         if (repeat >= 3) {
-          return 'não é possível gerar um número de telefone com esses valores';
+          return true;
         };
     };
   };
 }
 
+
 function wrongRangeCheck(currentValue) {
   if (currentValue > 9 || currentValue < 0) {
-    return "não é possível gerar um número de telefone com esses valores";
+    return true;
   }
 }
 
@@ -45,14 +46,13 @@ function generatePhoneNumber(phoneNumb) {
     return "Array com tamanho incorreto."
   };
 
-  phoneNumb.some(wrongRangeCheck);
-
-  repeatCount(phoneNumb);
-
+  if (repeatCount(phoneNumb) === true || phoneNumb.some(wrongRangeCheck) === true) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  };
   return `(${phoneNumb[0]}${phoneNumb[1]}) ${phoneNumb[2]}${phoneNumb[3]}${phoneNumb[4]}${phoneNumb[5]}${phoneNumb[6]}-${phoneNumb[7]}${phoneNumb[8]}${phoneNumb[9]}${phoneNumb[10]}`;
 } 
 
-let aaa = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+let aaa = [1, 2, 3, 4, 5, 6, 7, 8, 1, 1, 1];
 console.log(generatePhoneNumber(aaa));
 
 // Desafio 12
