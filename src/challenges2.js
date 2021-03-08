@@ -4,7 +4,7 @@ function techList(techArray, name) {
   if (techArray.length === 0) {
     resultArray = 'Vazio!';
   }
-  for (let index = 0; index < techArray.length; index += 1) {
+  for (let index = 0; index < techArray.sort().length; index += 1) {
     let objectList = {
       tech: techArray[index],
       nome: name,
@@ -28,7 +28,7 @@ function triangleCheck() {
 // Desafio 13
 function hydrate(str) {
   let numDrinks = str.match(/\d+/g);
-  let copos = 0;  
+  let copos = 0; 
   for (let index = 0; index < numDrinks.length; index += 1) {
     let drinks = Number(numDrinks[index]);
     copos += drinks;
