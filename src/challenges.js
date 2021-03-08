@@ -51,13 +51,13 @@ function highestCount(arraynumber) {
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let huntingrats;
-  if ((Math.abs(cat1 - mouse)) === (Math.abs(cat1 - mouse))) {
+  if ((Math.abs(cat1 - mouse)) === (Math.abs(cat2 - mouse))) {
   huntingrats = "os gatos trombam e o rato foge";
   }
-  if ((Math.abs(cat1 - mouse)) < (Math.abs(cat1 - mouse))) {
+  if ((Math.abs(cat1 - mouse)) < (Math.abs(cat2 - mouse))) {
   huntingrats = "cat1";
   }
-  if ((Math.abs(cat1 - mouse)) < (Math.abs(cat1 - mouse))) {
+  if ((Math.abs(cat1 - mouse)) < (Math.abs(cat2 - mouse))) {
   huntingrats = "cat1";
   }
   return huntingrats; 
