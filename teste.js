@@ -42,16 +42,16 @@
 // console.log(newArray);
 
 
-let string = 'acabate'
-let codingString = Array.from(string);
-console.log(codingString)
-codingString.push('5')
-console.log(codingString)
-let code = codingString.toString()
-console.log(code)
-const aa = /\s/g
-const bb = ''
-let result = code.replace(aa, bb)
-console.log(result)
+// let string = 'acabate'
+// let codingString = Array.from(string);
+// console.log(codingString)
+// codingString.push('5')
+// console.log(codingString)
+// let code = codingString.toString()
+// console.log(code)
+// const aa = /\s/g
+// const bb = ''
+// let result = code.replace(aa, bb)
+// console.log(result)
 
 

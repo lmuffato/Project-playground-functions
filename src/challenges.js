@@ -5,7 +5,7 @@ function compareTrue(param1, param2) {
 
 // Desafio 2 OK
 function calcArea(base, height) {
-  return base * height / 2;
+  return (base * height) / 2;
 }
 
 // Desafio 3 OK
@@ -63,7 +63,7 @@ function fizzBuzz(array) {
       arrayFizzBuzz.push('buzz');
     } else if (testFizzBuzz % 3 === 0) {
       arrayFizzBuzz.push('fizz');
-    } else {
+    }
       arrayFizzBuzz.push('bug!');
     }
   }
@@ -74,14 +74,13 @@ function fizzBuzz(array) {
 // ESQUECE O ARRAY e For SEU TROUXA
 // Solução idealizada pelo Douglas Santana
 function encode(string) {
-    let codingString = string.replaceAll('a','1').replaceAll('e','2').replaceAll('i','3').replaceAll('o','4').replaceAll('u','5');
-    return codingString;
-
+  let codingString = string.replaceAll('a', '1').replaceAll('e', '2').replaceAll('i', '3').replaceAll('o', '4').replaceAll('u', '5');
+  return codingString;
   }
 
 function decode(string) {
-    let decodingString = string.replaceAll('1','a').replaceAll('2','e').replaceAll('3','i').replaceAll('4','o').replaceAll('5','u');
-    return decodingString;
+  let decodingString = string.replaceAll('1', 'a').replaceAll('2', 'e').replaceAll('3', 'i').replaceAll('4', 'o').replaceAll('5', 'u');
+  return decodingString;
 }
 
 module.exports = {
