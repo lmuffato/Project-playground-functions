@@ -24,27 +24,37 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(arrayNames) {
   let firstWord = arrayNames[0];
-  let lastWord = arrayNames.pop();
+  let lastArray = arrayNames.length - 1;
+  let lastWord = arrayNames[lastArray];
   
-  let lastFirst = firstWord.concat(', ', lastWord);
+  let lastFirst = lastWord.concat(', ', firstWord);
+
   return lastFirst;
 }
 
 // Desafio 5
-function footballPoints(win, ties) {
-  // definir variavel coeficiente de pontos pra win
-  // definir variavel coeficiente de pontos pra ties
-  // variável cálculo da soma
-  // condicionar 0 pontos se win = 0 tier = 0
-  // retornar cálculo
+function footballPoints(wins, ties) {
+  let winsPoints = wins * 3;
+  let tiesPoints = ties;
+
+  let score = winsPoints + tiesPoints;
+
+  return score; 
 }
 
 // Desafio 6
-function highestCount() {
-  // colocar o array em ordem crescente
-  // identificar o maior
-  // percorrer o array crescente e condicionar quantas vezes igualdade com array inicial aparece
-  // a recorrencia retorna quantas vezes aparece
+function highestCount(arrayValues) {
+  let crescente = arrayValues.sort();
+  let higherNumber = crescente[crescente.length - 1];
+  let repeat = [higherNumber];
+
+  for (let index = 0; index < arrayValues.length - 1; index += 1) {
+    if (arrayValues[index] == higherNumber) {
+      repeat.push(arrayValues[index])
+    }
+  }
+
+  return repeat.length;
 }
 
 // Desafio 7
