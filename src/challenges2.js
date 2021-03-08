@@ -1,7 +1,7 @@
 // Desafio 10
 function techList(nomesTech, name) {
   let skillPessoa = [];
-  if (nomesTech.tech === 0) {
+  if (nomesTech.length === 0) {
     return 'Vazio!';
   }
 
