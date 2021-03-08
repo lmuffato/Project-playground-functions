@@ -66,7 +66,7 @@ function highestCount(number) {
 }
 
 // Desafio 7
-function catAndMouse(cat1, cat2, mouse) {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
 
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
@@ -79,9 +79,9 @@ function catAndMouse(cat1, cat2, mouse) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(fizzBuzz) {
   // seu código aqui
-
+let guardaNumero = 0;
 
 }
 
