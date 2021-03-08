@@ -19,11 +19,11 @@ function techList(tech, name) {
 }
 console.log(techList([]));
 // Desafio 11
-//Tirei uma dúvida no repositório do Edmilson - PullRequest #139 sobre o segundo for utilizado na função o restante eu já havia feito. Então percebi que o primeiro for guarda o número e o segundo compara todos os outros com esse guardado até que todos sejam comparados para que seja verificado se algum deles se repetem mais de 3 vezes e se são maiores que 9 ou menos que 0.
+// Tirei uma dúvida no repositório do Edmilson - PullRequest #139 sobre o segundo for utilizado na função o restante eu já havia feito. Então percebi que o primeiro for guarda o número e o segundo compara todos os outros com esse guardado até que todos sejam comparados para que seja verificado se algum deles se repetem mais de 3 vezes e se são maiores que 9 ou menos que 0.
 function generatePhoneNumber(phoneNumber) {
   if (phoneNumber.length !== 11) {
-    return 'Array com tamanho incorreto'
-  };
+    return 'Array com tamanho incorreto.';
+  }
   for (let index = 0; index < phoneNumber.length; index += 1) {
     let number = phoneNumber[index];
     let count = 0;
@@ -41,6 +41,7 @@ function generatePhoneNumber(phoneNumber) {
   };
   return `(${phoneNumber[0]}${phoneNumber[1]}) ${phoneNumber[2]}${phoneNumber[3]}${phoneNumber[4]}${phoneNumber[5]}${phoneNumber[6]}-${phoneNumber[7]}${phoneNumber[8]}${phoneNumber[9]}${phoneNumber[10]}`;
 }
+
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
