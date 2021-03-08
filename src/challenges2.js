@@ -57,7 +57,11 @@ function hydrate(drank) {
       water += Math.abs(drank[index]);
     }
   }
-  return water + ' copos de água';
+  if (water > 1) {
+    return water + ' copos de água';
+  } else {
+    return water + ' copo de água';
+  }
 }
 
 module.exports = {
