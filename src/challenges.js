@@ -71,6 +71,7 @@ function fizzBuzz(array) {
   }
   return newArray;
 }
+
 // Desafio 9
 function encode(string) {
   string = string.replaceAll('a', '1')
@@ -79,7 +80,6 @@ function encode(string) {
     .replaceAll('u', '5');
   return string;
 }
-console.log(encode('This is an encoding test.'));
 
 function decode(string) {
   string = string.replaceAll('1', 'a').replaceAll('2', 'e').replaceAll('3', 'i')
@@ -87,7 +87,6 @@ function decode(string) {
     .replaceAll('5', 'u');
   return string;
 }
-console.log(decode('Th3s 3s 1n 2nc4d3ng t2st.'));
 
 module.exports = {
   calcArea,
@@ -100,4 +99,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-}
+};
