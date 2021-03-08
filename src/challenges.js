@@ -62,13 +62,13 @@ function fizzBuzz(arraynum) {
   let strnum = [];
   for (index = 0; index < arraynum.length; index += 1) {
     if (arraynum[index] %3 == 0 && arraynum[index] %5 == 0) {
-      strnum[index] = 'fizzBuzz';
+      strnum.push('fizzBuzz');
     } else if (arraynum[index] %3 == 0) {
-      strnum = 'fizz';
+      strnum.push('fizz');
     } else if (arraynum[index] %5 == 0) {
-      strnum = 'Buzz';
+      strnum.push('Buzz');
     } else {
-      strnum[index] = 'bug!';
+      strnum.push('bug!');
     }
   }
   return strnum;
