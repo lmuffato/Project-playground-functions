@@ -54,17 +54,15 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-    let distance1 = (cat1)**2 - (mouse)**2;//parametriza a distancia do gato1 ate o rato
-    let distance2 = (cat2)**2 - (mouse)**2;//parametriza a distancia do gato2 ate o rato
-      if (distance1 < distance2) {
-          return('cat1');//caso o gato 1 esteja mais perto         
-      }
-      if (distance1 > distance2) {
-          return('cat2');//caso o gato 2 esteja mais perto
-      }
-      else if (distance1 === distance2) {
-          return('os gatos se trombam e o rato foge');//a distancia sendo a mesma
-      }
+    if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {//.abs calcula o valor absoluto. ideia de distancia
+      return('cat1');//caso o gato 1 esteja mais perto         
+    }
+    if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
+      return('cat2');//caso o gato 2 esteja mais perto         
+    }
+    else{
+    return('os gatos se trombam e o rato foge');//caso os gatos estejam na mesma distancia do rato
+    }
 }
 
 // Desafio 8
