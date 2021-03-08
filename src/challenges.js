@@ -88,10 +88,43 @@ function fizzBuzz(numbers) {
 
 // Desafio 9
 function encode(value) {
-  // seu código aqui
+  let result = [];
+  for (let index = 0; index < value.length; index += 1) {
+    if (value[index] === 'a') {
+      result[index] = '1';
+    } else if (value[index] === 'e') {
+      result[index] = '2';
+    } else if (value[index] === 'i') {
+      result[index] = '3';
+    } else if (value[index] === 'o') {
+      result[index] = '4';
+    } else if (value[index] === 'u') {
+      result[index] = '5';
+    } else {
+      result[index] = value[index];
+    }
+  }
+  return result.join('');
 }
-function decode() {
-  // seu código aqui
+function decode(value) {
+  let result = [];
+  for (let index = 0; index < value.length; index += 1) {
+    if (value[index] === '1') {
+      result[index] = 'a';
+    } else if (value[index] === '2') {
+      result[index] = 'e';
+    } else if (value[index] === '3') {
+      result[index] = 'i';
+    } else if (value[index] === '4') {
+      result[index] = 'o';
+    } else if (value[index] === '5') {
+      result[index] = 'u';
+    } else {
+      result[index] = value[index];
+    }
+  }
+  // Referência para converter um array em string: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+  return result.join('');
 }
 
 module.exports = {
@@ -146,3 +179,8 @@ console.log(fizzBuzz([9, 25]));
 console.log(splitSentence('go Trybe'));
 console.log(splitSentence('vamo que vamo'));
 console.log(splitSentence('foguete'));
+
+// Testando a função encode
+console.log(encode('hi there!'));
+// Testando a função encode
+console.log(decode('h3 th2r2!'));
