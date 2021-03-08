@@ -27,12 +27,12 @@ function generatePhoneNumber(numbers) {
 
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers.length !== 11) {
-      return "Array com tamanho incorreto.";
-    } else if (checkingBiggerAndSmaller(numbers) === true || checkingRepetition(numbers) === true) {
-      return "Não é possível gerar um número de telefone com esses valores";
+      return 'Array com tamanho incorreto.';
+    } if (checkingBiggerAndSmaller(numbers) === true || checkingRepetition(numbers) === true) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  numberFone = '(' + numbers[0] + numbers[1] + ')' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10];
+  numberFone = '(' + numbers[0] + numbers[1] + ')' + ' ' + numbers[2] + numbers[3] + numbers[4] + numbers[5] + numbers[6] + '-' + numbers[7] + numbers[8] + numbers[9] + numbers[10];
   return numberFone;
 }
 
