@@ -44,12 +44,8 @@ function generateNumber(arrayNumber) {
     }
   }
 }
-function allFunctionsPhone(functionsPhone) {
-functionsPhone = conditionsPhoneNumber + countPhoneNumber + generateNumber;
-}
 function generatePhoneNumber(arrayPhone) {
-  let functionsPhone = allFunctionsPhone;
-  let phone = functionsPhone;
+  let phone = conditionsPhoneNumber + countPhoneNumber + generatePhoneNumber;
   phone = `(${arrayPhone[0]}${arrayPhone[1]})`;
   phone += `${arrayPhone[2]}${arrayPhone[3]}${arrayPhone[4]}${arrayPhone[5]}${arrayPhone[6]}`;
   phone += `-${arrayPhone[7]}${arrayPhone[8]}${arrayPhone[9]}${arrayPhone[10]}`;
