@@ -1,18 +1,19 @@
 // Desafio 10
 function techList(array, namE) {
-  let listTech = [];
-  let arrayOrd = array.sort();
-  for ( let key in arrayOrd){
-  listTech.push( {
-    tech: arrayOrd[key],
-    name: namE,
+  if (array === 0) {
+    return 'Vazio!';
+ }
+    let listTech = [];
+    let arrayOrd = array.sort();
+  for ( let key in arrayOrd) {
+    listTech.push( 
+      {
+  tech: arrayOrd[key],
+  name: namE,
   },
 );
 }
-  
   return listTech;
-
-  // seu código aqui
 }
 
 // Desafio 11
