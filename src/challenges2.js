@@ -19,26 +19,36 @@ console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Diego'));
 
 // Desafio 11
 
-function generatePhoneNumber(arrayPhone) {
-  if (arrayPhone.length !== 11){
+function conditionsPhoneNumber(arrayPhoneNumber) {
+  if (arrayPhoneNumber.length !== 11){
     return 'Array com tamanho incorreto';
   }
-  let count = 0;
-  for (let index in arrayPhone){
-    for(let key in arrayPhone){
-       if (arrayPhone[index] === arrayPhone[key]){
-         count +=1;
+  for (let index in arrayPhoneNumber){
+    let count = 0;
+  for(let key in arrayPhoneNumber){
+     if (arrayPhoneNumber[index] === arrayPhoneNumber[key]){
+       count +=1;
       }
     }
-    if (arrayPhone[index] < 0 || arrayPhone[index] > 9 || count >= 3){
+    if (arrayPhoneNumber[index] < 0 || arrayPhoneNumber[index] > 9 || count >= 3){
       return 'não é possível gerar um número de telefone com esses valores';
+    }
   }
-  }
-  let phone = `(${arrayPhone[1]} ${arrayPhone[2]})`
-`${arrayPhone[3]} ${arrayPhone[4]} ${arrayPhone[5]} ${arrayPhone[6]} ${arrayPhone[7]} `-`
-${arrayPhone[8]} ${arrayPhone[9]} ${arrayPhone[0]} ${arrayPhone[1]}`;
-return phone;
 }
+  function generatePhoneNumber(arrayPhone){
+  let phone = conditionsPhoneNumber;
+  for (let index = 0; index < arrayPhone.length; index += 1){
+    if (arrayPhone[index] === arrayPhone[index]){
+      phone = `(${arrayPhone[0]}${arrayPhone[1]})`; 
+      phone += `${arrayPhone[2]}${arrayPhone[3]}${arrayPhone[4]}${arrayPhone[5]}${arrayPhone[6]}`; 
+      phone += `-${arrayPhone[7]}${arrayPhone[8]}${arrayPhone[9]}${arrayPhone[10]}`;
+      
+    }
+  }
+    return phone;
+  }
+
+
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
