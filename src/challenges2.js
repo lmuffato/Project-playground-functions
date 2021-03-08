@@ -10,7 +10,8 @@ function techList(array, name) {
   for (let index = 0; index < arraySorted.length; index += 1) {
     objectArray.push({
       tech: array[index],
-      name });
+      name
+    });
   }
   return objectArray;
 }
@@ -40,6 +41,17 @@ function numbersRepetitionVerificator(array) {
   return false;
 }
 
+function stringConcatenationPhoneNumber(string) {
+  let abrirParentese = '(';
+  let fecharParentese = ') ';
+  let traco = '-';
+  string = string.substring(0, 0) + abrirParentese + string.substring(0, string.length);
+  string = string.substring(0, 3) + fecharParentese + string.substring(3, string.length);
+  string = string.substring(0, 10) + traco + string.substring(10, string.length);
+  return string;
+}
+
+
 function generatePhoneNumber(array) {
   let phoneNumber = '';
   if (array.length === 11) {
@@ -49,11 +61,7 @@ function generatePhoneNumber(array) {
       }
       phoneNumber += array[index];
     }
-    phoneNumber = phoneNumber.substring(0, 0) + '(' + phoneNumber.substring(0, phoneNumber.length);
-    phoneNumber = phoneNumber.substring(0, 3) + ') ' + phoneNumber.substring(3, phoneNumber.length);
-    phoneNumber = phoneNumber.substring(0, 10) + '-' + phoneNumber.substring(10, phoneNumber.length);
-
-    return phoneNumber;
+    return stringConcatenationPhoneNumber(phoneNumber);
   }
   return 'Array com tamanho incorreto.';
 }
@@ -66,8 +74,8 @@ function triangleSideCheck(lineA, lineB, lineC) {
 }
 
 function triangleCheck(lineA, lineB, lineC) {
-  if (triangleSideCheck(lineA, lineB, lineC) && triangleSideCheck(lineB, lineA, lineC) 
-  && triangleSideCheck(lineC, lineA, lineB)) {
+  if (triangleSideCheck(lineA, lineB, lineC) && triangleSideCheck(lineB, lineA, lineC)
+    && triangleSideCheck(lineC, lineA, lineB)) {
     return true;
   }
   return false;
@@ -82,13 +90,15 @@ function hydrate(string) {
   let numbersArray = [];
   for (let index = 0; index < numbersString.length; index += 1) {
     numbersArray.push(parseInt(numbersString.charAt(index), 10));
-    console.log(numbersArray);
   }
   let sum = 0;
   for (let index = 0; index < numbersArray.length; index += 1) {
     sum += numbersArray[index];
   }
-  let coposDagua = 'copos de água';
+  let coposDagua = ' copos de água';
+  if (sum <= 1) {
+    coposDagua = ' copo de água';
+  }
   return sum + coposDagua;
 }
 
