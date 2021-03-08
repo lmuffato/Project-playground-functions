@@ -106,7 +106,7 @@ function encode(phrase) {
 function decodeDictionary(char) {
   let dictionary = populateDictionary();
   for (let dictionaryKey in dictionary) {
-    if (char === dictionary[dictionaryKey]) {
+    if (char === dictionary[dictionaryKey].toString()) {
       return dictionaryKey;
     }
   }
@@ -136,3 +136,5 @@ module.exports = {
   highestCount,
   splitSentence,
 };
+
+console.log(decode('h2ll4'));
