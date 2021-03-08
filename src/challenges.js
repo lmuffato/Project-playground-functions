@@ -49,7 +49,6 @@ let pontos = footballPoints(14, 8);
 console.log(pontos);
 console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0));
-
 // Desafio 6
 function highestCount(arrayNumbers) {
   let maiorNumero = 0;
@@ -90,26 +89,6 @@ console.log(fizzBuzz([9, 25]));
 // Desafio 9
 function encode(string) {
   let returnEncode = string.replace(/a/g,'1').replace(/e/g, '2').replace(/i/g, '3').replace(/o/g, '4').replace(/u/g, '5');
-  //  for (index=0; index < string.length; index += 1){
-  //    switch (string[index]){
-  //     case 'a': 
-  //     returnEncode = returnEncode + '1';
-  //     break;
-  //     case 'e':
-  //       returnEncode = returnEncode + '2';
-  //     break; 
-  //     case 'i':
-  //       returnEncode = returnEncode + '3';
-  //     break;
-  //     case 'o':
-  //       returnEncode = returnEncode + '4';
-  //     break;
-  //     case 'u':
-  //       returnEncode = returnEncode + '5';
-  //     break; 
-  //     default: returnEncode = returnEncode + string[index];
-  //    }
-  //   } 
     return returnEncode ;
   }
   var code = encode("hi there!");
@@ -119,17 +98,15 @@ function decode(string) {
       return returndecode;
     }
       console.log(decode(code));
-// }
-
-// module.exports = {
-//   calcArea,
-//   catAndMouse,
-//   compareTrue,
-//   concatName,
-//   decode,
-//   encode,
-//   fizzBuzz,
-//   footballPoints,
-//   highestCount,
-//   splitSentence,
-// };
+module.exports = {
+  calcArea,
+  catAndMouse,
+  compareTrue,
+  concatName,
+  decode,
+  encode,
+  fizzBuzz,
+  footballPoints,
+  highestCount,
+  splitSentence,
+};
