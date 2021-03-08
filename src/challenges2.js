@@ -30,8 +30,8 @@ function generatePhoneNumber(phoneNumb) {
   if (phoneNumb.some(wrongRangeCheck) === true) {
     return "não é possível gerar um número de telefone com esses valores"
   }
-  
-  return `(${arr[0]}${arr[1]}) ${arr[2]}${arr[3]}${arr[4]}${arr[5]}${arr[6]}-${arr[7]}${arr[8]}${arr[9]}${arr[10]}`;
+  //https://stackoverflow.com/questions/4974238/javascript-equivalent-of-pythons-format-function
+  return `(${phoneNumb[0]}${phoneNumb[1]}) ${phoneNumb[2]}${phoneNumb[3]}${phoneNumb[4]}${phoneNumb[5]}${phoneNumb[6]}-${phoneNumb[7]}${phoneNumb[8]}${phoneNumb[9]}${phoneNumb[10]}`;
 } 
 
 
@@ -63,9 +63,20 @@ Exemplo: o retorno de triangleCheck(10, 14, 8) deverá ser true.
 */
 
 // Desafio 13
-function hydrate() {
+function hydrate(toDrink) {
   // seu código aqui
+  let numbers = toDrink.replace(/\D/g, '');
+  let total = 0;
+  let response = '';
+  for (let index = 0; index < numbers.length; index += 1) {
+    total += parseInt(numbers[index], 10);
+  }
+  if (total > 1) {
+    response = `${total} copos de água`;
+  } else response = `${total} copo de água`;
+  return response;
 }
+console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   generatePhoneNumber,
