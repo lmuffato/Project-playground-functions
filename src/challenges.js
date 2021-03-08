@@ -100,6 +100,37 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(phrase) {
   console.log("Works!");
+  console.log('decode');
+  let inputPhrase = '';
+  for (let key in phrase) {
+    switch(phrase[key]) {
+      case 'a' :
+      inputPhrase += '1';
+      break;
+
+      case 'e' :
+      inputPhrase += '2';
+      break;
+
+      case 'i' :
+      inputPhrase += '3';
+      break;
+
+      case 'o' :
+      inputPhrase += '4';
+      break;
+
+      case 'u' :
+      inputPhrase += '5';
+      break;
+
+      default :
+      inputPhrase += phrase[key];
+
+    }
+  }
+  return inputPhrase;
+
   // seu código aqui
 }
 
@@ -153,7 +184,7 @@ console.log(footballPoints(14, 8));
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 console.log(catAndMouse(3, 9, 9));
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
-console.log(decode('h3 th2r2'));
+console.log(encode('hi there'));
 
 module.exports = {
   calcArea,
