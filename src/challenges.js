@@ -23,8 +23,6 @@ function concatName(items) {
   return `${items[items.length - 1]}, ${items[0]}`;
 }
 
-items = ['lucas, ferreira, rocha, aguiar']
-console.log(concatName(items))
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = wins * 3 + ties * 1;
@@ -37,8 +35,8 @@ function highestCount() {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let cat1Position = mouse - cat1;
-  let cat2Position = mouse - cat2;
+  let cat1Position = Math.abs(mouse - cat1);
+  let cat2Position = Math.abs(mouse - cat2);
   if (cat1Position > cat2Position) {
     return 'cat2';
   } if (cat1Position < cat2Position) {
@@ -48,18 +46,18 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(numbers) {
+function fizzBuzz(number) {
   let fizzOrBuzz = [];
-  for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
+  for (let index = 0; index < number.length; index += 1) {
+    if (number[index] % 3 === 0 && number[index] % 5 === 0) {
       fizzOrBuzz.push('fizzBuzz');
-    } else if (numbers[index] % 3 === 0) {
+    } else if (number[index] % 3 === 0) {
       fizzOrBuzz.push('fizz');
-    } else if (numbers[index] % 5 === 0) {
+    } else if (number[index] % 5 === 0) {
       fizzOrBuzz.push('buzz');
     } else {
       fizzOrBuzz.push('bug!');
-    }  
+    }
   }
   return fizzOrBuzz;
 }
