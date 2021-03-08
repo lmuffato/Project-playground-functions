@@ -64,8 +64,8 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let catOneDistance = cat1 - mouse;
-  let catTwoDistance = cat2 - mouse;
+  let catOneDistance = Math.abs(cat1 - mouse);
+  let catTwoDistance = Math.abs(cat2 - mouse);
   let result = '';
 
   if (catOneDistance < catTwoDistance) {
@@ -75,11 +75,10 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (catOneDistance === catTwoDistance) {
     result = 'os gatos trombam e o rato foge';
   }
-  
   return result;
 }
 
-console.log(catAndMouse(0, 3, 2));
+console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
 function fizzBuzz() {
