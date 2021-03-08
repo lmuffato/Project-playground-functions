@@ -73,9 +73,48 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function lineACheck(lineA, lineB, lineC) {
+  let output = false;
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+    output = true;
+  }
+
+  return output;
 }
+
+function lineBCheck(lineA, lineB, lineC) {
+  let output = false;
+  if (lineB < lineA + lineC && lineA > Math.abs(lineA - lineC)) {
+    output = true;
+  }
+
+  return output;
+}
+
+function lineCCheck(lineA, lineB, lineC) {
+  let output = false;
+  if (lineC < lineA + lineB && lineA > Math.abs(lineA - lineB)) {
+    output = true;
+  }
+
+  return output;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  let output = false;
+
+  if (
+    lineACheck(lineA, lineB, lineC) &&
+    lineBCheck(lineA, lineB, lineC) &&
+    lineCCheck(lineA, lineB, lineC)
+  ) {
+    output = true;
+  }
+
+  return output;
+}
+
+console.log(triangleCheck(3, 50, 3));
 
 // Desafio 13
 // Função replace e parâmetros retirados do Stackoverflow(https://stackoverflow.com/questions/30607419/return-only-numbers-from-string) combinado com documentação do MDN
