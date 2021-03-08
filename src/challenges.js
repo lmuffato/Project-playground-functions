@@ -53,8 +53,16 @@ for (let i = 0; i < num.length; i++) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-
-}
+  if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)){
+    return "Cat 1";
+  }
+  else if (Math.abs(cat1 - mouse) <  Math.abs(cat2- mouse)) {
+    return "Cat 2";
+  }
+  else if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)){
+    return "Os gatos trombam e o rato foge";
+  }
+  }
 
 // Desafio 8
 function fizzBuzz() {
