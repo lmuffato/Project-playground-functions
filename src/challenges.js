@@ -1,81 +1,91 @@
 // Desafio 1
 function compareTrue(value1, value2) {
+    //compara valores
   if (value1 === true && value2 === true) {
+    //retorna true se os dois valores sao verdadeiros
     return true;
   } else
+  //retorna false se algum dos valores é falso
     return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return ((base*height)/2) // retorna valor da area calculada
+    //retorna valor da area do triangulo formado pela base e altura 
+  return ((base*height)/2);
 }
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(' ') // seu código aqui
+    //divide a string de entrada onde tem o caractere especial ' ' 
+  return string.split(' ')
 }
 
 // Desafio 4
 function concatName(strings) {
-  return strings[strings.length - 1] + ', ' + strings[0]  // seu código aqui
+    //retorna o ultimo e depois o primeiro valor do array de strings
+  return strings[strings.length - 1] + ', ' + strings[0]
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return ((wins * 3) + (ties * 1))// seu código aqui
+    //retorna o resultado do calculo de soma ponderada dos pontos
+  return ((wins * 3) + (ties * 1))
 }
 
 // Desafio 6
 function highestCount(numbers) {
-  let count = 0; 
-    let maxNumber = 0;
+    let count = 0; //variavel contadora
+    let maxNumber = 0; //variavel para armazenar o maior numero encontrado
+    //percorrer o parametro pra identificar o maior numero
     for (let index = 0; index < numbers.length; index += 1){
         if (maxNumber < numbers[index]){
             maxNumber = numbers[index]
         }
     }
+    //percorre o parametro para contar quantas vezes ele aparece
     for (index = 0; index < numbers.length; index += 1){
         if (maxNumber === numbers[index]){
             count += 1;
         }
     }
-    return count;// seu código aqui
+    return count;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distance1 = mouse - cat1;
-    let distance2 = mouse - cat2;
-    if (distance1 < distance2) {
-        console.log('cat1');        
-    }
-    else if (distance1 > distance2) {
-        console.log('cat2');
-    }
-    else if (distance1 === distance2) {
-        console.log('os gatos se trombam e o rato foge');
-    }// seu código aqui
+    let distance1 = (cat1)**2 - (mouse)**2;//parametriza a distancia do gato1 ate o rato
+    let distance2 = (cat2)**2 - (mouse)**2;//parametriza a distancia do gato2 ate o rato
+      if (distance1 < distance2) {
+          return('cat1');//caso o gato 1 esteja mais perto         
+      }
+      if (distance1 > distance2) {
+          return('cat2');//caso o gato 2 esteja mais perto
+      }
+      else if (distance1 === distance2) {
+          return('os gatos se trombam e o rato foge');//a distancia sendo a mesma
+      }
 }
 
 // Desafio 8
 function fizzBuzz(array) {
-  let result = [];
-    for (let index = 0; index < array.length; index += 1){
-        if (array[index] % 3 === 0 && array[index] % 5 === 0){
-            result.push('fizzBuzz');
+    let result = [];//variavel para armazenar array de resultados
+        //percorre o array para trocar valores
+        for (let index = 0; index < array.length; index += 1){
+            if (array[index] % 3 === 0 && array[index] % 5 === 0){
+              result.push('fizzBuzz');//troca valores inteiros divisiveis por 3 e por 5 
+            }
+            if (array[index] % 3 === 0 && array[index] % 5 !== 0){
+              result.push('fizz');//troca valores inteiros divisiveis apenas por 3 
+            }
+            if (array[index] % 3 !== 0 && array[index] % 5 === 0){
+              result.push('buzz');//troca valores inteiros divisiveis apenas por 5 
+            }
+            if (array[index] % 3 !== 0 && array[index] % 5 !== 0){
+              result.push('bug!');//troca valores inteiros nem divisiveis por 3 nem por 5
+            }
         }
-        if (array[index] % 3 === 0 && array[index] % 5 !== 0){
-            result.push('fizz');
-        }
-        if (array[index] % 3 !== 0 && array[index] % 5 === 0){
-            result.push('buzz');
-        }
-        if (array[index] % 3 !== 0 && array[index] % 5 !== 0){
-            result.push('bug');
-        }
-    }
-    console.log(result);// seu código aqui
+    return(result);//retorna array de resultados 
 }
 
 // Desafio 9
@@ -113,7 +123,7 @@ function encode(string) {
       for(index = 0; index < encodeString.length; index += 1){
           output = output + encodeString[index];
       }
-      console.log(output)// seu código aqui
+      return(output)// seu código aqui
   }
   function decode(string) {
     let output = [];
@@ -148,7 +158,7 @@ function encode(string) {
       for(index = 0; index < decodeString.length; index += 1){
           output = output + decodeString[index];
       }
-      console.log(output)// seu código aqui
+      return(output)// seu código aqui
 }
 
 module.exports = {
