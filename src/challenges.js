@@ -94,7 +94,7 @@ let encodeKey = {
   i: 3,
   o: 4,
   u: 5,
-}
+};
 
 function encode(string) {
   let encryptedString = '';
@@ -114,7 +114,7 @@ let decodeKey = {
   3: 'i',
   4: 'o',
   5: 'u',
-}
+};
 
 function decode(string) {
   let decryptedString = '';
@@ -139,4 +139,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-}
+};
