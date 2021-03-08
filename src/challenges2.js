@@ -2,17 +2,17 @@
 function techList(array, namE) {
   if (array === 0) {
     return 'Vazio!';
- }
-    let listTech = [];
-    let arrayOrd = array.sort();
-  for ( let key in arrayOrd) {
-    listTech.push( 
+  }
+  let listTech = [];
+  let arrayOrd = array.sort();
+  for (let key in arrayOrd) {
+    listTech.push(
       {
-  tech: arrayOrd[key],
-  name: namE,
-  },
-);
-}
+        tech: arrayOrd[key],
+        name: namE,
+      },
+    );
+  }
   return listTech;
 }
 
@@ -31,8 +31,7 @@ function hydrate() {
   // seu código aqui
 }
 
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
-
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 
 module.exports = {
   generatePhoneNumber,
