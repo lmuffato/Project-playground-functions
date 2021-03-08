@@ -13,15 +13,15 @@ function techList(techNameArray, userName) {
   return items;
 }
 
-// Desafio 11
+// Desafio 11 //found about the filter method on https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 function checkRepeat(arrNum) {
-  let count = 0;
   for (let index of arrNum) {
-    if (arrNum[index] === index) {
-      count += 1;
+    let count = arrNum[index];
+    let numbersCount = arrNum.filter((x) => x === count).length;
+    if (numbersCount >= 3) {
+      return true;
     }
   }
-  return count;
 }
 
 function checkConditions(arrNum) {
@@ -37,14 +37,14 @@ function generatePhoneNumber(arrNum) {
   if (arrNum.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  if (checkConditions(arrNum) === true || checkRepeat(arrNum) >= 3) {
+  if (checkConditions(arrNum) === true || checkRepeat(arrNum) === true) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   return `(${arrNum[0]}${arrNum[1]}) ${arrNum[2]}${arrNum[3]}\
 ${arrNum[4]}${arrNum[5]}${arrNum[6]}-${arrNum[7]}${arrNum[8]}\
 ${arrNum[9]}${arrNum[10]}`;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 4, 6, 7, 4, 4, 0, 1]));
+console.log(generatePhoneNumber([5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0]));
 
 // Desafio 12
 function triangleCheck() {
