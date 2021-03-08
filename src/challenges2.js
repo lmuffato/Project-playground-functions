@@ -39,17 +39,13 @@ function checkEqual(array) {
   return result;
 }
 
-function createNumber(array) {
+function createNumber(array) { // consultado método splice em: https://www.youtube.com/watch?v=SpCqm9y3mTc
   let result = '';
+  array.unshift('(');
+  array.splice(3, 0, ')');
+  array.splice(4, 0, ' ');
+  array.splice(10, 0, '-');
   for (let index = 0; index < array.length; index += 1) {
-    if (index === 0) {
-      result += '(';
-    } if (index === 2) {
-      result += ')';
-      result += ' ';
-    } if (index === 7) {
-      result += '-';
-    }
     result += `${array[index]}`;
   }
   return result;
@@ -69,7 +65,7 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let triangleArray = [];
+  let triangleArray = [10, 20, 50];
   triangleArray.push(lineA, lineB, lineC);
   let isTriangle = true;
   for (let index = 0; index < 2; index += 1) {
@@ -91,7 +87,7 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(string) {
   let agua = '';
-  let filterString = /\d+/g;
+  let filterString = /\d+/g; // consultado uso do regex em https://www.youtube.com/watch?v=pfkkdzeyx6U&t=232s
   let strindFiltred = string.match(filterString);
   let resultFinal = 0;
   for (let index = 0; index < strindFiltred.length; index += 1) {
