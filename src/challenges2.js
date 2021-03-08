@@ -26,7 +26,7 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate(str) {
+function hydrate(str){
   let numDrinks = str.match(/\d+/g);
   let copos = 0;
   for (let index = 0; index < numDrinks.length; index += 1) {
