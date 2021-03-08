@@ -21,12 +21,12 @@ function techList(techArray, name) {
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+  
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  return lineA < lineB + lineC && lineA > Math.abs(lineB - lineC);
 }
 
 // Desafio 13
