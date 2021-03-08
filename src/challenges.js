@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if(value1 === true && value2 === true) {
+  if (value1 = true && value2 = true) {
     return true
   } else { return false}
 }
@@ -17,7 +17,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(strArray) {
-  return [strArray[strArray.length - 1], strArray[0]]
+  return strArray[strArray.length - 1] + ', ' + strArray[0]
 }
 
 // Desafio 5
@@ -29,14 +29,17 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbers) {
-  let highestNumber = [0]
-  for (let i = 0; i < numbers.length; i += 1) {
-    if (highestNumber < numbers[i]) {
-      highestNumber = numbers[i];
+  let highestNumber = Math.max(numbers);
+  console.log(highestNumber)
+  let count = 0
+  for(let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] = highestNumber) {
+      count += 1
     }
   }
-  return highestNumber;
+  return count;
 }
+
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -67,10 +70,16 @@ function fizzBuzz(numberArray) {
 
 // Desafio 9
 function encode(encodeString) {
+  encodeString.split('')
+  "a" = 1
+  "e" = 2
+  "i" = 3
+  "o" = 4
+  "u" = 5
   
 }
 function decode(decodeString) {
-  // seu código aqui
+  
 }
 
 console.log(compareTrue(true, false))
