@@ -10,8 +10,7 @@ function techList(array, name) {
   for (let index = 0; index < arraySorted.length; index += 1) {
     objectArray.push({
       tech: array[index],
-      name
-    });
+      name });
   }
   return objectArray;
 }
