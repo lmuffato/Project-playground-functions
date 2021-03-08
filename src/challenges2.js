@@ -34,9 +34,8 @@ function testListPhoneRepete(listNumber) {
   }
   if (numberRepet >= 3) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 function testListPhoneBig(listNumber) {
   let bigNumber = false;
@@ -47,9 +46,8 @@ function testListPhoneBig(listNumber) {
   }
   if (bigNumber === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 function testListPhoneZero(listNumber) {
   let menorQueZero = false;
@@ -60,16 +58,14 @@ function testListPhoneZero(listNumber) {
   }
   if (menorQueZero === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 function testListPhone(listNumber) {
   if (testListPhoneRepete(listNumber) === true || testListPhoneBig(listNumber) === true || testListPhoneZero(listNumber) === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 function phoneDDDNumber(listNumber) {
   let listDDDPhone = ['(', '0', '0', ')'];
@@ -100,8 +96,6 @@ function generatePhoneNumber(listNumber) {
   }
   return `${phoneDDDNumber(listNumber)} ${phoneFirstNumber(listNumber)}-${phoneLastNumber(listNumber)}`;
 }
-
-console.log(generatePhoneNumber([1, 2, 18, 0, 5, 3, 17, 8, 9, 1, 8]))
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let somaBC = lineB + lineC;
