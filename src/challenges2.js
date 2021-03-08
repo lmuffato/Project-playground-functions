@@ -8,9 +8,9 @@ function techList(tech, name) {
     return 'Vazio!';
   }
   for (let index = 0; index < tech.length; i += 1) {
-    techArray.tech = tech[i];
+    techArray.tech = tech[index];
     techList.name = name;
-    techObj.push({ tech: tech[i], name });
+    techObj.push({ tech: tech[index], name });
   }
   return techObj;
 }
