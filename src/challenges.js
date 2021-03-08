@@ -61,8 +61,8 @@ function catAndMouse(cat1, cat2, mouse) {
 }
 
 // Desafio 8
-let fizzOrBuzz = [];
 function fizzBuzz(divisible) {
+  let fizzOrBuzz = [];
   for (let currentNumber in divisible) {
     if (divisible[currentNumber] % 3 === 0 && divisible[currentNumber] % 5 === 0) {
       fizzOrBuzz.push('fizzBuzz');
@@ -73,7 +73,8 @@ function fizzBuzz(divisible) {
     } else {
       fizzOrBuzz.push('bug!');
     }
-  } return fizzOrBuzz;
+  }
+  return fizzOrBuzz;
 }
 
 // Desafio 9
@@ -85,8 +86,8 @@ function encode(encript) {
     i: 3,
     o: 4,
     u: 5,
-    };
-    for (let cript of encript) {
+  };
+  for (let cript of encript) {
     if (alt[cript]) {
       fraseEncode += alt[cript];
     } else {
@@ -96,19 +97,19 @@ function encode(encript) {
 }
 
 function decode(decript) {
-  let fraseDecode = '';
-  let alt = {
-      1: 'a',
-      2: 'e',
-      3: 'i',
-      4: 'o',
-      5: 'u',
-    } 
-      for (let uncript of decript) {
+let fraseDecode = '';
+let alt = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+    for (let uncript of decript) {
       if (alt[uncript]) {
-      fraseDecode += alt[uncript]
+      fraseDecode += alt[uncript];
     } else {
-      fraseDecode += uncript
+      fraseDecode += uncript;
     }
   } return fraseDecode;
 }

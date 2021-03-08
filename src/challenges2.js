@@ -33,7 +33,7 @@ function generatePhoneNumber(phone) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let resultado
+  let resultado;
   if ((lineA < lineB + lineC) && (lineB < lineA + lineC) && (lineC < lineA + lineB)) {
     resultado = true;
   } else {
