@@ -1,16 +1,19 @@
 // Desafio 10
 function techList(array, name) {
   let value = [];
-  if (array.length === 0) {
-    return 'Vazio!';
-  }
-  value.sort();
-  for (let index = 0; index < array.lenght; index += 1) {
-    let student = {
-      tech: array[index],
-      name: name,
-    };
-    value[index] = student;
+  let student = {};
+  array.sort();
+
+  if (array.length == 0) {
+    value = 'Vazio!';
+  } else {
+    for (let word in array) {
+      student = {
+        tech: array[word],
+        name: name
+      };
+      value.push(student);
+    }
   }
   return value;
 }
