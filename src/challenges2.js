@@ -48,9 +48,9 @@ function checkingBiggerAndSmaller(numbers) {
 }
 
 function checkingRepetition(numbers) {
-  for (let index = 0; index < numbers.length; index += 1) {
+  for (let index in numbers) {
     let contadorNumbers = 0;
-    for (let index2 = 0; index2 < numbers.length; index2 += 1) {
+    for (let index2 in numbers) {
       if (numbers[index] === numbers[index2]) {
         contadorNumbers += 1;
       }
