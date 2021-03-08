@@ -1,6 +1,6 @@
 // Desafio 10
-
 function techList(techs, name) {
+  
   techs.sort();
   let techAndNameObj = [];
   if (techs.length === 0) {
@@ -15,14 +15,9 @@ function techList(techs, name) {
   return techAndNameObj;
 } 
 
-
-/* let nome = "Lucas"
-let bbb = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-console.log(techList(bbb, nome)); */
-
 // Desafio 11
-
 function wrongRangeCheck(currentValue) {
+  
   (currentValue > 9 || currentValue < 0);
 }
 
@@ -40,13 +35,26 @@ function generatePhoneNumber(phoneNumb) {
 } 
 
 
-let aaa = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
-console.log(generatePhoneNumber(aaa));
+//let aaa = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+//console.log(generatePhoneNumber(aaa));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  
+  return (lineA < math.abs(lineB + lineC) && linelineB < math.abs(lineA + lineC) && linelineC < math.abs(lineB + lineC);
+}
+console.log(triangleCheck(10, 14, 8));
 
+/*
+  Para que seja possível formar um triângulo, é necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas.
+
+Para obter o valor absoluto de um número em JavaScript, pesquise pela função Math.abs.
+
+O retorno da sua função deverá ser um booleano.
+
+Exemplo: o retorno de triangleCheck(10, 14, 8) deverá ser true.
+
+*/
 
 // Desafio 13
 function hydrate() {
