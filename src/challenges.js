@@ -36,12 +36,12 @@ function highestCount (myArrey) {
 
 // Desafio 7
 function catAndMouse (mouse, cat1, cat2) {
-  mouse = Math.abs(mouse);
-  cat1 = Math.abs(cat1);
-  cat2 = Math.abs(cat2);
+  cat1 = Math.abs(cat1-mouse);
+  cat2 = Math.abs(cat2-mouse);
   if (cat1 == cat2) {return 'os gatos trombam e o rato foge';}
-  if ((cat1 - mouse) < (cat2)) { return 'cat1';}
-  if (((cat2 - mouse) < (cat1))) { return 'cat2';}
+  if (cat1 == cat2-mouse) {return 'os gatos trombam e o rato foge';}
+  if (cat1 < cat2) { return 'cat1';}
+  if (cat2 < cat1) { return 'cat2';}
 }
 
 // Desafio 8
