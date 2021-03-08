@@ -1,4 +1,4 @@
-// Desafio 1:
+// Desafio 1
 function compareTrue(a, b) {
   if (a && b === true) {
     return true;
@@ -71,66 +71,21 @@ function fizzBuzz(array) {
   }
   return newArray;
 }
-
 // Desafio 9
-function zencode(string) {
-  string = string.replace('a', '1')
-    .replace('e', '2').replace('i', '3')
-    .replace('o', '4')
-    .replace('u', '5');
-  return string;
-}
-
-function zdecode(string) {
-  string = string.replace('1', 'a').replace('2', 'e').replace('3', 'i')
-    .replace('4', 'o')
-    .replace('5', 'u');
-  return string;
-}
-console.log(zdecode('Th3s 3s 1n 2nc4d3ng t2st.'));
-
-// Desafio 9 versao 2
-
 function encode(string) {
-  let newString = '';
-
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === 'a') {
-      newString += '1';
-    } else if (string[index] === 'e') {
-      newString += '2';
-    } else if (string[index] === 'i') {
-      newString += '3';
-    } else if (string[index] === 'o') {
-      newString += '4';
-    } else if (string[index] === 'u') {
-      newString += '5';
-    } else {
-      newString += string[index];
-    }
-    return newString;
-  }
+  string = string.replaceAll('a', '1')
+    .replaceAll('e', '2').replaceAll('i', '3')
+    .replaceAll('o', '4')
+    .replaceAll('u', '5');
+  return string;
 }
-console.log(encode('paralelepipedo paradinho'));
-function decode(string) {
-  let newString = '';
+console.log(encode('This is an encoding test.'));
 
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === '1') {
-      newString.push('a');
-    } else if (string[index] === '2') {
-      newString.push('e');
-    } else if (string[index] === '3') {
-      newString.push('i');
-    } else if (string[index] === '4') {
-      newString.push('o');
-    } else if (string[index] === '5') {
-      newString.push('u');
-    } else {
-      newString.push(string[index]);
-    }
-    return newString;
-  }
+function decode(string) {
+  string = string.replaceAll('1', 'a').replaceAll('2', 'e').replaceAll('3', 'i')
+    .replaceAll('4', 'o')
+    .replaceAll('5', 'u');
+  return string;
 }
 console.log(decode('Th3s 3s 1n 2nc4d3ng t2st.'));
 
