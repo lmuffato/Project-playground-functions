@@ -103,8 +103,25 @@ function encode(phrase) {
   return phraseEncode;
 }
 
-function decode() {
-  // seu código aqui
+function decodeDictionary(char) {
+  let dictionary = populateDictionary();
+  for (let dictionaryKey in dictionary) {
+    if (char === dictionary[dictionaryKey]) {
+      return dictionaryKey;
+    }
+  }
+  return '';
+}
+
+function decode(phrase) {
+  let phraseDecode = '';
+  for (let index = 0; index < phrase.length; index += 1) {
+    phraseDecode += decodeDictionary(phrase[index]);
+    if (phraseDecode[index] === undefined) {
+      phraseDecode += phrase[index];
+    }
+  }
+  return phraseDecode;
 }
 
 module.exports = {
@@ -119,5 +136,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-
-console.log(encode('hi there!'));
