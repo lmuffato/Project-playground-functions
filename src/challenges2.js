@@ -18,7 +18,6 @@ function techList(techs, name) {
 // Desafio 11
 
 function repeatCount(numbersArray) {
-
   for (let index = 0; index < numbersArray.length; index += 1) {
     let compNumb = numbersArray[index];
     let repeat = 0;
@@ -40,7 +39,6 @@ function wrongRangeCheck(currentValue) {
 }
 
 function generatePhoneNumber(phoneNumb) {
-
   if (phoneNumb.length !== 11) {
     return "Array com tamanho incorreto.";
   }
