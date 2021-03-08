@@ -16,8 +16,8 @@ function techList(techNameArray, userName) {
 // Desafio 11
 function checkRepeat(arrNum) {
   let count = 0;
-  for (let index = 0; index < arrNum.length; index += 1) {
-    if (arrNum[index] === arrNum[0]) {
+  for (let index of arrNum) {
+    if (arrNum[index] === index) {
       count += 1;
     }
   }
@@ -40,10 +40,11 @@ function generatePhoneNumber(arrNum) {
   if (checkConditions(arrNum) === true || checkRepeat(arrNum) >= 3) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  return `(${arrNum[0]}${arrNum[1]})${arrNum[2]}${arrNum[3]}\
+  return `(${arrNum[0]}${arrNum[1]}) ${arrNum[2]}${arrNum[3]}\
 ${arrNum[4]}${arrNum[5]}${arrNum[6]}-${arrNum[7]}${arrNum[8]}\
 ${arrNum[9]}${arrNum[10]}`;
 }
+console.log(generatePhoneNumber([1, 2, 3, 4, 4, 6, 7, 4, 4, 0, 1]));
 
 // Desafio 12
 function triangleCheck() {
