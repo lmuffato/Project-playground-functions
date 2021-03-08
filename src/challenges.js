@@ -41,8 +41,27 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highest(listOfIntegers) {
+  let maxNumber = 0;
+
+  for (let numbersIndex = 0; numbersIndex < listOfIntegers.length; numbersIndex += 1) {
+    if (maxNumber <= listOfIntegers[numbersIndex]) {
+      maxNumber = listOfIntegers[numbersIndex];
+    }
+  }
+  return maxNumber;
+}
+
+function highestCount(numbers) {
+  let highestNumber = highest(numbers);
+  let cont = 0;
+
+  for (let numbersIndex = 0; numbersIndex < numbers.length; numbersIndex += 1) {
+    if (highestNumber === numbers[numbersIndex]) {
+      cont += 1;
+    }
+  }
+  return cont;
 }
 
 // Desafio 7
@@ -61,14 +80,23 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function checkDivideThree(listOfIntegers) {
-  let fizzBuzzArray = new Array(listOfIntegers.length);
+  let threeArray = new Array(listOfIntegers.length);
   for (let index = 0; index < listOfIntegers.length; index += 1) {
     if (listOfIntegers[index] % 3 === 0) {
-      fizzBuzzArray[index] = 'fizz!';
+      threeArray[index] = 'fizz!';
     }
   }
-  return (fizzBuzzArray, listOfIntegers);
+  return threeArray;
 }
+
+// function checkDivideFive(listOfIntegers) {
+//   for (let index = 0; index < integersArray.length; index += 1) {
+//     if (integersArray[index] % 5 === 0) {
+//       integersArray[index] = 'Buzz!';
+//     }
+//   }
+//   return integersArray;
+// }
 
 // function checkDivideFizzBuzz(integersArray) {
 //   let fizzBuzzArray = integersArray;
@@ -84,15 +112,6 @@ function checkDivideThree(listOfIntegers) {
 //   for (let index = 0; index < integersArray.length; index += 1) {
 //     if (integersArray[index] % 5 !== 0 && integersArray[index] % 3 !== 0) {
 //       integersArray[index] = 'bug!';
-//     }
-//   }
-//   return integersArray;
-// }
-
-// function checkDivideBuzz(integersArray) {
-//   for (let index = 0; index < integersArray.length; index += 1) {
-//     if (integersArray[index] % 5 === 0) {
-//       integersArray[index] = 'Buzz!';
 //     }
 //   }
 //   return integersArray;
