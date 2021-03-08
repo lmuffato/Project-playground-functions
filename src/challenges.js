@@ -15,8 +15,7 @@ function splitSentence() {
 
 // Desafio 4
 function concatName(value) {
-  // Recomendação do lint https://eslint.org/docs/rules/prefer-template
-  let lastName = `${value[value.length - 1]},  ${value[0]}`;
+  let lastName = value[value.length - 1] + ', ' + value[0];
   return lastName;
 }
 
@@ -47,33 +46,35 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = mouse - cat1;
   let distanceCat2 = mouse - cat2;
+  let result;
   if (distanceCat1 < distanceCat2) {
-    return 'cat 1';
+    result = 'cat 1';
   } else if (distanceCat1 === distanceCat2) {
-    return 'os gatos trombam e o rato foge';    
+    result = 'os gatos trombam e o rato foge';
   } else {
-    return 'cat 2';
+    result = 'cat 2';
   }
+  return result;
 }
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  for (index = 0; index < numbers.length; index += 1) {
-    if ((numbers[index] % 3 === 0) && (numbers[index] % 5 != 0)) {
-      numbers[index] = 'fizz';
-    } else if ((numbers[index] % 3 != 0) && (numbers[index] % 5 === 0)) {
-      numbers[index] = 'buzz';
-    } else if ((numbers[index] % 3 === 0) && (numbers[index] % 5 === 0)) {
+  for (let index = 0; index < numbers.length; index += 1) {
+    if ((numbers[index] % 3 === 0) && (numbers[index] % 5 === 0)) {
       numbers[index] = 'fizzBuzz';
-    } else if ((numbers[index] % 3 != 0) && (numbers[index] % 5 != 0)) {
+    } else if ((numbers[index] % 5 === 0)) {
+      numbers[index] = 'buzz';
+    } else if (numbers[index] % 3 === 0) {
+      numbers[index] = 'fizz';
+    } else {
       numbers[index] = 'bug!';
-    } 
+    }
   }
   return numbers;
 }
 
 // Desafio 9
-function encode() {
+function encode(value) {
   // seu código aqui
 }
 function decode() {
