@@ -29,8 +29,13 @@ function generatePhoneNumber(numbers) {
     return 'Array com tamanho incorreto.';
   }
 
-  if (checkingBiggerAndSmaller(numbers) === true || checkingRepetition(numbers) === true) {
-    return 'não é possível gerar um número de telefone com esses valores';
+  for (let index = 0; index < numbers.length; index += 1) {
+    let numbersArray = checkingBiggerAndSmaller(numbers[index]);
+    let checkRepeat = checkingRepetition(numbers,numbersArray);
+
+    if (numbersArray === true || checkRepeat === true) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
   }
 
   numberFone = `${'('}${numbers[0]}${numbers[1]}${')'}`;
@@ -41,26 +46,22 @@ function generatePhoneNumber(numbers) {
 
 function checkingBiggerAndSmaller(numbers) {
   let evaluator = false;
-  for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] < 0 || numbers[index] > 9) {
       evaluator = true;
     }
-  }
   return evaluator;
 }
 
-function checkingRepetition(numbers) {
-  for (let index = 0; index < numbers.length; index += 1) {
+function checkingRepetition(array, numbers) {
     let contadorNumbers = 0;
-    for (let index2 = 0; index2 < numbers.length; index2 += 1) {
-      if (numbers[index] === numbers[index2]) {
+    for (let index = 0; index < array.length; index += 1) {
+      if (numbers  === array[index]) {
         contadorNumbers += 1;
       }
     }
     if (contadorNumbers >= 3) {
       return true;
     }
-  }
   return false;
 }
 
