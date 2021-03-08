@@ -16,17 +16,23 @@ function techList(currentTech, name) {
   return arrayTechName;
 }
 function checkphoneNumber3(number, check) {
-  let currentNumber = number[0];
-  let counter = 0;
-  for (let index = 0; index < number.length; index += 1) {
-    if (number[index] === currentNumber) {
-      counter += 1;
-      currentNumber = number[index];
-    } else if (counter >= 3) {
-      check = false;
-    }
+  let checkNumber = {
+    zero: 0,
+    um: 0,
+    dois: 0,
+    tres: 0,
+    quatro: 0,
+    cinco: 0,
+    seis: 0,
+    sete: 0,
+    oito: 0,
+    nove: 0,
   }
-  return check;
+for(let index = 0;index < number.length; index += 1) {
+     if(number[index] === index) {
+        che
+     }
+}
 }
 function checkPhoneNumber2(number, check) {
   for (let index = 0; index < number.length; index += 1) {
@@ -113,7 +119,7 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
-let a = [1, 2, 3, 4, 5, 6, 7, 8, 7, 4, 1];
+let a = [0, 2, 3, 4, 4, 2, 7, 8, 9, 9, 4];
 console.log(generatePhoneNumber(a));
 module.exports = {
   generatePhoneNumber,

@@ -39,16 +39,20 @@ function footballPoints(wins, ties) {
   return points;
 }
 
+function checkHigherNumber(arrayNunbers, higherNumber) {
+  for (let index = 0; index < arrayNunbers.length; index += 1) {
+    if (arrayNunbers[index] >= higherNumber) {
+      higherNumber = arrayNunbers[index];
+    }
+  }
+  return higherNumber;
+}
 // Desafio 6
 function highestCount(arrayNunbers) {
   let count = 0;
   let higherNumber = 0;
   for (let index = 0; index < arrayNunbers.length; index += 1) {
-    for (let index2 = 0; index2 < arrayNunbers.length; index2 += 1) {
-      if (arrayNunbers[index2] >= higherNumber) {
-        higherNumber = arrayNunbers[index2];
-      }
-    }
+    higherNumber = checkHigherNumber(arrayNunbers, higherNumber);
     if (arrayNunbers[index] === higherNumber) {
       count += 1;
     }
@@ -74,7 +78,6 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 function divisibleBy3Function(number) {
   let div3;
- 
   if (number % 3 === 0) {
     div3 = true;
   } else {
@@ -84,7 +87,7 @@ function divisibleBy3Function(number) {
 }
 function divisibleBy5Function(number) {
   let div5;
-  if (number % 5 === 0 ) {
+  if (number % 5 === 0) {
     div5 = true;
   } else {
     div5 = false;
@@ -131,13 +134,12 @@ function encode(stringCode) {
   return newStringCode;
 }
 function decode(stringDecode) {
-  let newStringDecode;
-  newStringDecode = stringDecode;
-  newStringDecode = newStringDecode.replace(/1/g, 'a');
-  newStringDecode = newStringDecode.replace(/2/g, 'e');
-  newStringDecode = newStringDecode.replace(/3/g, 'i');
-  newStringDecode = newStringDecode.replace(/4/g, 'o');
+  let newStringDecode = stringDecode;
   newStringDecode = newStringDecode.replace(/5/g, 'u');
+  newStringDecode = newStringDecode.replace(/4/g, 'o');
+  newStringDecode = newStringDecode.replace(/3/g, 'i');
+  newStringDecode = newStringDecode.replace(/2/g, 'e');
+  newStringDecode = newStringDecode.replace(/1/g, 'a');
   return newStringDecode;
 }
 module.exports = {
