@@ -68,12 +68,13 @@ function fizzBuzz(number) {
        array.push('buzz');
     } if ((number[index] % 3) === 0 && (number[index] % 5) === 0) {
       array.push('fizzBuzz' === 0);
-    } if (number[index] % 3 && number % 5) {
-      array.push('bug!' === 0);
+    } else {
+      array.push('bug!');
     }
   }
   return array;
 }
+console.log(fizzBuzz([5, 6, 10, 9, 12, 2]));
 
 // Desafio 9
 function encode(encodeArray) {
