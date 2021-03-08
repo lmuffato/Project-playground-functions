@@ -18,22 +18,24 @@ function techList(numbers, name) {
     }
     return numberlist.sort(sorting);
   } if (numbers.length === 0) {
-    return 'vazio!';
+    return 'Vazio!';
   }
 }
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Hernanne'));
 // novamente exercicio 10 finalizado com ajuda, por estar tendo mt dificuldade com for
 
-// Desafio 11
+// desafio 11;
 function generatePhoneNumber() {
-  // seu código aqui
 }
-
-// Desafio 12
-function triangleCheck() {
-  // seu código aqui
+// Desafio 12;
+// eslint-disable-next-line complexity
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA + lineB > lineC && lineA + lineC > lineB && lineB + lineC > lineA) {
+    return true;
+  }
+  return false;
 }
-
+console.log(triangleCheck(10, 14, 8));
 // Desafio 13
 function hydrate() {
   // seu código aqui

@@ -11,6 +11,7 @@ console.log(compareTrue(true, false));
 // exercicio2
 function calcArea(base, height) {
   let area = 0;
+  // eslint-disable-next-line no-mixed-operators
   area = base * height / 2;
   return area;
 }
