@@ -44,9 +44,18 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(waterQ) {
-  let quantity = /\d+/g;
-  let number = [];
-  let string;
+  let quantity = waterQ.match(/\d+/g);
+//Como visto em: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
+  let water = 0
+  for (let index = 0; index < quantity.length; index += 1) {
+    let frase = parseInt (quantity[index]);
+    water += frase;
+}
+  if (water === 1) {
+    return water + ' copo de água';
+  } else if (water > 1) {
+    return water + ' copos de água';
+  }
 }
 
 module.exports = {
