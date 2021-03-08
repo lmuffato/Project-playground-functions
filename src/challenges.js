@@ -97,17 +97,17 @@ function fizzBuzz(array) {
 function encode(string) {
   let phrase = '';
   for (let index = 0; index < string.length; index += 1) {
-    if (string[index] != 'a' && string[index] != 'e' && string[index] != 'i' && string[index] != 'o' && string[index] != 'u') {
+    if (string[index] !== 'a' && string[index] !== 'e' && string[index] !== 'i' && string[index] !== 'o' && string[index] !== 'u') {
       phrase += string[index];
-    } else if (string[index] == 'a') {
+    } else if (string[index] === 'a') {
       phrase += '1';
-    } else if (string[index] == 'e') {
+    } else if (string[index] === 'e') {
       phrase += '2';
-    } else if (string[index] == 'i') {
+    } else if (string[index] === 'i') {
       phrase += '3';
-    } else if (string[index] == 'o') {
+    } else if (string[index] === 'o') {
       phrase += '4';
-    } else if (string[index] == 'u') {
+    } else if (string[index] === 'u') {
       phrase += '5';
     }
   }
@@ -117,17 +117,17 @@ console.log(encode('vem que vem'));
 function decode(string) {
   let phraseDecode = '';
   for (let index = 0; index < string.length; index += 1) {
-    if (string[index] != '1' && string[index] != '2' && string[index] != '3' && string[index] != '4' && string[index] != '5') {
+    if (string[index] !== '1' && string[index] !== '2' && string[index] !== '3' && string[index] !== '4' && string[index] !== '5') {
       phraseDecode += string[index];
-    } else if (string[index] == '1') {
+    } else if (string[index] === '1') {
       phraseDecode += 'a';
-    } else if (string[index] == '2') {
+    } else if (string[index] ==='2') {
       phraseDecode += 'e';
-    } else if (string[index] == '3') {
+    } else if (string[index] === '3') {
       phraseDecode += 'i';
-    } else if (string[index] == '4') {
+    } else if (string[index] === '4') {
       phraseDecode += 'o';
-    } else if (string[index] == '5') {
+    } else if (string[index] === '5') {
       phraseDecode += 'u';
     }
   }
