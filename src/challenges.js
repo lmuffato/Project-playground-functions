@@ -28,7 +28,7 @@ let stringDeNomes = []
 function concatName(arrayDeNomes) {
   stringDeNomes.push(arrayDeNomes[arrayDeNomes.length - 1]);
   stringDeNomes.push(arrayDeNomes[0]);
-  let ultimoNomeMaisPrimeiro = stringDeNomes.toString();
+  let ultimoNomeMaisPrimeiro = stringDeNomes.join(', ');
   return ultimoNomeMaisPrimeiro
 }
  console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -56,7 +56,7 @@ function highestCount(arrayDeNumeros) {
   }
 return countBigger
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -147,6 +147,21 @@ function decode(destrocar) {
   return newString2;
 }
 console.log(decode('h3 th2r2!'));
+
+// Desafio 10
+  let object = {}
+  let objectArray = []
+  function trybe(techs, name) {
+    techs = techs.sort()
+    for (index6 = 0; index6 < techs.length; index6 += 1) {
+      object['tech'] = techs[index6];
+      object['name'] = name;
+      objectArray.push(object);
+    }
+    //return objectArray
+    return techs
+  }
+  console.log(trybe(["React", "Jest", "HTML", "CSS", "JavaScript"], 'eric'));
 
 module.exports = {
   calcArea,
