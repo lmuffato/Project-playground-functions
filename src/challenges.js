@@ -139,7 +139,7 @@ function decode(phrase) {
   let inputPhrase = '';
   for (let key in phrase) {
     switch(phrase[key]) {
-      case '1' :
+      case '1':
       inputPhrase += 'a';
       break;
 
@@ -167,13 +167,6 @@ function decode(phrase) {
   return inputPhrase;
 
   // seu código aqui
-}
-
-let names = ['foguete', 'não', 'tem', 'ré'];
-let name = "henrique";
-
-for (let key in name) {
-  console.log(name[key]);
 }
 
 console.log(compareTrue(true, false));

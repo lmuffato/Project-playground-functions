@@ -1,5 +1,17 @@
 // Desafio 10
-function techList() {
+function techList(array, namE) {
+  let listTech = [];
+  let arrayOrd = array.sort();
+  for ( let key in arrayOrd){
+  listTech.push( {
+    tech: arrayOrd[key],
+    name: namE,
+  },
+);
+}
+  
+  return listTech;
+
   // seu código aqui
 }
 
@@ -17,6 +29,9 @@ function triangleCheck() {
 function hydrate() {
   // seu código aqui
 }
+
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
+
 
 module.exports = {
   generatePhoneNumber,
