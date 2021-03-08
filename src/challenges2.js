@@ -22,8 +22,8 @@ function techList(array, name) {
   }
 }
 
-// Referência usada para resolver o Desafio 10:
-// https://pt.stackoverflow.com/questions/338916/colocando-em-ordem-alfabética-um-array-de-objetos
+/* Referência usada para resolver o Desafio 10:
+ https://pt.stackoverflow.com/questions/338916/colocando-em-ordem-alfabética-um-array-de-objetos */
 
 // Desafio 11
 
@@ -83,12 +83,12 @@ function generatePhoneNumber(phoneNumber) {
   return phoneNumberFormat(phoneNumber);
 }
 
-// Referências utilizadas para resolução do Desafio 11 (sobre laço for...of, toString, repetição de números):
-// https://woliveiras.com.br/posts/laços-de-repetição-for-for-in-for-of/
-// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement
-// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
-// https://stackoverflow.com/questions/19395257/how-to-count-duplicate-value-in-an-array-in-javascript/19395302#19395302
-// O código do colega João Nascimento (@nascjoao) ajudou muito a clarear como estruturar as funções 1 e 2 que compõem a resposta do desafio 11.
+/* Referências utilizadas para resolução do Desafio 11 (sobre laço for...of, toString, repetição de números):
+https://woliveiras.com.br/posts/laços-de-repetição-for-for-in-for-of/
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
+https://stackoverflow.com/questions/19395257/how-to-count-duplicate-value-in-an-array-in-javascript/19395302#19395302
+O código do colega João Nascimento (@nascjoao) ajudou muito a clarear como estruturar as funções 1 e 2 que compõem a resposta do desafio 11. */
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -122,15 +122,18 @@ function hydrate(welcomeToTrybePub) {
     if (welcomeToTrybePub.match(/\d+/g).map(Number)) {
       let numbers = (welcomeToTrybePub.match(/\d+/g).map(Number));
       let sumOfNumbers = numbers.reduce(function (total, num) {
-        return parseFloat(total) + parseFloat(num);
+        return parseInt(total, 9) + parseInt(num, 9);
       });
       return hydrateInstructions(sumOfNumbers);
     }
   }
 }
-// Para resolução do Desafio 13, foram consultadas as referências abaixo:
-// https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
-// https://javascript.plainenglish.io/javascript-algorithm-calculate-sum-of-numbers-in-a-string-dd007da460b7
+
+/* Para resolução do Desafio 13, foram consultadas as referências abaixo:
+https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
+https://javascript.plainenglish.io/javascript-algorithm-calculate-sum-of-numbers-in-a-string-dd007da460b7
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseFloat
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/parseInt */
 
 module.exports = {
   generatePhoneNumber,

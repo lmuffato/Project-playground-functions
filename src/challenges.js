@@ -19,8 +19,8 @@ function splitSentence(sentence) {
 }
 // Para resolução do Desafio 3, consultei os seguintes artigos.
 
-// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
-// https://www.codegrepper.com/code-examples/javascript/javascript+split+by+space
+/* https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
+ https://www.codegrepper.com/code-examples/javascript/javascript+split+by+space */
 
 // Desafio 4
 function concatName(nameList) {
@@ -28,11 +28,11 @@ function concatName(nameList) {
   return newString;
 }
 
-// Para a resolução do Desafio 4, consultei a seguinte documentação:
-// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
-// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
-// E meus agradecimentos ao colega André Jaques pela dica sobre concatenação (link abaixo):
-// https://trybecourse.slack.com/archives/C01L16B9XC7/p1614712885340100
+/* Para a resolução do Desafio 4, consultei a seguinte documentação:
+ https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
+ https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
+ E meus agradecimentos ao colega André Jaques pela dica sobre concatenação (link abaixo):
+ https://trybecourse.slack.com/archives/C01L16B9XC7/p1614712885340100 */
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -52,8 +52,8 @@ function highestCount(listOfNumbers) {
   }
   return count;
 }
-// Referência utilizada para resolução do Desafio 6:
-// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
+/* Referência utilizada para resolução do Desafio 6:
+ https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max */
 
 // Desafio 7
 
@@ -96,9 +96,9 @@ function fizzBuzz(arrayNumbers) {
   return newArrayNumbers;
 }
 
-// Referências consultadas para resolução do Desafio 8:
-// https://developer.mozilla.org/pt-BR/docs/conflicting/Web/JavaScript/Reference/Operators
-// https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Looping_code
+/* Referências consultadas para resolução do Desafio 8:
+ https://developer.mozilla.org/pt-BR/docs/conflicting/Web/JavaScript/Reference/Operators
+ https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Looping_code */
 
 // Desafio 9
 
@@ -137,7 +137,7 @@ function decode(phrase) {
 // https://www.w3schools.com/jsref/jsref_replace.asp
 // https://www.devmedia.com.br/javascript-replace-substituindo-valores-em-uma-string/39176#:~:text=Em%20caso%20de%20mais%20de,express%C3%A3o%20regular%20no%20primeiro%20par%C3%A2metro.
 // https://www.alura.com.br/artigos/javascript-replace-manipulando-strings-e-regex
-// Deixo também meus agradecimentos ao colega Luciano Amâncio, que postou link para um vídeo ensinando o replace, segue link da thread no Slack:
+// Deixo também meus agradecimentos ao colega Luciano Amâncio, que postou link para um vídeo ensinando o replace, e aos colegas Renzo e Rafael Medeiros (sobre o uso de objetos), segue link da thread no Slack:
 // https://trybecourse.slack.com/archives/C01L16B9XC7/p1614871138144700
 
 module.exports = {
