@@ -20,9 +20,11 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(items) {
-  return `${items[0]}, ${[items.length - 1]}`;
+  return `${items[items.length - 1]}, ${items[0]}`;
 }
 
+items = ['lucas, ferreira, rocha, aguiar']
+console.log(concatName(items))
 // Desafio 5
 function footballPoints(wins, ties) {
   let points = wins * 3 + ties * 1;
@@ -31,7 +33,6 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount() {
-  
 }
 
 // Desafio 7
