@@ -1,5 +1,5 @@
 // Desafio 10
-function techList(techArray, name) {
+function techList(techArray, nome) {
   let resultArray = [];
   if (techArray.length === 0) {
     resultArray = 'Vazio!';
@@ -7,7 +7,7 @@ function techList(techArray, name) {
   for (let index = 0; index < techArray.sort().length; index += 1) {
     let objectList = {
       tech: techArray[index],
-      nome: name,
+      name: nome,
     };
     resultArray.push(objectList);
   }
@@ -28,7 +28,7 @@ function triangleCheck() {
 // Desafio 13
 function hydrate(str) {
   let numDrinks = str.match(/\d+/g);
-  let copos = 0; 
+  let copos = 0;
   for (let index = 0; index < numDrinks.length; index += 1) {
     let drinks = Number(numDrinks[index]);
     copos += drinks;
