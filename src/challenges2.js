@@ -84,7 +84,7 @@ function lineACheck(lineA, lineB, lineC) {
 
 function lineBCheck(lineA, lineB, lineC) {
   let output = false;
-  if (lineB < lineA + lineC && lineA > Math.abs(lineA - lineC)) {
+  if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
     output = true;
   }
 
@@ -93,7 +93,7 @@ function lineBCheck(lineA, lineB, lineC) {
 
 function lineCCheck(lineA, lineB, lineC) {
   let output = false;
-  if (lineC < lineA + lineB && lineA > Math.abs(lineA - lineB)) {
+  if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
     output = true;
   }
 
@@ -114,7 +114,8 @@ function triangleCheck(lineA, lineB, lineC) {
   return output;
 }
 
-console.log(triangleCheck(3, 50, 3));
+console.log(triangleCheck(2, 3, 4));
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 // Função replace e parâmetros retirados do Stackoverflow(https://stackoverflow.com/questions/30607419/return-only-numbers-from-string) combinado com documentação do MDN
