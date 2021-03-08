@@ -59,11 +59,10 @@ function triangleCheck(lineA, lineB, lineC) {
   let lineAC = Math.abs(lineA + lineC);
   let lineBC = Math.abs(lineB + lineC);
 
-  if (lineA < lineBC && lineB < lineAC && lineC < lineAB){
+  if (lineA < lineBC && lineB < lineAC && lineC < lineAB) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 console.log(triangleCheck(10, 14, 8));
 
