@@ -61,35 +61,36 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(number) {
   if (number % 3) {
-  return 'fizz';
-} if (number % 5) {
-  return 'buzz';
-} if (number % 3 && number % 5) {
-  return 'fizzBuzz';
-} if (number % 3 && number % 5) {
-  return 'bug!';
-}
+    return 'fizz';
+  } if (number % 5) {
+    return 'buzz';
+  } if (number % 3 && number % 5) {
+    return 'fizzBuzz';
+  } if (number % 3 && number % 5) {
+    return 'bug!';
+  }
 }
 
 // Desafio 9
 function encode(encodeArray) {
   let encodeDone = 0;
-  for (var index = 0; index < sentenceArray.length; index += 1) {
-    if (sentenceArray[index])
-    a 1
-    e 2
-    i 3
-    o 4
-    u 5
-  }
+  // for (var index = 0; index < sentenceArray.length; index += 1) {
+  //   if (sentenceArray[index])
+  //   a 1
+  //   e 2
+  //   i 3
+  //   o 4
+  //   u 5
+  // }
 }
+
 function decode(decodeArray) {
   let encodeDone = 0;
-1 a
-2 e
-3 i
-4 o
-5 u
+// 1 a
+// 2 e
+// 3 i
+// 4 o
+// 5 u
 }
 
 module.exports = {
