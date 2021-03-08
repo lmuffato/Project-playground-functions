@@ -103,6 +103,7 @@ function encode(str) {
   return concatenacao;
 }
 console.log(encode('hi there!'));
+
 function decode(str) {
   let string1 = str.split('');
   let consoantesPorNumeros = ['1', '2', '3', '4', '5'];
