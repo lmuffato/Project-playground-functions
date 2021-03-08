@@ -16,9 +16,27 @@ function techList(techs, name) {
 } 
 
 // Desafio 11
+
+function repeatCount(numbersArray) {
+
+  for (let index = 0; index < numbersArray.length; index += 1) {
+    let compNumb = numbersArray[index];
+    let repeat = 0;
+    for (let index2 = 0; index2 < numbersArray.length; index2 += 1) {
+      if (compNumb === numbersArray[index2]) {
+        repeat += 1;
+      };
+        if (repeat >= 3) {
+          return 'não é possível gerar um número de telefone com esses valores';
+        };
+    };
+  };
+}
+
 function wrongRangeCheck(currentValue) {
-  
-  (currentValue > 9 || currentValue < 0);
+  if (currentValue > 9 || currentValue < 0) {
+    return console.log("não é possível gerar um número de telefone com esses valores");
+  }
 }
 
 function generatePhoneNumber(phoneNumb) {
@@ -27,18 +45,18 @@ function generatePhoneNumber(phoneNumb) {
     return "Array com tamanho incorreto."
   };
 
-  if (phoneNumb.some(wrongRangeCheck) === true) {
-    return "não é possível gerar um número de telefone com esses valores"
-  }
-  //https://stackoverflow.com/questions/4974238/javascript-equivalent-of-pythons-format-function
+  phoneNumb.some(wrongRangeCheck);
+
+  repeatCount(phoneNumb);
+
   return `(${phoneNumb[0]}${phoneNumb[1]}) ${phoneNumb[2]}${phoneNumb[3]}${phoneNumb[4]}${phoneNumb[5]}${phoneNumb[6]}-${phoneNumb[7]}${phoneNumb[8]}${phoneNumb[9]}${phoneNumb[10]}`;
 } 
-
 
 //let aaa = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
 //console.log(generatePhoneNumber(aaa));
 
 // Desafio 12
+
 function triangleCheck(lineA, lineB, lineC) {
 
   if ((lineA > (lineB - lineC)) && (lineA < (Math.abs(lineB + lineC))) 
@@ -50,17 +68,6 @@ function triangleCheck(lineA, lineB, lineC) {
 };
 
 //console.log(triangleCheck(10, 14, 8));
-
-/*
-  Para que seja possível formar um triângulo, é necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas.
-
-Para obter o valor absoluto de um número em JavaScript, pesquise pela função Math.abs.
-
-O retorno da sua função deverá ser um booleano.
-
-Exemplo: o retorno de triangleCheck(10, 14, 8) deverá ser true.
-
-*/
 
 // Desafio 13
 function hydrate(toDrink) {
