@@ -76,7 +76,7 @@ function hydrate(toDrink) {
   } else response = `${total} copo de água`;
   return response;
 }
-console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+//console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   generatePhoneNumber,
