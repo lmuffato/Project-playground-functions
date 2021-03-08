@@ -1,8 +1,7 @@
 // Desafio 1
 
 function compareTrue(value1, value2) {
-  let checker = false;
-  if (value1 === true && value2 === true) checker = true;
+  let checker = value1 === true && value2 === true;
   return checker;
 }
 
@@ -23,9 +22,7 @@ function splitSentence(string) {
 // Desafio 4
 
 function concatName(arrayNames) {
-  let firstItem = arrayNames[0];
-  let lastItem = arrayNames[arrayNames.length - 1];
-  let stringItems = `${lastItem}, ${firstItem}`;
+  let stringItems = `${arrayNames[arrayNames.length - 1]}, ${arrayNames[0]}`;
   return stringItems;
 }
 
@@ -40,18 +37,16 @@ function footballPoints(wins, ties) {
 
 function highestNumber(arrayHighestNumber) {
   let number = 0;
-  for (let index of arrayHighestNumber) {
-    if (index > number) number = index;
-  }
+  for (let index of arrayHighestNumber) if (index > number) number = index;
+
   return number;
 }
 
 function highestCount(arrayHighestCount) {
   let number = highestNumber(arrayHighestCount);
   let numberTime = 0;
-  for (let index of arrayHighestCount) {
-    if (number === index) numberTime += 1;
-  }
+  for (let index of arrayHighestCount) if (number === index) numberTime += 1;
+
   return numberTime;
 }
 
@@ -71,13 +66,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let secondCat = checkDistance(mouse, cat2);
   let chaseResult;
 
-  if (firstCat === secondCat) {
-    chaseResult = 'os gatos trombam e o rato foge';
-  } else if (firstCat < secondCat) {
-    chaseResult = 'cat1';
-  } else {
-    chaseResult = 'cat2';
-  }
+  if (firstCat === secondCat) chaseResult = 'os gatos trombam e o rato foge';
+  else if (firstCat < secondCat) chaseResult = 'cat1';
+  else chaseResult = 'cat2';
 
   return chaseResult;
 }

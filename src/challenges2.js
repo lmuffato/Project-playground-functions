@@ -1,9 +1,7 @@
 // Desafio 10
 
 function techList(technologies, profile) {
-  if (technologies.length === 0) {
-    return 'Vazio!';
-  }
+  if (technologies.length === 0) return 'Vazio!';
 
   let arraySort = technologies.sort();
   let array = [];
@@ -31,9 +29,7 @@ function verifyRepetition(telephone) {
 }
 
 function verifyBiggerSmaller(telephone) {
-  for (let index in telephone) {
-    if (telephone[index] < 0 || telephone[index] > 9) return true;
-  }
+  for (let index of telephone) if (index < 0 || index > 9) return true;
   return false;
 }
 
@@ -62,7 +58,7 @@ function generatePhoneNumber(telephone) {
 
   if (telephone.length !== 11) return 'Array com tamanho incorreto.';
 
-  if (verifyBiggerSmaller(telephone) === true || verifyRepetition(telephone) === true) {
+  if (verifyBiggerSmaller(telephone) || verifyRepetition(telephone)) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
 
@@ -84,15 +80,11 @@ function hydrate(stringDrinks) {
   let arrayDrinks = stringDrinks.match(/\d/g);
   let sum = 0;
 
-  for (let index = 0; index < arrayDrinks.length; index += 1) {
-    sum += parseFloat(arrayDrinks[index]);
-  }
+  for (let index of arrayDrinks) sum += parseFloat(index);
 
-  if (sum === 1) {
-    return '1 copo de água';
-  }
+  let resultHydrate = sum === 1 ? '1 copo de água' : `${sum} copos de água`;
 
-  return `${sum} copos de água`;
+  return resultHydrate;
 }
 
 module.exports = {
