@@ -56,7 +56,7 @@ function checkingRepetition(array, numbers) {
       contadorNumbers += 1;
     }
   }
-  return false;
+  return contadorNumbers;
 }
 
 // Desafio 12
