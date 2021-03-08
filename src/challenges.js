@@ -28,8 +28,8 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(value) {
-  let lastName = value[value.length - 1] + ', ' + value[0];
-  return lastName;
+  // Recomendação do lint https://eslint.org/docs/rules/prefer-template
+  return `${value[value.length - 1]}, ${value[0]}`;
 }
 
 // Desafio 5
