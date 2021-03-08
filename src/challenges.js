@@ -26,6 +26,7 @@ function splitSentence(frase) {
         spliter.append(palavra)
         palavra = ''
       }
+  return(spliter)
   }
 }
 
