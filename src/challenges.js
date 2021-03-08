@@ -23,8 +23,8 @@ function concatName(arrayPhrase) {
 }
 
 function footballPoints(wins, ties) {
-  wins = wins * 3;
-  ties = ties * 1;
+  wins *= 3;
+  ties *= 1;
 
   return wins + ties;
 }
@@ -47,9 +47,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat2Distance = cat2 - mouse;
 
   if (cat1Distance < 0) {
-    cat1Distance = cat1Distance * -1;
+    cat1Distance *= -1;
   } else if (cat2Distance < 0) {
-    cat2Distance = cat2Distance * -1;
+    cat2Distance *= -1;
   }
 
   if (cat1Distance > cat2Distance) {
