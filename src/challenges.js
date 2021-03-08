@@ -61,11 +61,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat2 = mouse - cat2;
   let result;
   if (distanceCat1 < distanceCat2) {
-    result = 'cat 1';
+    result = 'cat1';
   } else if (distanceCat1 === distanceCat2) {
     result = 'os gatos trombam e o rato foge';
   } else {
-    result = 'cat 2';
+    result = 'cat2';
   }
   return result;
 }
