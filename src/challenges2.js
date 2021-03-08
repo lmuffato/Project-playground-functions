@@ -1,4 +1,5 @@
 // Desafio 10
+// lógica para ordenar a lista através do sort() encontrada em https://pt.stackoverflow.com/questions/46600/como-ordenar-uma-array-de-objetos-com-array-sort
 function techList(array, name) {
   let newArrayTech = [];
   for (let index = 0; index < array.length; index += 1) {
