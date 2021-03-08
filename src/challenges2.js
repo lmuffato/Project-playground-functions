@@ -50,20 +50,11 @@ function stringConcatenationPhoneNumber(string) {
   return string;
 }
 
-function checkViablePhoneNumber(array) {
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] < 0 || array[index] > 9 || numbersRepetitionVerificator(array)) {
-      return true;
-    }
-    return false;
-  }
-}
-
 function generatePhoneNumber(array) {
   let phoneNumber = '';
   if (array.length === 11) {
     for (let index = 0; index < array.length; index += 1) {
-      if (checkViablePhoneNumber(array)) {
+      if (array[index] < 0 || array[index] > 9 || numbersRepetitionVerificator(array)) {
         return 'não é possível gerar um número de telefone com esses valores';
       }
       phoneNumber += array[index];
@@ -72,6 +63,7 @@ function generatePhoneNumber(array) {
   }
   return 'Array com tamanho incorreto.';
 }
+generatePhoneNumber([0,1,2]);
 
 // Desafio 12
 function triangleSideCheck(lineA, lineB, lineC) {
