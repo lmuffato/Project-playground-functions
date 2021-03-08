@@ -63,16 +63,29 @@ function catAndMouse(mouse, cat1, cat2) {
   // Até essa parte, peguei com os colegas, daqui para baixo eu mesmo fiz.
   if (dist1 < dist2) {
     return "cat1";
-  } if (dist2 < dist1) {
+  } else if (dist2 < dist1) {
     return "cat2";
-  } if (dist1 === dist2) {
+  } else {
     return "os gatos trombam e o rato foge";
   }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+  let array = [];
+
+  for (let index in numeros) {
+    if (numeros[index] % 3 === 0 && numeros[index] % 5 === 0) {
+      array.push("fizzBuzz");
+    } else if (numeros[index] % 3 === 0) {
+      array.push("fizz");
+    } else if (numeros[index] % 5 === 0) {
+      array.push("buzz");
+    } else {
+      array.push("bug!");
+    }
+  }
+  return array;
 }
 
 // Desafio 9
