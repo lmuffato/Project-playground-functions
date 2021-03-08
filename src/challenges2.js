@@ -41,19 +41,23 @@ function generatePhoneNumber(numbersGroup) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
-    if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
-      if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
-        return true;
-      }
-    }
+  if ((lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) &&
+    (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) &&
+    (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB))) {
+    return true;
   }
   return false;
 }
-console.log(triangleCheck(10, 7, 4));
+
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drank) {
+  let water = 0
+  for (index = 0; index < drank.length; index += 1) {
+    if (Math.abs(drank[index]) > 0) {
+      water += Math.abs(drank[index]);
+    }
+  }
+  return water + ' copos de água';
 }
 
 module.exports = {
