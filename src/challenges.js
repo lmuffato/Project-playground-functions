@@ -79,30 +79,44 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numArray) {
-  let fizzArray = []
-  for (let index in numArray){
-    if (numArray[index] % 3 === 0 && numArray[index] % 5 ===0) {
+  let fizzArray = [];
+  for (let index in numArray) {
+    if (numArray[index] % 3 === 0 && numArray[index] % 5 === 0) {
       fizzArray.push('fizzBuzz');
     }
-    if (numArray[index] % 3 === 0) {
+    else if (numArray[index] % 3 === 0) {
       fizzArray.push('fizz');
     }
-    if (numArray[index] % 5 === 0) {
+    else if (numArray[index] % 5 === 0) {
       fizzArray.push('buzz');
     }
     else {
       fizzArray.push('bug!');
     }
   }
-  console.log(fizzArray)
+  console.log(fizzArray);
   return fizzArray;
 }
 
-fizzBuzz([2, 15, 7, 9, 45]);
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let code = '';
+  for (let index = 0; index < phrase.length; index += 1) {
+    if (phrase[index] === 'a') {
+      code += '1';
+    } else if (phrase[index] === 'e') {
+      code += '2';
+    } else if (phrase[index] === 'i') {
+      code += '3';
+    } else if (phrase[index] === 'o') {
+      code += '4';
+    } else if (phrase[index] === 'u') {
+      code += '5';
+    } else {
+      code += phrase[index];
+    }
+  }
+  return code;
 }
 function decode() {
   // seu código aqui
