@@ -40,7 +40,7 @@ function highestCount() {
     };
   }
   for (let index =0; index < arraynumber.length; index += 1) {
-    ifr (arraynumber[index] === maior) {
+    if (arraynumber[index] === maior) {
       cont+=1;
     }
   }
