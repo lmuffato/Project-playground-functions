@@ -54,6 +54,7 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
+    
     if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {//.abs calcula o valor absoluto. ideia de distancia
       return('cat1');//caso o gato 1 esteja mais perto         
     }
@@ -61,7 +62,7 @@ function catAndMouse(mouse, cat1, cat2) {
       return('cat2');//caso o gato 2 esteja mais perto         
     }
     else{
-    return('os gatos se trombam e o rato foge');//caso os gatos estejam na mesma distancia do rato
+    return('os gatos trombam e o rato foge');//caso os gatos estejam na mesma distancia do rato
     }
 }
 
@@ -88,73 +89,20 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-    let output = [];
-    let encodeString = [];
-    for (let index = 0; index < string.length; ){
-        if (string[index] === 'a'){
-            encodeString.push('1');
-            index += 1;
-        }
-        if (string[index] === 'e'){
-            encodeString.push('2');
-            index += 1;
-        }
-        if (string[index] === 'i'){
-            encodeString.push('3');
-            index += 1;
-        }
-        if (string[index] === 'o'){
-            encodeString.push('4');
-            index += 1;
-        }
-        if (string[index] === 'u'){
-            encodeString.push('5');
-            index += 1;
-        }
-        else {
-            encodeString.push(string[index]);
-            index += 1;
-        }
-    }
-    for(index = 0; index < encodeString.length; index += 1){
-        output = output + encodeString[index];
-    }
-    return(output)
-  }
+    string = string.replaceAll('a', '1')
+    string = string.replaceAll('e', '2')
+    string = string.replaceAll('i', '3')
+    string = string.replaceAll('o', '4')
+    string = string.replaceAll('u', '5')
+    return string
+}
 function decode(string) {
-    let output = [];
-        let decodeString = [];
-        for (let index = 0; index < string.length + 1; ){
-            if (string[index] === '1'){
-                decodeString.push('a');
-                index += 1;
-            }
-            if (string[index] === '2'){
-                decodeString.push('e');
-                 index += 1;
-            }
-            if (string[index] === '3'){
-                 decodeString.push('i');
-                index += 1;
-            }
-            if (string[index] === '4'){
-                decodeString.push('o');
-                index += 1;
-            }
-            if (string[index] === '5'){
-                decodeString.push('u');
-                index += 1;
-            }
-            else {
-                decodeString.push(string[index]);
-                index += 1;
-            }
-        }
-    decodeString.pop();
-    for(index = 0; index < decodeString.length; index += 1){
-        output = output + decodeString[index];
-    }
-    return(output)// seu código aqui
+    string = string.replaceAll('1', 'a')
+    string = string.replaceAll('2', 'e')
+    string = string.replaceAll('3', 'i')
+    string = string.replaceAll('4', 'o')
+    string = string.replaceAll('5', 'u')
+    return string
 }
 
 module.exports = {
