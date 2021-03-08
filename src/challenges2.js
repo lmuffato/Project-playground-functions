@@ -28,7 +28,7 @@ function generatePhoneNumber (array){
           }
       } if (repetido >= limit) {return 'não é possível gerar um número de telefone com esses valores';}
   } 
-if (array.length != 11) {return 'Array com tamanho incorreto'}
+if (array.length != 11) {return 'Array com tamanho incorreto.'}
 for (index = 0; index < array.length; index += 1) {
 if (array[index] < 0 || array[index] > 9) {return 'não é possível gerar um número de telefone com esses valores'}}
 
