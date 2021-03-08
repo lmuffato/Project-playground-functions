@@ -9,8 +9,21 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(phrase) {
+  let word = '';
+  let words = [];
+  for (let index = 0; index < phrase.length; index += 1) {
+    if (phrase[index] === ' ') {
+      words.push(word); 
+      word = '';
+    } else if (index === phrase.length -1) {
+      word += phrase[index];
+      words.push(word);
+    } else {
+      word += phrase[index]; 
+    }
+  }
+  return words;
 }
 
 // Desafio 4
@@ -128,3 +141,8 @@ console.log(catAndMouse(30, 25, 25));
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
+
+// Testando a função splitSentence
+console.log(splitSentence('go Trybe'));
+console.log(splitSentence('vamo que vamo'));
+console.log(splitSentence('foguete'));
