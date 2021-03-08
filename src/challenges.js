@@ -15,7 +15,7 @@ function calcArea(base, heigth) {
 function splitSentence(phrase) {
   let words = [];
   let path = 0;
-  for (let index = 0; index < phrase.length; index++) {
+  for (let index = 0; index < phrase.length; index += 1) {
     if (phrase[index] !== ' ') {
       if (words[path] !== undefined) {
         words[path] += phrase[index];
@@ -48,7 +48,7 @@ function footballPoints(wins, ties) {
 function highestCount(randomNumbers) {
   let larger = 0;
   let count = 0;
-  for (let index = 0; index < randomNumbers.length; index++) {
+  for (let index = 0; index < randomNumbers.length; index += 1) {
     if (randomNumbers[index] > larger) {
       larger = randomNumbers[index];
       count = 1;
@@ -64,18 +64,17 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = mouse - cat1;
   let distanceCat2 = mouse - cat2;
   if (distanceCat1 < 0) {
-    distanceCat1 = distanceCat1 * -1;
+    distanceCat1 *= -1;
   }
   if (distanceCat2 < 0) {
-    distanceCat2 = distanceCat2 * -1;
+    distanceCat2 *= -1;
   }
   if (distanceCat1 > distanceCat2) {
     return 'cat2';
   } else if (distanceCat1 === distanceCat2) {
     return 'os gatos trombam e o rato foge';
-  } else {
-    return 'cat1';
   }
+    return 'cat1';
 }
 
 // Desafio 8
@@ -83,13 +82,13 @@ function fizzBuzz(numbersGroup) {
   let numbersGroupResult = [];
   for (let positionIndex = 0; positionIndex < numbersGroup.length; positionIndex += 1) {
     if (numbersGroup[positionIndex] % 3 === 0 && numbersGroup[positionIndex] % 5 === 0) {
-      numbersGroupResult[positionIndex] = "fizzBuzz";
+      numbersGroupResult[positionIndex] = 'fizzBuzz';
     } else if (numbersGroup[positionIndex] % 3 === 0) {
-      numbersGroupResult[positionIndex] = "fizz";
+      numbersGroupResult[positionIndex] = 'fizz';
     } else if (numbersGroup[positionIndex] % 5 === 0) {
-      numbersGroupResult[positionIndex] = "buzz";
+      numbersGroupResult[positionIndex] = 'buzz';
     } else {
-      numbersGroupResult[positionIndex] = "bug!";
+      numbersGroupResult[positionIndex] = 'bug!';
     }
   }
   return numbersGroupResult;
