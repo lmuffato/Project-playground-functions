@@ -66,7 +66,7 @@ function fizzBuzz(number) {
        array.push('fizz');
     } if (number[index] % 5 === 0) {
        array.push('buzz');
-    } if (number[index] % 3 && number % 5) {
+    } if ((number[index] % 3) === 0 && (number[index] % 5) === 0) {
       array.push('fizzBuzz' === 0);
     } if (number[index] % 3 && number % 5) {
       array.push('bug!' === 0);
