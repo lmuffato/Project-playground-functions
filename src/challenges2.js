@@ -32,9 +32,11 @@ function comparantionsNumbers(contador, numbers) {
   if (contadorNumbers >= 3) {
     return true;
   }
+  return false;
 }
-return false;
-}
+
+
+
 
 function checkingRepetition(numbers) {
   for (let index = 0; index < numbers.length; index += 1) {
