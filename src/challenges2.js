@@ -42,7 +42,7 @@ function wrongRangeCheck(currentValue) {
 function generatePhoneNumber(phoneNumb) {
 
   if (phoneNumb.length !== 11) {
-    return "Array com tamanho incorreto."
+    return "Array com tamanho incorreto.";
   }
 
   if (repeatCount(phoneNumb) === true || phoneNumb.some(wrongRangeCheck) === true) {
@@ -57,7 +57,6 @@ console.log(generatePhoneNumber(aaa));
 // Desafio 12
 
 function triangleCheck(lineA, lineB, lineC) {
-
   if ((lineA > (lineB - lineC)) && (lineA < (Math.abs(lineB + lineC))) 
   && (lineB > (lineA - lineC)) && (lineB < (Math.abs(lineA + lineC))) 
   && ((lineC > (lineA - lineB))) && (lineC < (Math.abs(lineA + lineB)))) {
@@ -66,7 +65,7 @@ function triangleCheck(lineA, lineB, lineC) {
   return false;
 }
 
-//console.log(triangleCheck(10, 14, 8));
+// console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate(toDrink) {
@@ -82,7 +81,7 @@ function hydrate(toDrink) {
   } else response = `${total} copo de água`;
   return response;
 }
-//console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+// console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
 
 module.exports = {
   generatePhoneNumber,
