@@ -74,12 +74,14 @@ function fizzBuzz(array) {
 // ESQUECE O ARRAY e For SEU TROUXA
 // Solução idealizada pelo Douglas Santana
 function encode(string) {
-  let codingString = string.replaceAll('a', '1').replaceAll('e', '2').replaceAll('i', '3').replaceAll('o', '4').replaceAll('u', '5');
+  let codingStringStage = string.replaceAll('i', '3').replaceAll('o', '4').replaceAll('u', '5');
+  let codingString = codingStringStage.replaceAll('a', '1').replaceAll('e', '2');
   return codingString;
   }
 
 function decode(string) {
-  let decodingString = string.replaceAll('1', 'a').replaceAll('2', 'e').replaceAll('3', 'i').replaceAll('4', 'o').replaceAll('5', 'u');
+  let decodingStringStage = string.replaceAll('3', 'i').replaceAll('4', 'o').replaceAll('5', 'u');
+  let decodingString = decodingStringStage.replaceAll('1', 'a').replaceAll('2', 'e');
   return decodingString;
 }
 
