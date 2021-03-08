@@ -90,75 +90,73 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-  let output = [];
-      let encodeString = [];
-      for (let index = 0; index < string.length; ){
-          if (string[index] === 'a'){
-              encodeString.push('1');
-              index += 1;
-          }
-          if (string[index] === 'e'){
-              encodeString.push('2');
-              index += 1;
-              
-          }
-          if (string[index] === 'i'){
-              encodeString.push('3');
-              index += 1;
-          }
-          if (string[index] === 'o'){
-              encodeString.push('4');
-              index += 1;
-          }
-          if (string[index] === 'u'){
-              encodeString.push('5');
-              index += 1;
-          }
-          else {
-              encodeString.push(string[index]);
-              index += 1;
-          }
-      }
-      encodeString.pop();
-      for(index = 0; index < encodeString.length; index += 1){
-          output = output + encodeString[index];
-      }
-      return(output)// seu código aqui
-  }
-  function decode(string) {
     let output = [];
-      let decodeString = [];
-      for (let index = 0; index < string.length + 1; ){
-          if (string[index] === '1'){
-              decodeString.push('a');
-              index += 1;
-          }
-          if (string[index] === '2'){
-              decodeString.push('e');
-              index += 1;
-          }
-          if (string[index] === '3'){
-              decodeString.push('i');
-              index += 1;
-          }
-          if (string[index] === '4'){
-              decodeString.push('o');
-              index += 1;
-          }
-          if (string[index] === '5'){
-              decodeString.push('u');
-              index += 1;
-          }
-          else {
-              decodeString.push(string[index]);
-              index += 1;
-          }
-      }
-      decodeString.pop();
-      for(index = 0; index < decodeString.length; index += 1){
-          output = output + decodeString[index];
-      }
-      return(output)// seu código aqui
+    let encodeString = [];
+    for (let index = 0; index < string.length; ){
+        if (string[index] === 'a'){
+            encodeString.push('1');
+            index += 1;
+        }
+        if (string[index] === 'e'){
+            encodeString.push('2');
+            index += 1;
+        }
+        if (string[index] === 'i'){
+            encodeString.push('3');
+            index += 1;
+        }
+        if (string[index] === 'o'){
+            encodeString.push('4');
+            index += 1;
+        }
+        if (string[index] === 'u'){
+            encodeString.push('5');
+            index += 1;
+        }
+        else {
+            encodeString.push(string[index]);
+            index += 1;
+        }
+    }
+    for(index = 0; index < encodeString.length; index += 1){
+        output = output + encodeString[index];
+    }
+    return(output)
+  }
+function decode(string) {
+    let output = [];
+        let decodeString = [];
+        for (let index = 0; index < string.length + 1; ){
+            if (string[index] === '1'){
+                decodeString.push('a');
+                index += 1;
+            }
+            if (string[index] === '2'){
+                decodeString.push('e');
+                 index += 1;
+            }
+            if (string[index] === '3'){
+                 decodeString.push('i');
+                index += 1;
+            }
+            if (string[index] === '4'){
+                decodeString.push('o');
+                index += 1;
+            }
+            if (string[index] === '5'){
+                decodeString.push('u');
+                index += 1;
+            }
+            else {
+                decodeString.push(string[index]);
+                index += 1;
+            }
+        }
+    decodeString.pop();
+    for(index = 0; index < decodeString.length; index += 1){
+        output = output + decodeString[index];
+    }
+    return(output)// seu código aqui
 }
 
 module.exports = {
