@@ -75,10 +75,7 @@ if(cat1 - mouse < cat2 -mouse ) {
 if(cat2 - mouse < cat1 - mouse) {
   return 'cat2';
 }
-else{
   return 'os gatos trombam e o rato foge';
-}
-  
 }
 
 // Desafio 8
