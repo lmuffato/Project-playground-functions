@@ -3,7 +3,7 @@ function techList(tech, name) {
   // seu código aqui
   let techArray = {};
   let techObj = [];
-  tech = tech.sort()
+  tech = tech.sort();
 
   if (tech.length === 0) {
     return 'Vazio!';

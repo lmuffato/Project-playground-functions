@@ -17,7 +17,7 @@ function splitSentence(string) {
 function concatName(array) {
   let lastName = array[array.length - 1];
   let firstName = [array[0]];
-  let newArray = `${lastName},` + ` ${firstName}`;
+  let newArray = `${lastName}, + ${firstName}`;
   // let resposta = newArray.concat(firstName);
   return newArray;
 }
@@ -63,9 +63,9 @@ function fizzBuzz(array) {
       arrayFizzBuzz.push('buzz');
     } else if (testFizzBuzz % 3 === 0) {
       arrayFizzBuzz.push('fizz');
-    } else {
-      arrayFizzBuzz.push('bug!');
-    }
+    } 
+    arrayFizzBuzz.push('bug!');
+    
   }
   return arrayFizzBuzz;
 }
@@ -77,7 +77,7 @@ function encode(string) {
   let codingStringStage = string.replaceAll('i', '3').replaceAll('o', '4').replaceAll('u', '5');
   let codingString = codingStringStage.replaceAll('a', '1').replaceAll('e', '2');
   return codingString;
-  }
+}
 
 function decode(string) {
   let decodingStringStage = string.replaceAll('3', 'i').replaceAll('4', 'o').replaceAll('5', 'u');

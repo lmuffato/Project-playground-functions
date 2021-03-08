@@ -51,4 +51,4 @@
 // const aa = /\s/g
 // const bb = ''
 // let result = code.replace(aa, bb)
-// console.log(result)
+// console.log(result);
