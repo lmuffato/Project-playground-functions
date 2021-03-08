@@ -14,35 +14,63 @@ function techList(techs, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(numbers) {
-  if (numbers.length !== 11) return 'Array com tamanho incorreto.';
-
-  const ddd = `${numbers[0]}${numbers[1]}`;
-  let firstPart = '';
-  let secondPart = '';
+function invalidNumber(numbers) {
+  let isInvalid = false;
 
   for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] < 0 || numbers[index] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
-
-    if (numbers.filter((number) => number === numbers[index]).length >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
-
-    if (index >= 2 && index < 7) {
-      firstPart += numbers[index];
-    }
-
-    if (index >= 7) {
-      secondPart += numbers[index];
+      isInvalid = true;
     }
   }
 
-  return `(${ddd}) ${firstPart}-${secondPart}`;
+  return isInvalid;
 }
 
-console.log(generatePhoneNumber([1, 1, 2, 2, 3, 6, 7, 8, 9, 0, 3])); // (12) 34567-8901
+function invalidRepetition(numbers) {
+  let isInvalid = false;
+
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers.filter((number) => number === numbers[index]).length >= 3) {
+      isInvalid = true;
+    }
+  }
+
+  return isInvalid;
+}
+
+function firstPart(numbers) {
+  let output = '';
+
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (index >= 2 && index < 7) {
+      output += numbers[index];
+    }
+  }
+
+  return output;
+}
+function secondPart(numbers) {
+  let output = '';
+
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (index >= 7) {
+      output += numbers[index];
+    }
+  }
+
+  return output;
+}
+
+function generatePhoneNumber(numbers) {
+  if (numbers.length !== 11) return 'Array com tamanho incorreto.';
+  if (invalidNumber(numbers) || invalidRepetition(numbers)) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+
+  const ddd = `${numbers[0]}${numbers[1]}`;
+
+  return `(${ddd}) ${firstPart(numbers)}-${secondPart(numbers)}`;
+}
 
 // Desafio 12
 function triangleCheck() {
