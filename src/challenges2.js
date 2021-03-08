@@ -22,25 +22,20 @@ console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Diego'));
 function conditionsPhoneNumber(arrayPhoneNumber) {
   if (arrayPhoneNumber.length !== 11){
     return 'Array com tamanho incorreto';
+  }else if(arrayNumber[index] < 0 || arrayNumber[index] > 9){
+      return 'não é possível gerar um número de telefone com esses valores';
   }
 }
   function countPhoneNumber(arrayNumber){
   for (let index in arrayNumber){
-    if(arrayNumber[index] === arrayNumber[index]){
-    let count = 0;
-    }
-  for(let key in arrayNumber){
-     if (arrayNumber[index] === arrayNumber[key]){
+      if(arrayNumber[index] === arrayNumber[index]){
        count +=1;
-      }
-      if (arrayNumber[index] < 0 || arrayNumber[index] > 9 || count >= 3){
-        return 'não é possível gerar um número de telefone com esses valores';
+      }else if(count >= 3){
+          return 'não é possível gerar um número de telefone com esses valores';
      }
     }    
   }
-}
- 
-function generateNumber(arrayNumber){
+  function generateNumber(arrayNumber){
   let arrayPhone = [];
   for (let index = 0; index < arrayNumber.length; index += 1){
     if (arrayPhone[index] === arrayNumber[index]){
