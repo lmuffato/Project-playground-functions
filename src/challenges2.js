@@ -43,7 +43,7 @@ function generatePhoneNumber(numbers) {
 
 function checkingBiggerAndSmaller(numbers) {
   let evaluator = false;
-  if (numbers[index] < 0 || numbers[index] > 9) {
+  if (numbers < 0 || numbers > 9) {
     evaluator = true;
   }
   return evaluator;
