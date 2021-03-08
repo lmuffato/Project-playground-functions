@@ -1,18 +1,24 @@
 // Desafio 10
+
 function techList(techs, name) {
+  techs.sort();
+  let techAndNameObj = [];
   if (techs.length === 0) {
     return 'Vazio!';
   }
-  let sortTechs = techs.sort();
-  let techAndNameObject = [];
-  for (let index = 0; index < sortTechs.length; index += 1) {
-    techAndNameObject.push({
-      tech: sortTechs[index],
+  for (let index = 0; index < techs.length; index += 1) {
+    techAndNameObj[index] = {
+      tech: techs[index],
       name,
-    });
+    };
   }
-  return techAndNameObject;
-}
+  return techAndNameObj;
+} 
+
+
+/* let nome = "Lucas"
+let bbb = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+console.log(techList(bbb, nome)); */
 
 // Desafio 11
 
