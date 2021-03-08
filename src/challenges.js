@@ -93,18 +93,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-// To be refactored
+function isFizzBuzz(number) {
+  if ((number % 3 === 0) && (number % 5 === 0)) {
+    return 'fizzBuzz';
+  } if (number % 3 === 0) {
+    return 'fizz';
+  } if (number % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
+
 function fizzBuzz(numbersArray) {
   for (let index = 0; index < numbersArray.length; index += 1) {
-    if ((numbersArray[index] % 3 === 0) && (numbersArray[index] % 5 === 0)) {
-      numbersArray[index] = 'fizzBuzz';
-    } else if (numbersArray[index] % 3 === 0) {
-      numbersArray[index] = 'fizz';
-    } else if (numbersArray[index] % 5 === 0) {
-      numbersArray[index] = 'buzz';
-    } else {
-      numbersArray[index] = 'bug!';
-    }
+    numbersArray[index] = isFizzBuzz(numbersArray[index]);
   }
   return numbersArray;
 }
