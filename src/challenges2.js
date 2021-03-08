@@ -84,7 +84,7 @@ function generatePhoneNumber(arrayNumbers) {
   if (arrayNumbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  if (numberRepetition(arrayNumbers) >= 3 || lessThanZero(arrayNumbers) < 0) {
+  if (numberRepetition(arrayNumbers) >= 3 || lessThanZero(arrayNumbers) < 0 || numberGreaterLimit(arrayNumbers) > 9) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   if (numberGreaterLimit(arrayNumbers) > 9) {
