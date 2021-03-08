@@ -68,15 +68,13 @@ function catAndMouse(mouse, cat1, cat2) {
   if (cat2Dist < 0) {
     cat2Dist *= -1;
   }
-  let result = ''
+  let result = '';
   if (cat1Dist > cat2Dist) {
-    result = 'cat2';
-  } else if (cat1Dist < cat2Dist) {
-    result = 'cat1';
-  } else if (cat1Dist === cat2Dist) {
-    result = 'os gatos trombam e o rato foge';
-  }
-  return result
+    return 'cat2';
+  } if (cat1Dist < cat2Dist) {
+    return 'cat1';
+  } 
+  return 'os gatos trombam e o rato foge'; 
 }
 
 // Desafio 8
