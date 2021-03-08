@@ -30,7 +30,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 // 1. Achar o maior numero do array
 // 2. contar a quantidade de vezes que ele aparece no array
-function highestCount() {
+function highestCount(arraynumber) {
   let maior = 0; 
   let cont = 0;
 
