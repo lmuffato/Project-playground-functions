@@ -74,12 +74,25 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // atribuir array vazio fizzBuzzy
-  // percorrer o array de números passados
-  // condicionar as divisões
-  // critérios de divisões definem o .push no array vazio
-  // retornar o array fizzBuzzy com as palavras 
+function fizzBuzz(numericArray) {
+  let codeWords = [];
+  
+  for (let i = 0; i < numericArray.length; i += 1) {
+    let div3 = numericArray[i]%3;
+    let div5 = numericArray[i]%5;
+
+    if (div3 == 0 && div5 == 0) {
+      codeWords.push('fizzBuzz');
+    } else if (div3 == 0) {
+      codeWords.push('fizz');
+    } else if (div5 == 0) {
+      codeWords.push('buzz');
+    } else {
+      codeWords.push('bug!');
+    } 
+  }
+
+  return codeWords;
 }
 
 // Desafio 9
