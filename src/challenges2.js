@@ -16,12 +16,12 @@ function techList(techArray, name) {
   for (let index = 0; index < techArray.length; index += 1) {
     objects.push(createObject(techArray[index], name));
   }
-  return objects
+  return objects;
 }
 
 // Desafio 11
 function generatePhoneNumber() {
-  
+
 }
 
 // Desafio 12

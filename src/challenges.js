@@ -94,7 +94,7 @@ let encodeKey = {
   i: 3,
   o: 4,
   u: 5,
-};
+}
 
 function encode(string) {
   let encryptedString = '';
@@ -102,10 +102,10 @@ function encode(string) {
     if (typeof encodeKey[string[charIndex]] !== 'undefined') {
       encryptedString += encodeKey[string[charIndex]];
     } else {
-      decriptedString += string[charIndex];
+      encryptedString += string[charIndex];
     }
   }
-  return decriptedString;
+  return encryptedString;
 }
 
 let decodeKey = {
@@ -114,21 +114,19 @@ let decodeKey = {
   3: 'i',
   4: 'o',
   5: 'u',
-};
-  
+}
+
 function decode(string) {
-  let decriptedString = '';
+  let decryptedString = '';
   for (let charIndex in string) {
     if (typeof decodeKey[string[charIndex]] !== 'undefined') {
-      decriptedString += decodeKey[string[charIndex]];
+      decryptedString += decodeKey[string[charIndex]];
     } else {
-      decriptedString += string[charIndex];
+      decryptedString += string[charIndex];
     }
   }
-  return decriptedString;
-};
-
-console.log(encode("hi there"))
+  return decryptedString;
+}
 
 module.exports = {
   calcArea,
@@ -141,4 +139,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
