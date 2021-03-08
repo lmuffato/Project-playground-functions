@@ -10,8 +10,7 @@ function techList(array, name) {
   for (let index = 0; index < arraySorted.length; index += 1) {
     objectArray.push({
       tech: array[index],
-      name
-    });
+      name });
   }
   return objectArray;
 }
@@ -75,8 +74,22 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+/* https://pt.stackoverflow.com/questions/3719/como-obter-apenas-os-n%C3%BAmeros-de-uma-string-em-javascript
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+Funcao .replace(/\D/g, '') - Onde /\D/ = Alfabeto e g - fazer em todos os caracteres da string */
+function hydrate(string) {
+  let numbersString = string.replace(/\D/g, '');
+  let numbersArray = [];
+  for (let index = 0; index < numbersString.length; index += 1) {
+    numbersArray.push(parseInt(numbersString.charAt(index), 10));
+    console.log(numbersArray);
+  }
+  let sum = 0;
+  for (let index = 0; index < numbersArray.length; index += 1) {
+    sum += numbersArray[index];
+  }
+  let coposDagua = 'copos de água';
+  return sum + coposDagua;
 }
 
 module.exports = {
