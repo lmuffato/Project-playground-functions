@@ -3,12 +3,12 @@ function techList(techs, name) {
   if (techs.length === 0) {
     return 'Vazio!';
   }
-  techs.sort();
+  let sortTechs = techs.sort();
   let techAndNameObject = [];
-  for (let index = 0; index < techs.length; index += 1) {
+  for (let index = 0; index < sortTechs.length; index += 1) {
     techAndNameObject.push({
-      tech: techs[index],
-      name: name,
+      tech: sortTechs[index],
+      name,
     });
   }
   return techAndNameObject;
