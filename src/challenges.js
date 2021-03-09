@@ -110,18 +110,18 @@ function encode(frase) {
   for (let index in encodingPhrase) {
     if (encodingPhrase[index] === 'a') {
       newPhrase += '1';
-    } else if (encodingPhrase[index] ==='e') {
+    } else if (encodingPhrase[index] === 'e') {
       newPhrase += '2';
-    } else if (encodingPhrase[index] ==='i') {
+    } else if (encodingPhrase[index] === 'i') {
       newPhrase += '3';
-    } else if (encodingPhrase[index] ==='o') {
+    } else if (encodingPhrase[index] === 'o') {
       newPhrase += '4';
-    } else if (encodingPhrase[index] ==='u') {
+    } else if (encodingPhrase[index] === 'u') {
       newPhrase += '5';
     } else {
       newPhrase += encodingPhrase[index];
     }
-  }  return newPhrase;
+  } return newPhrase;
 }
 
 function decode(frase) {
@@ -130,18 +130,18 @@ function decode(frase) {
   for (let index in encodingPhrase) {
     if (encodingPhrase[index] === '1') {
       newPhrase += 'a';
-    } else if (encodingPhrase[index] ==='2') {
+    } else if (encodingPhrase[index] === '2') {
       newPhrase += 'e';
-    } else if (encodingPhrase[index] ==='3') {
+    } else if (encodingPhrase[index] === '3') {
       newPhrase += 'i';
-    } else if (encodingPhrase[index] ==='4') {
+    } else if (encodingPhrase[index] === '4') {
       newPhrase += 'o';
-    } else if (encodingPhrase[index] ==='5') {
+    } else if (encodingPhrase[index] === '5') {
       newPhrase += 'u';
     } else {
       newPhrase += encodingPhrase[index];
     }
-  }  return newPhrase;
+  } return newPhrase;
 }
 
 module.exports = {
