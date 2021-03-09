@@ -85,7 +85,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(fizzBuzzParam) {
   let status = fizzBuzzParam;
-  for (let index of fizzBuzzParam - 1) {
+  for (let index in fizzBuzzParam - 1) {
     status.push = fizzBuzzParam[index];
   }
   let symbols = [];
