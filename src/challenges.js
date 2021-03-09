@@ -81,19 +81,19 @@ function catAndMouse(mouse, cat1, cat2) {
     let dist2 = cat2 - mouse;
     if ((mouse > cat1) || (mouse > cat2)) {
       if (dist1 > dist2) {
-        console.log ('cat1');
+        return 'cat1';
       } else if (dist1 < dist2) {
-        console.log ('cat2')
+        return 'cat2';
       } else if (dist1 === dist2) {
-        console.log('os gatos trombam e o rato foge');
+        return 'os gatos trombam e o rato foge';
       }
     } else {
       if (dist1 > dist2) {
-        console.log ('cat2');
+        return 'cat2';
       } else if (dist1 < dist2) {
-        console.log ('cat1')
+        return 'cat1'
       } else if (dist1 === dist2) {
-        console.log('os gatos trombam e o rato foge')
+        return 'os gatos trombam e o rato foge';
     }
   }
 }
