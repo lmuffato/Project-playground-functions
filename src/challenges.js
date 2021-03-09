@@ -110,7 +110,7 @@ function words(numbers) {
 
 function fizzBuzz(arrayNum) {
   let fizzBuzzArray = [];
-  for (let index = 0; index < arrayNum.length; index =+ 1) {
+  for (let index = 0; index < arrayNum.length; index += 1) {
     fizzBuzzArray.push(words(arrayNum[index]));
   }
   return fizzBuzzArray;
@@ -125,7 +125,6 @@ function fizzBuzz(arrayNum) {
 // console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // console.log(fizzBuzz([7, 9]));
 // console.log(fizzBuzz([9, 25]));
-
 
 // Desafio 9
 function encode() {
