@@ -73,16 +73,16 @@ function hydrate(string) {
   let stringDrink = string.match(str);
   let drink = stringDrink.map(Number).reduce((a, b) => a + b);
 
-  if (drink === 1){
-  return `${drink} copo de água`;
+  if (drink === 1) {
+    return `${drink} copo de água`;
   }
-  if(drink >= 1){
+  if (drink >= 1) {
     return `${drink} copos de água`;
-}
+  }
 }
 console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
-  module.exports = {
+module.exports = {
   generatePhoneNumber,
   techList,
   hydrate,
