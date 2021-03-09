@@ -39,9 +39,7 @@ function generatePhoneNumber(pNumber) {
       }
     }
   }
-  return `(${pNumber[0]}${pNumber[1]}) ${pNumber[2]}
-  ${pNumber[3]}${pNumber[4]}${pNumber[5]}${pNumber[6]}
-  -${pNumber[7]}${pNumber[8]}${pNumber[9]}${pNumber[10]}`;
+  return `(${pNumber[0]}${pNumber[1]}) ${pNumber[2]}${pNumber[3]}${pNumber[4]}${pNumber[5]}${pNumber[6]}-${pNumber[7]}${pNumber[8]}${pNumber[9]}${pNumber[10]}`;
 }
 
 // Desafio 12
