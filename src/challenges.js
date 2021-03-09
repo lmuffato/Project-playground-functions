@@ -23,11 +23,9 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(phrase) {
-  let array = [];
-  let counter = phrase.length;
-  array.push(phrase[counter - 1]);
-  array.push(phrase[0]);
-  return array;
+  let input = '';
+  input = phrase[counter - 1] + ', ' + phrase[0];
+  return input;
 }
 
 // Desafio 5
