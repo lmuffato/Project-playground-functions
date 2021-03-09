@@ -20,7 +20,10 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  return (array[array.length - 1] + ', ' + array[0]);
+  let swap = array[array.length -1];
+  swap =+ ', ';
+  swap =+ array[0];
+  return swap;
 }
 
 // Desafio 5
@@ -53,8 +56,8 @@ console.log(highestCount([9, 9, 8, 8, 9, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let dist1 = (mouse - cat1) * -1;
-  let dist2 = (mouse - cat2) * -1;
+  let dist1 = Math.abs(mouse - cat1);
+  let dist2 = Math.abs(mouse - cat2);
   let result;
   if (dist1 === dist2) {
     result = 'os gatos trombam e o rato';
@@ -68,7 +71,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+  
 }
 
 // Desafio 9
