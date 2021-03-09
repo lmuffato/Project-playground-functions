@@ -1,11 +1,11 @@
 // Desafio 10
 function techList(tecnologias, name) {
   let listTech = [];
-  if (tecnologias.length === 0) {
+  if (tecnologias.length == 0) {
     return 'Vazio!';
   } 
   else {
-    for (let index in tecnologias) {
+    for (let index in tecnologias.sort()) {
       let objeto = {
         tech: tecnologias[index],
         name: name,
@@ -15,6 +15,7 @@ function techList(tecnologias, name) {
     return listTech;
   }
 }
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"))
 
 // Desafio 11
 function generatePhoneNumber() {
