@@ -9,7 +9,7 @@ function techList(paramTech, paramNome) {
   let novoArray = [];
   let objetoSeparado = {};
   for (let index = 0; index < arrayTec.length; index += 1) {
-    objetoSeparado = { tech: arrayTec[index], name: name };
+    objetoSeparado = { tech: arrayTec[index], name : name };
     novoArray.push(objetoSeparado);
   }
   if (novoArray.length === 0) {
@@ -20,7 +20,7 @@ function techList(paramTech, paramNome) {
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
-} 
+}
 
 generatePhoneNumber();
 

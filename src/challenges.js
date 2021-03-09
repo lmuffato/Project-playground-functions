@@ -34,7 +34,7 @@ function concatName(paramNomes) {
   let nomes = [];
   let fullname = [];
 
-  for (let index in paramNomes) {
+  for (let index = 0; index < paramNomes.length; index += 1) {
     nomes.push(paramNomes[index]);
   }
   fullname.push(nomes[nomes.length - 1]);
