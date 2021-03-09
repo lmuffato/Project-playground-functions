@@ -1,6 +1,11 @@
 // Desafio 10
-function techList() {
-  // iniciando
+function techList(arrayTech, name) {
+  let techObject = {};
+  for (let index = 0; index < arrayTech.legth; index += 1) {
+    techObject['tech'] = arrayTech[index];
+    techObject['name'] = name;
+  }
+return techObject;
 }
 
 // Desafio 11
