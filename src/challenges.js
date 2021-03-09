@@ -122,7 +122,7 @@ function fizzBuzz(arrayNum) {
 
 // Desafio 9
 function encode(parameter1) {
-let encodeObj = {
+  let encodeObj = {
     a: 1,
     e: 2,
     i: 3,
