@@ -67,65 +67,76 @@ function highestCount(numbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  if (mouse - cat1 === mouse - cat2) {
+  let distance1 = Math.abs(mouse - cat1);
+  let distance2 = Math.abs(mouse - cat2);
+
+  if (distance1 === distance2) {
     return 'os gatos trombam e o rato foge';
   }
-  if (mouse - cat1 < mouse - cat2) {
+  if (distance1 < distance2) {
     return 'cat1';
   }
-  if (mouse - cat2 < mouse - cat1) {
+  if (distance2 < distance1) {
     return 'cat2';
   }
 }
 
 // Desafio 8
-function checkDivideThree(listOfIntegers) {
-  let threeArray = new Array(listOfIntegers.length);
-  for (let index = 0; index < listOfIntegers.length; index += 1) {
-    if (listOfIntegers[index] % 3 === 0) {
-      threeArray[index] = 'fizz!';
+function checkDivideByBoth(list) {
+  let n = list.length;
+  let divisibleByThreeAndFive = new Array(n);
+
+  for (let index = 0; index < list.length; index += 1) {
+    if (list[index] % 3 === 0 && list[index] % 5 === 0) {
+      divisibleByThreeAndFive[index] = 'fizzBuzz';
+    } else {
+      divisibleByThreeAndFive[index] = list[index];
     }
   }
-  return threeArray;
+
+  return divisibleByThreeAndFive;
 }
 
-// function checkDivideFive(listOfIntegers) {
-//   for (let index = 0; index < integersArray.length; index += 1) {
-//     if (integersArray[index] % 5 === 0) {
-//       integersArray[index] = 'Buzz!';
-//     }
-//   }
-//   return integersArray;
-// }
+function checkDivideByThree(list) {
+  let divisibleByThree = checkDivideByBoth(list);
 
-// function checkDivideFizzBuzz(integersArray) {
-//   let fizzBuzzArray = integersArray;
-//   for (let index = 0; index < integersArray.length; index += 1) {
-//     if (integersArray[index] % 5 === 0 && integersArray[index] % 3 === 0) {
-//       fizzBuzzArray[index] = 'fizzBuzz';
-//     }
-//   }
-//   return fizzBuzzArray;
-// }
+  for (let index = 0; index < list.length; index += 1) {
+    if (typeof (divisibleByThree[index]) === 'number' && divisibleByThree[index] % 3 === 0) {
+      divisibleByThree[index] = 'fizz';
+    }
+  }
 
-// function checkDivideBug(integersArray) {
-//   for (let index = 0; index < integersArray.length; index += 1) {
-//     if (integersArray[index] % 5 !== 0 && integersArray[index] % 3 !== 0) {
-//       integersArray[index] = 'bug!';
-//     }
-//   }
-//   return integersArray;
-// }
-
-function fizzBuzz(integersArray) {
-//   // seu código aqui
-//   for (let index = 0; index < integersArray.length; index += 1) {
-  return checkDivideThree(integersArray);
+  return divisibleByThree;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-// console.log(fizzBuzz([7, 9]));
-// console.log(fizzBuzz([9, 25]));
+function checkDivideByFive(list) {
+  let divisibleByFive = checkDivideByThree(list);
+
+  for (let index = 0; index < list.length; index += 1) {
+    if (typeof (divisibleByFive[index]) === 'number' && divisibleByFive[index] % 5 === 0) {
+      divisibleByFive[index] = 'buzz';
+    }
+  }
+
+  return divisibleByFive;
+}
+
+function checkNoDivideByThreeAndFive(list) {
+  let noDivisibleByThreeAndFive = checkDivideByFive(list);
+
+  for (let index = 0; index < list.length; index += 1) {
+    if (list[index] % 3 !== 0 && list[index] % 5 !== 0) {
+      noDivisibleByThreeAndFive[index] = 'bug!';
+    }
+  }
+
+  return noDivisibleByThreeAndFive;
+}
+
+function fizzBuzz(list) {
+  // seu código aqui
+  return checkNoDivideByThreeAndFive(list);
+}
 
 // Desafio 9
 function encode() {
