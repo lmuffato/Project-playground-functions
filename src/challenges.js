@@ -40,7 +40,6 @@ function highestCount(numbers) {
   }
   return timesAppear;
 }
-// Como encontra o número maior pesquisei no stackoverflow
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -53,18 +52,16 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return 'os gatos trombam e o rato foge';
 }
-// Fiquei na dúvida se a posição seria um número ou um par ordenado. Posição pode ser as duas coisas. 
-// fonte do Math.abs foi developer.mozzila.org
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
-  let finalArray = []
-  for (let index = 0; index < arrayNumbers.length; index += 1){
-    if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0){
+  let finalArray = [];
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0) {
       finalArray.push('fizzBuzz');
-    } else if (arrayNumbers[index] % 3 === 0){
+    } else if (arrayNumbers[index] % 3 === 0) {
       finalArray.push('fizz');
-    } else if (arrayNumbers[index] % 5 === 0){
+    } else if (arrayNumbers[index] % 5 === 0) {
       finalArray.push('buzz');
     } else {
       finalArray.push('bug!');
@@ -76,8 +73,8 @@ function fizzBuzz(arrayNumbers) {
 // Desafio 9
 function encode(stringParameter) {
   let codedArray = [];
-  for (let index = 0; index < stringParameter.length; index += 1){
-    switch(stringParameter[index]){
+  for (let index = 0; index < stringParameter.length; index += 1) {
+    switch (stringParameter[index]) {
       case 'a':
         codedArray.push(1);
         break;
@@ -102,25 +99,19 @@ function encode(stringParameter) {
 
 function decode(codedParameter) {
   let decodedArray = [];
-  for (let index = 0; index < codedParameter.lenght; index += 1) {
-    switch(codedParameter[index]) {
-      case '1':
-        decodedArray.push('a');
-        break;
-      case '2':
-        decodedArray.push('e');
-        break;
-      case '3':
-        decodedArray.push('i');
-        break;
-      case '4':
-        decodedArray.push('o');
-        break;
-      case '5':
-        decodedArray.push('u');
-        break;
-      default:
-        decodedArray.push(codedParameter[index]);
+  for (let index = 0; index < codedParameter.length; index += 1) {
+    if(codedParameter[index] == 1) {
+      decodedArray.push('a');
+    } else if(codedParameter[index] == 2) {
+      decodedArray.push ('e');
+    } else if(codedParameter[index] == 3) {
+      decodedArray.push('i');
+    } else if(codedParameter[index] == 4) {
+      decodedArray.push('o');
+    } else if(codedParameter[index] == 5) {
+      decodedArray.push('u');
+    } else {
+      decodedArray.push(codedParameter[index]);
     }
   }
   return decodedArray.join('');
