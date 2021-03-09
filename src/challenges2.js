@@ -30,9 +30,12 @@ function checkNumberIsPositiveOrMoreNine(phoneNumbers) {
 }
 
 function checkNumberRepeatAux(phoneNumbers, index) {
-  let result = 0;
+  let result = 1;
   for (let j = 0; j < index; j += 1) {
-    result += (phoneNumbers[index] === phoneNumbers[j]) ? 1 : 0;
+    if (phoneNumbers[index] === phoneNumbers[j]) {
+      result += 1;
+      console.log(result);
+    }
   }
   return result;
 }
@@ -40,8 +43,9 @@ function checkNumberRepeatAux(phoneNumbers, index) {
 function checkNumberRepeat(phoneNumbers) {
   let repeat = 0;
   for (let i = 0; i < phoneNumbers.length; i += 1) {
+    repeat = 0;
     repeat += checkNumberRepeatAux(phoneNumbers, i);
-    if (repeat >= 3) {
+    if (repeat > 2) {
       return false;
     }
   }
@@ -94,7 +98,7 @@ function generatePhoneNumber(phoneNumbers) {
 
 // Desafio 12
 function triangleCheck() {
-  // seu código aqui
+  // Desafio 12
 }
 
 // Desafio 13
