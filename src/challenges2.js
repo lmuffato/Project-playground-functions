@@ -1,6 +1,6 @@
 // Desafio 10
 function techList(tech, name) {
-  tech = ['JavaScript', 'Python', 'C++', 'Ruby', 'React'];
+  let techList = [];
   name = 'Lucas';
   let list = {
     techName: tech,

@@ -41,19 +41,24 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numberArray) {
 
-let max = 0;
-
+  let higherNumber = 0;
+  let higherNumberRepetition = 0;
 
   for (let i = 0; i < numberArray.length; i += 1){
-    if (numberArray[0] < numberArray[i])
-        numberArray[0] = numberArray[i]
-  
-    else if (numberArray[0] === numberArray[i]){
-      max += 1;
+    if (higherNumber < numberArray[i]){
+      higherNumber = numberArray[i];
+    }  
+  }
+  for (let j = 0; j < numberArray.length; j += 1){
+    if (numberArray[j] === higherNumber){
+      higherNumberRepetition += 1;
     }
-  }  
-  return max;
+  }
+  
+return higherNumberRepetition;
+
 }
+
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -126,7 +131,7 @@ function decode(numberToChar) {
 }
 
 
-console.log(catAndMouse(20, 18, 10));
+console.log(highestCount([0, 0, 0]));
 
 module.exports = {
   calcArea,
