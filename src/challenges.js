@@ -77,11 +77,43 @@ function fizzBuzz(listNumber) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let arrayEncode = phrase
+  .split('');
+  for (let indexEncode = 0; indexEncode < arrayEncode.length; indexEncode += 1) {
+    if (arrayEncode[indexEncode] === 'a') {
+      arrayEncode[indexEncode] = 1;
+    } else if (arrayEncode[indexEncode] === 'e') {
+      arrayEncode[indexEncode] = 2;
+    } else if (arrayEncode[indexEncode] === 'i') {
+      arrayEncode[indexEncode] = 3;
+    } else if (arrayEncode[indexEncode] === 'o') {
+      arrayEncode[indexEncode] = 4;
+    } else if (arrayEncode[indexEncode] === 'u') {
+      arrayEncode[indexEncode] = 5;
+    }
+  }
+  let phraseEncode = arrayEncode.join('');
+  return phraseEncode;
 }
-function decode() {
-  // seu código aqui
+
+function decode(phraseToDecode) {
+  let arrayDecode = phraseToDecode.split('');
+  for (let indexDecode = 0; indexDecode < arrayDecode.length; indexDecode += 1) {
+    if (arrayDecode[indexDecode] == 1) {
+      arrayDecode[indexDecode] = 'a';
+    } else if (arrayDecode[indexDecode] == 2) {
+      arrayDecode[indexDecode] = 'e';
+    } else if (arrayDecode[indexDecode] == 3) {
+      arrayDecode[indexDecode] = 'i';
+    } else if (arrayDecode[indexDecode] == 4) {
+      arrayDecode[indexDecode] = 'o';
+    } else if (arrayDecode[indexDecode] == 5) {
+      arrayDecode[indexDecode] = 'u';
+    }
+  }
+  let decodePhrase = arrayDecode.join('');
+  return decodePhrase;
 }
 
 module.exports = {
