@@ -69,10 +69,10 @@ function hydrate(drinks) {
   if (water === 1 || water === 0) {
     return `${water} copo de água`;
   }
-  return `${water} copos de água;`;
+  return `${water} copos de água`;
 }
 
-console.log(hydrate('1 sdasdsa, 5asdsa 6 asdas'));
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
