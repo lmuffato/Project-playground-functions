@@ -57,8 +57,9 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanceCat1 = mouse - cat1;
-  let distanceCat2 = mouse - cat2;
+  //Utilizando valores absolutos para calcular a distância entre os gatos e os ratos https://www.w3schools.com/jsref/jsref_abs.asp
+  let distanceCat1 = Math.abs(mouse - cat1);
+  let distanceCat2 = Math.abs(mouse - cat2);
   if (distanceCat1 < distanceCat2) {
     return 'cat1';
   }
@@ -166,9 +167,9 @@ console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 console.log(highestCount([0, 0, 0]));
 
 // Testando a função catAndMouse
-console.log(catAndMouse(30, 27, 28));
+console.log(catAndMouse(30, 33, 32));
 console.log(catAndMouse(30, 24, 18));
-console.log(catAndMouse(30, 25, 25));
+console.log(catAndMouse(30, 35, 25));
 
 // Testando a função fizzBuzz
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
