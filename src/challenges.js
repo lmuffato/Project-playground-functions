@@ -21,8 +21,8 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   let swap = array[array.length - 1];
-  swap = + ', ';
-  swap = + array[0];
+  swap =+ ', ';
+  swap =+ array[0];
   return swap;
 }
 
@@ -71,12 +71,12 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(arrayOfNumbers) {
   let array = [];
-  for (let i = 0; i < arrayOfNumbers.length; i+=1) {
+  for (let i in arrayOfNumbers) {
     if (arrayOfNumbers[i] % 3 === 0 && arrayOfNumbers[i] % 5 === 0) {
       array.push('fizzBuzz');
     } else if (arrayOfNumbers[i] % 3 === 0) {
       array.push('fizz');
-    } else if (arrayOfNumbers % 5 === 0) {
+    } else if (arrayOfNumbers[i] % 5 === 0) {
       array.push('buzz');
     } else {
       array.push('bug');
