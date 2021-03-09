@@ -51,16 +51,13 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < (lineB + lineC) || lineA > Math.abs(lineB - lineC)) {
+  let lineACheck = (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC));
+  let lineBCheck = (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC));
+  let lineCCheck = (lineC < (lineA + lineB) && lineC > Math.abs(lineA - lineB));
+  if (lineACheck && lineBCheck && lineCCheck) {
     return true;
-  } 
-  if (lineB < (lineA + lineC) || lineB > Math.abs(lineA - lineC)) {
-      return true;
-  }
-  if (lineC < (lineA + lineB) || lineC > Math.abs(lineA - lineB)) {
-    return true;
-  } else {
-    false;
+  }else {
+    return false;
   }
 }
 
