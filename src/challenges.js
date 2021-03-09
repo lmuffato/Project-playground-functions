@@ -28,8 +28,8 @@ console.log(splitSentence('foguete'));
 // Desafio 4
 function concatName(arrayString) {
   let names = '';
-  for(index = [0]; index < arrayString.length; index += 1) {
-    if(index === [0]) {
+  for (let index = 0 ; index < arrayString.length; index += 1) {
+    if(index === 0) {
       names = arrayString[arrayString.length - 1];
     }
     if (index === (arrayString.length - 1)) {
@@ -93,13 +93,13 @@ function encode(string) {
   let returnEncode = string.replace(/a/g,'1').replace(/e/g, '2').replace(/i/g, '3').replace(/o/g, '4').replace(/u/g, '5');
   return returnEncode ;
   }
-  var code = encode("hi there!");
+  let code = encode("hi there!");
   console.log(code);
 function decode(string) {
 let returndecode = string.replace(/1/g,'a').replace(/2/g, 'e').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
       return returndecode;
     }
-      console.log(decode(code));
+console.log(decode(code));
 module.exports = {
   calcArea,
   catAndMouse,
