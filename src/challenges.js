@@ -56,7 +56,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'cat2';
   } if (distanceCat1 < distanceCat2) {
     return 'cat1';
-  } else if (distanceCat1 === distanceCat2) {
+  } if (distanceCat1 === distanceCat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
@@ -79,12 +79,37 @@ function fizzBuzz(arrayOfNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function returnObjectReplace() {
+  let codeReplace = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5'
+  };
+  return codeReplace;
 }
-function decode() {
-  // seu código aqui
+function encode(string) {
+  let codeReplace = returnObjectReplace();
+  let encodeStringReplace = string;
+  for (let key in codeReplace) {
+    let encodeRegexReplace = `${key}`;
+    encodeStringReplace = encodeStringReplace.replace(RegExp(encodeRegexReplace, 'g'), codeReplace[key]);
+  }
+  return encodeStringReplace; 
 }
+console.log(encode("Hi, hello!"));
+
+function decode(string) {
+  let codeReplace = returnObjectReplace();
+  let decodeStringReplace = string;
+  for (let key in codeReplace) {
+    let decodeRegexReplace = codeReplace[key];
+    decodeStringReplace = decodeStringReplace.replace(RegExp(decodeRegexReplace, 'g'), `${key}`);
+  }
+  return decodeStringReplace;
+}
+console.log(decode("H3, h2ll4!"))
 
 module.exports = {
   calcArea,
