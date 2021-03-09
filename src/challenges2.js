@@ -10,7 +10,7 @@ function techList(arrayTechs, name) {
       finalList.push(
         {
           tech: arrayTechs[i],
-          name: name,
+          name,
         },
       );
     }
