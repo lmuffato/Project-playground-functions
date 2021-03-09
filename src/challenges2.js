@@ -58,12 +58,21 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return false;
 }
-console.log(triangleCheck(1, 4, 14));
 
-// Desafio 13
-function hydrate() {
-  // seu código aqui
+// Desafio 13 //found about replace and regex at https://stackoverflow.com/questions/10003683/how-can-i-extract-a-number-from-a-string-in-javascript
+function hydrate(drinks) {
+  let num = (drinks.replace(/\D/g, ''));
+  let water = 0;
+  for (let index = 0; index < num.length; index += 1) {
+    water += parseInt(num[index], 10);
+  }
+  if (water === 1 || water === 0) {
+    return `${water} copo de água`;
+  }
+  return `${water} copos de água;`;
 }
+
+console.log(hydrate('1 sdasdsa, 5asdsa 6 asdas'));
 
 module.exports = {
   generatePhoneNumber,
