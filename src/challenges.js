@@ -74,10 +74,10 @@ function fizzBuzz(arrayNum) {
         res.push('fizzBuzz');
       }
       else if (arrayNum[i] % 3 === 0){
-        res.push('buzz');
+        res.push('fizz');
       }
       else if (arrayNum[i] % 5 === 0) {
-        res.push('fizz');
+        res.push('buzz');
       }
       else{
         res.push('bug!');
