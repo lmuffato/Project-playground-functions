@@ -65,16 +65,15 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
+// Exercício corrigido com a ajuda de Rafael Medeiros Gomes
+// Link: https://trybecourse.slack.com/archives/C01L16B9XC7/p1614785978007300
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  if ((lineA < lineB + lineC) && lineA > Math.abs(lineB - lineC) ) {
+  if ((lineA < lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
     return true;
-  } else {
+  } 
     return false;
-  }
 }
-
-triangleCheck(10, 14, 8);
 
 // Desafio 13
 function hydrate() {
