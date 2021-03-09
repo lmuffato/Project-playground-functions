@@ -21,9 +21,6 @@ function techList(tecnologias, name) {
 function generatePhoneNumber(numeros){
   let numero = '('
   if (numeros.length != 11){
-    return ("Array com tamanho incorreto.")
-  }
-  else{
     for (index = 0; index < 2; index++){
       numero += numeros[index]
     }
@@ -36,6 +33,10 @@ function generatePhoneNumber(numeros){
       numero += numeros[index]
     }
     return numero
+    
+  }
+  else{
+    return ("Array com tamanho incorreto.")
   }
 }
 
