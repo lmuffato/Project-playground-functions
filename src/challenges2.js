@@ -10,12 +10,13 @@ function techList(array, name) {
       name: name
     }
   }
-  if(array[0] !== undefined || array[0] !== null) {
+  if(array[0] != undefined || array[0] != null) {
     return arrayObjects;
   } else {
     return 'Vazio!';
   }
-}
+} 
+
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
