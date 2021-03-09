@@ -25,7 +25,7 @@ function concatName(arrayNames) {
   let firstWord = arrayNames[0];
   let lastArray = arrayNames.length - 1;
   let lastWord = arrayNames[lastArray];
-  
+
   let lastFirst = lastWord.concat(', ', firstWord);
 
   return lastFirst;
@@ -38,7 +38,7 @@ function footballPoints(wins, ties) {
 
   let score = winsPoints + tiesPoints;
 
-  return score; 
+  return score;
 }
 
 // Desafio 6
@@ -48,8 +48,8 @@ function highestCount(arrayValues) {
   let repeat = [higherNumber];
 
   for (let index = 0; index < arrayValues.length - 1; index += 1) {
-    if (arrayValues[index] == higherNumber) {
-      repeat.push(arrayValues[index])
+    if (arrayValues[index] === higherNumber) {
+      repeat.push(arrayValues[index]);
     }
   }
 
@@ -59,16 +59,17 @@ function highestCount(arrayValues) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distanceCat1 = Math.abs(cat1 - mouse);
-  let distanceCat2 = Math.abs(cat2- mouse);
-  
+  let distanceCat2 = Math.abs(cat2 - mouse);
 
   if (distanceCat1 < distanceCat2) {
     return 'cat1';
-  } else if (distanceCat2 < distanceCat1) {
+  }
+
+  if (distanceCat2 < distanceCat1) {
     return 'cat2';
   }
 
-  if (distanceCat1 == distanceCat2) {
+  if (distanceCat1 === distanceCat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
@@ -96,17 +97,35 @@ function fizzBuzz(numericArray) {
 }
 
 // Desafio 9
-function encode() {
-  // atribuir variável = 0
-  // percorrer a string
-  // criar um objeto para a tabela de trocar
-  // usar o for pra percorrer o objeto
-  // condicionar as trocas de letras
-  // retornar a string decodificada
-  
-  
+function encode(stringSentence) {
+  let stringToArray = stringSentence.split('');
+  let codeSentence = [];
 
+  
+  function chageLetter (letter) {
+    let code = {
+      1: 'a',
+      2: 'e',
+      3: 'i',
+      4: 'o',
+      5: 'u'
+    };
+    
+    for (let key in code) {
+      if (letter === code[key]) {
+        return
+    }
+  }
+  
+  for (let index = 0; index < stringToArray.length; index += 1) {
+    
+  }
+  
+  console.log(stringToArray)
 }
+
+encode('hey brathars!');
+
 function decode() {
   // seu código aqui
 }

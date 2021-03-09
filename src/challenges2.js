@@ -1,18 +1,26 @@
 // Desafio 10
-function techList(['tech' , 'list'], name) {
-  //objetivo principal: construir um array de objetos com duas propriedades
-  // atribuir array vazio
-  // reorganizar o array em ordem alfabética
-  // percorrer o array alfabético
-  // pra cada indice, criar um objeto com o conteúdo como primeira prop
-  // dar push dos objetos no array vazio
-  // percorrer o array de objetos 
-  // inserir dinâmicamente a propriedade name: (parametro name)
+function techList(Arraytech, name) {
+  if (Arraytech === 0) {
+    return 'Vazio!';
+  }
+  if (Arraytech !== 0) {
+    let orderedArray = Arraytech.sort();
+    let skills = [];
+
+    for (let index = 0; index < orderedArray.length; index += 1) {
+      skills.push({
+        tech: orderedArray[index],
+        name: name
+      });
+    };
+
+    return skills;
+  }
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numericArray) {
+  
 }
 
 // Desafio 12
