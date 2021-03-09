@@ -5,12 +5,14 @@ function techList(arrayTech, name) {
   for (let index = 0; index < sortTech.length; index += 1) {
     newArray.push({'tech': sortTech[index], 'name': name});
   }
-return newArray; 
+if (arrayTech.length === 0) {
+  return 'Vazio!';
+}return newArray; 
 }
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+  // seu código aqui 
 }
 
 // Desafio 12
