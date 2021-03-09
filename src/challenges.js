@@ -31,16 +31,16 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(paramNomes) {
-  let nomes = [];
-  let fullname = [];
 
-  for (let index = 0; index < paramNomes.length; index += 1) {
-    nomes.push(paramNomes[index]);
-  }
-  fullname.push(nomes[nomes.length - 1]);
-  fullname.push(nomes[0]);
+  let fullname = '';
+
+  let primeiroAExibir = paramNomes[paramNomes.length - 1];
+  let ultimoAExibir = paramNomes[0];
+  let virg = ', ';
+  fullname = primeiroAExibir + virg + ultimoAExibir;
   return fullname;
 }
+concatName(['Luiz', 'Felipe', 'Rodrigues', 'Araujo']);
 
 // Desafio 5
 function footballPoints(wins, ties) {
