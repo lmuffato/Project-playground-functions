@@ -27,7 +27,7 @@ console.log(splitSentence('vamo que vamo'));
 console.log(splitSentence('foguete'));
 // Desafio 4
 function concatName(arrayString) {
-  let names = '';
+  let names = [''];
   for (let index = 0 ; index < arrayString.length; index += 1) {
     if(index === 0) {
       names = arrayString[arrayString.length - 1];
