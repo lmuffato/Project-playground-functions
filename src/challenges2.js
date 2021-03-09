@@ -88,15 +88,15 @@ function hydrate(phrase) {
   let water = 0;
 
   for (let index = 0; index < phraseNumbers.length; index += 1) {
-   let converting =  parseInt(phraseNumbers[index]);
-   water += converting;
+    let converting = parseInt(phraseNumbers[index]);
+    water += converting;
   }
 
   if (water === 1) {
-    return console.log((`${water} ${'copo de água'}`));
-  } 
-    return console.log((`${water} ${'copos de água'}`));
+    return (`${water} ${'copo de água'}`);
   }
+  return (`${water} ${'copos de água'}`);
+}
 
 module.exports = {
   generatePhoneNumber,
