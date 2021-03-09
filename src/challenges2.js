@@ -22,10 +22,6 @@ function compare(a,b){
     return 0;
 }
 
-
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"));
-
-
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
