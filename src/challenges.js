@@ -70,14 +70,14 @@ function fizzBuzz(arrayNum) {
   let res= []
  
     for (let i = 0; i < arrayNum.length; i+=1){
-      if (arrayNum[i] % 3 === 0 && arrayNum[1] % 5 === 0) {
+      if ((arrayNum[i] % 3 === 0) && (arrayNum[i] % 5 ===0)){
         res.push('fizzBuzz');
       }
-      else if (arrayNum[i] % 3 === 0){
-        res.push('fizz');
-      }
-      else if (arrayNum[i] % 5 === 0) {
+      else if (arrayNum[i] % 5 === 0){
         res.push('buzz');
+      }
+      else if (arrayNum[i] % 5 === 0)  {
+        res.push('fizz');
       }
       else{
         res.push('bug!');
@@ -87,7 +87,7 @@ function fizzBuzz(arrayNum) {
     return res
   }
   
-
+console.log(fizzBuzz([15]))
 
 // Desafio 9
 function encode() {
