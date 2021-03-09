@@ -12,15 +12,14 @@ function techList(Arraytech, name) {
         tech: orderedArray[index],
         name: name
       });
-    };
+    }
 
     return skills;
   }
 }
 
 // Desafio 11
-function generatePhoneNumber(numericArray) {
-  
+function generatePhoneNumber() {
 }
 
 // Desafio 12

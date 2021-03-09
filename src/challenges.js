@@ -97,34 +97,29 @@ function fizzBuzz(numericArray) {
 }
 
 // Desafio 9
-function encode(stringSentence) {
-  let stringToArray = stringSentence.split('');
-  let codeSentence = [];
+function encode() {
+//   let stringToArray = stringSentence.split('');
+//   let codeSentence = [];
+  
+//   for (let index = 0; index < stringToArray; index += 1) {
+//     if (stringToArray)
+//   }
 
   
-  function chageLetter (letter) {
-    let code = {
-      1: 'a',
-      2: 'e',
-      3: 'i',
-      4: 'o',
-      5: 'u'
-    };
-    
-    for (let key in code) {
-      if (letter === code[key]) {
-        return
-    }
-  }
-  
-  for (let index = 0; index < stringToArray.length; index += 1) {
-    
-  }
-  
-  console.log(stringToArray)
-}
+//     let code = {
+//       1: 'a',
+//       2: 'e',
+//       3: 'i',
+//       4: 'o',
+//       5: 'u'
+//     };
 
-encode('hey brathars!');
+//     for (let key in code) {
+
+//     }
+
+
+// encode('hey brathars!');
 
 function decode() {
   // seu código aqui
