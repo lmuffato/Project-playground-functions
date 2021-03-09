@@ -96,21 +96,42 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  let fizzBuzzArray = [];
-  for (let index = 0; index < numbers.length; index += 1) {
-    if ((numbers[index] % 3 === 0) && (numbers[index] % 5 === 0)) {
-      fizzBuzzArray.push('fizzBuzz');
-    } else if (numbers[index] % 5 === 0) {
-      fizzBuzzArray.push('buzz');
-    } else if (numbers[index] % 3 === 0) {
-      fizzBuzzArray.push('fizz');
-    } else {
-      fizzBuzzArray.push('bug!');
+  return numbers.map((num) => {
+    let result = 'bug!';
+    if (num % 3 === 0 && num % 5 === 0) {
+      result = 'fizzBuzz';
+    } else if (num % 5 === 0) {
+      result = 'buzz';
+    } else if (num % 3 === 0) {
+      result = 'fizz';
     }
-  }
-  return fizzBuzzArray;
+    return result;
+  });
 }
 
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([7, 9]));
+console.log(fizzBuzz([9, 25]));
+
+// entender o seguinte erro 
+// Linha 98: Function 'fizzBuzz' has a complexity of 6. Maximum allowed is 5.
+// Linha 98: Refactor this function to reduce its Cognitive Complexity from 7 to the 5 allowed.
+
+// function fizzBuzz(numbers) {
+//   let fizzBuzzArray = [];
+//   for (let index = 0; index < numbers.length; index += 1) {
+//     if ((numbers[index] % 3 === 0) && (numbers[index] % 5 === 0)) {
+//       fizzBuzzArray.push('fizzBuzz');
+//     } else if (numbers[index] % 5 === 0) {
+//       fizzBuzzArray.push('buzz');
+//     } else if (numbers[index] % 3 === 0) {
+//       fizzBuzzArray.push('fizz');
+//     } else {
+//       fizzBuzzArray.push('bug!');
+//     }
+//   }
+//   return fizzBuzzArray;
+// }
 // console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // console.log(fizzBuzz([7, 9]));
 // console.log(fizzBuzz([9, 25]));
