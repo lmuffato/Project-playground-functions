@@ -20,7 +20,7 @@ function techList(array,name) {
 
 // Desafio 11
 
-
+let test=[5,2,8,1,5,3,7,2,8,9,0]
 function ceilChecker(array){
   let counter=0;
   let repeated=[];
@@ -81,8 +81,16 @@ let result = ""
   return result;
 }
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(x,y,z) {
+  let result;
+  if(x>(y+z)||y>(x+z)||z>(x+y)){
+    result = false;
+  }else if(x<(x-y-z)||y<(x-y-z)||z<(x-y-z)){
+    result = false;
+  }else if(x<(y+z)||y<(z+x)||z<(x+y)||x>(x-y-z)||y>(x-y-z)||z>(x-y-z)){
+    result = true;
+  }
+  return result;
 }
 
 // Desafio 13
