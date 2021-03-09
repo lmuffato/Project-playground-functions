@@ -71,8 +71,8 @@ function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   if ((lineA < lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
     return true;
-  } 
-    return false;
+  }
+  return false;
 }
 
 // Desafio 13
