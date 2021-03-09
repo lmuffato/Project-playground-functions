@@ -21,8 +21,8 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   let swap = array[array.length - 1];
-  swap =+ ', ';
-  swap =+ array[0];
+  swap += ', ';
+  swap += array[0];
   return swap;
 }
 
@@ -69,20 +69,22 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function divisionByThree (number) {
+function divisionByThree(number) {
   if (number % 3 === 0) {
-    return true;
+    result = true;
   } else {
-    return false;
+    result = false;
   }
+  return result;
 }
 
 function divisionByFive (number) {
   if (number % 5 === 0) {
-    return true;
+    result = true;
   } else {
-    return false;
+    result = false;
   }
+  return result;
 }
 
 function fizzBuzz(arrayOfNumbers) {
@@ -102,14 +104,14 @@ function fizzBuzz(arrayOfNumbers) {
 }
 
 // Desafio 9
-function encode(stringoOfLetters) {
-  let letters = stringOfPalavras.split('');
+function encode(stringOfLetters) {
+  let letters = stringOfLetters.split('');
   let vogais = ['a', 'e', 'i', 'o', 'u'];
   let numbers = [1, 2, 3, 4, 5];
   for (let x in letters) {
     for (let y in vogais) {
       if (vogais[y] === letters[x]) {
-        letters[x] = numbers[y]
+        letters[x] = numbers[y];
       }
     }
   }
@@ -122,11 +124,11 @@ function decode(stringOfNumbers) {
     2: 'e',
     3: 'i',
     4: 'o',
-    5: 'u'
+    5: 'u',
   };
   let newNumbers = '';
   for (let caractere in stringOfNumbers) {
-    if (typeof numbersAndLetters[stringOfNumbers[caractere]] == 'undefined') {
+    if (typeof numbersAndLetters[stringOfNumbers[caractere]] === 'undefined') {
       newNumbers += stringOfNumbers[caractere];
     } else {
       newNumbers += numbersAndLetters[stringOfNumbers[caractere]];
@@ -134,8 +136,6 @@ function decode(stringOfNumbers) {
   }
   return newNumbers;
 }
-
-console.log(decode("h3 thr2r2!"));
 
 module.exports = {
   calcArea,
