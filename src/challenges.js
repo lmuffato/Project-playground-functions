@@ -44,8 +44,8 @@ function highestCount(numbers) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distMouseCat1 = mouse - cat1;
-  let distMouseCat2 = mouse - cat2;
+  let distMouseCat1 = Math.abs(mouse - cat1);
+  let distMouseCat2 = Math.abs(mouse - cat2);
   if (distMouseCat1 < distMouseCat2) {
     return 'cat1';
   } if (distMouseCat1 > distMouseCat2) {
@@ -57,11 +57,11 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(numberArray) {
   let arrayFizzBuzz = [];
   for (let i = 0; i < numberArray.length; i += 1) {
-    if (numberArray[i] % 3 == 0 && numberArray[i] % 5 == 0) {
+    if (numberArray[i] % 3 === 0 && numberArray[i] % 5 == 0) {
       arrayFizzBuzz.push('fizzbuzz');
-    } else if (numberArray[i] % 5 == 0) {
+    } else if (numberArray[i] % 5 === 0) {
       arrayFizzBuzz.push('buzz');
-    } else if (numberArray[i] % 3 == 0) {
+    } else if (numberArray[i] % 3 === 0) {
       arrayFizzBuzz.push('fizz');
     } else { arrayFizzBuzz.push('bug!'); }
   }
