@@ -93,7 +93,6 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
- 
 function encode(string) {
   let phrase = '';
   for (let index = 0; index < string.length; index += 1) {
@@ -133,7 +132,7 @@ function decode(string) {
   }
   return phraseDecode;
 }
-console.log(decode('v2m q52 v2m'));
+
 
 module.exports = {
   calcArea,
