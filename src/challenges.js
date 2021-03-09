@@ -34,7 +34,7 @@ function concatName(paramNomes) {
   let nomes = [];
   let fullname = [];
 
-  for (let index in paramNomes) {
+  for (let index of paramNomes) {
     nomes.push(paramNomes[index]);
   }
   fullname.push(nomes[nomes.length - 1]);
@@ -52,7 +52,6 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numeros) {
-
   let arrayDeNum = [];
   arrayDeNum = numeros;
   let maiorNum = 0;
@@ -86,8 +85,9 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(fizzBuzzParam) {
   let status = fizzBuzzParam;
-  for (let index in fizzBuzzParam - 1) {
-    status.push = fizzBuzzParam[index];}
+  for (let index of fizzBuzzParam - 1) {
+    status.push = fizzBuzzParam[index];
+  }
   let symbols = [];
   for (let index in status){
     if ((status[index] % 3 === 0) && (status[index] % 5 === 0)) {
