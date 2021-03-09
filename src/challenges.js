@@ -109,11 +109,10 @@ function fizzBuzz(numbers) {
   });
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-console.log(fizzBuzz([7, 9]));
-console.log(fizzBuzz([9, 25]));
+// console.log(fizzBuzz([2, 15, 7, 9, 45]));
+// console.log(fizzBuzz([7, 9]));
+// console.log(fizzBuzz([9, 25]));
 
-// entender o seguinte erro 
 // Linha 98: Function 'fizzBuzz' has a complexity of 6. Maximum allowed is 5.
 // Linha 98: Refactor this function to reduce its Cognitive Complexity from 7 to the 5 allowed.
 
