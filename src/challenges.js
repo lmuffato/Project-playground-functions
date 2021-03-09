@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue(bool1 , bool2) {
+function compareTrue(bool1, bool2) {
   if (bool1 === true && bool2 === true) {
     return true;
   } else {
@@ -8,7 +8,7 @@ function compareTrue(bool1 , bool2) {
 }
 
 // Desafio 2
-function calcArea(base , height) {
+function calcArea(base, height) {
   return (base * height) / 2;
 }
 
@@ -17,9 +17,9 @@ function splitSentence(frase) {
   let word = '';
   let separatedWords = [];
   for (let index = 0; index < frase.length; index += 1) {
-    if (frase[index] != ' ') {
-    word += frase[index];
-    } 
+    if (frase[index] !== ' ') {
+      word += frase[index];
+    }
     if ((frase[index] === ' ') || (index === frase.length-1)) {
       separatedWords.push(word);
       word = '';
@@ -30,11 +30,11 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(words) {
-  return words[words.length-1] + ', ' + words[0];  
+  return words[words.length - 1] + ', ' + words[0];  
 }
 
 // Desafio 5
-function footballPoints(wins , ties) {
+function footballPoints(wins, ties) {
   return 3 * wins + ties;
 }
 
@@ -56,9 +56,9 @@ function highestCount(numbers) {
 }
 
 // Desafio 7
-function catAndMouse(mouse , cat1 , cat2) {
-  let distance1 = cat1 - mouse;
-  let distance2 = cat2 - mouse;
+function catAndMouse(mouse, cat1, cat2) {
+  let distance1 = Math.abs(cat1 - mouse);
+  let distance2 = Math.abs(cat2 - mouse);
   if (distance1 < distance2) {
     return 'cat1';
   } else if (distance1 > distance2) {
@@ -71,7 +71,7 @@ function catAndMouse(mouse , cat1 , cat2) {
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
   let arrayFizzBuzz = [];
-  for (let indice = 0; indice < arrayNumbers.length; indice += 1){
+  for (let indice = 0; indice < arrayNumbers.length; indice += 1) {
     if (arrayNumbers[indice] % 3 === 0) {
       if (arrayNumbers[indice] % 5 === 0) {
         arrayFizzBuzz.push('fizzBuzz');
@@ -89,21 +89,21 @@ function fizzBuzz(arrayNumbers) {
 
 // Desafio 9
 function encode(stringEncode) {
-  stringEncode = stringEncode.replace(/a/g , '1');
-  stringEncode = stringEncode.replace(/e/g , '2');
-  stringEncode = stringEncode.replace(/i/g , '3');
-  stringEncode = stringEncode.replace(/o/g , '4');
-  stringEncode = stringEncode.replace(/u/g , '5');
+  stringEncode = stringEncode.replace(/a/g, '1');
+  stringEncode = stringEncode.replace(/e/g, '2');
+  stringEncode = stringEncode.replace(/i/g, '3');
+  stringEncode = stringEncode.replace(/o/g, '4');
+  stringEncode = stringEncode.replace(/u/g, '5');
 
   return stringEncode;
 }
 
 function decode(stringDecode) {
-  stringDecode = stringDecode.replace(/1/g , 'a');
-  stringDecode = stringDecode.replace(/2/g , 'e');
-  stringDecode = stringDecode.replace(/3/g , 'i');
-  stringDecode = stringDecode.replace(/4/g , 'o');
-  stringDecode = stringDecode.replace(/5/g , 'u');
+  stringDecode = stringDecode.replace(/1/g, 'a');
+  stringDecode = stringDecode.replace(/2/g, 'e');
+  stringDecode = stringDecode.replace(/3/g, 'i');
+  stringDecode = stringDecode.replace(/4/g, 'o');
+  stringDecode = stringDecode.replace(/5/g, 'u');
 
   return stringDecode;
 }
