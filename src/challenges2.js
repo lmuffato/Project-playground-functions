@@ -8,15 +8,13 @@ function techList(paramTech, paramNome) {
   name = paramNome;
   let novoArray = [];
   let objetoSeparado = {};
-  for (let index = 0; index < arrayTec.length; index += 1 ) {
-    objetoSeparado = { tech: arrayTec[index], name: name}
+  for (let index = 0; index < arrayTec.length; index += 1) {
+    objetoSeparado = { tech: arrayTec[index], name: name }
     novoArray.push(objetoSeparado);
   }
   if (novoArray.length === 0) {
-    console.log('Vazio!');
-  } else {
-    return novoArray;
-  }
+    return 'Vazio!';
+  } return novoArray;
 }
 
 // Desafio 11
