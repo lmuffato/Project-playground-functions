@@ -12,8 +12,21 @@ function techList(technologies, studantsname) {
 }
 
 // Desafio 11
-function generatePhoneNumber(phoneNumber) {
-}
+//let phoneNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]
+//function arrayLength(phoneNumber) {
+  //if (phoneNumber.length !== 11){
+  //  return "Array com tamanho incorreto";
+ // }
+//} 
+//function numberNotValid(phoneNumber){
+  //for(let index = 0; index < phoneNumber.length; index += 1){
+   //If (phoneNumber[index] < 0 || phoneNumber[index] > 9){
+     //return 'não é possivel gerar um número com esses valores';
+   //} 
+  //}
+//}
+//function generatePhoneNumber() {
+//}
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
