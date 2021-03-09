@@ -80,11 +80,16 @@ function fizzBuzz(arrayFizzBuzz) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui 
+// logica do replaceAll encontrada no https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll e conforme ajuda no slack
+function encode(encodeName) {
+  encodeName = encodeName.replaceAll('a', '1').replaceAll('e', '2').replaceAll('i', '3').replaceAll('o', '4').replaceAll('u', '5');
+  return encodeName;
 }
-function decode() {
-  // seu código aqui
+  
+
+function decode(encodeName) {
+    encodeName = encodeName.replaceAll('1', 'a').replaceAll('2', 'e').replaceAll('3', 'i').replaceAll('4', 'o').replaceAll('5', 'u');
+    return encodeName;
 }
 
 module.exports = {
