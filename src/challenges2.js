@@ -88,7 +88,7 @@ function hydrate(phrase) {
   let water = 0;
 
   for (let index = 0; index < phraseNumbers.length; index += 1) {
-    let converting = parseInt(phraseNumbers[index]);
+    let converting = parseInt (phraseNumbers[index]);
     water += converting;
   }
 
