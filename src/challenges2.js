@@ -47,8 +47,18 @@ ${arrNum[9]}${arrNum[10]}`;
 console.log(generatePhoneNumber([5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function lineConditions(line1, line2, line3) {
+  return line1 < (line2 + line3) && line1 > Math.abs(line2 - line3);
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  let checklineA = lineConditions(lineA, lineB, lineC);
+  let checklineB = lineConditions(lineB, lineA, lineC);
+  let checklineC = lineConditions(lineC, lineA, lineB);
+  if (checklineA && checklineB && checklineC) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 13
