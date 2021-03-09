@@ -86,8 +86,20 @@ function generatePhoneNumber(arrayOfNumbers) {
 }
 
 // Challenge 12
-function triangleCheck() {
-  // seu código aqui
+function checkLines(line1, line2, line3) {
+  if (Math.abs((line1 - line2)) < line3 && line3 < (line1 + line2)) {
+    return true;
+  }
+  return false;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  if (checkLines(lineA, lineB, lineC)
+    || checkLines(lineB, lineC, lineA)
+    || checkLines(lineC, lineA, lineB)) {
+    return true;
+  }
+  return false;
 }
 
 // Challenge 13
