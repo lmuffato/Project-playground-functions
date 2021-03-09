@@ -1,13 +1,14 @@
 // Desafio 10
 function techList(arrayIn, name) {
+  let arrayInFixed = arrayIn.sort();
   let exitArray = [];
   let obj = {};
   if (arrayIn.length === 0) {
     exitArray = 'Vazio!';
   } else {
-    for (let key in arrayIn) {
+    for (let key in arrayInFixed) {
       obj = {
-        tech: arrayIn[key],
+        tech: arrayInFixed[key],
         name: name
       };
       exitArray.push(obj);
@@ -15,7 +16,7 @@ function techList(arrayIn, name) {
   }
   return exitArray;
 }
-console.log(techList([], 'lucas'));
+console.log(techList(['javascript','rubi','unix','html'], 'lucas'));
 
 // Desafio 11
 function generatePhoneNumber() {
