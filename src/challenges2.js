@@ -33,7 +33,7 @@ function generatePhoneNumber(array) {
   }
   for (let key in array) {
     if (array[key] === array[key +=1]) {
-     let = repeatCounter += 1;
+     repeatCounter += 1;
       if (repeatCounter > 3) {
         return 'não é possível gerar um número de telefone com esses valores';
       }
@@ -51,19 +51,18 @@ function generatePhoneNumber(array) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < lineB + lineC || lineA > Math.abs(lineB - lineC)) {
+  if (lineA < (lineB + lineC) || lineA > Math.abs(lineB - lineC)) {
     return true;
   } 
-  if (lineB < lineA + lineC || lineB > Math.abs(lineA - lineC)) {
+  if (lineB < (lineA + lineC) || lineB > Math.abs(lineA - lineC)) {
       return true;
   }
-  if (lineC < lineA + lineB || lineC > Math.abs(lineA - lineB)) {
+  if (lineC < (lineA + lineB) || lineC > Math.abs(lineA - lineB)) {
     return true;
   } else {
     false;
   }
 }
-console.log(triangleCheck(10, 14, 8))
 
 // Desafio 13
 function hydrate() {
