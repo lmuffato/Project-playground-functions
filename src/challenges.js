@@ -66,13 +66,13 @@ function fizzBuzz(divisible) {
   let fizzOrBuzz = [];
   for (let currentNumber= 0; currentNumber < divisible.length; currentNumber += 1) {
     if (divisible[currentNumber] % 3 === 0 && divisible[currentNumber] % 5 === 0) {
-      fizzOrBuzz.push('fizzBuzz');
+      fizzOrBuzz[currentNumber] = 'fizzBuzz';
     } else if (divisible[currentNumber] % 3 === 0) {
-      fizzOrBuzz.push('fizz');
+      fizzOrBuzz[currentNumber] = 'fizz';
     } else if (divisible[currentNumber] % 5 === 0) {
-      fizzOrBuzz.push('buzz');
+      fizzOrBuzz[currentNumber] = 'buzz';
     } else {
-      fizzOrBuzz.push('bug!');
+      fizzOrBuzz[currentNumber] = 'bug!';
     }
   }
   return fizzOrBuzz;
