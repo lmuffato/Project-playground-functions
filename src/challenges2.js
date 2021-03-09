@@ -95,13 +95,14 @@ function triangleCheck(x,y,z) {
 // Desafio 13
 function hydrate(string) {
  let drinkWater=0;
+ let copo;
  for (let index = 0; index < string.length; index++) {
   let x = string[index];
   if(x==1||x==2||x==3||x==4||x==5||x==6||x==7||x>8){
     drinkWater+=parseInt(x)
   }
- }
- return drinkWater+" copos de água";
+ } if(drinkWater<2){copo=" copos de água"}else{copo=" copos de água"};
+ return drinkWater+copo;
 }
 module.exports = {
   generatePhoneNumber,
