@@ -1,14 +1,14 @@
 // Desafio 1
 function compareTrue(val1, val2) {
 
-  if ((val1 === true) && (val2 === true)) {
+  if (val1 && val2) {
     return true;
   } return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return console.log(((base * height) / 2));
+  return ((base * height) / 2);
 }
 
 // Desafio 3
@@ -20,7 +20,7 @@ function splitSentence(frase) {
   let letra = [];
   let armazenaPalavra = [];
 
-  for (let index=0; index < str.length; index += 1) {
+  for (let index = 0; index < str.length; index += 1) {
     if (str[index] !== ' ') {
       letra += str[index];
     } else {
@@ -28,7 +28,7 @@ function splitSentence(frase) {
       letra = [];
     }
   }
-  return (console.log(armazenaPalavra));
+  return armazenaPalavra;
 }
 
 // Desafio 4
@@ -37,16 +37,13 @@ function concatName(paramNomes) {
   let primeiroNome = '';
   let ultimoNome = '';
 
-  for (let index in paramNomes) {
-    nomes.push (paramNomes[index]);
+  for (let index = 0; index <= paramNomes.length; index += 1) {
+    nomes.push(paramNomes[index]);
   }
-
   primeiroNome = nomes[nomes.length - 1];
   ultimoNome = nomes[0];
-  
   let fullName = primeiroNome + ', ' + ultimoNome;
-  
-  return console.log(fullName);
+  return fullName;
 }
 
 // Desafio 5
