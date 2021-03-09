@@ -27,7 +27,8 @@ console.log(splitSentence('vamo que vamo'));
 console.log(splitSentence('foguete'));
 // Desafio 4
 function concatName(arrayString) {
-  let names = arrayString[arrayString.length - 1] +' , ' + arrayString[0];
+  let names = '';
+  names = arrayString[arrayString.length - 1] +' , ' + arrayString[0];
   return names;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -48,7 +49,7 @@ function highestCount(arrayNumbers) {
   for (let item of arrayNumbers) { 
   if (item > maiorNumero) {
     maiorNumero = item; 
-      repete = 1 ;
+      repete = 1;
   }else if (item === maiorNumero) {
       repete = repete + 1;
   }
@@ -57,8 +58,8 @@ function highestCount(arrayNumbers) {
 }
 console.log(highestCount([3, 1, 2, 3, 9, 5, 9]));
 // Desafio 7
-// function catAndMouse() { 
-// }
+function catAndMouse() { 
+}
 // Desafio 8
 function fizzBuzz(arrayNumber) {
   let returnArray = [];
@@ -90,15 +91,15 @@ let returndecode = string.replace(/1/g,'a').replace(/2/g, 'e').replace(/3/g, 'i'
       return returndecode;
     }
 console.log(decode(code));
-module.exports = {
-  calcArea,
-  catAndMouse,
-  compareTrue,
-  concatName,
-  decode,
-  encode,
-  fizzBuzz,
-  footballPoints,
-  highestCount,
-  splitSentence,
-};
+// module.exports = {
+//   calcArea,
+//   catAndMouse,
+//   compareTrue,
+//   concatName,
+//   decode,
+//   encode,
+//   fizzBuzz,
+//   footballPoints,
+//   highestCount,
+//   splitSentence,
+// };
