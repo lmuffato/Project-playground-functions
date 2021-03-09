@@ -44,22 +44,21 @@ function generatePhoneNumber(arrNum) {
 ${arrNum[4]}${arrNum[5]}${arrNum[6]}-${arrNum[7]}${arrNum[8]}\
 ${arrNum[9]}${arrNum[10]}`;
 }
-console.log(generatePhoneNumber([5, 2, 8, 1, 5, 3, 7, 2, 8, 9, 0]));
 
 // Desafio 12
-function lineConditions(line1, line2, line3) {
-  return line1 < (line2 + line3) && line1 > Math.abs(line2 - line3);
-}
-
 function triangleCheck(lineA, lineB, lineC) {
-  let checklineA = lineConditions(lineA, lineB, lineC);
-  let checklineB = lineConditions(lineB, lineA, lineC);
-  let checklineC = lineConditions(lineC, lineA, lineB);
-  if (checklineA && checklineB && checklineC) {
+  let checkline1 = false;
+  let checkline2 = false;
+  if (lineA < (lineB + lineC)) {
+    checkline1 = true;
+  } if (lineA > Math.abs(lineB - lineC)) {
+    checkline2 = true;
+  } if (checkline1 && checkline2) {
     return true;
   }
   return false;
 }
+console.log(triangleCheck(1, 4, 14));
 
 // Desafio 13
 function hydrate() {
