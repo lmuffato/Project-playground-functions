@@ -111,7 +111,7 @@ function encode(stringOfLetters) {
   let vogais = ['a', 'e', 'i', 'o', 'u'];
   let numbers = [1, 2, 3, 4, 5];
   for (let x = 0; x < letters.length; x += 1) {
-    for (let y = 0; y < letters.length; y +=1) {
+    for (let y = 0; y < letters.length; y += 1) {
       if (vogais[y] === letters[x]) {
         letters[x] = numbers[y];
       }
