@@ -51,8 +51,9 @@ function highestCount(values) {
 
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
-  let distance1 = parseInt(cat1) - parseInt(mouse);
-  let distance2 = parseInt(cat2) - parseInt(mouse);
+  let distance1 = Math.abs(cat1 - mouse);
+  let distance2 = Math.abs(cat2 - mouse);
+// Usado como referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
   if (distance1 < distance2) {
     return 'cat1';
   } if (distance2 < distance1) {
