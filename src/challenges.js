@@ -56,12 +56,11 @@ console.log(footballPoints(0, 0));
 function highestCount(set) {
   // seu código aqui
   let higherNumber = Math.max(...set);
-  let quantity = 0
+  let quantity = 0;
 
-  for (let index = 0; index < set.length; index++) {
-
+  for (let index = 0; index < set.length; index +=) {
     if (higherNumber === set[index]) {
-      quantity++
+      quantity+=
 
     }
   }
