@@ -56,15 +56,21 @@ function triangleCheck(lineA, lineB, lineC) {
   let lineCCheck = (lineC < (lineA + lineB) && lineC > Math.abs(lineA - lineB));
   if (lineACheck && lineBCheck && lineCCheck) {
     return true;
-  }else {
+  } else {
     return false;
   }
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(array) {
+  let drinkCount = array.match(/\d+/g).map(Number); // Código retirado de https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
+  let drinkTotal = 0;
+  for (let key in drinkCount) {
+    drinkTotal += drinkCount[key];
+  }
+  return drinkTotal + " copos de água"
 }
+
 
 module.exports = {
   generatePhoneNumber,
