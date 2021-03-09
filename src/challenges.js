@@ -137,6 +137,9 @@ function decode(trocaNumerosPorLetras) {
   return trocaNumerosPorLetras;
 }
 
+// Não foi dessa vez que copnsegui 100%. Obtive apenas 80%.
+// Fico satisfeito por enquanto. Obrigado pelo desafio equipe Trybe.
+
 module.exports = {
   calcArea,
   catAndMouse,
