@@ -11,13 +11,10 @@ function techList(array, name) {
     );
   }
   if (array.length === 0) {
-        return 'Vazio!'
-      }
+    return 'Vazio!'
+  }
   return techlist;
 }
-
-console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'],
-'Lucas'));
 
 // Desafio 11 - 
 function generatePhoneNumber(array) {
@@ -32,8 +29,8 @@ function generatePhoneNumber(array) {
     }
   }
   for (let key in array) {
-    if (array[key] === array[key +=1]) {
-     repeatCounter += 1;
+    if (array[key] === array[key += 1]) {
+      repeatCounter += 1;
       if (repeatCounter > 3) {
         return 'não é possível gerar um número de telefone com esses valores';
       }
@@ -56,10 +53,9 @@ function triangleCheck(lineA, lineB, lineC) {
   let lineCCheck = (lineC < (lineA + lineB) && lineC > Math.abs(lineA - lineB));
   if (lineACheck && lineBCheck && lineCCheck) {
     return true;
-  } else {
-    return false;
-  }
+  } return false;
 }
+
 
 // Desafio 13
 function hydrate(array) {
@@ -73,7 +69,6 @@ function hydrate(array) {
   }
   return drinkTotal + ' copos de água'
 }
-console.log(hydrate("1 cachaça, 8 cervejas"));
 
 module.exports = {
   generatePhoneNumber,
