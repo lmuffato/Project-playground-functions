@@ -7,8 +7,8 @@ function techList(array, name) {
   for(let key in arrayOrdened) { 
     arrayObjects[key] = {
       tech: arrayOrdened[key],
-      name: name,
-    };
+      name: name;
+    }
   }
   if(array[0] !== undefined || array[0] !== null) {
     return arrayObjects;
