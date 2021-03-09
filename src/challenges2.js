@@ -19,7 +19,7 @@ function techList(arrayTechs, name) {
 }
 
 // Desafio 11
-function phoneNumberOutput (arrayPhone) {
+function phoneNumberOutput(arrayPhone) {
   let firstSector = arrayPhone[0].toString() + arrayPhone[1].toString();
   let secondSector = '';
   let thirdSector = '';
@@ -65,14 +65,14 @@ function biggerThanNine(numberPhone) {
 }
 
 function generatePhoneNumber(arrayPhone) {
-  if (arrayPhone.length != 11) {
+  if (arrayPhone.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
 
   if (biggerThanNine(arrayPhone) || lessThanZero(arrayPhone) === true) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  
+
   for (let i = 0; i < arrayPhone.length; i += 1) {
     if (countRepeat(arrayPhone, arrayPhone[i]) >= 3) {
       return 'não é possível gerar um número de telefone com esses valores';
@@ -80,6 +80,8 @@ function generatePhoneNumber(arrayPhone) {
   }
   return phoneNumberOutput(arrayPhone);
 }
+
+console.log(gs([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 0, 9]));
 
 // Desafio 12
 function triangleCheck() {
