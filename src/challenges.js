@@ -50,7 +50,7 @@ function highestCount(values) {
 }
 
 // Desafio 7
-function catAndMouse(cat1, cat2, mouse) {
+function catAndMouse(mouse, cat1, cat2) {
   let distance1 = Math.abs(cat1 - mouse);
   let distance2 = Math.abs(cat2 - mouse);
 // Usado como referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
