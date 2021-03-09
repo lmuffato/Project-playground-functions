@@ -1,10 +1,9 @@
 // Desafio 1
 function compareTrue(val1, val2) {
 
-   if ((val1 === true) && (val2 === true)) {
+  if ((val1 === true) && (val2 === true)) {
     return true;
-  } else {
-    return false;
+  } return false;
 }
 
 // Desafio 2
@@ -21,13 +20,13 @@ function splitSentence(frase) {
   let letra = [];
   let armazenaPalavra = [];
 
-  for (let index=0; index<str.length; index++){
-    if (str[index] != ' '){
+  for (let index=0; index < str.length; index += 1) {
+    if (str[index] !== ' ') {
       letra += str[index];
     } else {
       armazenaPalavra.push(letra);
       letra = [];
-    }    
+    }
   }
   return (console.log(armazenaPalavra));
 }
@@ -178,5 +177,3 @@ module.exports = {
   highestCount,
   splitSentence,
 };
-
-
