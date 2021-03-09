@@ -97,8 +97,19 @@ function generatePhoneNumber(phoneNumbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // Desafio 12
+function checkLinesSize(lineA, lineB, lineC) {
+  return lineA < (lineB + lineC) && lineB < (lineA + lineC) && lineC < (lineA + lineB);
+}
+
+function checkLinesSizeAbsolut(lineA, lineB, lineC) {
+  let lineAValidate = lineA > Math.abs(lineB - lineC);
+  let lineBValidate = lineB < Math.abs((lineA + lineC));
+  let lineCValidate = lineC < Math.abs(lineA + lineB);
+  return lineAValidate && lineBValidate && lineCValidate;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  return checkLinesSize(lineA, lineB, lineC) && checkLinesSizeAbsolut(lineA, lineB, lineC);
 }
 
 // Desafio 13
