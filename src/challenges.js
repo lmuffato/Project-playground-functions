@@ -20,9 +20,9 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let swap = array[array.length -1];
-  swap =+ ', ';
-  swap =+ array[0];
+  let swap = array[array.length - 1];
+  swap = + ', ';
+  swap = + array[0];
   return swap;
 }
 
@@ -52,7 +52,6 @@ function highestCount(array) {
   }
   return repeat;
 }
-console.log(highestCount([9, 9, 8, 8, 9, 7]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -70,8 +69,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  
+function fizzBuzz(arrayOfNumbers) {
+  let array = [];
+  for (let i = 0; i < arrayOfNumbers.length; i+=1) {
+    if (arrayOfNumbers[i] % 3 === 0 && arrayOfNumbers[i] % 5 === 0) {
+      array.push('fizzBuzz');
+    } else if (arrayOfNumbers[i] % 3 === 0) {
+      array.push('fizz');
+    } else if (arrayOfNumbers % 5 === 0) {
+      array.push('buzz');
+    } else {
+      array.push('bug');
+    }
+  }
+  return array;
 }
 
 // Desafio 9
