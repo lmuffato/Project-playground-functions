@@ -69,29 +69,73 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function divisionByThree (number) {
+  if (number % 3 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function divisionByFive (number) {
+  if (number % 5 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 function fizzBuzz(arrayOfNumbers) {
   let array = [];
   for (let i in arrayOfNumbers) {
-    if (arrayOfNumbers[i] % 3 === 0 && arrayOfNumbers[i] % 5 === 0) {
+    if (divisionByThree(arrayOfNumbers[i]) && divisionByFive(arrayOfNumbers[i])) {
       array.push('fizzBuzz');
-    } else if (arrayOfNumbers[i] % 3 === 0) {
+    } else if (divisionByThree(arrayOfNumbers[i])) {
       array.push('fizz');
-    } else if (arrayOfNumbers[i] % 5 === 0) {
+    } else if (divisionByFive(arrayOfNumbers[i])) {
       array.push('buzz');
     } else {
-      array.push('bug');
+      array.push('bug!');
     }
   }
   return array;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(stringoOfLetters) {
+  let letters = stringOfPalavras.split('');
+  let vogais = ['a', 'e', 'i', 'o', 'u'];
+  let numbers = [1, 2, 3, 4, 5];
+  for (let x in letters) {
+    for (let y in vogais) {
+      if (vogais[y] === letters[x]) {
+        letters[x] = numbers[y]
+      }
+    }
+  }
+  return letters.join('');
 }
-function decode() {
-  // seu código aqui
+
+function decode(stringOfNumbers) {
+  let numbersAndLetters = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u'
+  };
+  let newNumbers = '';
+  for (let caractere in stringOfNumbers) {
+    if (typeof numbersAndLetters[stringOfNumbers[caractere]] == 'undefined') {
+      newNumbers += stringOfNumbers[caractere];
+    } else {
+      newNumbers += numbersAndLetters[stringOfNumbers[caractere]];
+    }
+  }
+  return newNumbers;
 }
+
+console.log(decode("h3 thr2r2!"));
 
 module.exports = {
   calcArea,
