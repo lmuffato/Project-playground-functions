@@ -105,20 +105,51 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
 
-// Desafio 9 - PENDENTE!
-function encode(string) {
-  string = string.replace('a', '1');
-  string = string.replace('e', '2');
-  string = string.replace('i', '3');
-  string = string.replace('o', '4');
-  string = string.replace('u', '5');
-  return string;
+// Desafio 9
+// Para realizar este exercício, contei com a ajuda e consulta ao código do aluno Lucas Godói - Turma 10 - Tribo A.
+function encode(str) {
+  let string = str.split('');
+  let consoantes = ['a', 'e', 'i', 'o', 'u'];
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === consoantes[0]) {
+      string[index] = '1';
+    } else if (string[index] === consoantes[1]) {
+      string[index] = '2';
+    } else if (string[index] === consoantes[2]) {
+      string[index] = '3';
+    } else if (string[index] === consoantes[3]) {
+      string[index] = '4';
+    } else if (string[index] === consoantes[4]) {
+      string[index] = '5';
+    }
+  }
+  let concatenacao = string.join('');
+  return concatenacao;
 }
+
 console.log(encode('hi there!'));
 
-function decode() {
-  // seu código aqui
+function decode(str) {
+  let string = str.split('');
+  let numeros = ['1', '2', '3', '4', '5',];
+  for (let index = 0; index < string.length; index += 1) {
+    if (string[index] === numeros [0]) {
+      string[index] = 'a';
+    } else if (string[index] === numeros[1]) {
+      string[index] = 'e';
+    } else if (string[index] === numeros[2]) {
+      string[index] = 'i';
+    } else if (string[index] === numeros[3]) {
+      string[index] = 'o';
+    } else if (string[index] === numeros[4]) {
+      string[index] = 'u';
+    }
+  }
+  let concatenacao = string.join('');
+  return concatenacao;
 }
+
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
