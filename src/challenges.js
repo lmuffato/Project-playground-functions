@@ -16,7 +16,8 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(array) {
-  // seu código aqui
+  // seu código aqui 
+  // desafio 3 realizado com ajuda do https://developer.mozilla.org para o entendimento da função .split
   return array.split(" ");
 }
 
@@ -61,6 +62,7 @@ let contador = 0;
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2,) {
   // seu código aqui
+  //desafio 7 realizado com consulta ao material do https://developer.mozilla.org para entender o funcionamento da função Math.abs , e também bastante ajuda dos plantões.
  
  let cat1move = Math.abs(cat1 - mouse);
  let cat2move = Math.abs(cat2 - mouse);
@@ -101,7 +103,9 @@ function fizzBuzz(arrayNumbers) {
 // Desafio 9
 function encode(codify) {
   // seu código aqui
-let array = codify.split('');
+  // Desafio 9 realizado com ajuda do https://developer.mozilla.org para o entendimento das funções .join e .split 
+
+  let array = codify.split('');
   
   for (let index = 1; index < codify.length; index += 1){
     if (codify[index] === 'a'){
