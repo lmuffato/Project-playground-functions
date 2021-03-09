@@ -63,7 +63,7 @@ function highestCount(array) {
     }
   }
   return maiorRepete;
-  }
+}
 
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
@@ -131,9 +131,9 @@ console.log(encode('hi there!'));
 
 function decode(str) {
   let string = str.split('');
-  let numeros = ['1', '2', '3', '4', '5',];
+  let numeros = ['1', '2', '3', '4', '5'];
   for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === numeros [0]) {
+    if (string[index] === numeros[0]) {
       string[index] = 'a';
     } else if (string[index] === numeros[1]) {
       string[index] = 'e';
