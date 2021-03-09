@@ -25,7 +25,7 @@ function splitSentence(frase) {
       letra += str[index];
     } else {
       armazenaPalavra.push(letra);
-      letra = [];
+      letra = '';
     }
   }
   return armazenaPalavra;
@@ -49,9 +49,9 @@ function concatName(paramNomes) {
 // Desafio 5
 function footballPoints(wins, ties) {
   let vit = wins * 3;
-  let emp = ties * 1;
+  let emp = ties;
   let sum = vit + emp;
-  return (console.log(sum));
+  return sum;
 }
 
 // Desafio 6
@@ -72,17 +72,14 @@ function highestCount(numeros) {
       cont += 1;
     }
   }
-  return console.log(cont);
+  return cont;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-
     let dist1 = cat1 - mouse;
     let dist2 = cat2 - mouse;
-
     if ((mouse > cat1) || (mouse > cat2)) {
-
       if (dist1 > dist2) {
         console.log ('cat1');
       } else if (dist1 < dist2) {
@@ -118,7 +115,7 @@ function fizzBuzz(fizzBuzzParam) {
       symbols.push('bug!');
     }
   }
-  return console.log(symbols);
+  return symbols;
 }
 
 // Desafio 9
@@ -139,7 +136,7 @@ function encode(frase) {
     } else {
       newPhrase += encodingPhrase[index];
     }
-  }  return console.log(newPhrase);
+  }  return newPhrase;
 }
 
 function decode(frase) {
@@ -159,7 +156,7 @@ function decode(frase) {
     } else {
       newPhrase += encodingPhrase[index];
     }
-  }  return console.log(newPhrase);
+  }  return newPhrase;
 }
 
 module.exports = {
