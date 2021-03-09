@@ -1,11 +1,11 @@
 // Desafio 10
 function techList(arrayTech, name) {
-  let techObject = {};
-  for (let index = 0; index < arrayTech.length; index += 1) {
-    techObject['tech'] = arrayTech[index];
-    techObject['name'] = name;
+  let sortTech = arrayTech.sort();
+  let newArray = [];
+  for (let index = 0; index < sortTech.length; index += 1) {
+    newArray.push({'tech': sortTech[index], 'name': name});
   }
-return techObject;
+return newArray; 
 }
 
 // Desafio 11
