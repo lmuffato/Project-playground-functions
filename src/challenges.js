@@ -59,6 +59,7 @@ function highestCount(arrayNumbers) {
 console.log(highestCount([3, 1, 2, 3, 9, 5, 9]));
 // Desafio 7
 function catAndMouse() { 
+  // seu código aqui
 }
 // Desafio 8
 function fizzBuzz(arrayNumber) {
