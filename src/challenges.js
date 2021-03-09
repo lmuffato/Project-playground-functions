@@ -98,9 +98,20 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
+function decision(phrase){
+  let inputPhrase;
+  for (let key in phrase) {
+    if (phrase[key] == 1 || phrase[key] == 2 || phrase[key] == 3 || phrase[key] == 4 || phrase[key] == 5) {
+      inputPhrase = decode(phrase);
+      break;
+    }
+    inputPhrase = encode(phrase);
+    break;
+  }
+  return inputPhrase;
+}
+
 function encode(phrase) {
-  console.log("Works!");
-  console.log('decode');
   let inputPhrase = '';
   for (let key in phrase) {
     switch(phrase[key]) {
@@ -135,7 +146,6 @@ function encode(phrase) {
 }
 
 function decode(phrase) {
-  console.log('decode');
   let inputPhrase = '';
   for (let key in phrase) {
     switch(phrase[key]) {
@@ -169,6 +179,8 @@ function decode(phrase) {
   // seu código aqui
 }
 
+let names = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+
 console.log(compareTrue(true, false));
 console.log(calcArea(51, 1));
 console.log(splitSentence('go Trybe'));
@@ -177,7 +189,7 @@ console.log(footballPoints(14, 8));
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 console.log(catAndMouse(3, 9, 9));
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
-console.log(encode('hi there'));
+console.log(decision('hi there'));
 
 module.exports = {
   calcArea,
