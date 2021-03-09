@@ -70,6 +70,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function divisionByThree(number) {
+  let result;
   if (number % 3 === 0) {
     result = true;
   } else {
@@ -78,7 +79,8 @@ function divisionByThree(number) {
   return result;
 }
 
-function divisionByFive (number) {
+function divisionByFive(number) {
+  let result;
   if (number % 5 === 0) {
     result = true;
   } else {
@@ -108,8 +110,8 @@ function encode(stringOfLetters) {
   let letters = stringOfLetters.split('');
   let vogais = ['a', 'e', 'i', 'o', 'u'];
   let numbers = [1, 2, 3, 4, 5];
-  for (let x in letters) {
-    for (let y in vogais) {
+  for (let x = 0; x < letters.length; x += 1) {
+    for (let y = 0; y < letters.length; y +=1) {
       if (vogais[y] === letters[x]) {
         letters[x] = numbers[y];
       }
