@@ -6,8 +6,8 @@ function techList(paramTech, paramNome) {
   arrayTec.sort();
   let name = '';
   name = paramNome;
-  let novoArray = [];               
-  let objetoSeparado = {}
+  let novoArray = [];
+  let objetoSeparado = {};
   for (let index = 0; index < arrayTec.length; index += 1 ) {
     objetoSeparado = { tech: arrayTec[index], name: name}
     novoArray.push(objetoSeparado);
