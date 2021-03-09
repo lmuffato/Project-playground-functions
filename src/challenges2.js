@@ -34,7 +34,6 @@ function checkNumberRepeatAux(phoneNumbers, index) {
   for (let j = 0; j < index; j += 1) {
     if (phoneNumbers[index] === phoneNumbers[j]) {
       result += 1;
-      console.log(result);
     }
   }
   return result;
@@ -120,7 +119,7 @@ function hydrate(phrase) {
   for (let i = 0; i < result.length; i += 1) {
     countNumber += result[i];
   }
-  return (countNumber < 1) ? `${countNumber} copo de agua.` : `${countNumber} copos de agua.`;
+  return countNumber === 1 ? `${countNumber} copo de água.` : `${countNumber} copos de água.`;
 }
 
 module.exports = {
