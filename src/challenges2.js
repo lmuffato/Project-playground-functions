@@ -119,7 +119,7 @@ function hydrate(phrase) {
   for (let i = 0; i < result.length; i += 1) {
     countNumber += result[i];
   }
-  return countNumber === 1 ? `${countNumber} copo de água.` : `${countNumber} copos de água.`;
+  return countNumber === 1 ? `${countNumber} copo de água` : `${countNumber} copos de água`;
 }
 
 module.exports = {
