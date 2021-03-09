@@ -76,7 +76,7 @@ function fizzBuzz(sequenciaNumeros) {
 
 // Desafio 9
 function encode(trocaLetrasPorNumeros) {
-  for (index = 0; index < trocaLetrasPorNumeros.length; index += 1) {
+  for (let index = 0; index < trocaLetrasPorNumeros.length; index += 1) {
     switch (trocaLetrasPorNumeros) {
       case (trocaLetrasPorNumeros[index] === 'a'):
         trocaLetrasPorNumeros[index] = '1';
@@ -103,10 +103,11 @@ function encode(trocaLetrasPorNumeros) {
       break;
     }
   }
+  return trocaLetrasPorNumeros;
 }
 
 function decode(trocaNumerosPorLetras) {
-  for (index = 0; index < trocaNumerosPorLetras.length; index += 1) {
+  for (let index = 0; index < trocaNumerosPorLetras.length; index += 1) {
     switch (trocaNumerosPorLetras) {
       case (trocaNumerosPorLetras[index] === '1'):
         trocaNumerosPorLetras[index] = 'a';
@@ -133,6 +134,7 @@ function decode(trocaNumerosPorLetras) {
       break;
     }
   }
+  return trocaNumerosPorLetras;
 }
 
 module.exports = {
