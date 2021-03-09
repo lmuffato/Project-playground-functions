@@ -103,8 +103,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Challenge 13
-function hydrate() {
-  // seu código aqui
+// Regex reference:
+// https://stackoverflow.com/questions/30607419/return-only-numbers-from-string
+
+function hydrate(string) {
+  let numbersOfString = string.replace(/\D/g, '');
+  let sumOfStringNumbers = 0;
+
+  for (let index = 0; index < numbersOfString.length; index += 1) {
+    sumOfStringNumbers += parseInt(numbersOfString[index], 10);
+  }
+  if (sumOfStringNumbers > 1) {
+    return (`${sumOfStringNumbers} copos de água`);
+  }
+  return (`${sumOfStringNumbers} copo de água`);
 }
 
 module.exports = {
