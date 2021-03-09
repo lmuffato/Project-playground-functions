@@ -92,12 +92,17 @@ function triangleCheck(x,y,z) {
   }
   return result;
 }
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+ let drinkWater=0;
+ for (let index = 0; index < string.length; index++) {
+  let x = string[index];
+  if(x==1||x==2||x==3||x==4||x==5||x==6||x==7||x>8){
+    drinkWater+=parseInt(x)
+  }
+ }
+ return drinkWater+" copos de água";
 }
-
 module.exports = {
   generatePhoneNumber,
   techList,
