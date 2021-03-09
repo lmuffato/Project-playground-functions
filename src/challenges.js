@@ -46,6 +46,7 @@ function highestCount(array) {
 }
 
 // Desafio 7
+// Math.abs - obtido no material fornecido pelo readME.
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Dist = Math.abs(cat1 - mouse);
   let cat2Dist = Math.abs(cat2 - mouse);
@@ -79,6 +80,8 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9 - tentativa com replace
+// source https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll
+// Pesquisa sobre o método replaceAll para substituir elementos.
 function encode(string) {
   return string.replaceAll('a', 1).replaceAll('e', 2).replaceAll('i', 3).replaceAll('o', 4).replaceAll('u', 5);
 }

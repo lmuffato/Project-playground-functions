@@ -59,15 +59,18 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(array) {
-  let drinkCount = array.match(/\d+/g).map(Number); // Código retirado de https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
+  let drinkCount = array.match(/\d+/g).map(Number); // Source https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
+  // /\d - encontra um ou mais números;
+  // /g - pega todos os números encontrados;
+  // .map() - retorna uma nova array com o resultado dos comandos ateriores - função callback;
   let drinkTotal = 0;
   for (let key in drinkCount) {
     drinkTotal += drinkCount[key];
   }
   if (drinkTotal <= 1 && drinkTotal > 0) {
-    return drinkTotal + ' copo de água'
+    return drinkTotal + ' copo de água';
   }
-  return drinkTotal + ' copos de água'
+  return drinkTotal + ' copos de água';
 }
 
 module.exports = {
