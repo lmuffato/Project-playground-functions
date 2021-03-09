@@ -95,25 +95,28 @@ function catAndMouse(mouse, cat1, cat2) {
 // console.log(catAndMouse(0, -2, 2));
 
 // Desafio 8
-function fizzBuzz(numbers) {
-  let fizzBuzzArray = [];
-  for (let index = 0; index < numbers.length; index =+1) {
-    if ((numbers[index] / 3) === 0) {
-      fizzBuzzArray.push("fizz");
-    }
-    else if ((numbers[index] / 5) === 0) {
-      fizzBuzzArray.push("buzz");
-    }
-    else if (((numbers[index] / 3) === 0) && ((numbers[index] / 5) === 0)) {
-      fizzBuzzArray.push("fizzBuzz");
-    }
-    else {
-      fizzBuzzArray.push("bug!");
-    }
-  return fizzBuzzArray;
+function words(numbers) {
+  if ((numbers / 3) === 0) {
+    return 'fizz';
   }
+  if ((numbers / 5) === 0) {
+    return 'buzz';
+  }
+  if (((numbers / 3) === 0) && ((numbers / 5) === 0)) {
+    return 'fizzBuzz';
+  }
+  return 'bug!';
 }
 
+function fizzBuzz(arrayNum) {
+  let fizzBuzzArray = [];
+  for (let index = 0; index < arrayNum.length; index =+ 1) {
+    fizzBuzzArray.push(words(arrayNum[index]));
+  }
+  return fizzBuzzArray;
+}
+
+// console.log(fizzBuzzArray);
 // console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // let fizzBuzzArray = [];
