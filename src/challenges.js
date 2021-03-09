@@ -1,9 +1,6 @@
 // Desafio 1
 function compareTrue(number1, number2) {
-  if (number1 === true && number2 === true) {
-    return true;
-  }
-  return false;
+  return (number1 === true && number2 === true);
 }
 
 console.log(compareTrue(true, false));
