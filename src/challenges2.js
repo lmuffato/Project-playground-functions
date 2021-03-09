@@ -7,7 +7,7 @@ function techList(techName, name) {
     output = 'Vazio!';
   }
   for (let i = 0; i < orderTechName.length; i += 1) {
-    object[i] = {tech: orderTechName[i], name: name}
+    object[i] = { tech: orderTechName[i], name: name };
     output[i] = object[i];
   }
   return output;
