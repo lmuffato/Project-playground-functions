@@ -75,11 +75,64 @@ function fizzBuzz(sequenciaNumeros) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(trocaLetrasPorNumeros) {
+  for (index = 0; index < trocaLetrasPorNumeros.length; index += 1) {
+    switch (trocaLetrasPorNumeros) {
+      case (trocaLetrasPorNumeros[index] === 'a'):
+        trocaLetrasPorNumeros[index] = '1';
+      break;
+    }
+    switch (trocaLetrasPorNumeros) {
+      case (trocaLetrasPorNumeros[index] === 'e'):
+        trocaLetrasPorNumeros[index] = '2';
+      break;
+    } 
+    switch (trocaLetrasPorNumeros) {
+      case (trocaLetrasPorNumeros[index] === 'i'):
+        trocaLetrasPorNumeros[index] = '3';
+      break;
+    }
+    switch (trocaLetrasPorNumeros) {
+      case (trocaLetrasPorNumeros[index] === 'o'):
+        trocaLetrasPorNumeros[index] = '4';
+      break;
+    }
+    switch (trocaLetrasPorNumeros) {
+      case (trocaLetrasPorNumeros[index] === 'u'):
+        trocaLetrasPorNumeros[index] = '5';
+      break;
+    }
+  }
 }
-function decode() {
-  // seu código aqui
+
+function decode(trocaNumerosPorLetras) {
+  for (index = 0; index < trocaNumerosPorLetras.length; index += 1) {
+    switch (trocaNumerosPorLetras) {
+      case (trocaNumerosPorLetras[index] === '1'):
+        trocaNumerosPorLetras[index] = 'a';
+      break;
+    }
+    switch (trocaNumerosPorLetras) {
+      case (trocaNumerosPorLetras[index] === '2'):
+        trocaNumerosPorLetras[index] = 'e';
+      break;
+    } 
+    switch (trocaNumerosPorLetras) {
+      case (trocaNumerosPorLetras[index] === '3'):
+        trocaNumerosPorLetras[index] = 'i';
+      break;
+    }
+    switch (trocaNumerosPorLetras) {
+      case (trocaNumerosPorLetras[index] === '4'):
+        trocaNumerosPorLetras[index] = 'o';
+      break;
+    }
+    switch (trocaNumerosPorLetras) {
+      case (trocaNumerosPorLetras[index] === '5'):
+        trocaNumerosPorLetras[index] = 'u';
+      break;
+    }
+  }
 }
 
 module.exports = {
