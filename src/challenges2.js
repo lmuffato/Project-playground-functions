@@ -1,4 +1,6 @@
 // Desafio 10
+// Exercício feito com a ajuda do Rodrigo Queiroz
+// Link: https://trybecourse.slack.com/archives/D01QM9QK51S
 function techList(tecnologias, nome) {
   if (tecnologias.length === 0) {
     return 'Vazio!';
@@ -76,9 +78,25 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+// Exercício feito com ajuda do código da Beatriz Barbosa
+// Link: https://github.com/tryber/sd-010-a-project-playground-functions/blob/527f5796ac7ec7bad9b67ced582b84034acf2531/src/challenges2.js
+// d+ (d significa o intervalo de 0-9 e o +, significa que o \d deve repetir 1 ou mais vezes)
+// /g (realiza a pesquisa global, por todo a frase, sem o /g, a função match retorna apenas a primeira ocorrência);
+function hydrate(phrase) {
   // seu código aqui
-}
+  let phraseNumbers = phrase.match(/\d+/g);
+  let water = 0;
+
+  for (let index = 0; index < phraseNumbers.length; index += 1) {
+   let converting =  parseInt(phraseNumbers[index]);
+   water += converting;
+  }
+
+  if (water === 1) {
+    return console.log((`${water} ${'copo de água'}`));
+  } 
+    return console.log((`${water} ${'copos de água'}`));
+  }
 
 module.exports = {
   generatePhoneNumber,
