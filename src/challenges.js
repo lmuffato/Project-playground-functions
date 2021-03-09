@@ -95,14 +95,14 @@ function catAndMouse(mouse, cat1, cat2) {
 // console.log(catAndMouse(0, -2, 2));
 
 // Desafio 8
-function words(numbers) {
-  if ((numbers / 3) === 0) {
+function words(number) {
+  if (number % 3 === 0) {
     return 'fizz';
   }
-  if ((numbers / 5) === 0) {
+  if (number % 5 === 0) {
     return 'buzz';
   }
-  if (((numbers / 3) === 0) && ((numbers / 5) === 0)) {
+  if ((number % 3 === 0) && (number % 5 === 0)) {
     return 'fizzBuzz';
   }
   return 'bug!';
@@ -115,6 +115,7 @@ function fizzBuzz(arrayNum) {
   }
   return fizzBuzzArray;
 }
+
 // console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // console.log(fizzBuzz([7, 9]));
@@ -141,6 +142,9 @@ function decode(parameter2) {
   };
   return parameter2.replace(/[12345]/g, (m) => decodeObj[m]);
 }
+
+// console.log(encode('hi there!'));
+// console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
