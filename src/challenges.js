@@ -10,18 +10,9 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(phrase) {
-  let word = '';
-  let words = [];
-  for (let index = 0; index < phrase.length; index += 1) {
-    if (phrase[index] !== ' ') {
-      word += phrase[index];
-    }
-
-    if (index === (phrase.length - 1) || phrase[index] === ' ') {
-      words.push(word);
-      word = '';
-    }
-  }
+  /**  Source: https://docs.codeclimate.com/docs/cognitive-complexity#:~:text=Cognitive%20Complexity%20is%20a%20measure,be%20to%20read%20and%20understand.
+  *            https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split */
+  let words = phrase.split(' ');
   return words;
 }
 
