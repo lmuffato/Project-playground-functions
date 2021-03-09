@@ -68,9 +68,12 @@ function hydrate(array) {
   for (let key in drinkCount) {
     drinkTotal += drinkCount[key];
   }
-  return drinkTotal + " copos de água"
+  if (drinkTotal <= 1 && drinkTotal > 0) {
+    return drinkTotal + ' copo de água'
+  }
+  return drinkTotal + ' copos de água'
 }
-
+console.log(hydrate("1 cachaça, 8 cervejas"));
 
 module.exports = {
   generatePhoneNumber,
