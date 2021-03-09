@@ -10,57 +10,23 @@ function compareTrue(value1, value2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return base*height/2
+  let area = (base*height)/2
+  return area
 }
 
 // Desafio 3
 function splitSentence(frase) {
-  for (index = 0; index=length.frase; index ++){
-    let caracter = frase[index]
-    palavra = ''
-    spliter =[]
-      if (caracter != ' '){
-        palavra.append(caracter)
-      }
-      else if(caracter = ' '){
-        spliter.append(palavra)
-        palavra = ''
-      }
-  return(spliter)
-  }
+  return frase.split(' ')
 }
 
 // Desafio 4
 function concatName(lista) {
-  let caracter = ''
-  let primeiraPalavra = ''
-  let ultimaPalavra = ''
-  for (index = 0; index = length.lista; index++){
-    if (lista[index] != ' '){
-      primeiraPalavra.append(lista[index])
-    }
-    else{
-      break
-    }
-  }
-  for (index = lengh.lista - 1; index = 0; index -=1){
-    if (lista[index] != ' '){
-      ultimaPalavra.append(lista[index])
-    }
-    else{
-      break
-    }
-  }
-let listaRetorno =[]
-listaRetorno.append(primeiraPalavra)
-listaRetorno.append(ultimaPalavra)
-return(listaRetorno)
+  return (lista[lista.length -1] + " " + lista[0])
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontos = wins*3 + ties
-  return pontos
+  return wins*3 + ties
 }
 
 // Desafio 6
@@ -68,30 +34,30 @@ function highestCount(numeros) {
   let contador = 0
   let numero = 0
   let maiorContador = 0
-  for (index = 0; index < length.numeros; index ++){
-    numero = parseInt(numeros[index])
-    for (secondIndex = 0; secondIndex < length.numeros; secondIndex ++){
-      if (numero == numeros[1]){
-        contador++
-      }
-    if (maiorContador < contador){
-      maiorContador = contador
-    } 
+  let numeroMaximo = 0;
+  for (let valorMaximo in numeros) {
+    if (numeros[valorMaximo] > numeroMaximo) {
+      numeroMaximo = numeros[valorMaximo];
     }
-
   }
-return(maiorContador)
+  let repeticoes = 0;
+  for (let repetido in numeros) {
+    if (numeros[repetido] === numeroMaximo) {
+      repeticoes += 1;
+    }
+  }
+  return repeticoes;
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distance1 = mouse - cat1
-  let distance2 = mouse - cat2
+  let distance1 = Math.abs(mouse - cat1);
+  let distance2 = Math.abs(mouse - cat2);
   if (distance1 > distance2){
-    return(cat1)
+    return("cat1")
   }
   else if (distance2 > distance1){
-    return(cat2)
+    return("cat2")
   }
   else if (distance1 == distance2){
     return("os gatos trombam e o rato foge")
@@ -100,72 +66,34 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numeros) {
-  for (index = 0; index < length.numeros; index++){
+let texto = []
+  for (index = 0; index < numeros.length; index++){
     if (numeros[index] % 3 == 0 && numeros[index] % 5 == 0){
-      console.log('fizzBuzz')
+      texto.push('fizzBuzz')
     }
     if (numeros[index] % 3 == 0 && numeros[index] % 5 != 0){
-      console.log('fizz')
+      texto.push('fizz')
     }
-    else if (numeros[index] % 3 == 0 && numeros[index] % 5 == 0){
-      console.log('buzz')
+    else if (numeros[index] % 3 != 0 && numeros[index] % 5 == 0){
+      texto.push('buzz')
     }
-    else{
-      console.log('bug!')
+    else if (numeros[index] % 3 != 0 && numeros[index] % 5 != 0){
+      texto.push('bug!')
     }
-
   }
+return texto
 }
 
 // Desafio 9
-function encode(fraseNormal) {
-  fraseEncriptada = ''
-  for (index = 0; index <length.fraseNormal; index++){
-    if (fraseNormal[index] == 'a'){
-    fraseEncriptada.append('1')
-    }
-    else if (fraseNormal[index] == 'e'){
-      fraseEncriptada.append('2')
-    }
-    else if (fraseNormal[index] == 'i'){
-      fraseEncriptada.append('3')
-    }
-    else if (fraseNormal[index] == 'o'){
-      fraseEncriptada.append('4')
-    }
-    else if (fraseNormal[index] == 'u'){
-      fraseEncriptada.append('5')
-    }
-    else{
-      fraseEncriptada.append(fraseNormal[index])
-    }
-  }
-return(fraseEncriptada)
+function encode(frase) {
+  frase = frase.replace(/a/g, 1).replace(/e/g, 2).replace(/i/g, 3).replace(/o/g, 4).replace(/u/g, 5);
+  return frase;
 }
-function decode(fraseEncriptada) {
-  fraseNormal = ''
-  for (index = 0; index <length.fraseEncriptada; index++){
-    if (fraseEncriptada[index] == '1'){
-      fraseNormal.append('a')
-    }
-    else if (fraseEncriptada[index] == '2'){
-      fraseNormal.append('e')
-    }
-    else if (fraseEncriptada[index] == '3'){
-      fraseNormal.append('i')
-    }
-    else if (fraseEncriptada[index] == '4'){
-      fraseNormal.append('o')
-    }
-    else if (fraseEncriptada[index] == '5'){
-      fraseNormal.append('u')
-    }
-    else{
-      fraseNormal.append(fraseEncriptada[index])
-    }
-  }
-return(fraseNormal)
+function decode(frase) {
+  frase = frase.replace(/1/g, 'a').replace(/2/g, 'e').replace(/3/g, 'i').replace(/4/g, 'o').replace(/5/g, 'u');
+  return frase;
 }
+// funções consertadas com ajuda da minha prima programadora
 
 module.exports = {
   calcArea,
