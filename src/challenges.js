@@ -81,6 +81,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+/** Source: https://eslint.org/docs/rules/complexity */
 function fizzBuzzResult(number) {
   let result = '';
   switch (true) {
@@ -110,54 +111,24 @@ function fizzBuzz(numbersArray) {
   return fizzBuzzArray;
 }
 // Desafio 9
-function findVowel(char) {
-  switch (char) {
-  case 'a':
-    return '1';
-  case 'e':
-    return '2';
-  case 'i':
-    return '3';
-  case 'o':
-    return '4';
-  case 'u':
-    return '5';
-  default:
-    return char;
-  }
-}
-
-function findNumber(char) {
-  switch (char) {
-  case '1':
-    return 'a';
-  case '2':
-    return 'e';
-  case '3':
-    return 'i';
-  case '4':
-    return 'o';
-  case '5':
-    return 'u';
-  default:
-    return char;
-  }
-}
-
 function encode(phrase) {
   let encodedPhrase = phrase;
+  let secretCode = ['a', 'e', 'i', 'o', 'u'];
   for (let index = 0; index < encodedPhrase.length; index += 1) {
   /** Source: https://www.w3schools.com/js/js_string_methods.asp */
-    encodedPhrase = encodedPhrase.replace(encodedPhrase[index], findVowel(encodedPhrase[index]));
+    encodedPhrase = encodedPhrase.replace(secretCode[index], (index + 1))
+      .replace(secretCode[index], (index + 1));
   }
   return encodedPhrase;
 }
 
 function decode(phrase) {
   let encodedPhrase = phrase;
+  let secretCode = ['a', 'e', 'i', 'o', 'u'];
   for (let index = 0; index < encodedPhrase.length; index += 1) {
   /** Source: https://www.w3schools.com/js/js_string_methods.asp */
-    encodedPhrase = encodedPhrase.replace(encodedPhrase[index], findNumber(encodedPhrase[index]));
+    encodedPhrase = encodedPhrase.replace((index + 1), secretCode[index])
+      .replace((index + 1), secretCode[index]);
   }
   return encodedPhrase;
 }
