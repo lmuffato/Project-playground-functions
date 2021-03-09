@@ -33,9 +33,9 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numbers) {
   let count = 0
-  let highestNumber = Math.max(numbers);
+  let highestNumber = Math.max(...numbers);
   for(let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] = highestNumber) {
+    if (numbers[index] === highestNumber) {
       count += 1
     }
   }
@@ -72,15 +72,26 @@ function fizzBuzz(numberArray) {
 
 // Desafio 9
 function encode(encodeString) {
-  encodeString.split('')
-  "a" == 1
-  "e" == 2
-  "i" == 3
-  "o" == 4
-  "u" == 5
-  encodeString.join('')
-  return encodeString
+  let splitedString = encodeString.split('')
+ for (let index = 0; index < splitedString.length; index += 1) {
+   if (splitedString[index] === 'a') {
+     'a' = 1
+   } if else (splitedString[index] === 'e'); {
+     'e' = 2
+   } if else (splitedString[index] === 'i'); {
+     'i' = 2
+   } if else (splitedString[index] === 'o'); {
+     'o' = 2
+   } else (splitedString[index] === 'u'); {
+     'u' = 2
+   }
+  }
+   splitedString.join('')
+   return splitedString
 }
+ // return encodeString
+//}
+encode('batata')
   
 
 function decode(decodeString) {}
@@ -97,7 +108,7 @@ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 console.log(footballPoints(14, 8));
 
-console.log(highestCount(1, 2, 3, 4));
+console.log(highestCount([1, 4, 4, 4]));
 
 console.log(catAndMouse(9, 1, 10));
 
@@ -105,6 +116,7 @@ console.log(fizzBuzz([1, 6, 9]));
 
 console.log(encode('Eicke'))
 
+console.log()
 
 module.exports = {
   calcArea,
