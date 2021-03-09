@@ -85,20 +85,19 @@ function returnObjectReplace() {
     e: '2',
     i: '3',
     o: '4',
-    u: '5'
+    u: '5',
   };
   return codeReplace;
 }
 function encode(string) {
   let codeReplace = returnObjectReplace();
-  let encodeStringReplace = string;
+  let encodeString = string;
   for (let key in codeReplace) {
     let encodeRegexReplace = `${key}`;
-    encodeStringReplace = encodeStringReplace.replace(RegExp(encodeRegexReplace, 'g'), codeReplace[key]);
+    encodeString = encodeString.replace(RegExp(encodeRegexReplace, 'g'), codeReplace[key]);
   }
-  return encodeStringReplace; 
+  return encodeString;
 }
-console.log(encode("Hi, hello!"));
 
 function decode(string) {
   let codeReplace = returnObjectReplace();
@@ -109,7 +108,6 @@ function decode(string) {
   }
   return decodeStringReplace;
 }
-console.log(decode("H3, h2ll4!"))
 
 module.exports = {
   calcArea,
