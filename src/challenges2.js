@@ -15,12 +15,30 @@ function techList(tecnologias, name) {
     return listTech;
   }
 }
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"))
+// Lucas Pedroso que me avisou do .sort() *-* créditos a ele
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(numeros){
+  let numero = '('
+  if (numeros.length != 11){
+    return ("Array com tamanho incorreto.")
+  }
+  else{
+    for (index = 0; index < 2; index++){
+      numero += numeros[index]
+    }
+    numero += ') '
+    for (index = 2; index < 7; index++){
+      numero += numeros[index]
+    }
+    numero += '-'
+    for (index = 7; index < 11; index ++){
+      numero += numeros[index]
+    }
+    return numero
+  }
 }
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 
 // Desafio 12
 function triangleCheck() {
