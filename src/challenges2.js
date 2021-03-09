@@ -1,20 +1,24 @@
 // Desafio 10
 function techList(techArray, name) {
-  techArray.sort()
-  let techName = {
-    tech: 'tech: ',
-    name: 'name: ' + name
+  techArray.sort();
+  
+  let techName = {};
+  let listTechName = [];
+  
+  if (techArray.length === 0) {
+    techName = 'Vazio!';
+    return techName;
   }
-  for (let index = 0; index < 2; index += 1){
-    if (techArray[index] === ' ') {
-      techName = 'Vazio!';
-    } else {
-      techName.tech = 'tech: ' + techArrayOrden[index];
-    }
-  }
-}  
 
-console.log(techList(['js', 'css'], 'luiz'));
+  for (let index = 0; index < techArray.length; index += 1){
+    techName = {
+      tech: techArray[index],
+      name: name
+    }
+    listTechName.push(techName);
+  }
+  return listTechName;
+}  
 
 // Desafio 11
 function generatePhoneNumber() {

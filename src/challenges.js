@@ -53,8 +53,8 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let firstCat = math.abs(cat1 - mouse);
-  let secondCat = math.abs(cat2 - mouse);
+  let firstCat = Math.abs(cat1 - mouse);
+  let secondCat = Math.abs(cat2 - mouse);
   let phrases = ['cat1', 'cat2', 'os gatos trombam e o rato foge'];
   if (firstCat < secondCat) {
     return phrases[0];
