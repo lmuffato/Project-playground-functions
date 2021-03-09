@@ -1,7 +1,30 @@
 // Desafio 10
-function techList() {
+function techList(tech, name) {
   // seu código aqui
+  let result = [];
+
+    for(let index = 0 ; index < tech.length; index += 1){
+        result.push({tech: tech[index], name: name})
+    }
+
+    result.sort(compare);
+    return result;
+
 }
+
+function compare(a,b){
+    if(a.tech < b.tech){
+        return -1;
+    }
+    if(a.tech > b.tech){
+        return 1;
+    }
+    return 0;
+}
+
+
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"],"Lucas"));
+
 
 // Desafio 11
 function generatePhoneNumber() {
