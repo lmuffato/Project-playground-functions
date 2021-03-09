@@ -27,10 +27,7 @@ console.log(splitSentence('vamo que vamo'));
 console.log(splitSentence('foguete'));
 // Desafio 4
 function concatName(arrayString) {
-  let names = '';
-  
-  names = arrayString[arrayString.length - 1] +' , ' + arrayString[0];
-
+  let names = arrayString[arrayString.length - 1] +' , ' + arrayString[0];
   return names;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -60,10 +57,8 @@ function highestCount(arrayNumbers) {
 }
 console.log(highestCount([3, 1, 2, 3, 9, 5, 9]));
 // Desafio 7
-function catAndMouse(cat1, cat2, mouse) { 
-  if(cat2) {
-  }
-}
+// function catAndMouse() { 
+// }
 // Desafio 8
 function fizzBuzz(arrayNumber) {
   let returnArray = [];
