@@ -179,7 +179,7 @@ function decode(phrase) {
   // seu código aqui
 }
 
-let names = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+let names = ['foguete', 'não', 'tem', 'ré'];
 
 console.log(compareTrue(true, false));
 console.log(calcArea(51, 1));
