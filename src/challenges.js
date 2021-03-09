@@ -89,7 +89,7 @@ function fizzBuzz(fizzBuzzParam) {
     status.push = fizzBuzzParam[index];
   }
   let symbols = [];
-  for (let index in status){
+  for (let index in status) {
     if ((status[index] % 3 === 0) && (status[index] % 5 === 0)) {
       symbols.push('fizzBuzz');
     } else if (status[index] % 3 === 0) {
