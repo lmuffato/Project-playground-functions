@@ -96,7 +96,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numbers) {
-  return numbers.map((num) => {
+  return numbers.map(function(num) {
     let result = 'bug!';
     if (num % 3 === 0 && num % 5 === 0) {
       result = 'fizzBuzz';
