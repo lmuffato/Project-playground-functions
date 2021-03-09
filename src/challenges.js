@@ -64,7 +64,7 @@ function catAndMouse(cat1, cat2, mouse) {
 // Desafio 8
 function fizzBuzz(divisible) {
   let fizzOrBuzz = [];
-  for (let currentNumber= 0; currentNumber < divisible; currentNumber += 1) {
+  for (let currentNumber= 0; currentNumber < divisible.length; currentNumber += 1) {
     if (divisible[currentNumber] % 3 === 0 && divisible[currentNumber] % 5 === 0) {
       fizzOrBuzz.push('fizzBuzz');
     } else if (divisible[currentNumber] % 3 === 0) {
