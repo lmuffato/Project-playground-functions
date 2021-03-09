@@ -64,13 +64,27 @@ let distanceCat2 = Math.abs(mouse - cat2);
 
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(fizzArray) {
+  const result = [];
+  for (let index = 0; index < fizzArray.length; index += 1) {
+    if (fizzArray[index] % 3 !== 0 && fizzArray[index] % 5 !== 0) {
+      result.push('bug!');
+    } else if (fizzArray[index] % 3 === 0 && fizzArray[index] % 5 === 0) {
+      result.push('fizzBuzz');
+    } else if (fizzArray[index] % 3 === 0) {
+      result.push('fizz');
+    } else if (fizzArray[index] % 5 === 0) {
+      result.push('buzz');
+    }
+  }
+  return result;
 }
+console.log(fizzBuzz([9, 25]));
+
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+
 }
 function decode() {
   // seu código aqui
