@@ -1,6 +1,4 @@
 // Desafio 10
-/* https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
-Pelo site "aprendi" a dar sort em um array com objetos */
 function techList(array, name) {
   let objectArray = [];
   if (array.length === 0) {
@@ -14,14 +12,6 @@ function techList(array, name) {
   }
   return objectArray;
 }
-/* let reorderObjectArray = objectArray.sort(function (a, b) {
-    if (a.tech > b.tech) {
-      return 1;
-    }
-    if (a.tech < b.tech) {
-      return -1;
-    } return 0;
-  }); */
 
 // Desafio 11
 function numbersRepetitionVerificator(array) {
@@ -63,7 +53,6 @@ function generatePhoneNumber(array) {
   }
   return 'Array com tamanho incorreto.';
 }
-generatePhoneNumber([0,1,2]);
 
 // Desafio 12
 function triangleSideCheck(lineA, lineB, lineC) {
