@@ -115,23 +115,31 @@ function fizzBuzz(arrayNum) {
   }
   return fizzBuzzArray;
 }
-
-// console.log(fizzBuzzArray);
 // console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
-// let fizzBuzzArray = [];
-// fizzBuzzArray.push =
-
-// console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // console.log(fizzBuzz([7, 9]));
 // console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(parameter1) {
+let encodeObj = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  return parameter1.replace(/[aeiou]/g, (m) => encodeObj[m]);
 }
-function decode() {
-  // seu código aqui
+function decode(parameter2) {
+  let decodeObj = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  return parameter2.replace(/[12345]/g, (m) => decodeObj[m]);
 }
 
 module.exports = {
