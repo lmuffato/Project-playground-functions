@@ -54,7 +54,10 @@ function hydrate(string) {
   for (let key in inter) {
     numbers += parseInt(inter[key]);
     }  
-  return `${numbers} copo de água`;
+  if (numbers > 1){
+  return `${numbers} copos de água`;
+}
+  return '${numbers} copo de água`';
   // seu código aqui
 }
 
