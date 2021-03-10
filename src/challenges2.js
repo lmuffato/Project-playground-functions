@@ -56,8 +56,8 @@ function hydrate(string) {
     }  
   if (numbers > 1){
   return `${numbers} copos de água`;
-}
-  return '${numbers} copo de água`';
+  }
+  return `${numbers} copo de água`;
   // seu código aqui
 }
 
