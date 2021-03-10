@@ -83,11 +83,55 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let inputPhrase = '';
+  for (let key in phrase) {
+    switch(phrase[key]) {
+      case 'a' :
+      inputPhrase += '1';
+      break;
+      case 'e' :
+      inputPhrase += '2';
+      break;
+      case 'i' :
+      inputPhrase += '3';
+      break;
+      case 'o' :
+      inputPhrase += '4';
+      break;
+      case 'u' :
+      inputPhrase += '5';
+      break;
+      default :
+      inputPhrase += phrase[key];
+    }
+  }
+  return inputPhrase;
 }
-function decode() {
-  // seu código aqui
+function decode(phrase) {
+  let inputPhrase = '';
+  for (let key in phrase) {
+    switch(phrase[key]) {
+      case '1':
+      inputPhrase += 'a';
+      break;
+      case '2' :
+      inputPhrase += 'e';
+      break;
+      case '3' :
+      inputPhrase += 'i';
+      break;
+      case '4' :
+      inputPhrase += 'o';
+      break;
+      case '5' :
+      inputPhrase += 'u';
+      break;
+      default :
+      inputPhrase += phrase[key];
+    }
+  }
+  return inputPhrase;
 }
 
 let nomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
@@ -100,6 +144,8 @@ console.log(footballPoints(14, 8));
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 console.log(catAndMouse(2, 4, 5));
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(decode('h3 th2r2!'));
+console.log(encode('hi there!'));
 
 module.exports = {
   calcArea,
