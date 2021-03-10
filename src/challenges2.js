@@ -52,7 +52,7 @@ console.log(triangleCheck(10, 14, 8));
 console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
- // generatePhoneNumber,
+  generatePhoneNumber,
   techList,
   hydrate,
   triangleCheck,

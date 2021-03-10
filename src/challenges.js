@@ -4,22 +4,50 @@ function compareTrue(number1, number2) {
 }
 
 // Desafio 2
-function calcArea(base, height) {
-  let area = 0;
-  area = (base * height) / 2;
-  return area;
+function calcArea() {
+  // seu código aqui
+}
+
+// Desafio 3
+function splitSentence() {
+  // seu código aqui
+}
+
+// Desafio 4
+function concatName() {
+  // seu código aqui
+}
+
+// Desafio 5
+function footballPoints() {
+  // seu código aqui
+}
+
+// Desafio 6
+function highestCount() {
+  // seu código aqui
+}
+
+// Desafio 7
+function catAndMouse() {
+  // seu código aqui
+}
+
+// Desafio 8
+function fizzBuzz() {
+  // seu código aqui
+}
+
+// Desafio 9
+function encode() {
+  // seu código aqui
+}
+function decode() {
+  // seu código aqui
 }
 
 console.log(compareTrue(true, false));
-console.log(calcArea(51, 1));
-/*console.log(splitSentence('go Trybe'));
-console.log(concatName(names));
-console.log(footballPoints(14, 8));
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-console.log(catAndMouse(3, 9, 9));
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-console.log(decision('hi there'));
-*/
+
 module.exports = {
   calcArea,
   catAndMouse,
