@@ -21,8 +21,8 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 console.log(decision('hi there'));
 */
 module.exports = {
-  //calcArea,
- /* catAndMouse,
+  calcArea,
+  catAndMouse,
   compareTrue,
   concatName,
   decode,
@@ -30,5 +30,5 @@ module.exports = {
   fizzBuzz,
   footballPoints,
   highestCount,
-  splitSentence, */
+  splitSentence,
 };
