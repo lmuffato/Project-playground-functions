@@ -89,14 +89,39 @@ function fizzBuzz(array) {
 }
 console.log(fizzBuzz([2,15,7,9,45]));
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+// Desafio 9 <---->
+function encode(sentence) {
+  let imputSentence = '';
+    for (let key in sentence) {
+      switch(sentence[key]) {
+        case 'a':
+          imputSentence += '1';
+          break;
+        case 'e':
+          imputSentence += '2';
+          break;
+        case 'i':
+          imputSentence += '3';
+          break;
+        case 'o':
+          imputSentence += '4';
+          break;
+        case 'u':
+          imputSentence += '5';
+          break;
+        default:
+          imputSentence += sentence[key];
+
+        }
+    }
+    return imputSentence;
 }
+
+
 function decode() {
   // seu código aqui
 }
-
+console.log(encode('Socorro'))
 module.exports = {
   calcArea,
   catAndMouse,
