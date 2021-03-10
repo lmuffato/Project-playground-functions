@@ -51,15 +51,11 @@ function highestCount(arrayCalc) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let positionCat1 = 0;
-  let positionCat2 = 0;
-  positionCat1 = cat1 - mouse;
-  positionCat2 = cat2 - mouse;
-  if (positionCat2 > positionCat1) {
-    return 'cat1';
-  }
-  if (positionCat1 > positionCat2) {
+  if (cat1 - mouse > cat2 - mouse) {
     return 'cat2';
+  }
+  if (cat2 - mouse > cat1 - mouse) {
+    return 'cat1';
   }
   return 'os gatos trombam e o rato foge';
 }
