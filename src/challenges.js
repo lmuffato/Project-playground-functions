@@ -26,8 +26,10 @@ function concatName(concat) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let points = 0;
+  points = wins * 3 + ties;
+  return points;
 }
 
 // Desafio 6
@@ -59,6 +61,8 @@ console.log(compareTrue(true, false));
 console.log(calcArea(10, 50));
 console.log(splitSentence('go Trybe'));
 console.log(concatName(nomes));
+console.log(footballPoints(14, 8));
+
 module.exports = {
   calcArea,
   catAndMouse,
