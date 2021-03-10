@@ -57,13 +57,20 @@ function highestCount(arrayNumbers) {
     }
     return count
 
-}
-      console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-// Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+  }
+  console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+// Desafio 7 --- Contribuição Lucas Godoi e Maria Luiza Victorio ---
+function catAndMouse(mouse, cat1, cat2) {
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+      return 'cat1';
+  } else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
+    return 'cat2'
+  } else {
+    return 'os gatos trombam e o rato foge'
+  }
 
+}
+ console.log(catAndMouse(0,6,12));
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
