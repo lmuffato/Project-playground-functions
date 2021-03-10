@@ -18,8 +18,11 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(concat) {
+  let input = '';
+  let number = concat.length;
+  input = concat[number - 1] + ', ' + concat[0];
+  return input;
 }
 
 // Desafio 5
@@ -50,10 +53,12 @@ function decode() {
   // seu código aqui
 }
 
+let nomes = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+
 console.log(compareTrue(true, false));
 console.log(calcArea(10, 50));
 console.log(splitSentence('go Trybe'));
-
+console.log(concatName(nomes));
 module.exports = {
   calcArea,
   catAndMouse,
