@@ -97,32 +97,55 @@ function fizzBuzz(numericArray) {
 }
 
 // Desafio 9
-function encode() {
-//   let stringToArray = stringSentence.split('');
-//   let codeSentence = [];
+function encode(stringSentence) {
+
+  let coded = [];
+  coded = stringSentence.split('');
+
+  for (let index = 0;index < coded.length; index += 1) {
+    if (coded[index] === 'a') {
+      coded[index] = 1;
+    } 
+    if (coded[index] === 'e') {
+      coded[index] = 2;
+    }
+    if (coded[index] === 'i') {
+      coded[index] = 3;
+    }
+    if (coded[index] === 'o') {
+      coded[index] = 4;
+    }
+    if (coded[index] === 'u') {
+      coded[index] = 5;
+    }
+  }
+
+  return coded.join('')
+}
+
+function decode(stringCoded) {
+  let decoded = [];
+  decoded = stringCoded.split('');
+
+  for (let index = 0;index < decoded.length; index += 1) {
+    if (decoded[index] === '1') {
+      decoded[index] = 'a';
+    }
+    if (decoded[index] === '2') {
+      decoded[index] = 'e';
+    }
+    if (decoded[index] === '3') {
+      decoded[index] = 'i';
+    }
+    if (decoded[index] === '4') {
+      decoded[index] = 'o';
+    }
+    if (decoded[index] === '5') {
+      decoded[index] = 'u';
+    }
+  }
   
-//   for (let index = 0; index < stringToArray; index += 1) {
-//     if (stringToArray)
-//   }
-
-  
-//     let code = {
-//       1: 'a',
-//       2: 'e',
-//       3: 'i',
-//       4: 'o',
-//       5: 'u'
-//     };
-
-//     for (let key in code) {
-
-//     }
-
-
-// encode('hey brathars!');
-
-function decode() {
-  // seu código aqui
+  return decoded.join('');
 }
 
 module.exports = {
