@@ -50,8 +50,18 @@ function highestCount(arrayCalc) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let positionCat1 = 0;
+  let positionCat2 = 0;
+  positionCat1 = cat1 - mouse;
+  positionCat2 = cat2 - mouse;
+  if (positionCat2 > positionCat1) {
+    return 'cat1';
+  }
+  if (positionCat1 > positionCat2) {
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -75,6 +85,7 @@ console.log(splitSentence('go Trybe'));
 console.log(concatName(nomes));
 console.log(footballPoints(14, 8));
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(catAndMouse(2, 2, 3));
 
 module.exports = {
   calcArea,
