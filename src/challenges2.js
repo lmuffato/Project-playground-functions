@@ -1,19 +1,18 @@
-// Desafio 10
-function techList(array, namE) {
-  if (array === 0) {
-    return 'Vazio!';
+// Desafio 10 <-- Contribuição Felipe Muller e Henrique Lima-->
+function techList(array, name) {
+  if (array.length === 0) {
+    return 'Vazio!'
   }
-  let listTech = [];
-  let arrayOrd = array.sort();
-  for (let key in arrayOrd) {
-    listTech.push(
-      {
-        tech: arrayOrd[key],
-        name: namE,
-      },
-    );
+  let arrayTech = [];
+  array.sort();
+  for (index = 0; index < array.length; index += 1) {
+    let learningTech = {
+      tech: array[index],
+      name: name
+    };
+    arrayTech.push(learningTech);
   }
-  return listTech;
+return arrayTech.sort();
 }
 
 // Desafio 11 < ---- Contribuição Felipe Muller e Lucas Lara -->
