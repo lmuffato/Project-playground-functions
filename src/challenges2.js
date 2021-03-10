@@ -38,18 +38,18 @@ function generatePhoneNumber(arrayNumber) {
 }
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 3]));
 
-// Desafio 12 <--Contribuição João Nascimento-->
+// Desafio 12 <--Contribuição João Nascimento FEAT Felipe Muller-->
 function triangleCheck(lineA, lineB, lineC) {
  let firstTest = false;
  let secondTest = false;
-if (lineA < (lineB+lineC)) {
+if (lineA < (lineB+lineC) && lineB < (lineA+lineC) && lineC < (lineA+lineB)) {
   firstTest = true;
 }
 
-if(lineA > Math.abs(lineB+lineC)) {
+if(Math.abs(lineA) > Math.abs(lineB-lineC) && Math.abs(lineB) > (lineA-lineC) && Math.abs(lineC) > (lineA - lineB)) {
   secondTest = true;
 }
-if (firstTest&&secondTest) {
+if (firstTest === true && secondTest === true) {
   return true;
 } else {
   return false;

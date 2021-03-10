@@ -116,7 +116,6 @@ function encode(sentence) {
     }
     return imputSentence;
 }
-
 console.log(encode('Socorro'))
 
 
