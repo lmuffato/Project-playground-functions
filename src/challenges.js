@@ -89,7 +89,7 @@ function fizzBuzz(array) {
 }
 console.log(fizzBuzz([2,15,7,9,45]));
 
-// Desafio 9 <---->
+// Desafio 9 <--Contribuição de Henrique Lima-->
 function encode(sentence) {
   let imputSentence = '';
     for (let key in sentence) {
@@ -117,11 +117,38 @@ function encode(sentence) {
     return imputSentence;
 }
 
-
-function decode() {
-  // seu código aqui
-}
 console.log(encode('Socorro'))
+
+
+function decode(s3nt3nc3) {
+  let imputS3ntenc3 = '';
+  for (let key in s3nt3nc3) {
+    switch(s3nt3nc3[key]) {
+      case '1':
+        imputS3ntenc3 += 'a';
+        break;
+      case '2':
+        imputS3ntenc3 += 'e';
+        break;
+      case '3':
+        imputS3ntenc3 += 'i';
+        break;
+      case '4':
+        imputS3ntenc3 += 'o';
+        break;
+      case '5':
+        imputS3ntenc3 += 'u';
+        break;
+      default:
+        imputS3ntenc3 += s3nt3nc3[key];
+
+      }
+  }
+  return imputS3ntenc3;
+}
+
+console.log(decode('M2 1j5d1'))
+
 module.exports = {
   calcArea,
   catAndMouse,
