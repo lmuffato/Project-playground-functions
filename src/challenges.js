@@ -64,9 +64,26 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge';
 }
 
+function arrayFizzBuzz(array) {
+  if (array % 3 === 0 && array % 5 !== 0) {
+    return 'fizz';
+  } if (array % 3 !== 0 && array % 5 !== 0) {
+    return 'bug!';
+  }
+  return 'buzz';
+}
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let arrayfb = [];
+  for (let key in array) {
+    if (array[key] % 3 === 0 && array[key] % 5 === 0) {
+      arrayfb.push('fizzBuzz');
+    } else {
+      arrayfb.push(arrayFizzBuzz(array[key]));
+    }
+  }
+  return arrayfb;
 }
 
 // Desafio 9
@@ -85,7 +102,8 @@ console.log(splitSentence('go Trybe'));
 console.log(concatName(nomes));
 console.log(footballPoints(14, 8));
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-console.log(catAndMouse(2, 2, 3));
+console.log(catAndMouse(2, 4, 5));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 module.exports = {
   calcArea,
