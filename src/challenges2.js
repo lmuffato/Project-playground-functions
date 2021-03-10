@@ -31,30 +31,26 @@ function checkNumberRange(numbers) {
   }
 }
 
-function countRepetition(numbers, index, innerIndex) {
-  let count = 0;
-  if (numbers[innerIndex] === numbers[index]) {
-    count += 1;
-  }
-  return count;
-}
-
-function checkRepetition(numbers) {
-  let count = 0;
+function checkRepeatThreeTimes(numbers) {
   for (let index = 0; index < numbers.length; index += 1) {
-    count = 0;
+    let count = 0;
+    let number = numbers[index];
     for (let innerIndex = 0; innerIndex < numbers.length; innerIndex += 1) {
-      count += countRepetition(numbers, index, innerIndex);
+      if (numbers[innerIndex] === number) {
+        count += 1;
+      }
+    }
+    if (count >= 3) {
+      return true;
     }
   }
-  return count;
 }
 
 function checkError(numbers) {
   switch (true) {
   case checkLength(numbers):
     return 'Array com tamanho incorreto.';
-  case checkNumberRange(numbers) || checkRepetition(numbers) >= 3:
+  case checkNumberRange(numbers) || checkRepeatThreeTimes(numbers):
     return 'não é possível gerar um número de telefone com esses valores';
   default:
     return '';
@@ -96,8 +92,7 @@ function lessThanSum(number1, number2, number3) {
   return number1 < number2 + number3;
 }
 function checkTriangleBySum(lineA, lineB, lineC) {
-  return lessThanSum(lineA, lineB, lineC) && lessThanSum(lineB, lineA, lineC)
-  && lessThanSum(lineC, lineB, lineA);
+  return lessThanSum(lineA, lineB, lineC) && lessThanSum(lineB, lineA, lineC) && lessThanSum(lineC, lineB, lineA);
 }
 
 function greaterThanDifference(number1, number2, number3) {
@@ -111,8 +106,7 @@ function greaterThanDifference(number1, number2, number3) {
 }
 
 function checkTriangleByDifference(lineA, lineB, lineC) {
-  return greaterThanDifference(lineA, lineB, lineC) && greaterThanDifference(lineB, lineA, lineC)
-  && greaterThanDifference(lineC, lineB, lineA);
+  return greaterThanDifference(lineA, lineB, lineC) && greaterThanDifference(lineB, lineA, lineC) && greaterThanDifference(lineC, lineB, lineA);
 }
 
 function triangleCheck(lineA, lineB, lineC) {

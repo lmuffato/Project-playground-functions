@@ -115,7 +115,7 @@ function encode(phrase) {
   let encodedPhrase = phrase;
   let secretCode = ['a', 'e', 'i', 'o', 'u'];
   for (let index = 0; index < encodedPhrase.length; index += 1) {
-  /** Source: https://stackoverflow.com/questions/30607419/return-only-numbers-from-string */
+  /** Source: https://www.w3schools.com/js/js_string_methods.asp */
     encodedPhrase = encodedPhrase.replace(secretCode[index], (index + 1))
       .replace(secretCode[index], (index + 1));
   }
@@ -126,7 +126,7 @@ function decode(phrase) {
   let encodedPhrase = phrase;
   let secretCode = ['a', 'e', 'i', 'o', 'u'];
   for (let index = 0; index < encodedPhrase.length; index += 1) {
-  /** Source: https://stackoverflow.com/questions/30607419/return-only-numbers-from-string */
+  /** Source: https://www.w3schools.com/js/js_string_methods.asp */
     encodedPhrase = encodedPhrase.replace((index + 1), secretCode[index])
       .replace((index + 1), secretCode[index]);
   }
