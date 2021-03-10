@@ -54,7 +54,7 @@ function hydrate(string) {
   for (let key in inter) {
     numbers += parseInt(inter[key]);
     }  
-  return `${numbers} copos de água`;
+  return `${numbers} copo de água`;
   // seu código aqui
 }
 
