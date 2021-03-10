@@ -1,4 +1,4 @@
-// Desafio 10 <-- Contribuição Felipe Muller e Henrique Lima-->
+// Desafio 10 <-- Contribuição Felipe Muller e Lucas Lara-->
 function techList(array, name) {
   if (array.length === 0) {
     return 'Vazio!'
