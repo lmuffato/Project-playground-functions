@@ -48,13 +48,13 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate( string ) {
+function hydrate(string) {
   let inter = string.match(/\d+/g);
   let numbers = 0;
   for (let key in inter) {
     numbers += parseInt(inter[key]);
     }  
-  return numbers + ' copos de água';
+  return `${numbers} copos de água`;
   // seu código aqui
 }
 
