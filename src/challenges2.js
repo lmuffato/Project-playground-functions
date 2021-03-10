@@ -16,7 +16,7 @@ function techList(array, namE) {
   return listTech;
 }
 
-// Desafio 11
+// Desafio 11 < ---- Contribuição Felipe Muller e Lucas Lara -->
 function generatePhoneNumber(arrayNumber) {
   if (arrayNumber.length !== 11){
     return 'Array com tamanho incorreto.'
