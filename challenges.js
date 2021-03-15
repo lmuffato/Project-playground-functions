@@ -1,25 +1,43 @@
 // Desafio 1 //
-let idade = true;
-let nome = true;
-let compareTrue;
+function compareTrue(calculo1 , calculo2) {
+    if (calculo1 === true && calculo2 === true){
+        return true;
+    } else {
+        return false;
+    }
+}
 
-if (idade == true && nome == true); {
-    console.log (compareTrue == true)
-}
-else if (idade !== true && nome !== true); {
-    console.log (compareTrue == false);
-}
-else {
-    console.log (compareTrue == false);
-}
 // Desafio 2 //
-let base
-let height
-let calcArea = (base * height / 2);
-    console.log(calcArea);
+function calcArea(base , height) {
+    return base * height / 2;
+}
+
 
 // Desafio 3 //
-let splitSentence
-let separado = splitSentence.split(" ", 2); {
-    console.log(separado);
+function splitSentence(texto) {
+    return texto.split (" ");
+}
+
+// Desafio 4 //
+function concatName(stringConcat) {
+    return stringConcat.length [-1] + ', ' + stringConcat.length [0]
+}
+concatName (['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])
+
+// Desafio 5 //
+let pontos
+function footballPoints(wins , ties) {
+    return pontos = wins * 3 + ties
+}
+footballPoints()
+// Aqui coloque o numero das vitorias e derrotas //
+
+//Desafio 6//
+let = maiorNumero
+function highestCount(counter) {
+    maiorNumero = counter[i]
+    for(let i = 0; i <= counter; i++) {
+        if (counter[i] > maiorNumero)
+    }
+
 }
