@@ -63,7 +63,8 @@ function generatePhoneNumber(numericArray) {
   
   numericArray.splice(0, 0, "(")
   numericArray.splice(3, 0, ")")
-  numericArray.splice(9, 0, "-")
+  numericArray.splice(4, 0, " ")
+  numericArray.splice(10, 0, "-")
 
   let phoneNumber = numericArray.join('');
 
