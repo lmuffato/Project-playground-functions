@@ -3,6 +3,7 @@ function techList(Arraytech, name) {
   if (Arraytech === 0) {
     return 'Vazio!';
   }
+  
   if (Arraytech !== 0) {
     let orderedArray = Arraytech.sort();
     let skills = [];
@@ -10,7 +11,7 @@ function techList(Arraytech, name) {
     for (let index = 0; index < orderedArray.length; index += 1) {
       skills.push({
         tech: orderedArray[index],
-        name: name
+        name: name,
       });
     }
 
@@ -19,7 +20,14 @@ function techList(Arraytech, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(numericArray) {
+  let ddd =['(', , ,')'];
+  let fiveNumbers = [];
+  let finalPart = ['-'];
+
+  let phoneNumber = [];
+  
+
 }
 
 // Desafio 12
