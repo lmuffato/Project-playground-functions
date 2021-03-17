@@ -24,7 +24,7 @@ function concatName(arrayNames) {
   let firstWord = arrayNames[0];
   let lastArray = arrayNames.length - 1;
   let lastWord = arrayNames[lastArray];
-  
+
   let lastFirst = lastWord.concat(', ', firstWord);
   return lastFirst;
 }
@@ -34,7 +34,7 @@ function footballPoints(wins, ties) {
   let winsPoints = wins * 3;
   let tiesPoints = ties;
   let score = winsPoints + tiesPoints;
-  return score; 
+  return score;
 }
 
 // Desafio 6
@@ -89,11 +89,43 @@ function fizzBuzz(numericArray) {
 }
 
 //Desafio 9
-function encode() {
+function encode(stringSentence) {
+  let stringToArray = stringSentence.split('');
+  let codedArray= [];
+
+  function changeLetters(letter) {
+    let code = {
+      1: 'a',
+      2: 'e',
+      3: 'i',
+      4: 'o',
+      5: 'u'
+    };
+
+    let repeat = 0
+
+    for (let key in code) {
+      if (letter === code[key]) {
+        codedArray.push(code[key]);
+      } else {
+        
+      }
+    }
+  }
+
+  for (let index = 0; index < stringToArray.length; index += 1) {
+    changeLetters(stringToArray[index]);
+  }
+
+  let encodedSentence = codedArray.join("");
+
+  return console.log(encodedSentence);
 }
 
-function decode() {
+encode('hi there!');
 
+function decode() {
+  // seu código aqui
 }
 
 module.exports = {

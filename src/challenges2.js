@@ -1,6 +1,6 @@
 // Desafio 10
 function techList(Arraytech, name) {
-  if (Arraytech === 0) {
+  if (Arraytech.length === 0) {
     return 'Vazio!';
   }
   
@@ -21,13 +21,53 @@ function techList(Arraytech, name) {
 
 // Desafio 11
 function generatePhoneNumber(numericArray) {
-  let ddd =['(', , ,')'];
-  let fiveNumbers = [];
-  let finalPart = ['-'];
-
-  let phoneNumber = [];
   
+  function checkLength() {
+    if (numericArray.length !== 11) {
+      return true ;
+    }
+  }
+  checkLength();
 
+  function checkHigher() {
+    for (let index = 0; index < numericArray.length; index += 1) {
+      if (numericArray[index] < 0 || numericArray[index] > 9) {
+        return true;
+      }
+    }  
+  }
+  checkHigher();
+
+  function checkRepeat() {
+    for (let index = 0; index < numericArray.length; index += 1) {
+      function check(number) {
+        return number === numericArray[index];
+      }
+
+      let treeTimes = numericArray.filter(check);
+
+      if (treeTimes.length >= 3) {
+        return true;
+      }
+    }
+  }
+  checkRepeat();
+  
+  if (checkLength() === true) {
+    return "Array com tamanho incorreto.";
+  }
+
+  if (checkHigher() === true || checkRepeat() === true ) {
+    return "não é possível gerar um número de telefone com esses valores";
+  }
+  
+  numericArray.splice(0, 0, "(")
+  numericArray.splice(3, 0, ")")
+  numericArray.splice(9, 0, "-")
+
+  let phoneNumber = numericArray.join('');
+
+  return phoneNumber;
 }
 
 // Desafio 12
