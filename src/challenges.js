@@ -16,11 +16,12 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName(content) {
+function concatName('foguete', 'não', 'tem', 'ré') {
   let firstring = content[0];
   let lastString = content[content.length - 1];
-  return lastString + ', ' + firstring;
+  return `${lastString}, ${firstring}`;
 }
+console.log(concatName);
 
 // Desafio 5
 function footballPoints(wins, ties) {
