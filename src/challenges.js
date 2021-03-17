@@ -18,15 +18,12 @@ function splitSentence(phrase) {
 
 // Desafio 4
 function concatName(stringsArray) {
-  return ${stringsArray[stringsArray.length - 1]}, ${stringsArray[0]};
-  return outputString;
+  return `${stringsArray[stringsArray.length - 1]}, ${stringsArray[0]}`;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
  return (wins * 3) + ties;
-
-  return totalPoints;
 }
 
 // Desafio 6
