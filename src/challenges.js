@@ -32,11 +32,11 @@ function footballPoints(wins , ties) {
 
 // Desafio 6
 function highestCount(valor) {
-  let maiorNumeroAteAgora = valor[0];
-    let count = 0;
+let maiorNumeroAteAgora = valor[0];
+let count = 0;
     for (let i = 0; i < number.length; i++) {
-      if (maiorNumeroAteAgora < valor[i]){
-        maiorNumeroAteAgora = valor [i];
+      if (maiorNumeroAteAgora < valor[i]) {
+      maiorNumeroAteAgora = valor [i];
       }
     }
     for (let index = 0; index < number.length; index++) {
@@ -95,7 +95,6 @@ function decode(palavras) {
   .replace ('5' , 'u');
   return palavras
 }
-  }
 
 module.exports = {
   calcArea,
