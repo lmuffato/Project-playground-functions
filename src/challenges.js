@@ -15,13 +15,13 @@ function calcArea(base , height) {
 
 // Desafio 3
 function splitSentence(texto) {
-  return texto.split(' ', 2);
+  return texto.split(" ");
 }
-
+console.log(splitSentence('vamo que vamo'))
 // Desafio 4
 function concatName(nomes) {
   // seu código aqui
-  return `${nomes[nomes.length -1]},${nomes[0]}`
+  return `${nomes[nomes.length -1]}, ${nomes[0]}`
 }
 
 // Desafio 5
@@ -101,7 +101,7 @@ function encode(palavras) {
       return palavras
 }
 }
-
+console.log(encode('a'))
 function decode(palavras) {
   switch (palavras) {
     case 1:
