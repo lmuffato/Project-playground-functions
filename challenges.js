@@ -15,7 +15,7 @@ function calcArea(base , height) {
 
 // Desafio 3 //
 function splitSentence(texto) {
-    return texto.split ('');
+    return texto.split(' ', 2);
 }
 
 // Desafio 4 //
@@ -26,11 +26,11 @@ function concatName(nomes) {
 
 concatName()
 // Desafio 5 //
-    let pontos
-    function footballPoints(wins , ties) {
-        return pontos = wins * 3 + ties
-    }
-
+let pontos
+function footballPoints(wins , ties) {
+    return pontos = wins * 3 + ties
+}
+footballPoints(0 , 0)
 
 // Desafio 6
 function highestCount(valor) {
@@ -52,7 +52,7 @@ function highestCount(valor) {
 //Desafio 7 //
 function catmouse(cat1, cat2, mouse) {
     let position = {
-      positionCat1: Math.abs (cat1 - mouse)
+      positionCat1: Math.abs (cat1 - mouse) 
       positionCat2: Math.abs (cat2 - mouse)
     }
     if (position.positionCat2 > position.positionCat1) {
@@ -68,7 +68,7 @@ function catmouse(cat1, cat2, mouse) {
     console.log (catmouse(0,0,0));
 
 
-    // Desafio 8 //
+// Desafio 8 //
     function fizzBuzz(array) {
         for(let i = 0; i < array.lenght; i += 1);
         if (array[i] % 3 == 0 && array[i] % 5){
@@ -79,12 +79,13 @@ function catmouse(cat1, cat2, mouse) {
         }
         else if (array[i] % 5 == 0) {
             return 'buzz'
+        
         } else {
             return 'bug!'
         }
     }
 
-    // Desafio 9 //
+// Desafio 9 //
 function encode(palavras) {
     
     
@@ -132,5 +133,5 @@ function decode(palavras) {
 
 }
 
-       // Desafio 10 //
+// Desafio 10 //
     
