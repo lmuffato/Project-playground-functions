@@ -17,7 +17,6 @@ function calcArea(base , height) {
 function splitSentence(texto) {
   return texto.split(" ");
 }
-console.log(splitSentence('vamo que vamo'))
 // Desafio 4
 function concatName(nomes) {
   // seu código aqui
@@ -58,7 +57,7 @@ function catAndMouse(cat1, cat2, mouse) {
   else if (cat2 > cat1){
     return 'cat1'
   }
-  else if (cat1 && cat2 == mouse){
+  else if (cat1 && cat2 == mouse) {
     return 'os gatos trombam e o rato foge'
   }
 }
@@ -86,36 +85,15 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(palavras) {
-  switch (palavras) {
-    case 'a':
-      return 1;
-    case 'e':
-      return 2;
-    case 'i':
-      return 3;
-    case 'o':
-      return 4;
-    case 'u':
-      return 5;
-    default:
-      return palavras
+  palavras = palavras.replace ('a' , '1').replace ('e' , '2').replace ('i' , '3').replace ('o' , '4')
+  .replace ('u' , '5');
+  return palavras
+
 }
-}
-console.log(encode('a'))
 function decode(palavras) {
-  switch (palavras) {
-    case 1:
-      return 'a';
-    case 2:
-      return 'e';
-    case 3:
-      return 'i';
-    case 4:
-      return 'o';
-    case 5:
-      return 'u';
-    default:
-      return palavras
+  palavras = palavras.replace ('1' , 'a').replace ('2' , 'e').replace ('3' , 'i').replace ('4' , 'o')
+  .replace ('5' , 'u');
+  return palavras
 }
   }
 
