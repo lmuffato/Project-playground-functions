@@ -58,7 +58,7 @@ function highestCount(set) {
   let higherNumber = Math.max(...set);
   let quantity = 0;
 
-  for (let index = 0; index < set.length; index +=) {
+  for (let index = 0; index < set.length; index +=1) {
     if (higherNumber === set[index]) {
       quantity+=
 
