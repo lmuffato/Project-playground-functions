@@ -58,34 +58,28 @@ function catAndMouse(cat1, cat2, mouse) {
 
 // Desafio 8
 function divison(arrayFizzBuzz) {
-  let words = []
-  for(let index = 0; index < arrayFizzBuzz.length; index += 1);
-  if (arrayFizzBuzz[index] % 3 === 0 && arrayFizzBuzz[index] % 5){
+  let words;
+
+  if (arrayFizzBuzz % 3 === 0 && arrayFizzBuzz % 5 === 0) {
     words = 'fizzBuzz';
-  }
-  else if (arrayFizzBuzz[index] % 3 === 0) {
-    words =  'fizz';
-   }
-  else if (arrayFizzBuzz[index] % 5 === 0) {
-    words = 'buzz';
-      
-  } 
-  if (arrayFizzBuzz[index] % 3 ==! 0 && arrayFizzBuzz[index] % 5 ==! 0) {
+  } else if (arrayFizzBuzz % 3 === 0) {
+    words = 'fizz';
+  } else if (arrayFizzBuzz % 5 === 0) {
+    words = 'buzz'; 
+  } else {
     words = 'bug!';
-  }
+  } 
   return words;
+}
   
-}
-
-
-
 function fizzBuzz(words) {
-  for(let i = 0; i < words.lenght; i+= 1) {
-    fizzBuzz.push(divison(words[i]))
-  }
-  return fizzBuzz
-}
 
+  for(let i = 0; i < arrayFizzBuzz.length; i+= 1) {
+    words.push(divison(arrayFizzBuzz[i]))
+  }
+  return console.log(words)
+}
+fizzBuzz ([2, 15, 7, 9, 45] )
 // Desafio 9
 function encode(palavras) {
   palavras = palavras.replace ('a' , '1').replace ('e' , '2').replace ('i' , '3').replace ('o' , '4')
