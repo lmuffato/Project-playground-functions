@@ -31,21 +31,21 @@ function footballPoints(wins , ties) {
 }
 
 // Desafio 6
-function highestCount(valor) {
-let maiorNumeroAteAgora = valor[0];
-let count = 0;
-    for (let i = 0; i < number.length; i++) {
-      if (maiorNumeroAteAgora < valor[i]) {
-      maiorNumeroAteAgora = valor [i];
-      }
+function highestCount(array) {
+  let maiorNumeroAteAgora = array[0];
+  let count = 0;
+  for (let index = 0; index < array.length; index += 1){
+    if (maiorNumeroAteAgora < array[index]){
+      maiorNumeroAteAgora = array [index];
     }
-    for (let index = 0; index < number.length; index++) {
-      if (number[index] === higher){
-        count += 1;
-      }
-    }
-    return count
   }
+  for (let index = 0; index < array.length; index += 1){
+    if (array[index] === maiorNumeroAteAgora){
+      count += 1;
+    }
+  }
+  return count
+}
   //referencia https://pt.stackoverflow.com/questions/459413/verificar-quantas-vezes-um-n%C3%BAmero-aparece-no-array //
   // seu código aqui
 
