@@ -95,15 +95,15 @@ function fizzBuzz(words) {
 
 // Desafio 9
 function encode(palavras) {
-  palavras = palavras.replaceAll ('a' , '1').replaceAll ('e' , '2').replaceAll ('i' , '3').replaceAll ('o' , '4')
-  .replace ('u' , '5');
-  return palavras
+  palavras = palavras.replaceAll('a' , '1').replaceAll('e' , '2').replaceAll('i' , '3').replaceAll ('o' , '4').replace ('u' , '5');
+  return palavras;
 
 }
-function decode(palavras) {
-  palavras = palavras.replaceAll ('1' , 'a').replaceAll ('2' , 'e').replaceAll ('3' , 'i').replaceAll ('4' , 'o')
-  replaceAll ('5' , 'u');
-  return palavras
+
+function decode(codigos) {
+  codigos = codigos.replaceAll('1' , 'a').replaceAll('2' , 'e').replaceAll('3' , 'i').replaceAll('4' , 'o').replaceAll ('5' , 'u');
+  return codigos
+
 }
 
 module.exports = {
