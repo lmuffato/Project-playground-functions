@@ -68,7 +68,7 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
 
 // Desafio 8
-ffunction fizzBuzz(Numbers) {
+function fizzBuzz(Numbers) {
   let Return = [];
   for (let i = 0; i < Numbers.length; i += 1) {
     if (Numbers[i] % 3 === 0 && Numbers[i] % 5 === 0) {
@@ -78,9 +78,12 @@ ffunction fizzBuzz(Numbers) {
     } else if (Numbers[i] % 5 === 0) {
       Return.push('buzz');
     } else {
-      Return.push('bug!');
+      Return.push('bug');
     }
-  }return arrayReturn;
+  }
+  return Return;
+
+ 
 }
 
 // Desafio 9
