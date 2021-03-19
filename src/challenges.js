@@ -1,80 +1,75 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-
   if (param1 && param2) {
-      return true;
-    } else {
-      return false;
-    }
-
+    return true;
+  }
+  return false;
 }
 
-console.log(compareTrue(false, false))
+console.log(compareTrue(false, false));
 
 // Desafio 2
 function calcArea(base, height) {
-  area = (base*height) / 2;
+  let area = (base * height) / 2;
   return area;
 }
 
-console.log(calcArea(51 , 1));
+console.log(calcArea(51, 1));
 
 // Desafio 3
 function splitSentence(string1) {
   let result = string1.split(' ');
-    return result;
+  return result;
 }
 
 console.log(splitSentence('Go Trybe'));
 
 // Desafio 4
 function concatName(array) {
-  let bothNames = `${array[array.length-1]}, ${array[0]}`;
+  let bothNames = `${array[array.length - 1]}, ${array[0]}`;
   return bothNames;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return wins*3 + ties*1;
+  return wins * 3 + ties * 1;
 }
-console.log(footballPoints(0,0));
+console.log(footballPoints(0, 0));
 
 // Desafio 6 <!-Contribuição Lucas Godoi->
-function highestCount(arrayNumbers) {
+function highestCount(listNumbers) {
   let high = 0;
   let count = 0;
-    for (let index = 0; index < arrayNumbers.length; index +=1) {
-      if (arrayNumbers[index] > high) {
-        high = arrayNumbers[index];
-      }
+  for (let index = 0; index < listNumbers.length; index += 1) {
+    if (listNumbers[index] > high) {
+      high = listNumbers[index];
     }
-
-    for (let indexx = 0; indexx < arrayNumbers.length; indexx +=1) {
-      if (arrayNumbers[indexx] === high) {
-        count += 1;
-      }
-    }
-    return count
-
   }
-  console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+
+  for (let indexx = 0; indexx < listNumbers.length; indexx += 1) {
+    if (listNumbers[indexx] === high) {
+      count += 1;
+    }
+  }
+  return count;
+}
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 // Desafio 7 --- Contribuição Lucas Godoi e Maria Luiza Victorio ---
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
-      return 'cat1';
+    return 'cat1';
   } else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
-    return 'cat2'
+    return 'cat2';
   } else {
-    return 'os gatos trombam e o rato foge'
+    return 'os gatos trombam e o rato foge';
   }
-
 }
- console.log(catAndMouse(0,6,12));
+console.log(catAndMouse(0, 6, 12));
 // Desafio 8
 function fizzBuzz(array) {
   let zap = [];
-  for (index = 0; index < array.length; index+=1) {
+  for (index = 0; index < array.length; index += 1) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       zap.push('fizzBuzz');
     } else if (array[index] % 3 === 0) {
@@ -87,42 +82,40 @@ function fizzBuzz(array) {
   }
   return zap;
 }
-console.log(fizzBuzz([2,15,7,9,45]));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9 <--Contribuição de Henrique Lima-->
 function encode(sentence) {
   let imputSentence = '';
-    for (let key in sentence) {
-      switch(sentence[key]) {
-        case 'a':
-          imputSentence += '1';
-          break;
-        case 'e':
-          imputSentence += '2';
-          break;
-        case 'i':
-          imputSentence += '3';
-          break;
-        case 'o':
-          imputSentence += '4';
-          break;
-        case 'u':
-          imputSentence += '5';
-          break;
-        default:
-          imputSentence += sentence[key];
-
-        }
+  for (let key in sentence) {
+    switch (sentence[key]) {
+      case 'a':
+        imputSentence += '1';
+        break;
+      case 'e':
+        imputSentence += '2';
+        break;
+      case 'i':
+        imputSentence += '3';
+        break;
+      case 'o':
+        imputSentence += '4';
+        break;
+      case 'u':
+        imputSentence += '5';
+        break;
+      default:
+        imputSentence += sentence[key];
     }
-    return imputSentence;
+  }
+  return imputSentence;
 }
-console.log(encode('Socorro'))
-
+console.log(encode('Socorro'));
 
 function decode(s3nt3nc3) {
   let imputS3ntenc3 = '';
   for (let key in s3nt3nc3) {
-    switch(s3nt3nc3[key]) {
+    switch (s3nt3nc3[key]) {
       case '1':
         imputS3ntenc3 += 'a';
         break;
@@ -140,13 +133,12 @@ function decode(s3nt3nc3) {
         break;
       default:
         imputS3ntenc3 += s3nt3nc3[key];
-
-      }
+    }
   }
   return imputS3ntenc3;
 }
 
-console.log(decode('M2 1j5d1'))
+console.log(decode('M2 1j5d1'));
 
 module.exports = {
   calcArea,
@@ -158,7 +150,7 @@ module.exports = {
   fizzBuzz,
   footballPoints,
   highestCount,
-  splitSentence,
+  splitSentence
 };
 
 //Fim do Projeto
