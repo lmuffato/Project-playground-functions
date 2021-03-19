@@ -79,7 +79,7 @@ function fizzBuzz(words) {
   }
   return console.log(words)
 }
-fizzBuzz ([2, 15, 7, 9, 45] )
+
 // Desafio 9
 function encode(palavras) {
   palavras = palavras.replace ('a' , '1').replace ('e' , '2').replace ('i' , '3').replace ('o' , '4')
