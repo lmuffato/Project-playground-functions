@@ -78,7 +78,7 @@ function fizzBuzz(Numbers) {
     } else if (Numbers[i] % 5 === 0) {
       Return.push('buzz');
     } else {
-      Return.push('bug');
+      Return.push('bug!');
     }
   }
   return Return;
