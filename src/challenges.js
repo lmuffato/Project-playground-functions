@@ -51,17 +51,19 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
-  if (cat1 > cat2) {
-    return 'cat2'
+  let cat1Position = cat1 - mouse
+  let cat2Position = cat2 - mouse
+  let mousePosition = mouse
+  if (cat1Position > cat2Position) {
+    console.log('cat2')
   }
-  else if (cat2 > cat1){
-    return 'cat1'
+  else if (cat2Position > cat1Position) {
+    console.log('cat1')
   }
-  else if (cat1 && cat2 == mouse) {
-    return 'os gatos trombam e o rato foge'
+  else if (cat1Position && cat2Position == mousePosition) {
+    console.log('os gatos trombam e o rato foge') 
   }
 }
-  
 
   // seu código aqui
 
