@@ -51,39 +51,37 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
-  let cat1Position = cat1 - mouse
-  let cat2Position = cat2 - mouse
-  let mousePosition = mouse
-  if (cat1Position > cat2Position) {
-    console.log('cat2')
-  }
-  else if (cat2Position > cat1Position) {
-    console.log('cat1')
-  }
-  else if (cat1Position && cat2Position == mousePosition) {
-    console.log('os gatos trombam e o rato foge') 
-  }
+  positions = [cat1, cat2, mouse]
 }
 
   // seu código aqui
 
 // Desafio 8
-function fizzBuzz(array) {
-  for(let i = 0; i < array.lenght; i += 1);
-  if (array[i] % 3 == 0 && array[i] % 5){
-      return 'fizzBuzz'
+function divison(arrayFizzBuzz) {
+  let words = []
+  for(let index = 0; index < arrayFizzBuzz.length; index += 1);
+  if (arrayFizzBuzz[index] % 3 === 0 && arrayFizzBuzz[index] % 5){
+    words = 'fizzBuzz';
   }
-  else if (array[i] % 3 == 0) {
-      return 'fizz'
+  else if (arrayFizzBuzz[index] % 3 === 0) {
+    words =  'fizz';
    }
-  else if (array[i] % 5 == 0) {
-      return 'buzz'
+  else if (arrayFizzBuzz[index] % 5 === 0) {
+    words = 'buzz';
       
-  } else {
-      return 'bug!'
+  } 
+  if (arrayFizzBuzz[index] % 3 ==! 0 && arrayFizzBuzz[index] % 5 ==! 0) {
+    words = 'bug!';
   }
+  return words;
   
 }
+
+function fizzBuzz(words) {
+  for(let i = 0; i < words.lenght; i+= 1) {
+    fizzBuzz.push(divison(words[i]))
+  }
+  return fizzBuzz
 
 // Desafio 9
 function encode(palavras) {
