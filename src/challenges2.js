@@ -16,7 +16,7 @@ function techList(array, name) {
 }
 console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Heloísa'));
 
-// Desafio 11  | Realizado com a ajuda do Lucas, que ensinou como usar o 'filter' 
+// Desafio 11  | Realizado com a ajuda do Lucas Eduardo Pedroso, que ensinou como usar o 'filter'  <3 grande abraço, Lucas!
 function repetedNumber(arrayNumbers) {
   for (let index = 0; index < arrayNumbers.length; index += 1) {
     let arrayFiltred = arrayNumbers.filter(function (x) { return arrayNumbers[index] === x; });
@@ -43,11 +43,17 @@ function generatePhoneNumber(array) {
   fourNumbers += array[7] + '' + array[8] + '' + array[9] + '' + array[10];
   return result.concat(ddd).concat(fiveNumbers).concat(fourNumbers);
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
+    return true;
+  } else if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
+    return true;
+  } else if (lineC < (lineA + lineB) && lineC > Math.abs(lineA - lineB)) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 13
