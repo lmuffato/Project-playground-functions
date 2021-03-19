@@ -51,10 +51,8 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let positions = [mouse, cat1, cat2]
-  let cat1Position = positions[0] - positions [1]
-  let cat2Position = positions[0] - positions [2]
-  
+  let cat1Position = Math.abs(cat1 - mouse)
+  let cat2Position = Math.abs(cat2 - mouse)
   if (cat1Position > cat2Position) {
     return 'cat2'
   }
