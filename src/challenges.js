@@ -95,14 +95,14 @@ function fizzBuzz(words) {
 
 // Desafio 9
 function encode(palavras) {
-  palavras = palavras.replace ('a' , '1').replace ('e' , '2').replace ('i' , '3').replace ('o' , '4')
+  palavras = palavras.replaceAll ('a' , '1').replaceAll ('e' , '2').replaceAll ('i' , '3').replaceAll ('o' , '4')
   .replace ('u' , '5');
   return palavras
 
 }
 function decode(palavras) {
-  palavras = palavras.replace ('1' , 'a').replace ('2' , 'e').replace ('3' , 'i').replace ('4' , 'o')
-  .replace ('5' , 'u');
+  palavras = palavras.replaceAll ('1' , 'a').replaceAll ('2' , 'e').replaceAll ('3' , 'i').replaceAll ('4' , 'o')
+  replaceAll ('5' , 'u');
   return palavras
 }
 
