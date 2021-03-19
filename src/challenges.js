@@ -77,11 +77,14 @@ function divison(arrayFizzBuzz) {
   
 }
 
+
+
 function fizzBuzz(words) {
   for(let i = 0; i < words.lenght; i+= 1) {
     fizzBuzz.push(divison(words[i]))
   }
   return fizzBuzz
+}
 
 // Desafio 9
 function encode(palavras) {
