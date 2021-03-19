@@ -40,8 +40,8 @@ console.log(footballPoints(0, 0));
 // Desafio 6 <!-Contribuição Lucas Godoi->
 function highestCount(listNumbers) {
   let high = 0;
-  let count = 0;
   for (let index = 0; index < listNumbers.length; index += 1) {
+    let count = 0;
     if (listNumbers[index] > high) {
       high = listNumbers[index];
     }
@@ -57,13 +57,14 @@ function highestCount(listNumbers) {
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 // Desafio 7 --- Contribuição Lucas Godoi e Maria Luiza Victorio ---
 function catAndMouse(mouse, cat1, cat2) {
+  let msg = '';
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
-    return 'cat1';
-  } else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
-    return 'cat2';
-  } else {
-    return 'os gatos trombam e o rato foge';
+    msg = 'cat1';
   }
+  if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
+    msg = 'cat2';
+  } else msg = 'os gatos trombam e o rato foge';
+  return msg;
 }
 console.log(catAndMouse(0, 6, 12));
 // Desafio 8
