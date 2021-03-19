@@ -68,27 +68,19 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
 
 // Desafio 8
-function divison(arrayFizzBuzz) {
-  let words;
-
-  if (arrayFizzBuzz % 3 === 0 && arrayFizzBuzz % 5 === 0) {
-    words = 'fizzBuzz';
-  } else if (arrayFizzBuzz % 3 === 0) {
-    words = 'fizz';
-  } else if (arrayFizzBuzz % 5 === 0) {
-    words = 'buzz'; 
-  } else {
-    words = 'bug!';
-  } 
-  return words;
-}
-  
-function fizzBuzz(words) {
-
-  for(let i = 0; i < arrayFizzBuzz.length; i+= 1) {
-    words.push(divison(arrayFizzBuzz[i]))
-  }
-  return console.log(words)
+ffunction fizzBuzz(Numbers) {
+  let Return = [];
+  for (let i = 0; i < Numbers.length; i += 1) {
+    if (Numbers[i] % 3 === 0 && Numbers[i] % 5 === 0) {
+      Return.push('fizzBuzz');
+    } else if (Numbers[i] % 3 === 0) {
+      Return.push('fizz');
+    } else if (Numbers[i] % 5 === 0) {
+      Return.push('buzz');
+    } else {
+      Return.push('bug!');
+    }
+  }return arrayReturn;
 }
 
 // Desafio 9
