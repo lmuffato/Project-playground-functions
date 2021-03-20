@@ -69,44 +69,46 @@ console.log(catAndMouse(0, 6, 12));
 function zapZap(zip) {
   if (zip % 3 === 0 && zip % 5 === 0) {
     return 'fizzBuzz';
-  } if (zip % 3 === 0) {
+  }
+  if (zip % 3 === 0) {
     return 'fizz';
-  } if (zip % 5 === 0) {
+  }
+  if (zip % 5 === 0) {
     return 'buzz';
-  }  
+  }
   return 'bug!';
 }
 function fizzBuzz(array) {
   let zap = [];
   for (let index = 0; index < array.length; index += 1) {
-    zap.push(zapZap(array[index]))
+    zap.push(zapZap(array[index]));
   }
   return zap;
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
-// Desafio 9 <--Contribuição de Henrique Lima-->
-function encode(sentence) {
-  let imputSentence = '';
-  for (let key in sentence) {
-    switch (sentence[key]) {
-      case 'a':
-        imputSentence += '1';
-      case 'e':
-        imputSentence += '2';
-      case 'i':
-        imputSentence += '3';
-      case 'o':
-        imputSentence += '4';
-      case 'u':
-        imputSentence += '5';
+// Desafio 9 <--Contribuição de Henrique Lima--Refatoramento com auxilio de Iago>
 
-      default:
-        imputSentence += sentence[key];
+let inputSentence = {
+  a: 1,
+  e: 2,
+  i: 3,
+  o: 4,
+  u: 5,
+};
+
+function encode(sentence) {
+  let code = '';
+  for (let letter in sentence) {
+    if (inputSentence[sentence[letter]]) {
+      code = code.concat(inputSentence[sentence[letter]]);
+    } else {
+      code = code.concat(sentence[letter]);
     }
   }
-  return imputSentence;
+  return code;
 }
+
 console.log(encode('Socorro'));
 
 function decode(s3nt3nc3) {
