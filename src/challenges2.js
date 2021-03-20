@@ -58,27 +58,35 @@ function generatePhoneNumber(arrayNumber) {
 }
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
-// Desafio 12 <--Contribuição João Nascimento FEAT Felipe Muller-->
+// Desafio 12 <--Contribuição João Nascimento,Felipe Muller, Wanderson Sales, Murilo Gonçalves-->
+function triangleCheck1(lineA, lineB, lineC) {
+  if (
+    Math.abs(lineA) > Math.abs(lineB - lineC)
+    && Math.abs(lineB) > lineA - lineC
+    && Math.abs(lineC) > lineA - lineB
+  ) {
+    return true;
+  }
+  return false;
+}
+function triangleCheck2(lineA, lineB, lineC) {
+  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
+    return true;
+  }
+  return false;
+}
+
 function triangleCheck(lineA, lineB, lineC) {
   let firstTest = false;
   let secondTest = false;
-  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
-    firstTest = true;
-  }
-
-  if (
-    Math.abs(lineA) > Math.abs(lineB - lineC) &&
-    Math.abs(lineB) > lineA - lineC &&
-    Math.abs(lineC) > lineA - lineB
-  ) {
-    secondTest = true;
-  }
+  firstTest = triangleCheck1(lineA, lineB, lineC);
+  secondTest = triangleCheck2(lineA, lineB, lineC);
   if (firstTest === true && secondTest === true) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
+
 console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13 <--Contribuição Rafael Reis, Adriel e John (turma 9)-->
@@ -101,7 +109,7 @@ module.exports = {
   generatePhoneNumber,
   techList,
   hydrate,
-  triangleCheck
+  triangleCheck,
 };
 
-//Fim do Projeto
+// Fim do Projeto//
