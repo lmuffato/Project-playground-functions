@@ -1,88 +1,107 @@
 // Desafio 10 <-- Contribuição Felipe Muller e Henrique Lima-->
 function techList(array, name) {
   if (array.length === 0) {
-    return 'Vazio!'
+    return 'Vazio!';
   }
   let arrayTech = [];
   array.sort();
-  for (index = 0; index < array.length; index += 1) {
+  for (let index = 0; index < array.length; index += 1) {
     let learningTech = {
       tech: array[index],
-      name: name
+      name,
     };
     arrayTech.push(learningTech);
   }
   return arrayTech.sort();
 }
-console.log(techList([], 'Lucas'))
+console.log(techList([], 'Lucas'));
 
-// Desafio 11 <-- Contribuição Felipe Muller e Henrique Lima / Discussões no Zoom-->
-function generatePhoneNumber(arrayNumber) {
+// Desafio 11 <-- Contribuição Felipe Muller e Henrique Lima / Discussões no Zoom-- Trybengers ;D >
 
-  if (arrayNumber.length !== 11){
-    return 'Array com tamanho incorreto.'
-  }
-
-  for (let index = 0; index < arrayNumber.length; index += 1) {
-    let count = 0;
-    for (let indexNumber = 0; indexNumber < arrayNumber.length; indexNumber += 1) {
-      if (arrayNumber[index] === arrayNumber[indexNumber]) {
-        count += 1;
-      } if (arrayNumber[index] < 0 || arrayNumber[index] > 9 || count >=3) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
+function numberCount(arrayNumber, index) {
+  let count = 0;
+  for (
+    let indexNumber = 0;
+    indexNumber < arrayNumber.length;
+    indexNumber += 1
+  ) {
+    if (arrayNumber[index] === arrayNumber[indexNumber]) {
+      count += 1;
     }
-
   }
-    return `(${arrayNumber[0]}${arrayNumber[1]}) ${arrayNumber[2]}${arrayNumber[3]}${arrayNumber[4]}${arrayNumber[5]}${arrayNumber[6]}-${arrayNumber[7]}${arrayNumber[8]}${arrayNumber[9]}${arrayNumber[10]}`
+  return count;
 }
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 3]));
+function isValidNumber(arrayNumber, index, count) {
+  if (arrayNumber[index] < 0 || arrayNumber[index] > 9 || count >= 3) {
+    return false;
+  }
+  return true;
+}
+function generatePhoneNumber(arrayNumber) {
+  if (arrayNumber.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  for (let index = 0; index < arrayNumber.length; index += 1) {
+    let count = numberCount(arrayNumber, index);
+    if (!isValidNumber(arrayNumber, index, count)) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  let myPhoneNumber = '(';
+  myPhoneNumber += `${arrayNumber[0]}${arrayNumber[1]}`;
+  myPhoneNumber += ') ';
+  myPhoneNumber += `${arrayNumber[2]}${arrayNumber[3]}${arrayNumber[4]}${arrayNumber[5]}`;
+  myPhoneNumber += `${arrayNumber[6]}`;
+  myPhoneNumber += '-';
+  myPhoneNumber += `${arrayNumber[7]}${arrayNumber[8]}${arrayNumber[9]}${arrayNumber[10]}`;
+  return myPhoneNumber;
+}
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12 <--Contribuição João Nascimento FEAT Felipe Muller-->
 function triangleCheck(lineA, lineB, lineC) {
- let firstTest = false;
- let secondTest = false;
-if (lineA < (lineB+lineC) && lineB < (lineA+lineC) && lineC < (lineA+lineB)) {
-  firstTest = true;
-}
+  let firstTest = false;
+  let secondTest = false;
+  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
+    firstTest = true;
+  }
 
-if(Math.abs(lineA) > Math.abs(lineB-lineC) && Math.abs(lineB) > (lineA-lineC) && Math.abs(lineC) > (lineA - lineB)) {
-  secondTest = true;
+  if (
+    Math.abs(lineA) > Math.abs(lineB - lineC) &&
+    Math.abs(lineB) > lineA - lineC &&
+    Math.abs(lineC) > lineA - lineB
+  ) {
+    secondTest = true;
+  }
+  if (firstTest === true && secondTest === true) {
+    return true;
+  } else {
+    return false;
+  }
 }
-if (firstTest === true && secondTest === true) {
-  return true;
-} else {
-  return false;
-}
-
-}
-console.log(triangleCheck(10,14,8));
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13 <--Contribuição Rafael Reis, Adriel e John (turma 9)-->
 function hydrate(suggestion) {
-
-   let string = suggestion.match(/\d+/g);
-
+  let string = suggestion.match(/\d+/g);
 
   let count = 0;
-    for (let index = 0; index < string.length; index +=1) {
-      count+=parseInt(string[index], 10)
-    }
-    if (count === 1) {
+  for (let index = 0; index < string.length; index += 1) {
+    count += parseInt(string[index], 10);
+  }
+  if (count === 1) {
+    return `${count} copo de água`;
+  }
 
-      return`${count} copo de água`;
-    }
-
-      return `${count} copos de água`;
-
+  return `${count} copos de água`;
 }
-console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
 module.exports = {
   generatePhoneNumber,
   techList,
   hydrate,
-  triangleCheck,
+  triangleCheck
 };
 
 //Fim do Projeto
