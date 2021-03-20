@@ -40,18 +40,16 @@ console.log(footballPoints(0, 0));
 // Desafio 6 <!-Contribuição Lucas Godoi->
 function highestCount(listNumbers) {
   let high = 0;
+  let count = 0;
   for (let index = 0; index < listNumbers.length; index += 1) {
-    let count = 0;
     if (listNumbers[index] > high) {
       high = listNumbers[index];
     }
-  }
-
-  for (let indexx = 0; indexx < listNumbers.length; indexx += 1) {
-    if (listNumbers[indexx] === high) {
+    if (listNumbers[index] === high) {
       count += 1;
     }
   }
+
   return count;
 }
 console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
@@ -68,18 +66,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 console.log(catAndMouse(0, 6, 12));
 // Desafio 8
+function zapZap(zip) {
+  if (zip % 3 === 0 && zip % 5 === 0) {
+    return 'fizzBuzz';
+  } if (zip % 3 === 0) {
+    return 'fizz';
+  } if (zip % 5 === 0) {
+    return 'buzz';
+  }  
+  return 'bug!';
+}
 function fizzBuzz(array) {
   let zap = [];
-  for (index = 0; index < array.length; index += 1) {
-    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
-      zap.push('fizzBuzz');
-    } else if (array[index] % 3 === 0) {
-      zap.push('fizz');
-    } else if (array[index] % 5 === 0) {
-      zap.push('buzz');
-    } else {
-      zap.push('bug!');
-    }
+  for (let index = 0; index < array.length; index += 1) {
+    zap.push(zapZap(array[index]))
   }
   return zap;
 }
@@ -92,19 +92,15 @@ function encode(sentence) {
     switch (sentence[key]) {
       case 'a':
         imputSentence += '1';
-        break;
       case 'e':
         imputSentence += '2';
-        break;
       case 'i':
         imputSentence += '3';
-        break;
       case 'o':
         imputSentence += '4';
-        break;
       case 'u':
         imputSentence += '5';
-        break;
+
       default:
         imputSentence += sentence[key];
     }
