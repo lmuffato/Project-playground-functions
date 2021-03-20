@@ -111,32 +111,25 @@ function encode(sentence) {
 
 console.log(encode('Socorro'));
 
+let inputSsentence = {
+  1: 'a',
+  2: 'e',
+  3: 'i',
+  4: 'o',
+  5: 'u',
+};
+// Auxilio de Lucas pedroso e Iago ferreira -Turma A//
 function decode(s3nt3nc3) {
-  let imputS3ntenc3 = '';
-  for (let key in s3nt3nc3) {
-    switch (s3nt3nc3[key]) {
-      case '1':
-        imputS3ntenc3 += 'a';
-        break;
-      case '2':
-        imputS3ntenc3 += 'e';
-        break;
-      case '3':
-        imputS3ntenc3 += 'i';
-        break;
-      case '4':
-        imputS3ntenc3 += 'o';
-        break;
-      case '5':
-        imputS3ntenc3 += 'u';
-        break;
-      default:
-        imputS3ntenc3 += s3nt3nc3[key];
+  let code = '';
+  for (let letter in s3nt3nc3) {
+    if (inputSsentence[s3nt3nc3[letter]]) {
+      code = code.concat(inputSsentence[s3nt3nc3[letter]]);
+    } else {
+      code = code.concat(s3nt3nc3[letter]);
     }
   }
-  return imputS3ntenc3;
+  return code;
 }
-
 console.log(decode('M2 1j5d1'));
 
 module.exports = {
@@ -149,7 +142,7 @@ module.exports = {
   fizzBuzz,
   footballPoints,
   highestCount,
-  splitSentence
+  splitSentence,
 };
 
-//Fim do Projeto
+// Fim do Projeto//
