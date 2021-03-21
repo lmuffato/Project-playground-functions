@@ -41,6 +41,20 @@ function hydrate() {
   // seu código aqui
 }
 
+function generatePhoneNumber () {
+}
+
+function hydrate(drinks) {
+  let Bebidas = drinks.match(/\d+/g).map(Number);
+  let resultado = Bebidas.reduce((acumulador, index) => acumulador + index);
+  if (resultado > 1) {
+    return `${resultado} copos de água`; // Referencia a Giovanni Maldonado, peguei o codigo dele de exemplo, por nao entender a funcao Match.Map
+  }
+  return `${resultado} copo de água`;
+}
+
+console.log(hydrate('5 cervejas, 2 copos de vinho'));
+
 module.exports = {
   generatePhoneNumber,
   techList,
