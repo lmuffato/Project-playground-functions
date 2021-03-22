@@ -23,9 +23,15 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+// Para trinângulo existir = é necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas
+function triangleCheck(a, b, c) {
+  const conditionOne = b + c;
+  const conditionTwo = Math.abs(b - c);
+
+  return a < conditionOne && a > conditionTwo;
 }
+
+// console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
