@@ -55,17 +55,17 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(numberArray) {
-  let arrayFizzBuzz = [];
+  let output = []
   for (let i = 0; i < numberArray.length; i += 1) {
-    if (numberArray[i] % 3 === 0 && numberArray[i] % 5 == 0) {
-      arrayFizzBuzz.push('fizzbuzz');
+    if (numberArray[i] % 3 === 0 && numberArray[i] % 5 === 0) {
+      output.push('fizzBuzz');
     } else if (numberArray[i] % 5 === 0) {
-      arrayFizzBuzz.push('buzz');
+      output.push('buzz');
     } else if (numberArray[i] % 3 === 0) {
-      arrayFizzBuzz.push('fizz');
-    } else { arrayFizzBuzz.push('bug!'); }
+      output.push('fizz');
+    } else { output.push('bug!'); }
   }
-  return arrayFizzBuzz;
+  return output;
 }
 
 // Desafio 9
