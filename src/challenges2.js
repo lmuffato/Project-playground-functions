@@ -1,3 +1,4 @@
+// Desafio 10
 function techList(technologiesList, name) {
   let techs = [];
   technologiesList.sort();
@@ -15,7 +16,6 @@ function techList(technologiesList, name) {
   } return techs
 }
  
-
 // Desafio 11
 function wrongRangeCheck(currentValue) {
   if (currentValue > 9 || currentValue < 0) {
