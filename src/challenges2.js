@@ -1,14 +1,14 @@
 // Desafio 10
 function techList(techNames, name) {
-  let array = {
-    tech: '',
-    name: ''
-  }; 
-  techNames = techNames.sort()
-  for (let index = 0; index < techNames.length; index +=1){
-    array.tech = techNames[index];
-    array.tech = name;
-  }
+  // let array = {
+  //   tech: '',
+  //   name: ''
+  // }; 
+  // techNames = techNames.sort()
+  // for (let index = 0; index < techNames.length; index +=1){
+  //   array.tech = techNames[index];
+  //   array.tech = name;
+  // }
 }
 
 // Desafio 11
@@ -24,8 +24,20 @@ function generatePhoneNumber(Numbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(line1, line2, line3) {
+  let requisito1;
+  let requisito2;
+  if (line1 < (line2 + line3) && line2 < (line1 + line3) && line3 < (line2 + line1)) {
+    requisito1 = true;
+  } else { requisito1 = false; }
+
+  if (Math.abs(line1) > line2 - line3 && Math.abs(line2) > line1 - line3 && Math.abs(line3) > line2 - line1) {
+    requisito2 = true
+  } else { requisito2 = false; }
+
+  if (requisito1 === true && requisito2 === true ) {
+    return true
+  } else { return false }
 }
 
 // Desafio 13
