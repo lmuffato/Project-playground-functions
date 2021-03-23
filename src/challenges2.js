@@ -12,8 +12,15 @@ function techList(techNames, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  
+function generatePhoneNumber(Numbers) {
+  // for (let index = 0; index < Numbers.length; index += 1) {
+
+  //   if (Numbers[index] < 0 || Numbers[index] > 9) {
+  //     console.log('não é possível gerar um número de telefone com esses valores');
+  //   } else if (Numbers.length > 11 || Numbers.length < 11) {
+  //     console.log('Array com tamanho incorreto');
+  //   }
+  // }
 }
 
 // Desafio 12
@@ -22,9 +29,15 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let drinkNumber = string.match(/\d+/g).map(Number) // referencia; https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
+  let sum = drinkNumber.reduce((total, numero) => total + numero, 0); // referencia; https://www.devmedia.com.br/javascript-reduce-reduzindo-uma-colecao-em-um-unico-objeto/37981
+  if (sum === 1) {
+    return `${sum} copo de água`;
+  } return `${sum} copos de água`;
 }
+
+console.log(hydrate('1 vodka, 3 cachaças e 1 caipirinha'));
 
 module.exports = {
   generatePhoneNumber,
