@@ -1,24 +1,23 @@
 function techList(technologiesList, name) {
-  if (technologiesList.length === 0) {
-    return 'Vazio!';
+  let techs = [];
+  technologiesList.sort();
+
+  if (technologiesList.length <= 0) {
+    return 'Vazio!'
   }
-  let technologies = [];
-  let orderedTechnologies = technologiesList.sort();
-  for (let index = 0; index < orderedTechnologies.length; index += 1) {
-    technologies.push(
+  for (let index = 0; index < technologiesList.length; index += 1) {
+    techs.push (
       {
-        tech: orderedTechnologies[index],
-        name,
+        tech: technologies[index],
+        name: name
       },
     );
-  }
-  return technologies;
+  } return techs
 }
+ 
 
 // Desafio 11
-function generatePhoneNumber() {
-  
-}
+function generatePhoneNumber()
 
 
 // Desafio 12
