@@ -1,14 +1,20 @@
 // Desafio 10
 function techList(techNames, name) {
-  // let array = {
-  //   tech: '',
-  //   name: ''
-  // }; 
-  // techNames = techNames.sort()
-  // for (let index = 0; index < techNames.length; index +=1){
-  //   array.tech = techNames[index];
-  //   array.tech = name;
-  // }
+  if (techNames.length === 0) {
+    return 'Vazio!';
+  }
+  techNames = techNames.sort();
+  let resultItem = {};
+  let result = [];
+  for (let i = 0; i < techNames.length; i += 1) {
+    resultItem.techNames = techNames[i];
+    resultItem.name = name;
+    result.push({
+      tech: techNames[i],
+      name 
+    });
+  }
+  return result;
 }
 
 // Desafio 11
@@ -48,6 +54,10 @@ function hydrate(string) {
     return `${sum} copo de água`;
   } return `${sum} copos de água`;
 }
+
+console.log(techList(['java', 'css', 'HTML'], 'Eicke'));
+
+console.log(triangleCheck(3, 6, 8));
 
 console.log(hydrate('1 vodka, 3 cachaças e 1 caipirinha'));
 
