@@ -1,3 +1,5 @@
+/* eslint no-use-before-define: 2 */
+
 // Desafio 1
 function compareTrue(val1, val2) {
   if (val1 && val2) {
@@ -123,6 +125,8 @@ function encode(frase) {
     }
   } return newPhrase;
 }
+
+console.log(encode('eita'));
 
 function decode(frase) {
   let encodingPhrase = frase;
