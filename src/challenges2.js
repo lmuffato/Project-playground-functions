@@ -1,5 +1,5 @@
 // Desafio 10
-function techList(techNames , name) {
+function techList(techNames, name) {
   let listTech = [];
   if (techNames.length === 0) {
     return 'Vazio!';
@@ -17,7 +17,7 @@ function techList(techNames , name) {
 
 // Desafio 11
 function generatePhoneNumber(phoneNumber) {
- let erro = false;
+  let erro = false;
   if (phoneNumber.length !== 11) {
     return 'Array com tamanho incorreto.';
     erro = true;
@@ -29,17 +29,17 @@ function generatePhoneNumber(phoneNumber) {
       }
     }
   }
- // console.log(erro);
- /*VerifNumRep (phoneNumber);
-  console.log(VerifNumRep(phoneNumber));
-  if (VerifNumRep (phoneNumber) !== '') {
-    erro = true;
-  }*/
- // console.log(VerifNumRep (phoneNumber));
+  // console.log(erro);
+  /*VerifNumRep (phoneNumber);
+   console.log(VerifNumRep(phoneNumber));
+   if (VerifNumRep (phoneNumber) !== '') {
+     erro = true;
+   }*/
+  // console.log(VerifNumRep (phoneNumber));
   if (erro === false) {
     return correctNumber(phoneNumber);
   }
- // console.log(numeroCerto);   
+  // console.log(numeroCerto);   
 }
 
 /*function VerifNumRep (numTelefone) {
@@ -59,8 +59,8 @@ function generatePhoneNumber(phoneNumber) {
   }
 }
 }*/
- //let numero =  [1, 2, 3, 4, 9, 9, 7, 8, 9, 0, 1];
-function correctNumber (numero) {
+//let numero =  [1, 2, 3, 4, 9, 9, 7, 8, 9, 0, 1];
+function correctNumber(numero) {
   let finalNumber = '(' + numero[0] + numero[1] + ') ';
   for (let index = 2; index < 7; index += 1) {
     finalNumber += numero[index];
@@ -82,6 +82,10 @@ function triangleCheck() {
 // Desafio 13
 function hydrate() {
   // seu código aqui
+  const totalDrinks = drinks.split(/, | e /).reduce((acc, crr) =>
+    acc + parseInt(crr[0] + crr[1]), 0);
+
+  return totalDrinks > 1 ? `${totalDrinks} copos de água` : `${totalDrinks} copo de água`;
 }
 
 module.exports = {
