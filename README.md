@@ -86,7 +86,7 @@ Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://
 ## Antes de começar a desenvolver
 
 1. Clone o repositório
-  * `git clone git@github.com:tryber/sd-0x-project-playground-functions.git`.
+  * `git clone git@github.com:tryber/sd-010-a-project-playground-functions.git`.
   * Entre na pasta do repositório que você acabou de clonar:
     * `cd sd-010-a-project-playground-functions`
 
@@ -149,10 +149,9 @@ Para garantir a qualidade do seu código de forma a tê-lo mais legível, de mai
 
 ```bash
 npm run lint
-npm run lint:styles
 ```
 
-⚠ **NESTE PROJETO O STYLELINT NÃO SERÁ AVALIADO. VOCÊ PODE RODAR O TESTE LOCALMENTE E FAZER AS CORREÇÕES SE DESEJAR!** ⚠
+⚠ **NESTE PROJETO O ESLINT NÃO SERÁ AVALIADO. VOCÊ PODE RODAR O TESTE LOCALMENTE E FAZER AS CORREÇÕES SE DESEJAR!** ⚠
 
 ---
 
