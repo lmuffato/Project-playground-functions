@@ -80,13 +80,15 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(drinks) {
   // seu código aqui
   const totalDrinks = drinks.split(/, | e /).reduce((acc, crr) =>
-    acc + parseInt(crr[0] + crr[1]), 0);
+    acc + parseInt(crr[0]), 0);
 
   return totalDrinks > 1 ? `${totalDrinks} copos de água` : `${totalDrinks} copo de água`;
 }
+
+console.log(hydrate('1 coca, 1 chopp e 2 refris'));
 
 module.exports = {
   generatePhoneNumber,
