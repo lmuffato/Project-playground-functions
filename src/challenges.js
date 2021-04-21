@@ -34,20 +34,6 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Challenge 8
-// const checksFizzBuzz = (number) => {
-//   let response = '';
-//   if (number % 3 === 0 && number % 5 === 0) {
-//     response = 'fizzBuzz';
-//   } else if (number % 3 === 0) {
-//     response = 'fizz';
-//   } else if (number % 5 === 0) {
-//     response = 'buzz';
-//   } else {
-//     response = 'bug!';
-//   }
-//   return response;
-// };
-
 const checksFizzBuzz = (number) => {
   let a = number % 3 === 0;
   let b = number % 5 === 0;
@@ -55,7 +41,7 @@ const checksFizzBuzz = (number) => {
 
   if (a) response = 'fizz';
   if (b) response += 'buzz';
-  if (response === '') response = '!bug';
+  if (response === '') response = 'bug!';
 
   return response;
 };
@@ -74,8 +60,6 @@ const fizzBuzz = (array) => array.reduce((acc, number) => {
   acc.push(word);
   return acc;
 }, []);
-
-console.log(fizzBuzz([12, 3, 5, 20, 15, 13]));
 
 // Challenge 9
 
