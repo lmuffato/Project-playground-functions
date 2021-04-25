@@ -1,7 +1,6 @@
 // Desafio 10
 function techList(arr, name) {
-  if (!arr) return 'Vazio!';
-
+  if (arr.length === 0) return 'Vazio!';
   return arr.reduce((acc, curr) => {
     const object = { 'tech': curr, 'name': name };
     acc.push(object);
@@ -13,7 +12,7 @@ function techList(arr, name) {
     return acc;
   }, []);
 }
-
+console.log(techList([], "Lucas"));
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
