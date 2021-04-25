@@ -38,44 +38,45 @@ function highestCount(elementArr) {
   }
   let retunrNumber = elementArr.filter(number);
   return retunrNumber.length;
-  // sites usados para referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math, https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max, https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array, https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filter,
+  // Referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math, https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max, https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array, https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filter,
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1';
-  } else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
+  } if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
     return 'cat2';
-  } else if (Math.abs(cat2 - mouse) === Math.abs(cat1 - mouse) || Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+  }
+  if (Math.abs(cat2 - mouse) === Math
+    .abs(cat1 - mouse) || Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'os gatos trombam e o rato foge';
   }
-  // ajuda no plantão e do site: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs  
+  // ajuda no plantão e do site: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 }
 
 // Desafio 8
-function fizzBuzz(arrNumber) {
+function fizzBuzz (arrNumber) {
   let newArray = [];
-  for(let index  = 0; index < arrNumber.length; index += 1) {
-    if(arrNumber[index] % 3 === 0 && arrNumber[index] % 5 !== 0) {
-      newArray.push('fizz') ;
-    } else if(arrNumber[index] % 5 === 0 && arrNumber[index] % 3 !== 0) {
-      newArray.push('buzz') ;
-    } else if(arrNumber[index] % 5 === 0 && arrNumber[index] % 3 === 0) {
+  for (let index = 0; index < arrNumber.length; index += 1) {
+    if (arrNumber[index] % 3 === 0 && arrNumber[index] % 5 !== 0) {
+      newArray.push('fizz');
+    } else if (arrNumber[index] % 5 === 0 && arrNumber[index] % 3 !== 0) {
+      newArray.push('buzz');
+    } else if (arrNumber[index] % 5 === 0 && arrNumber[index] % 3 === 0) {
       newArray.push('fizzBuzz');
     } else {
       newArray.push('bug!');
     }
   }
-  return newArray 
+  return newArray;
 }
- console.log(fizzBuzz([2, 10, 15, 3]));
-
 
 // Desafio 9
-function encode(str) {
-  // seu código aqui
-}
+// function encode(str) {
+//   // seu código aqui
+
+// }
 
 function decode() {
   // seu código aqui
@@ -87,7 +88,7 @@ module.exports = {
   compareTrue,
   concatName,
   decode,
-  encode,
+  // encode,
   fizzBuzz,
   footballPoints,
   highestCount,
