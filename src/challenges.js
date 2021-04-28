@@ -8,7 +8,7 @@ else {
   return false;
  
 }
-}
+};
 
 // Desafio 2
 function calcArea() {
