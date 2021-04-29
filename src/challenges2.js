@@ -31,18 +31,17 @@ const isAValidPhone = (array) =>
   array.some((el) => el < 0 || el > 9 || isRepeatThreeTimes(array, el));
 
 // Challenge 11
-
-function formatsNumber(arrayOfNumbers) {
+const formatsNumber = (arrayOfNumbers) => {
   let string = arrayOfNumbers.join('');
   let ddd = string.slice(0, 2);
   let firstPart = string.slice(2, 7);
   let lastPart = string.slice(7, 11);
   return `(${ddd}) ${firstPart}-${lastPart}`;
-}
+};
 
 const generatePhoneNumber = (array) => {
   if (isAValidArray(array)) {
-    return 'Array com tamanho incorreto!';
+    return 'Array com tamanho incorreto.';
   }
   if (isAValidPhone(array)) {
     return 'não é possível gerar um número de telefone com esses valores';
