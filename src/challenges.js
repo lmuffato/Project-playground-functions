@@ -17,8 +17,13 @@ let resultado = (base*height)/2;
 };
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+let array = [];
+let espaco = ',';
+for (let index = 0; index < frase.length; index += 1){
+  if (frase[index] != ''){
+    frase = frase + espaco;
+    console.log(array)
 }
 
 // Desafio 4
