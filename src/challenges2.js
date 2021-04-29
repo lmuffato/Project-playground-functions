@@ -1,39 +1,34 @@
 // Challenge 10
 
-// Reference for the operation of the sort method.
-// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+const compare = (a, b) => {
+  if (a.tech > b.tech) return 1;
+  if (a.tech < b.tech) return -1;
 
-function sortArray(arrayOfObjects) {
-  arrayOfObjects.sort(function (a, b) {
-    if (a.tech > b.tech) {
-      return 1;
-    }
-    if (a.tech < b.tech) {
-      return -1;
-    }
-    return 0;
-  });
-  return arrayOfObjects;
-}
+  return 0;
+};
 
 function techList(technologiesArray, name) {
-  let arrayOfObjects = [];
-
-  if (technologiesArray.length === 0) {
-    return ('Vazio!');
+  if (!technologiesArray.length) {
+    return 'Vazio!';
   }
-
-  for (let index = 0; index < technologiesArray.length; index += 1) {
-    let object = {
-      tech: technologiesArray[index],
-      name,
-    };
-    arrayOfObjects.push(object);
-  }
-  let sortedArray = sortArray(arrayOfObjects);
-
-  return sortedArray;
+  const array = technologiesArray.map((tech) => ({ tech, name }));
+  return array.sort(compare);
 }
+
+// Challenge 11
+
+const isAValidArray = (array) => array.length !== 11;
+
+const isRepeatThreeTimes = (array, number) => {
+  const count = array.reduce((acc, curr) => {
+    if (curr === number) acc += 1;
+    return acc;
+  }, 0);
+  return count >= 3;
+};
+
+const isAValidPhone = (array) =>
+  array.some((el) => el < 0 || el > 9 || isRepeatThreeTimes(array, el));
 
 // Challenge 11
 
@@ -42,85 +37,55 @@ function formatsNumber(arrayOfNumbers) {
   let ddd = string.slice(0, 2);
   let firstPart = string.slice(2, 7);
   let lastPart = string.slice(7, 11);
-  return (`(${ddd}) ${firstPart}-${lastPart}`);
-}
-function counter(number, arrayOfNumbers) {
-  let count = 0;
-
-  for (let index = 0; index < arrayOfNumbers.length; index += 1) {
-    if (number === arrayOfNumbers[index]) {
-      count += 1;
-    }
-  }
-  return count;
-}
-function isRepeatedThreeTimes(arrayOfNumbers) {
-  for (let index = 0; index < arrayOfNumbers.length; index += 1) {
-    if (counter(arrayOfNumbers[index], arrayOfNumbers) >= 3) {
-      return true;
-    }
-  }
-  return false;
+  return `(${ddd}) ${firstPart}-${lastPart}`;
 }
 
-function isAValidArray(arrayOfNumbers) {
-  for (let index = 0; index < arrayOfNumbers.length; index += 1) {
-    if (arrayOfNumbers[index] < 0 || arrayOfNumbers[index] > 9) {
-      return false;
-    }
+const generatePhoneNumber = (array) => {
+  if (isAValidArray(array)) {
+    return 'Array com tamanho incorreto!';
   }
-  if (isRepeatedThreeTimes(arrayOfNumbers)) {
-    return false;
+  if (isAValidPhone(array)) {
+    return 'não é possível gerar um número de telefone com esses valores';
   }
-  return true;
-}
+  return formatsNumber(array);
+};
 
-function generatePhoneNumber(arrayOfNumbers) {
-  if (arrayOfNumbers.length !== 11) {
-    return 'Array com tamanho incorreto.';
-  }
-  if (isAValidArray(arrayOfNumbers)) {
-    return formatsNumber(arrayOfNumbers);
-  }
-  return 'não é possível gerar um número de telefone com esses valores';
-}
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 1]));
 
 // Challenge 12
-function checkLines(line1, line2, line3) {
-  if (Math.abs((line1 - line2)) < line3 && line3 < (line1 + line2)) {
-    return true;
-  }
-  return false;
-}
+
+const sum = (x, y) => x + y;
+const sub = (x, y) => Math.abs(x - y);
 
 function triangleCheck(lineA, lineB, lineC) {
-  if (checkLines(lineA, lineB, lineC)
-    || checkLines(lineB, lineC, lineA)
-    || checkLines(lineC, lineA, lineB)) {
+  const arr = [lineA, lineB, lineC];
+  const max = arr.splice(arr.indexOf(Math.max(lineA, lineB, lineC)), 1);
+  const sumLines = sum(...arr);
+  const subLines = sub(...arr);
+  if (sumLines > max && max > subLines) {
     return true;
   }
   return false;
 }
 
 // Challenge 13
-// Regex reference:
+// Regex Source:
 // https://stackoverflow.com/questions/30607419/return-only-numbers-from-string
-
-function hydrate(string) {
+const hydrate = (string) => {
   let numbersOfString = string.replace(/\D/g, '');
-  let sumOfStringNumbers = 0;
 
-  for (let index = 0; index < numbersOfString.length; index += 1) {
-    sumOfStringNumbers += parseInt(numbersOfString[index], 10);
-  }
-  if (sumOfStringNumbers > 1) {
-    return (`${sumOfStringNumbers} copos de água`);
-  }
-  return (`${sumOfStringNumbers} copo de água`);
-}
+  let sumOfStringNumbers = [...numbersOfString].reduce(
+    (acc, number) => acc + parseInt(number, 10),
+    0,
+  );
+
+  return sumOfStringNumbers > 1
+    ? `${sumOfStringNumbers} copos de água`
+    : `${sumOfStringNumbers} copo de água`;
+};
 
 module.exports = {
-  generatePhoneNumber,
+  // generatePhoneNumber,
   techList,
   hydrate,
   triangleCheck,
