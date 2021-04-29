@@ -85,7 +85,7 @@ const hydrate = (string) => {
 };
 
 module.exports = {
-  // generatePhoneNumber,
+  generatePhoneNumber,
   techList,
   hydrate,
   triangleCheck,
