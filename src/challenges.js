@@ -19,7 +19,7 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(arrayStrings) {
   let lastItem = (arrayStrings.length - 1);
-  return (arrayStrings[lastItem] + ', ' + arrayStrings[0]);
+  return (`${arrayStrings[lastItem]}, ${arrayStrings[0]}`);
 }
 
 // Desafio 5
@@ -32,13 +32,13 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function maxNumber(values) {
   let maiorItem = values[0];
-    for (let index = 0; index < values.length; index += 1) {
-      if (values[index] > maiorItem) {
-        maiorItem = values[index];
+  for (let index = 0; index < values.length; index += 1) {
+    if (values[index] > maiorItem) {
+      maiorItem = values[index];
     }
   }
   return maiorItem;
-}  
+}
 function highestCount(values) {
   let repeticoes = 0;
   for (let currentNumber = 0; currentNumber < values.length; currentNumber += 1) {
@@ -53,7 +53,7 @@ function highestCount(values) {
 function catAndMouse(mouse, cat1, cat2) {
   let distance1 = Math.abs(cat1 - mouse);
   let distance2 = Math.abs(cat2 - mouse);
-// Usado como referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+  // Usado como referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
   if (distance1 < distance2) {
     return 'cat1';
   } if (distance2 < distance1) {
@@ -62,21 +62,28 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(divisible) {
-  let fizzOrBuzz = [];
-  for (let currentNumber= 0; currentNumber < divisible.length; currentNumber += 1) {
-    if (divisible[currentNumber] % 3 === 0 && divisible[currentNumber] % 5 === 0) {
-      fizzOrBuzz[currentNumber] = 'fizzBuzz';
-    } else if (divisible[currentNumber] % 3 === 0) {
-      fizzOrBuzz[currentNumber] = 'fizz';
-    } else if (divisible[currentNumber] % 5 === 0) {
-      fizzOrBuzz[currentNumber] = 'buzz';
+function BugFizzOrBuzz(divisibleNumbers) {
+  if (divisibleNumbers % 3 === 0 && divisibleNumbers % 5 !== 0) {
+    return 'fizz';
+  } if (divisibleNumbers % 3 !== 0 && divisibleNumbers % 5 !== 0) {
+    return 'bug!';
+  }
+  return 'buzz';
+}
+
+function fizzBuzz(divisibleNumbers) {
+  let array = [];
+  for (let index in divisibleNumbers) {
+    if (divisibleNumbers[index] % 3 === 0 && divisibleNumbers[index] % 5 === 0) {
+      array.push('fizzBuzz');
     } else {
-      fizzOrBuzz[currentNumber] = 'bug!';
+      array.push(BugFizzOrBuzz(divisibleNumbers[index]));
     }
   }
-  return fizzOrBuzz;
+  return array;
 }
+/* Teste */
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(encript) {
