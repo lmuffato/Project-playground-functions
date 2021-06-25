@@ -62,43 +62,49 @@ console.log(highestCount([0, 4, 4, 4, 9, 2, 1])); // 1
 console.log(highestCount([0, 0, 0])); // 3
 
 // Desafio 7
-function catAndMouse(mouse, cat1, cat2) {
-  let distance1 = Math.abs(cat1 - mouse);
-  let distance2 = Math.abs(cat2 - mouse);
-  // Usado como referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
-  if (distance1 < distance2) {
+// Usado como referência: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+const catAndMouse = (mouse, cat1, cat2) => {
+  let d1 = Math.abs(cat1 - mouse);
+  let d2 = Math.abs(cat2 - mouse);
+  if (d1 < d2) {
     return 'cat1';
-  } if (distance2 < distance1) {
+  } if (d2 < d1) {
     return 'cat2';
   } return 'os gatos trombam e o rato foge';
-}
+};
+
+console.log(catAndMouse(0, 3, 2)); // cat2
+console.log(catAndMouse(0, 6, 12)); // cat1
+console.log(catAndMouse(0, 1, 1)); // os gatos trombam e o rato foge
 
 // Desafio 8
-function BugFizzOrBuzz(divisibleNumbers) {
+const BugFizzOrBuzz = (divisibleNumbers) => {
   if (divisibleNumbers % 3 === 0 && divisibleNumbers % 5 !== 0) {
     return 'fizz';
   } if (divisibleNumbers % 3 !== 0 && divisibleNumbers % 5 !== 0) {
     return 'bug!';
   }
   return 'buzz';
-}
+};
 
-function fizzBuzz(divisibleNumbers) {
+const fizzBuzz = (divisibleNumbers) => {
   let array = [];
-  for (let index in divisibleNumbers) {
-    if (divisibleNumbers[index] % 3 === 0 && divisibleNumbers[index] % 5 === 0) {
+  for (let key of divisibleNumbers) {
+    if (key % 3 === 0 && key % 5 === 0) {
       array.push('fizzBuzz');
     } else {
-      array.push(BugFizzOrBuzz(divisibleNumbers[index]));
+      array.push(BugFizzOrBuzz(key));
     }
   }
   return array;
-}
-/* Teste */
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+};
+
+console.log(fizzBuzz([2, 15, 7, 9, 45])); // ['bug!', 'fizzBuzz', 'bug!', 'fizz', 'fizzBuzz']
+console.log(fizzBuzz([7, 9])); // ['bug!', 'fizz']
+console.log(fizzBuzz([9, 25])); // ['fizz', 'buzz']
 
 // Desafio 9
-function encode(encript) {
+const encode = (encript) => {
   let fraseEncode = '';
   let alt = {
     a: 1,
@@ -107,16 +113,18 @@ function encode(encript) {
     o: 4,
     u: 5,
   };
-  for (let cript of encript) {
-    if (alt[cript]) {
-      fraseEncode += alt[cript];
+  for (let key of encript) {
+    if (alt[key]) {
+      fraseEncode += alt[key];
     } else {
-      fraseEncode += cript;
+      fraseEncode += key;
     }
   } return fraseEncode;
-}
+};
 
-function decode(decript) {
+console.log(encode('hi there!')); // h3 th2r2!
+
+const decode = (decript) => {
   let fraseDecode = '';
   let alt = {
     1: 'a',
@@ -132,7 +140,9 @@ function decode(decript) {
       fraseDecode += uncript;
     }
   } return fraseDecode;
-}
+};
+
+console.log(decode('h3 th2r2!')); // hi there!
 
 module.exports = {
   calcArea,
