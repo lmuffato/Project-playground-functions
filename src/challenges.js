@@ -31,31 +31,35 @@ console.log(concatName(['foguete', 'não', 'tem', 'ré'])); // ré, foguete
 console.log(concatName(['captain', 'my', 'captain'])); // captain, captain
 
 // Desafio 5
-function footballPoints(wins, ties) {
-  let vitorias = 3;
-  let empates = 1;
-  return (vitorias * wins + empates * ties);
-}
+const footballPoints = (wins, ties) => ((wins * 3) + ties);
+console.log(footballPoints(14, 8)); // 50
+console.log(footballPoints(1, 2)); // 5
+console.log(footballPoints(0, 0)); // 0
 
 // Desafio 6
-function maxNumber(values) {
+const highestValue = (values) => {
   let maiorItem = values[0];
-  for (let index = 0; index < values.length; index += 1) {
-    if (values[index] > maiorItem) {
-      maiorItem = values[index];
+  for (let key of values) {
+    if (key > maiorItem) {
+      maiorItem = key;
     }
   }
   return maiorItem;
-}
+};
+
 function highestCount(values) {
   let repeticoes = 0;
-  for (let currentNumber = 0; currentNumber < values.length; currentNumber += 1) {
-    if (values[currentNumber] === maxNumber(values)) {
+  for (let key of values) {
+    if (key === highestValue(values)) {
       repeticoes += 1;
     }
   }
   return repeticoes;
 }
+
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7])); // 2
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1])); // 1
+console.log(highestCount([0, 0, 0])); // 3
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
