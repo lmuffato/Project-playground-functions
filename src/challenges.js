@@ -22,10 +22,13 @@ console.log(splitSentence('vamo que vamo')); // ['vamo', 'que', 'vamo']
 console.log(splitSentence('foguete')); // ['foguete']
 
 // Desafio 4
-function concatName(arrayStrings) {
+const concatName = (arrayStrings) => {
   let lastItem = (arrayStrings.length - 1);
   return (`${arrayStrings[lastItem]}, ${arrayStrings[0]}`);
-}
+};
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])); // Paolillo, Lucas
+console.log(concatName(['foguete', 'não', 'tem', 'ré'])); // ré, foguete
+console.log(concatName(['captain', 'my', 'captain'])); // captain, captain
 
 // Desafio 5
 function footballPoints(wins, ties) {
