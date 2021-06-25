@@ -68,7 +68,7 @@ console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 11])); // não é
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 0, 0, 0])); // não é possível gerar um número de telefone com esses valores
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
+const triangleCheck = (lineA, lineB, lineC) => {
   let resultado;
   if ((lineA < lineB + lineC) && (lineB < lineA + lineC) && (lineC < lineA + lineB)) {
     resultado = true;
@@ -76,10 +76,13 @@ function triangleCheck(lineA, lineB, lineC) {
     resultado = false;
   }
   return resultado;
-}
+};
+
+console.log(triangleCheck(10, 14, 8)); // true
+console.log(triangleCheck(23, 14, 8)); // false
 
 // Desafio 13
-function hydrate(waterQ) {
+const hydrate = (waterQ) => {
   let quantity = waterQ.match(/\d+/g);
   // Como visto em: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
   let water = 0;
@@ -92,8 +95,10 @@ function hydrate(waterQ) {
   } if (water > 1) {
     return `${water} copos de água`;
   }
-}
-console.log(hydrate('1 cerveja'));
+};
+
+console.log(hydrate('1 cerveja')); // 1 copo de água
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho')); // 7 copos de água
 
 module.exports = {
   generatePhoneNumber,
