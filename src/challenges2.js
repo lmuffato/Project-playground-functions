@@ -59,7 +59,7 @@ function generatePhoneNumber(p) {
   } if (checkNumbers(p) === true || checkRepetition(p) === true) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  return (`(${p[0]}${p[1]})${p[2]}${p[3]}${p[4]}${p[5]}${p[6]}-${p[7]}${p[8]}${p[9]}${p[10]}`);
+  return (`(${p[0]}${p[1]}) ${p[2]}${p[3]}${p[4]}${p[5]}${p[6]}-${p[7]}${p[8]}${p[9]}${p[10]}`);
 }
 
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); // (12) 34567-8901
