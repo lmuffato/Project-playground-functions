@@ -1,20 +1,25 @@
 // Desafio 1
-function compareTrue(value1, value2) {
+const compareTrue = (value1, value2) => {
   if (value1 === true && value2 === true) {
     return true;
-  } return false;
-}
+  }
+  return false;
+};
+console.log(compareTrue(false, true)); // false
+console.log(compareTrue(false, false)); // false
+console.log(compareTrue(true, true)); // true
 
 // Desafio 2
-function calcArea(base, height) {
-  return (base * height) / 2;
-}
+const calcArea = (base, height) => (base * height) / 2;
+console.log(calcArea(10, 50)); // 250
+console.log(calcArea(5, 2)); // 5
+console.log(calcArea(51, 1)); // 25.5
 
 // Desafio 3
-function splitSentence(string) {
-  let phrase = string.split(' ');
-  return phrase;
-}
+const splitSentence = (string) => string.split(' ');
+console.log(splitSentence('go Trybe')); // ['go', 'Trybe']
+console.log(splitSentence('vamo que vamo')); // ['vamo', 'que', 'vamo']
+console.log(splitSentence('foguete')); // ['foguete']
 
 // Desafio 4
 function concatName(arrayStrings) {

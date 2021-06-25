@@ -18,6 +18,7 @@ function checkLenght(p) {
   if (p.length !== 11) {
     return true;
   }
+  return false;
 }
 
 function checkNumbers(p) {
@@ -38,16 +39,19 @@ function checkRepetition(p) {
   if (count >= 3) {
     return true;
   }
+  return false;
 }
 
 function generatePhoneNumber(p) {
-  if (checkLenght === true) {
+  if (checkLenght(p) === true) {
     return 'Array com tamanho incorreto.';
-  } if (checkNumbers === true || checkRepetition === true) {
+  } if (checkNumbers(p) === true || checkRepetition(p) === true) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
   return (`(${p[0]}${p[1]})${p[2]}${p[3]}${p[4]}${p[5]}${p[6]}-${p[7]}${p[8]}${p[9]}${p[10]}`);
 }
+
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -75,6 +79,7 @@ function hydrate(waterQ) {
     return `${water} copos de água`;
   }
 }
+console.log(hydrate('1 cerveja'));
 
 module.exports = {
   generatePhoneNumber,
