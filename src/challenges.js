@@ -48,7 +48,7 @@ function fizzBuzz(array) {
     } else if (element % 5 === 0) {
       result.push('Buzz');
     } else {
-      return result.push('bug!');
+      result.push('bug!');
     }
   });
   return result;
