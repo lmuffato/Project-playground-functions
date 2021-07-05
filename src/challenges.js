@@ -18,18 +18,18 @@ function splitSentence(sentence) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+
 }
 
 // Desafio 7
@@ -38,8 +38,20 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let result = [];
+  array.forEach((element) => {
+    if (element % 3 === 0 && element % 5 === 0) {
+      result.push('fizzBuzz');
+    } else if (element % 3 === 0) {
+      result.push('fizz');
+    } else if (element % 5 === 0) {
+      result.push('Buzz');
+    } else {
+      return result.push('bug!');
+    }
+  });
+  return result;
 }
 
 // Desafio 9
