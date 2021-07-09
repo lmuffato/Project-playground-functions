@@ -55,11 +55,37 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(value) {
+  const regexpA = /a/g;
+  const regexpE = /e/g;
+  const regexpI = /i/g;
+  const regexpO = /o/g;
+  const regexpU = /u/g;
+
+  const newValue = value
+    .replace(regexpA, 1)
+    .replace(regexpE, 2)
+    .replace(regexpI, 3)
+    .replace(regexpO, 4)
+    .replace(regexpU, 5);
+
+  return newValue;
 }
-function decode() {
-  // seu código aqui
+function decode(value) {
+  const regexpA = 'a';
+  const regexpE = 'e';
+  const regexpI = 'i';
+  const regexpO = 'o';
+  const regexpU = 'u';
+
+  const newValue = value
+    .replaceAll(1, regexpA)
+    .replaceAll(2, regexpE)
+    .replaceAll(3, regexpI)
+    .replaceAll(4, regexpO)
+    .replaceAll(5, regexpU);
+
+  return newValue;
 }
 
 module.exports = {
