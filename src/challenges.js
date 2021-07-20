@@ -89,13 +89,13 @@ const BugFizzOrBuzz = (divisibleNumbers) => {
 
 const fizzBuzz = (divisibleNumbers) => {
   let array = [];
-  for (let key of divisibleNumbers) {
-    if (key % 3 === 0 && key % 5 === 0) {
+  divisibleNumbers.forEach((index) => {
+    if (index % 3 === 0 && index % 5 === 0) {
       array.push('fizzBuzz');
     } else {
-      array.push(BugFizzOrBuzz(key));
+      array.push(BugFizzOrBuzz(index));
     }
-  }
+  });
   return array;
 };
 
@@ -104,42 +104,47 @@ console.log(fizzBuzz([7, 9])); // ['bug!', 'fizz']
 console.log(fizzBuzz([9, 25])); // ['fizz', 'buzz']
 
 // Desafio 9
+let encripted = {
+  a: 1,
+  e: 2,
+  i: 3,
+  o: 4,
+  u: 5,
+};
 const encode = (encript) => {
   let fraseEncode = '';
-  let alt = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  };
-  for (let key of encript) {
-    if (alt[key]) {
-      fraseEncode += alt[key];
+
+  const values = encript.split('');
+  values.forEach((char) => {
+    if (encripted[char]) {
+      fraseEncode += encripted[char];
     } else {
-      fraseEncode += key;
+      fraseEncode += char;
     }
-  } return fraseEncode;
+  });
+  return fraseEncode;
 };
 
 console.log(encode('hi there!')); // h3 th2r2!
 
 const decode = (decript) => {
   let fraseDecode = '';
-  let alt = {
+  let decripted = {
     1: 'a',
     2: 'e',
     3: 'i',
     4: 'o',
     5: 'u',
   };
-  for (let uncript of decript) {
-    if (alt[uncript]) {
-      fraseDecode += alt[uncript];
+  const values = decript.split('');
+  values.forEach((char) => {
+    if (decripted[char]) {
+      fraseDecode += decripted[char];
     } else {
-      fraseDecode += uncript;
+      fraseDecode += char;
     }
-  } return fraseDecode;
+  });
+  return fraseDecode;
 };
 
 console.log(decode('h3 th2r2!')); // hi there!

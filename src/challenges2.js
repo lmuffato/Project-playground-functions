@@ -4,13 +4,7 @@ const techList = (tech, name) => {
     return 'Vazio!';
   }
   let objects = tech.sort();
-  let listTech = [];
-  for (let index = 0; index < objects.length; index += 1) {
-    listTech[index] = {
-      tech: objects[index],
-      name,
-    };
-  }
+  let listTech = objects.map((techname) => ({ tech: techname, name }));
   return listTech;
 };
 
@@ -25,25 +19,18 @@ console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 console.log(techList([], 'Lucas')); // Vazio!
 
 // Desafio 11
-const checkLength = (p) => ((p.length !== 11));
+const checkLength = (phone) => ((phone.length !== 11));
 
-const checkNumbers = (p) => {
-  let result = false;
-  for (let key = 0; key < p.length; key += 1) {
-    if (p[key] < 0 || p[key] > 9) {
-      result = true;
-    }
-  }
+const checkNumbers = (phone) => {
+  const result = phone.some((number) => number > 9 || number < 0);
   return result;
 };
 
-console.log(checkNumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 0]));
-
-const checkRepetition = (p) => {
+const checkRepetition = (phone) => {
   let count = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
   let result = false;
-  for (let index = 0; index < p.length; index += 1) {
-    count[p[index]] += 1;
+  for (let index = 0; index < phone.length; index += 1) {
+    count[phone[index]] += 1;
   }
   for (let index = 0; index < count.length; index += 1) {
     if (count[index] >= 3) {
@@ -53,13 +40,15 @@ const checkRepetition = (p) => {
   return result;
 };
 
-function generatePhoneNumber(p) {
-  if (checkLength(p) === true) {
+function generatePhoneNumber(phone) {
+  const join = phone.join('');
+  const regex = /([0-9]{2})([0-9]{5})([0-9]{4})/gm;
+  if (checkLength(phone) === true) {
     return 'Array com tamanho incorreto.';
-  } if (checkNumbers(p) === true || checkRepetition(p) === true) {
+  } if (checkNumbers(phone) === true || checkRepetition(phone) === true) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  return (`(${p[0]}${p[1]}) ${p[2]}${p[3]}${p[4]}${p[5]}${p[6]}-${p[7]}${p[8]}${p[9]}${p[10]}`);
+  return join.replace(regex, '($1) $2-$3');
 }
 
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1])); // (12) 34567-8901
